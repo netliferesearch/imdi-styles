@@ -1,0 +1,158 @@
+/*------------------------------------*\
+    COLOR PALETTE
+\*------------------------------------*/
+@black                    : #282828;
+@white                    : #ffffff;
+@orange                   : #ff523b;
+@orange--dark             : #d83a36;
+@green                    : #5bb95b;
+@yellow                   : #ffd766;
+
+/*
+$_black              : #282828;
+$_black--light       : #282828;
+$_white              : #ffffff;
+$_orange             : #ff523b;
+$_orange--dark       : #d83a36;
+$_green              : #5bb95b;
+$_yellow			 : #ffd766;
+$_canvas-orange		 : #f2e7e7;
+$_canvas-green		 : #e4efe4;
+$_canvas-yellow		 : #fff8e6;
+$_canvas-grey		 : #f2efed;
+$_canvas-grey--dark	 : #bfbfbf;
+
+
+$_canvas-blue		 : #d9e8ed;
+$_canvas-blue--dark  : #b6d0db;
+
+$_blue               : #2eb0d1;
+$_blue--dark         : #36a1bc;
+*/
+
+/* Datavisulalation palette */
+	
+	/*
+$_purple			: #9c0d61;
+$_violet			: #7555a3;
+$_color-male		: #1986e0;
+$_color-female		: #e23939;
+*/
+
+
+/*------------------------------------*\
+    #TYPE
+\*------------------------------------*/
+
+@font-size--xsmall          : 15px;
+@font-size--small           : 16px;
+@font-size--regular         : 18px;
+@font-size--medium          : 24px;
+@font-size--large           : 32px;
+@font-size--xlarge          : 48px;
+@font-size--xxlarge         : 64px;
+
+
+/*------------------------------------*\
+    $LINE HEIGHTS
+\*------------------------------------*/
+
+
+@factor-line-height   		: 1.695;
+@factor-line-height-header  : 2.4;
+
+/* SIRI */
+
+.font-siri--thin() {
+	font-family: "Siri Thin", 'Lucida Sans Unicode', 'Lucida Sans', Tahoma, Verdana, sans-serif; 
+	font-weight: 300; 
+	font-style: normal;
+	}
+	
+.font-siri--light() {
+	font-family: "Siri Light", 'Lucida Sans Unicode', 'Lucida Sans', Tahoma, Verdana, sans-serif; 
+	}
+	
+.font-siri--regular() {
+	font-family: "Siri", 'georgia', 'Lucida Sans Unicode', 'Lucida Sans', Tahoma, Verdana, sans-serif; 
+	font-size-adjust: 0.51; 
+	font-weight: 400; 
+	font-style: normal;
+	}
+
+.font-siri--medium() {
+	font-family: "Siri Medium", 'Lucida Sans Unicode', 'Lucida Sans', Tahoma, Verdana, sans-serif; 
+	font-weight: 500; 
+	font-style: normal; 
+	}
+	
+.font-siri--semibold() { 
+	font-family: "Siri SemiBold", 'Lucida Sans Unicode', 'Lucida Sans', Tahoma, Verdana, sans-serif; 
+	font-weight: 600; 
+	font-style: normal;
+	}
+
+.font-siri--bold() {
+	font-family: "Siri Bold", 'Lucida Sans Unicode', 'Lucida Sans', Tahoma, Verdana, sans-serif; 
+	font-size-adjust: 0.52; 
+	font-weight: bold; 
+	font-style: normal;
+	}
+
+
+/*------------------------------------*\
+    BREAKPOINTS
+\*------------------------------------*/
+
+@screen-sm: 360px;
+@screen-md: 640px;
+@screen-lg: 960px;
+@screen-xl: 1280px;
+@screen-xxl: 1660px; 
+
+
+/*------------------------------------*\
+    GRID
+\*------------------------------------*/
+
+@grid-width: 1360px;
+@gutter: 20px;
+
+
+/*------------------------------------*\
+    MIXINS
+\*------------------------------------*/
+
+
+/*------------------------------------*\
+    MEDIA QUERIES
+\*------------------------------------*/
+// Includes fix for < IE9
+// Reference: http://www.iambacon.co.uk/blog/life-is-now-easier-create-media-query-mixins-with-rulesets-less-css
+
+@fix-mqs: false;
+@old-ie: false;
+
+// Mixin that will create the fixed IE styles    
+.query-min(@width; @rules) when (@old-ie = true) and (@fix-mqs >= @width) {
+    @rules();
+}
+
+// Mixin that will wrap our content in a media query
+.query-min(@width; @rules) when (@old-ie = false) {
+    @media screen and (min-width: @width) {
+        @rules();
+    }
+}
+
+// Mixin that will create the fixed IE styles    
+.query-max(@width; @rules) when (@old-ie = true) and (@fix-mqs <= @width) {
+    @rules();
+}
+
+// Mixin that will wrap our content in a media query
+.query-max(@width; @rules) when (@old-ie = false) {
+    @media screen and (min-width: @width) {
+        @rules();
+    }
+}
