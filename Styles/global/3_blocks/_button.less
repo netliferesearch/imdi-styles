@@ -1,0 +1,47 @@
+ @import "../../_vars";
+
+.button {
+	padding: @spacing--small  @spacing;
+	margin: @spacing--medium 0;
+	background: @orange;
+	color: @white;
+	font-size: @font-size--regular;
+	width: 100%;
+	text-align: center;
+	display: block;
+	border: 4px solid @orange;
+	
+	.font-siri--medium();
+
+	.query-min(@screen-sm; {
+		width: auto;
+		display: inline-block;
+	});
+	
+	&--large {
+		padding: @spacing--medium @spacing*2;
+	}
+	&--small {
+		padding: @spacing--xsmall  @spacing--small;
+	}
+	&:hover, &:focus, &:active {
+		background: darken(@orange, 10%);
+		border: 4px solid darken(@orange, 10%);
+
+		color: @white;
+	}
+	
+	&--secondary {
+		background: @canvas-grey;
+		color: @color-text;
+		border: 4px solid @canvas-grey;
+			
+		&:hover, &:focus, &:active {
+			background: darken(@canvas-grey, 10%);
+			border: 4px solid darken(@canvas-grey, 10%);
+			color: @color-text;
+		}
+	}
+	
+	
+}

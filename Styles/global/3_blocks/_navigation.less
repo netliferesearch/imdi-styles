@@ -1,0 +1,24 @@
+@import "../../_vars";
+
+.navigation {
+	margin-bottom: 3em;  
+	&__link{
+		display: block;
+		border: none;
+		&--main{
+			//@extend .intro;
+			line-height: 1;
+			padding: @spacing+3px @spacing @spacing 0;
+			background: @canvas-grey;
+			margin-bottom: @spacing--small;
+			text-indent: @spacing;
+			transition: background ease 100ms;
+			color: @color__text;
+			position: relative;
+			&:hover{
+				background: lighten(@canvas-grey, 3%);
+				color: darken(@color__orange--dark, 6%);
+			}
+		}
+	}
+}

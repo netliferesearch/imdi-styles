@@ -1,119 +1,132 @@
+@import "../../_vars";
+
 h1, .h1 {
-	color: $color-text;
-	font-weight: $font-weight--normal;
-	margin-bottom: $spacing;			
-	font-size: $font-size--large;
-	line-height: ($font-size--large*$factor-line-height);
-	@extend .siri--medium;
-	@include query-min($screen-sm) {
-		font-size: $font-size--xlarge;	
-	}
+	color: @color__text;
+	font-weight: 400;
+	margin-bottom: @spacing;			
+	font-size: @font-size--large;
+	line-height: (@font-size--large*@factor-line-height);
+	.font-siri--medium();
+	.query-min(@screen--sm; {
+		font-size: @font-size--xlarge;	
+	});
 	
-	@include query-min($screen-xxl) {
-		font-size: $font-size--xxlarge;
-		margin-bottom: $spacing;
-		line-height: ($font-size--large*$factor-line-height-header);	
-	}
+	.query-min(@screen--xxl; {
+		font-size: @font-size--xxlarge;
+		margin-bottom: @spacing;
+		line-height: (@font-size--large*@factor-line-height-header);	
+	});
 }
 
 h2, .h2 {
-	color: $color-text;
-	font-size: $font-size--medium;
-	font-weight: $font-weight--normal;
-	margin-bottom: $spacing--medium;
-	line-height: ($font-size--small*$factor-line-height);
-	@extend .siri--medium;
+	color: @color__text;
+	font-size: @font-size--medium;
+	font-weight: 400;
+	margin-bottom: @spacing--medium;
+	line-height: (@font-size--small*@factor-line-height);
+	.font-siri--medium();
 	
-	@include query-min($screen-md) {
-		font-size: $font-size--large;
-		line-height: ($font-size--medium*$factor-line-height);
-	}
+	.query-min(@screen--md; {
+		font-size: @font-size--large;
+		line-height: (@font-size--medium*@factor-line-height);
+	});
 	
-	@include query-min($screen-md) {
-		font-size: $font-size--large;
+	.query-min(@screen--md; {
+		font-size: @font-size--large;
 		line-height: 1.3;
-	}
+	});
 	
 }
 
 h3, .h3 {	
-	color: $color-text;
-	font-size: $font-size--medium;
-	font-weight: $font-weight--normal;
-	margin-bottom: $spacing--small;
-	line-height: ($font-size--large*$factor-line-height);
-	@extend .siri--medium;
+	color: @color__text;
+	font-size: @font-size--medium;
+	font-weight: 400;
+	margin-bottom: @spacing--small;
+	line-height: (@font-size--large*@factor-line-height);
+	.font-siri--medium();
 	
-	@include query-max($screen-sm) {
-		font-size: $font-size--regular;	
-	}
+	.query-max(@screen--sm; {
+		font-size: @font-size--regular;	
+	});
 }
 
 h4, .h4 {
-	color: $color-text;
-	margin-bottom: $spacing/2;
-	line-height: ($font-size--regular*$factor-line-height);
-	@extend .siri--medium;
+	color: @color__text;
+	margin-bottom: @spacing/2;
+	line-height: (@font-size--regular*@factor-line-height);
+	.font-siri--medium();
 }
 
 
 h5, .h5 {
-	color: $color-text;
-	font-size: $font-size--small;
-	font-weight: $font-weight--bold;
-	margin-bottom: $spacing/2;
-	@extend .siri--regular;
+	color: @color__text;
+	font-size: @font-size--small;
+	font-weight: 700;
+	margin-bottom: @spacing/2;
+	.font-siri--regular();
 }
 
 .intro {
-	color: $color-text;	
-	font-size: $font-size--medium;
-	@extend .siri--regular;	
-	font-weight: $font-weight--normal;
-	margin-bottom: $spacing--large;
+	color: @color__text;	
+	font-size: @font-size--medium;
+	.font-siri--regular();	
+	font-weight: 400;
+	margin-bottom: @spacing--large;
 }
 
 .small {
-	color: $color-text;
+	color: @color__text;
 	line-height: 1em;
-	font-size: $font-size--small;
-	font-weight: $font-weight--bold;
+	font-size: @font-size--small;
+	font-weight: 700;
 	text-transform: uppercase;
 }
 
 .regular {
-	color: $color-text;
-	font-size: $font-size--regular;
-	font-weight: $font-weight--normal;
+	color: @color__text;
+	font-size: @font-size--regular;
+	font-weight: 400;
 }
 
-ul{
+ul, ol {
+	margin: 0;
+	padding: 0;
+	li {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+}
+
+.list {
 	list-style-image: url("../gfx/bullet__small--primary.svg");
 	list-style-position: outside;
 	margin-left: 20px;
 }
 
-p, li {
-	color: $color-text;
-	font-size: $font-size--regular;
-	font-weight: $font-weight--normal;
+p {
+	color: @color__text;
+	font-size: @font-size--regular;
+	font-weight: 400;
 	margin-bottom: 1em; 
 	line-height: 1.7em;
-	@extend .siri--regular;		
+	.font-siri--regular();		
 }
 
+/*
 li{
-	padding-left: $spacing/4;
+	padding-left: @spacing/4;
 }
-
+*/
 
 a, .a {
-	color: $color-links;
-	border-bottom: 1px solid $color-links;
+	color: @color__links;
+	border-bottom: 1px solid @color__links;
 	
 	&:hover, &--hover {
-		color: $color-text;
-		border-color: $color-text;
+		color: @color__text;
+		border-color: @color__text;
 	}
 	&:focus, &--focus {
 		outline: none;
@@ -130,9 +143,9 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
 }
 
 p+h2, p+h3, ul+h2, ul+h3{
-	@include query-min($screen-md) {
-	margin-top: $spacing--large;
-	}
+	.query-min(@screen--md; {
+		margin-top: @spacing--large;
+	});
 }
 
 

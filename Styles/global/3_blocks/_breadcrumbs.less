@@ -1,0 +1,24 @@
+@import "../../_vars";
+
+.breadcrumbs {
+	margin: 0 0 @spacing--large 0;
+	&__list{
+		list-style-type: none;
+	}
+	&__divider{
+		color: @canvas-grey--dark;
+		margin: 0 @spacing--small/4 0 @spacing--small/2;
+	}
+	&__list-item{
+		display: inline;
+		font-size: @font-size--xsmall;
+		.font-siri--regular();
+		font-weight: normal;
+		&--current{
+			color: @canvas-grey--dark;
+		}
+	}
+	&__link{
+		border-bottom: none;
+	}
+}
