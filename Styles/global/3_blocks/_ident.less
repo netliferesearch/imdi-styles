@@ -8,7 +8,7 @@
 	width: 96px*3;
 	position: relative;
 
-	.query-min(@screen-lg; {
+	.query-min(@screen--lg; {
 		height: 164px;
 		width: 164px*3;
   	});
@@ -54,7 +54,7 @@
 				display: none;
 			}
 				
-			.query-min(@screen-lg; {
+			.query-min(@screen--lg; {
 				margin-left: 164px + @gutter;
 				padding-top: 22px;
 				.ident__textmark-secondary {
@@ -65,13 +65,13 @@
 	
 	&--compact {
 
-		.query-min(@screen-lg; {
+		.query-min(@screen--lg; {
 			height: 96px;
 		});	
 		
 		.ident__symbol {
 			
-			.query-min(@screen-lg; {
+			.query-min(@screen--lg; {
 				width: 60px;
 				height: 60px;
 				background-size: 60px 60px;
@@ -90,7 +90,7 @@
 				display: none;
 			}
 			
-			.query-min(@screen-lg; {
+			.query-min(@screen--lg; {
 				margin-left: 60px + @gutter;
 				padding-top: 12px;
 			});	

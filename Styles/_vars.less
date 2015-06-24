@@ -2,12 +2,17 @@
     COLOR PALETTE
 \*------------------------------------*/
 @color__black               : #282828;
+@color__black--light        : #282828;
 @color__white               : #ffffff;
 @color__orange              : #ff523b;
 @color__orange--dark        : #d83a36;
 @color__green               : #5bb95b;
 @color__yellow              : #ffd766;
 @color__blue                : #2eb0d1;
+@color__purple              : #9c0d61;
+@color__violet              : #7555a3;
+@color__male             	: #1986e0;
+@color__female   	     	: #e23939;
 
 @color__canvas-orange	    : #f2e7e7;
 @color__canvas-green	    : #e4efe4;
@@ -17,28 +22,6 @@
 
 @color__text	            : @color__black;
 @color__links	            : @color__orange;
-
-
-/*------------------------------------*\
-    #TYPE
-\*------------------------------------*/
-
-@font-size--xsmall          : 15px; // pixelfallback + rem
-@font-size--small           : 16px; // 
-@font-size--regular         : 18px;
-@font-size--medium          : 24px;
-@font-size--large           : 32px;
-@font-size--xlarge          : 48px;
-@font-size--xxlarge         : 64px;
-
-
-/*------------------------------------*\
-    $LINE HEIGHTS
-\*------------------------------------*/
-
-@line-height   		: 1.695;
-@line-height--header  : 2.4;
-
 
 /*------------------------------------*\
     BREAKPOINTS
@@ -55,14 +38,34 @@
     GRID
 \*------------------------------------*/
 
-@grid-width                 : 1360px;
+@grid-width                 : 800px;
 @gutter                     : 20px;
-
 @spacing--large             : 50px;
 @spacing                    : 25px;
 @spacing--medium            : 15px; 
 @spacing--small             : 10px; 
 @spacing--xsmall            : 5px;
+
+/*------------------------------------*\
+    #TYPE
+\*------------------------------------*/
+
+@font-size--xsmall           : 15px; // pixelfallback + rem
+@font-size--small            : 16px; // 
+@font-size--regular          : 18px;
+@font-size--medium           : 24px;
+@font-size--large            : 32px;
+@font-size--xlarge           : 48px;
+@font-size--xxlarge          : 64px;
+
+
+/*------------------------------------*\
+    $LINE HEIGHTS
+\*------------------------------------*/
+
+@line-height   		         : 1.695;
+@line-height--header         : 2.4;
+
 
 /*------------------------------------*\
     $MIXINS
@@ -152,6 +155,52 @@
 	font-size-adjust: 0.52; 
 	font-weight: bold; 
 	font-style: normal;
+}
+
+.h1() {
+	.fontSize(@font-size--large);
+	.font-siri--medium();
+	color: @color__text;
+	margin-bottom: @spacing;	
+	line-height: (@font-size--large*@line-height);
+	.query-min(@screen--sm; {
+		.fontSize(@font-size--xlarge);	
+	});	
+	.query-min(@screen--xxl; { 
+		.fontSize(@font-size--xxlarge);
+		line-height: (@font-size--large*@line-height--header);	
+	});	
+}
+
+.h2() {
+	.fontSize(@font-size--medium);
+	.font-siri--medium();
+	color: @color__text;
+	margin-bottom: @spacing--medium;	
+	line-height: (@font-size--small*@line-height);
+	.query-min(@screen--md; {
+		.fontSize(@font-size--large);
+		line-height: 1.3;	
+	});	
+}
+
+.h3() {
+	.fontSize(@font-size--medium);
+	.font-siri--medium();
+	color: @color__text;
+	font-weight: 400;
+	margin-bottom: @spacing--small;
+	line-height: (@font-size--large*@line-height);
+	.query-max(@screen--sm; {
+		.fontSize(@font-size--regular);
+	});	
+}
+
+.h4() {
+	.font-siri--medium();	
+	color: @color__text;
+	margin-bottom: @spacing/2;
+	line-height: (@font-size--regular*@line-height);
 }
 
 /*------------------------------------*\
