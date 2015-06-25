@@ -5,18 +5,21 @@
 	&__link{
 		display: block;
 		border: none;
-		&--main{
+
+		&--primary{
 			//@extend .intro;
+			.fontSize(@font-size--medium);
 			line-height: 1;
 			padding: @spacing+3px @spacing @spacing 0;
-			background: @color__canvas-grey;
+			border-bottom: 1px solid @color__orange;
 			margin-bottom: @spacing--small;
-			text-indent: @spacing;
-			transition: background ease 100ms;
-			color: @color__text;
+			color: @color__links;
 			position: relative;
+			i {
+				float: right;
+			}			
 			&:hover{
-				background: lighten(@color__canvas-grey, 3%);
+				//background: lighten(@color__canvas-grey, 3%);
 				color: darken(@color__orange--dark, 6%);
 			}
 		}
