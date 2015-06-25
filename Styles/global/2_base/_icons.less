@@ -1,11 +1,12 @@
 @import "../../_vars";
 
 // Default Variables
-@simple-line-font-path        : "/UI/fonts/simple-line-icons/";
-@simple-line-font-family      : "Simple-Line-Icons";
+@simple-line-font-path        : "/UI/fonts/icomoon/";
+@simple-line-font-family      : "ImdiIcons";
 @simple-line-icon-prefix      : icon__;
 
 // Fonts
+/*
 @font-face {
 font-family: 'Simple-Line-Icons';
 src:    url('@{simple-line-font-path}Simple-Line-Icons.eot');
@@ -13,6 +14,18 @@ src:    url('@{simple-line-font-path}Simple-Line-Icons.eot?#iefix') format('embe
         url('@{simple-line-font-path}Simple-Line-Icons.woff') format('woff'),
         url('@{simple-line-font-path}Simple-Line-Icons.ttf') format('truetype'),
         url('@{simple-line-font-path}Simple-Line-Icons.svg#Simple-Line-Icons') format('svg');
+font-weight: normal;
+font-style: normal;
+}
+*/
+
+@font-face {
+font-family: 'ImdiIcons';
+src:    url('@{simple-line-font-path}icomoon.eot');
+src:    url('@{simple-line-font-path}icomoon.eot?#iefix') format('embedded-opentype'),
+        url('@{simple-line-font-path}icomoon.woff') format('woff'),
+        url('@{simple-line-font-path}icomoon.ttf') format('truetype'),
+        url('@{simple-line-font-path}icomoon.svg#icomoon') format('svg');
 font-weight: normal;
 font-style: normal;
 }
@@ -39,7 +52,7 @@ you can use the generic selector below, but it's slower:
 */
 
 .@{simple-line-icon-prefix} {
-  &user-female, &user-follow, &user-following, &user-unfollow, &trophy, &screen-smartphone, &screen-desktop, &plane, &notebook, &moustache, &mouse, &magnet, &energy, &emoticon-smile, &disc, &cursor-move, &crop, &credit-card, &chemistry, &user, &speedometer, &social-youtube, &social-twitter, &social-tumblr, &social-facebook, &social-dropbox, &social-dribbble, &shield, &screen-tablet, &magic-wand, &hourglass, &graduation, &ghost, &game-controller, &fire, &eyeglasses, &envelope-open, &envelope-letter, &bell, &badge, &anchor, &wallet, &vector, &speech, &puzzle, &printer, &present, &playlist, &pin, &picture, &map, &layers, &handbag, &globe-alt, &globe, &frame, &folder-alt, &film, &feed, &earphones-alt, &earphones, &drop, &drawer, &docs, &directions, &direction, &diamond, &cup, &compass, &call-out, &call-in, &call-end, &calculator, &bubbles, &briefcase, &book-open, &basket-loaded, &basket, &bag, &action-undo, &action-redo, &wrench, &umbrella, &trash, &tag, &support, &size-fullscreen, &size-actual, &shuffle, &share-alt, &share, &rocket, &question, &pie-chart, &pencil, &note, &music-tone-alt, &music-tone, &microphone, &loop, &logout, &login, &list, &like, &home, &grid, &graph, &equalizer, &dislike, &cursor, &control-start, &control-rewind, &control-play, &control-pause, &control-forward, &control-end, &calendar, &bulb, &bar-chart, &arrow-up, &arrow-right, &arrow-left, &arrow-down, &ban, &bubble, &camcorder, &camera, &check, &clock, &close, &cloud-download, &cloud-upload, &doc, &envelope, &eye, &flag, &folder, &heart, &info, &key, &link, &lock, &lock-open, &magnifier, &magnifier-add, &magnifier-remove, &paper-clip, &paper-plane, &plus, &pointer, &power, &refresh, &reload, &settings, &star, &symbol-female, &symbol-male, &target, &volume-1, &volume-2, &volume-off, &users {
+  &user-female, &user-follow, &user-following, &user-unfollow, &trophy, &screen-smartphone, &screen-desktop, &plane, &notebook, &moustache, &mouse, &magnet, &energy, &emoticon-smile, &disc, &cursor-move, &crop, &credit-card, &chemistry, &user, &speedometer, &social-youtube, &social-twitter, &social-tumblr, &social-facebook, &social-dropbox, &social-dribbble, &shield, &screen-tablet, &magic-wand, &hourglass, &graduation, &ghost, &game-controller, &fire, &eyeglasses, &envelope-open, &envelope-letter, &bell, &badge, &anchor, &wallet, &vector, &speech, &puzzle, &printer, &present, &playlist, &pin, &picture, &map, &layers, &handbag, &globe-alt, &globe, &frame, &folder-alt, &film, &feed, &earphones-alt, &earphones, &drop, &drawer, &docs, &directions, &direction, &diamond, &cup, &compass, &call-out, &call-in, &call-end, &calculator, &bubbles, &briefcase, &book-open, &basket-loaded, &basket, &bag, &action-undo, &action-redo, &wrench, &umbrella, &trash, &tag, &support, &size-fullscreen, &size-actual, &shuffle, &share-alt, &share, &rocket, &question, &pie-chart, &pencil, &note, &music-tone-alt, &music-tone, &microphone, &loop, &logout, &login, &list, &like, &home, &grid, &graph, &equalizer, &dislike, &cursor, &control-start, &control-rewind, &control-play, &control-pause, &control-forward, &control-end, &calendar, &bulb, &bar-chart, &arrow-up, &arrow-right, &arrow-left, &arrow-down, &ban, &bubble, &camcorder, &camera, &check, &clock, &close, &cloud-download, &cloud-upload, &doc, &envelope, &eye, &flag, &folder, &heart, &info, &key, &link, &lock, &lock-open, &magnifier, &magnifier-add, &magnifier-remove, &paper-clip, &paper-plane, &plus, &pointer, &power, &refresh, &reload, &settings, &star, &symbol-female, &symbol-male, &target, &volume-1, &volume-2, &volume-off, &users, &attachment, &document, &search, &menu, &in, &out, &down, &left, &right, &up {
     font-family: '@{simple-line-font-family}';
     speak: none;
     font-style: normal;
@@ -51,6 +64,19 @@ you can use the generic selector below, but it's slower:
   }
 }
 
+/* Special Icons */
+.@{simple-line-icon-prefix}attachment:before          {content: "\e0a2"; }
+.@{simple-line-icon-prefix}document:before          {content: "\e0a3"; }
+.@{simple-line-icon-prefix}search:before          {content: "\e0a4"; }
+.@{simple-line-icon-prefix}menu:before          {content: "\e120"; }
+.@{simple-line-icon-prefix}in:before          {content: "\e122"; }
+.@{simple-line-icon-prefix}out:before          {content: "\e123"; }
+.@{simple-line-icon-prefix}down:before          {content: "\e600"; }
+.@{simple-line-icon-prefix}left:before          {content: "\e601"; }
+.@{simple-line-icon-prefix}right:before          {content: "\e602"; }
+.@{simple-line-icon-prefix}up:before          {content: "\e603"; }
+
+/* Simple-Line-Icons */
 .@{simple-line-icon-prefix}user-female:before          {content: "\e000"; }
 .@{simple-line-icon-prefix}user-follow:before          {content: "\e002"; }
 .@{simple-line-icon-prefix}user-following:before       {content: "\e003"; }
