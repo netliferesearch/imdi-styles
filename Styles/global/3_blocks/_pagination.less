@@ -1,0 +1,18 @@
+ @import "../../_vars";
+
+.pagination{
+	//display: none !important;
+	margin-top: @spacing;
+	display: block;
+	.clearfix();
+	&__link{
+		border: none;
+		text-decoration: none;
+		&--next{
+			float: right;			
+		}
+		&--previuos{
+			float: left;
+		}
+	}
+}

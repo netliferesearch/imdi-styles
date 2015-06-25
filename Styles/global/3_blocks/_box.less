@@ -1,7 +1,72 @@
 @import "../../_vars";
 
 .box {
-	margin-bottom: @spacing;
-	background: @color__canvas-grey;
 	padding: @spacing;
+	margin-left: 0;
+	margin-right: 0;	
+	margin-bottom: @spacing--large;
+	
+	.query-min(@screen--lg; {
+		padding: @spacing--large;
+		margin-left: -(@spacing--large+5);
+		margin-right: -(@spacing--large+5);
+	});		
+	
+	
+	
+	&--primary {
+		border: 4px solid @color__orange;
+	}
+	
+	&--secondary {
+		border: 4px solid @color__blue;
+	}
+	
+	&--tertiary {
+		border: 4px solid @color__green;
+	}
+
+	
+	&__solid {
+	
+		&--primary {
+			background-color: lighten(@color__orange, 32%);
+		}
+				
+		&--secondary {
+			background-color: lighten(@color__blue, 42%);
+		}
+		
+		&--tertiary {
+			background-color: lighten(@color__green, 42%);
+		}
+		
+	}
+		
+	
+	&__open {
+		padding: @spacing  0;
+		margin-left: 0;
+		margin-right: 0;
+		
+					
+		&--primary {
+			border-top: 4px solid @color__orange;
+			border-bottom: 4px solid @color__orange;
+		}
+		
+		&--secondary {
+			border-top: 4px solid @color__blue;
+			border-bottom: 4px solid @color__blue;
+		}
+		
+		&--tertiary {
+			border-top: 4px solid @color__green;
+			border-bottom: 4px solid @color__green;
+		}
+		
+	}
+		
+		
+		
 }

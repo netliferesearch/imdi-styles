@@ -56,15 +56,21 @@ label + input,
 label + textarea,
 .label + .input,
 .label + .textarea {
-	border: 1px solid #ccc;
+	border: 2px solid #ccc;
 	margin-bottom: 1em;
 	padding: .5em;
 	width: 100%;
+	&:focus{
+			border-width: 2px;
+		  outline: none !important;
+		  border-color: @color__orange;
+	}  
 }
 label + textarea,
 .label + .textarea {
 	min-height: 6em;
 }
+
 /*
 input[type=checkbox] + label {
 	display: inline;
