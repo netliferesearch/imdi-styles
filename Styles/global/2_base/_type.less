@@ -1,50 +1,22 @@
 @import "../../_vars";
 
 h1, .h1 {
- 	.h1();
+ 	.h1(); /* Se mixin i _vars.less */
 }
 
 h2, .h2 {
-	.h2();
+	.h2(); /* Se mixin i _vars.less */
 }
 
 h3, .h3 {	
-	.h3();
+	.h3(); /* Se mixin i _vars.less */
 }
 
 h4, .h4 {
-	.h4()
-}
-
-h5, .h5 {
-	.fontSize(@font-size--small);
-	color: @color__text;
-	font-weight: 700;
-	margin-bottom: @spacing/2;
-	.font-siri--regular();
-}
-
-.leadtext p {	
-	.fontSize(@font-size--medium);
-	.font-siri--regular();
-	color: @color__text;	
-	font-weight: 400;
-	margin-bottom: @spacing--large;
-}
-
-.small {
-	.fontSize(@font-size--small);
-	color: @color__text;
-	line-height: 1em;
-	font-weight: 700;
-	text-transform: uppercase;
-}
-
-.regular {
-	.fontSize(@font-size--regular);
-	color: @color__text;
-	font-weight: 400;
-}
+	.h4() /* Se mixin i _vars.less */
+} 
+ 
+ 
 
 /*
 ul, ol {
@@ -52,12 +24,8 @@ ul, ol {
 }
 */
 
-p {
-	.fontSize(@font-size--regular);
-	.font-siri--regular();		
-	color: @color__text;
-	margin-bottom: 1em; 
-	line-height: 1.7em;
+p, h5, h6, h7 {
+	.text();
 }
 
 a, .a {
@@ -88,4 +56,10 @@ p+h2, p+h3, ul+h2, ul+h3{
 	});
 }
 
+.leadtext {	
+	.text--large(); /* Se mixin i _vars.less */
+}
 
+.small {
+	.text--small();
+}

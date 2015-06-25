@@ -27,36 +27,35 @@
     BREAKPOINTS
 \*------------------------------------*/
 
-@screen--sm                  : 360px; // em
-@screen--md                  : 640px;
-@screen--lg                  : 960px;
-@screen--xl                  : 1280px;
-@screen--xxl                 : 1660px; 
+@screen--sm                  : 22em; // em
+@screen--md                  : 35em;
+@screen--lg                  : 53em;
+@screen--xl                  : 71em;
+@screen--xxl                 : 92em; 
 
 
 /*------------------------------------*\
     GRID
 \*------------------------------------*/
 
-@grid-width                 : 800px;
-@gutter                     : 20px;
-@spacing--large             : 50px;
-@spacing                    : 25px;
-@spacing--medium            : 15px; 
-@spacing--small             : 10px; 
+@grid-width                 : 44em;
+@gutter                     : 21px;
+@spacing--large             : 42px;
+@spacing                    : 21px;
+@spacing--medium            : 14px; 
+@spacing--small             : 7px; 
 @spacing--xsmall            : 5px;
 
 /*------------------------------------*\
     #TYPE
 \*------------------------------------*/
 
-@font-size--xsmall           : 15; // pixelfallback + rem
-@font-size--small            : 16; // 
 @font-size--regular          : 18;
+@font-size--small            : 15; // pixelfallback + rem 
 @font-size--medium           : 24;
 @font-size--large            : 32;
-@font-size--xlarge           : 48;
-@font-size--xxlarge          : 64;
+@font-size--xlarge           : 52; 
+
 
 
 /*------------------------------------*\
@@ -83,7 +82,7 @@
 	box-shadow: @string;
 }
 
-.fontSize(@size: @fontSizeDefault, @rootSize: 16) {
+.fontSize(@size: @fontSizeDefault, @rootSize: @font-size--regular) {
 	@remValue: (@size / @rootSize);
 	@pxValue: @size;
 	font-size: ~"@{pxValue}px";
@@ -158,51 +157,119 @@
 }
 
 .h1() {
-	.fontSize(@font-size--large);
-	.font-siri--medium();
-	color: @color__text;
-	margin-bottom: @spacing;	
-	line-height: @line-height;
+	.font-siri--regular();
+	.fontSize(@font-size--xlarge);
+	line-height: (60 / @font-size--xlarge);
+	margin-bottom: 28px;	
 	.query-min(@screen--sm; {
-		.fontSize(@font-size--xlarge);	
+			
 	});	
 	.query-min(@screen--xxl; { 
-		.fontSize(@font-size--xxlarge);
-		line-height: @line-height--header;	
+			
 	});	
 }
 
 .h2() {
-	.fontSize(@font-size--medium);
 	.font-siri--medium();
-	color: @color__text;
-	margin-bottom: @spacing--medium;	
-	line-height: @line-height;
+	.fontSize(@font-size--large);
+	line-height: (42 / @font-size--large);
+	margin-bottom: 21px;	
 	.query-min(@screen--md; {
-		.fontSize(@font-size--large);
-		line-height: 1.3;	
+			
 	});	
 }
 
 .h3() {
-	.fontSize(@font-size--medium);
 	.font-siri--medium();
-	color: @color__text;
-	font-weight: 400;
-	margin-bottom: @spacing--small;
-	line-height: @line-height;
-	line-height: ((@font-size--large/16)*@line-height); 
+	.fontSize(@font-size--medium);
+	line-height: (35 / @font-size--medium);
+	margin-bottom: 14px;
 	.query-max(@screen--sm; {
-		.fontSize(@font-size--regular);
+		
 	});	
 }
 
 .h4() {
 	.font-siri--medium();	
-	color: @color__text;
-	margin-bottom: @spacing/2;
-	line-height: @line-height;
+	.fontSize(16);
+	line-height: (28 / 16);
+	margin-bottom: 0px;
+	text-transform: uppercase; 
+	letter-spacing: 0.05em;
 }
+
+.text() {
+	.font-siri--regular();
+	.fontSize(@font-size--regular);
+	line-height: (28 / @font-size--regular);		
+	margin-bottom: 14px;  	
+}
+
+.text--large() {
+	.font-siri--regular();
+	.fontSize(@font-size--medium);
+	line-height: (35 / @font-size--medium);	
+	margin-bottom: 28px;	
+}
+
+.text--small() {
+	.font-siri--regular();
+	.fontSize(@font-size--small);
+	line-height: (21 / @font-size--small);	
+	margin-bottom: 0px;		
+}
+
+/*------------------------------------*\
+   GRID
+\*------------------------------------*/
+
+/* Based on the css from the Grid System in Bootstrap */
+/* http://getbootstrap.com/css/#grid */
+
+// Creates a wrapper for a series of columns
+.row(@_gutter: @gutter) {
+  // Then clear the floated columns
+  .clearfix();
+
+  @media (min-width: @screen--sm) {
+    margin-left:  (@_gutter / -2);
+    margin-right: (@_gutter / -2);
+  }
+
+  // Negative margin nested rows out to align the content of columns
+  .row {
+    margin-left:  (@_gutter / -2);
+    margin-right: (@_gutter / -2);
+  }
+}
+
+// Generate the extra small columns
+.col(@ratio; @_gutter: @gutter) {
+  position: relative;
+  // Prevent columns from collapsing when empty
+  min-height: 1px;
+  // Inner gutter via padding
+  padding-left:  (@_gutter / 2);
+  padding-right: (@_gutter / 2);
+
+  // Calculate width based on number of columns available
+  @media (min-width: @screen--sm) {
+    float: left;
+    width: percentage(@ratio);
+  }
+}
+
+// Generate the small column offsets
+.col-offset(@columns) {
+    margin-left: percentage(@ratio);
+}
+.col-push(@columns) {
+    left: percentage(@ratio);
+}
+.col-pull(@columns) {
+    right: percentage(@ratio);
+}
+
 
 /*------------------------------------*\
     MEDIA QUERIES
