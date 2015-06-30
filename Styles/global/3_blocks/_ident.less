@@ -4,49 +4,58 @@
 .ident {
 	display: block;
 	border: none;
-	height: 91px;
-	width: 91px*3;
+	height: 81px;
+	width: 81px*3;
 	position: relative;
-
+	margin-top: -3px;
 	.query-min(@screen--lg; {
-		height: 161px;
-		width: 161px*3;
+
   	});
 			
 
 	&__symbol {
 		position: absolute;
-		background: url("/UI/gfx/ident.svg");
-		background-repeat: no-repeat;
-		background-size: 64px 64px;
-		width: 64px;
-		height: 64px;	
+		width: 81px;
+		height: 81px;	
 		overflow: hidden;
 		display: block;		
-		}
+		background: url("/UI/gfx/ident.svg");
+		background-repeat: no-repeat;
+		background-size: contain;
+	}
 	
 	&__textmark {
 		position: absolute;
-		top: 30px;
-		width: 164px*2;
+		top: 6px;
+		width: 81px*2;
 		overflow: hidden;
 		display: block;
-		margin-left: 64px + @gutter;
+		margin-left: 81px + @gutter;
 		box-sizing: border-box;
 		padding-top: 13px;
 			
 			.ident__textmark-primary {
-				.h2();
+				.h2();				
+				display: block;
 				color: @color__text;
+				margin: 0;
+				line-height: 1;
 				margin-left: -2px;
 			}
-				.ident__textmark-secondary {
-					display: block;
-				.font-siri--medium();
+			.ident__textmark-secondary {
+				.font-siri--regular();
+				.fontSize(10);
+				margin-top: -3px;
+				line-height: (21 / @font-size--small);	
+				margin-bottom: 0px;					
+				display: block;
+				color: @color__text;
+				/*
 				font-size: 20px;
 				line-height: 1.4;
 				margin-top: @spacing/4;
-				}
+				*/
+			}
 			
 					
 			.ident__textmark-secondary {
@@ -54,8 +63,6 @@
 			}
 				
 			.query-min(@screen--lg; {
-				margin-left: 164px + @gutter;
-				padding-top: 22px;
 				.ident__textmark-secondary {
 					display: block;
 				}

@@ -24,7 +24,7 @@ ul, ol {
 }
 */
 
-p, h5, h6, h7 {
+p, h5, h6, h7, .text {
 	.text();
 }
 
@@ -56,10 +56,14 @@ p+h2, p+h3, ul+h2, ul+h3{
 	});
 }
 
-.leadtext {	
+.text--xlarge {	
+	.h2(); /* Se mixin i _vars.less */
+}
+
+.text--large, .text--large p  {	
 	.text--large(); /* Se mixin i _vars.less */
 }
 
-.small {
+.text--small {
 	.text--small();
 }

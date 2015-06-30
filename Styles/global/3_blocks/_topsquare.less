@@ -1,0 +1,38 @@
+ @import "../../_vars";
+ 
+ .topsquare {
+	width: 100%;
+	@media (min-width: @screen--sm) {
+	width: 100%;
+	}	 
+	@media (min-width: @screen--md) {
+	width: 75%;	
+	}
+	@media (min-width: @screen--lg) {
+		width: 100%;		
+		 position: absolute;
+		 top: 0;
+		 left: percentage(13/12);
+	 }
+	 &__image {
+		overflow: hidden;
+		border: 1px solid red;
+		background: @color__orange;
+		-webkit-clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+		clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);		
+		width: 100%;
+		position: relative;
+		padding-bottom: 100%;
+		img {
+			position: absolute;
+			width: 100%;
+
+		}		 
+	 }
+	 &__bullet {
+	 	width: 50%;
+	 }
+	 &__image + .topsquare__bullet {
+	 	margin-top: -25%;		 
+	 }
+ }

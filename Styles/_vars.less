@@ -29,7 +29,7 @@
 
 @screen--sm                  : 22em; // em
 @screen--md                  : 35em;
-@screen--lg                  : 53em;
+@screen--lg                  : 57em;
 @screen--xl                  : 71em;
 @screen--xxl                 : 92em; 
 
@@ -38,7 +38,7 @@
     GRID
 \*------------------------------------*/
 
-@grid-width                 : 44em;
+@grid-width                 : 70em;
 @gutter                     : 21px;
 @spacing--large             : 42px;
 @spacing                    : 21px;
@@ -194,7 +194,7 @@
 	.fontSize(16);
 	line-height: (28 / 16);
 	margin-bottom: 0px;
-	text-transform: uppercase; 
+	text-transform: uppercase;  
 	letter-spacing: 0.05em;
 }
 
@@ -252,6 +252,11 @@
   padding-left:  (@_gutter / 2);
   padding-right: (@_gutter / 2);
 
+/*
+  border: 1px dotted grey;
+  border-left: 1px dotted red;
+  border-right: 1px dotted green;
+*/
   // Calculate width based on number of columns available
   @media (min-width: @screen--sm) {
     float: left;
@@ -260,13 +265,13 @@
 }
 
 // Generate the small column offsets
-.col-offset(@columns) {
+.col-offset(@ratio) {
     margin-left: percentage(@ratio);
 }
-.col-push(@columns) {
+.col-push(@ratio) {
     left: percentage(@ratio);
 }
-.col-pull(@columns) {
+.col-pull(@ratio) {
     right: percentage(@ratio);
 }
 

@@ -1,6 +1,26 @@
 @import "../../_vars";
 
+.wrapper {
+	max-width: @grid-width;
+	margin: 0 auto;	
+	padding: 0 @gutter;
+}
+
 .row {
 	.row(); /* Se mixins in _vars.less */
 }
 
+.col--main {
+	.col(1); /* Se mixins in _vars.less */
+	@media (min-width: @screen--md) {
+		.col(14/22); /* Se mixins in _vars.less */
+		.col-offset(1/22);		
+	}
+	@media (min-width: @screen--lg) {
+		.col(12/22); /* Se mixins in _vars.less */
+		.col-offset(2/22);
+	}	
+}
+.col--full {
+	.col(1); /* Se mixins in _vars.less */
+}
