@@ -1,0 +1,24 @@
+ @import "../../_vars";
+
+.timeline {
+	padding-left: 0;
+	&__item {
+		margin-bottom: 0;
+		padding-bottom: @spacing--small;
+		padding-left: @spacing;
+		border-left: 2px solid @color__grey;		
+		list-style: none;
+		&:before {
+			content: "";
+			display: block;
+			position: absolute;	
+			background: url("/UI/gfx/bullet__small--primary.svg") center center no-repeat white;	
+			width: 25px;
+			height: 25px;		
+			margin-left: (-@spacing - 14px);	
+		}
+		&:last-child {
+			border: none;
+		}
+	}
+}
