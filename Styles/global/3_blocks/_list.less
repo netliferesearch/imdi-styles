@@ -14,13 +14,6 @@
        	margin-bottom: 1em; 
 	    line-height: 1.7em;
     }
-    &--numbered{
-
-    }
-    &--numbered li {
-		list-style: decimal;
-		background: none;
-    }
     &--no-bullets {
 	    margin-left: 0;
 		padding: 0;
@@ -53,4 +46,24 @@
 		    }
 	    }
     }
+    .list, ul, ol {
+	    margin-top: @spacing;
+	    li {
+	        list-style-image: url("/UI/gfx/bullet__small--secondary.svg");		    
+	        .fontSize(@font-size--small);
+           	margin-bottom: 0.5em; 
+	    }
+    }
+}
+.list--numbered, ol{
+    .list--numbered, ol {
+	    li {
+			list-style: decimal;
+			background: none;
+	    }
+    }
+}
+.list--numbered li, ol li {
+	list-style: decimal;
+	background: none;	
 }

@@ -3,17 +3,17 @@
  .topsquare {
 	width: 100%;
 	@media (min-width: @screen--sm) {
-	width: 100%;
+		width: 100%;
 	}	 
 	@media (min-width: @screen--md) {
-	width: 75%;	
+		width: 75%;	
+		position: absolute;
+		top: 0;
+		left: percentage(13/12);
 	}
-	@media (min-width: @screen--lg) {
-		width: 100%;		
-		 position: absolute;
-		 top: 0;
-		 left: percentage(13/12);
-	 }
+	@media (min-width: @screen--lg) {			 
+	 	width: 100%;
+	}	 		
 	 &__image {
 		overflow: hidden;
 		border: 1px solid red;
