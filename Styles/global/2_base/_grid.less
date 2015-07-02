@@ -10,6 +10,11 @@
 	.row(); /* Se mixins in _vars.less */
 }
 
+
+.col--full {
+	.col(1); /* Se mixins in _vars.less */
+}
+
 .col--main {
 	.col(1); /* Se mixins in _vars.less */
 	@media (min-width: @screen--md) {
@@ -21,6 +26,36 @@
 		.col-offset(2/22);
 	}	
 }
-.col--full {
+.col--related {
 	.col(1); /* Se mixins in _vars.less */
+	@media (min-width: @screen--md) {
+		.col(7/22); /* Se mixins in _vars.less */	
+	}
+	@media (min-width: @screen--lg) {
+		.col-offset(1/22);		
+		.col(7/22); /* Se mixins in _vars.less */
+	}		
+}
+
+.col--main-wide {
+	.col(1); /* Se mixins in _vars.less */
+	@media (min-width: @screen--md) {
+		.col(21/22); /* Se mixins in _vars.less */
+		.col-offset(1/22);		
+	}
+	@media (min-width: @screen--lg) {
+		.col(20/22); /* Se mixins in _vars.less */
+		.col-offset(2/22);
+	}	
+}
+
+.col--quarter {
+	.col(1); /* Se mixins in _vars.less */
+	@media (min-width: @screen--md) {
+		.col(1/2); /* Se mixins in _vars.less */	
+	}
+	@media (min-width: @screen--lg) {
+		.col(1/4); /* Se mixins in _vars.less */
+	}		
+	
 }

@@ -3,12 +3,10 @@
 .navigation {
 	margin-bottom: 3em;  
 	&__link{
-		display: block;
-		border: none;
-
 		&--primary{
-			//@extend .intro;
+			display: block;			
 			.fontSize(@font-size--medium);
+			border: none;
 			line-height: 1;
 			padding: @spacing+3px @spacing @spacing 0;
 			border-bottom: 1px solid @color__orange;
@@ -21,6 +19,7 @@
 			&:hover{
 				//background: lighten(@color__canvas-grey, 3%);
 				color: darken(@color__orange--dark, 6%);
+				border-color: darken(@color__orange--dark, 6%);
 			}
 		}
 	}

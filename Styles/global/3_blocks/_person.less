@@ -1,0 +1,19 @@
+ @import "../../_vars";
+ 
+ .person {
+	 padding-right: @spacing;
+	 margin-bottom: @spacing--large;
+	 &__image {
+	 	margin-bottom: @spacing;
+	 }
+	 &__name {
+		 .text();
+		 font-weight: bold;
+		 text-align: center;
+		 margin-bottom: 0;		 
+	 }
+	 &__info {
+		 .text--small();
+		 text-align: center;		 
+	 }
+ }

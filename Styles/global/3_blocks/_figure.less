@@ -1,15 +1,19 @@
  @import "../../_vars";
 
 .figure{
-	&--trialgular {
-	overflow: hidden;
-	img {
-		max-width: 300%;
-		-webkit-clip-path: polygon(50% 0%, 85% 50%, 50% 100%, 15% 50%);
-		clip-path: polygon(50% 0%, 85% 50%, 50% 100%, 15% 50%);
+	&--triangular {
+		overflow: hidden;
+		background: @color__canvas-grey;	
+		-webkit-clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+		clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);		
+		width: 100%;
+		position: relative;
+		padding-bottom: 100%;	
+		img {
+			position: absolute;
+			width: 100%;	
+		}	
 	}
-	
-}
 }
 
 .figure--left {
