@@ -4,4 +4,33 @@
 	.clearfix();	
 	padding-top: 32px;
 	padding-bottom: 57px;
+	position: relative;
+	
+	&__button {
+		position: absolute;
+		background: transparent;
+		color: @color__text;
+		border-color: transparent;
+		width: auto;
+		.fontSize(@font-size--small);		
+		@media (min-width: @screen--sm) {
+			.fontSize(@font-size--regular);
+		}
+		&--menu {
+			top: 0;
+			right: 0;	
+			@media (min-width: @screen--sm) {
+				top: 34px;	
+				right: 100px;		
+			}
+		}
+		&--search {
+			top: 32px;			
+			right: 0;		
+			@media (min-width: @screen--sm) {	
+				top: 34px;
+				right: 0;		
+			}
+		}
+	}
 }
