@@ -24,14 +24,21 @@
 			}			
 			&:hover{
 				//background: lighten(@color__canvas-grey, 3%);
-				color: darken(@color__orange--dark, 6%);
-				border-color: darken(@color__orange--dark, 6%);
+				color: @color__text;
+				border-color:  @color__text;
 			}
 		}
 	}
 	&--footer {
 		.navigation__link {
 			margin-bottom: 0;
+			display: inline-block;				
+			padding-bottom: 0;
+			margin-bottom: @spacing--small;
+			border-bottom: 1px solid @color__orange--dark;				
+			&:hover {
+				border-color: @color__white;
+			}				
 		}	
 		.navigation__link--primary {
 			display: inline-block;		
