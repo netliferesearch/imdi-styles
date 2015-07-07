@@ -1,7 +1,5 @@
 @import "../../_vars";
 
-/*Alternativ teknikk å vurdere: https://techblog.livingsocial.com/blog/2015/04/06/responsive-tables-in-pure-css/ */
-
 // Table
 table, .table {
 
@@ -26,6 +24,8 @@ table, .table {
 	th {
         padding: @spacing--medium @spacing--medium;		
         padding-left: 0;
+        .fontSize(@font-size--small);
+        
 	}	
 	tfoot {
 		
@@ -43,9 +43,14 @@ table, .table {
 	&__sum {
 
 	}
-	&--cell__right{
-		text-align: right;
+	&--cell--right{
+		text-align: right;		
 	}
+	&--cell--number {
+		text-align: right;				
+		font-family: 'Consolas', 'Lucida Console', "Courier";	
+		.fontSize(16);
+	}	
 	&--collapse-on-mobile {
 		.query-max(@screen--md; {
 			display: block;
@@ -107,18 +112,13 @@ table, .table {
 			border-bottom: 1px solid #eee; 
 			position: relative;
 			padding-left: 50%;
-			text-align: right;
 		}
 		
 		td:first-child{
 			border-bottom: 2px solid @color__canvas-grey--dark;
 		}
 		
-		td:before { 	
-			
-			content: attr(data-label);
-			.fontSize(@font-size--small);
-			font-weight: bold;
+		td:before { 
 			/* Now like a table header */
 			position: absolute;
 			/* Top/left values mimic padding */
@@ -129,6 +129,14 @@ table, .table {
 			padding-right: 10px; 
 			white-space: nowrap;
 		}
+		
+		/*
+		Label the data
+		*/
+		td:nth-of-type(1):before { content: ""; }
+		td:nth-of-type(2):before { content: "2013"; }
+		td:nth-of-type(3):before { content: "2012-2013"; }
+		td:nth-of-type(4):before { content: "2009-2013"; }
 	}
 	
 	/* Smartphones (portrait and landscape) ----------- */

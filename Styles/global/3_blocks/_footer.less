@@ -2,13 +2,16 @@
 
 .footer {
 	background: @color__orange;
-	padding: @spacing 0 @spacing--large 0;
+	padding: @spacing--large 0 @spacing--large 0;
 	color: @color__white;
 	a {
 		color: @color__white; 
-		border-color: @color__white;
+		border-color: transparent;
 		&:hover, &:focus {
 			color: @color__white;
 		}
+	}
+	&__global {
+		margin-top: @spacing--xlarge*1.5;
 	}
 }

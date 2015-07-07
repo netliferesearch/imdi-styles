@@ -2,36 +2,47 @@
  
  .header-bullet {
 	width: 100%;
-	@media (min-width: @screen--sm) {
-		width: 100%;
-	}	 
-	@media (min-width: @screen--md) {
-		width: 75%;	
-		position: absolute;
-		top: 0;
-		left: percentage(13/12);
-	}
+	&--image {
+		@media (min-width: @screen--md) {
+			width: 75%;	
+			position: absolute;
+			top: 0;
+			left: percentage(13/12);
+		}		
+	}	 		
 	@media (min-width: @screen--lg) {			 
 	 	width: 100%;
-	}	 		
-	 &__image {
-		overflow: hidden;
-		background: @color__canvas-grey;
-		-webkit-clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
-		clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);		
-		width: 100%;
-		position: relative;
-		padding-bottom: 100%;
+		position: absolute;
+		top: 0;
+		left: percentage(13/12);	 	
+	}	
+	&__image { 
 		img {
-			position: absolute;
+			display: block;
+			margin-bottom: @spacing--small;
+		}
+		@media (min-width: @screen--md) {		
+			background: @color__canvas-grey;
+			-webkit-clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+			clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);		
 			width: 100%;
-
-		}		 
-	 }
-	 &__bullet {
-	 	width: 50%;
-	 }
-	 &__image + .header-bullet__bullet {
-	 	margin-top: -25%;		 
-	 }
+			position: relative;
+			padding-bottom: 100%;
+			img {
+				position: absolute;
+				width: 100%;
+	
+			}		 
+		}
+	}
+	&__bullet {
+		@media (min-width: @screen--lg) {		
+			width: 50%;
+		}
+	}
+	& + .header-bullet {
+		@media (min-width: @screen--lg) {
+			margin-top: 75%;		 
+		}
+	}
  }

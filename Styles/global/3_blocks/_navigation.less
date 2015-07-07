@@ -1,16 +1,22 @@
 @import "../../_vars";
 
 .navigation {
+	margin-top: @spacing;
 	margin-bottom: 3em;  
+	h2, h3, h4 {
+		margin-bottom: @spacing;
+	}
 	&__link{
+		display: block;					
+		border-bottom: 1px solid @color__orange;
+		margin-bottom: @spacing--small;
+		padding: (@spacing--xsmall - 3px) 0 @spacing--xsmall 0;			
 		&--primary{
-			display: block;			
 			.fontSize(@font-size--medium);
 			border: none;
 			line-height: 1;
-			padding: @spacing+3px @spacing @spacing 0;
-			border-bottom: 1px solid @color__orange;
-			margin-bottom: @spacing--small;
+			padding: @spacing+3px 0 @spacing 0;	
+			border-bottom: 1px solid @color__orange;					
 			color: @color__links;
 			position: relative;
 			i {
@@ -23,4 +29,20 @@
 			}
 		}
 	}
+	&--footer {
+		.navigation__link {
+			margin-bottom: 0;
+		}	
+		.navigation__link--primary {
+			display: inline-block;		
+			.h2();		
+			margin: 0;		
+			padding-bottom: 0;
+			margin-bottom: @spacing--small;
+			border-bottom: 1px solid @color__orange--dark;	
+			&:hover {
+				border-color: @color__white;
+			}		
+		}
+	}	
 }

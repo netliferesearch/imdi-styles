@@ -1,34 +1,67 @@
  @import "../../_vars";
  
  .bullet {
-	 background: url('/UI/gfx/square--red.svg') no-repeat center center;
-	 background-size: contain;
+	 border: 3px solid @color__orange;
 	 width: 100%;
-	 padding-bottom: 100%;
-	 position: relative;
+	 padding: @spacing;
+	 margin-bottom: @spacing--large;
+	 @media (min-width: @screen--lg) {	
+		 background: url('/UI/gfx/square--red.svg') no-repeat center center;
+		 background-size: contain;
+		 border: none;
+		 margin: 0;
+		 padding: 0;
+		 padding-bottom: 100%;
+		 position: relative;
+	 }
 	 &--cta {
-		 background-image: url('/UI/gfx/square--green.svg');
+		 @media (min-width: @screen--lg) {				 
+		 	background-image: url('/UI/gfx/square--green.svg');
+		 }
 	 }
 	 &__content {
-		 position: absolute;
-		 width: 100%;
-		 top: 50%;
-		 transform: translateY(-50%);
-		 color: @color__white;
-		 text-align: center;
-		 padding: @spacing--large;
-		 a {
-			 color: @color__white;			 
-			 border-color: @color__white;
-		 }
+		 padding-left: 57px;
 		 p, span {
 			 margin-bottom: 0;
+		 } 
+		 @media (min-width: @screen--lg) {			 
+			 position: absolute;
+			 width: 100%;
+			 top: 50%;
+			 transform: translateY(-50%);
+			 color: @color__white;
+			 text-align: center;
+			 padding: @spacing--large;
+			 a {
+				 color: @color__white;			 
+				 border-color: @color__white;
+			 }
 		 }
 	 }
 	 &__icon {
-		.fontSize(@font-size--large);
-		display: block;
-		line-height: (60 / @font-size--xlarge);
-		margin-bottom: 14px;
+
+		 position: absolute;
+		 margin-left: -57px; 
+		 background: url('/UI/gfx/square--red.svg') no-repeat center center;
+		 background-size: contain;
+		 width: @spacing--large;
+		 height: @spacing--large;		 
+		 line-height: @spacing--large;
+		 text-align: center;
+		 color: @color__white;
+
+		 @media (min-width: @screen--lg) {			 
+			 position: static;
+			 margin: 0;
+			 background: none;
+			 width: auto;
+			 height: auto;
+			 line-height: inherit;
+
+			.fontSize(@font-size--large);
+			display: block;
+			line-height: (60 / @font-size--xlarge);
+			margin-bottom: 14px;
+		}
 	 }
 }

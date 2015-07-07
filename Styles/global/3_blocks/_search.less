@@ -1,0 +1,37 @@
+@import "../../_vars";
+
+.search {
+	position: relative;
+	&__input {
+		background: white;
+		border: none;
+		border-bottom: 3px solid @color__orange;	
+	}
+	&__button {
+		position: absolute;
+		top: 0;
+		right: 0;
+	}
+	&--footer {
+		.search__input {
+			background: none;
+			border-bottom: 3px solid @color__white;
+			color: @color__white;
+			&::-webkit-input-placeholder {
+			   color: @color__white;
+			}
+			
+			&:-moz-placeholder { /* Firefox 18- */
+			   color: @color__white;  
+			}
+			
+			&::-moz-placeholder {  /* Firefox 19+ */
+			   color: @color__white; 
+			}
+			
+			&:-ms-input-placeholder {  
+			   color: @color__white;  
+			}			
+		}
+	}
+}

@@ -50,9 +50,15 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
 	}
 }
 
-p+h2, p+h3, ul+h2, ul+h3{
+p+h2, ul+h2{
 	.query-min(@screen--md; {
-		//margin-top: @spacing--large;
+		margin-top: @spacing--xlarge;
+	});
+}
+
+p+h3, ul+h3{
+	.query-min(@screen--md; {
+		margin-top: @spacing--large;
 	});
 }
 
@@ -62,6 +68,7 @@ p+h2, p+h3, ul+h2, ul+h3{
 
 .text--large, .text--large p  {	
 	.text--large(); /* Se mixin i _vars.less */
+	margin-bottom: @spacing--xlarge;
 }
 
 .text--small {
