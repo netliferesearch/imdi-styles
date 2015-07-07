@@ -4,11 +4,15 @@
 	width: 100%;
 	&--image {
 		@media (min-width: @screen--md) {
-			width: 75%;	
 			position: absolute;
-			top: 0;
+			width: 75%;	
+			margin-top: -25%;
 			left: percentage(13/12);
+			z-index: 2;
 		}		
+		@media (min-width: @screen--lg) {		
+			margin-top: 0%;	
+		}
 	}	 		
 	@media (min-width: @screen--lg) {			 
 	 	width: 100%;

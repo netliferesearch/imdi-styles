@@ -1,6 +1,7 @@
  @import "../../_vars";
  
 .cta {
+	.text--large();	
 	display: block;
 	position: relative;
 	border: 3px solid @color__green;
@@ -8,9 +9,8 @@
 	padding-bottom: @spacing--small;
 	padding-left: 50px + @spacing + @spacing; 
 	min-height: 50px + @spacing + @spacing + 6px;
-	margin-bottom: @spacing;
-
-	.text--large();
+	margin-top: @spacing--large;
+	margin-bottom: @spacing--large;
 	line-height: 50px;
 	
 	&__icon {
@@ -26,6 +26,16 @@
 		background: url('/UI/gfx/square--green.svg') no-repeat center center;
 		background-size: contain;
 		color: @color__white;	 
+	}
+	&__image {
+		position: absolute;
+		width: 118px;
+		top: @spacing;
+		left: @spacing + 33px;
+		@media (min-width: @screen--lg) {
+			top: @spacing + 33px;
+			left: @spacing;		   
+		}
 	}
 	&__primary-link {
 		color: @color__text;
@@ -75,5 +85,13 @@
 				.text();
 			}
 		}	
+	}
+	&--with-image {
+		padding-left: @spacing;
+		padding-top: 155px; 		
+		@media (min-width: @screen--lg) {
+			padding-top: @spacing;
+			padding-left: 160px; 		
+		}
 	}
 }
