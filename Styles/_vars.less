@@ -7,6 +7,7 @@
 @color__orange              : #ff523b;
 @color__orange--dark        : #d83a36;
 @color__green               : #5bb95b;
+@color__green--dark         : #408540;
 @color__yellow              : #ffd766;
 @color__blue                : #2eb0d1;
 @color__purple              : #9c0d61;
@@ -22,7 +23,7 @@
 @color__canvas-grey--dark   : #bfbfbf;
 
 @color__text	            : @color__black;
-@color__links	            : @color__orange;
+@color__links	            : @color__orange--dark;
 
 /*------------------------------------*\
     BREAKPOINTS
@@ -251,8 +252,10 @@
   // Prevent columns from collapsing when empty
   min-height: 1px;
   // Inner gutter via padding
-  padding-left:  (@_gutter / 2);
-  padding-right: (@_gutter / 2);
+  @media (min-width: @screen--sm) {
+	  padding-left:  (@_gutter / 2);
+	  padding-right: (@_gutter / 2);
+  }
 
 /*
   border: 1px dotted grey;
