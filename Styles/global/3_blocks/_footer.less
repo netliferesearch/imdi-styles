@@ -10,7 +10,6 @@
 			@color__orange 50%, @color__orange--dark 50%
 		);	
 	}
-	
 
 	a {
 		color: @color__white; 
@@ -23,13 +22,20 @@
 		@media (min-width: @screen--lg) {
 			display: table;
 			width: 100%;
+			background: linear-gradient(
+		    	to right, 
+				@color__orange percentage(14 / 22), @color__orange--dark percentage(8 / 22)
+			);			
 		}
 	}
 	&__main {
 		//background: @color__orange;		
+		padding: @spacing 0 @spacing--large 0;		
 		@media (min-width: @screen--lg) {		
-			padding: @spacing--large 0 @spacing--large 0;		
+			padding: @spacing--xlarge 0 @spacing--xlarge 0;		
 			display: table-cell;
+			width: percentage(14 / 22);
+			margin-bottom: 0;
 		}
 	}
 	&__global {
@@ -47,6 +53,7 @@
 			display: table-cell;
 			vertical-align: bottom;		
 			padding-left: @spacing--large;
+			width: percentage(8 / 22);
 		}
 	}
 	&__submenues {
@@ -71,15 +78,15 @@
 	}
 
 	&--overlay {
-		position: fixed;
+		position: relative;
 		width: 100%;
 		height: 100%;
 		z-index: 1;
-		top: 0;
-		overflow: scroll;
-		padding-top: 67px + 57px + 32px;
 		.footer__row {
-			height: 100%;
+			padding-top: 67px + 32px + 0px;
+			.query-min(@screen--sm; {
+				padding-top: 67px + 57px + 32px;				
+			});				
 		}
 		.footer__submenu li, .navigation--footer li {
 			.animation(animations__fade-in-down 200ms @swift-out both);	

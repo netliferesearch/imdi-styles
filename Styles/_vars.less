@@ -166,36 +166,49 @@
 	font-style: normal;
 }
 
+
+
 .h1() {
 	.font-siri--regular();
-	.fontSize(40);
+	.fontSize(34);
 	line-height: (60 / @font-size--xlarge);	
-	margin-bottom: 28px;
+	margin-bottom: 18px;
 	text-transform: none;		
+	.query-min(@screen--sm; { 
+		.fontSize(42);			
+		margin-bottom: 22px;	
+	});			
 	.query-min(@screen--md; { 
 		.fontSize(@font-size--xlarge);			
+		margin-bottom: 28px;
 	});	
 }
 
 .h2() {
 	.font-siri--medium();
-	.fontSize(@font-size--large);
+	.fontSize(24);
 	line-height: (42 / @font-size--large);
 	margin-bottom: 21px;	
 	text-transform: none;
+	.query-min(@screen--sm; {
+		.fontSize(26);				
+	});	
 	.query-min(@screen--md; {
-			
+		.fontSize(@font-size--large);			
 	});	
 }
 
 .h3() {
 	.font-siri--medium();
-	.fontSize(@font-size--medium);
+	.fontSize(20);
 	line-height: (35 / @font-size--medium);
 	margin-bottom: 14px;
 	text-transform: none;  	
-	.query-max(@screen--sm; {
-		
+	.query-min(@screen--sm; {
+		.fontSize(22);				
+	});	
+	.query-min(@screen--md; {
+		.fontSize(@font-size--medium);			
 	});	
 }
 
@@ -265,6 +278,7 @@
   position: relative;
   // Prevent columns from collapsing when empty
   min-height: 1px;
+  word-wrap: break-word; 
   // Inner gutter via padding
   @media (min-width: @screen--sm) {
 	  padding-left:  (@_gutter / 2);

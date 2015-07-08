@@ -1,8 +1,12 @@
 @import "../../_vars";
 
 .navigation {
-	margin-top: @spacing;
-	margin-bottom: 3em;  
+	margin-top: @spacing--small;  
+	margin-bottom: @spacing; 
+	.query-min(@screen--sm; {
+		margin-top: @spacing;
+		margin-bottom: @spacing--large;  		
+	});		
 	h2, h3, h4 {
 		margin-bottom: @spacing;
 	}
@@ -13,13 +17,21 @@
 		padding: (@spacing--xsmall - 3px) 0 @spacing--xsmall 0;
 		.transition(border-color 0.2s ease);			
 		&--primary{
-			.fontSize(@font-size--medium);
+			.fontSize(20);
 			border: none;
 			line-height: 1;
-			padding: @spacing+3px 0 @spacing 0;	
+			margin: 0;
+			padding: (18px + 3px) 0 18px 0;	
 			border-bottom: 1px solid @color__orange;					
 			color: @color__links;
 			position: relative;
+			.query-min(@screen--sm; {
+				.fontSize(22);				
+			});	
+			.query-min(@screen--md; {
+				padding: @spacing+3px 0 @spacing 0;					
+				.fontSize(@font-size--medium);			
+			});				
 			i {
 				float: right;
 			}			
@@ -43,7 +55,13 @@
 		}	
 		.navigation__link--primary {
 			display: inline-block;		
-			.h2();		
+			.fontSize(24);
+			.query-min(@screen--sm; {
+				.fontSize(26);				
+			});	
+			.query-min(@screen--sm; {
+				.fontSize(@font-size--large);			
+			});	
 			margin: 0;		
 			padding-bottom: 0;
 			margin-bottom: @spacing--small;

@@ -1,5 +1,8 @@
 @import "../../_vars";
 
 .page {
-	margin-bottom: @spacing--xlarge;
+	margin-bottom: @spacing--large;
+	@media (min-width: @screen--md) {
+		margin-bottom: @spacing--xlarge;	
+	}
 }		

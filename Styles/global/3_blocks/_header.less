@@ -2,12 +2,12 @@
 
 .header {
 	padding-top: 32px;
-	padding-bottom: 0px;
+	padding-bottom: 32px;
 	@media (min-width: @screen--sm) {
 		padding-bottom: 57px;	
 	}
 	&__row {
-		.clearfix();	
+		.clearfix();
 		position: relative;
 	}
 	&__ident {
@@ -59,6 +59,8 @@
 	    width: 1rem;
 	    height: 1rem;
 	    top: 1px;
+        -ms-transform-origin: 50% 50%;
+		-webkit-transform-origin: 50% 50%;	    
 	    transform-origin: 50% 50%;
 	    .transition(transform .3s @swift-out);
 	    margin-right: 0.25rem;
@@ -71,7 +73,8 @@
 	        margin-bottom: 2px;
 	        border-radius: 1px;
 	        background-color: @color__text;
-	
+	        -ms-transform-origin: left top;
+			-webkit-transform-origin: left top;
 	        transform-origin: left top;
 	        .transition(all .3s @swift-out);
 	
@@ -84,6 +87,8 @@
 	        &:last-child {
 	            margin-top: 0;
 	            top: 1rem * 2 / 3;
+		        -ms-transform-origin: left bottom;
+				-webkit-transform-origin: left bottom;          
 	            transform-origin: left bottom;
 	        }
 	    }
@@ -103,7 +108,7 @@
 	}
 	&--overlay {
 		width: 100%;
-		position: fixed;
+		position: absolute; 
 		z-index: 2;
 		.header__button {
 			color: @color__white;
@@ -130,12 +135,12 @@
             &:first-child {
                 // top: -2px;
                 opacity: 1;
-                transform: rotate(45deg);
+                .transform(rotate(45deg));
             }
             &:last-child {
                 top: 1rem * 2 / 3;
                 opacity: 1;
-                transform: rotate(-45deg);
+                .transform(rotate(-45deg));
             }
         }	
 		.header__button-text--open {

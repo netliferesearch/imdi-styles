@@ -2,8 +2,10 @@
 
 .ingress {
 	.text--large();		
-	margin-bottom: @spacing--xlarge;	
-	
+	margin-bottom: @spacing--large;	
+	@media (min-width: @screen--md) {
+		margin-bottom: @spacing--xlarge;		
+	}
 	p {
 		// TODO - fjern p nivå
 		.text--large();	  

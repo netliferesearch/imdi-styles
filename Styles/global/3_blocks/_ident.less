@@ -9,10 +9,13 @@
 	height: 40px;
 	width: 40px*3;	
 	@media (min-width: @screen--sm) {	
+		height: 60px;
+		width: 60px*3;		
+	}			
+	@media (min-width: @screen--md) {	
 		height: 81px;
 		width: 81px*3;		
 	}			
-
 	&__symbol {
 		position: absolute;
 		overflow: hidden;
@@ -23,9 +26,13 @@
 		width: 40px;
 		height: 40px;	
 		@media (min-width: @screen--sm) {	
+			width: 60px; 
+			height: 60px;				
+		}		
+		@media (min-width: @screen--md) {	
 			width: 81px; 
 			height: 81px;				
-		}		
+		}	
 	}
 	
 	&__textmark {
@@ -38,11 +45,17 @@
 		top: 3px;
 		width: 40px*2;					
 		@media (min-width: @screen--sm) {
+			padding-top: 9px;
+			margin-left: 60px + ( @gutter * 3 / 4 );	
+			top: 4px;
+			width: 60px*2;	
+		}
+		@media (min-width: @screen--md) {
 			padding-top: 13px;
 			margin-left: 81px + @gutter;	
 			top: 6px;
 			width: 81px*2;	
-		}			
+		}					
 		
 		.ident__textmark-primary {
 			.font-siri--medium();
@@ -53,8 +66,11 @@
 			line-height: 1;
 			margin-left: -2px;
 			@media (min-width: @screen--sm) {			
-				.fontSize(@font-size--large);			
+				.fontSize(28);			
 			}
+			@media (min-width: @screen--md) {			
+				.fontSize(@font-size--large);			
+			}			
 		}
 		.ident__textmark-secondary {
 			.font-siri--regular();

@@ -2,6 +2,7 @@
  
  .header-bullet {
 	width: 100%;
+	max-width: 100%;
 	&--image {
 		@media (min-width: @screen--md) {
 			position: absolute;
@@ -12,6 +13,8 @@
 		}		
 		@media (min-width: @screen--lg) {		
 			margin-top: 0%;	
+			max-width: 100%;
+			overflow: hidden;
 		}
 	}	 		
 	@media (min-width: @screen--lg) {			 
