@@ -18,14 +18,16 @@
 		//padding: .5em;
 		background: transparent;
 		color: @color__orange--dark;
+		border-bottom: 3px solid transparent;
 		border-color: transparent;
 		width: auto;
 		.transition(all 0.2s ease);
-		&:focus{
-			border-width: 2px;
-			outline: none !important;
-			border-color: @color__orange;
-		}  		
+		&:hover, &:focus {
+			border-width: 2px;	
+			background: @color__links;
+			border-color: @color__links;
+			color: @color__white;
+		}	 		
 	}
 	&--footer {
 		.search__input {
