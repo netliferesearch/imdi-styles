@@ -168,15 +168,12 @@
 
 .h1() {
 	.font-siri--regular();
-	.fontSize(@font-size--xlarge);
-	line-height: (60 / @font-size--xlarge);
+	.fontSize(40);
+	line-height: (60 / @font-size--xlarge);	
 	margin-bottom: 28px;
 	text-transform: none;		
-	.query-min(@screen--sm; {
-			
-	});	
-	.query-min(@screen--xxl; { 
-			
+	.query-min(@screen--md; { 
+		.fontSize(@font-size--xlarge);			
 	});	
 }
 
@@ -221,10 +218,14 @@
 
 .text--large() {
 	.font-siri--regular();
-	.fontSize(@font-size--medium);
-	line-height: (35 / @font-size--medium);	
+	.fontSize(20);
+	line-height: (35 / @font-size--medium);			
 	margin-bottom: 28px;
 	text-transform: none;	
+	.query-min(@screen--md; { 
+		.fontSize(@font-size--medium);
+
+	});			
 }
 
 .text--small() {
