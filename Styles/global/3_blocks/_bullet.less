@@ -85,7 +85,10 @@
 }
 .bullet--cta {
 	.bullet__icon {
-			background-image: url('/UI/gfx/square--green.svg');			 
+			background-image: url('/UI/gfx/square--green.svg');		
+			@media (min-width: @screen--lg) {
+				background: none;	
+			}	 
 	}
 	.bullet__content {
 		a {

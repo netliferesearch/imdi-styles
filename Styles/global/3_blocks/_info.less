@@ -1,17 +1,20 @@
- @import "../../_vars";
+@import "../../_vars";
  
- .info {
-	 margin-bottom: @spacing--large;
-	 &__title {
-		 .text--small();
-		 margin-bottom: 0;
-		 font-weight: bold;
-	 }
-	 &--numbers p {
-		 .h2();
-	 }
-	 &__number-caption {
-		 .text--small(); 
-		 display: block;		 
-	 }
- }
+.info {
+	margin-bottom: @spacing;
+	@media (min-width: @screen--md) {
+		margin-bottom: @spacing--large;		 
+	}
+	&__title {
+		.text--small();
+		margin-bottom: 0;
+		font-weight: bold;
+	}
+	&--numbers p {
+		.h2();
+	}
+	&__number-caption {
+		.text--small(); 
+		display: block;		 
+	}
+}
