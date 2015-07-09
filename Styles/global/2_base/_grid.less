@@ -28,6 +28,20 @@
 		.col-offset(2/22);
 	}	
 }
+
+.col--filter {
+	.col(1); /* Se mixins in _vars.less */
+	@media (min-width: @screen--md) {
+		.col(7/22); /* Se mixins in _vars.less */	
+		float: right !important; // Sorry ... media queries inside less mixins is apearantly not reccommended
+	}
+	@media (min-width: @screen--lg) {
+		.col-offset(1/22);		
+		.col(7/22); /* Se mixins in _vars.less */
+		float: right !important; // Sorry ... media queries inside less mixins is apearantly not reccommended		
+	}		
+}
+
 .col--related {
 	.col(1); /* Se mixins in _vars.less */
 	@media (min-width: @screen--md) {

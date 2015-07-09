@@ -276,6 +276,7 @@
 // Generate the extra small columns
 .col(@ratio; @_gutter: @gutter) {
   position: relative;
+
   // Prevent columns from collapsing when empty
   min-height: 1px;
   word-wrap: break-word; 
@@ -284,12 +285,6 @@
 	  padding-left:  (@_gutter / 2);
 	  padding-right: (@_gutter / 2);
   }
-
-/*
-  border: 1px dotted grey;
-  border-left: 1px dotted red;
-  border-right: 1px dotted green;
-*/
   // Calculate width based on number of columns available
   @media (min-width: @screen--sm) {
     float: left;
