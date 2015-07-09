@@ -1,0 +1,89 @@
+@import "../../_vars";
+
+.cta-frontpage {
+	@media (min-width: @screen--md) {
+		.row();
+	}
+	&__item {
+		@media (min-width: @screen--md) {		
+			.col(1/3);	 			
+		}
+	}
+	
+	&__bullet {
+		.h3();
+		display: table-cell;
+		vertical-align: top;
+		color: @color__green--dark; 
+		background: url('/UI/gfx/square--green-outline.svg') no-repeat center top;
+		background-size: contain; 		
+		text-align: center;		
+		width: 50px;
+		height: 50px;
+		line-height: 50px;
+		@media (min-width: @screen--md) {		
+			display: block;
+			margin: 0 auto;
+			margin-bottom: @spacing;	
+			width: 75px;
+			height: 75px;
+			line-height: 75px;
+			.transition(all 200ms @swift-out);
+		}
+		@media (min-width: @screen--lg) {	
+			.fontSize(@font-size--large);	
+			width: 100px;
+			height: 100px;
+			line-height: 100px;			
+		}
+	}
+	
+	&__text {
+		.h3();
+		.font-siri--regular();
+		display: table-cell;
+		vertical-align: middle;
+		padding-left: ( @gutter / 2 );
+		color: @color__green--dark;		
+		border-bottom: 1px solid @color__green;		
+		@media (min-width: @screen--md) {			
+			display: inline;
+			padding: 0;
+			text-align: center;		
+			color: @color__text;					
+			border-bottom: 1px solid @color__green;			
+		}
+		@media (min-width: @screen--lg) {	
+			.fontSize(@font-size--large);	
+		}		
+	}
+
+	&__link {
+		display: table;
+		margin-bottom: @spacing;
+			border: none;
+		width: 100%;		
+		@media (min-width: @screen--md) {
+			display: block;			
+			text-align: center;
+			margin-top: @spacing--large;
+			padding: 0 @spacing;	
+		}
+		&:hover, &:focus {
+			.cta-frontpage__bullet {
+				color: @color__text;
+				@media (min-width: @screen--md) {	
+					.fontSize(@font-size--large);	
+				}
+				@media (min-width: @screen--lg) {	
+					.fontSize(@font-size--xlarge);	
+				}	
+			}
+			.cta-frontpage__text {
+				color: @color__text;				
+				border-bottom-color: @color__text; 
+			}
+		}
+	}
+
+}
