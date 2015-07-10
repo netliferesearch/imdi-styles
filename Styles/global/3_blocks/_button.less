@@ -19,9 +19,17 @@
 	
 	&--large {
 		padding: @spacing--medium @spacing*2;
+		margin-bottom: @spacing--large;
 	}
 	&--small {
+		.text--small();
 		padding: @spacing--xsmall  @spacing--small;
+	}
+	&--inline {
+		display: inline-block;
+		line-height: 1;
+		margin: 0 @spacing--small;
+		vertical-align: middle;
 	}
 	&:hover, &:focus, &:active {
 		background: darken(@color__links, 10%);

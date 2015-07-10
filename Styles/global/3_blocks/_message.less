@@ -1,0 +1,31 @@
+@import "../../_vars";
+ 
+.message {
+	display: block;	
+	position: relative;
+	padding: @spacing--small 0;
+	padding-left: 35px + @spacing--small;
+	margin: @spacing--small 0;
+	color: @color__orange--dark;
+	@media (min-width: @screen--md) {
+		padding-left: 0;
+	}	
+	&__icon {
+		.fontSize(@font-size--small);
+		position: absolute;
+		display: block;
+		width: 35px;
+		height: 35px;
+		line-height: 35px;
+		text-align: center;
+		top: 0;
+		left: 0;
+		background: url('/UI/gfx/square--red.svg') no-repeat center center;
+		background-size: contain;
+		color: @color__white;	
+		@media (min-width: @screen--md) {
+			left: -(35px + @spacing--small);
+		}				
+	} 
+	
+}
