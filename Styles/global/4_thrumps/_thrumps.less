@@ -23,3 +23,10 @@
 .t-margin-bottom--large {
 	margin-bottom: @spacing--large;
 }
+
+.t-show-on-desktop {
+	display: none;
+	@media (min-width: @screen--lg) {	
+		display: block;
+	}
+}

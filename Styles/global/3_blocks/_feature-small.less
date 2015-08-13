@@ -1,8 +1,11 @@
 @import "../../_vars";
  
 .feature-small {
-	margin-bottom: @spacing--xlarge;
+	margin-bottom: @spacing--medium;
 	position: relative;
+	@media (min-width: @screen--lg) {
+		margin-bottom: @spacing--large;	
+	}
 	&__meta {
 		.text--small();
 		color: @color__grey;
@@ -53,10 +56,18 @@
 			width: 100%;		
 			.transform(translateY(-50%));
 			text-align: center;
-			padding: @spacing;	
+			padding: 0 @spacing;	
 			border: none;		
 		}				
 	}	
+	&__bullet {
+		@media (min-width: @screen--lg) {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 33%;
+		}		
+	}
 	&__bullet-link, &__bullet-info {
 		position: relative;
 		.text--small();
@@ -67,30 +78,30 @@
 		margin: @spacing--small 0;
 
 		@media (min-width: @screen--lg) {
-			position: absolute;
 			padding: 0;
+			padding-bottom: 100%;
 			display: block;
-			width: 120px;
-			height: 120px;
+			width: 100%;
+			height: 0;
 			text-align: center;
-			top: 0;
-			left: 0;
 			background: url('/UI/gfx/square--red.svg') no-repeat center center;
 			background-size: contain;
 			border: none;			
 		}		
 	}
+	.feature-small__bullet-linktext {
+		display: inline-block;
+		color: @color__green--dark;
+		border-bottom: 1px solid @color__green--dark;
+		@media (min-width: @screen--lg) {
+			color: @color__white;
+			border-bottom: 1px solid @color__white;	
+		}			
+	}
+	
 	&__bullet-link	{
-		.feature-small__bullet-content {
-			color: @color__green--dark;
-			border-bottom: 1px solid @color__green--dark;
-			@media (min-width: @screen--lg) {
-				color: @color__white;
-				border-bottom: 1px solid @color__white;	
-			}			
-		}
 		&:hover, &:active, &:focus {
-			.feature-small__bullet-content {
+			.feature-small__bullet-linktext {
 				color: @color__text;
 				border-color:  @color__text;		
 			}
@@ -106,20 +117,9 @@
 		}
 	}
 	&__image {
-		display: none;
-		@media (min-width: @screen--lg) {
-			position: absolute;
-			padding: 0;
-			display: block;
-			width: 120px;
-			height: 120px;
-			top: 0;
-			left: 0;
-		}
-	}
-	&--with-bullet {
-		@media (min-width: @screen--lg) {
-			padding-left: ( 120px + @spacing );
+		@media (max-width: @screen--lg) {
+			width: 50%;
+			padding-bottom: @spacing;
 		}
 	}
 	 

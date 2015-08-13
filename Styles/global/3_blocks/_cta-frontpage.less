@@ -31,7 +31,7 @@
 			width: 75px;
 			height: 75px;
 			line-height: 75px;
-			.transition(all 200ms @swift-out);
+			.transition(color 400ms @swift-out);
 		}
 		@media (min-width: @screen--lg) {	
 			.fontSize(@font-size--large);	
@@ -73,13 +73,8 @@
 		}
 		&:hover, &:focus {
 			.cta-frontpage__bullet {
-				color: @color__text;
-				@media (min-width: @screen--md) {	
-					.fontSize(@font-size--large);	
-				}
-				@media (min-width: @screen--lg) {	
-					.fontSize(@font-size--xlarge);	
-				}	
+				color: @color__white;
+				background-image: url('/UI/gfx/square--green.svg');			
 			}
 			.cta-frontpage__text {
 				color: @color__green--dark;				

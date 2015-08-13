@@ -48,11 +48,13 @@
 	&__bullet {
 		@media (min-width: @screen--lg) {		
 			width: 50%;
+			margin-left: -@spacing;
 		}
 	}
 	& + .header-bullet {
 		@media (min-width: @screen--lg) {
-			margin-top: 75%;		 
+			margin-top: 75%;
+			padding-top: @spacing;		 
 		}
 	}
  }

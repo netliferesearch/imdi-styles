@@ -2,10 +2,19 @@
  
  .meta {
 	 .text--small();
+	 color: @color__grey;
 	 margin-bottom: @spacing--large;
 
 	 &--bottom {
 		 margin-top: @spacing--large;
 	 }
-
+	 .ingress + & {
+		 margin-top: -@spacing--medium;
+		@media (min-width: @screen--md) {
+			margin-bottom: @spacing--large;		
+		}
+		@media (min-width: @screen--md) {
+			margin-bottom: @spacing--large;		
+		}		 
+	 }
  }
