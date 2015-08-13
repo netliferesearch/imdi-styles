@@ -9,6 +9,7 @@
 		background: @color__canvas-grey;
 		padding: 0;		 
 	}
+
 	&__image-wrapper {
 		margin: 0 -@gutter;
 		@media (min-width: @screen--md) {
@@ -21,20 +22,36 @@
 		}		
 		@media (min-width: @screen--md) {
 			display: block;	
-			position: static;		 
+			position: absolute;
+			margin-top: 0;	
+			max-width: none;
+			height: 100%;
+			left: percentage( 10 / 20 );
 			background: @color__canvas-grey--dark;
+			/*
 			-webkit-clip-path: polygon( 55.3% 100%, 100% 32.9%, 78.1% 0%, 21.9% 0%, 0% 32.9%, 44.7% 100% );
 			clip-path: polygon( 55.3% 100%, 100% 32.9%, 78.1% 0%, 21.9% 0%, 0% 32.9%, 44.7% 100% );		// TODO Is not supported in 
-			margin-top: 0;	
-			height: 100%;
-			position: absolute;
-			left: percentage( 12 / 20 );
+			*/
+			-webkit-clip-path: polygon( 20% 0%, 100% 0%, 100% 100%, 0% 100% );
+			clip-path: polygon( 20% 0%, 100% 0%, 100% 100%, 0% 100% );		// TODO Is not supported in 
 		} 
+	}
+	&__content-box {
+		border: 3px solid @color__canvas-grey;
+		@media (min-width: @screen--md) {
+			padding-left: percentage(1/14);		
+		}	
+		@media (min-width: @screen--lg) {
+			padding-left: percentage(2/12);
+		}		
 	}
 	&__content-wrapper {
 		padding: @spacing--large 0;		 
 		@media (min-width: @screen--md) {
 			max-width: percentage( 12 / 20 );
+			&--with-image {
+				max-width: percentage( 9 / 20 );				
+			}
 		}		
 	}
 	&__prefix {
