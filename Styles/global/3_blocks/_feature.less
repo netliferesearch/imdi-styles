@@ -2,12 +2,20 @@
  
 .feature {
 	position: relative;
-	padding: @spacing--large 0;		 	 
+	padding: @spacing 0;	
+	@media (min-width: @screen--md) {
+		padding: @spacing--large 0;		
+	}	 	 
 	max-width: 100%;
 	overflow: hidden;
 	&--case {
 		background: @color__canvas-grey;
-		padding: 0;		 
+		padding: 0;
+		margin: @spacing 0;	
+		@media (min-width: @screen--md) {
+			margin: @spacing--large 0;		
+		}	 	 
+
 	}
 
 	&__image-wrapper {
@@ -37,9 +45,11 @@
 		} 
 	}
 	&__content-box {
-		border: 3px solid @color__canvas-grey;
+		padding: @spacing @gutter;		
 		@media (min-width: @screen--md) {
-			padding-left: percentage(1/14);		
+			border: 3px solid @color__canvas-grey;			
+			padding: @spacing--large @gutter;		
+			padding-left: percentage(1/14);				
 		}	
 		@media (min-width: @screen--lg) {
 			padding-left: percentage(2/12);
@@ -53,6 +63,14 @@
 				max-width: percentage( 9 / 20 );				
 			}
 		}		
+	}
+	&__bullet-wrapper {
+		@media (min-width: @screen--lg) {
+			padding: 0 @spacing;
+		}
+		@media (min-width: @screen--xl) {
+			padding: 0 @spacing--xlarge;
+		}
 	}
 	&__prefix {
 		.h4(); 

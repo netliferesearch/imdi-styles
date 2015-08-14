@@ -1,0 +1,110 @@
+@import "../../_vars";
+
+.feature-bullet {
+	position: relative;
+	.text--small();
+	padding-left: 50px;
+	display: block;
+	border: none;
+	margin: @spacing--small 0;
+	margin-bottom: @spacing;
+	padding-top: 12px;
+
+	@media (min-width: @screen--lg) {
+		padding: 0;
+		padding-bottom: 100%;
+		display: block;
+		width: 100%;
+		height: 0;
+		text-align: center;
+		background: url('/UI/gfx/square--red.svg') no-repeat center center;
+		background-size: contain;
+		border: none;			
+	}		
+	
+	&__icon {
+		.fontSize(@font-size--small);
+		position: absolute;
+		display: block;
+		width: 45px;
+		height: 45px;
+		line-height: 45px;
+		text-align: center;
+		top: 0;
+		left: -2px;
+		background: url('/UI/gfx/square--red.svg') no-repeat center center;
+		background-size: contain;
+		color: @color__white;
+		@media (min-width: @screen--lg) {
+			.fontSize(@font-size--medium);	
+			width: auto;
+			height: auto;		  
+			background: none;
+			position: relative;	
+			display: block;
+			margin: 0 auto;
+			margin-bottom: 7px;
+			line-height: 1;
+		}	 		 
+	}	 
+	&__content {
+		display: inline;
+		.fontSize(@font-size--small);	
+		color: @color__grey;
+		@media (min-width: @screen--lg) {
+			.fontSize(@font-size--small);	
+			display: block;
+			color: @color__white;
+			position: absolute;
+			top: 50%;
+			width: 100%;		
+			.transform(translateY(-50%));
+			text-align: center;
+			padding: 0 @spacing;	
+			border: none;		
+		}				
+	}	
+
+	&__linktext {
+		display: inline-block;
+		color: @color__green--dark;
+		border-bottom: 1px solid @color__green--dark;
+		@media (min-width: @screen--lg) {
+			color: @color__white;
+			border-bottom: 1px solid @color__white;	
+		}			
+	}
+	
+	&--link	{
+		&:hover, &:active, &:focus {
+			.feature-bullet__linktext {
+				color: @color__text;
+				border-color:  @color__text;		
+			}
+		}		
+		@media (min-width: @screen--lg) {
+			background-image: url('/UI/gfx/square--green.svg');			
+		}
+		.feature-bullet__icon {
+			background-image: url('/UI/gfx/square--green.svg');
+			@media (min-width: @screen--lg) {
+				background: none;
+			}			
+		}
+	}
+	&--large {
+		.feature-bullet__content {
+			.fontSize(@font-size--small);	
+			@media (min-width: @screen--lg) {
+				.fontSize(@font-size--medium);	
+			}				
+		}
+		.feature-bullet__icon {
+			.fontSize(@font-size--small);
+			@media (min-width: @screen--lg) {
+				.fontSize(@font-size--medium);
+				margin-bottom: 14px;	
+			}	 		 
+		}			
+	}	
+}
