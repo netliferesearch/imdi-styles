@@ -8,152 +8,52 @@ table, .table {
 	font-size: @font-size--small;
 	width:auto;
 	&--fluid {
-		width:100%;
+		min-width:100%;
 	}
 	&__wrapper {
 		width: 100%;
+		overflow-x: auto;
 		//padding: @spacing @spacing--medium @spacing;
 		//background: lighten(@color__canvas-grey,10%);
 	}
-	thead {
+	&__thead, thead {
 		border-bottom:1px solid @color__canvas-grey--dark;
-		th {
-			
-		}
 	}
-	th {
-        padding: @spacing--medium @spacing--medium;		
-        padding-left: 0;
-        .fontSize(@font-size--small);
-        
-	}	
-	tfoot {
-		
-	}
-	tr {
-
-	}
-	
-	td {
+	&__th, th {
+		.font-siri--medium();
+        .fontSize(@font-size--small);			
         padding: @spacing--medium @spacing--medium;	
-        padding-left: 0;
+        @media (min-width: @screen--md) {
+	        .fontSize(@font-size--regular);			
+        }	
+	}	
+	&__th--number, td[align="right"] {
+		text-align: right;
+	}		
+	
+	&__td, td {
+		.font-siri--regular();
+        .fontSize(@font-size--small);		
+        padding: @spacing--medium @spacing--medium;
         vertical-align: top;	
         border-bottom: 1px solid @color__canvas-grey--dark
 	}
-	&__sum {
 
-	}
-	&--cell--right{
-		text-align: right;		
-	}
-	&--cell--number {
+	&__td--number, td[align="right"] {
+		.fontSize(16);		
 		text-align: right;				
 		font-family: 'Consolas', 'Lucida Console', "Courier";	
-		.fontSize(16);
 	}	
-	&--collapse-on-mobile {
-		.query-max(@screen--md; {
-			display: block;
-			width:100%;
-		});				
-	}
-
-	&__row--collapse-on-mobile {
-		.query-max(@screen--md; {
-			display: block;
-			width:100%;
-		});				
-	}
-	&__cell--collapse-on-mobile {
-		.query-max(@screen--md; {
-			display: block;
-			width:100%;
-			position: relative;
-		});
-	}
-	&__row--section	{
-
+	&__caption, caption {
+		.h4();
+        padding: @spacing--medium @spacing--medium;		
+		color: @color__grey;
+		text-align: left;
+		@media (min-width: @screen--md) {
+			text-align: center;			
+		}
 	}
 }
 
-
-	/* 
-	Max width before this PARTICULAR table gets nasty
-	This query will take effect for any screen smaller than 760px
-	and also iPads specifically.
-	*/
-	@media 
-	only screen and (max-width: @screen--md),
-	(min-device-width: @screen--md) and (max-device-width: @screen--lg)  {
-	
-		/* Force table to not be like tables anymore */
-		table, thead, tbody, th, td, tr { 
-			display: block; 
-		}
-		
-		thead{
-			border-top: none;
-		}
-		
-		/* Hide table headers (but not display: none;, for accessibility) */
-		thead tr { 
-			position: absolute;
-			top: -9999px;
-			left: -9999px;
-		}
-		
-		tr { border: none; 
-			margin-bottom: @spacing;
-		}
-		
-		td { 
-			/* Behave  like a "row" */
-			border: none;
-			border-bottom: 1px solid #eee; 
-			position: relative;
-			padding-left: 50%;
-		}
-		
-		td:first-child{
-			border-bottom: 2px solid @color__canvas-grey--dark;
-		}
-		
-		td:before { 
-			/* Now like a table header */
-			position: absolute;
-			/* Top/left values mimic padding */
-			top: 15px;
-			left: 6px;
-			width: 45%;
-			text-align: left; 
-			padding-right: 10px; 
-			white-space: nowrap;
-		}
-		
-		/*
-		Label the data
-		*/
-		td:nth-of-type(1):before { content: ""; }
-		td:nth-of-type(2):before { content: "2013"; }
-		td:nth-of-type(3):before { content: "2012-2013"; }
-		td:nth-of-type(4):before { content: "2009-2013"; }
-	}
-	
-	/* Smartphones (portrait and landscape) ----------- */
-	@media only screen
-	and (min-device-width : 320px)
-	and (max-device-width : 480px) {
-		body { 
-			padding: 0; 
-			margin: 0; 
-			width: 320px; }
-		}
-	
-	/* iPads (portrait and landscape) ----------- */
-	@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
-		body { 
-			width: 495px; 
-		}
-	}
 	
 	

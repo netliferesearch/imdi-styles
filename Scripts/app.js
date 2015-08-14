@@ -10,8 +10,21 @@ $( document ).ready(function() {
 		// Toggle menu button
 		if($(this).attr('aria-expanded') === "false"){
 			$(this).attr('aria-expanded', "true");
+
+			// Set min height to 100% of window on desktop
+	        var a = $(window).height();
+	        var b = $('#footer').height();
+	        if (a > b) {
+	            $('#footer').css('height', a);
+	            $('#footer__bg').css('height', a);
+	        }			
+			
 		} else {
 			$(this).attr('aria-expanded', "false");		
+
+			// Reset height
+            $('#footer').css('height', 'auto');
+            $('#footer__bg').css('height', 'auto');            
 		}
 		
 		// Toggle menu overlay

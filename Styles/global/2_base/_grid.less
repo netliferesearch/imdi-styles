@@ -104,7 +104,9 @@
 	.col-block-bleed {
 		margin-left: -@gutter;
 		margin-right: -@gutter;		
-		
+		&--inline-mobile {
+			margin: 0;
+		}
 		@media (min-width: @screen--md) {
 			width: percentage(22/14);
 			margin-left: percentage(-1/14);		
@@ -127,6 +129,14 @@
 			margin-left: percentage(-2/12);
 		}
 	}
+	.col-block-bleed--full-right {		
+		@media (min-width: @screen--md) {
+			width: percentage(21/14);
+		}	
+		@media (min-width: @screen--lg) {
+			width: percentage(20/12);
+		}
+	}	
 }
 .col--big-image {
 	@media (min-width: @screen--md) {		 	

@@ -18,14 +18,18 @@
 			color: @color__white;
 		}
 	}
-	&__row {
+	&__bg {
 		@media (min-width: @screen--lg) {
-			display: table;
-			width: 100%;
 			background: linear-gradient(
 		    	to right, 
 				@color__orange percentage(14 / 22), @color__orange--dark percentage(8 / 22)
 			);			
+		}
+	}
+	&__row {
+		@media (min-width: @screen--lg) {
+			display: table;
+			width: 100%;
 		}
 	}
 	&__main {
@@ -49,7 +53,7 @@
 		@media (min-width: @screen--lg) {	
 			background: none;						
 			margin: 0;
-			padding: @spacing--large 0 @spacing--large 0;				
+			padding: @spacing--large 0 @spacing--xlarge 0;				
 			display: table-cell;
 			vertical-align: bottom;		
 			padding-left: @spacing--large;

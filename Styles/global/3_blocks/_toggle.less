@@ -26,6 +26,14 @@
 		}			
 		&--expanded {
 			min-width: 100%;
+			background: @color__orange--dark;
+			color: @color__white;
+			&:hover, &:focus {
+				background: @color__orange;
+				border-color: @color__orange;
+				border-bottom-color: @color__orange;
+				color: @color__white;				
+			}
 			.toggle__icon {
 				.transform(rotate(180deg));					
 			}

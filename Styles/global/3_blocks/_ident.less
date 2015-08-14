@@ -10,12 +10,15 @@
 	width: 40px*3;	
 	@media (min-width: @screen--sm) {	
 		height: 60px;
-		width: 60px*3;		
+		width: 60px*3;	
 	}			
-	@media (min-width: @screen--md) {	
+	@media (min-width: @screen--lg) {	
 		height: 81px;
 		width: 81px*3;		
 	}			
+	@media (min-width: @screen--lg) {		
+		margin-left: -( 81px + @gutter );			
+	}
 	&__symbol {
 		position: absolute;
 		overflow: hidden;
@@ -29,7 +32,7 @@
 			width: 60px; 
 			height: 60px;				
 		}		
-		@media (min-width: @screen--md) {	
+		@media (min-width: @screen--lg) {	
 			width: 81px; 
 			height: 81px;				
 		}	
@@ -50,7 +53,7 @@
 			top: 4px;
 			width: 60px*2;	
 		}
-		@media (min-width: @screen--md) {
+		@media (min-width: @screen--lg) {
 			padding-top: 13px;
 			margin-left: 81px + @gutter;	
 			top: 6px;
@@ -68,7 +71,7 @@
 			@media (min-width: @screen--sm) {			
 				.fontSize(28);			
 			}
-			@media (min-width: @screen--md) {			
+			@media (min-width: @screen--lg) {			
 				.fontSize(@font-size--large);			
 			}			
 		}
