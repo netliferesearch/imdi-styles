@@ -13,11 +13,11 @@ for (var i = 0; i < n; i++) {
 	guide_allSections[i].style.display = 'none';
 }
 
-
+if(guide_openSection){
 guide_openSection.style.display = ''; 
 var list = document.getElementById('summary-section-list').innerHTML = '';
 document.getElementById('summary-section').style.display = 'none';
-
+}
 
 
 

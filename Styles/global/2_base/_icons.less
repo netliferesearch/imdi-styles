@@ -1,47 +1,11 @@
+
 @import "../../_vars";
 
 // Default Variables
-@simple-line-font-path        : "/UI/fonts/icomoon/";
-@simple-line-font-family      : "ImdiIcons";
+@simple-line-font-path        : "/UI/icons/";
 @simple-line-icon-prefix      : icon__;
 
-// Fonts
-/*
-@font-face {
-font-family: 'Simple-Line-Icons';
-src:    url('@{simple-line-font-path}Simple-Line-Icons.eot');
-src:    url('@{simple-line-font-path}Simple-Line-Icons.eot?#iefix') format('embedded-opentype'),
-        url('@{simple-line-font-path}Simple-Line-Icons.woff') format('woff'),
-        url('@{simple-line-font-path}Simple-Line-Icons.ttf') format('truetype'),
-        url('@{simple-line-font-path}Simple-Line-Icons.svg#Simple-Line-Icons') format('svg');
-font-weight: normal;
-font-style: normal;
-}
-*/
 
-@font-face {
-font-family: 'ImdiIcons';
-src:    url('@{simple-line-font-path}icomoon.eot');
-src:    url('@{simple-line-font-path}icomoon.eot?#iefix') format('embedded-opentype'),
-        url('@{simple-line-font-path}icomoon.woff') format('woff'),
-        url('@{simple-line-font-path}icomoon.ttf') format('truetype'),
-        url('@{simple-line-font-path}icomoon.svg#icomoon') format('svg');
-font-weight: normal;
-font-style: normal;
-}
-
-/* Use the following CSS code if you want to use data attributes for inserting your icons */
-[data-icon]:before {
-  font-family: '@{simple-line-font-family}';
-  content: attr(data-icon);
-  speak: none;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased; 
-  -moz-osx-font-smoothing: grayscale;
-}
 
 /* Use the following CSS code if you want to have a class per icon */
 /*
@@ -51,191 +15,286 @@ you can use the generic selector below, but it's slower:
 */
 
 .@{simple-line-icon-prefix} {
-  &user-female, &user-follow, &user-following, &user-unfollow, &trophy, &screen-smartphone, &screen-desktop, &plane, &notebook, &moustache, &mouse, &magnet, &energy, &emoticon-smile, &disc, &cursor-move, &crop, &credit-card, &chemistry, &user, &speedometer, &social-youtube, &social-twitter, &social-tumblr, &social-facebook, &social-dropbox, &social-dribbble, &shield, &screen-tablet, &magic-wand, &hourglass, &graduation, &ghost, &game-controller, &fire, &eyeglasses, &envelope-open, &envelope-letter, &bell, &badge, &anchor, &wallet, &vector, &speech, &puzzle, &printer, &present, &playlist, &pin, &picture, &map, &layers, &handbag, &globe-alt, &globe, &frame, &folder-alt, &film, &feed, &earphones-alt, &earphones, &drop, &drawer, &docs, &directions, &direction, &diamond, &cup, &compass, &call-out, &call-in, &call-end, &calculator, &bubbles, &briefcase, &book-open, &basket-loaded, &basket, &bag, &action-undo, &action-redo, &wrench, &umbrella, &trash, &tag, &support, &size-fullscreen, &size-actual, &shuffle, &share-alt, &share, &rocket, &question, &pie-chart, &pencil, &note, &music-tone-alt, &music-tone, &microphone, &loop, &logout, &login, &list, &like, &home, &grid, &graph, &equalizer, &dislike, &cursor, &control-start, &control-rewind, &control-play, &control-pause, &control-forward, &control-end, &calendar, &bulb, &bar-chart, &arrow-up, &arrow-right, &arrow-left, &arrow-down, &ban, &bubble, &camcorder, &camera, &check, &clock, &close, &cloud-download, &cloud-upload, &doc, &envelope, &eye, &flag, &folder, &heart, &info, &key, &link, &lock, &lock-open, &magnifier, &magnifier-add, &magnifier-remove, &paper-clip, &paper-plane, &plus, &pointer, &power, &refresh, &reload, &settings, &star, &symbol-female, &symbol-male, &target, &volume-1, &volume-2, &volume-off, &users, &attachment, &document, &search, &menu, &in, &out, &down, &left, &right, &up {
-    font-family: '@{simple-line-font-family}';
+	
+	&add, &apply, &arrow-down, &arrow-left, &arrow-right, &arrow-up, &attatchment, &call, &chart-bars, &chart-line, &chart-pie, &chat, &check, &close, &comments, &contract, &controls, &date, &discussion, &down, &download, &edit, &email, &expand, &export, &external, &facebook, &favorite, &female, &file, &files, &flag, &folder, &home, &info, &key, &left, &link, &location, &locked, &mail, &male, &map, &merge, &pay, &print, &rate, &right, &search, &settings, &stack, &tooltip, &twitter, &unlocked, &up, &update, &upload, &user, &users, &youtube, &zoom-in, &zoom-out, 
+	
+	&add--white, &apply--white, &arrow-down--white, &arrow-left--white, &arrow-right--white, &arrow-up--white, &attatchment--white, &call--white, &chart-bars--white, &chart-line--white, &chart-pie--white, &chat--white, &check--white, &close--white, &comments--white, &contract--white, &controls--white, &date--white, &discussion--white, &down--white, &download--white, &edit--white, &email--white, &expand--white, &export--white, &external--white, &facebook--white, &favorite--white, &female--white, &file--white, &files--white, &flag--white, &folder--white, &home--white, &info--white, &key--white, &left--white, &link--white, &location--white, &locked--white, &mail--white, &male--white, &map--white, &merge--white, &pay--white, &print--white, &rate--white, &right--white, &search--white, &settings--white, &stack--white, &tooltip--white, &twitter--white, &unlocked--white, &up--white, &update--white, &upload--white, &user--white, &users--white, &youtube--white, &zoom-in--white, &zoom-out--white	 
+
+   {
+	display: inline-block;
+	height: 1em;
+	width: 1em;
     speak: none;
-    font-style: normal;
-    font-weight: normal; 
-    font-variant: normal;
-    text-transform: none;
     line-height: 1;
-    -webkit-font-smoothing: antialiased;
     vertical-align: middle;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center center;
   }
 }
 
-/* Special Icons */
-.@{simple-line-icon-prefix}attachment:before          {content: "\e0a2"; }
-.@{simple-line-icon-prefix}document:before          {content: "\e0a3"; }
-.@{simple-line-icon-prefix}search:before          {content: "\e0a4"; }
-.@{simple-line-icon-prefix}menu:before          {content: "\e120"; }
-.@{simple-line-icon-prefix}in:before          {content: "\e122"; }
-.@{simple-line-icon-prefix}out:before          {content: "\e123"; }
-.@{simple-line-icon-prefix}down:before          {content: "\e600"; }
-.@{simple-line-icon-prefix}left:before          {content: "\e601"; }
-.@{simple-line-icon-prefix}right:before          {content: "\e602"; }
-.@{simple-line-icon-prefix}up:before          {content: "\e603"; }
+// BLACK ICONS
 
-/* Simple-Line-Icons */
-.@{simple-line-icon-prefix}user-female:before          {content: "\e000"; }
-.@{simple-line-icon-prefix}user-follow:before          {content: "\e002"; }
-.@{simple-line-icon-prefix}user-following:before       {content: "\e003"; }
-.@{simple-line-icon-prefix}user-unfollow:before        {content: "\e004"; }
-.@{simple-line-icon-prefix}trophy:before               {content: "\e006"; }
-.@{simple-line-icon-prefix}screen-smartphone:before    {content: "\e010"; }
-.@{simple-line-icon-prefix}screen-desktop:before       {content: "\e011"; }
-.@{simple-line-icon-prefix}plane:before                {content: "\e012"; }
-.@{simple-line-icon-prefix}notebook:before             {content: "\e013"; }
-.@{simple-line-icon-prefix}moustache:before            {content: "\e014"; }
-.@{simple-line-icon-prefix}mouse:before                {content: "\e015"; }
-.@{simple-line-icon-prefix}magnet:before               {content: "\e016"; }
-.@{simple-line-icon-prefix}energy:before               {content: "\e020"; }
-.@{simple-line-icon-prefix}emoticon-smile:before       {content: "\e021"; }
-.@{simple-line-icon-prefix}disc:before                 {content: "\e022"; }
-.@{simple-line-icon-prefix}cursor-move:before          {content: "\e023"; }
-.@{simple-line-icon-prefix}crop:before                 {content: "\e024"; }
-.@{simple-line-icon-prefix}credit-card:before          {content: "\e025"; }
-.@{simple-line-icon-prefix}chemistry:before            {content: "\e026"; }
-.@{simple-line-icon-prefix}user:before                 {content: "\e005"; }
-.@{simple-line-icon-prefix}speedometer:before          {content: "\e007"; }
-.@{simple-line-icon-prefix}social-youtube:before       {content: "\e008"; }
-.@{simple-line-icon-prefix}social-twitter:before       {content: "\e009"; }
-.@{simple-line-icon-prefix}social-tumblr:before        {content: "\e00a"; }
-.@{simple-line-icon-prefix}social-facebook:before      {content: "\e00b"; }
-.@{simple-line-icon-prefix}social-dropbox:before       {content: "\e00c"; }
-.@{simple-line-icon-prefix}social-dribbble:before      {content: "\e00d"; }
-.@{simple-line-icon-prefix}shield:before               {content: "\e00e"; }
-.@{simple-line-icon-prefix}screen-tablet:before        {content: "\e00f"; }
-.@{simple-line-icon-prefix}magic-wand:before           {content: "\e017"; }
-.@{simple-line-icon-prefix}hourglass:before            {content: "\e018"; }
-.@{simple-line-icon-prefix}graduation:before           {content: "\e019"; }
-.@{simple-line-icon-prefix}ghost:before                {content: "\e01a"; }
-.@{simple-line-icon-prefix}game-controller:before      {content: "\e01b"; }
-.@{simple-line-icon-prefix}fire:before                 {content: "\e01c"; }
-.@{simple-line-icon-prefix}eyeglasses:before           {content: "\e01d"; }
-.@{simple-line-icon-prefix}envelope-open:before        {content: "\e01e"; }
-.@{simple-line-icon-prefix}envelope-letter:before      {content: "\e01f"; }
-.@{simple-line-icon-prefix}bell:before                 {content: "\e027"; }
-.@{simple-line-icon-prefix}badge:before                {content: "\e028"; }
-.@{simple-line-icon-prefix}anchor:before               {content: "\e029"; }
-.@{simple-line-icon-prefix}wallet:before               {content: "\e02a"; }
-.@{simple-line-icon-prefix}vector:before               {content: "\e02b"; }
-.@{simple-line-icon-prefix}speech:before               {content: "\e02c"; }
-.@{simple-line-icon-prefix}puzzle:before               {content: "\e02d"; }
-.@{simple-line-icon-prefix}printer:before              {content: "\e02e"; }
-.@{simple-line-icon-prefix}present:before              {content: "\e02f"; }
-.@{simple-line-icon-prefix}playlist:before             {content: "\e030"; }
-.@{simple-line-icon-prefix}pin:before                  {content: "\e031"; }
-.@{simple-line-icon-prefix}picture:before              {content: "\e032"; }
-.@{simple-line-icon-prefix}map:before                  {content: "\e033"; }
-.@{simple-line-icon-prefix}layers:before               {content: "\e034"; }
-.@{simple-line-icon-prefix}handbag:before              {content: "\e035"; }
-.@{simple-line-icon-prefix}globe-alt:before            {content: "\e036"; }
-.@{simple-line-icon-prefix}globe:before                {content: "\e037"; }
-.@{simple-line-icon-prefix}frame:before                {content: "\e038"; }
-.@{simple-line-icon-prefix}folder-alt:before           {content: "\e039"; }
-.@{simple-line-icon-prefix}film:before                 {content: "\e03a"; }
-.@{simple-line-icon-prefix}feed:before                 {content: "\e03b"; }
-.@{simple-line-icon-prefix}earphones-alt:before        {content: "\e03c"; }
-.@{simple-line-icon-prefix}earphones:before            {content: "\e03d"; }
-.@{simple-line-icon-prefix}drop:before                 {content: "\e03e"; }
-.@{simple-line-icon-prefix}drawer:before               {content: "\e03f"; }
-.@{simple-line-icon-prefix}docs:before                 {content: "\e040"; }
-.@{simple-line-icon-prefix}directions:before           {content: "\e041"; }
-.@{simple-line-icon-prefix}direction:before            {content: "\e042"; }
-.@{simple-line-icon-prefix}diamond:before              {content: "\e043"; }
-.@{simple-line-icon-prefix}cup:before                  {content: "\e044"; }
-.@{simple-line-icon-prefix}compass:before              {content: "\e045"; }
-.@{simple-line-icon-prefix}call-out:before             {content: "\e046"; }
-.@{simple-line-icon-prefix}call-in:before              {content: "\e047"; }
-.@{simple-line-icon-prefix}call-end:before             {content: "\e048"; }
-.@{simple-line-icon-prefix}calculator:before           {content: "\e049"; }
-.@{simple-line-icon-prefix}bubbles:before              {content: "\e04a"; }
-.@{simple-line-icon-prefix}briefcase:before            {content: "\e04b"; }
-.@{simple-line-icon-prefix}book-open:before            {content: "\e04c"; }
-.@{simple-line-icon-prefix}basket-loaded:before        {content: "\e04d"; }
-.@{simple-line-icon-prefix}basket:before               {content: "\e04e"; }
-.@{simple-line-icon-prefix}bag:before                  {content: "\e04f"; }
-.@{simple-line-icon-prefix}action-undo:before          {content: "\e050"; }
-.@{simple-line-icon-prefix}action-redo:before          {content: "\e051"; }
-.@{simple-line-icon-prefix}wrench:before               {content: "\e052"; }
-.@{simple-line-icon-prefix}umbrella:before             {content: "\e053"; }
-.@{simple-line-icon-prefix}trash:before                {content: "\e054"; }
-.@{simple-line-icon-prefix}tag:before                  {content: "\e055"; }
-.@{simple-line-icon-prefix}support:before              {content: "\e056"; }
-.@{simple-line-icon-prefix}size-fullscreen:before      {content: "\e057"; }
-.@{simple-line-icon-prefix}size-actual:before          {content: "\e058"; }
-.@{simple-line-icon-prefix}shuffle:before              {content: "\e059"; }
-.@{simple-line-icon-prefix}share-alt:before            {content: "\e05a"; }
-.@{simple-line-icon-prefix}share:before                {content: "\e05b"; }
-.@{simple-line-icon-prefix}rocket:before               {content: "\e05c"; }
-.@{simple-line-icon-prefix}question:before             {content: "\e05d"; }
-.@{simple-line-icon-prefix}pie-chart:before            {content: "\e05e"; }
-.@{simple-line-icon-prefix}pencil:before               {content: "\e05f"; }
-.@{simple-line-icon-prefix}note:before                 {content: "\e060"; }
-.@{simple-line-icon-prefix}music-tone-alt:before       {content: "\e061"; }
-.@{simple-line-icon-prefix}music-tone:before           {content: "\e062"; }
-.@{simple-line-icon-prefix}microphone:before           {content: "\e063"; }
-.@{simple-line-icon-prefix}loop:before                 {content: "\e064"; }
-.@{simple-line-icon-prefix}logout:before               {content: "\e065"; display: inline-block; .transform(rotate(180deg)); padding-right: 0.25em;}
-.@{simple-line-icon-prefix}login:before                {content: "\e066"; }
-.@{simple-line-icon-prefix}list:before                 {content: "\e067"; }
-.@{simple-line-icon-prefix}like:before                 {content: "\e068"; }
-.@{simple-line-icon-prefix}home:before                 {content: "\e069"; }
-.@{simple-line-icon-prefix}grid:before                 {content: "\e06a"; }
-.@{simple-line-icon-prefix}graph:before                {content: "\e06b"; }
-.@{simple-line-icon-prefix}equalizer:before            {content: "\e06c"; }
-.@{simple-line-icon-prefix}dislike:before              {content: "\e06d"; }
-.@{simple-line-icon-prefix}cursor:before               {content: "\e06e"; }
-.@{simple-line-icon-prefix}control-start:before        {content: "\e06f"; }
-.@{simple-line-icon-prefix}control-rewind:before       {content: "\e070"; }
-.@{simple-line-icon-prefix}control-play:before         {content: "\e071"; }
-.@{simple-line-icon-prefix}control-pause:before        {content: "\e072"; }
-.@{simple-line-icon-prefix}control-forward:before      {content: "\e073"; }
-.@{simple-line-icon-prefix}control-end:before          {content: "\e074"; }
-.@{simple-line-icon-prefix}calendar:before             {content: "\e075"; }
-.@{simple-line-icon-prefix}bulb:before                 {content: "\e076"; }
-.@{simple-line-icon-prefix}bar-chart:before            {content: "\e077"; }
-.@{simple-line-icon-prefix}arrow-up:before             {content: "\e078"; }
-.@{simple-line-icon-prefix}arrow-right:before          {content: "\e079"; }
-.@{simple-line-icon-prefix}arrow-left:before           {content: "\e07a"; }
-.@{simple-line-icon-prefix}arrow-down:before           {content: "\e07b"; }
-.@{simple-line-icon-prefix}ban:before                  {content: "\e07c"; }
-.@{simple-line-icon-prefix}bubble:before               {content: "\e07d"; }
-.@{simple-line-icon-prefix}camcorder:before            {content: "\e07e"; }
-.@{simple-line-icon-prefix}camera:before               {content: "\e07f"; }
-.@{simple-line-icon-prefix}check:before                {content: "\e080"; }
-.@{simple-line-icon-prefix}clock:before                {content: "\e081"; }
-.@{simple-line-icon-prefix}close:before                {content: "\e082"; }
-.@{simple-line-icon-prefix}cloud-download:before       {content: "\e083"; }
-.@{simple-line-icon-prefix}cloud-upload:before         {content: "\e084"; }
-.@{simple-line-icon-prefix}doc:before                  {content: "\e085"; }
-.@{simple-line-icon-prefix}envelope:before             {content: "\e086"; }
-.@{simple-line-icon-prefix}eye:before                  {content: "\e087"; }
-.@{simple-line-icon-prefix}flag:before                 {content: "\e088"; }
-.@{simple-line-icon-prefix}folder:before               {content: "\e089"; }
-.@{simple-line-icon-prefix}heart:before                {content: "\e08a"; }
-.@{simple-line-icon-prefix}info:before                 {content: "\e08b"; }
-.@{simple-line-icon-prefix}key:before                  {content: "\e08c"; }
-.@{simple-line-icon-prefix}link:before                 {content: "\e08d"; }
-.@{simple-line-icon-prefix}lock:before                 {content: "\e08e"; }
-.@{simple-line-icon-prefix}lock-open:before            {content: "\e08f"; }
-.@{simple-line-icon-prefix}magnifier:before            {content: "\e090"; }
-.@{simple-line-icon-prefix}magnifier-add:before        {content: "\e091"; }
-.@{simple-line-icon-prefix}magnifier-remove:before     {content: "\e092"; }
-.@{simple-line-icon-prefix}paper-clip:before           {content: "\e093"; }
-.@{simple-line-icon-prefix}paper-plane:before          {content: "\e094"; }
-.@{simple-line-icon-prefix}plus:before                 {content: "\e095"; }
-.@{simple-line-icon-prefix}pointer:before              {content: "\e096"; }
-.@{simple-line-icon-prefix}power:before                {content: "\e097"; }
-.@{simple-line-icon-prefix}refresh:before              {content: "\e098"; }
-.@{simple-line-icon-prefix}reload:before               {content: "\e099"; }
-.@{simple-line-icon-prefix}settings:before             {content: "\e09a"; }
-.@{simple-line-icon-prefix}star:before                 {content: "\e09b"; }
-.@{simple-line-icon-prefix}symbol-female:before        {content: "\e09c"; }
-.@{simple-line-icon-prefix}symbol-male:before          {content: "\e09d"; }
-.@{simple-line-icon-prefix}target:before               {content: "\e09e"; }
-.@{simple-line-icon-prefix}volume-1:before             {content: "\e09f"; }
-.@{simple-line-icon-prefix}volume-2:before             {content: "\e0a0"; }
-.@{simple-line-icon-prefix}volume-off:before           {content: "\e0a1"; }
-.@{simple-line-icon-prefix}users:before                {content: "\e001"; }
+.@{simple-line-icon-prefix}add {
+	background-image: url('@{simple-line-font-path}icon-add.svg');
+}
+.@{simple-line-icon-prefix}apply {
+	background-image: url('@{simple-line-font-path}icon-apply.svg');
+}
+.@{simple-line-icon-prefix}arrow-down {
+	background-image: url('@{simple-line-font-path}icon-arrow-down.svg');
+}
+.@{simple-line-icon-prefix}arrow-left {
+	background-image: url('@{simple-line-font-path}icon-arrow-left.svg');
+}
+.@{simple-line-icon-prefix}arrow-right {
+	background-image: url('@{simple-line-font-path}icon-arrow-right.svg');
+} .@{simple-line-icon-prefix}arrow-up {
+	background-image: url('@{simple-line-font-path}icon-arrow-up.svg');
+} .@{simple-line-icon-prefix}attatchment {
+	background-image: url('@{simple-line-font-path}icon-attatchment.svg');
+} .@{simple-line-icon-prefix}call {
+	background-image: url('@{simple-line-font-path}icon-call.svg');
+} .@{simple-line-icon-prefix}chart-bars {
+	background-image: url('@{simple-line-font-path}icon-chart-bars.svg');
+} .@{simple-line-icon-prefix}chart-line {
+	background-image: url('@{simple-line-font-path}icon-chart-line.svg');
+} .@{simple-line-icon-prefix}chart-pie {
+	background-image: url('@{simple-line-font-path}icon-chart-pie.svg');
+} .@{simple-line-icon-prefix}chat {
+	background-image: url('@{simple-line-font-path}icon-chat.svg');
+} .@{simple-line-icon-prefix}check {
+	background-image: url('@{simple-line-font-path}icon-check.svg');
+} .@{simple-line-icon-prefix}close {
+	background-image: url('@{simple-line-font-path}icon-close.svg');
+} .@{simple-line-icon-prefix}comments {
+	background-image: url('@{simple-line-font-path}icon-comments.svg');
+} .@{simple-line-icon-prefix}contract {
+	background-image: url('@{simple-line-font-path}icon-contract.svg');
+} .@{simple-line-icon-prefix}controls {
+	background-image: url('@{simple-line-font-path}icon-controls.svg');
+} .@{simple-line-icon-prefix}date {
+	background-image: url('@{simple-line-font-path}icon-date.svg');
+} .@{simple-line-icon-prefix}discussion {
+	background-image: url('@{simple-line-font-path}icon-discussion.svg');
+} .@{simple-line-icon-prefix}down {
+	background-image: url('@{simple-line-font-path}icon-down.svg');
+} .@{simple-line-icon-prefix}download {
+	background-image: url('@{simple-line-font-path}icon-download.svg');
+} .@{simple-line-icon-prefix}edit {
+	background-image: url('@{simple-line-font-path}icon-edit.svg');
+} .@{simple-line-icon-prefix}email {
+	background-image: url('@{simple-line-font-path}icon-email.svg');
+} .@{simple-line-icon-prefix}expand {
+	background-image: url('@{simple-line-font-path}icon-expand.svg');
+} .@{simple-line-icon-prefix}export {
+	background-image: url('@{simple-line-font-path}icon-export.svg');
+} .@{simple-line-icon-prefix}external {
+	background-image: url('@{simple-line-font-path}icon-external.svg');
+} .@{simple-line-icon-prefix}facebook {
+	background-image: url('@{simple-line-font-path}icon-facebook.svg');
+} .@{simple-line-icon-prefix}favorite {
+	background-image: url('@{simple-line-font-path}icon-favorite.svg');
+} .@{simple-line-icon-prefix}female {
+	background-image: url('@{simple-line-font-path}icon-female.svg');
+} .@{simple-line-icon-prefix}file {
+	background-image: url('@{simple-line-font-path}icon-file.svg');
+} .@{simple-line-icon-prefix}files {
+	background-image: url('@{simple-line-font-path}icon-files.svg');
+} .@{simple-line-icon-prefix}flag {
+	background-image: url('@{simple-line-font-path}icon-flag.svg');
+} .@{simple-line-icon-prefix}folder {
+	background-image: url('@{simple-line-font-path}icon-folder.svg');
+} .@{simple-line-icon-prefix}home {
+	background-image: url('@{simple-line-font-path}icon-home.svg');
+} .@{simple-line-icon-prefix}info {
+	background-image: url('@{simple-line-font-path}icon-info.svg');
+} .@{simple-line-icon-prefix}key {
+	background-image: url('@{simple-line-font-path}icon-key.svg');
+} .@{simple-line-icon-prefix}left {
+	background-image: url('@{simple-line-font-path}icon-left.svg');
+} .@{simple-line-icon-prefix}link {
+	background-image: url('@{simple-line-font-path}icon-link.svg');
+} .@{simple-line-icon-prefix}location {
+	background-image: url('@{simple-line-font-path}icon-location.svg');
+} .@{simple-line-icon-prefix}locked {
+	background-image: url('@{simple-line-font-path}icon-locked.svg');
+} .@{simple-line-icon-prefix}mail {
+	background-image: url('@{simple-line-font-path}icon-mail.svg');
+} .@{simple-line-icon-prefix}male {
+	background-image: url('@{simple-line-font-path}icon-male.svg');
+} .@{simple-line-icon-prefix}map {
+	background-image: url('@{simple-line-font-path}icon-map.svg');
+} .@{simple-line-icon-prefix}merge {
+	background-image: url('@{simple-line-font-path}icon-merge.svg');
+} .@{simple-line-icon-prefix}pay {
+	background-image: url('@{simple-line-font-path}icon-pay.svg');
+} .@{simple-line-icon-prefix}print {
+	background-image: url('@{simple-line-font-path}icon-print.svg');
+} .@{simple-line-icon-prefix}rate {
+	background-image: url('@{simple-line-font-path}icon-rate.svg');
+} .@{simple-line-icon-prefix}right {
+	background-image: url('@{simple-line-font-path}icon-right.svg');
+} .@{simple-line-icon-prefix}search {
+	background-image: url('@{simple-line-font-path}icon-search.svg');
+} .@{simple-line-icon-prefix}settings {
+	background-image: url('@{simple-line-font-path}icon-settings.svg');
+} .@{simple-line-icon-prefix}stack {
+	background-image: url('@{simple-line-font-path}icon-stack.svg');
+} .@{simple-line-icon-prefix}tooltip {
+	background-image: url('@{simple-line-font-path}icon-tooltip.svg');
+} .@{simple-line-icon-prefix}twitter {
+	background-image: url('@{simple-line-font-path}icon-twitter.svg');
+} .@{simple-line-icon-prefix}unlocked {
+	background-image: url('@{simple-line-font-path}icon-unlocked.svg');
+} .@{simple-line-icon-prefix}up {
+	background-image: url('@{simple-line-font-path}icon-up.svg');
+} .@{simple-line-icon-prefix}update {
+	background-image: url('@{simple-line-font-path}icon-update.svg');
+} .@{simple-line-icon-prefix}upload {
+	background-image: url('@{simple-line-font-path}icon-upload.svg');
+} .@{simple-line-icon-prefix}user {
+	background-image: url('@{simple-line-font-path}icon-user.svg');
+} .@{simple-line-icon-prefix}users {
+	background-image: url('@{simple-line-font-path}icon-users.svg');
+} .@{simple-line-icon-prefix}youtube {
+	background-image: url('@{simple-line-font-path}icon-youtube.svg');
+} .@{simple-line-icon-prefix}zoom-in {
+	background-image: url('@{simple-line-font-path}icon-zoom-in.svg');
+} .@{simple-line-icon-prefix}zoom-out {
+	background-image: url('@{simple-line-font-path}icon-zoom-out.svg');
+}
+
+
+// WHITE ICONS
+
+
+.@{simple-line-icon-prefix}add.icon--white {
+	background-image: url('@{simple-line-font-path}white/icon-add.svg');
+}
+.@{simple-line-icon-prefix}apply.icon--white {
+	background-image: url('@{simple-line-font-path}white/icon-apply.svg');
+}
+.@{simple-line-icon-prefix}arrow-down.icon--white {
+	background-image: url('@{simple-line-font-path}white/icon-arrow-down.svg');
+}
+.@{simple-line-icon-prefix}arrow-left.icon--white {
+	background-image: url('@{simple-line-font-path}white/icon-arrow-left.svg');
+}
+.@{simple-line-icon-prefix}arrow-right.icon--white {
+	background-image: url('@{simple-line-font-path}white/icon-arrow-right.svg');
+} .@{simple-line-icon-prefix}arrow-up.icon--white {
+	background-image: url('@{simple-line-font-path}white/icon-arrow-up.svg');
+} .@{simple-line-icon-prefix}attatchment.icon--white {
+	background-image: url('@{simple-line-font-path}white/icon-attatchment.svg');
+} .@{simple-line-icon-prefix}call.icon--white {
+	background-image: url('@{simple-line-font-path}white/icon-call.svg');
+} .@{simple-line-icon-prefix}chart-bars.icon--white {
+	background-image: url('@{simple-line-font-path}white/icon-chart-bars.svg');
+} .@{simple-line-icon-prefix}chart-line.icon--white {
+	background-image: url('@{simple-line-font-path}white/icon-chart-line.svg');
+} .@{simple-line-icon-prefix}chart-pie.icon--white {
+	background-image: url('@{simple-line-font-path}white/icon-chart-pie.svg');
+} .@{simple-line-icon-prefix}chat.icon--white {
+	background-image: url('@{simple-line-font-path}white/icon-chat.svg');
+} .@{simple-line-icon-prefix}check.icon--white {
+	background-image: url('@{simple-line-font-path}white/icon-check.svg');
+} .@{simple-line-icon-prefix}close.icon--white {
+	background-image: url('@{simple-line-font-path}white/icon-close.svg');
+} .@{simple-line-icon-prefix}comments.icon--white {
+	background-image: url('@{simple-line-font-path}white/icon-comments.svg');
+} .@{simple-line-icon-prefix}contract.icon--white {
+	background-image: url('@{simple-line-font-path}white/icon-contract.svg');
+} .@{simple-line-icon-prefix}controls.icon--white {
+	background-image: url('@{simple-line-font-path}white/icon-controls.svg');
+} .@{simple-line-icon-prefix}date.icon--white {
+	background-image: url('@{simple-line-font-path}white/icon-date.svg');
+} .@{simple-line-icon-prefix}discussion.icon--white {
+	background-image: url('@{simple-line-font-path}white/icon-discussion.svg');
+} .@{simple-line-icon-prefix}down.icon--white {
+	background-image: url('@{simple-line-font-path}white/icon-down.svg');
+} .@{simple-line-icon-prefix}download.icon--white {
+	background-image: url('@{simple-line-font-path}white/icon-download.svg');
+} .@{simple-line-icon-prefix}edit.icon--white {
+	background-image: url('@{simple-line-font-path}white/icon-edit.svg');
+} .@{simple-line-icon-prefix}email.icon--white {
+	background-image: url('@{simple-line-font-path}white/icon-email.svg');
+} .@{simple-line-icon-prefix}expand.icon--white {
+	background-image: url('@{simple-line-font-path}white/icon-expand.svg');
+} .@{simple-line-icon-prefix}export.icon--white {
+	background-image: url('@{simple-line-font-path}white/icon-export.svg');
+} .@{simple-line-icon-prefix}external.icon--white {
+	background-image: url('@{simple-line-font-path}white/icon-external.svg');
+} .@{simple-line-icon-prefix}facebook.icon--white {
+	background-image: url('@{simple-line-font-path}white/icon-facebook.svg');
+} .@{simple-line-icon-prefix}favorite.icon--white {
+	background-image: url('@{simple-line-font-path}white/icon-favorite.svg');
+} .@{simple-line-icon-prefix}female.icon--white {
+	background-image: url('@{simple-line-font-path}white/icon-female.svg');
+} .@{simple-line-icon-prefix}file.icon--white {
+	background-image: url('@{simple-line-font-path}white/icon-file.svg');
+} .@{simple-line-icon-prefix}files.icon--white {
+	background-image: url('@{simple-line-font-path}white/icon-files.svg');
+} .@{simple-line-icon-prefix}flag.icon--white {
+	background-image: url('@{simple-line-font-path}white/icon-flag.svg');
+} .@{simple-line-icon-prefix}folder.icon--white {
+	background-image: url('@{simple-line-font-path}white/icon-folder.svg');
+} .@{simple-line-icon-prefix}home.icon--white {
+	background-image: url('@{simple-line-font-path}white/icon-home.svg');
+} .@{simple-line-icon-prefix}info.icon--white {
+	background-image: url('@{simple-line-font-path}white/icon-info.svg');
+} .@{simple-line-icon-prefix}key.icon--white {
+	background-image: url('@{simple-line-font-path}white/icon-key.svg');
+} .@{simple-line-icon-prefix}left.icon--white {
+	background-image: url('@{simple-line-font-path}white/icon-left.svg');
+} .@{simple-line-icon-prefix}link.icon--white {
+	background-image: url('@{simple-line-font-path}white/icon-link.svg');
+} .@{simple-line-icon-prefix}location.icon--white {
+	background-image: url('@{simple-line-font-path}white/icon-location.svg');
+} .@{simple-line-icon-prefix}locked.icon--white {
+	background-image: url('@{simple-line-font-path}white/icon-locked.svg');
+} .@{simple-line-icon-prefix}mail.icon--white {
+	background-image: url('@{simple-line-font-path}white/icon-mail.svg');
+} .@{simple-line-icon-prefix}male.icon--white {
+	background-image: url('@{simple-line-font-path}white/icon-male.svg');
+} .@{simple-line-icon-prefix}map.icon--white {
+	background-image: url('@{simple-line-font-path}white/icon-map.svg');
+} .@{simple-line-icon-prefix}merge.icon--white {
+	background-image: url('@{simple-line-font-path}white/icon-merge.svg');
+} .@{simple-line-icon-prefix}pay.icon--white {
+	background-image: url('@{simple-line-font-path}white/icon-pay.svg');
+} .@{simple-line-icon-prefix}print.icon--white {
+	background-image: url('@{simple-line-font-path}white/icon-print.svg');
+} .@{simple-line-icon-prefix}rate.icon--white {
+	background-image: url('@{simple-line-font-path}white/icon-rate.svg');
+} .@{simple-line-icon-prefix}right.icon--white {
+	background-image: url('@{simple-line-font-path}white/icon-right.svg');
+} .@{simple-line-icon-prefix}search.icon--white {
+	background-image: url('@{simple-line-font-path}white/icon-search.svg');
+} .@{simple-line-icon-prefix}settings.icon--white {
+	background-image: url('@{simple-line-font-path}white/icon-settings.svg');
+} .@{simple-line-icon-prefix}stack.icon--white {
+	background-image: url('@{simple-line-font-path}white/icon-stack.svg');
+} .@{simple-line-icon-prefix}tooltip.icon--white {
+	background-image: url('@{simple-line-font-path}white/icon-tooltip.svg');
+} .@{simple-line-icon-prefix}twitter.icon--white {
+	background-image: url('@{simple-line-font-path}white/icon-twitter.svg');
+} .@{simple-line-icon-prefix}unlocked.icon--white {
+	background-image: url('@{simple-line-font-path}white/icon-unlocked.svg');
+} .@{simple-line-icon-prefix}up.icon--white {
+	background-image: url('@{simple-line-font-path}white/icon-up.svg');
+} .@{simple-line-icon-prefix}update.icon--white {
+	background-image: url('@{simple-line-font-path}white/icon-update.svg');
+} .@{simple-line-icon-prefix}upload.icon--white {
+	background-image: url('@{simple-line-font-path}white/icon-upload.svg');
+} .@{simple-line-icon-prefix}user.icon--white {
+	background-image: url('@{simple-line-font-path}white/icon-user.svg');
+} .@{simple-line-icon-prefix}users.icon--white {
+	background-image: url('@{simple-line-font-path}white/icon-users.svg');
+} .@{simple-line-icon-prefix}youtube.icon--white {
+	background-image: url('@{simple-line-font-path}white/icon-youtube.svg');
+} .@{simple-line-icon-prefix}zoom-in.icon--white {
+	background-image: url('@{simple-line-font-path}white/icon-zoom-in.svg');
+} .@{simple-line-icon-prefix}zoom-out.icon--white {
+	background-image: url('@{simple-line-font-path}white/icon-zoom-out.svg');
+}
