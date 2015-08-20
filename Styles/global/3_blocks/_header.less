@@ -2,7 +2,10 @@
 
 .header {
 	padding-top: 32px;
-	padding-bottom: 32px;
+	padding-bottom: 25px;
+	@media (min-width: @screen--md) {	
+		padding-bottom: 32px;	
+	}
 	&__row {
 		.clearfix();
 		position: relative;
@@ -19,7 +22,7 @@
 		.fontSize(@font-size--regular);
 		padding: @spacing--small  @spacing--small;
 		margin: 0;		
-		@media (min-width: @screen--sm) {	
+		@media (min-width: @screen--md) {	
 			padding: @spacing--small  @spacing;
 		}
 		&:hover {
@@ -29,11 +32,7 @@
 		}
 		&--menu {
 			top: -3px;
-			right: -@spacing--small;	
-			@media (min-width: @screen--sm) {			
-				top: 14px;	
-				right: 0;		
-			}
+			right: -@spacing--small;
 			@media (min-width: @screen--md) {
 				top: 14px;	
 				right: 100px;		

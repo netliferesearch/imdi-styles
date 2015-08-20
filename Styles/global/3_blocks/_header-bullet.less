@@ -18,10 +18,11 @@
 		}
 	}	 		
 	@media (min-width: @screen--lg) {			 
-	 	width: 100%;
+	 	width: percentage(6/12);
 		position: absolute;
 		top: 0;
-		left: percentage(13/12);	 	
+		left: percentage(13/12);	 
+		overflow: visible;
 	}	
 	&__image { 
 		margin-left: -@gutter;
@@ -35,9 +36,10 @@
 			background: @color__canvas-grey;
 			-webkit-clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
 			clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);		
-			width: 100%;
+			width: 200%;
 			position: relative;
-			padding-bottom: 100%;
+			padding-bottom: 200%;
+			//z-index: 1;
 			img {
 				position: absolute;
 				width: 100%;
@@ -47,8 +49,8 @@
 	}
 	&__bullet {
 		@media (min-width: @screen--lg) {		
-			width: 50%;
-			margin-left: -@spacing;
+			width: 100%;
+			//margin-left: -@spacing;
 		}
 	}
 	& + .header-bullet {

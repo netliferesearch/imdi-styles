@@ -1,3 +1,15 @@
+/*------------------------------------*\
+    SNIPPETS
+    Generic functions to use
+\*------------------------------------*/	
+
+
+$.urlParam = function(name){
+	var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);
+	return results[1] || 0;
+};
+
+
 $( document ).ready(function() {
   
 	/*------------------------------------*\
@@ -73,17 +85,7 @@ $( document ).ready(function() {
 	    TOGGLE - ACCESSIBLE
 	\*------------------------------------*/	
 	
-	$('[data-behaviour="toggle"]').each(function() {
-	    // Hide sections on load
-	    var section = $(this).attr('data-controls');
-	    //var state = $(this).attr('aria-expanded') === 'false' ? true : false; 
-	    $(this).attr('aria-expanded','false');
-	    $(this).attr('aria-controls',section);
-	    $(this).attr('role','button');	    	    
-	    $('#' + section).attr('aria-hidden','true');
-	    $('#' + section).hide();
-	});
-	
+
 	$('[data-behaviour="toggle"]').click(function() {
 	    // Set duration of animation in miliseconds
 	    var transition_duration = 200;
@@ -134,5 +136,21 @@ $( document ).ready(function() {
 	    event.preventDefault();
 	
 	});  
+	
+	$('[data-behaviour="toggle"]').each(function() {
+	    // Hide sections on load
+	    var section = $(this).attr('data-controls');
+	    //var state = $(this).attr('aria-expanded') === 'false' ? true : false; 
+	    $(this).attr('aria-expanded','false');
+	    $(this).attr('aria-controls',section);
+	    $(this).attr('role','button');	    	    
+	    $('#' + section).attr('aria-hidden','true');
+	    $('#' + section).hide();
+	    // If the url has an open section parameter
+	    if ($.urlParam('toggle') && $.urlParam('toggle') === section){
+		    $(this).trigger("click");
+	    }
+	});
+		
   
 });

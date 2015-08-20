@@ -37,11 +37,17 @@
 			.toggle__icon {
 				.transform(rotate(180deg));					
 			}
-		}	
+		}
+	}
+	&__link {
+		&--expanded {
+			
+		}
 	}
 	&__section {
 		padding: @spacing @spacing;
 		border: 3px solid @color__orange;
+		margin-bottom: @spacing--large !important;
 		&--contracted {
 			.animation(animations__fade-out-up 300ms linear);				
 		}		
