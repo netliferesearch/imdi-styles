@@ -1,0 +1,19 @@
+{
+  "name": "imdi-styles",
+  "version": "0.0.0",
+  "description": "Stilsett, javascript og grafikk for imdi.no og andre IMDi nettsider",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/netliferesearch/imdi-styles.git"
+  },
+  "author": "Netlife Research",
+  "bugs": {
+    "url": "https://github.com/netliferesearch/imdi-styles/issues"
+  },
+  "homepage": "https://github.com/netliferesearch/imdi-styles#readme"
+}
