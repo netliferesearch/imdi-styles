@@ -3,10 +3,12 @@
 .message {
 	display: block;	
 	position: relative;
-	padding: @spacing--small 0;
+	padding-top: 3px;
 	padding-left: 35px + @spacing--small;
 	margin: @spacing--small 0;
+	margin-bottom: @spacing;
 	color: @color__orange--dark;
+	.fontSize(@font-size--medium);	
 	@media (min-width: @screen--md) {
 		padding-left: 0;
 	}	
@@ -16,7 +18,7 @@
 		display: block;
 		width: 35px;
 		height: 35px;
-		line-height: 35px;
+		line-height: 32px;
 		text-align: center;
 		top: 0;
 		left: 0;
@@ -27,5 +29,16 @@
 			left: -(35px + @spacing--small);
 		}				
 	} 
+	&--ok {
+		color: @color__black;
+		.message__icon {
+			background-image: url('/UI/gfx/square--green.svg');
+		}
+	}
+	&--inline {
+		margin-bottom: @spacing--small;
+		padding: @spacing--small 0;		
+		.fontSize(@font-size--regular);
+	}
 	
 }

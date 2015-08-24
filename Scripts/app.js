@@ -3,12 +3,21 @@
     Generic functions to use
 \*------------------------------------*/	
 
+function getQueryParams(qs) {
+    qs = qs.split("+").join(" ");
+    var params = {},
+        tokens,
+        re = /[?&]?([^=]+)=([^&]*)/g;
 
-$.urlParam = function(name){
-	var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);
-	return results[1] || 0;
-};
+    while (tokens = re.exec(qs)) {
+        params[decodeURIComponent(tokens[1])]
+            = decodeURIComponent(tokens[2]);
+    }
 
+    return params;
+}
+
+var $_GET = getQueryParams(document.location.search);
 
 $( document ).ready(function() {
   
@@ -136,7 +145,7 @@ $( document ).ready(function() {
 	    event.preventDefault();
 	
 	});  
-	
+    
 	$('[data-behaviour="toggle"]').each(function() {
 	    // Hide sections on load
 	    var section = $(this).attr('data-controls');
@@ -147,7 +156,7 @@ $( document ).ready(function() {
 	    $('#' + section).attr('aria-hidden','true');
 	    $('#' + section).hide();
 	    // If the url has an open section parameter
-	    if ($.urlParam('toggle') && $.urlParam('toggle') === section){
+	    if ($_GET['toggle'] && $_GET['toggle'] === section){
 		    $(this).trigger("click");
 	    }
 	});

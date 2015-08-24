@@ -49,12 +49,12 @@ select,
 button,
 .input {
 	.text();
-	display: inline-block;
+	display: block;
 	font-size: 100%;
     -webkit-appearance: none;
     border-radius: 0;	
 	border: 2px solid #ccc;
-	margin-bottom: @spacing--large;
+	margin-bottom: @spacing;
 	padding: @spacing--small;
 	width: 100%;
 	&:focus{
@@ -67,6 +67,25 @@ label + textarea,
 .label + .textarea {
 	min-height: 6em;
 }
+
+.form--medium {
+	max-width: 400px;	
+}
+
+
+.form--small {
+	max-width: 200px;
+}
+
+.form--tiny {
+	max-width: 100px;
+}
+
+.form--inline {
+	margin-top: 0;
+	display: inline-block;
+}
+
 
 /*
 input[type=checkbox] + label {
@@ -226,10 +245,10 @@ button {
   margin: 0;
   padding: .5rem 2.25rem .5rem 1rem;
   line-height: 1.5;
-  color: #555;
-  background-color: #eee;
+  color: @color__black;
+  background-color: @color__canvas-grey;
   border: 0;
-  border-radius: .25rem;
+  border-radius: 0;
   cursor: pointer;
   outline: 0;
   -webkit-appearance: none;
@@ -245,17 +264,15 @@ button {
 .select:after {
   position: absolute;
   top: 50%;
-  right: 1.25rem;
+  right: 1rem;
   display: inline-block;
   content: "";
-  width: 0;
-  height: 0;
-  margin-top: -.15rem;
+  width: 1rem;
+  height: 1rem;
+  margin-top: -.5rem;
   pointer-events: none;
-  border-top: .35rem solid;
-  border-right: .35rem solid transparent;
-  border-bottom: .35rem solid transparent;
-  border-left: .35rem solid transparent;
+  background: url('/UI/icons/icon-down.svg') no-repeat center center;
+  background-size: contain;
 }
 
 /* Hover state */
@@ -352,11 +369,11 @@ button {
   height: 2.5rem;
   padding: .5rem 1rem;
   line-height: 1.5;
-  color: #555;
+  color: @color__black;
   background-color: #fff;
-  border: .075rem solid #ddd;
-  border-radius: .25rem;
-  box-shadow: inset 0 .2rem .4rem rgba(0,0,0,.05);
+  border: 2px solid #ccc;
+  border-radius: 0rem;
+  box-shadow: none;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
@@ -367,9 +384,9 @@ button {
 }
 .file-custom:before {
   position: absolute;
-  top: -.075rem;
-  right: -.075rem;
-  bottom: -.075rem;
+  top: -2px;
+  right: -2px;
+  bottom: -2px;
   z-index: 6;
   display: block;
   content: "Velg";
@@ -377,9 +394,9 @@ button {
   padding: .5rem 1rem;
   line-height: 1.5;
   color: #555;
-  background-color: #eee;
-  border: .075rem solid #ddd;
-  border-radius: 0 .25rem .25rem 0;
+  background-color: @color__canvas-grey;
+  border: 2px solid #ccc;
+  border-left: 0;
 }
 
 /* Focus */

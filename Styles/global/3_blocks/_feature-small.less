@@ -3,11 +3,15 @@
 .feature-small {
 	position: relative;
 	margin-top: @spacing--large;
-	margin-bottom: @spacing--xlarge;	
+	margin-bottom: @spacing--large;	
+	border-bottom: 1px solid @color__canvas-grey;
+	border-top: 1px solid @color__canvas-grey;	
+	padding-bottom: @spacing--large;
+	padding-top: @spacing--large;
 	@media (min-width: @screen--lg) {
 		margin-top: @spacing--large;
-		margin-bottom: @spacing--large;	
-	}
+		margin-bottom: @spacing;	
+	}	
 	&__meta {
 		.text--small();
 		color: @color__grey;
@@ -30,5 +34,23 @@
 			padding-bottom: @spacing;
 		}
 	}
+	&--case {
+		background: @color__canvas-grey;
+		margin-left: -@gutter;
+		margin-right: -@gutter;
+		padding-left: @gutter;
+		padding-right: @gutter;
+		padding-top: @spacing;
+		padding-bottom: @spacing;
+	}
+	&--publication, &--person, &--event {
+		padding-top: @spacing;
+		padding-bottom: @spacing;		
+	}
 	 
- }
+}
+ul .feature-small {
+	border-top: none;
+	margin-top: 0;
+	margin-bottom: 0;
+}
