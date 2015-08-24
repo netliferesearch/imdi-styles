@@ -10,8 +10,7 @@ function getQueryParams(qs) {
         re = /[?&]?([^=]+)=([^&]*)/g;
 
     while (tokens = re.exec(qs)) {
-        params[decodeURIComponent(tokens[1])]
-            = decodeURIComponent(tokens[2]);
+        params[decodeURIComponent(tokens[1])] = decodeURIComponent(tokens[2]);
     }
 
     return params;
@@ -160,6 +159,33 @@ $( document ).ready(function() {
 		    $(this).trigger("click");
 	    }
 	});
+	
+	/*------------------------------------*\
+	    SMOOTH SCROLLING
+	\*------------------------------------*/		
+	
+	/* Basics lifted from a CSS Tricks demo (http://css-tricks.com/snippets/jquery/smooth-scrolling/), with focus() and URL hash updating added where commented */
+	  $('a[href*=#]:not([href=#]):not(#main-menu-toggle):not([data-behaviour="toggle"])').click(function() {
+	    var $linkElem = $(this);
+	    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+	      var target = $(this.hash);
+	      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+	      if (target.length) {
+	        $('html,body').animate({
+	          scrollTop: (target.offset().top - 30)
+	        }, 1000, function() {
+	          /* ADDED: focus the target */
+	          target.focus();
+	          /* end ADDED */
+	          /* ADDED: update the URL */
+	          window.location.hash = $linkElem.attr('href').substring(1);
+	         // window.location.hash = $(this).attr('href').substring(1, $(this).attr('href').length);
+	          /* end ADDED */
+	        });
+	        return false;
+	      }
+	    }
+	  });	
 		
   
 });
