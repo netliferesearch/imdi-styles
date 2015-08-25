@@ -2,60 +2,45 @@
 
 .search {
 	width: 100%;
-	position: relative;		
+	max-width: 25em;
+	position: relative;	
+	padding-right: 105px;
+	&--full {
+		max-width: none;
+	}	
 	&__input {
 		width: 100%;
-		border-color: transparent;
-		border-bottom: 2px solid @color__orange;
-		padding-right: 50px;	
-		&:focus {
-			border-bottom-width: 2px;			
-		}
 	}
 	&__button {
 		position: absolute;
 		top: 0;
 		right: 0;
 		margin: 0;
-		//padding: .5em;
-		background: transparent;
-		color: @color__orange--dark;
-		border-bottom: 2px solid transparent;
-		border-color: transparent;
 		width: auto;
-		.transition(all 0.2s ease);
-		&:hover, &:focus {
-			border-width: 2px;	
-			background: @color__orange;
-			border-color: @color__orange;
-			color: @color__white;
-			.search__button-icon {
-				background-image: url('/UI/icons/white/icon-search.svg');
-			}
-		}
-		&:hover {
-			background: @color__orange !important;
-			border-color: @color__orange !important;
-		}	 		
+		.transition(all 0.2s ease); 		
 	}
 	&__button-icon	{
-		background-image: url('/UI/icons/icon-search.svg');
+		background-image: url('/UI/icons/white/icon-search.svg');
 		margin-left: 0.25rem;		
 	}	
 	.search__input:focus + .search__button {
 		background: @color__orange--dark;	
-		border-color: @color__orange--dark;	
+		//border-color: @color__orange--dark;	
 		color: @color__white;					
 		.search__button-icon {
 			background-image: url('/UI/icons/white/icon-search.svg');
 		}		
 	}
 	&--footer {
+		padding-right: 0;		
 		.search__input {
 			background: none;
+			border: none;
 			border-bottom: 2px solid @color__white;
 			color: @color__white;
 			margin-bottom: @spacing;
+			padding-right: 70px;
+			padding-top: 9px;
 			.transition(all 0.2s ease);
 			&::-webkit-input-placeholder {
 			   color: @color__white;
@@ -76,10 +61,18 @@
 			}			
 		}
 		.search__button {	
+			background: transparent;
+			border: none;					
 			color: @color__white;	
+			top: 2px;
+			right: 2px;
+			&:hover, &:focus {
+				background: @color__orange;
+				border: none;
+			}		
 		}
 		.search__input:focus + .search__button {
-			border-color: @color__white;	
+			border-bottom-color: @color__white;	
 		}		
 	}
 }

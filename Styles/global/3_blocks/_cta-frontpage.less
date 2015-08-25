@@ -47,14 +47,14 @@
 		display: table-cell;
 		vertical-align: middle;
 		padding-left: ( @gutter / 2 );
-		color: @color__green--dark;		
-		border-bottom: 1px solid @color__green;		
+		color: @color__text;	
+		border-bottom: 1px solid transparent;	
+		padding-top: 3px;	
 		@media (min-width: @screen--md) {			
 			display: inline;
 			padding: 0;
 			text-align: center;		
-			color: @color__text;					
-			border-color: @color__text;			
+			color: @color__text;							
 		}
 		@media (min-width: @screen--lg) {	
 			.fontSize(@font-size--large);	
@@ -64,7 +64,7 @@
 	&__link {
 		display: table;
 		margin-bottom: @spacing;
-		border: none;
+		border: none;			
 		width: 100%;		
 		@media (min-width: @screen--md) {
 			display: block;			
@@ -74,11 +74,13 @@
 		&:hover, &:focus {
 			.cta-frontpage__bullet {
 				color: @color__white;
-				background-image: url('/UI/gfx/square--green.svg');			
+				background-image: url('/UI/gfx/square--green.svg');							
 			}
 			.cta-frontpage__text {
-				color: @color__green--dark;				
-				border-bottom-color: @color__green--dark; 
+				color: @color__green;	
+				@media (min-width: @screen--md) {				
+					//border-bottom-color:  @color__green; 
+				}
 			}
 		}
 	}

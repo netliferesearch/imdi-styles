@@ -53,6 +53,11 @@
 		@media (min-width: @screen--lg) {
 			padding-left: percentage(2/12);
 		}		
+		&--list {
+			@media (min-width: @screen--lg) {
+				padding-right: percentage(10/22);
+			}					
+		}
 	}
 	&__content-wrapper {
 		padding: @spacing--large 0;		 
@@ -75,11 +80,15 @@
 		.h4(); 
 	}
 	&__title {
-		.h4();
-		margin-bottom: @spacing--large;
-	}
-	&__case-title {
 		.h2();
+		a {
+			color: @color__text;
+			border-bottom-color: @color__canvas-grey--dark; 
+			&:hover, &:focus {
+				color: @color__links;
+				border-bottom-color: @color__links; 				
+			}
+		}
 	}
 	&__leadtext {
 

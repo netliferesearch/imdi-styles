@@ -17,7 +17,8 @@
 		position: absolute;
 		background: transparent;
 		color: @color__text;
-		border-color: transparent;
+		border: none;
+		border-bottom: 2px solid transparent;
 		width: auto;	
 		.fontSize(@font-size--regular);
 		padding: @spacing--small  0;
@@ -27,8 +28,8 @@
 		}
 		&:hover, &:focus {
 			background: transparent;
-			border-color: transparent;
 			color: @color__orange--dark;
+			border: none;			
 			border-bottom: 2px solid @color__orange--dark;
 			.header__menu-icon-bar {
 				background-color: @color__orange--dark;
