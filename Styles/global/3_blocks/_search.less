@@ -6,10 +6,10 @@
 	&__input {
 		width: 100%;
 		border-color: transparent;
-		border-bottom: 3px solid @color__orange;
+		border-bottom: 2px solid @color__orange;
 		padding-right: 50px;	
 		&:focus {
-			border-bottom-width: 3px;			
+			border-bottom-width: 2px;			
 		}
 	}
 	&__button {
@@ -20,7 +20,7 @@
 		//padding: .5em;
 		background: transparent;
 		color: @color__orange--dark;
-		border-bottom: 3px solid transparent;
+		border-bottom: 2px solid transparent;
 		border-color: transparent;
 		width: auto;
 		.transition(all 0.2s ease);
@@ -53,7 +53,7 @@
 	&--footer {
 		.search__input {
 			background: none;
-			border-bottom: 3px solid @color__white;
+			border-bottom: 2px solid @color__white;
 			color: @color__white;
 			margin-bottom: @spacing;
 			.transition(all 0.2s ease);
@@ -70,7 +70,7 @@
 			   color: @color__white;  
 			}
 			&:focus {
-				background: transparent;
+				background: @color__white;
 				color: @color__text;
 				border-color: @color__white;
 			}			

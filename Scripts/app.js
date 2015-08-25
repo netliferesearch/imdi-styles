@@ -25,7 +25,7 @@ $( document ).ready(function() {
 	    Open the main menu if the menu button in the header is pressed
 	\*------------------------------------*/	
 
-	$('body').on('click', '#main-menu-toggle', function() {
+	$('[data-behaviour="main-menu-toggle"]').click(function() {
 		
 		// Toggle menu button
 		if($(this).attr('aria-expanded') === "false"){
@@ -62,8 +62,8 @@ $( document ).ready(function() {
 	    Is removed if the focus moves away from the search input field, or search button.
 	\*------------------------------------*/	
 
-	$('body').on('click', '#main-search-toggle', function() {
-		
+	$('[data-behaviour="main-search-toggle"]').click(function() {
+		console.log("Searchbar open");
 		$('#header').toggleClass($('#header').attr('data-toggle-search'));	
 		
 		// Set focus in 
@@ -165,7 +165,7 @@ $( document ).ready(function() {
 	\*------------------------------------*/		
 	
 	/* Basics lifted from a CSS Tricks demo (http://css-tricks.com/snippets/jquery/smooth-scrolling/), with focus() and URL hash updating added where commented */
-	  $('a[href*=#]:not([href=#]):not(#main-menu-toggle):not([data-behaviour="toggle"])').click(function() {
+	  $('a[href*=#]:not([href=#]):not([data-behaviour="main-search-toggle"]):not([data-behaviour="main-menu-toggle"]):not([data-behaviour="toggle"])').click(function() {
 	    var $linkElem = $(this);
 	    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
 	      var target = $(this.hash);
