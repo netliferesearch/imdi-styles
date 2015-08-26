@@ -1,0 +1,54 @@
+@import "../../_vars";
+
+.toggle-list {
+	padding: 0;
+	> li {
+		list-style: none;
+		padding: 0; 	
+	}
+	&__icon {
+
+	}	
+	&__button {
+		.h3();
+		display: block;
+		padding: @spacing--small  @spacing;
+		background: @color__canvas-grey;			
+		border: none;
+		margin: 0;
+		&:hover, &:focus, &:active {
+		}			
+		&--expanded {
+			&:hover, &:focus {
+			}
+			.toggle__icon {
+				//.transform(rotate(180deg));					
+			}
+		}
+	}
+	&__section {
+		padding: @spacing--small  @spacing;	
+		background: @color__canvas-grey;
+		margin: 0;		
+		&--contracted {
+			.animation(animations__fade-out-up 300ms linear);				
+		}		
+		&--expanded {
+			.animation(animations__fade-in-down 400ms linear both);	
+		}			
+	}
+/*	
+	&--only-mobile {
+
+		@media (min-width: @screen--lg) {
+			.toggle__button {
+				display: none;
+			}	
+			.toggle__section {
+				display: block !important;
+				border: none;
+			}
+		}
+	}
+	*/
+}
