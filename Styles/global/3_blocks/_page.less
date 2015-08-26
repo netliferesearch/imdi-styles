@@ -1,12 +1,20 @@
 @import "../../_vars";
 
 .page {
-	margin-bottom: @spacing--large;
-	@media (min-width: @screen--md) {
-		margin-bottom: @spacing--xlarge;	
-	}
 	&__master {
 		max-width: 100em;
 		margin: 0 auto;
+	}
+	&__content {
+		margin-bottom: @spacing--large;
+		@media (min-width: @screen--md) {
+			margin-bottom: @spacing--xlarge;	
+		}	
+		&--section {
+			margin-bottom: 0;
+		}	
+	}
+	&__footer {
+		//background: @color__canvas-grey;
 	}
 }		

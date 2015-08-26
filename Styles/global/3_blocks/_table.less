@@ -13,6 +13,12 @@ table, .table {
 	&__wrapper {
 		width: 100%;
 		overflow-x: auto;
+		margin-top: @spacing--large;
+		margin-bottom: @spacing--large;
+		@media (min-width: @screen--lg) {		
+			margin-top: @spacing--xlarge;
+			margin-bottom: @spacing--xlarge;			
+		}		
 		//padding: @spacing @spacing--medium @spacing;
 		//background: lighten(@color__canvas-grey,10%);
 	}

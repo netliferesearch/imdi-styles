@@ -16,7 +16,7 @@
 		display: block;
 		width: 45px;
 		height: 45px;
-		line-height: 45px;
+		line-height: 42px;
 		text-align: center;
 		top: 0;
 		left: -2px;
@@ -58,6 +58,16 @@
 			background: url('/UI/gfx/square--red.svg') no-repeat center center;
 			background-size: contain;
 			border: none;			
+			&.feature-bullet--link {
+				background-image: url('/UI/gfx/square--green.svg');	
+				&:hover, &:active, &:focus {
+					background-image: url('/UI/gfx/square--green-dark.svg');	
+					.feature-bullet__linktext {
+						color: @color__white;
+						border-color:  @color__white;		
+					}						
+				}						
+			}
 		}			
 		.feature-bullet__content {
 			.fontSize(@font-size--small);	
