@@ -7,7 +7,7 @@
 fieldset, .fieldset {
 	padding: 0;
 	border: 0;
-	margin-bottom: 1em; 
+	margin-bottom: @spacing; 
 
 	legend, .legend {
 		.font-siri--medium();
@@ -176,7 +176,8 @@ button {
 
 /* Focus */
 .control input:focus ~ .control-indicator {
-  box-shadow: 0 0 0 .075rem #fff, 0 0 0 .2rem darken(@color__orange,5%);
+
+  box-shadow: 0 0 0 .2rem lighten(@color__orange,15%), 0 0 0 .2rem lighten(@color__orange,15%);
 }
 
 /* Checked state */

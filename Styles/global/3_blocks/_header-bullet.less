@@ -2,28 +2,31 @@
  
  .header-bullet {
 	width: 100%;
-	max-width: 100%;
-	&--image {
-		@media (min-width: @screen--md) {
-			position: absolute;
-			width: 75%;	
-			margin-top: -25%;
-			left: percentage(13/12);
-			z-index: 2;
-		}		
-		@media (min-width: @screen--lg) {		
-			margin-top: 0%;	
-			max-width: 100%;
-			overflow: hidden;
-		}
-	}	 		
+	max-width: 100%;	
 	@media (min-width: @screen--lg) {			 
 	 	width: percentage(6/12);
 		position: absolute;
 		top: 0;
 		left: percentage(13/12);	 
 		overflow: visible;
+		.transform(translateY(-66%));
+
 	}	
+	&--image {
+		@media (min-width: @screen--md) {
+			position: absolute;
+			width: percentage(4/12);	
+			left: percentage(13/12);
+			top: 5em;
+			z-index: 2;
+		}		
+		@media (min-width: @screen--lg) {	
+			top: 5em;			
+			.transform(translateY(0%));	
+			left: percentage(13/12);							
+		}		
+
+	}	 		
 	&__image { 
 		margin-left: -@gutter;
 		margin-right: -@gutter;		

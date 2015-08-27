@@ -16,10 +16,7 @@ you can use the generic selector below, but it's slower:
 
 .@{simple-line-icon-prefix} {
 	
-	&add, &apply, &arrow-down, &arrow-left, &arrow-right, &arrow-up, &attatchment, &call, &chart-bars, &chart-line, &chart-pie, &chat, &check, &close, &comments, &contract, &controls, &date, &discussion, &down, &download, &edit, &email, &expand, &export, &external, &facebook, &favorite, &female, &file, &files, &flag, &folder, &home, &info, &key, &left, &link, &location, &locked, &mail, &male, &map, &merge, &pay, &print, &rate, &right, &search, &settings, &stack, &tooltip, &twitter, &unlocked, &up, &update, &upload, &user, &users, &youtube, &zoom-in, &zoom-out, 
-	
-	&add--white, &apply--white, &arrow-down--white, &arrow-left--white, &arrow-right--white, &arrow-up--white, &attatchment--white, &call--white, &chart-bars--white, &chart-line--white, &chart-pie--white, &chat--white, &check--white, &close--white, &comments--white, &contract--white, &controls--white, &date--white, &discussion--white, &down--white, &download--white, &edit--white, &email--white, &expand--white, &export--white, &external--white, &facebook--white, &favorite--white, &female--white, &file--white, &files--white, &flag--white, &folder--white, &home--white, &info--white, &key--white, &left--white, &link--white, &location--white, &locked--white, &mail--white, &male--white, &map--white, &merge--white, &pay--white, &print--white, &rate--white, &right--white, &search--white, &settings--white, &stack--white, &tooltip--white, &twitter--white, &unlocked--white, &up--white, &update--white, &upload--white, &user--white, &users--white, &youtube--white, &zoom-in--white, &zoom-out--white	 
-
+	&add, &apply, &arrow-down, &arrow-left, &arrow-right, &arrow-up, &attatchment, &call, &chart-bars, &chart-line, &chart-pie, &chat, &check, &close, &comments, &contract, &controls, &date, &discussion, &down, &download, &edit, &email, &expand, &export, &external, &facebook, &favorite, &female, &file, &files, &flag, &folder, &home, &info, &key, &left, &link, &location, &locked, &mail, &male, &map, &merge, &pay, &print, &rate, &right, &search, &settings, &stack, &tooltip, &twitter, &unlocked, &up, &update, &upload, &user, &users, &youtube, &zoom-in, &zoom-out, &related
    {
 	display: inline-block;
 	height: 1em;
@@ -164,7 +161,9 @@ you can use the generic selector below, but it's slower:
 } .@{simple-line-icon-prefix}zoom-out {
 	background-image: url('@{simple-line-font-path}icon-zoom-out.svg');
 }
-
+.@{simple-line-icon-prefix}related {
+	background-image: url('@{simple-line-font-path}icon-related.svg');
+}
 
 // WHITE ICONS
 
@@ -297,4 +296,7 @@ you can use the generic selector below, but it's slower:
 	background-image: url('@{simple-line-font-path}white/icon-zoom-in.svg');
 } .@{simple-line-icon-prefix}zoom-out.icon--white {
 	background-image: url('@{simple-line-font-path}white/icon-zoom-out.svg');
+}
+.@{simple-line-icon-prefix}related.icon--white {
+	background-image: url('@{simple-line-font-path}white/icon-related.svg');
 }

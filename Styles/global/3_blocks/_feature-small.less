@@ -35,12 +35,13 @@
 	}
 	&__description {
 		.text();
-		margin-bottom: 0;
+		margin-bottom: @spacing--small;
 	}
 
 	&__image {
+		padding-right: @spacing; 		
 		@media (max-width: @screen--lg) {
-			width: 50%;
+			width: 50%;   
 			padding-bottom: @spacing;
 		}
 	}
@@ -56,8 +57,7 @@
 		margin-top: @spacing;
 	}
 	&--publication, &--person, &--event {
-		padding-top: @spacing;
-		padding-bottom: @spacing;		
+	
 	}
 	 
 }

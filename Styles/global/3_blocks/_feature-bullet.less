@@ -27,20 +27,22 @@
 	&__content {
 		display: inline;
 		.fontSize(@font-size--small);	
-		color: @color__grey;				
+		color: @color__grey;
+		overflow: hidden;
+		white-space: nowrap;	
 	}	
 
 	&__linktext {
 		display: inline-block;
-		color: @color__green--dark;
-		border-bottom: 1px solid @color__green--dark;			
+		color: @color__text;
+		border-bottom: 1px solid @color__canvas-grey--dark;			
 	}
 	
 	&--link	{
 		&:hover, &:active, &:focus {
 			.feature-bullet__linktext {
-				color: @color__text;
-				border-color:  @color__text;		
+				color: @color__links;
+				border-color:  @color__links;		
 			}
 		}		
 		.feature-bullet__icon {
