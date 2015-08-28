@@ -1,7 +1,7 @@
  @import "../../_vars";
 
 .flag {
-	@media (min-width: @screen--lg) {
+	@media (min-width: @screen--sm) {
 		width: 100%;
 		display: table;
 		position: relative;
@@ -57,5 +57,15 @@
 				vertical-align: bottom;
 			}
 		}
-	}		
+	}
+	&--min-lg {
+		@media (max-width: @screen--lg) {			
+			display: block;
+			position: static;
+			.flag__item {
+				display: block;
+				width: auto;
+			}		
+		}
+	}
 }

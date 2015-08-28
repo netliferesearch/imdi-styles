@@ -25,14 +25,20 @@ table, .table {
 	&__thead, thead {
 		border-bottom:1px solid @color__canvas-grey--dark;
 	}
-	&__th, th {
+	&__th, th, strong {
 		.font-siri--medium();
         .fontSize(@font-size--small);			
         padding: @spacing--medium @spacing--medium;	
         @media (min-width: @screen--md) {
 	        .fontSize(@font-size--regular);			
         }	
+	}
+	strong {
+		padding: 0;
 	}	
+	p, ul, ol {
+        .fontSize(@font-size--small);			
+	}
 	&__th--number, td[align="right"] {
 		text-align: right;
 	}		
@@ -44,6 +50,8 @@ table, .table {
         vertical-align: top;	
         border-bottom: 1px solid @color__canvas-grey--dark
 	}
+
+	
 
 	&__td--number, td[align="right"] {
 		.fontSize(16);		

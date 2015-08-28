@@ -53,6 +53,7 @@
 		p {
 			.fontSize(@font-size--small);
 			line-height: (35 / @font-size--medium);	
+	        margin-bottom: @spacing--small;			
 			
 		}	
 		a {
@@ -67,19 +68,15 @@
 			
 			}				
 		}		
-		ul {
+		ul, ol {
 			padding-left: 0;
-			margin-top: @spacing--small;
+			margin-top: 0;
+			margin-bottom: @spacing;
 			li {
 				padding-left: 0;
 		        list-style: none;		
+		        margin-bottom: @spacing--small;
 			}
-		}
-		ol {
-			margin-top: @spacing--small;
-			li {
-				// TODO farge på tall
-			}			
 		}
 		.info {
 			margin-bottom: @spacing;
