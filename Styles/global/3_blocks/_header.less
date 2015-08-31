@@ -1,9 +1,10 @@
 @import "../../_vars";
 
 .header {
-	padding-top: 32px;
+	padding-top: 16px;
 	padding-bottom: 25px;
 	@media (min-width: @screen--md) {	
+		padding-top: 32px;		
 		padding-bottom: 32px;	
 	}
 	&__row {
@@ -36,10 +37,10 @@
 			}
 		}
 		&--menu {
-			top: -3px;
+			top: 12px;
 			right: @spacing--small;
 			@media (min-width: @screen--md) {
-				top: 18px;	
+				top: 20px;	
 				right: 100px + @spacing;		
 				.transition(right 200ms @swift-out);				
 			}			
@@ -48,10 +49,15 @@
 			display: none;
 			@media (min-width: @screen--md) {	
 				display: block;
-				top: 18px;
+				top: 20px;
 				right: @spacing;		
 				text-align: right;							
 			}
+			&:hover, &:focus {
+				.header__search-icon {
+					background-image: url('@{simple-line-font-path}red/icon-search.svg');					
+				}
+			}			
 		}
 	}
 	&__menu-icon {

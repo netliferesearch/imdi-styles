@@ -30,15 +30,17 @@
 	&__image { 
 		margin-left: -@gutter;
 		margin-right: -@gutter;		
+		background: @color__canvas-grey;		
 		img {
 			display: block;
 			margin-bottom: @spacing--small;
 		}
 		@media (min-width: @screen--md) {	
-			margin: 0;	
-			background: @color__canvas-grey;
 			-webkit-clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
-			clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);		
+			clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);					
+		}		
+		@media (min-width: @screen--lg) {	
+			margin: 0;	
 			width: 200%;
 			position: relative;
 			padding-bottom: 200%;

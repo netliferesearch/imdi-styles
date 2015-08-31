@@ -11,7 +11,7 @@
 	&__image {
 		display: block;
 		width: 100%;
-		margin-bottom: @spacing--small; 	 	
+		margin-bottom: @spacing--medium; 	 	
 	}
 	&__caption {
 		display: block;
@@ -24,7 +24,7 @@
 			@media (min-width: @screen--md) {			
 				margin-right: @gutter;
 			}
-		}	
+		}
 		.image-block__image:nth-child(2) {
 			@media (min-width: @screen--md) {			
 				margin-left: @gutter;
@@ -35,6 +35,7 @@
 			margin-left: @gutter;			
 			width: 50%;
 			@media (min-width: @screen--md) {
+				margin-left: 0;
 				float: left;
 				width: percentage(1 / 3.25);
 			}
