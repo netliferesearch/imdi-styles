@@ -36,3 +36,14 @@
 		display: block;
 	}
 }
+.t-show-on-tablet {
+	display: none;
+	@media (min-width: @screen--md) {	
+		display: inherit;
+	}
+}
+.t-hide-on-tablet {
+	@media (min-width: @screen--md) {	
+		display: none;
+	}
+}
