@@ -1,11 +1,12 @@
  @import "../../_vars";
 
 .figure{
+	width: 100%;
 	&--triangular {
 		overflow: hidden;
 		background: @color__canvas-grey;	
-		-webkit-clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
-		clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);		
+		//-webkit-clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+		//clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);		
 		width: 100%;
 		position: relative;
 		padding-bottom: 100%;	
@@ -18,6 +19,18 @@
 		background-image: url('/UI/gfx/default-user.svg');
 		background-size: cover;
 		background-position: center center;
+	}
+	&--on-large {
+		display: none;
+		@media (min-width: @screen--md) {
+			display: block;	
+		}
+	}
+	&--on-small {
+		display: block;
+		@media (min-width: @screen--md) {
+			display: none;	
+		}		
 	}
 }
 
