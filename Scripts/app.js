@@ -25,7 +25,10 @@ $( document ).ready(function() {
 	    Open the main menu if the menu button in the header is pressed
 	\*------------------------------------*/	
 
-	$('[data-behaviour="main-menu-toggle"]').click(function() {
+	$('[data-behaviour="main-menu-toggle"]').click(function( event ) {
+		
+		// Prevent the fallback #anchor tag to move focus
+		event.preventDefault(); 
 		
 		// Toggle menu button
 		if($(this).attr('aria-expanded') === "false"){
@@ -44,16 +47,14 @@ $( document ).ready(function() {
 
 			// Reset height
             $('#footer').css('height', 'auto');
-            $('#footer__bg').css('height', 'auto');            
+            $('#footer__bg').css('height', 'auto');     
 		}
 		
 		// Toggle menu overlay
 		$('#page-content').toggle();
 		$('#footer').toggleClass($('#footer').attr('data-toggle-menu'));	
 		$('#header').toggleClass($('#header').attr('data-toggle-menu'));	
-		
-		// Prevent the fallback #anchor tag to move focus
-		 event.preventDefault();			
+					
 	});  
   
 	/*------------------------------------*\
@@ -62,15 +63,16 @@ $( document ).ready(function() {
 	    Is removed if the focus moves away from the search input field, or search button.
 	\*------------------------------------*/	
 
-	$('[data-behaviour="main-search-toggle"]').click(function() {
-		console.log("Searchbar open");
+	$('[data-behaviour="main-search-toggle"]').click(function( event) {
+		
+		// Prevent the fallback #anchor tag to move focus
+		event.preventDefault();	
+		
 		$('#header').toggleClass($('#header').attr('data-toggle-search'));	
 		
 		// Set focus in 
 		$('#header-search').focus();
-		
-		// Prevent the fallback #anchor tag to move focus
-		 event.preventDefault();			
+				
 	});  
 	
 	$('body').on('blur', '#header-search', function() {  
@@ -94,7 +96,11 @@ $( document ).ready(function() {
 	\*------------------------------------*/	
 	
 
-	$('[data-behaviour="toggle"]').click(function() {
+	$('[data-behaviour="toggle"]').click(function( event ) {
+		
+		// Prevent the fallback #anchor tag to move focus
+		event.preventDefault();			
+		
 	    // Set duration of animation in miliseconds
 	    var transition_duration = 200;
 	    
@@ -141,7 +147,6 @@ $( document ).ready(function() {
 			    $(this).html(section_caption_expanded);
 		    }
 	    }
-	    event.preventDefault();
 	
 	});  
     
