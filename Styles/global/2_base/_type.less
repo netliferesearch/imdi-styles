@@ -2,6 +2,10 @@
 
 h1, .h1 {
  	.h1(); /* Se mixin i _vars.less */
+ 	&__prefix {
+	 	.h3();
+	 	display: block;
+ 	}
 }
 
 h2, .h2 {
@@ -13,9 +17,14 @@ h3, .h3 {
 }
 
 h4, .h4 {
-	.h4() /* Se mixin i _vars.less */
+	.h4(); /* Se mixin i _vars.less */
 } 
- 
+
+h5, .h5, h6, h7 {
+	.text(); /* Se mixin i _vars.less */
+	.font-siri--medium();	
+	margin-bottom: 0;
+}  
  
 
 /*
@@ -24,7 +33,7 @@ ul, ol {
 }
 */
 
-p, h5, h6, h7, .text {
+p, .text {
 	.text();
 }
 
@@ -66,6 +75,26 @@ p+h3, ul + h3, ol + h3, .info + h3 {
 		margin-top: @spacing--large;
 	});
 }
+
+p+h4, ul + h4, ol + h4, .info + h4, h3 + h4 {
+	margin-top: @spacing;
+	.query-min(@screen--md; {
+		margin-top: @spacing--large;
+	});
+}
+
+p+h5, ul + h5, ol + h5, .info + h5, h4 + h5 {
+	margin-top: @spacing;
+}
+
+p+h6, ul + h6, ol + h6, .info + h6, h5 + h6 {
+	margin-top: @spacing;
+}
+
+p+h7, ul + h7, ol + h7, .info + h7, h6 + h7 {
+	margin-top: @spacing;
+}
+
 
 .text--xlarge {	
 	.h2(); /* Se mixin i _vars.less */
