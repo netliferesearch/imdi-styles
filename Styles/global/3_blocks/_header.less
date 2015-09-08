@@ -7,6 +7,10 @@
 		padding-top: 32px;		
 		padding-bottom: 32px;	
 	}
+	@media print {
+		padding-left: 10%;
+		padding-right: 5%;	
+	}
 	&__row {
 		.clearfix();
 		position: relative;
@@ -26,6 +30,9 @@
 		margin: 0;		
 		@media (min-width: @screen--md) {	
 			padding: @spacing--small  0;
+		}
+		@media print {
+			display: none !important;
 		}
 		&:hover, &:focus {
 			background: transparent;

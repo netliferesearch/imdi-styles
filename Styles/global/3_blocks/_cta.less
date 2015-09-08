@@ -12,7 +12,11 @@
 	margin-top: @spacing--large;
 	margin-bottom: @spacing--large;
 	line-height: 50px;
-	
+	@media print {
+		border-width: 1px;	
+		padding-left: @spacing;	
+		page-break-inside: avoid;	
+	}		
 	&__icon {
 		.fontSize(@font-size--regular);
 		position: absolute;
@@ -26,6 +30,9 @@
 		background: url('/UI/gfx/square--green.svg') no-repeat center center;
 		background-size: contain;
 		color: @color__white;	 
+		@media print {
+			display: none !important;	
+		}			
 	}
 	&__image {
 		position: absolute;
@@ -35,6 +42,9 @@
 		@media (min-width: @screen--lg) {
 			top: @spacing + 33px;
 			left: @spacing;		   
+		}
+		@media print {
+			display: none !important;	
 		}
 	}
 	&__primary-link {
@@ -92,5 +102,9 @@
 			padding-top: @spacing;
 			padding-left: 160px; 		
 		}
+		@media print {
+			padding-top: @spacing;				
+			padding-left: @spacing;		
+		}			
 	}	
 }

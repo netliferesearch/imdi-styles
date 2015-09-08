@@ -6,16 +6,16 @@
 	@media (min-width: @screen--md) {
 		padding: @spacing--large 0;		
 	}	 	 
+	@media print {
+		padding-bottom: @spacing;		
+	}
 	&__image-wrapper {
 		margin: 0 -@gutter;
-		@media (min-width: @screen--md) {
+		@media (min-width: @screen--md){
 			margin: 0;
-		}	
+		}			
 	}
 	&__image {
-		@media (min-width: @screen--md) {
-			
-		}		
 		@media (min-width: @screen--md) {
 			display: block;	
 			position: absolute;
@@ -24,18 +24,8 @@
 			height: 100%;
 			left: percentage( 14 / 22 );
 			right: 0;
-			//background: @color__canvas-grey--dark;
-			
-			/*
-			-webkit-clip-path: polygon( 55.3% 100%, 100% 32.9%, 78.1% 0%, 21.9% 0%, 0% 32.9%, 44.7% 100% );
-			clip-path: polygon( 55.3% 100%, 100% 32.9%, 78.1% 0%, 21.9% 0%, 0% 32.9%, 44.7% 100% );		// TODO Is not supported in 
-			*/
-			//-webkit-clip-path: polygon( 20% 0%, 100% 0%, 100% 100%, 0% 100% );
-			//clip-path: polygon( 20% 0%, 100% 0%, 100% 100%, 0% 100% );		// TODO Is not supported in 
 		} 
-		@media (min-width: @screen--lg) {
 
-		}
 	}
 	&__box {	
 		background: @color__white;
@@ -44,33 +34,45 @@
 			border: 3px solid @color__canvas-grey;	
 			overflow: hidden;		
 		}	
+		@media print {
+			border: 1px solid @color__canvas-grey;
+			page-break-inside: avoid;	
+		}		
 	}
-	&__content-wrapper {
+	&__content-wrapper { 
 		padding: @spacing--large @gutter;		 	
 		@media (min-width: @screen--md) {
 			padding-right: 0;
 			padding-left: percentage( 1 / 22 );
 			max-width: percentage( 15 / 22 );
-			&--full {
-				
-			}							
-			&--with-image {
-				padding: @spacing--xlarge @gutter;
-				max-width: percentage( 14 / 22 );				
-			}
-		}		
+		}			
 		@media (min-width: @screen--lg) {
 			padding-left: percentage( 2 / 16 );
-			max-width: percentage( 14 / 16 );			
-			&--full {
+			max-width: percentage( 14 / 16 );	
+		}			
+		&--full {
+			@media (min-width: @screen--md) {
+				max-width: percentage( 20 / 22 );
+			}				
+			@media (min-width: @screen--lg) {	
 				padding-left: percentage( 2 / 22 );
 				max-width: percentage( 20 / 22 );						
-			}		
-			&--with-image {
+			}			
+		}							
+		&--with-image {
+			@media (min-width: @screen--md) {
+				padding: @spacing--xlarge @gutter;
+				max-width: percentage( 14 / 22 );
+			}	
+			@media (min-width: @screen--lg) {
 				padding-left: percentage( 2 / 22 );
 				max-width: percentage( 14 / 22 );										
-			}
-		}		
+			}					
+			@media print {
+				padding-top: @spacing;
+				padding-bottom: @spacing; 		
+			}						
+		}
 		&--list {
 			@media (min-width: @screen--lg) {
 				padding-right: percentage(8/12);
@@ -113,7 +115,11 @@
 			border: none;
 			@media (min-width: @screen--md) {
 				//margin: @spacing--large 0;		
-			}	 	 
+			}	
+			@media print {
+				background: none;
+				border: 1px solid @color__canvas-grey;
+			}				 	 
 		}
 	}	
 	&--persons {

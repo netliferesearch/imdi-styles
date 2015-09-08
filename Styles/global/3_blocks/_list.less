@@ -4,6 +4,10 @@
     padding-left: @spacing;
     margin-top: @spacing--large;
     margin-bottom: @spacing--large;
+    @media print {
+	    margin-top: 30px;
+	    margin-bottom: 30px;	    
+	}
 
     li {
         .fontSize(@font-size--regular);

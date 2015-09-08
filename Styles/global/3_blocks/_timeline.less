@@ -17,6 +17,13 @@
 			height: 25px;		
 			margin-left: (-@spacing - 14px);	
 		}
+		@media print {
+			padding-left: 0;
+			border: none;
+			&:before {
+				display: none;
+			}
+		}
 		&:last-child {
 			border: none;
 		}

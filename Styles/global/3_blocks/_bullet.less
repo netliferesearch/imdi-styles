@@ -24,12 +24,18 @@
 		position: relative;
 		min-height: none;
 	}
+	@media print {
+		border-width: 1px;
+	}	
 	&--cta {
 		border: 3px solid @color__green;
 		@media (min-width: @screen--lg) {	
 			border: none;			 			 
 			background-image: url('/UI/gfx/square--green.svg');
 		}
+		@media print {
+			border-width: 1px;
+		}			
 	}
 	&__content {
 		padding-left: 50px + @spacing;

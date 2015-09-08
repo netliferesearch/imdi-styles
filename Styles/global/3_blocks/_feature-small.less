@@ -4,8 +4,12 @@
 	position: relative;
 	padding-bottom: @spacing--large;
 	padding-top: @spacing--large;
-	@media (min-width: @screen--lg) {
-	}	
+	
+	@media print {
+		padding-top: 0;
+		padding-bottom: @spacing;
+		page-break-inside: avoid;
+	}
 	&__meta {
 		.text--small();
 		color: @color__grey;

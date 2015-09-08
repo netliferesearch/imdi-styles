@@ -11,7 +11,10 @@
 		overflow: visible;
 		.transform(translateY(-66%));
 
-	}	
+	}		
+	@media print {
+	//	display: none;
+	}
 	&--image {
 		@media (min-width: @screen--md) {
 			position: absolute;
@@ -24,12 +27,12 @@
 			top: 5em;			
 			.transform(translateY(0%));	
 			left: percentage(13/12);					
-		}
+		}		
 	}	 		
 	&__image { 
 		margin-left: -@gutter;
 		margin-right: -@gutter;			
-		@media (min-width: @screen--md) {		
+		@media (min-width: @screen--md){		
 			margin: 0;	
 			width: 200%;
 		}

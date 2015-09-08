@@ -32,18 +32,18 @@
 
 .t-show-on-desktop {
 	display: none;
-	@media (min-width: @screen--lg) {	
+	@media (min-width: @screen--lg), print {	
 		display: block;
 	}
 }
 .t-show-on-tablet {
 	display: none;
-	@media (min-width: @screen--md) {	
+	@media (min-width: @screen--md), print {	
 		display: inherit;
 	}
 }
 .t-hide-on-tablet {
-	@media (min-width: @screen--md) {	
+	@media (min-width: @screen--md), print {	
 		display: none;
 	}
 }

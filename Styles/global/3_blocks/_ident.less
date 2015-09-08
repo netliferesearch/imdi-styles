@@ -5,36 +5,30 @@
 	display: block;
 	border: none;
 	position: relative;
-	height: 50px;
-	width: 50px*3;	
+	height: 2.7rem;
+	width: 2.7rem * 3;	
 	@media (min-width: @screen--md) {	
-		height: 60px;
-		width: 60px*3;	
+		height: 3.3rem;
+		width: 3.3rem * 3;	
 	}			
 	@media (min-width: @screen--lg) {	
-		height: 81px;
-		width: 81px*3;		
-	}			
-	@media (min-width: @screen--lg) {		
-		margin-left: -( 81px + @gutter );			
+		height: 4.5rem;
+		width: 4.5rem * 3;			
+		margin-left: -( 4.5rem + 1em );			
+	}
+	@media print {
+		//margin-left: 0;
 	}
 	&__symbol {
 		position: absolute;
-		overflow: hidden;
 		display: block;		
-		background: url("/UI/gfx/ident.svg");
-		background-repeat: no-repeat;
-		background-size: contain;
-		width: 50px;
-		height: 50px;	
+		width: 2.7rem;
 		@media (min-width: @screen--md) {	
-			width: 60px; 
-			height: 60px;				
+			width: 3.3rem; 			
 		}		
 		@media (min-width: @screen--lg) {	
-			width: 81px; 
-			height: 81px;				
-		}	
+			width: 4.5rem; 				
+		}		
 	}
 	
 	&__textmark {
@@ -42,21 +36,21 @@
 		overflow: hidden;
 		display: block;
 		box-sizing: border-box;
-		padding-top: 13px;
-		margin-left: 50px + ( @gutter / 2 );	
+		padding-top: 0.8rem;
+		margin-left: 3.3rem + ( 1em / 2 );	
 		top: 3px;
-		width: 50px*2;					
+		width: 2.7rem * 2;					
 		@media (min-width: @screen--md) {
-			padding-top: 9px;
-			margin-left: 60px + ( @gutter * 3 / 4 );	
+			padding-top: 0.8rem;
+			margin-left: 3.3rem + ( 1em * 3 / 4 );	
 			top: 4px;
-			width: 60px*2;	
+			width: 3.3rem * 2;	
 		}
 		@media (min-width: @screen--lg) {
-			padding-top: 13px;
-			margin-left: 81px + @gutter;	
+			padding-top: 0.8rem;
+			margin-left: ( 4.5rem + 1em );	
 			top: 6px;
-			width: 81px*2;	
+			width: 4.5rem * 2;	
 		}					
 		
 		.ident__textmark-primary {
@@ -82,23 +76,12 @@
 			margin-bottom: 0px;					
 			display: block;
 			color: @color__text;
-			/*
-			font-size: 20px;
-			line-height: 1.4;
-			margin-top: @spacing/4;
-			*/
-		}
-		
-				
-		.ident__textmark-secondary {
 			display: none;
-		}
-			
-		.query-min(@screen--md; {
-			.ident__textmark-secondary {
-				display: block;
+			@media (min-width: @screen--md) {			
+					display: block;
 			}
-		});				
+
+		}
 		}
 	
 	&--compact {

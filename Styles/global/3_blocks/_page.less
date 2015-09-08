@@ -1,6 +1,10 @@
 @import "../../_vars";
 
 .page {
+	@media print {
+		padding-left: 10%;
+		padding-right: 5%;		
+	}
 	&__master {
 		max-width: 100em;
 		margin: 0 auto;
@@ -15,7 +19,7 @@
 			margin-bottom: 0;
 		}	
 	}
-	&__footer {
+	&__footer {		
 		//background: @color__canvas-grey;
 	}
 }		

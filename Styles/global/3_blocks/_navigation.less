@@ -3,12 +3,15 @@
 .navigation {
 	margin-top: @spacing--small;  
 	margin-bottom: @spacing--large; 
-	.query-min(@screen--sm; {
+	@media (min-width: @screen--sm) {
 		margin-top: @spacing;
-	});		
-	.query-min(@screen--lg; {
+	}		
+	@media (min-width: @screen--lg) {
 		margin-top: @spacing;
-	});		
+	}
+	@media print {
+		margin-bottom: 30px;
+	}		
 	h2, h3, h4 {
 		margin-bottom: @spacing;
 	}
@@ -45,6 +48,12 @@
 				//background: lighten(@color__canvas-grey, 3%);
 				color: @color__text;
 				border-color:  @color__text;
+			}
+		}
+		&--anchor {
+			@media print {
+				color: @color__text;
+				border-bottom-color: @color__text; 
 			}
 		}
 	}
