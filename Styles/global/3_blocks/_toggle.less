@@ -71,18 +71,35 @@
 		}		
 		&--expanded {
 			.animation(animations__fade-in-down 400ms linear both);	
-		}			
+		}				
 	}
 	
 	&--only-mobile {
-		@media (min-width: @screen--lg) {
+		@media (min-width: @screen--md) {
+			margin-bottom: 0;
 			.toggle__button {
 				display: none;
 			}	
 			.toggle__section {
 				display: block !important;
 				border: none;
+				padding: 0;
+				margin: 0 !important;
 			}
 		}
 	}
+	&--only-tablet {
+		@media (min-width: @screen--lg) {
+			margin-bottom: 0;
+			.toggle__button {
+				display: none;
+			}	
+			.toggle__section {
+				display: block !important;
+				border: none;
+				padding: 0;
+				margin: 0 !important;
+			}
+		}
+	}	
 }

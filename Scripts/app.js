@@ -163,6 +163,10 @@ $( document ).ready(function() {
 	    if ($_GET['toggle'] && $_GET['toggle'] === section){
 		    $(this).trigger("click");
 	    }
+	    // If the section is marked to expand
+	    if ( $(this).attr('data-state') === 'expanded'){
+		    $(this).trigger("click");
+	    }
 	});
 	
 	/*------------------------------------*\

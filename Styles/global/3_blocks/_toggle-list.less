@@ -1,40 +1,58 @@
 @import "../../_vars";
 
 .toggle-list {
-	padding: 0;
-	> li {
-		list-style: none;
-		padding: 0; 	
-	}
-	&__icon {
-
-	}	
+	margin: @spacing 0;
 	&__button {
-		.h3();
+		
 		display: block;
-		padding: @spacing--small  @spacing;
-		background: @color__canvas-grey;			
+		padding: @spacing;
+		background: @color__white;			
 		border: none;
 		margin: 0;
+		color: @color__text;
 		&:hover, &:focus, &:active {
+			color: @color__links;
+			background: lighten( @color__canvas-grey, 4%);
 		}			
-		&--expanded {
+		&--expanded {		
+			@media (min-width: @screen--md) {
+				width: percentage(21/14);
+			}	
+			@media screen and (min-width: @screen--lg) {
+				width: percentage(20/12);
+			}			
 			&:hover, &:focus {
 			}
-			.toggle__icon {
-				//.transform(rotate(180deg));					
+			.toggle-list__button-icon {
+				.transform(rotate(180deg));					
 			}
 		}
 	}
+	&__button-title {
+		.h3();
+		line-height: 1;
+		margin: 0;
+	}
+	&__button-icon {
+		float: right;
+		.transition(transform 250ms @swift-out);
+	}	
 	&__section {
-		padding: @spacing--small  @spacing;	
-		background: @color__canvas-grey;
+		padding: @spacing  @spacing;	
+		background: @color__white;
 		margin: 0;		
 		&--contracted {
 			.animation(animations__fade-out-up 300ms linear);				
 		}		
 		&--expanded {
 			.animation(animations__fade-in-down 400ms linear both);	
+			@media (min-width: @screen--md) {
+				width: percentage(21/14);
+			}	
+			@media screen and (min-width: @screen--lg) {
+				width: percentage(20/12);
+			}			
+			
 		}			
 	}
 /*	
