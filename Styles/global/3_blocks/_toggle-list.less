@@ -12,9 +12,10 @@
 		color: @color__text;
 		&:hover, &:focus, &:active {
 			color: @color__links;
-			background: lighten( @color__canvas-grey, 4%);
+			background: lighten( @color__canvas-grey, 3%);	
 		}			
 		&--expanded {		
+			background: lighten( @color__canvas-grey, 3%);	
 			@media (min-width: @screen--md) {
 				width: percentage(21/14);
 			}	
@@ -40,7 +41,10 @@
 	&__section {
 		padding: @spacing  @spacing;	
 		background: @color__white;
-		margin: 0;		
+		margin: 0;	
+		&--no-padding {
+			padding: 0;			
+		}	
 		&--contracted {
 			.animation(animations__fade-out-up 300ms linear);				
 		}		
@@ -54,6 +58,10 @@
 			}			
 			
 		}			
+	}
+	&__section-header {
+		background: lighten( @color__canvas-grey, 3%);
+		padding: 0 @spacing @spacing--small @spacing;		
 	}
 /*	
 	&--only-mobile {

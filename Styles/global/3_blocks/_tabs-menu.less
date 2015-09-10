@@ -1,14 +1,9 @@
 @import "../../_vars";
 
 .tabs-menu {
-	@media (min-width: @screen--md) {
-		margin-bottom: -3px;
-		margin-top: @spacing--xlarge;		
-	}
 	&__list {
 		@media (min-width: @screen--md) {
 			display: table;
-			width: 100%;
 		}
 	}
 	&__list-item {
@@ -22,15 +17,16 @@
 		display: block;					
 		margin-bottom: @spacing--small;
 		padding: (@spacing--xsmall - 3px) 0 @spacing--xsmall 0;
-		border-bottom: 1px solid @color__orange;					
+		border-bottom: 1px solid @color__orange;
 		@media (min-width: @screen--md) {
 			color: @color__text;	
 			display: inline-block;
 			margin-bottom: 0;	
 			text-align: center;
-			padding: @spacing--medium @spacing @spacing--medium @spacing;			
-			border-bottom: 3px solid transparent;			
-		}
+			padding: @spacing--xsmall 0 @spacing--xsmall 0;			
+			border-color: transparent;
+			margin: 0 @spacing;
+		}							
 		&--current {
 			color: @color__text;
 			border-color:  @color__text;
@@ -81,4 +77,25 @@
 		margin-right: 0.25em;
 		vertical-align: baseline;
 	}
+	&--large {
+		@media (min-width: @screen--md) {
+			margin-bottom: -3px;
+			margin-top: @spacing--xlarge;		
+		}	
+		.tabs-menu__list {
+			@media (min-width: @screen--md) {
+				width: 100%;
+			}
+		}
+		.tabs-menu__link {
+			@media (min-width: @screen--md) {
+				color: @color__text;	
+				display: inline-block;
+				margin: 0;
+				text-align: center;
+				padding: @spacing--medium @spacing @spacing--medium @spacing;			
+				border-bottom-width: 3px;			
+			}			
+		}			
+	}	
 }
