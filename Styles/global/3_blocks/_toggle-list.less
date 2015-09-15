@@ -61,7 +61,28 @@
 	}
 	&__section-header {
 		background: lighten( @color__canvas-grey, 3%);
-		padding: 0 @spacing @spacing--small @spacing;		
+		padding: 0;		
+	}
+	&--small {
+		margin: @spacing--small 0;
+		.toggle-list__button {
+			padding: @spacing--small;
+			padding-right: @spacing + @spacing--small;			
+		}	
+		.toggle-list__button-icon {
+			margin-right: -@spacing;
+		}	
+		.toggle-list__button-title {
+			.text--small();
+			margin: 0;
+			line-height: 1;
+		}
+		.toggle-list__button--expanded {
+			width: 100%;
+		}
+		.toggle-list__section--expanded {
+			width: 100%;
+		}
 	}
 /*	
 	&--only-mobile {

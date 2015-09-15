@@ -1,28 +1,37 @@
 @import "../../_vars";
 
 .filter-wrapper {
-	display: table;
-	direction: rtl;
+	@media (min-width: @screen--md) {
+		display: table;
+		direction: rtl;
+	}
 	&__graph {
-		display: table-cell;
-		direction: ltr;	
-		padding: @spacing;	
+		@media (min-width: @screen--md) {
+			display: table-cell;
+			direction: ltr;	
+			vertical-align: top;
+			padding: @spacing;		
+		}
 		//border: 1px solid red;
 	}
 	&__filter {
-		.transition(width 250ms @swift-out);			
-		display: table-cell;	
-		width: 0%;
-		direction: ltr;	
-		background: lighten( @color__canvas-grey, 3% );	
-		//padding: @spacing;		
-		&--contracted {
+		@media (min-width: @screen--md) {		
+			.transition(width 250ms @swift-out);			
+			display: table-cell;	
 			width: 0%;
-			//.animation(animations__fade-out-up 300ms linear);				
-		}		
-		&--expanded {
-			width: 25%;
-			//.animation(animations__fade-in-down 400ms linear both);			
+			direction: ltr;	
+			vertical-align: top;	
+			background: @color__canvas-grey;	
+			padding: @spacing--small;
+			padding-top: @spacing--xlarge;									
+			&--contracted {
+				width: 0%;
+				//.animation(animations__fade-out-up 300ms linear);				
+			}		
+			&--expanded {
+				width: 25%;
+				//.animation(animations__fade-in-down 400ms linear both);			
+			}
 		}
 	}
 	&__toggle-button {
