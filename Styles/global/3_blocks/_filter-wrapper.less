@@ -1,47 +1,79 @@
 @import "../../_vars";
 
 .filter-wrapper {
-	@media (min-width: @screen--md) {
+	@media (min-width: @screen--lg) {
 		display: table;
 		direction: rtl;
 	}
 	&__graph {
-		@media (min-width: @screen--md) {
+		padding: @spacing;		
+		padding-top: @spacing--large + @spacing;
+		background: @color__white;
+		@media (min-width: @screen--lg) {
+			//.transition(width 250ms @swift-out);			
 			display: table-cell;
 			direction: ltr;	
-			vertical-align: top;
-			padding: @spacing;		
+			vertical-align: top;		
+			padding-top: @spacing;
 		}
 		//border: 1px solid red;
 	}
 	&__filter {
-		@media (min-width: @screen--md) {		
-			.transition(width 250ms @swift-out);			
+		padding: @spacing @gutter;
+		padding-top: @spacing--large + @spacing--small;		
+		@media (min-width: @screen--lg) {		
+			//.transition(width 250ms @swift-out);			
 			display: table-cell;	
 			width: 0%;
 			direction: ltr;	
 			vertical-align: top;	
 			background: @color__canvas-grey;	
 			padding: @spacing--small;
-			padding-top: @spacing--xlarge;									
-			&--contracted {
-				width: 0%;
-				//.animation(animations__fade-out-up 300ms linear);				
-			}		
-			&--expanded {
-				width: 25%;
-				//.animation(animations__fade-in-down 400ms linear both);			
-			}
+			padding-top: @spacing--large + @spacing--small;
+			padding-right: 0;
+			z-index: 0;									
 		}
+		&--contracted {
+			.animation(animations__fade-out 300ms @swift-out);				
+		}		
+		&--expanded {
+			.animation(animations__fade-in 250ms @swift-out both);
+			border: 3px solid @color__orange;	
+			@media (min-width: @screen--lg) {
+				border: none;	
+			}		
+		}			
+		@media (min-width: @screen--lg) {
+			width: percentage(8/20);
+		}			
 	}
 	&__toggle-button {
+		.transition(min-width 250ms @swift-out);							
 		position: absolute; 
-		right: @spacing;  
+		right: 0;  
+		margin: 0;
+		min-width: 100px;
+		z-index: 1;	
+		text-align: left;		
 		&--contracted {
 							
 		}		
 		&--expanded {
-			
+			min-width: 100%;
+			@media (min-width: @screen--md) {
+				min-width: percentage(7/21);
+			}	
+			@media (min-width: @screen--lg) {
+				min-width: percentage(8/20);
+			}	
+			.filter-wrapper__toggle-icon {
+				background-image: url('/UI/Icons/white/icon-close.svg');
+			}
 		}
 	}	
+	&__toggle-icon {
+		float: right;
+		margin-left: @spacing--small;
+		margin-top: @spacing--xsmall;
+	}
 }		

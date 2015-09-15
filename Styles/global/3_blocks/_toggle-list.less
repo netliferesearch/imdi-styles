@@ -16,7 +16,9 @@
 		}			
 		&--expanded {		
 			background: lighten( @color__canvas-grey, 3%);	
+			margin: 0 ( -@gutter);		
 			@media (min-width: @screen--md) {
+				margin: 0;	
 				width: percentage(21/14);
 			}	
 			@media screen and (min-width: @screen--lg) {
@@ -41,15 +43,19 @@
 	&__section {
 		padding: @spacing  @spacing;	
 		background: @color__white;
-		margin: 0;	
-		&--no-padding {
+		margin: 0 ( -@gutter);		
+		@media (min-width: @screen--md) {
+			margin: 0;	
+		}
+		&--no-styles {
 			padding: 0;			
+			background: none;
 		}	
 		&--contracted {
-			.animation(animations__fade-out-up 300ms linear);				
+			.animation(animations__fade-out-up 250ms @swift-out);				
 		}		
 		&--expanded {
-			.animation(animations__fade-in-down 400ms linear both);	
+			.animation(animations__fade-in-down 400ms @swift-out both);	
 			@media (min-width: @screen--md) {
 				width: percentage(21/14);
 			}	
@@ -61,27 +67,36 @@
 	}
 	&__section-header {
 		background: lighten( @color__canvas-grey, 3%);
-		padding: 0;		
+		padding: 0 @gutter;	
+		@media (min-width: @screen--md) {
+			padding: 0;
+		}	
 	}
 	&--small {
 		margin: @spacing--small 0;
 		.toggle-list__button {
-			padding: @spacing--small;
-			padding-right: @spacing + @spacing--small;			
+			padding: @spacing--small @spacing--medium;
+			padding-right: @spacing + @spacing--medium;			
 		}	
 		.toggle-list__button-icon {
 			margin-right: -@spacing;
 		}	
 		.toggle-list__button-title {
-			.text--small();
+			.text();
 			margin: 0;
-			line-height: 1;
+			//line-height: 1;
 		}
 		.toggle-list__button--expanded {
-			width: 100%;
+			@media (min-width: @screen--md) {
+				width: 100%;
+			}
 		}
 		.toggle-list__section--expanded {
-			width: 100%;
+			@media (min-width: @screen--md) {	
+				width: 100%;
+			}
+		}
+		.toggle-list__section {
 		}
 	}
 /*	

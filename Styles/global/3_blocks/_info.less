@@ -5,10 +5,14 @@
 	@media (min-width: @screen--md) {
 		margin-bottom: @spacing--large;		 
 	}
+	&--inline {
+		margin: 0;
+	}
 	&__title {
 		.text--small();
 		margin-bottom: 0;
 		font-weight: normal !important;
+		display: block;
 	}
 
 	&__number-caption {
@@ -20,7 +24,7 @@
 			.text(); 
 			margin-bottom: 0;			
 		}
-		 p {
+		p {
 		 	.h3();
 		}
 	}
