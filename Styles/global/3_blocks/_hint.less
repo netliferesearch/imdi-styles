@@ -1,0 +1,13 @@
+@import "../../_vars";
+
+.hint {
+	.text--small();
+	background: @color__canvas-grey;
+	color: @color__black;
+	border: none;
+	padding: @spacing--xsmall @spacing--small;
+	margin-left: @spacing--small;
+	&:hover, &:focus {
+		background: darken( @color__canvas-grey, 5%);
+	}
+}

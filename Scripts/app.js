@@ -169,6 +169,25 @@ $( document ).ready(function() {
 	    }
 	});
 	
+  
+	/*------------------------------------*\
+	    TOGGLE - ACCESSIBLE
+	\*------------------------------------*/	
+	
+
+	$('[data-behaviour="trigger"]').click(function( event ) {
+		console.log("Test");
+		// Prevent the fallback #anchor tag to move focus
+		event.preventDefault();			
+		
+		var target = '#' + $(this).attr('data-controls');  
+		
+		$(target).focus();		
+		$(target).trigger("click");		
+		
+	});	
+	
+	
 	/*------------------------------------*\
 	    SMOOTH SCROLLING
 	\*------------------------------------*/		
