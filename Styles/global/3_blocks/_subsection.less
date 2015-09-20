@@ -1,0 +1,13 @@
+@import "../../_vars";
+
+.subsection {
+	background: lighten( @color__canvas-grey, 3%);
+	margin: 0 -@spacing;
+	padding: @spacing;
+	&--contracted {
+		.animation(animations__fade-out-up 300ms linear);				
+	}		
+	&--expanded {
+		.animation(animations__fade-in-down 400ms linear both);	
+	}		
+}
