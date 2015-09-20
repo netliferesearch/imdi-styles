@@ -15,12 +15,15 @@
 		}
 	}
 	&__button {
-		padding: @spacing--small  @spacing;		
+		.text--small();
+		display: inline-block;
+		padding: @spacing--xsmall  @spacing--small;		
 		background: @color__canvas-grey;		
 	}
-	&__sentence {
+	&__sentence {		
 		display: block;
-		padding-top: @spacing,
+		padding-top: @spacing;
+		max-width: 40em;
 	}
 	&__editable {
 		display: inline; 

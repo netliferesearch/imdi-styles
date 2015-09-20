@@ -1,13 +1,33 @@
  @import "../../_vars";
  
 .sentence-filter {
+	display: table-row;
+	margin: 0;	
+	margin-top: @spacing--large;
+	margin-bottom: @spacing--large;
+//	background: linear-gradient(to bottom, @color__canvas-grey 30px, @color__white 30px);
+	padding: 0 @spacing--small;
 	&__legend {
 		margin-bottom: @spacing--small;
+		padding-right: @spacing--small;
+		white-space: nowrap;
 	}	
 	&__list, &__list > li {
 		list-style: none;
 		margin: 0;
-		padding: 0;
+		padding: 0;		
+	}
+	&__list {
+//		border: 1px solid @color__canvas-grey;
+		background: lighten( @color__canvas-grey, 3% );
+		padding: @spacing--small;
+		max-width: 20em;
+//		.transform(translateY(-7px) );
+		margin-top: -7px;
+	}
+	&__cell {
+		display: table-cell;
+		vertical-align: top;		
 	}
 	label {
 		.text--small();
