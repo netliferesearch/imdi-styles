@@ -1,9 +1,12 @@
 @import "../../_vars";
 
 .subsection {
-	background: lighten( @color__canvas-grey, 3%);
-	margin: 0 -@spacing;
-	padding: @spacing;
+	border: 3px solid @color__canvas-grey;
+	background: @color__white;	
+	background: lighten( @color__canvas-grey, 3% );
+	margin-top: @spacing--large;
+	margin-bottom: @spacing--large;
+	padding: @spacing @gutter;		
 	&--contracted {
 		.animation(animations__fade-out-up 300ms linear);				
 	}		

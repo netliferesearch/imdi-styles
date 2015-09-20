@@ -2,7 +2,7 @@
 
 .filter-toggle {
 	display: block;
-	margin-bottom: @spacing;
+	margin-bottom: 0;
 	border: none;
 	color: @color__text;
 	&:hover {
@@ -10,24 +10,27 @@
 			background: darken( @color__canvas-grey , 10% );			
 		}
 		.filter-toggle__editable {
-			color: @color__links;
+			//color: @color__links;
+			color: @color__canvas-grey--dark;
 			border-bottom-color:@color__links;
+			border-bottom-color:@color__text;
 		}
 	}
 	&__button {
 		.text--small();
-		display: inline-block;
+		display: inline-block; 
 		padding: @spacing--xsmall  @spacing--small;		
-		background: @color__canvas-grey;		
+		background: @color__canvas-grey;	
+		border: 2px solid @color__canvas-grey;			
 	}
-	&__sentence {		
+	&__sentence {			
 		display: block;
-		padding-top: @spacing;
+		padding-bottom: @spacing;
 		max-width: 40em;
 	}
 	&__editable {
 		display: inline; 
-		border-bottom: 1px solid transparent;
+		border-bottom: 1px dotted transparent;
 		.transition(all 350ms @swift-out);
 	}
 	&__caption-expanded {
@@ -37,10 +40,17 @@
 		display: inline;		
 	}
 	&--expanded {
+		position: absolute;
+		bottom: 0;
+		z-index: 2;
+		margin-bottom: 0;
 		.filter-toggle__caption-expanded {
 			display: inline;
 		}
 		.filter-toggle__caption-contracted {
+			display: none;
+		}
+		.filter-toggle__sentence {
 			display: none;
 		}
 	}
@@ -51,6 +61,13 @@
 		.filter-toggle__caption-contracted {
 			display: inline;
 		}		
+		.filter-toggle__sentence {
+			display: block;
+		}		
 	}
-
+	&__wrapper {
+		position: relative;
+		padding-bottom: 1px;
+		margin-bottom: @spacing;
+	}
 }		
