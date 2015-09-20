@@ -1,0 +1,53 @@
+@import "../../_vars";
+
+.filter-toggle {
+	display: block;
+	margin-bottom: @spacing;
+	border: none;
+	color: @color__text;
+	&:hover {
+		.filter-toggle__button {
+			background: darken( @color__canvas-grey , 10% );			
+		}
+		.filter-toggle__editable {
+			color: @color__links;
+			border-bottom-color:@color__links;
+		}
+	}
+	&__button {
+		padding: @spacing--small  @spacing;		
+		background: @color__canvas-grey;		
+	}
+	&__sentence {
+		display: block;
+		padding-top: @spacing,
+	}
+	&__editable {
+		display: inline; 
+		border-bottom: 1px solid transparent;
+		.transition(all 350ms @swift-out);
+	}
+	&__caption-expanded {
+		display: none;		
+	}
+	&__caption-contracted {
+		display: inline;		
+	}
+	&--expanded {
+		.filter-toggle__caption-expanded {
+			display: inline;
+		}
+		.filter-toggle__caption-contracted {
+			display: none;
+		}
+	}
+	&--contracted {
+		.filter-toggle__caption-expanded {
+			display: none;
+		}
+		.filter-toggle__caption-contracted {
+			display: inline;
+		}		
+	}
+
+}		

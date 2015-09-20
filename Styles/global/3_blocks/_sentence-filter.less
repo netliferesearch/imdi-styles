@@ -1,0 +1,19 @@
+ @import "../../_vars";
+ 
+.sentence-filter {
+	&__legend {
+		margin-bottom: @spacing--small;
+	}	
+	&__list, &__list > li {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+	label {
+		.text--small();
+		margin-bottom: @spacing--small;
+		.control-indicator {
+			top: 0;
+		}
+	}
+}

@@ -2,12 +2,19 @@
 
 .hint {
 	.text--small();
-	background: @color__canvas-grey;
-	color: @color__black;
-	border: none;
+	//background: @color__canvas-grey;
+	color: @color__grey;
+	border: 1px solid @color__canvas-grey;
+	font-style: italic;
 	padding: @spacing--xsmall @spacing--small;
 	margin-left: @spacing--small;
 	&:hover, &:focus {
 		background: darken( @color__canvas-grey, 5%);
+	}
+	&__prefix {
+		.text--small();		
+		color: @color__grey;
+		font-style: italic;	
+		margin-left: @spacing;	
 	}
 }
