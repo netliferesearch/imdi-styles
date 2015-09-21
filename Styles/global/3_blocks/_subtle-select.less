@@ -1,0 +1,71 @@
+ @import "../../_vars";
+ 
+.subtle-select {
+	position: relative;
+	margin-right: @spacing--small;	
+	margin-bottom: @spacing--small;
+//	max-width: 
+	&__label {
+		.text--small();
+		position: absolute;
+		z-index: 1;
+		pointer-events: none;		
+		padding-left: @spacing--small;
+		padding-top: @spacing--small;
+		padding-right: @spacing--small;			
+		color: @color__grey;	
+	}
+	&__select select, &__button {
+		.text();
+		text-align: left;
+		padding-left: @spacing--small + @spacing;
+		padding-right: @spacing--small;
+		padding-bottom: @spacing--small;				
+		padding-top: 1.75rem;
+		z-index: 0;		
+		background: none;
+		word-wrap: break-word;
+		white-space: normal;
+		border: 1px solid @color__canvas-grey;		
+		&:hover, &:focus, &:active {
+			background: @color__canvas-grey;
+		}
+		&:focus {
+			box-shadow: none;
+			border: 1px solid @color__orange;
+		}
+	}
+	&__select, &__button {
+		width: 100%;
+		&:after {
+			position: absolute;
+			display: inline-block;
+			content: "";
+			width: 1rem;
+			height: 1rem;
+			pointer-events: none;
+			margin: 0;
+			background: url('/UI/icons/icon-down.svg') no-repeat center center;
+			background-size: contain;
+			top: 2rem;
+			right: none;
+			left: @spacing--small;
+		}
+	}
+	&__select select:disabled {
+		padding-left: @spacing--small;
+		font-style: italic;
+		cursor: default;
+		border-style: dashed;		
+		&:hover, &:focus, &:active {
+			background: none;
+		}		
+	}
+	&__select--disabled {
+		&:after {
+			display: none;
+		}		
+	}		
+}
+ 
+ 
