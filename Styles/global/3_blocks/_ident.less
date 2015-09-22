@@ -5,16 +5,16 @@
 	display: block;
 	border: none;
 	position: relative;
-	height: 2.7rem;
-	width: 2.7rem * 3;	
+	height: 2.5rem;
+	width: 2.5rem * 3;	
 	@media (min-width: @screen--md) {	
-		height: 3.3rem;
-		width: 3.3rem * 3;	
+		height:4rem;
+		width: 4rem * 3;	
 	}			
 	@media (min-width: @screen--lg) {	
-		height: 4.5rem;
-		width: 4.5rem * 3;			
-		margin-left: -( 4.5rem + 1em );			
+		height: 5rem;
+		width: 5rem * 3;			
+		margin-left: -( 5rem + 0.75em );			
 	}
 	@media print {
 		//margin-left: 0;
@@ -22,12 +22,16 @@
 	&__symbol {
 		position: absolute;
 		display: block;		
-		width: 2.7rem;
+		width: 2.5rem;
 		@media (min-width: @screen--md) {	
-			width: 3.3rem; 			
+			width: 4rem; 			
 		}		
 		@media (min-width: @screen--lg) {	
-			width: 4.5rem; 				
+			width: 5rem; 				
+		}
+		svg {
+			width: 100%;
+			
 		}		
 	}
 	
@@ -36,19 +40,17 @@
 		overflow: hidden;
 		display: block;
 		box-sizing: border-box;
-		padding-top: 0.8rem;
-		margin-left: 3.3rem + ( 1em / 2 );	
-		top: 3px;
-		width: 2.7rem * 2;					
+		padding-top: 0.57rem;
+		margin-left: 2.7rem;	
+		width: 2.5rem * 2;					
 		@media (min-width: @screen--md) {
-			padding-top: 0.8rem;
-			margin-left: 3.3rem + ( 1em * 3 / 4 );	
-			top: 4px;
-			width: 3.3rem * 2;	
+			padding-top: 0.6rem;
+			margin-left: 4.2rem;	
+			width: 4rem * 2;	
 		}
 		@media (min-width: @screen--lg) {
-			padding-top: 0.8rem;
-			margin-left: ( 4.5rem + 1em );	
+			padding-top: 0.5rem;
+			margin-left: ( 4.5rem + 0.75em );	
 			top: 6px;
 			width: 4.5rem * 2;	
 		}					
@@ -62,28 +64,35 @@
 			line-height: 1;
 			margin-left: -2px;
 			@media (min-width: @screen--md) {			
-				.fontSize(28);			
+
 			}
 			@media (min-width: @screen--lg) {			
 				.fontSize(@font-size--large);			
 			}			
 		}
 		.ident__textmark-secondary {
-			.font-siri--regular();
-			.fontSize(10);
-			margin-top: -3px;
-			line-height: (21 / @font-size--small);	
-			margin-bottom: 0px;					
-			display: block;
-			color: @color__text;
 			display: none;
 			@media (min-width: @screen--md) {			
-					display: block;
+				display: block;
+				.font-siri--regular();
+				.fontSize(12);
+				line-height: (17 / @font-size--small);	
+				margin-bottom: 0px;	
+				margin-top: -0.05rem;				
+				display: block;
+				color: @color__text;	
+				letter-spacing: 0.25px;
+			}
+			@media (min-width: @screen--lg) {				
+				.fontSize(13);
+				line-height: (18 / @font-size--small);									
+				letter-spacing: 0;
 			}
 
 		}
 		}
-	
+
+/*	
 	&--compact {
 
 		.query-min(@screen--lg; {
@@ -118,23 +127,24 @@
 		}
 		
 	}
-		
+		*/
 }
 .header--overlay {
-	.ident__symbol {
-		//	background-image: url("/UI/gfx/ident--overlay.svg");
+	.ident__triangle {
+		fill: @color__orange--dark;
 	}
 	.ident__textmark-primary, .ident__textmark-secondary {
 		color: @color__white;
 	}
 }
 a.ident {
-	.ident__symbol {
+	.ident__triangle {
 		.transition(all 250ms @swift-out);
 	}
 	&:hover, &:focus, &:active {
-		.ident__symbol {
-			.transform(scale(1.1));	
+		.ident__triangle {
+			transform: translate(1em, 1em);
+			fill: @color__yellow--dark;			
 		}	
 	}
 }
