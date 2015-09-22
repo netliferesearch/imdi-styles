@@ -23,14 +23,6 @@
 		background-image: url('/UI/icons/white/icon-search.svg');
 		margin-left: 0.25rem;		
 	}	
-	.search__input:focus + .search__button {
-		background: @color__orange--dark;	
-		//border-color: @color__orange--dark;	
-		color: @color__white;					
-		.search__button-icon {
-			background-image: url('/UI/icons/white/icon-search.svg');
-		}		
-	}
 	&--footer {
 		padding-right: 0;		
 		.search__input {
@@ -72,6 +64,8 @@
 			}		
 		}
 		.search__input:focus + .search__button {
+			background: @color__orange--dark;	
+			color: @color__white;				
 			border-bottom-color: @color__white;	
 		}		
 	}

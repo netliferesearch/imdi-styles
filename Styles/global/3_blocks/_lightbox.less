@@ -3,6 +3,7 @@
 .lightbox {
 	display: none;
 	&__backdrop {
+
 		-webkit-transform: translate3d(0, 0, 0);
 		transform : translate3d(0, 0, 0);		
 		position: fixed;
@@ -12,9 +13,16 @@
 		right: 0;
 		bottom: 0;
 		background: rgba(0,0,0,0.2);
+
 	}
 	&__box {
-		position: relative;
+		/*
+		-webkit-box-shadow: 0px 0px 111px -24px rgba(0,0,0,0.50);
+		-moz-box-shadow: 0px 0px 111px -24px rgba(0,0,0,0.50);
+		box-shadow: 0px 0px 111px -24px rgba(0,0,0,0.50);		
+		*/
+		
+		position: absolute;
 		z-index: 2;
 		border: 3px solid @color__orange;
 		background: @color__white;	
@@ -25,11 +33,42 @@
 			padding: @spacing--large;
 			padding-bottom: @spacing;	
 			margin-top: @spacing--large;
-			margin-bottom: @spacing--large;			
+			margin-bottom: @spacing--large;	
+			width: 100%;
+			margin-left: -@spacing;		
 		}
 	}
+	&__point {
+		display: block;
+		position: absolute;
+		background: @color__white;
+		border-top: 3px solid @color__orange;
+		border-left: 3px solid @color__orange;		
+		height: @spacing--large;
+		width: @spacing--large;
+		.transform( rotate(45deg) );
+		top: -( @spacing--large * 0.5 + 2px );
+	}
 	&__title {
-		.h4();
+		.h2();
 		margin-bottom: @spacing;
+	}
+	&__close-button	{
+		.h3();
+		line-height: 1;
+		margin: 0;		
+		display: inline-block;
+		float: right;
+		padding: @spacing--small;
+		white-space: nowrap;		
+		overflow: hidden;
+		background: @color__canvas-grey;
+		width: auto;
+		&:hover , &:focus , &:active{
+			background: darken( @color__canvas-grey, 10% );
+		}
+	}
+	&__footer {
+		margin-top: @spacing--large;		
 	}
 }

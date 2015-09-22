@@ -19,7 +19,7 @@
 		}
 	}
 	&__link{
-		.fontSize(15);		
+		.fontSize(@font-size--small);		
 		padding: @spacing--xsmall  @spacing--medium;
 		background: @color__canvas-grey;
 		color: @color__text;
@@ -29,6 +29,7 @@
 		margin-bottom: @spacing--small;
 				
 		@media (min-width: @screen--md) {	
+			.fontSize(@font-size--regular);			
 			.transition(border-color 0.2s ease);	
 			margin-bottom: 0;	
 			background: none;
@@ -44,9 +45,6 @@
 		}
 		&--current {
 			background: @color__white;
-//			color: @color__grey;
-//			color: @color__links;
-//			border-color:  @color__orange;	
 			@media (min-width: @screen--md) {			
 				color: @color__text;
 				border-color:  @color__orange;
@@ -58,7 +56,6 @@
 		}
 		&:not(.tabs-menu__link--current) {
 			&:hover, &:focus, &:active {
-				//background: lighten(@color__canvas-grey, 3%);
 				background: darken(@color__canvas-grey, 10%);
 				border-color: darken(@color__canvas-grey, 10%);
 				@media (min-width: @screen--md) {
@@ -107,7 +104,7 @@
 		}
 		@media (min-width: @screen--sm) and (max-width: @screen--md) {
 			.tabs-menu__link--current {
-				max-width: none;	
+				max-width: none;	 
 				.tabs-menu__icon {
 					margin: 0;
 					margin-right: 0.25em;
@@ -116,12 +113,7 @@
 		}
 	}		
 	&--large {
-		/*
-		@media (min-width: @screen--md) {
-			margin-bottom: -3px;
-			margin-top: 0;		
-		}
-		*/	
+
 		.tabs-menu__list {
 			@media (min-width: @screen--md) {
 				width: 100%;
@@ -129,25 +121,14 @@
 		}
 		.tabs-menu__link {								
 			@media (min-width: @screen--md) {		
-				.fontSize(15);
+				.fontSize(@font-size--small);
 				padding: @spacing--xsmall 0 @spacing--xsmall 0;						
 			}
 			@media (min-width: @screen--lg) {		
-				.fontSize(20);			
+				.fontSize(@font-size--regular);			
 				padding: @spacing--medium 0 @spacing--medium 0;				
 			}					
-			/*
-			.text();
-			margin-bottom: 0;
-			@media (min-width: @screen--md) {
-				color: @color__text;	
-				display: inline-block;
-				margin: 0;
-				text-align: center;
-				padding: @spacing--medium @spacing @spacing--medium @spacing;			
-				border-bottom-width: 3px;			
-			}
-			*/			
+		
 		}			
 	}	
 }
