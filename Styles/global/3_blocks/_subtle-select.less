@@ -2,7 +2,8 @@
  
 .subtle-select {
 	position: relative;
-	margin-right: @spacing--small;	
+	margin-bottom: @spacing--small;
+	margin-right: @spacing--small;
 //	max-width: 
 	&__label {
 		.text--small();
@@ -22,7 +23,7 @@
 		padding-bottom: @spacing--small;				
 		padding-top: 1.66rem;
 		z-index: 0;		
-		background: none;
+		background: @color__white;
 		word-wrap: break-word;
 		white-space: normal;
 		border: 2px solid @color__canvas-grey;		
@@ -50,6 +51,12 @@
 			right: none;
 			left: @spacing--small;
 		}
+	}
+	&__button--add {
+		&:after {
+			background: url('/UI/icons/icon-add.svg') no-repeat center center;
+			background-size: contain;
+		}		
 	}
 	&__select select:disabled {
 		padding-left: @spacing--small;

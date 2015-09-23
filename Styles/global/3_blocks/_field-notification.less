@@ -1,0 +1,22 @@
+@import "../../_vars";
+ 
+.field-notification {
+	background: @color__canvas-yellow;
+	padding: @spacing--xsmall;
+	margin-right: @spacing--small;
+	margin-top: -@spacing;
+	
+	&--animate {
+		.animation(animations__shake 700ms @swift-out);
+	}
+	
+	&__caption {
+		.text--small();
+		.fontSize(10);
+		text-transform: uppercase;
+		line-height: @spacing - @spacing--xsmall;
+	}
+	> div {
+		margin: 0;
+	}
+}
