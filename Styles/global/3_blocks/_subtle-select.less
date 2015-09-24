@@ -3,7 +3,6 @@
 .subtle-select {
 	position: relative;
 	margin-bottom: @spacing--small;
-	margin-right: @spacing--small;
 //	max-width: 
 	&__label {
 		.text--small();
@@ -51,6 +50,9 @@
 			right: none;
 			left: @spacing--small;
 		}
+		&--expanded {
+			border: 2px solid @color__orange;
+		}		
 	}
 	&__button--add {
 		&:after {
@@ -71,7 +73,8 @@
 		&:after {
 			display: none;
 		}		
-	}		
+	}	
+	
 }
  
  
