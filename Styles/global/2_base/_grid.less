@@ -178,3 +178,10 @@
 	display: inline-block;
 	vertical-align: top;
 }
+
+.col--right-padding {
+	/* A modifier for columns when they may become stacked to prevent uneven linebreaks. Need spacing commented out in the markup. */
+	@media (min-width: @screen--md) {		 		
+		padding-right: @spacing !important;
+	}
+}
