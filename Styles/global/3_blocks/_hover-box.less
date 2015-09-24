@@ -1,0 +1,48 @@
+ @import "../../_vars";
+
+.hover-box {
+	position: absolute;
+	z-index: 2;
+	border: 2px solid @color__orange;
+	background: @color__white;	
+	margin-top: @spacing--large;
+	margin-bottom: @spacing--large;	
+	padding: @spacing--small;
+	max-width: 13em;
+	.text--small();		
+	.transform( translateX(-50%) translateY(-( @spacing * 0.5 ) - @spacing--small));
+	&--animate {
+		.animation(animations__fade-in 250ms @swift-out);
+	}	
+	&__title {
+		display: block;
+		.font-siri--medium();
+	}
+	&__point {
+		display: block;
+		position: absolute;
+		z-index: -1;		
+		background: @color__white;
+		border-bottom: 2px solid @color__orange;
+		border-right: 2px solid @color__orange;		
+		height: @spacing--medium;
+		width: @spacing--medium;
+		.transform( translateX(-50%) rotate(45deg));
+		bottom: -( @spacing--medium * 0.5 + 1.5px );
+		left: 50%;
+	}	
+	&--left {
+		.transform( translateX(-@spacing) translateY(-( @spacing * 0.5 ) - @spacing--small));		
+		.hover-box__point {
+			left: @spacing - 2px;
+		}
+	}
+	&--right {
+		.transform( translateX(-100%) translateY(-( @spacing * 0.5 ) - @spacing--small));
+		margin-left: @spacing;		
+		.hover-box__point {
+			left: auto;
+			right: @spacing - @spacing--medium; //@spacing;
+		}
+	}
+}
