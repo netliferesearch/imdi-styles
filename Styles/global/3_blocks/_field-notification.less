@@ -4,8 +4,13 @@
 	background: @color__canvas-yellow;
 	padding: @spacing--xsmall;
 	margin-right: @spacing--small;
-	margin-top: -@spacing;
-	
+	margin-left: -@spacing--xsmall;
+	margin-right: -@spacing--xsmall;
+	margin-bottom: @spacing--small;
+	@media (min-width: @screen--md) {	
+		margin: 0;
+		margin-top: -@spacing;
+	}	
 	&--animate {
 		.animation(animations__shake 700ms @swift-out);
 	}

@@ -7,7 +7,18 @@
 	&__filter {
 		margin-bottom: @spacing;		
 	}
+	&__description {
+		.text();
+		max-width: 35em;
+		margin-bottom: @spacing;
+	}
 	&__annotations {
+		p, li {
+			.text--small();
+		}
+		li {
+			list-style: decimal;
+		}
 		max-width: 35em;
 		margin-bottom: @spacing;
 	}

@@ -2,19 +2,21 @@
 
 .lightbox {
 	//display: none;  
-		
 	&__box {
 		/*
 		-webkit-box-shadow: 0px 0px 111px -24px rgba(0,0,0,0.50);
 		-moz-box-shadow: 0px 0px 111px -24px rgba(0,0,0,0.50);
 		box-shadow: 0px 0px 111px -24px rgba(0,0,0,0.50);		
 		*/
-		position: relative;			
+		position: absolute;
+		z-index: 2;
+		top: 0;			
 		border: 3px solid @color__orange;
 		background: @color__white;	
 		margin-top: @spacing--medium;
 		margin-bottom: @spacing--large;	
 		padding: @spacing @gutter;	
+		text-align: left;
 		@media (min-width: @screen--lg) {		
 			padding: @spacing--large;
 			padding-bottom: @spacing;	
@@ -38,25 +40,27 @@
 		margin-bottom: @spacing--large;
 	}
 	&__close-button	{
-		.h3();
+		.h2();
 		line-height: 1;
 		margin: 0;		
 		display: inline-block;
 		float: right;
 		padding: @spacing--small;
+		margin-top: -@spacing--small;
+		margin-right: -@spacing--small;
 		white-space: nowrap;		
 		overflow: hidden;
-		background: @color__canvas-grey;
+		background: @color__white;
 		width: auto;
 		&:hover , &:focus , &:active{
-			background: darken( @color__canvas-grey, 10% );
+			background: @color__canvas-grey;
 		}
 	}
 	&__footer {
 		margin-top: @spacing--large;		
 	}
 	&--as-overlay {
-		position: fixed;
+		position: absolute;
 		height: 100%;
 		width: 100%;
 		z-index: 1;
@@ -64,8 +68,11 @@
 		left: 0;
 		right: 0;
 		bottom: 0;
-		background: rgba(0,0,0,0.2);	
+		background: @color__white;
 		border: none;
+		@media (min-width: @screen--md) {
+			background: rgba(0,0,0,0.2);		
+		}
 		.lightbox__title {
 			.h3();
 			margin-bottom: @spacing--large;			
@@ -74,16 +81,50 @@
 			display: none;
 		}
 		.lightbox__box {
-			border-color: @color__canvas-grey;
+			border-color: transparent;
 			position: absolute;	
 			z-index: 2;				
 			width: 100%;
 			@media (min-width: @screen--md) {
+				border-color: @color__canvas-grey;				
 				margin: 0 auto;				
 				top: 50%;
 				left: 50%;				
 				max-width: 25em;	
 				.transform( translate(-50%, -50%) );				
+			}
+		}
+	}
+	&--as-popup {
+		position: relative;
+		border: none;
+		.lightbox__point {
+			top: auto;
+			.transform( rotate(225deg) );			
+			bottom: -( @spacing * 0.5 + 1px );
+			@media (min-width: @screen--md) {
+				margin-left: 220px;
+			}
+			
+		}
+		.lightbox__title {
+			.h3();
+			margin-bottom: @spacing--large;			
+		}
+		.lightbox__box {
+			margin-top: 0;
+			border-color: transparent;
+			z-index: 2;				
+			padding-bottom: @spacing--large;
+			position: absolute;		
+			border-color: @color__orange;				
+			width: 100%;
+			.transform( translate(0, -100%) );			
+			margin-top: -53px;			
+			@media (min-width: @screen--md) {
+				width: 25em;						
+				left: auto; 
+				right: 0;				
 			}
 		}
 	}

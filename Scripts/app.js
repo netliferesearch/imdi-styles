@@ -171,12 +171,11 @@ $( document ).ready(function() {
 	
   
 	/*------------------------------------*\
-	    TOGGLE - ACCESSIBLE
+	    TRIGGER
 	\*------------------------------------*/	
 	
 
 	$('[data-behaviour="trigger"]').click(function( event ) {
-		console.log("Test");
 		// Prevent the fallback #anchor tag to move focus
 		event.preventDefault();			
 		
@@ -187,6 +186,16 @@ $( document ).ready(function() {
 		
 	});	
 	
+	
+	/*------------------------------------*\
+	    SLECT ALL
+	\*------------------------------------*/	
+	
+
+	$('[data-behaviour="selectall"]').click(function( event ) {
+		$(this).select();		
+		
+	});		
 	
 	/*------------------------------------*\
 	    SMOOTH SCROLLING
