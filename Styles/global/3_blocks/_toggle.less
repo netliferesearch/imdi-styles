@@ -38,6 +38,12 @@
 			.toggle__icon {
 				.transform(rotate(180deg));					
 			}
+			.toggle__caption--expanded {
+				display: inline;
+			}
+			.toggle__caption--contracted {
+				display: none;
+			}			
 		}
 	}
 	&__link {
@@ -73,9 +79,14 @@
 			.animation(animations__fade-in-down 400ms linear both);	
 		}				
 	}
+	&__caption {
+		&--expanded {
+			display: none;
+		}
+	}
 	&--light {
 		.toggle__button--expanded {
-			background: none;
+			background: @color__white;
 			color: @color__text;
 			border: none;
 			border-top: 2px solid @color__canvas-grey;
@@ -87,6 +98,7 @@
 		.toggle__section {
 			padding-left: 0;
 			padding-right: 0;
+			padding-bottom: 0;
 			border: none;
 		}
 	}
