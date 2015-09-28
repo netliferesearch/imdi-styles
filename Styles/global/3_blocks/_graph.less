@@ -9,5 +9,22 @@
 	}
 	&__annotations {
 		max-width: 35em;
+		margin-bottom: @spacing;
+	}
+	&__about {
+		max-width: 35em;
+	}
+	&__functions {
+		@media (min-width: @screen--md) {
+			float: right;
+			margin-top: -35px;			
+		}
+		.button {
+			@media (min-width: @screen--md) {
+				//float: right;
+				display: inline-block;
+				margin: 0;
+			}
+		}
 	}
 }

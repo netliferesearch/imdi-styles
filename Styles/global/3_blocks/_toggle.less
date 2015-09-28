@@ -6,15 +6,15 @@
 		display: inline-block;
 		margin-left: @spacing--small;
 		.transition(transform 250ms @swift-out);
-		margin-right: -@spacing--small;
+		margin-right: 0;
 		vertical-align: middle;
 	}	
 	&__button {
 		.font-siri--medium();
-		.fontSize(@font-size--regular);		
+		.text--small();
 		min-width: 10px;
 		background: @color__canvas-grey;  
-		padding: @spacing--small  @spacing;
+		padding: @spacing--xsmall  @spacing--small;		
 		text-align: left;
 		border: 2px solid transparent;	
 		display: inline-block;	
@@ -73,7 +73,23 @@
 			.animation(animations__fade-in-down 400ms linear both);	
 		}				
 	}
-	
+	&--light {
+		.toggle__button--expanded {
+			background: none;
+			color: @color__text;
+			border: none;
+			border-top: 2px solid @color__canvas-grey;
+			&:hover, &:focus, &:active {
+				color: @color__links;
+				text-decoration: underline;	
+			}				
+		}
+		.toggle__section {
+			padding-left: 0;
+			padding-right: 0;
+			border: none;
+		}
+	}
 	&--only-mobile {
 		@media (min-width: @screen--md) {
 			margin-bottom: 0;
