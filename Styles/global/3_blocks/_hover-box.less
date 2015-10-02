@@ -5,8 +5,6 @@
 	z-index: 2;
 	border: 2px solid @color__orange;
 	background: @color__white;	
-	margin-top: @spacing--large;
-	margin-bottom: @spacing--large;	
 	padding: @spacing--small;
 	max-width: 13em;
 	.text--small();		
@@ -17,6 +15,10 @@
 	&__title {
 		display: block;
 		.font-siri--medium();
+	}
+	strong {			
+		font-weight: normal;
+		font-family: 'Consolas', 'Lucida Console', "Courier";			
 	}
 	&__point {
 		display: block;
@@ -45,4 +47,24 @@
 			right: @spacing - @spacing--medium; //@spacing;
 		}
 	}
+	&--left-edge {
+		.transform( translateX(( @spacing * 0.5 ) + @spacing--small) translateY(50%));		
+		.hover-box__point {
+			bottom: auto;
+			left: -( @spacing--medium * 0.5 + 2px );
+			top: 50%;
+			.transform( translateY(-50%) rotate(135deg));
+		}
+	}
+	&--right-edge {
+		.transform( translateX(-100%) translateY(50%));	
+		margin-left: -( @spacing * 0.5 ) - @spacing--small;	
+		.hover-box__point {
+			bottom: auto;
+			right: -( @spacing--medium * 0.5 + 2px );
+			left: auto;
+			top: 50%;
+			.transform( translateY(-50%) rotate(315deg));
+		}
+	}	
 }
