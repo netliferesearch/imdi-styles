@@ -7,6 +7,9 @@
 	@media (min-width: @screen--lg) {	
 		max-width: 45em;	
 	}
+	@media print {
+		display: none;	
+	}	
 	&__title {
 		.h4();
 		margin-bottom: @spacing;
@@ -25,12 +28,12 @@
 	&__link{
 		.font-siri--medium();	
 		.fontSize(@font-size--regular);		
-		padding: @spacing--small  @spacing;	
-		background: @color__orange;
-		color: @color__white;
+		padding: @spacing--small  @spacing;
+		background: @color__canvas-grey;
+		color: @color__text;
 		text-align: center;
 		display: inline-block;
-		border: 2px solid @color__orange;		
+		border: 2px solid @color__canvas-grey;		
 		margin-bottom: @spacing--medium;
 		margin-right: @spacing--medium;		
 	
@@ -49,9 +52,9 @@
 		}
 		&:not(.tabs-button-menu__link--current) {
 			&:hover, &:focus, &:active {
-				background: @color__links;
-				border-color:  @color__links;
-				color: @color__white;
+				background: darken(@color__canvas-grey, 10%);
+				border-color:  darken(@color__canvas-grey, 10%);
+				color: @color__text;
 				@media (min-width: @screen--md) {
 
 				}

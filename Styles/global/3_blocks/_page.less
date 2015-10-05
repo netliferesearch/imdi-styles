@@ -23,9 +23,20 @@
 		&--grey {
 			padding-top: @spacing--large;	
 			padding-bottom: @spacing--large;
-			background: @color__canvas-grey;	
+			background: @color__canvas-grey;
+			@media print {
+				padding: 0;
+				background: none;
+			}				
 		}
 	}
+	&__section-title {
+		.h2();
+		margin-bottom: @spacing--large;
+		@media print {
+			margin-bottom: @spacing;
+		}						
+	}	
 	&__footer {		
 		//background: @color__canvas-grey;
 	}

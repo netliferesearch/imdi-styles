@@ -5,7 +5,10 @@
 	margin-bottom: @spacing;
 	position: relative;
 	&__filter {
-		margin-bottom: @spacing;		
+		margin-bottom: @spacing;
+		@media print {
+			display: none;
+		}								
 	}
 	&__description {
 		.text();
@@ -31,6 +34,9 @@
 			float: right;
 			//margin-top: -35px;			
 		}
+		@media print {
+			display: none;
+		}						
 		.button {
 			@media (min-width: @screen--md) {
 				//float: right;

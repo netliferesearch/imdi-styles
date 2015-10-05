@@ -23,6 +23,24 @@
 		background-image: url('/UI/icons/white/icon-search.svg');
 		margin-left: 0.25rem;		
 	}	
+	&--autocomplete {
+		padding-right: 0;
+		&:after {
+			content: " ";
+			display: block;
+			width: 1.5em;
+			height: 1.5em;
+			position: absolute;
+			top: 0.5em;
+			right: 0.5em;
+			z-index: 2;
+			pointer-events: none;
+			background: url('/UI/icons/red/icon-search.svg') center center;						
+			background-repeat: no-repeat;
+			background-size: 1em 1em;
+			
+		}
+	}
 	&--footer {
 		padding-right: 0;		
 		.search__input {
