@@ -1,6 +1,10 @@
  @import "../../_vars";
 
 .toc {
+	&:focus {
+		border: none;
+		outline: none;
+	}
 	ol {
 		li {
 
@@ -8,5 +12,28 @@
 							
 			}
 		}
+	}
+	&__heading {
+		&:focus {
+			border: none;
+			outline: none;			
+		}
+	}
+	&__back {
+		.text--small();
+		display: block;
+		border: none;
+		text-decoration: underline;
+		color: @color__grey;
+		margin-top: @spacing--large;
+		margin-bottom: @spacing;
+		&:hover, &:focus, &:active {
+			color: @color__links;
+		}
+	}
+	&__back-icon {
+		.text();
+		vertical-align: top;
+		opacity: 0.7;
 	}
 }
