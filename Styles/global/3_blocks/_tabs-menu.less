@@ -61,9 +61,14 @@
 			color: @color__grey;
 			.tabs-menu__icon {
 				opacity: 0.5;
+			}
+			&:hover, &:focus, &:active {
+				color: @color__grey;
+				border-color: transparent;
+				cursor: default;
 			}			
 		}
-		&:not(.tabs-menu__link--current, .tabs-menu__link--disabled) {
+		&:not(.tabs-menu__link--current):not(.tabs-menu__link--disabled) {
 			&:hover, &:focus, &:active {
 				background: darken(@color__canvas-grey, 10%);
 				border-color: darken(@color__canvas-grey, 10%);
