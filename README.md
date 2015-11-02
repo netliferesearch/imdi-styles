@@ -1,8 +1,12 @@
 # imdi-styles
-Stilsett, javascript og grafikk for imdi.no og andre IMDi nettsider.
+Kodebasen for utseende til imdi.no. Dette innholder stilsett (LESS), javascript og grafikk-filer. Markup og maler er ikke gjengitt her. 
 
-## Ansvarlig
-Joakim Bording
-Netlife Research
-joakim@netliferesearch.com
-91814458
+## Installering
+Kodebasen er lagt opp for å kunne kopieres direkte inn i et EPI-server miljø. Hvis du ønsker å bruker andre former for LESS-kompileringer vil det kunne være et behov å lage en egen main.less fil som importerer de andre filene i alfabetisk rekkefølge, gruppert etter mapper. 
+
+## Eier av kodebasen
+Integrerings- og mangfoldsdirektoratet (IMDi) 
+
+## Teknisk ansvarlig for kodebasen
+Joakim Bording, Netlife Research
+
