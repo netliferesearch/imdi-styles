@@ -60,16 +60,19 @@
 	}
 	&--secondary {
 		line-height: inherit;
+        vertical-align: middle;
+        padding-top: 31px;
+        width: 100%;
 		p {
 			.fontSize(@font-size--small);
 			line-height: (35 / @font-size--medium);	
-	        margin-bottom: @spacing--small;			
+	        margin-bottom: @spacing;	        
 			
 		}	
 		a {
 			.fontSize(@font-size--regular);	
 			color: @color__green--dark;
-			border-color: @color__green--dark;	
+			border-color: @color__green--dark;
 			&:hover, &:active {
 				color: @color__text;
 				border-color: @color__text;
