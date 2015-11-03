@@ -1,6 +1,66 @@
 @import "../../_vars";
 
 .illustration {
-	@media (min-width: @screen--lg) {
-	}
+    position: relative;
+    &__figure {
+        width: 100%;
+        &--desktop {
+           display: block;
+            @media (min-width: @screen--md) {
+                display: block;
+            }
+        }
+        &--mobile {
+            display: block;
+            @media (min-width: @screen--md) {
+                display: none;
+            }
+        }
+    }
+    &__trigger {
+        position: absolute;
+		vertical-align: top;
+		background: url('/UI/gfx/square--red.svg') no-repeat center top;
+		background-size: contain; 		
+		text-align: center;		
+		overflow: hidden;
+		border: none;
+		width: 50px;
+		height: 50px;
+		line-height: 50px;
+		.transition(color 400ms @swift-out);
+        .transform(translate(-50%,100%));
+        display: none;
+        @media (min-width: @screen--md) {	
+    		display: table-cell;            
+        }
+        &--mobile {
+            display: table-cell !important;
+            @media (min-width: @screen--md) {	
+        		display: none !important;            
+            }            
+        }
+        &:hover, &:focus, &:active {
+    		background-image: url('/UI/gfx/square--red-dark.svg');
+        }
+        &:hover + .hover-box, &:focus + .hover-box {
+            display: block !important;
+        }
+    }
+    &__hover-box {
+        @media (max-width: @screen--md) {	        
+            display: block !important;
+            position: relative;
+            left: 0 !important;
+            bottom: 0 !important;
+            .transform(none);
+            width: 100%;
+            padding: @spacing 0;
+            border: none;
+            max-width: none;
+            .hover-box__point {
+                display: none;
+            }
+        }
+    }
 }

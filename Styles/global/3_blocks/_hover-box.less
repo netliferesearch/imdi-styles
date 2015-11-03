@@ -10,6 +10,14 @@
 	pointer-events: none;
 	.text--small();		
 	.transform( translateX(-50%) translateY(-( @spacing * 0.5 ) - @spacing--small));
+	&--description {
+    	max-width: 20em;
+        padding: @spacing--medium;
+        padding-bottom: @spacing; 	
+    	p {
+            .text--small();		        	
+    	}    	
+	}
 	&--animate {
 		.animation(animations__fade-in 250ms @swift-out);
 	}	
