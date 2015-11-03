@@ -38,8 +38,9 @@
 				.fontSize(22);				
 			});	
 			.query-min(@screen--md; {
-				padding: (@spacing + 3px) 0 @spacing 0;					
-				.fontSize(@font-size--medium);			
+				padding: (@spacing + 3px) 0 @spacing--medium 0;					
+				.fontSize(@font-size--medium);	
+                line-height: (35 / @font-size--medium);						
 			});				
 			i {
 				float: right;
