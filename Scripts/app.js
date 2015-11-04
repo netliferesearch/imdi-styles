@@ -223,6 +223,23 @@ $( document ).ready(function() {
 	      }
 	    }
 	  });	
-		
-  
+
+	/*------------------------------------*\
+	    CARSOUSEL ON MOBILE
+	\*------------------------------------*/	
+	var target = $('[data-behaviour="carousel"]');
+    var toggleSlick = function () {
+        if ($(window).width() < 546) {
+          target.slick({
+            	slidesToShow: 1,
+                adaptiveHeight: true
+            });
+        } else {
+          target.slick('unslick');
+        }
+    }
+
+    $(window).resize(toggleSlick);
+    toggleSlick();
+
 });
