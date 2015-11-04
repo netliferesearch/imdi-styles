@@ -33,7 +33,7 @@
 		color: @color__text;
 		text-align: center;
 		display: inline-block;
-		border: white;		
+		border: 1px solid transparent;		
 		margin-bottom: @spacing--medium;
 		margin-right: @spacing--medium;		
 	
@@ -41,8 +41,9 @@
 	
 		}
 		&--current {
-			background: @color__white;
-			color: @color__links;
+			background: transparent;
+			color: @color__text;
+			border-color: darken(@color__canvas-grey,10%);
 			@media (min-width: @screen--md) {			
 
 			}
@@ -52,9 +53,9 @@
 		}
 		&:not(.tabs-button-menu__link--current) {
 			&:hover, &:focus, &:active {
-				background: darken(@color__canvas-grey, 10%);
-				border-color:  darken(@color__canvas-grey, 10%);
-				color: @color__text;
+				background: lighten( @color__canvas-grey, 3%);
+				border-color: lighten( @color__canvas-grey, 3%);
+				color: @color__links;
 				@media (min-width: @screen--md) {
 
 				}
