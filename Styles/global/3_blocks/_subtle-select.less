@@ -12,7 +12,11 @@
 		padding-left: @spacing--small;
 		padding-top: @spacing--small;
 		padding-right: @spacing--small;			
-		color: @color__grey;	
+		color: @color__grey;
+		white-space: nowrap;
+        overflow: hidden;
+        max-width: 100%;
+        text-overflow: ellipsis;
 	}
 	&__select select, &__button {
 		.text--small();
@@ -25,7 +29,11 @@
 		background: @color__white;
 		word-wrap: break-word;
 		white-space: normal;
-		border: 2px solid @color__canvas-grey;		
+		border: 2px solid @color__canvas-grey;	
+		white-space: nowrap;
+        overflow: hidden;
+        max-width: 100%;
+        text-overflow: ellipsis;		
 		&:hover, &:focus, &:active {
 			background: @color__canvas-grey;
 		}

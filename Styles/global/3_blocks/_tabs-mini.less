@@ -1,0 +1,28 @@
+@import "../../_vars";
+
+.tabs-mini {
+    margin: 0;
+    padding: 0;
+    &__item {
+        .text--small();        
+        margin: 0;
+        padding: 0;
+        list-style: none;        
+        display: inline-block;
+        color: @color__grey;
+        &:after {
+            content: '|';  
+            padding: 0 @spacing--small;            
+        }
+        &:last-child {
+            &:after {
+                display: none;
+            }
+        }
+    }
+    &__link {
+        &--current {
+            
+        }
+    }
+}
