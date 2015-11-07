@@ -3,6 +3,9 @@
 .subtle-select {
 	position: relative;
 	margin-bottom: @spacing--small;
+	@media (min-width: @screen--md) {
+    margin-bottom: @spacing--medium;	
+  }
 //	max-width: 
 	&__label {
 		.text--small();
@@ -31,9 +34,9 @@
 		white-space: normal;
 		border: 2px solid @color__canvas-grey;	
 		white-space: nowrap;
-        overflow: hidden;
-        max-width: 100%;
-        text-overflow: ellipsis;		
+    overflow: hidden;
+    max-width: 100%;
+    text-overflow: ellipsis;		
 		&:hover, &:focus, &:active {
 			background: @color__canvas-grey;
 		}
