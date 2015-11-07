@@ -6,7 +6,8 @@
 	border: 2px solid @color__orange;
 	background: @color__white;	
 	padding: @spacing--small;
-	max-width: 13em;
+	min-width: 7em;
+	max-width: 15em;
 	pointer-events: none;
 	.text--small();		
 	.transform( translateX(-50%) translateY(-( @spacing * 0.5 ) - @spacing--small));
@@ -50,7 +51,8 @@
 	}
 	&--right {
 		.transform( translateX(-100%) translateY(-( @spacing * 0.5 ) - @spacing--small));
-		margin-left: @spacing;		
+		margin-left: @spacing;
+    min-width: 10em;
 		.hover-box__point {
 			left: auto;
 			right: @spacing - @spacing--medium; //@spacing;
@@ -79,6 +81,7 @@
 		.transform( translateX(-100%) translateY(100%));
 		margin-bottom: -( @spacing - @spacing--small );
 		margin-left: @spacing;	
+    min-width: 10em;
 		.hover-box__point {
       left: auto;
 			right: @spacing - @spacing--medium; //@spacing;  		
