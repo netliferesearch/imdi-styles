@@ -188,7 +188,7 @@ $( document ).ready(function() {
 	
 	
 	/*------------------------------------*\
-	    SLECT ALL
+	    SELECT ALL
 	\*------------------------------------*/	
 	
 
@@ -228,18 +228,31 @@ $( document ).ready(function() {
 	    CARSOUSEL ON MOBILE
 	\*------------------------------------*/	
 	var target = $('[data-behaviour="carousel"]');
-    var toggleSlick = function () {
-        if ($(window).width() < 546) {
-          target.slick({
-            	slidesToShow: 1,
-                adaptiveHeight: true
-            });
-        } else {
-          target.slick('unslick');
-        }
-    }
+  var toggleSlick = function () {
+      if ($(window).width() < 546) {
+        target.slick({
+          	slidesToShow: 1,
+              adaptiveHeight: true
+          });
+      } else {
+        target.slick('unslick');
+      }
+  }
 
-    $(window).resize(toggleSlick);
-    toggleSlick();
+  $(window).resize(toggleSlick);
+  toggleSlick();
+  
+ 	/*------------------------------------*\
+	    CARSOUSEL ON MOBILE
+	\*------------------------------------*/
+  $('[data-behaviour="wizard"]').each( function() {
+    if(window[$(this).data('source')] !== 'undefined') {
+  		var content = window[$(this).data('source')];
+  		console.log(content[0]['Question'] + "Juhu");
+  		// Vis første spørsmål
+		} else {
+  	  $(this).innerHTML("<em>Det skjedde en feil. Vennligst prøv å last siden på nytt.</em>");	
+		}
+	});
 
 });

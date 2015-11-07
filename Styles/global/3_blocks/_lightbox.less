@@ -19,7 +19,7 @@
 		text-align: left;
 		@media (min-width: @screen--lg) {	
 			margin-top: 80px;	
-			padding: @spacing--large;
+			padding: @spacing;
 			padding-bottom: @spacing;	
 			margin-bottom: @spacing--large;	
 			width: 100%;
@@ -38,8 +38,8 @@
 	}
 	&__title {
 		.h4();
-		margin-bottom: @spacing--large;
-		color: @color__grey;
+		margin-bottom: @spacing;
+		color: @color__grey;		
 	}
 	&__close-button	{
 		.h2();
@@ -59,7 +59,7 @@
 		}
 	}
 	&__footer {
-		margin-top: @spacing;		
+		margin-top: 0;		
 	}
 	&--as-overlay {
 		position: absolute;
@@ -76,8 +76,6 @@
 			background: rgba(0,0,0,0.2);		
 		}
 		.lightbox__title {
-			.h3();
-			margin-bottom: @spacing--large;			
 		}
 		.lightbox__point {
 			display: none;
@@ -110,8 +108,6 @@
 			
 		}
 		.lightbox__title {
-			.h3();
-			margin-bottom: @spacing--large;			
 		}
 		.lightbox__box {
 			margin-top: 0;
