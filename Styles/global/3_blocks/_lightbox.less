@@ -3,7 +3,7 @@
 .lightbox {
 	//display: none;
 	&--animate {
-		.animation( animations__fade-in 250ms @swift-out);
+		.animation( animations__fade-in-down 200ms @swift-out);
 	}	
 	&__box {
 		/*
@@ -108,7 +108,6 @@
 			@media (min-width: @screen--md) {
 				margin-left: 220px;
 			}
-			
 		}
 		.lightbox__title {
 		}
@@ -120,13 +119,16 @@
 			border-color: @color__orange;				
 			width: 100%;
 			.transform( translate(0, -100%) );			
-			margin-top: -53px;			
+			margin-top: -@spacing;			
 			@media (min-width: @screen--md) {
 				width: 25em;						
 				left: auto; 
 				right: 0;				
 			}
 		}
+		&.lightbox--animate {
+  		.animation( animations__fade-in-down 200ms @swift-out);
+  	}	
 	}
 	&--inline {
 		position: static;  	
