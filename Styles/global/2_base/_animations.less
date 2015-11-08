@@ -267,6 +267,40 @@ Copyright (c) 2015 Daniel Eden
   animation-name: animations__shake;
 }
 
+@-webkit-keyframes animations__shake--vertical {
+  0%, 100% {
+    .transform( translate3d(0, 0, 0));
+  }
+
+  10%, 30%, 50%, 70%, 90% {
+    .transform( translate3d(0, -10px, 0));
+  }
+
+  20%, 40%, 60%, 80% {
+    .transform( translate3d(0, 10px, 0));
+  }
+}
+
+@keyframes animations__shake--vertical {
+  0%, 100% {
+    .transform( translate3d(0, 0, 0));
+  }
+
+  10%, 30%, 50%, 70%, 90% {
+    .transform( translate3d(0, -10px, 0));
+  }
+
+  20%, 40%, 60%, 80% {
+    .transform( translate3d(0, 10px, 0));
+  }
+}
+
+.animations__shake--vertical {
+  -webkit-animation-name: animations__shake--vertical;
+  animation-name: animations__shake--vertical;
+}
+
+
 @-moz-keyframes spin {
     from { -moz-transform: rotate(360deg); }
     to { -moz-transform: rotate(0deg); }
