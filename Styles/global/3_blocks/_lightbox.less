@@ -1,7 +1,10 @@
 @import "../../_vars";
 
 .lightbox {
-	//display: none;  
+	//display: none;
+	&--animate {
+		.animation( animations__fade-in 250ms @swift-out);
+	}	
 	&__box {
 		/*
 		-webkit-box-shadow: 0px 0px 111px -24px rgba(0,0,0,0.50);
@@ -24,7 +27,7 @@
 			margin-bottom: @spacing--large;	
 			width: 100%;
 		}
-	}
+	}	
 	&__point {
 		display: block;
 		position: absolute;
@@ -112,8 +115,7 @@
 		.lightbox__box {
 			margin-top: 0;
 			border-color: transparent;
-			z-index: 2;				
-			padding-bottom: @spacing--large;
+			z-index: 2;
 			position: absolute;		
 			border-color: @color__orange;				
 			width: 100%;
@@ -126,4 +128,7 @@
 			}
 		}
 	}
+	&--inline {
+		position: static;  	
+	}	
 }
