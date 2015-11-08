@@ -243,13 +243,72 @@ $( document ).ready(function() {
   toggleSlick();
   
  	/*------------------------------------*\
-	    CARSOUSEL ON MOBILE
+	    WIZARD
 	\*------------------------------------*/
   $('[data-behaviour="wizard"]').each( function() {
-    if(window[$(this).data('source')] !== 'undefined') {
-  		var content = window[$(this).data('source')];
-  		console.log(content[0]['Question'] + "Juhu");
-  		// Vis første spørsmål
+    if(window[$(this).data('source')] !== 'undefined' ) {
+
+      // Load question tree
+  		var dataTree = window[$(this).data('source')];
+      var dataHistory = [];
+      var startId = dataTree[0].Id;
+      
+      // Define function that is used in every change
+  		var updateWizard = function( wrapper, currentId, selectedOption, targetId ) {
+    		console.log(currentId + "," + selectedOption + ", " + targetId );
+
+        var dataRow = function (rows, id) {
+            var i = null;
+            for (i = 0; rows.length > i; i += 1) {
+                if (rows[i].Id === id) {
+                    return rows[i];
+                }
+            }
+            return null;
+        };
+    		
+    		//if(dataRow(dataTree, targetId).Type == 'step'){
+    		
+    		// Get data
+    		var _question = dataRow(dataTree, targetId).Question;
+    		var _instruction = dataRow(dataTree, targetId).Instruction;
+    		var _alternatives = dataRow(dataTree, targetId).Alternatives;    		
+
+        // Construct question
+        var html = $('<fieldset>');
+        $('<legend>').attr({class: 'h3'}).text(_question).appendTo($(html));
+        if(_instruction.length > 0)
+          $('<p>').attr({class: 'text--small'}).append(_instruction).appendTo($(html));
+          
+        $.each(_alternatives, function() {
+            $('<button>').attr({type: 'button', class: 'button button--secondary'})
+              .text(this.Caption)
+              .click($.proxy(updateWizard, null, wrapper,  targetId, this.Caption, this.Target))
+              .appendTo($(html)); 
+        });
+
+    		$(wrapper).html('');
+        $(wrapper).append(html);
+    		console.log('Ble trykket');
+    		// Empty wrapper
+    		// Load question
+    		// Make html
+    		// Update history
+  		}
+      
+      // Define function that reset the interaction
+      var resetWizard = function(wrapper, updateWizard) {
+        $(wrapper).html('');
+        var html = $("<a>", {class: "button button--large"})
+          .text('Start veiviser')
+          .click($.proxy(updateWizard, null, wrapper,  -1, -1, startId));
+
+        $(wrapper).append(html);
+      }
+      
+  		resetWizard(this, updateWizard, dataTree, dataHistory);
+  		
+  		
 		} else {
   	  $(this).innerHTML("<em>Det skjedde en feil. Vennligst prøv å last siden på nytt.</em>");	
 		}
