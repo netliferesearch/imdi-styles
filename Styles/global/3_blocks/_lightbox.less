@@ -2,6 +2,12 @@
 
 .lightbox {
 	//display: none;
+	margin-left: @gutter;
+	margin-right: @gutter;
+	@media (min-width: @screen--md) {	
+		margin-left: @spacing--small;
+		margin-right: @spacing--small;
+	}
 	&--animate {
 		.animation( animations__fade-in 200ms @swift-out);
 	}	
@@ -22,10 +28,6 @@
 		text-align: left;
 	  margin-top: 80px;		
 		width: 100%;
-		@media (min-width: @screen--md) {	
-  		margin-left: @spacing--small;
-  		margin-right: @spacing--small;
-		}
 		@media (min-width: @screen--lg) {	
 			padding: @spacing;
 			padding-bottom: @spacing;	
