@@ -53,6 +53,27 @@
 		}		
 	}
 	
+	&--option {
+		background: @color__canvas-grey;
+		color: @color__text;
+		border: 2px solid @color__canvas-grey;
+		width: 100%;
+		max-width: 25em;	
+    text-align: left;
+    padding-left: @spacing--large;
+    position: relative;
+		&:hover, &:focus, &:active {
+			background: darken(@color__canvas-grey, 10%);
+			border: 2px solid darken(@color__canvas-grey, 10%);
+			color: @color__text;
+		}  	
+		i {
+      position: absolute;
+      top: 11px;
+      left: @spacing--medium;
+		}
+	}
+	
 	&__sidekick {
 		@media (min-width: @screen--sm) {
 			margin-left: @spacing; 

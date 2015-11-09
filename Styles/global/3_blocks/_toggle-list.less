@@ -20,9 +20,14 @@
 		@media print {
 			display: none;
 		}				
+		&--disablet {
+      background: transparent;
+			border: 1px solid darken(@color__canvas-grey,10%);  		
+		}		
 		&--expanded {		
 			background: lighten( @color__canvas-grey, 3%);	
-			margin: 0 ( -@gutter);		
+			margin: 0 ( -@gutter);	
+			border: none;	
 			@media (min-width: @screen--md) {
 				margin: 0;	
 				width: percentage(21/14);

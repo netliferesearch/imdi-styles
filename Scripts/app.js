@@ -252,9 +252,10 @@ $( document ).ready(function() {
   		var dataTree = window[$(this).data('source')];
       var dataHistory = [];
       var startId = dataTree[0].Id;
+      var wrapper = this;
       
       // Define function that is used in every change
-  		var updateWizard = function( wrapper, currentId, selectedOption, targetId ) {
+  		var updateWizard = function( currentId, selectedOption, targetId ) {
     		console.log(currentId + "," + selectedOption + ", " + targetId );
 
         var dataRow = function (rows, id) {
@@ -266,47 +267,72 @@ $( document ).ready(function() {
             }
             return null;
         };
+        
+     		$(wrapper).html('');        
     		
-    		//if(dataRow(dataTree, targetId).Type == 'step'){
+    		// QUESTION
     		
-    		// Get data
-    		var _question = dataRow(dataTree, targetId).Question;
-    		var _instruction = dataRow(dataTree, targetId).Instruction;
-    		var _alternatives = dataRow(dataTree, targetId).Alternatives;    		
-
-        // Construct question
-        var html = $('<fieldset>');
-        $('<legend>').attr({class: 'h3'}).text(_question).appendTo($(html));
-        if(_instruction.length > 0)
-          $('<p>').attr({class: 'text--small'}).append(_instruction).appendTo($(html));
+    		if(dataRow(dataTree, targetId).Type == 'step'){
+    		
+      		// Get data
+      		var _question = dataRow(dataTree, targetId).Question;
+      		var _instruction = dataRow(dataTree, targetId).Instruction;
+      		var _alternatives = dataRow(dataTree, targetId).Alternatives;    		
+  
+          // Construct markup
+          var html = $('<fieldset>');
+          $('<legend>').attr({class: 'h2'}).text(_question).appendTo($(html));
+          if(_instruction.length > 0)
+            $('<p>').attr({class: 'text--small'}).append(_instruction).appendTo($(html));
+          var htmllist = $('<ul>').attr({class: 't-no-list-styles'})
+          $.each(_alternatives, function() {
+              $('<button>').attr({type: 'button', class: 'button button--option'})
+                .text(this.Caption)
+                .click($.proxy(updateWizard, null, targetId, this.Caption, this.Target))
+                .append('<i class="icon__arrow-right"></i>')
+                .appendTo($('<li>').appendTo($(htmllist))); 
+          });
+  
+          $(html).append(htmllist);    		
+          $(wrapper).append(html);
+        
+    		// CONCLUSION
           
-        $.each(_alternatives, function() {
-            $('<button>').attr({type: 'button', class: 'button button--secondary'})
-              .text(this.Caption)
-              .click($.proxy(updateWizard, null, wrapper,  targetId, this.Caption, this.Target))
-              .appendTo($(html)); 
-        });
+        } else if(dataRow(dataTree, targetId).Type == 'conclusion'){
 
-    		$(wrapper).html('');
-        $(wrapper).append(html);
-    		console.log('Ble trykket');
-    		// Empty wrapper
-    		// Load question
-    		// Make html
+      		// Get data
+          var _title = dataRow(dataTree, targetId).Title;
+          var _content = dataRow(dataTree, targetId).Content;
+
+          // Construct markup
+          $('<h3>').attr({class: 'h2'}).append(_title).appendTo($(wrapper));
+          $(wrapper).append(_content);
+          $('<button>').attr({type: 'button', class: 'button button--secondary'})
+            .text('Start på nytt')
+            .click($.proxy(resetWizard, null))
+            .appendTo($(wrapper)); 
+        
+        // ERROR
+        
+        } else {
+          $(wrapper).append("<p><em>Det skjedde en feil. Vennligst prøv å last siden på nytt.</em></p>");
+        }
+        
     		// Update history
   		}
       
       // Define function that reset the interaction
-      var resetWizard = function(wrapper, updateWizard) {
+      var resetWizard = function() {
         $(wrapper).html('');
         var html = $("<a>", {class: "button button--large"})
           .text('Start veiviser')
-          .click($.proxy(updateWizard, null, wrapper,  -1, -1, startId));
+          .click($.proxy(updateWizard, null, -1, -1, startId));
 
         $(wrapper).append(html);
       }
-      
-  		resetWizard(this, updateWizard, dataTree, dataHistory);
+
+
+  		resetWizard();
   		
   		
 		} else {
