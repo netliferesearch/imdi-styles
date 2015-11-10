@@ -23,29 +23,6 @@
       fill: rgb(255, 255, 255);      
     }
   }
-  &__category {
-    
-  }
-  &__bar {
-      &--left {
-        
-      }
-      &--right {
-        
-      }
-      &--benchmark {
-        
-      }
-  }
-  &__bar-hover {
-    
-  }
-  &__legend-wrapper {
-    
-  }
-  &__node {
-    
-  }
   &__line-dot {
     
   }
@@ -56,18 +33,6 @@
     padding: 5px;
     min-width: 75px;
     min-height: 50px;    
-  }
-  &__area {
-    
-  }
-  &__voronoi {
-    
-  }
-  &__d3 {
-    
-  }
-  &__d3-points {
-    
   }
 	&__line {
   	// tick
@@ -82,6 +47,11 @@
       stroke: rgb(242, 239, 237) !important;    	
   	}
 	}
+	&__text {
+  	&--benchmark {
+      fill: rgb(64, 57, 53);	
+  	}	
+	}	
 	&__axis {
       path, line {
         fill: none;
@@ -114,27 +84,47 @@
       	
     	}
 	}
+	
+	/* Unused but reacable selectors in the DOM */
+	
+  &__area {
+    
+  }
+  &__voronoi {
+    
+  }
+  &__d3 {
+    
+  }
+  &__d3-points {
+    
+  }	
 	&__legend {
   	
 	}
 	&__path {
 	}
-	&__text {
-  	&--benchmark {
-      fill: rgb(64, 57, 53);	
-  	}	
-	}
-}
-
-
-select.units {
-  width: 100px;
-}
-
-button.chart {
-  width:200px;
-  display:inline-block;
-  overflow: auto;
-  white-space: nowrap;
-  margin: 0px 0px 0px 3px;
+  &__category {
+    
+  }
+  &__bar {
+      &--left {
+        
+      }
+      &--right {
+        
+      }
+      &--benchmark {
+        
+      }
+  }
+  &__bar-hover {
+    
+  }
+  &__legend-wrapper {
+    
+  }
+  &__node {
+    
+  }	
 }
