@@ -50,7 +50,12 @@
     
   }
   &__line-dot-focus {
-    
+    background-color: white;
+    position: absolute;
+    pointer-events: none;
+    padding: 5px;
+    min-width: 75px;
+    min-height: 50px;    
   }
   &__area {
     
@@ -67,17 +72,32 @@
 	&__line {
   	// tick
     fill: none;
-    stroke: black;
+    stroke: #777777;
     shape-rendering: crispEdges;
   	&--zero {
     	// graph__backgroundLine--zero
-      	stroke: #000;
+      stroke: #bbb;
   	}
   	&--benchmark {
       stroke: rgb(242, 239, 237) !important;    	
   	}
 	}
 	&__axis {
+      path, line {
+        fill: none;
+        stroke: black;
+        shape-rendering: crispEdges;
+      }
+      text {
+        font-family: sans-serif;
+        font-size: 12px;
+      }  	
+    	&--category {
+      	text {
+        	font-family: 'Siri',sans-serif;
+          font-size: 15px;
+        }
+    	}      
     	&--vertical {
         	
     	}
@@ -98,31 +118,17 @@
   	
 	}
 	&__path {
-    fill: none;
-    stroke: black;
-    shape-rendering: crispEdges;  	
-   	stroke-width: 2px;
 	}
 	&__text {
-    font-family: sans-serif;
-    font-size: 12px;  
   	&--benchmark {
       fill: rgb(64, 57, 53);	
   	}	
 	}
 }
 
+
 select.units {
   width: 100px;
-}
-
-div.focus {
-  background-color: white;
-  position: absolute;
-  pointer-events: none;
-  padding: 5px;
-  min-width: 75px;
-  min-height: 50px;
 }
 
 button.chart {
