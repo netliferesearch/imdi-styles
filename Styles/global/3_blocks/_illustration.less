@@ -2,66 +2,128 @@
 
 .illustration {
     position: relative;
-    margin-bottom: @spacing--large;
+    padding-bottom: @spacing--xlarge;
+    @media (min-width: @screen--md) {
+      padding-bottom: 0;      
+      margin-bottom: @spacing--large;
+    }
+    &__background {
+        display: none;
+        @media (min-width: @screen--md) {
+            display: block; 
+        }
+    }
     &__figure {
-        width: 100%;
-        &--desktop {
-           display: block;
-            @media (min-width: @screen--md) {
-                display: block;
+        width: auto;
+        max-width: 100%;
+        .transition(transform 200ms @swift-out);
+        margin-bottom: @spacing;
+        @media (min-width: @screen--md) {	
+          &:hover, &:focus, &:active {
+            .transform(scale(1.1));
+            & + .illustration__hover-box {
+              display: block !important;
             }
+          }
         }
-        &--mobile {
-            display: block;
-            @media (min-width: @screen--md) {
-                display: none; 
-            }
+    }
+    &__item {
+       @media (min-width: @screen--md) {	
+        .illustration__figure {
+          .animation(animations__fade-in-down 500ms @swift-out backwards);	
         }
+        &:nth-child(1) {
+          .illustration__figure {
+    				.animation-delay(.05s);
+  				}
+  			}
+  			&:nth-child(2) {
+          .illustration__figure {
+    				.animation-delay(.1s);
+  				}
+  			}
+  			&:nth-child(3) {
+          .illustration__figure {    			
+  				  .animation-delay(.15s);	
+  				}			
+  			}
+  			&:nth-child(4) {
+          .illustration__figure {
+  				  .animation-delay(.2s);	
+  				}
+  			}
+  			&:nth-child(5) {
+          .illustration__figure {	
+  				  .animation-delay(.25s);
+  				}
+  			}
+  			&:nth-child(6) {
+          .illustration__figure {    			
+  				  .animation-delay(.3s);
+  				}
+  			}									
+  			&:nth-child(7) {
+          .illustration__figure {	
+  				  .animation-delay(.35s);
+  				}
+  			}
+  			&:nth-child(8) {
+          .illustration__figure {    			
+  				  .animation-delay(.4s);
+  				}
+  			}			        
+      }
+      &--mobile {
+          @media (min-width: @screen--md) {
+              display: none; 
+          }
+      }      
     }
     &__trigger {
+      padding: 0 @gutter;      
+      @media (max-width: @screen--md) {	
+        width: auto !important;
+      }
+      @media (min-width: @screen--md) {	
+        padding: 0;
         position: absolute;
-		vertical-align: top;
-		background: url('/UI/gfx/square--red.svg') no-repeat center top;
-		background-size: contain; 		
-		text-align: center;		
-		overflow: hidden;
-		border: none;
-		width: 50px;
-		height: 50px;
-		line-height: 50px;
-		.transition(color 400ms @swift-out);
-        .transform(translate(-50%,100%));
-        display: none;
-        @media (min-width: @screen--md) {	
-    		display: table-cell;            
-        }
-        &--mobile {
-            display: table-cell !important;
-            @media (min-width: @screen--md) {	
-        		display: none !important;            
-            }            
-        }
-        &:hover, &:focus, &:active {
-    		background-image: url('/UI/gfx/square--red-dark.svg');
-        }
-        &:hover + .hover-box, &:focus + .hover-box {
-            display: block !important;
-        }
+        display: block;
+      }
     }
     &__hover-box {
+        width: 20em;
+        &:hover {        
+            display: block !important;
+        }
         @media (max-width: @screen--md) {	        
             display: block !important;
-            position: relative;
-            left: 0 !important;
-            bottom: 0 !important;
+            position: static;
+            left: auto !important;
+            bottom: auto !important;
             .transform(none);
             width: 100%;
-            padding: @spacing 0;
+            padding: 0;
             border: none;
             max-width: none;
+            margin-bottom: @spacing;
             .hover-box__point {
                 display: none;
             }
         }
+    }
+    &__carousel-button {
+      position: absolute;
+      z-index: 2;
+      @media (min-width: @screen--md) {	
+        display: none !important;
+      } 
+      &--previous {
+        left: 0;
+        bottom: 0;
+      } 
+      &--next {
+        right: 0;
+        bottom: 0;
+      }  
     }
 }

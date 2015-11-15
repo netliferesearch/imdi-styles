@@ -232,7 +232,11 @@ $( document ).ready(function() {
       if ($(window).width() < 546) {
         target.slick({
           	slidesToShow: 1,
-              adaptiveHeight: true
+              adaptiveHeight: true,
+              infinite: false,
+              focusOnSelect: true,
+              prevArrow: '[data-behaviour="carousel-prev"]',
+              nextArrow: '[data-behaviour="carousel-next"]'
           });
       } else {
         target.slick('unslick');
@@ -253,6 +257,32 @@ $( document ).ready(function() {
       var dataHistory = [];
       var startId = dataTree[0].Id;
       var wrapper = this;
+
+      var captionLeadtext = $(this).data('caption-leadtext') ? $(this).data('caption-leadtext') : '';
+      var captionStartWizard = $(this).data('caption-start-wizard') ? $(this).data('caption-start-wizard') : 'Start veiviser';      
+      var captionHistoryTitle = $(this).data('caption-history-title') ? $(this).data('caption-history-title') : 'Tidligere svar';
+      var captionStartOver = $(this).data('caption-start-over') ? $(this).data('caption-start-over') : 'Start på nytt';      
+      var captionError = $(this).data('caption-error') ? $(this).data('caption-error') : 'Det skjedde en feil. Vennligst prøv å last siden på nytt.';      
+      
+      // Define function that reset the interaction
+      var resetWizard = function() {
+
+        // Reset history and markup
+        dataHistory = [];
+        $(wrapper).html('');
+
+        // Construct markup
+        var htmlleadtext = $("<p>")
+          .text(captionLeadtext);
+        
+        var htmlbutton = $("<a>", {class: "button button--large"})
+          .text(captionStartWizard)
+          .click($.proxy(updateWizard, null, -1, -1, startId));
+
+        $(wrapper).append(htmlleadtext);
+        $(wrapper).append(htmlbutton);
+      }
+      
       
       // Define function that is used in every change
   		var updateWizard = function( currentId, selectedOption, targetId ) {
@@ -267,8 +297,15 @@ $( document ).ready(function() {
             }
             return null;
         };
-        
-     		$(wrapper).html('');        
+
+        if(currentId != -1){
+          dataHistory.push({
+            'Id' : currentId, 
+            'Question': dataRow(dataTree, currentId).Question,
+            'Answer': selectedOption
+            });
+        }
+     		$(wrapper).html('<hr class="line line--light t-margin-bottom"/>');
     		
     		// QUESTION
     		
@@ -280,21 +317,8 @@ $( document ).ready(function() {
       		var _alternatives = dataRow(dataTree, targetId).Alternatives;    		
   
           // Construct markup
-          var html = $('<fieldset>');
-          $('<legend>').attr({class: 'h2'}).text(_question).appendTo($(html));
-          if(_instruction.length > 0)
-            $('<p>').attr({class: 'text--small'}).append(_instruction).appendTo($(html));
-          var htmllist = $('<ul>').attr({class: 't-no-list-styles'})
-          $.each(_alternatives, function() {
-              $('<button>').attr({type: 'button', class: 'button button--option'})
-                .text(this.Caption)
-                .click($.proxy(updateWizard, null, targetId, this.Caption, this.Target))
-                .append('<i class="icon__arrow-right"></i>')
-                .appendTo($('<li>').appendTo($(htmllist))); 
-          });
-  
-          $(html).append(htmllist);    		
-          $(wrapper).append(html);
+          $(wrapper).append(getQuestion(_question, _instruction, _alternatives, targetId));
+          $(wrapper).append(getHistory());
         
     		// CONCLUSION
           
@@ -305,38 +329,123 @@ $( document ).ready(function() {
           var _content = dataRow(dataTree, targetId).Content;
 
           // Construct markup
-          $('<h3>').attr({class: 'h2'}).append(_title).appendTo($(wrapper));
-          $(wrapper).append(_content);
-          $('<button>').attr({type: 'button', class: 'button button--secondary'})
-            .text('Start på nytt')
-            .click($.proxy(resetWizard, null))
-            .appendTo($(wrapper)); 
+          $(wrapper).append(getConclusion(_title, _content));
+          $(wrapper).append(getHistory());
+
         
         // ERROR
         
         } else {
-          $(wrapper).append("<p><em>Det skjedde en feil. Vennligst prøv å last siden på nytt.</em></p>");
+          $(wrapper).append('<p><em>' + captionError + '</em></p>');
         }
         
     		// Update history
   		}
-      
-      // Define function that reset the interaction
-      var resetWizard = function() {
-        $(wrapper).html('');
-        var html = $("<a>", {class: "button button--large"})
-          .text('Start veiviser')
-          .click($.proxy(updateWizard, null, -1, -1, startId));
+  		
+  		var goBackInHistory = function(targetId, index) {
+    		// Go back to index and remove the following children in the history
+    		dataHistory.splice(index, dataHistory.length - index)
 
-        $(wrapper).append(html);
+        // Load target question
+    		updateWizard(-1, -1, targetId);
+
+    		return false;
+  		}
+  		
+  		var getQuestion = function(_question, _instruction, _alternatives, targetId) {
+          var html = $('<fieldset>', {
+            class: 't-margin-bottom--large animations__fade-in-left'
+          });
+          $('<legend/>', {
+            class: 'h2',
+            html: _question
+            }).appendTo($(html));
+            
+          if(_instruction.length > 0)
+            $('<p/>',{
+              class: 'text--small'
+              }).append(_instruction).appendTo($(html));
+
+          var htmllist = $('<ul>',{
+              class: 't-no-list-styles'
+              })
+          $.each(_alternatives, function() {
+              $('<button/>',{
+                type: 'button', 
+                class: 'button button--option',
+                html: this.Caption + ' <i class="icon__arrow-right"></i>',
+                click: $.proxy(updateWizard, null, targetId, this.Caption, this.Target)
+                })
+                .appendTo($('<li>').appendTo($(htmllist))); 
+          });
+  
+          $(html).append(htmllist);
+          
+          return html;
       }
 
+  		var getConclusion = function(_title, _content) {
 
+    		  var html = $('<section/>', {
+            class: 't-margin-bottom--large animations__fade-in-left'
+          });
+
+          $('<h3/>',{
+            class: 'h2',
+            html: _title
+            }).appendTo($(html));
+            
+          $(html).append(_content);
+          
+          $('<button/>',{
+            type: 'button', 
+            class: 'button',
+            html: captionStartOver,
+            click: $.proxy(resetWizard, null)
+            })
+            .appendTo($(html));
+
+          return html;
+      }
+  		
+  		var getHistory = function() {
+    		  if (dataHistory.length < 1) return null;
+    		 // Construct markup
+          var html = $('<section>');
+          $('<h3/>',{
+            class: 'h4',
+            html: captionHistoryTitle
+            }).appendTo($(html));
+          var htmllist = $('<ol/>');
+          $.each(dataHistory, function(index, value) {
+              var htmlli = $('<li/>');
+              var htmldiv = $('<div/>',{
+                class: 'info t-margin-bottom'
+              });
+              var htmlh4 = $('<h4/>',{
+                class: 'info__title'
+              });
+              $('<a/>',{
+                href: '#',
+                html: value.Question,
+                click: $.proxy(goBackInHistory, null, value.Id, index)
+              }).appendTo($(htmlh4));
+              $(htmlh4).appendTo($(htmldiv));
+              $('<p/>',{
+                html: value.Answer
+              }).appendTo($(htmldiv));
+              $(htmllist).append($(htmlli).append($(htmldiv)));
+          });
+          $(html).append(htmllist);
+          return html;
+  		}
+
+      // Trigger on load
   		resetWizard();
   		
   		
 		} else {
-  	  $(this).innerHTML("<em>Det skjedde en feil. Vennligst prøv å last siden på nytt.</em>");	
+  	  $(this).innerHTML('<p><em>' + captionError + '</em></p>');	
 		}
 	});
 
