@@ -247,8 +247,9 @@ $( document ).ready(function() {
   toggleSlick();
   
  	/*------------------------------------*\
-	    WIZARD
+	    WIZARD MODULE BASED ON A JSON VARIABLE
 	\*------------------------------------*/
+	
   $('[data-behaviour="wizard"]').each( function() {
     if(window[$(this).data('source')] !== 'undefined' ) {
 
@@ -263,8 +264,14 @@ $( document ).ready(function() {
       var captionHistoryTitle = $(this).data('caption-history-title') ? $(this).data('caption-history-title') : 'Tidligere svar';
       var captionStartOver = $(this).data('caption-start-over') ? $(this).data('caption-start-over') : 'Start på nytt';      
       var captionError = $(this).data('caption-error') ? $(this).data('caption-error') : 'Det skjedde en feil. Vennligst prøv å last siden på nytt.';      
-      
-      // Define function that reset the interaction
+
+      // Convert format
+      captionLeadtext = decodeURIComponent(captionLeadtext.replace(/\+/g, ' ') );
+
+      //
+      // Function that reset the interaction
+      //
+
       var resetWizard = function() {
 
         // Reset history and markup
@@ -272,19 +279,25 @@ $( document ).ready(function() {
         $(wrapper).html('');
 
         // Construct markup
-        var htmlleadtext = $("<p>")
-          .text(captionLeadtext);
+        var htmlleadtext = $("<p>", {
+          html: captionLeadtext
+        });
         
-        var htmlbutton = $("<a>", {class: "button button--large"})
-          .text(captionStartWizard)
-          .click($.proxy(updateWizard, null, -1, -1, startId));
+        var htmlbutton = $("<a>", {
+          class: "button button--large", 
+          html: captionStartWizard, 
+          click: $.proxy(updateWizard, null, -1, -1, startId)
+          });
 
         $(wrapper).append(htmlleadtext);
         $(wrapper).append(htmlbutton);
       }
       
       
-      // Define function that is used in every change
+      //
+      // Function redraws each step
+      //
+      
   		var updateWizard = function( currentId, selectedOption, targetId ) {
     		console.log(currentId + "," + selectedOption + ", " + targetId );
 
@@ -327,7 +340,7 @@ $( document ).ready(function() {
       		// Get data
           var _title = dataRow(dataTree, targetId).Title;
           var _content = dataRow(dataTree, targetId).Content;
-
+          _content = decodeURIComponent(_content.replace(/\+/g, ' ') );
           // Construct markup
           $(wrapper).append(getConclusion(_title, _content));
           $(wrapper).append(getHistory());
@@ -339,8 +352,11 @@ $( document ).ready(function() {
           $(wrapper).append('<p><em>' + captionError + '</em></p>');
         }
         
-    		// Update history
   		}
+  		
+      //
+      // Function fornavigating back in history
+      //  		
   		
   		var goBackInHistory = function(targetId, index) {
     		// Go back to index and remove the following children in the history
@@ -351,7 +367,11 @@ $( document ).ready(function() {
 
     		return false;
   		}
-  		
+
+      //
+      // Function for constructing HTML for question
+      //  		
+
   		var getQuestion = function(_question, _instruction, _alternatives, targetId) {
           var html = $('<fieldset>', {
             class: 't-margin-bottom--large animations__fade-in-left'
@@ -384,6 +404,10 @@ $( document ).ready(function() {
           return html;
       }
 
+      //
+      // Function for constructing HTML for a conclusion
+      //  		
+
   		var getConclusion = function(_title, _content) {
 
     		  var html = $('<section/>', {
@@ -407,7 +431,11 @@ $( document ).ready(function() {
 
           return html;
       }
-  		
+
+      //
+      // Function for constructing HTML for the history
+      //  		
+
   		var getHistory = function() {
     		  if (dataHistory.length < 1) return null;
     		 // Construct markup
@@ -442,7 +470,6 @@ $( document ).ready(function() {
 
       // Trigger on load
   		resetWizard();
-  		
   		
 		} else {
   	  $(this).innerHTML('<p><em>' + captionError + '</em></p>');	
