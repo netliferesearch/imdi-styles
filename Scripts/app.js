@@ -265,9 +265,6 @@ $( document ).ready(function() {
       var captionStartOver = $(this).data('caption-start-over') ? $(this).data('caption-start-over') : 'Start på nytt';      
       var captionError = $(this).data('caption-error') ? $(this).data('caption-error') : 'Det skjedde en feil. Vennligst prøv å last siden på nytt.';      
 
-      // Convert format
-      captionLeadtext = decodeURIComponent(captionLeadtext.replace(/\+/g, ' ') );
-
       //
       // Function that reset the interaction
       //
