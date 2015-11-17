@@ -280,7 +280,8 @@ $( document ).ready(function() {
           html: captionLeadtext
         });
         
-        var htmlbutton = $("<a>", {
+        var htmlbutton = $("<button>", {
+          type: 'button',
           class: "button button--large", 
           html: captionStartWizard, 
           click: $.proxy(updateWizard, null, -1, -1, startId)
@@ -329,6 +330,7 @@ $( document ).ready(function() {
           // Construct markup
           $(wrapper).append(getQuestion(_question, _instruction, _alternatives, targetId));
           $(wrapper).append(getHistory());
+          $(wrapper).find('legend').focus();
         
     		// CONCLUSION
           
@@ -341,12 +343,13 @@ $( document ).ready(function() {
           // Construct markup
           $(wrapper).append(getConclusion(_title, _content));
           $(wrapper).append(getHistory());
-
+          $(wrapper).find('h3').focus();
         
         // ERROR
         
         } else {
           $(wrapper).append('<p><em>' + captionError + '</em></p>');
+          $(wrapper).focus(); 
         }
         
   		}
@@ -374,7 +377,8 @@ $( document ).ready(function() {
             class: 't-margin-bottom--large animations__fade-in-left'
           });
           $('<legend/>', {
-            class: 'h2',
+            class: 'h2  t-no-focus',
+            tabindex: '-1',
             html: _question
             }).appendTo($(html));
             
@@ -412,7 +416,8 @@ $( document ).ready(function() {
           });
 
           $('<h3/>',{
-            class: 'h2',
+            class: 'h2 t-no-focus',
+            tabindex: '-1',
             html: _title
             }).appendTo($(html));
             
