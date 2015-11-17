@@ -3,32 +3,32 @@
 .illustration {
     position: relative;
     padding-bottom: @spacing--xlarge;
-    @media (min-width: @screen--md) {
+    .query-min(@screen--md; {
       padding-bottom: 0;      
       margin-bottom: @spacing--large;
-    }
+    });
     &__background {
         display: none;
-        @media (min-width: @screen--md) {
+        .query-min(@screen--md; {
             display: block; 
-        }
+        });
     }
     &__figure {
         width: auto;
         max-width: 100%;
         .transition(transform 200ms @swift-out);
         margin-bottom: @spacing;
-        @media (min-width: @screen--md) {	
+        .query-min(@screen--md; {	
           &:hover, &:focus, &:active {
             .transform(scale(1.1));
             & + .illustration__hover-box {
               display: block !important;
             }
           }
-        }
+        });
     }
     &__item {
-       @media (min-width: @screen--md) {	
+       .query-min(@screen--md; {	
         .illustration__figure {
           .animation(animations__fade-in-down 500ms @swift-out backwards);	
         }
@@ -72,30 +72,30 @@
   				  .animation-delay(.4s);
   				}
   			}			        
-      }
+      });
       &--mobile {
-          @media (min-width: @screen--md) {
+          .query-min(@screen--md; {
               display: none; 
-          }
+          });
       }      
     }
     &__trigger {
       padding: 0 @gutter;      
-      @media (max-width: @screen--md) {	
+      .query-max(@screen--md; {	
         width: auto !important;
-      }
-      @media (min-width: @screen--md) {	
+      });
+      .query-min(@screen--md; {	
         padding: 0;
         position: absolute;
         display: block;
-      }
+      });
     }
     &__hover-box {
         width: 20em;
         &:hover {        
             display: block !important;
         }
-        @media (max-width: @screen--md) {	        
+        .query-max(@screen--md; {	        
             display: block !important;
             position: static;
             left: auto !important;
@@ -109,14 +109,14 @@
             .hover-box__point {
                 display: none;
             }
-        }
+        });
     }
     &__carousel-button {
       position: absolute;
       z-index: 2;
-      @media (min-width: @screen--md) {	
+      .query-min(@screen--md; {	
         display: none !important;
-      } 
+      }); 
       &--previous {
         left: 0;
         bottom: 0;

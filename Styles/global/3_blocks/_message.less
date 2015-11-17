@@ -9,9 +9,9 @@
 	margin-bottom: @spacing;
 	color: @color__orange--dark;
 	.fontSize(@font-size--medium);	
-	@media (min-width: @screen--md) {
+	.query-min(@screen--md; {
 		padding-left: 0;
-	}	
+	});	
 	&__icon {
 		.fontSize(@font-size--small);
 		position: absolute;
@@ -25,9 +25,9 @@
 		background: url('/UI/gfx/square--red.svg') no-repeat center center;
 		background-size: contain;
 		color: @color__white;	
-		@media (min-width: @screen--md) {
+		.query-min(@screen--md; {
 			left: -(35px + @spacing--small);
-		}				
+		});				
 	} 
 	&--ok {
 		color: @color__black;

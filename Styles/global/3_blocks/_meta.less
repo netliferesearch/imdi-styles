@@ -14,20 +14,20 @@
 	 &__button {
 		 margin-top: @spacing--small;
 		 display: block;
-		 @media (min-width: @screen--md) {
+		 .query-min(@screen--md; {
 			display: inline-block;
 			margin-top: 0;
 		 	margin-left: @spacing--small;
-		 }
+		 });
 	 }
 	 .ingress + & {
 		 margin-top: -@spacing--medium;
-		@media (min-width: @screen--md) {
+		.query-min(@screen--md; {
 			margin-bottom: @spacing--large;		
-		}
-		@media (min-width: @screen--md) {
+		});
+		.query-min(@screen--md; {
 			margin-bottom: @spacing--large;		
-		}	
+		});	
 		 @media print {
 		 	margin-bottom: @spacing;	 
 		 }			 

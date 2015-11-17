@@ -13,12 +13,12 @@
 		vertical-align: middle;
 		width: 33%;
 		padding-right: (@gutter / 2);
-		@media (min-width: @screen--md) {	
+		.query-min(@screen--md; {	
 			display: block; 
 			width: 100%;
 			margin-bottom: @spacing;			 
 			padding: 0;
-		}	 	
+		});	 	
 	}
 	&__content {
 		display: table-cell;	
@@ -26,12 +26,12 @@
 		width: 66%;		
 		text-align: left;
 		padding-left: (@gutter / 2);		
-		@media (min-width: @screen--md) {	
+		.query-min(@screen--md; {	
 			display: block; 
 			width: 100%;
 			text-align: center;			
 			padding: 0;
-		}	 
+		});	 
 	}
 	&__name {
 		.text();

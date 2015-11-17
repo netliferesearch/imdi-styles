@@ -12,9 +12,9 @@
 	}
 	&__content {
 		margin-bottom: @spacing--large;
-		@media (min-width: @screen--md) {
+		.query-min(@screen--md; {
 			margin-bottom: @spacing--xlarge;	
-		}	
+		});	
 		&--section {
 			margin-bottom: 0;
 		}	
@@ -38,6 +38,6 @@
 		}						
 	}	
 	&__footer {		
-		//background: @color__canvas-grey;
+
 	}
 }		

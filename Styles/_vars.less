@@ -20,14 +20,14 @@
 @color__purple--dark        : #ba4b7a; // RGB(186,75,123) CMYK(26%, 85%, 28%, 0%)
 
 
-@color__canvas-orange	    : #f2e7e7;
-@color__canvas-green	    : #e4efe4;
-@color__canvas-yellow	    : #fff8e6;
+@color__canvas-orange	      : #f2e7e7;
+@color__canvas-green	      : #e4efe4;
+@color__canvas-yellow	      : #fff8e6;
 @color__canvas-grey	        : #f2efed; // RGB(242,239,237) CMYCK(0%, 0%, 0%, 4%)
 @color__canvas-grey--dark   : #bfbfbf;
 
-@color__text	            : @color__black;
-@color__links	            : @color__orange--dark;
+@color__text	              : @color__black;
+@color__links	              : @color__orange--dark;
 
 /*------------------------------------*\
     BREAKPOINTS
@@ -44,14 +44,14 @@
     GRID
 \*------------------------------------*/
 
-@grid-width                 : 70em;
-@gutter                     : 21px;
-@spacing--xlarge            : 84px;
-@spacing--large             : 42px;
-@spacing                    : 21px;
-@spacing--medium            : 14px; 
-@spacing--small             : 7px; 
-@spacing--xsmall            : 5px;
+@grid-width                  : 70em;
+@gutter                      : 21px;
+@spacing--xlarge             : 84px;
+@spacing--large              : 42px;
+@spacing                     : 21px;
+@spacing--medium             : 14px; 
+@spacing--small              : 7px; 
+@spacing--xsmall             : 5px;
 
 /*------------------------------------*\
     #TYPE
@@ -69,7 +69,7 @@
     $LINE HEIGHTS
 \*------------------------------------*/
 
-@line-height   		         : 1.695;
+@line-height   		           : 1.695;
 @line-height--header         : 2.4;
 
 
@@ -331,7 +331,7 @@
 
 @swift-out         : cubic-bezier(0, 0, .1, 1);
 
-
+ 
 /*------------------------------------*\
     MEDIA QUERIES
 \*------------------------------------*/
@@ -343,8 +343,11 @@
   .query-min(@screen--md; {
         color: blue;
     });
+    --
+    @fix-mqs
 	
 */
+
 
 @fix-mqs: false;
 @old-ie: false;
@@ -368,7 +371,7 @@
 
 // Mixin that will wrap our content in a media query
 .query-max(@width; @rules) when (@old-ie = false) {
-    @media screen and (min-width: @width) {
+    @media screen and (max-width: @width) {
         @rules();
     }
 }

@@ -39,10 +39,10 @@
 		width: 118px;
 		top: @spacing;
 		left: @spacing + 33px;
-		@media (min-width: @screen--lg) {
+		.query-min(@screen--lg; {
 			top: @spacing + 33px;
 			left: @spacing;		   
-		}
+		});
 		@media print {
 			display: none !important;	
 		}
@@ -101,10 +101,10 @@
 	&--with-image {
 		padding-left: @spacing;
 		padding-top: 155px; 		
-		@media (min-width: @screen--lg) {
+		.query-min(@screen--lg; {
 			padding-top: @spacing;
 			padding-left: 160px; 		
-		}
+		});
 		@media print {
 			padding-top: @spacing;				
 			padding-left: @spacing;		

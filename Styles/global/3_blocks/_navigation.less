@@ -3,12 +3,12 @@
 .navigation {
 	margin-top: @spacing--small;  
 	margin-bottom: @spacing--large; 
-	@media (min-width: @screen--sm) {
+	.query-min(@screen--sm; {
 		margin-top: @spacing;
-	}		
-	@media (min-width: @screen--lg) {
+	});		
+	.query-min(@screen--lg; {
 		margin-top: @spacing;
-	}
+	});
 	@media print {
 		margin-bottom: 30px;
 	}		

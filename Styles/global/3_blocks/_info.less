@@ -2,9 +2,9 @@
  
 .info {
 	margin-bottom: @spacing;
-	@media (min-width: @screen--md) {
+	.query-min(@screen--md; {
 		margin-bottom: @spacing--large;		 
-	}
+	});
 	&--inline {
 		margin: 0;
 	}

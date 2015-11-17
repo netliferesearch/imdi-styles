@@ -1,0 +1,86 @@
+
+/*------------------------------------*\
+    Set media query mixin to always include styles for the widest breakpoint
+    Lazy loading of variables in LESS overwrite the settings in the vars file. 
+\*------------------------------------*/
+@import "../_vars";  
+@fix-mqs: 57em;
+@old-ie: true;
+
+
+// GENERIC
+@import "../global/1_generic/_reset";    
+@import "../global/1_generic/_normalize";
+@import "../global/1_generic/_clearfix";   
+
+// BASE 
+@import "../global/2_base/_animations";
+@import "../global/2_base/_body";
+@import "../global/2_base/_grid";
+@import "../global/2_base/_flag"; 
+@import "../global/2_base/_fontface";    
+@import "../global/2_base/_icons";
+@import "../global/2_base/_type";
+@import "../global/2_base/_form";
+@import "../global/2_base/_list";    
+
+// BLOCKS 
+@import "../global/3_blocks/_blockquote";  
+@import "../global/3_blocks/_breadcrumbs";
+@import "../global/3_blocks/_bullet";
+@import "../global/3_blocks/_button";
+@import "../global/3_blocks/_box";  
+@import "../global/3_blocks/_cta";   
+@import "../global/3_blocks/_cta-frontpage";
+@import "../global/3_blocks/_chart";
+@import "../global/3_blocks/_content-list";
+@import "../global/3_blocks/_feature"; 
+@import "../global/3_blocks/_feature-bullet"; 
+@import "../global/3_blocks/_feature-small"; 
+@import "../global/3_blocks/_footer";
+@import "../global/3_blocks/_filter-toggle";  
+@import "../global/3_blocks/_filter-choice";   
+@import "../global/3_blocks/_field-notification";   
+@import "../global/3_blocks/_sentence-filter";
+@import "../global/3_blocks/_subsection";  
+@import "../global/3_blocks/_header"; 
+@import "../global/3_blocks/_hint";      
+@import "../global/3_blocks/_hover-box";
+@import "../global/3_blocks/_masked-figure";  
+@import "../global/3_blocks/_indicator";
+@import "../global/3_blocks/_info";     
+@import "../global/3_blocks/_employee"; 
+@import "../global/3_blocks/_graph";
+@import "../global/3_blocks/_lightbox";
+@import "../global/3_blocks/_loading-indicator";      
+@import "../global/3_blocks/_meta";
+@import "../global/3_blocks/_message";     
+@import "../global/3_blocks/_ident";
+@import "../global/3_blocks/_illustration";
+@import "../global/3_blocks/_ingress";
+@import "../global/3_blocks/_image-block";
+@import "../global/3_blocks/_timeline"; 
+@import "../global/3_blocks/_toc";
+@import "../global/3_blocks/_page";
+@import "../global/3_blocks/_person";
+@import "../global/3_blocks/_slick-slider";
+@import "../global/3_blocks/_search";
+@import "../global/3_blocks/_search-result";
+@import "../global/3_blocks/_navigation";
+@import "../global/3_blocks/_pagination";
+@import "../global/3_blocks/_summary";
+@import "../global/3_blocks/_header-bullet";  
+@import "../global/3_blocks/_subtle-select";
+@import "../global/3_blocks/_table";
+@import "../global/3_blocks/_tabs-menu";
+@import "../global/3_blocks/_tabs-button-menu";
+@import "../global/3_blocks/_tabs-mini";  
+@import "../global/3_blocks/_toggle"; 
+@import "../global/3_blocks/_toggle-list"; 
+@import "../global/3_blocks/_line";
+@import "../global/3_blocks/_skiptocontent";           
+   
+// TRUMPS               
+@import "../global/4_thrumps/_thrumps"; 
+@import "../global/4_thrumps/_print"; 
+@import "../global/4_thrumps/_epi";  

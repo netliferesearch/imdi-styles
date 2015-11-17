@@ -106,21 +106,21 @@
 		}
 	}
 	&--only-mobile {
-		@media (min-width: @screen--md) {
+		.query-min(@screen--md; {
 			margin-bottom: 0;
 			.toggle__button {
 				display: none;
-			}	
+			}
 			.toggle__section {
 				display: block !important;
 				border: none;
 				padding: 0;
 				margin: 0 !important;
 			}
-		}
+		});	
 	}
 	&--only-tablet {
-		@media (min-width: @screen--lg) {
+		.query-min(@screen--lg; {
 			margin-bottom: 0;
 			.toggle__button {
 				display: none;
@@ -131,6 +131,6 @@
 				padding: 0;
 				margin: 0 !important;
 			}
-		}
+		});
 	}	
 }

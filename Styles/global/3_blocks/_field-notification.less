@@ -9,14 +9,13 @@
 	margin-bottom: @spacing--small;
 	position: relative;
 	z-index: 1;
-	@media (min-width: @screen--md) {	
+	.query-min(@screen--md; {	
 		margin: 0;
 		margin-top: -@spacing;
-	}	
+	});	
 	&--animate {
 		.animation(animations__shake--vertical 700ms @swift-out);
 	}
-	
 	&__caption {
 		.text--small();
 		.fontSize(10);

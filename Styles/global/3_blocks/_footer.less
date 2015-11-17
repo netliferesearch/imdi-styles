@@ -4,12 +4,12 @@
 	background: @color__orange;
 	color: @color__white;
 		
-	@media (min-width: @screen--lg) {	
+	.query-min(@screen--lg; {	
 		background: linear-gradient(
 	    	to right, 
 			@color__orange 50%, @color__orange--dark 50%
 		);	
-	}
+	});
 	@media print {
 		display: none;	
 	}
@@ -21,39 +21,39 @@
 		}
 	}
 	&__bg {
-		@media (min-width: @screen--lg) {
+		.query-min(@screen--lg; {
 			background: linear-gradient(
 		    	to right, 
 				@color__orange percentage(14 / 22), @color__orange--dark percentage(8 / 22)
 			);			
-		}
+		});
 	}
 	&__row {
-		@media (min-width: @screen--lg) {
+		.query-min(@screen--lg; {
 			display: table;
 			width: 100%;
-		}
+		});
 	}
 	&__main {
 		//background: @color__orange;		
 		padding: @spacing 0 @spacing--large 0;		
-		@media (min-width: @screen--lg) {		
+		.query-min(@screen--lg; {		
 			padding: @spacing--xlarge 0 @spacing--xlarge 0;		
 			display: table-cell;
 			vertical-align: bottom;
 			width: percentage(14 / 22);
 			margin-bottom: 0;
-		}
+		});
 	}
 	&__global {
 		background: @color__orange--dark;
 		margin: 0 -@gutter;
 		padding: @spacing--large @gutter @spacing @gutter;		
-		@media (min-width: @screen--md) {	
+		.query-min(@screen--md; {	
 			margin-left: -15%;
 			padding-left: 15%;				
-		}		
-		@media (min-width: @screen--lg) {	
+		});		
+		.query-min(@screen--lg; {	
 			background: none;						
 			margin: 0;
 			padding: @spacing--large 0 @spacing--xlarge 0;				
@@ -61,24 +61,24 @@
 			vertical-align: bottom;		
 			padding-left: @spacing--large;
 			width: percentage(8 / 22);
-		}
+		});
 	}
 	&__submenues {
-		@media (min-width: @screen--md) {	
+		.query-min(@screen--md; {	
 			.row();
-		}
-		@media (min-width: @screen--lg) {
+		});
+		.query-min(@screen--lg; {
 			.clear-row();
-		}
+		});
 	}
 	&__submenu {
 		margin-bottom: @spacing;
-		@media (min-width: @screen--md) {	
+		.query-min(@screen--md; {	
 			.col(1/2);
-		}
-		@media (min-width: @screen--lg) {
+		});
+		.query-min(@screen--lg; {
 			.clear-col();		
-		}
+		});
 		&:last-child {
 			margin-bottom: 2px;
 		}		
@@ -127,9 +127,9 @@
 			.animation(animations__fade-in 300ms @swift-out both);	
 		}
 		.footer__search {
-			@media (min-width: @screen--md) {
+			.query-min(@screen--md; {
 				display: none;
-			}
+			});
 		}
 	}
 

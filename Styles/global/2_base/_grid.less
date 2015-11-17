@@ -29,10 +29,10 @@ ul.row, ol.row {
 
 .col--main {
 	.col(1); /* Se mixins in _vars.less */
-	@media (min-width: @screen--md) {
+	.query-min(@screen--md; {
 		.col(14/22); /* Se mixins in _vars.less */
 		.col-offset(1/22);		
-	}
+	});
 	@media screen and (min-width: @screen--lg) {
 		.col(12/22); /* Se mixins in _vars.less */
 		.col-offset(2/22);
@@ -41,22 +41,22 @@ ul.row, ol.row {
 
 .col--filter {
 	.col(1); /* Se mixins in _vars.less */
-	@media (min-width: @screen--md) {
+	.query-min(@screen--md; {
 		.col(14/22); /* Se mixins in _vars.less */
 		.col-offset(1/22);		
-	}	
-	@media (min-width: @screen--lg) {
+	});	
+	.query-min(@screen--lg; {
 		.col-offset(1/22);		
 		.col(7/22); /* Se mixins in _vars.less */
 		float: right !important; // Sorry ... media queries inside less mixins is apearantly not reccommended		
-	}		
+	});		
 }
 
 .col--related {
 	.col(1); /* Se mixins in _vars.less */
-	@media (min-width: @screen--md) {
+	.query-min(@screen--md; {
 		.col(7/22); /* Se mixins in _vars.less */	
-	}
+	});
 	@media screen and (min-width: @screen--lg) {
 		.col-offset(1/22);		
 		.col(7/22); /* Se mixins in _vars.less */
@@ -65,10 +65,10 @@ ul.row, ol.row {
 
 .col--main-wide {
 	.col(1); /* Se mixins in _vars.less */
-	@media (min-width: @screen--md) {
+	.query-min(@screen--md; {
 		.col(21/22); /* Se mixins in _vars.less */
 		.col-offset(1/22);		
-	}
+	});
 	@media screen and (min-width: @screen--lg) {
 		.col(20/22); /* Se mixins in _vars.less */
 		.col-offset(2/22);
@@ -77,56 +77,56 @@ ul.row, ol.row {
 
 .col--half {
 	.col(1); /* Se mixins in _vars.less */ 
-	@media (min-width: @screen--md) {
+	.query-min(@screen--md; {
 		.col(1/2); /* Se mixins in _vars.less */	
-	}
+	});
 }
 
 .col--half-lg {
 	.col(1); /* Se mixins in _vars.less */ 
-	@media (min-width: @screen--lg) {
+	.query-min(@screen--lg; {
 		.col(1/2); /* Se mixins in _vars.less */
-	}	
+	});	
 }
 
 .col--third {
 	.col(1); /* Se mixins in _vars.less */ 
-	@media (min-width: @screen--md) {
+	.query-min(@screen--md; {
 		.col(1/2); /* Se mixins in _vars.less */	
-	}
-	@media (min-width: @screen--lg) {
+	});
+	.query-min(@screen--lg; {
 		.col(1/3); /* Se mixins in _vars.less */	
-	}
+	});
 }
 
 .col--quarter {
 	.col(1); /* Se mixins in _vars.less */
-	@media (min-width: @screen--md) {
+	.query-min(@screen--md; {
 		.col(1/3); /* Se mixins in _vars.less */	
-	}
-	@media (min-width: @screen--lg) {
+	});
+	.query-min(@screen--lg; {
 		.col(1/4); /* Se mixins in _vars.less */
-	}		
+	});		
 	
 }
 
 .col--fifth {
 	.col(1); /* Se mixins in _vars.less */
-	@media (min-width: @screen--md) {
+	.query-min(@screen--md; {
 		.col(1/3); /* Se mixins in _vars.less */	
-	}
-	@media (min-width: @screen--lg) {
+	});
+	.query-min(@screen--lg; {
 		.col(1/5); /* Se mixins in _vars.less */
-	}		
+	});		
 	
 }
 
 
 .col--six {
 	.col(1); /* Se mixins in _vars.less */
-	@media (min-width: @screen--lg) {
+	.query-min(@screen--lg; {
 		.col(1/6); /* Se mixins in _vars.less */
-	}		
+	});		
 	
 }
 
@@ -139,10 +139,10 @@ ul.row, ol.row {
 			margin-left: 0;  
 			margin-right: 0;	
 		}
-		@media (min-width: @screen--md) {
+		.query-min(@screen--md; {
 			width: percentage(22/14);
 			margin-left: percentage(-1/14);		
-		}	
+		});	
 		@media screen and (min-width: @screen--lg) {
 			width: percentage(16/12);
 			margin-left: percentage(-2/12);
@@ -152,36 +152,36 @@ ul.row, ol.row {
 		margin-left: -@gutter;
 		margin-right: -@gutter;		
 		
-		@media (min-width: @screen--md) {
+		.query-min(@screen--md; {
 			width: percentage(22/14);
 			margin-left: percentage(-1/14);		
-		}	
+		});	
 		@media screen and (min-width: @screen--lg) {
 			width: percentage(22/12);
 			margin-left: percentage(-2/12);
 		}
 	}
 	.col-block-bleed--full-right {		
-		@media (min-width: @screen--md) {
+		.query-min(@screen--md; {
 			width: percentage(21/14);
-		}	
+		});	
 		@media screen and (min-width: @screen--lg) {
 			width: percentage(20/12);
 		}
 	}	
 }
 .col--big-image {
-	@media (min-width: @screen--md) {		 	
+	.query-min(@screen--md; {		 	
 		.col(2.25 / 3.25);
-	}
+	});
 } 
 .col--small-image {
-	@media (min-width: @screen--sm) {		 		
+	.query-min(@screen--sm; {		 		
 		.col(1 / 2);	
-	}
-	@media (min-width: @screen--md) {		 	
+	});
+	.query-min(@screen--md; {		 	
 		.col(1 / 3.25);
-	}
+	});
 
 }
 
@@ -194,7 +194,7 @@ ul.row, ol.row {
 
 .col--right-padding {
 	/* A modifier for columns when they may become stacked to prevent uneven linebreaks. Need spacing commented out in the markup. */
-	@media (min-width: @screen--md) {		 		
+	.query-min(@screen--md; {		 		
 		padding-right: @spacing !important;
-	}
+	});
 }

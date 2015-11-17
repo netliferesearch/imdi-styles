@@ -13,17 +13,17 @@
 		list-style: none;
 		margin: 0;
 		margin-bottom: @spacing--small;	
-		@media (min-width: @screen--md) {
+		.query-min(@screen--md; {
 			padding-right: 110px;	
-		}
+		});
 	}
 	&__value{
 		.font-siri--regular();
 		display: block;
 	}
 	&__edit{
-		@media (min-width: @screen--md) {		
+		.query-min(@screen--md; {		
 			position: absolute;
-		}
+		});
 	}
 }

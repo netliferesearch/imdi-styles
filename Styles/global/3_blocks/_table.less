@@ -15,12 +15,10 @@ table, .table {
 		overflow-x: auto;
 		margin-top: @spacing--large;
 		margin-bottom: @spacing--large;
-		@media (min-width: @screen--lg) {		
+		.query-min(@screen--lg; {		
 			margin-top: @spacing--xlarge;
 			margin-bottom: @spacing--xlarge;			
-		}		
-		//padding: @spacing @spacing--medium @spacing;
-		//background: lighten(@color__canvas-grey,10%);
+		});		
 	}
 	&__thead, thead {
 		border-bottom:1px solid @color__canvas-grey--dark;
@@ -29,9 +27,9 @@ table, .table {
 		.font-siri--medium();
         .fontSize(@font-size--small);			
         padding: @spacing--medium @spacing--medium;	
-        @media (min-width: @screen--md) {
+        .query-min(@screen--md; {
 	        .fontSize(@font-size--regular);			
-        }	
+        });	
 	}
 	strong {
 		padding: 0;
@@ -45,10 +43,10 @@ table, .table {
 	
 	&__td, td {
 		.font-siri--regular();
-        .fontSize(@font-size--small);		
-        padding: @spacing--medium @spacing--medium;
-        vertical-align: top;	
-        border-bottom: 1px solid @color__canvas-grey--dark
+    .fontSize(@font-size--small);		
+    padding: @spacing--medium @spacing--medium;
+    vertical-align: top;	
+    border-bottom: 1px solid @color__canvas-grey--dark
 	}
 
 	
@@ -60,12 +58,12 @@ table, .table {
 	}	
 	&__caption, caption {
 		.h4();
-        padding: @spacing--medium @spacing--medium;		
+    padding: @spacing--medium @spacing--medium;		
 		color: @color__grey;
 		text-align: left;
-		@media (min-width: @screen--md) {
+		.query-min(@screen--md; {
 			text-align: left;			
-		}
+		});
 	}
 }
 

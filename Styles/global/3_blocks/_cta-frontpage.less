@@ -2,14 +2,14 @@
 
 .cta-frontpage {
 	margin-bottom: @spacing;	
-	@media (min-width: @screen--md) {
+	.query-min(@screen--md; {
 		.row();		
 		margin-top: @spacing;
-	}
+	});
 	&__item {
-		@media (min-width: @screen--md) {		
+		.query-min(@screen--md; {		
 			.col(1/3);	 			
-		}
+		});
 	}
 	
 	&__bullet {
@@ -23,7 +23,7 @@
 		width: 50px;
 		height: 50px;
 		line-height: 50px;
-		@media (min-width: @screen--md) {		
+		.query-min(@screen--md; {		
 			display: block;
 			margin: 0 auto;
 			margin-bottom: @spacing;	
@@ -31,13 +31,13 @@
 			height: 75px;
 			line-height: 75px;
 			.transition(color 400ms @swift-out);
-		}
-		@media (min-width: @screen--lg) {	
+		});
+		.query-min(@screen--lg; {	
 			.fontSize(@font-size--large);	
 			width: 100px;
 			height: 100px;
 			line-height: 100px;			
-		}
+		});
 	}
 	
 	&__text {
@@ -49,15 +49,15 @@
 		color: @color__text;	
 		border-bottom: 1px solid transparent;	
 		padding-top: 3px;	
-		@media (min-width: @screen--md) {			
+		.query-min(@screen--md; {			
 			display: inline;
 			padding: 0;
 			text-align: center;		
 			color: @color__text;							
-		}
-		@media (min-width: @screen--lg) {	
+		});
+		.query-min(@screen--lg; {	
 			.fontSize(@font-size--large);	
-		}		
+		});		
 	}
 
 	&__link {
@@ -65,11 +65,11 @@
 		margin-bottom: @spacing;
 		border: none;			
 		width: 100%;		
-		@media (min-width: @screen--md) {
+		.query-min(@screen--md; {
 			display: block;			
 			text-align: center;
 			padding: 0 @spacing;	
-		}
+		});
 		&:hover, &:focus {
 			.cta-frontpage__bullet {
 				color: @color__white;
@@ -77,9 +77,6 @@
 			}
 			.cta-frontpage__text {
 				color: @color__green;	
-				@media (min-width: @screen--md) {				
-					//border-bottom-color:  @color__green; 
-				}
 			}
 		}
 	}

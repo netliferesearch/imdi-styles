@@ -3,10 +3,9 @@
 .subtle-select {
 	position: relative;
 	margin-bottom: @spacing--small;
-	@media (min-width: @screen--md) {
+	.query-min(@screen--md; {
     margin-bottom: @spacing--medium;	
-  }
-//	max-width: 
+  });
 	&__label {
 		.text--small();
 		position: absolute;

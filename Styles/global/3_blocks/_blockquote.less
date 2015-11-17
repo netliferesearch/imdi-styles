@@ -3,16 +3,16 @@
 .blockquote, blockquote {
 	background: @color__canvas-grey;
 	padding: @spacing--large @gutter;	
-	@media (min-width: @screen--md) {
+	.query-min(@screen--md; {
 		width: percentage(16/14);
 		margin-left: percentage(-1/14);	
 		padding: @spacing--large percentage(1/14);
-	}
-	@media (min-width: @screen--lg) {
+	});
+	.query-min(@screen--lg; {
 		width: percentage(16/12);
 		margin-left: percentage(-2/12);
 		padding: @spacing--large percentage(1/12);	
-	}	
+	});	
 	p {
 		.text--large(); 
 	}

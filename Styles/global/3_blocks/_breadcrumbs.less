@@ -2,12 +2,12 @@
 
 .breadcrumbs {
 	margin: 0 0 @spacing 0;
-	@media (min-width: @screen--sm) {
+	.query-min(@screen--sm; {
 		margin: 0 0 42px 0;	
-	}
-	@media (min-width: @screen--md) {
+	});
+	.query-min(@screen--md; {
 		margin: 0 0 57px 0;		
-	}
+	});
 	@media print {
 		display: none;
 	}	

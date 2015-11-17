@@ -32,19 +32,17 @@
 	&__functions {
 		margin-bottom: @spacing;
 		position: relative;
-		@media (min-width: @screen--md) {
+		.query-min(@screen--md; {
 			float: right;
-			//margin-top: -35px;			
-		}
+		});
 		@media print {
 			display: none;
 		}						
 		.button {
-			@media (min-width: @screen--md) {
-				//float: right;
+			.query-min(@screen--md; {
 				display: inline-block;
 				margin: 0;
-			}
+			});
 		}
 	}
 	&__functions-item {
