@@ -1,0 +1,199 @@
+﻿h2 {
+   EditMenuTitle: Overskrifter;
+   EditMenuName: Overskrift 2;
+   font-family: "Siri Medium", Tahoma, sans-serif;
+   font-weight: normal;
+   font-style: normal;
+   line-height: 1.3125;
+   margin-bottom: 21px;
+   text-transform: none;
+   font-size: 32px;
+   font-size: 1.7777777777777777rem;
+}
+
+h3 {
+   EditMenuName: Overskrift 3;
+   font-family: "Siri Medium", Tahoma, sans-serif;
+   font-weight: normal;
+   font-style: normal;
+   line-height: 1.45833333;
+   margin-bottom: 14px;
+   text-transform: none;
+   font-size: 24px;
+   font-size: 1.3333333333333333rem;
+}
+
+h4 {
+   EditMenuName: Overskrift 4;
+   font-family: "Siri Medium", Tahoma, sans-serif;
+   font-weight: normal;
+   font-style: normal;
+   font-size: 16px;
+   font-size: 0.8888888888888888rem;
+   line-height: 1.75;
+   margin-bottom: 0px;
+   text-transform: uppercase;
+   letter-spacing: 0.05em;
+}
+
+h5
+{
+   EditMenuName: Overskrift 5;
+   font-family: "Siri", Tahoma, sans-serif;
+   font-size-adjust: 0.51;
+   font-size: 18px;
+   font-size: 1rem;
+   line-height: 1.55555556;
+   margin-bottom: 14px;
+   text-transform: none;
+   font-family: "Siri Medium", Tahoma, sans-serif;
+   font-weight: normal;
+   font-style: normal;
+   margin-bottom: 0;
+}
+
+p {
+  font-family: "Siri", Tahoma, sans-serif;
+  font-size-adjust: 0.51;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 18px;
+  font-size: 1rem;
+  line-height: 1.55555556;
+  margin-bottom: 14px;
+  text-transform: none;
+}
+
+a.button--large {
+    EditMenuTitle: Lenkestiler;
+    EditMenuName: Stor CTA knapp;
+    background: #e5201c;
+    color: #fff;
+}
+
+a.button--secondary {
+    EditMenuName: Alternativ CTA knapp;
+    background: #fff;
+    color: #e5201c;
+}
+
+blockquote {
+    EditMenuTitle: Blokksitering;
+    EditMenuName: Sitat;
+}
+
+cite {
+    EditMenuName: Sitert;
+}
+
+a,
+.a {
+  color: #e5201c;
+  border-bottom: 1px solid #e5201c;
+}
+
+a:hover,
+.a:hover,
+a:focus,
+.a:focus,
+a:active,
+.a:active
+{
+  color: #282828;
+  border-color: #282828;
+}
+a:focus,
+.a:focus
+{
+  outline: none;
+  outline-offset: 3px;
+}
+p + h2,
+ul + h2,
+ol + h2,
+.info + h2 {
+  margin-top: 84px;
+}
+p + h3,
+ul + h3,
+ol + h3,
+.info + h3 {
+  margin-top: 42px;
+}
+p + h4,
+ul + h4,
+ol + h4,
+.info + h4,
+h3 + h4 {
+  margin-top: 42px;
+}
+p + h5,
+ul + h5,
+ol + h5,
+.info + h5,
+h4 + h5 {
+  margin-top: 21px;
+}
+p + h6,
+ul + h6,
+ol + h6,
+.info + h6,
+h5 + h6 {
+  margin-top: 21px;
+}
+p + h7,
+ul + h7,
+ol + h7,
+.info + h7,
+h6 + h7 {
+  margin-top: 21px;
+}
+
+
+ul,
+ol {
+  padding-left: 21px;
+  margin-top: 42px;
+  margin-bottom: 42px;
+}
+
+ul li,
+ol li {
+  font-size: 18px;
+  font-size: 1rem;
+  font-family: "Siri", Tahoma, sans-serif;
+  font-size-adjust: 0.51;
+  font-weight: normal;
+  font-style: normal;
+  margin-bottom: 7px;
+  list-style-image: url("/UI/gfx/bullet__small--primary.svg");
+  list-style-position: outside;
+  padding-left: 5.25px;
+  margin-bottom: 1em;
+  line-height: 1.7em;
+}
+
+ol li {
+  list-style: decimal;
+  background: none;
+}
+
+ul ul,
+ol ul,
+ul ol,
+ol ol {
+  margin-top: 21px;
+}
+
+ul ul li,
+ol ul li,
+ul ol li,
+ol ol li {
+  list-style-image: url("/UI/gfx/bullet__small--secondary.svg");
+}
+ul ol li,
+ol ol li {
+  list-style: decimal;
+  background: none;
+}
+

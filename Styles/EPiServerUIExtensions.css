@@ -1,0 +1,13 @@
+﻿.fileIcon { width: 32px;height: 32px;margin: 5px !important; }
+.pdfIcon { background-image: url(/UI/Icons/pdfIcon32.png); }
+.wordIcon { background-image: url(/UI/Icons/wordIcon32.png); }
+.excelIcon { background-image: url(/UI/Icons/excelIcon32.png); }
+.powerpointIcon { background-image: url(/UI/Icons/pptIcon32.png); }
+
+.epi-content-area-editor .fileIcon { width: 16px;height: 16px; margin: 0 2px 0 0 !important; }
+.epi-content-area-editor .pdfIcon { background-image: url(/UI/Icons/pdfIcon16.png); }
+.epi-content-area-editor .wordIcon { background-image: url(/UI/Icons/wordIcon16.png); }
+.epi-content-area-editor .excelIcon { background-image: url(/UI/Icons/excelIcon16.png); }
+.epi-content-area-editor .powerpointIcon { background-image: url(/UI/Icons/pptIcon16.png); }
+
+.dijitTreeRow .fileIcon { margin-top: 6px !important; }
