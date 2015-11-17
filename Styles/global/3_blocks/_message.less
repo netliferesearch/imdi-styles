@@ -22,7 +22,9 @@
 		text-align: center;
 		top: -3px;
 		left: 0;
-		background: url('/UI/gfx/square--red.svg') no-repeat center center;
+		background-image: data-uri('/UI/gfx/square--red.svg');
+		background-position: center center;
+		background-repeat: no-repeat;			
 		background-size: contain;
 		color: @color__white;	
 		.query-min(@screen--md; {
@@ -32,7 +34,7 @@
 	&--ok {
 		color: @color__black;
 		.message__icon {
-			background-image: url('/UI/gfx/square--green.svg');
+			background-image: data-uri('/UI/gfx/square--green.svg');
 		}
 	}
 	&--inline {

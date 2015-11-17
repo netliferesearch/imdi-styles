@@ -54,7 +54,9 @@
 			height: 1rem;
 			pointer-events: none;
 			margin: 0;
-			background: url('/UI/icons/icon-down.svg') no-repeat center center;
+  		background-image: data-uri('/UI/icons/icon-down.svg');
+  		background-position: center center;
+  		background-repeat: no-repeat;			
 			background-size: contain;
 			top: 1.85rem;
 			right: none;
@@ -66,7 +68,9 @@
 	}
 	&__button--add {
 		&:after {
-			background: url('/UI/icons/icon-add.svg') no-repeat center center;
+  		background-image: data-uri('/UI/icons/icon-add.svg');
+  		background-position: center center;
+  		background-repeat: no-repeat;			
 			background-size: contain;
 		}		
 	}

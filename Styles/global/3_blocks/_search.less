@@ -25,7 +25,7 @@
 		.transition(all 0.2s ease); 		
 	}
 	&__button-icon	{
-		background-image: url('/UI/icons/white/icon-search.svg');
+		background-image: data-uri('/UI/icons/white/icon-search.svg');
 		margin-left: 0.25rem;		
 	}	
 	&--autocomplete {
@@ -40,7 +40,8 @@
 			right: 0.5rem;
 			z-index: 2;
 			pointer-events: none;
-			background: url('/UI/icons/red/icon-search.svg') center center;						
+  		background-image: data-uri('/UI/icons/red/icon-search.svg');
+  		background-position: center center;
 			background-repeat: no-repeat;
 			background-size: 1rem 1rem;
 			
