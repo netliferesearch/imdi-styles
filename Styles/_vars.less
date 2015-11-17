@@ -272,10 +272,10 @@
   // Then clear the floated columns
   .clearfix();
 
-  @media (min-width: @screen--sm) {
+  .query-min(@screen--sm; {
     margin-left:  (@_gutter / -2);
     margin-right: (@_gutter / -2);
-  }
+  });
 
   // Negative margin nested rows out to align the content of columns
   .row {
@@ -292,15 +292,13 @@
   min-height: 1px;
   word-wrap: break-word; 
   // Inner gutter via padding
-  @media (min-width: @screen--sm) {
+  .query-min(@screen--sm; {
 	  padding-left:  (@_gutter / 2);
 	  padding-right: (@_gutter / 2);
-  }
-  // Calculate width based on number of columns available
-  @media (min-width: @screen--sm) {
+    // Calculate width based on number of columns available
     float: left;
     width: percentage(@ratio);
-  }
+  });  
 }
 
 // Generate the small column offsets
@@ -348,7 +346,6 @@
 	
 */
 
-
 @fix-mqs: false;
 @old-ie: false;
 
@@ -359,7 +356,7 @@
 
 // Mixin that will wrap our content in a media query
 .query-min(@width; @rules) when (@old-ie = false) {
-    @media screen and (min-width: @width) {
+    @media (min-width: @width) {
         @rules();
     }
 }
@@ -371,7 +368,12 @@
 
 // Mixin that will wrap our content in a media query
 .query-max(@width; @rules) when (@old-ie = false) {
-    @media screen and (max-width: @width) {
+    @media (max-width: @width) {
         @rules();
     }
+}
+
+// Mixin that will hide the content for IE8
+.not-old-ie(@rules) when (@old-ie = false) {
+  @rules();
 }

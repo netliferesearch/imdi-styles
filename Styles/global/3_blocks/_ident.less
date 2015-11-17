@@ -4,36 +4,49 @@
 	display: block;
 	border: none;
 	position: relative;
+	height: 45px;
 	height: 2.5rem;
+	width: 135px;
 	width: 2.5rem * 3;
  .fontSize(@font-size--regular);
 	margin-bottom: 0;	
 	.query-min(@screen--md; {	
+  	height: 72px;
 		height:4rem;
+		width: 218px;
 		width: 4rem * 3;	
 	});			
 	.query-min(@screen--lg; {	
+  	height: 90px;
 		height: 5rem;
+		width: 270px;
 		width: 5rem * 3;			
+		margin-left: -94px;
 		margin-left: -( 4.5rem + 0.75em );			
 	});
 	&__symbol {
 		position: absolute;
 		display: block;		
+		width: 45px;
 		width: 2.5rem;
 		.query-min(@screen--md; {	
+  		width: 72px;
 			width: 4rem; 			
 		});		
 		.query-min(@screen--lg; {	
+  		width: 90px;
 			width: 5rem; 				
 		});		
-		svg {
+		svg, img {
 			width: 100%;
+			height: 45px;
 			height: 2.5rem;
 			.query-min(@screen--md; {	
+  			height: 72px;
 				height: 4rem; 			
 			});		
 			.query-min(@screen--lg; {	
+  			height: 90px;
 				height: 5rem; 				
 			});					
 		}		
@@ -44,18 +57,27 @@
 		overflow: hidden;
 		display: block;
 		box-sizing: border-box;
+		padding-top: 10px;
 		padding-top: 0.57rem;
+		margin-left: 48px;
 		margin-left: 2.7rem;	
+		width: 90px;
 		width: 2.5rem * 2;					
 		.query-min(@screen--md; {
+  		padding-top: 11px;
 			padding-top: 0.6rem;
+			margin-left: 75px;
 			margin-left: 4.2rem;	
+			width: 144px;
 			width: 4rem * 2;	
 		});
 		.query-min(@screen--lg; {
+  		padding-top: 9px;
 			padding-top: 0.5rem;
+			margin-left: 94px;
 			margin-left: ( 4.5rem + 0.75em );	
 			top: 6px;
+			width: 162px;
 			width: 4.5rem * 2;	
 		});					
 		

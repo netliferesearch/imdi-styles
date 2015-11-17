@@ -85,9 +85,9 @@
 .bullet--cta {
 	.bullet__icon {
 			background-image: url('/UI/gfx/square--green.svg');		
-			@media (min-width: @screen--lg) {
+  		.query-min(@screen--lg; {	
 				background: none;	
-			}	 
+			}); 
 	}
 	.bullet__content {
 		a {
@@ -97,14 +97,14 @@
 				color: @color__text;
 				border-color: @color__text;
 			}			
-			@media (min-width: @screen--lg) {
+  		.query-min(@screen--lg; {	
 				color: @color__white;
 				border-color: @color__white;
 				&:hover, &:active {
 					color: @color__white;
 					border-color: @color__text;
 				}							
-			}
+			});
 		}
 	}
 }

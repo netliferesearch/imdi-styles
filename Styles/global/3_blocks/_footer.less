@@ -1,11 +1,11 @@
 @import "../../_vars";
 
 .footer {
-	background: @color__orange;
+	background: @color__orange--dark;
 	color: @color__white;
-		
+	display: block;	
 	.query-min(@screen--lg; {	
-		background: linear-gradient(
+		background-image: linear-gradient(
 	    	to right, 
 			@color__orange 50%, @color__orange--dark 50%
 		);	
@@ -22,7 +22,7 @@
 	}
 	&__bg {
 		.query-min(@screen--lg; {
-			background: linear-gradient(
+			background-image: linear-gradient(
 		    	to right, 
 				@color__orange percentage(14 / 22), @color__orange--dark percentage(8 / 22)
 			);			

@@ -35,18 +35,27 @@
 
 .t-show-on-desktop {
 	display: none;
-	@media (min-width: @screen--lg), print {	
+  .query-min(@screen--lg; {	
+		display: block;
+	});
+	@media print {	
 		display: block;
 	}
 }
 .t-show-on-tablet {
 	display: none;
-	@media (min-width: @screen--md), print {	
+  .query-min(@screen--md; {	
+		display: inherit;
+	});
+	@media print {	
 		display: inherit;
 	}
 }
 .t-hide-on-tablet {
-	@media (min-width: @screen--md), print {	
+  .query-min(@screen--md; {	
+		display: none;
+	});
+	@media print {	
 		display: none;
 	}
 }
