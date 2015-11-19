@@ -1233,7 +1233,7 @@ ol.row li {
     float: left;
     width: 63.63636364%;
     /* Se mixins in _vars.less */
-    margin-left: 4.54545455%;
+    margin-left: 0%;
   }
 }
 .col--filter {
@@ -1828,13 +1828,13 @@ you can use the generic selector below, but it's slower:
 }
 /*
 .@{simple-line-icon-prefix}add.icon--white {
-	background-image: data-uri('@{simple-line-font-path}white/icon-add.svg');
+	background-image: data-uri('/UI/icons/white/icon-add.svg');
 }
 .@{simple-line-icon-prefix}apply.icon--white {
-	background-image: data-uri('@{simple-line-font-path}white/icon-apply.svg');
+	background-image: data-uri('/UI/icons/white/icon-apply.svg');
 }
 .@{simple-line-icon-prefix}arrow-down.icon--white {
-	background-image: data-uri('@{simple-line-font-path}white/icon-arrow-down.svg');
+	background-image: data-uri('/UI/icons/white/icon-arrow-down.svg');
 }
 */
 .icon__arrow-left.icon--white {
@@ -1842,11 +1842,11 @@ you can use the generic selector below, but it's slower:
 }
 /*
 .@{simple-line-icon-prefix}arrow-right.icon--white {
-	background-image: data-uri('@{simple-line-font-path}white/icon-arrow-right.svg');
+	background-image: data-uri('/UI/icons/white/icon-arrow-right.svg');
 } .@{simple-line-icon-prefix}arrow-up.icon--white {
-	background-image: data-uri('@{simple-line-font-path}white/icon-arrow-up.svg');
+	background-image: data-uri('/UI/icons/white/icon-arrow-up.svg');
 } .@{simple-line-icon-prefix}attatchment.icon--white {
-	background-image: data-uri('@{simple-line-font-path}white/icon-attatchment.svg');
+	background-image: data-uri('/UI/icons/white/icon-attatchment.svg');
 }
 */
 .icon__call.icon--white {
@@ -1859,22 +1859,22 @@ you can use the generic selector below, but it's slower:
   background-image: url('/UI/icons/white/icon-chart-line.svg');
 }
 /* .@{simple-line-icon-prefix}chart-pie.icon--white {
-	background-image: data-uri('@{simple-line-font-path}white/icon-chart-pie.svg');
+	background-image: data-uri('/UI/icons/white/icon-chart-pie.svg');
 } .@{simple-line-icon-prefix}chat.icon--white {
-	background-image: data-uri('@{simple-line-font-path}white/icon-chat.svg');
+	background-image: data-uri('/UI/icons/white/icon-chat.svg');
 }
 */
 .icon__check.icon--white {
   background-image: url('/UI/icons/white/icon-check.svg');
 }
 /* .@{simple-line-icon-prefix}close.icon--white {
-	background-image: data-uri('@{simple-line-font-path}white/icon-close.svg');
+	background-image: data-uri('/UI/icons/white/icon-close.svg');
 } .@{simple-line-icon-prefix}comments.icon--white {
-	background-image: data-uri('@{simple-line-font-path}white/icon-comments.svg');
+	background-image: data-uri('/UI/icons/white/icon-comments.svg');
 } .@{simple-line-icon-prefix}contract.icon--white {
-	background-image: data-uri('@{simple-line-font-path}white/icon-contract.svg');
+	background-image: data-uri('/UI/icons/white/icon-contract.svg');
 } .@{simple-line-icon-prefix}controls.icon--white {
-	background-image: data-uri('@{simple-line-font-path}white/icon-controls.svg');
+	background-image: data-uri('/UI/icons/white/icon-controls.svg');
 }
 */
 .icon__date.icon--white {
@@ -1884,95 +1884,95 @@ you can use the generic selector below, but it's slower:
   background-image: url('/UI/icons/white/icon-download.svg');
 }
 /* .@{simple-line-icon-prefix}edit.icon--white {
-	background-image: data-uri('@{simple-line-font-path}white/icon-edit.svg');
+	background-image: data-uri('/UI/icons/white/icon-edit.svg');
 } .@{simple-line-icon-prefix}email.icon--white {
-	background-image: data-uri('@{simple-line-font-path}white/icon-email.svg');
+	background-image: data-uri('/UI/icons/white/icon-email.svg');
 } .@{simple-line-icon-prefix}expand.icon--white {
-	background-image: data-uri('@{simple-line-font-path}white/icon-expand.svg');
+	background-image: data-uri('/UI/icons/white/icon-expand.svg');
 } .@{simple-line-icon-prefix}export.icon--white {
-	background-image: data-uri('@{simple-line-font-path}white/icon-export.svg');
+	background-image: data-uri('/UI/icons/white/icon-export.svg');
 }*/
 .icon__external.icon--white {
   background-image: url('/UI/icons/white/icon-external.svg');
 }
 /* .@{simple-line-icon-prefix}facebook.icon--white {
-	background-image: data-uri('@{simple-line-font-path}white/icon-facebook.svg');
+	background-image: data-uri('/UI/icons/white/icon-facebook.svg');
 } .@{simple-line-icon-prefix}favorite.icon--white {
-	background-image: data-uri('@{simple-line-font-path}white/icon-favorite.svg');
+	background-image: data-uri('/UI/icons/white/icon-favorite.svg');
 } .@{simple-line-icon-prefix}female.icon--white {
-	background-image: data-uri('@{simple-line-font-path}white/icon-female.svg');
+	background-image: data-uri('/UI/icons/white/icon-female.svg');
 } .@{simple-line-icon-prefix}file.icon--white {
-	background-image: data-uri('@{simple-line-font-path}white/icon-file.svg');
+	background-image: data-uri('/UI/icons/white/icon-file.svg');
 } .@{simple-line-icon-prefix}files.icon--white {
-	background-image: data-uri('@{simple-line-font-path}white/icon-files.svg');
+	background-image: data-uri('/UI/icons/white/icon-files.svg');
 } .@{simple-line-icon-prefix}flag.icon--white {
-	background-image: data-uri('@{simple-line-font-path}white/icon-flag.svg');
+	background-image: data-uri('/UI/icons/white/icon-flag.svg');
 } .@{simple-line-icon-prefix}folder.icon--white {
-	background-image: data-uri('@{simple-line-font-path}white/icon-folder.svg');
+	background-image: data-uri('/UI/icons/white/icon-folder.svg');
 } .@{simple-line-icon-prefix}home.icon--white {
-	background-image: data-uri('@{simple-line-font-path}white/icon-home.svg');
+	background-image: data-uri('/UI/icons/white/icon-home.svg');
 }
 */
 .icon__info.icon--white {
   background-image: url('/UI/icons/white/icon-info.svg');
 }
 /* .@{simple-line-icon-prefix}key.icon--white {
-	background-image: data-uri('@{simple-line-font-path}white/icon-key.svg');
+	background-image: data-uri('/UI/icons/white/icon-key.svg');
 } .@{simple-line-icon-prefix}left.icon--white {
-	background-image: data-uri('@{simple-line-font-path}white/icon-left.svg');
+	background-image: data-uri('/UI/icons/white/icon-left.svg');
 } .@{simple-line-icon-prefix}link.icon--white {
-	background-image: data-uri('@{simple-line-font-path}white/icon-link.svg');
+	background-image: data-uri('/UI/icons/white/icon-link.svg');
 } .@{simple-line-icon-prefix}location.icon--white {
-	background-image: data-uri('@{simple-line-font-path}white/icon-location.svg');
+	background-image: data-uri('/UI/icons/white/icon-location.svg');
 } .@{simple-line-icon-prefix}locked.icon--white {
-	background-image: data-uri('@{simple-line-font-path}white/icon-locked.svg');
+	background-image: data-uri('/UI/icons/white/icon-locked.svg');
 } .@{simple-line-icon-prefix}mail.icon--white {
-	background-image: data-uri('@{simple-line-font-path}white/icon-mail.svg');
+	background-image: data-uri('/UI/icons/white/icon-mail.svg');
 } .@{simple-line-icon-prefix}male.icon--white {
-	background-image: data-uri('@{simple-line-font-path}white/icon-male.svg');
+	background-image: data-uri('/UI/icons/white/icon-male.svg');
 } .@{simple-line-icon-prefix}map.icon--white {
-	background-image: data-uri('@{simple-line-font-path}white/icon-map.svg');
+	background-image: data-uri('/UI/icons/white/icon-map.svg');
 } .@{simple-line-icon-prefix}merge.icon--white {
-	background-image: data-uri('@{simple-line-font-path}white/icon-merge.svg');
+	background-image: data-uri('/UI/icons/white/icon-merge.svg');
 } .@{simple-line-icon-prefix}pay.icon--white {
-	background-image: data-uri('@{simple-line-font-path}white/icon-pay.svg');
+	background-image: data-uri('/UI/icons/white/icon-pay.svg');
 } .@{simple-line-icon-prefix}print.icon--white {
-	background-image: data-uri('@{simple-line-font-path}white/icon-print.svg');
+	background-image: data-uri('/UI/icons/white/icon-print.svg');
 } .@{simple-line-icon-prefix}rate.icon--white {
-	background-image: data-uri('@{simple-line-font-path}white/icon-rate.svg');
+	background-image: data-uri('/UI/icons/white/icon-rate.svg');
 } .@{simple-line-icon-prefix}right.icon--white {
-	background-image: data-uri('@{simple-line-font-path}white/icon-right.svg');
+	background-image: data-uri('/UI/icons/white/icon-right.svg');
 }
 */
 .icon__search.icon--white {
   background-image: url('/UI/icons/white/icon-search.svg');
 }
 /* .@{simple-line-icon-prefix}settings.icon--white {
-	background-image: data-uri('@{simple-line-font-path}white/icon-settings.svg');
+	background-image: data-uri('/UI/icons/white/icon-settings.svg');
 } .@{simple-line-icon-prefix}stack.icon--white {
-	background-image: data-uri('@{simple-line-font-path}white/icon-stack.svg');
+	background-image: data-uri('/UI/icons/white/icon-stack.svg');
 } .@{simple-line-icon-prefix}tooltip.icon--white {
-	background-image: data-uri('@{simple-line-font-path}white/icon-tooltip.svg');
+	background-image: data-uri('/UI/icons/white/icon-tooltip.svg');
 } .@{simple-line-icon-prefix}twitter.icon--white {
-	background-image: data-uri('@{simple-line-font-path}white/icon-twitter.svg');
+	background-image: data-uri('/UI/icons/white/icon-twitter.svg');
 } .@{simple-line-icon-prefix}unlocked.icon--white {
-	background-image: data-uri('@{simple-line-font-path}white/icon-unlocked.svg');
+	background-image: data-uri('/UI/icons/white/icon-unlocked.svg');
 } .@{simple-line-icon-prefix}up.icon--white {
-	background-image: data-uri('@{simple-line-font-path}white/icon-up.svg');
+	background-image: data-uri('/UI/icons/white/icon-up.svg');
 } .@{simple-line-icon-prefix}update.icon--white {
-	background-image: data-uri('@{simple-line-font-path}white/icon-update.svg');
+	background-image: data-uri('/UI/icons/white/icon-update.svg');
 } .@{simple-line-icon-prefix}upload.icon--white {
-	background-image: data-uri('@{simple-line-font-path}white/icon-upload.svg');
+	background-image: data-uri('/UI/icons/white/icon-upload.svg');
 } .@{simple-line-icon-prefix}user.icon--white {
-	background-image: data-uri('@{simple-line-font-path}white/icon-user.svg');
+	background-image: data-uri('/UI/icons/white/icon-user.svg');
 } .@{simple-line-icon-prefix}users.icon--white {
-	background-image: data-uri('@{simple-line-font-path}white/icon-users.svg');
+	background-image: data-uri('/UI/icons/white/icon-users.svg');
 } .@{simple-line-icon-prefix}youtube.icon--white {
-	background-image: data-uri('@{simple-line-font-path}white/icon-youtube.svg');
+	background-image: data-uri('/UI/icons/white/icon-youtube.svg');
 } .@{simple-line-icon-prefix}zoom-in.icon--white {
-	background-image: data-uri('@{simple-line-font-path}white/icon-zoom-in.svg');
+	background-image: data-uri('/UI/icons/white/icon-zoom-in.svg');
 } .@{simple-line-icon-prefix}zoom-out.icon--white {
-	background-image: data-uri('@{simple-line-font-path}white/icon-zoom-out.svg');
+	background-image: data-uri('/UI/icons/white/icon-zoom-out.svg');
 }
 */
 .icon__related.icon--white {
@@ -2002,6 +2002,14 @@ h1,
   font-size: 2.888888888888889rem;
   margin-bottom: 28px;
   /* Se mixin i _vars.less */
+}
+@media print {
+  h1,
+  .h1 {
+    font-size: 42px;
+    font-size: 2.3333333333333335rem;
+    margin-bottom: 22px;
+  }
 }
 h1 small,
 .h1 small {
@@ -3485,6 +3493,10 @@ blockquote small {
   background-color: white;
   position: relative;
   display: inline-block;
+}
+.chart__svg {
+  width: 100%;
+  height: auto;
 }
 .chart__background--benchmark {
   fill: #ffffff;
@@ -4994,6 +5006,20 @@ blockquote small {
   margin-bottom: 28px;
   /* Se mixin i _vars.less */
 }
+@media print {
+  .info--xlarge p {
+    font-size: 42px;
+    font-size: 2.3333333333333335rem;
+    margin-bottom: 22px;
+  }
+}
+@media print {
+  .info--xlarge p {
+    font-size: 42px;
+    font-size: 2.3333333333333335rem;
+    margin-bottom: 22px;
+  }
+}
 .info--xlarge p small {
   font-family: "Siri Medium", Tahoma, sans-serif;
   font-weight: normal;
@@ -5079,6 +5105,11 @@ blockquote small {
 .graph {
   margin-bottom: 21px;
   position: relative;
+}
+@media print {
+  .graph {
+    width: 80%;
+  }
 }
 @media print {
   .graph__filter {
@@ -7060,6 +7091,7 @@ table caption small,
 @media print {
   .toggle-list {
     margin-left: -21px;
+    page-break-inside: avoid;
   }
 }
 .toggle-list__button {
@@ -7130,6 +7162,11 @@ table caption small,
   font-size: 0.7em;
   line-height: 1.5em;
   display: block;
+}
+@media print {
+  .toggle-list__button-title {
+    margin-left: 21px;
+  }
 }
 .toggle-list__button-icon {
   float: right;
