@@ -6893,6 +6893,11 @@ table caption small,
   margin: 0;
   padding: 7px 0;
 }
+@media print {
+  .tabs-mini {
+    display: none;
+  }
+}
 .tabs-mini__item {
   font-family: "Siri", Tahoma, sans-serif;
   font-size-adjust: 0.51;
