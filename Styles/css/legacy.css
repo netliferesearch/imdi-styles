@@ -5115,11 +5115,6 @@ blockquote small {
   position: relative;
 }
 @media print {
-  .graph {
-    width: 90%;
-  }
-}
-@media print {
   .graph__filter {
     display: none;
   }
