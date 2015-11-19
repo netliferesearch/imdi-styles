@@ -3494,9 +3494,11 @@ blockquote small {
   position: relative;
   display: inline-block;
 }
-.chart__svg {
-  width: 100%;
-  height: auto;
+@media print {
+  .chart__svg {
+    width: 100%;
+    height: auto;
+  }
 }
 .chart__background--benchmark {
   fill: #ffffff;
@@ -5108,7 +5110,7 @@ blockquote small {
 }
 @media print {
   .graph {
-    width: 80%;
+    width: 90%;
   }
 }
 @media print {
