@@ -3,6 +3,9 @@
 .graph {
 	margin-bottom: @spacing;
 	position: relative;
+	@media print {
+    width: 80%;
+	}	
 	&__filter {
 		@media print {
 			display: none;
