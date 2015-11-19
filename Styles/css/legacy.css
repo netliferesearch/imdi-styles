@@ -6796,7 +6796,7 @@ table caption small,
   border-color: #f15540;
 }
 .tabs-menu__icon {
-  margin-right: 0.25em;
+  margin-right: 0.25rem;
   vertical-align: baseline;
   opacity: 1;
 }
@@ -6806,10 +6806,6 @@ table caption small,
 .tabs-menu--compact-mobile .tabs-menu__link--current .tabs-menu__icon {
   margin: 0;
   margin-right: 0.25em;
-}
-.tabs-menu--compact-mobile .tabs-menu__link--current .tabs-menu__icon {
-  margin: 0 7px;
-  margin-right: 42px;
 }
 .tabs-menu--large .tabs-menu__link {
   font-size: 15px;
