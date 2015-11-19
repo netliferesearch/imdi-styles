@@ -4844,6 +4844,12 @@ blockquote small {
   padding: 21px;
   margin-bottom: 21px;
 }
+@media print {
+  .indicator {
+    padding: 0;
+    background: none;
+  }
+}
 .indicator__primary {
   font-family: "Siri Medium", Tahoma, sans-serif;
   font-weight: normal;
@@ -7131,6 +7137,7 @@ table caption small,
   .toggle-list__button--expanded {
     display: block;
     padding: 0;
+    background: none;
   }
 }
 .toggle-list__button--expanded .toggle-list__button-icon {

@@ -4,6 +4,10 @@
 	background: @color__white;
 	padding: @spacing;
 	margin-bottom: @spacing;
+	@media print {
+		padding: 0;
+		background: none;
+	}		
 	&__primary {
 		.h3();
 		margin-bottom: 0;
