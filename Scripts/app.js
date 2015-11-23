@@ -252,11 +252,12 @@ $( document ).ready(function() {
       if ($(window).width() < 546) {
         target.slick({
           	slidesToShow: 1,
-              adaptiveHeight: true,
-              infinite: false,
-              focusOnSelect: true,
-              prevArrow: '[data-behaviour="carousel-prev"]',
-              nextArrow: '[data-behaviour="carousel-next"]'
+          	slidesToScroll: 1,
+            adaptiveHeight: true,
+            infinite: false,
+            focusOnSelect: true,
+            prevArrow: '[data-behaviour="carousel-prev"]',
+            nextArrow: '[data-behaviour="carousel-next"]'
           });
       } else {
         target.slick('unslick');

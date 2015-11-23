@@ -2,7 +2,7 @@
 
 .illustration {
     position: relative;
-    padding-bottom: @spacing--xlarge;
+    padding-bottom: @spacing--large + @spacing;
     .query-min(@screen--md; {
       padding-bottom: 0;      
       margin-bottom: @spacing--large;
@@ -184,6 +184,7 @@
     }
     &__carousel-button {
       position: absolute;
+      width: auto;
       z-index: 2;
       .query-min(@screen--md; {	
         display: none !important;

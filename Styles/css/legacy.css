@@ -5573,7 +5573,7 @@ a.ident:active .ident__triangle {
 }
 .illustration {
   position: relative;
-  padding-bottom: 84px;
+  padding-bottom: 63px;
   padding-bottom: 0;
   margin-bottom: 42px;
 }
@@ -5755,6 +5755,7 @@ a.ident:active .ident__triangle {
 }
 .illustration__carousel-button {
   position: absolute;
+  width: auto;
   z-index: 2;
   display: none !important;
 }
