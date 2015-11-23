@@ -19,8 +19,9 @@
         .transition(transform 200ms @swift-out);
         margin-bottom: @spacing;
         .query-min(@screen--md; {	
+          margin-bottom: 0;          
           &:hover, &:focus, &:active {
-            .transform(scale(1.1));
+            .transform(translateY(-@spacing--medium));
             & + .illustration__hover-box {
               display: block !important;
             }
@@ -79,7 +80,7 @@
           });
       }      
     }
-    &__trigger {
+    &__container {
       padding: 0 @gutter;      
       .query-max(@screen--md; {	
         width: auto !important;
@@ -90,11 +91,58 @@
         display: block;
       });
     }
+    
+    &__trigger {
+      position: relative;
+      background: none;
+      margin-bottom: 0; 
+      &:focus, &:hover {
+        .illustration__figure {
+          .transform(translateY(-@spacing--medium));
+        }
+        .illustration__trigger-caption {
+
+        }
+        .illustration__trigger-caption--contracted {
+          display: inline-block;  
+        }
+      }
+      &--expanded {
+        .illustration__figure {
+          .transform(translateY(-@spacing--medium));
+        }
+        .illustration__trigger-caption--expanded {
+          display: inline-block;  
+        }        
+        &:focus {
+          .illustration__trigger-caption--expanded {
+            display: inline-block;
+          }
+          .illustration__trigger-caption--contracted {
+            display: none;  
+          }
+        }        
+      }
+    }
+    
+    &__trigger-caption {
+      display: none;
+  		background-image: data-uri('/UI/gfx/square--red.svg');
+  		background-position: center center;
+  		background-repeat: no-repeat;			
+  		background-size: contain;
+      width: 2.5rem;
+      height: 2.5rem;
+      line-height: 2.5rem;
+      position: absolute;
+      left: 50%;
+      .transform( translateX(-50%));      
+      .animation(animations__fade-in 300ms @swift-out);      
+      bottom: 0;
+    }
+    
     &__hover-box {
         width: 20em;
-        &:hover {        
-            display: block !important;
-        }
         .query-max(@screen--md; {	        
             display: block !important;
             position: static;

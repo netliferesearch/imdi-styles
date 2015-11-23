@@ -1867,17 +1867,10 @@ you can use the generic selector below, but it's slower:
 .icon__check.icon--white {
   background-image: url('/UI/icons/white/icon-check.svg');
 }
-/* .@{simple-line-icon-prefix}close.icon--white {
-	background-image: data-uri('/UI/icons/white/icon-close.svg');
-} .@{simple-line-icon-prefix}comments.icon--white {
-	background-image: data-uri('/UI/icons/white/icon-comments.svg');
-} .@{simple-line-icon-prefix}contract.icon--white {
-	background-image: data-uri('/UI/icons/white/icon-contract.svg');
-} .@{simple-line-icon-prefix}controls.icon--white {
-	background-image: data-uri('/UI/icons/white/icon-controls.svg');
+.icon__close.icon--white {
+  background-image: url('/UI/icons/white/icon-close.svg');
 }
-*/
-.icon__date.icon--white {
+ .icon__date.icon--white {
   background-image: url('/UI/icons/white/icon-date.svg');
 }
 .icon__download.icon--white {
@@ -5595,15 +5588,16 @@ a.ident:active .ident__triangle {
   -o-transition: transform 200ms cubic-bezier(0, 0, 0.1, 1);
   transition: transform 200ms cubic-bezier(0, 0, 0.1, 1);
   margin-bottom: 21px;
+  margin-bottom: 0;
 }
 .illustration__figure:hover,
 .illustration__figure:focus,
 .illustration__figure:active {
-  -webkit-transform: scale(1.1);
-  -moz-transform: scale(1.1);
-  -ms-transform: scale(1.1);
-  -o-transform: scale(1.1);
-  transform: scale(1.1);
+  -webkit-transform: translateY(-14px);
+  -moz-transform: translateY(-14px);
+  -ms-transform: translateY(-14px);
+  -o-transform: translateY(-14px);
+  transform: translateY(-14px);
 }
 .illustration__figure:hover + .illustration__hover-box,
 .illustration__figure:focus + .illustration__hover-box,
@@ -5667,17 +5661,69 @@ a.ident:active .ident__triangle {
 .illustration__item--mobile {
   display: none;
 }
-.illustration__trigger {
+.illustration__container {
   padding: 0 21px;
   padding: 0;
   position: absolute;
   display: block;
 }
+.illustration__trigger {
+  position: relative;
+  background: none;
+  margin-bottom: 0;
+}
+.illustration__trigger:focus .illustration__figure,
+.illustration__trigger:hover .illustration__figure {
+  -webkit-transform: translateY(-14px);
+  -moz-transform: translateY(-14px);
+  -ms-transform: translateY(-14px);
+  -o-transform: translateY(-14px);
+  transform: translateY(-14px);
+}
+.illustration__trigger:focus .illustration__trigger-caption--contracted,
+.illustration__trigger:hover .illustration__trigger-caption--contracted {
+  display: inline-block;
+}
+.illustration__trigger--expanded .illustration__figure {
+  -webkit-transform: translateY(-14px);
+  -moz-transform: translateY(-14px);
+  -ms-transform: translateY(-14px);
+  -o-transform: translateY(-14px);
+  transform: translateY(-14px);
+}
+.illustration__trigger--expanded .illustration__trigger-caption--expanded {
+  display: inline-block;
+}
+.illustration__trigger--expanded:focus .illustration__trigger-caption--expanded {
+  display: inline-block;
+}
+.illustration__trigger--expanded:focus .illustration__trigger-caption--contracted {
+  display: none;
+}
+.illustration__trigger-caption {
+  display: none;
+  background-image: url('/UI/gfx/square--red.svg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 2.5rem;
+  height: 2.5rem;
+  line-height: 2.5rem;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+  -webkit-animation: animations__fade-in 300ms cubic-bezier(0, 0, 0.1, 1);
+  -moz-animation: animations__fade-in 300ms cubic-bezier(0, 0, 0.1, 1);
+  -o-animation: animations__fade-in 300ms cubic-bezier(0, 0, 0.1, 1);
+  animation: animations__fade-in 300ms cubic-bezier(0, 0, 0.1, 1);
+  bottom: 0;
+}
 .illustration__hover-box {
   width: 20em;
-}
-.illustration__hover-box:hover {
-  display: block !important;
 }
 .illustration__carousel-button {
   position: absolute;
