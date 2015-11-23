@@ -4649,6 +4649,7 @@ blockquote small {
   max-width: 20em;
   padding: 14px;
   padding-bottom: 21px;
+  pointer-events: all;
 }
 .hover-box--description p {
   font-family: "Siri", Tahoma, sans-serif;
@@ -5667,21 +5668,38 @@ a.ident:active .ident__triangle {
   position: absolute;
   display: block;
 }
-.illustration__trigger {
-  position: relative;
-  background: none;
-  margin-bottom: 0;
-}
-.illustration__trigger:focus .illustration__figure,
-.illustration__trigger:hover .illustration__figure {
+.illustration__container--hover .illustration__figure {
   -webkit-transform: translateY(-14px);
   -moz-transform: translateY(-14px);
   -ms-transform: translateY(-14px);
   -o-transform: translateY(-14px);
   transform: translateY(-14px);
 }
+.illustration__container--hover .illustration__trigger-caption--contracted {
+  display: none;
+}
+.illustration__container--hover .illustration__hover-box {
+  display: block !important;
+}
+.illustration__trigger {
+  position: relative;
+  background: none;
+  margin-bottom: 0;
+}
+.illustration__trigger:focus .illustration__figure,
+.illustration__trigger:focus .illustration__figure {
+  -webkit-transform: translateY(-14px);
+  -moz-transform: translateY(-14px);
+  -ms-transform: translateY(-14px);
+  -o-transform: translateY(-14px);
+  transform: translateY(-14px);
+}
+.illustration__trigger:focus .illustration__trigger-caption,
+.illustration__trigger:focus .illustration__trigger-caption {
+  background-image: url('/UI/gfx/square--red-dark.svg');
+}
 .illustration__trigger:focus .illustration__trigger-caption--contracted,
-.illustration__trigger:hover .illustration__trigger-caption--contracted {
+.illustration__trigger:focus .illustration__trigger-caption--contracted {
   display: inline-block;
 }
 .illustration__trigger--expanded .illustration__figure {
@@ -5720,7 +5738,7 @@ a.ident:active .ident__triangle {
   -moz-animation: animations__fade-in 300ms cubic-bezier(0, 0, 0.1, 1);
   -o-animation: animations__fade-in 300ms cubic-bezier(0, 0, 0.1, 1);
   animation: animations__fade-in 300ms cubic-bezier(0, 0, 0.1, 1);
-  bottom: 0;
+  bottom: 10px;
 }
 .illustration__hover-box {
   width: 20em;

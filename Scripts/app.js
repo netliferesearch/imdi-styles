@@ -96,7 +96,7 @@ $( document ).ready(function() {
 	\*------------------------------------*/	
 	
 
-	$('[data-behaviour="toggle"]').click(function( event ) {
+	$('[data-behaviour~="toggle"]').click(function( event ) {
 		
 		// Prevent the fallback #anchor tag to move focus
 		event.preventDefault();			
@@ -129,10 +129,11 @@ $( document ).ready(function() {
 	    $(this).toggleClass(toggle_class_expanded);
 	    if(state){ 
 	        // On opening
-	        $(section).toggle(0,function(){
-	            // Delay to be able to use css transitions and hide from screenreaders
-   	            $(section).removeClass(section_class_contracted);
-	            $(section).addClass(section_class_expanded); 
+	        $(section).show(0,function(){
+	           // Delay to be able to use css transitions and hide from screenreaders
+	           $(section).css( "display", "block"); // Fix for allready visible sections by hover
+   	         $(section).removeClass(section_class_contracted);
+	           $(section).addClass(section_class_expanded); 
 	           // $(section).focus();
 	        });
 	        if(section_caption_contracted){
@@ -142,7 +143,7 @@ $( document ).ready(function() {
 	        // On closing
 	        $(section).removeClass(section_class_expanded);
 	        $(section).addClass(section_class_contracted);	        
-	        setTimeout(function() { $(section).toggle(); }, transition_duration);
+	        setTimeout(function() { $(section).hide(); }, transition_duration);
 	        if(section_caption_contracted){
 			    $(this).html(section_caption_expanded);
 		    }
@@ -150,7 +151,7 @@ $( document ).ready(function() {
 	
 	});  
     
-	$('[data-behaviour="toggle"]').each(function() {
+	$('[data-behaviour~="toggle"]').each(function() {
 	    // Hide sections on load
 	    var section = $(this).attr('data-controls');
 	    //var state = $(this).attr('aria-expanded') === 'false' ? true : false; 
@@ -196,6 +197,25 @@ $( document ).ready(function() {
 		$(this).select();		
 		
 	});		
+	
+	/*------------------------------------*\
+	    CAROUSEL HOVER
+	\*------------------------------------*/	
+	
+	  $('[data-behaviour~="hover-toggle"]').each(function(){
+  	  var toggle_class_expanded = $(this).data('class-expanded');
+  	  var children = $(this).data('hover-children');
+  	  var hover_parent = this;
+  	  // Trigger the class on the parent element when children elements receive hover
+  	  $(children, this).hover(function () { 
+          $(hover_parent).addClass(toggle_class_expanded);
+      }, function () {
+          $(hover_parent).removeClass(toggle_class_expanded);
+      });
+  	  
+	  });
+	  
+	  
 	
 	/*------------------------------------*\
 	    SMOOTH SCROLLING
@@ -297,7 +317,6 @@ $( document ).ready(function() {
       //
       
   		var updateWizard = function( currentId, selectedOption, targetId ) {
-    		console.log(currentId + "," + selectedOption + ", " + targetId );
 
         var dataRow = function (rows, id) {
             var i = null;

@@ -90,18 +90,29 @@
         position: absolute;
         display: block;
       });
+      &--hover {
+        .illustration__figure {
+          .transform(translateY(-@spacing--medium));
+        }
+        .illustration__trigger-caption--contracted {
+          display: none;  
+        }
+        .illustration__hover-box {
+          display: block !important;  
+        }
+      }
     }
     
     &__trigger {
       position: relative;
       background: none;
       margin-bottom: 0; 
-      &:focus, &:hover {
+      &:focus, &:focus {
         .illustration__figure {
           .transform(translateY(-@spacing--medium));
         }
         .illustration__trigger-caption {
-
+            background-image: data-uri('/UI/gfx/square--red-dark.svg');
         }
         .illustration__trigger-caption--contracted {
           display: inline-block;  
@@ -116,7 +127,7 @@
         }        
         &:focus {
           .illustration__trigger-caption--expanded {
-            display: inline-block;
+            display: inline-block;            
           }
           .illustration__trigger-caption--contracted {
             display: none;  
@@ -138,7 +149,7 @@
       left: 50%;
       .transform( translateX(-50%));      
       .animation(animations__fade-in 300ms @swift-out);      
-      bottom: 0;
+      bottom: 10px;
     }
     
     &__hover-box {
