@@ -7,7 +7,7 @@
 	border: 3px solid @color__green;
 	padding: @spacing;
 	padding-bottom: @spacing--small;
-	padding-left: 50px + @spacing + @spacing; 
+	padding-left: 4.8rem; 
 	min-height: 50px + @spacing + @spacing + 6px;
 	margin-top: @spacing--large;
 	margin-bottom: @spacing--large;
@@ -21,9 +21,9 @@
 		.fontSize(@font-size--regular);
 		position: absolute;
 		display: block;
-		width: 50px;
-		height: 50px;
-		line-height: 50px;
+		width: 2.8rem;
+		height: 2.8rem;
+		line-height: 2.8rem;
 		text-align: center;
 		top: @spacing;
 		left: @spacing;
@@ -52,12 +52,9 @@
 	&__primary-link {
 		color: @color__text;
 		border-color: @color__green--dark;
-		&:hover, &:active {
+		&:hover, &:active, &:focus {
 			color: @color__green--dark;
 			border-color: @color__green--dark;
-		}
-		&:focus {
-		
 		}
 	}
 	&--secondary {
@@ -75,13 +72,10 @@
 			.fontSize(@font-size--regular);	
 			color: @color__green--dark;
 			border-color: @color__green--dark;
-			&:hover, &:active {
+			&:hover, &:active, &:focus {
 				color: @color__text;
 				border-color: @color__text;
 			}
-			&:focus {
-			
-			}				
 		}		
 		ul, ol {
 			padding-left: 0;

@@ -191,7 +191,7 @@ body {
  * Addresses `outline` inconsistency between Chrome and other browsers.
  */
 a:focus {
-  outline: 2px dotted;
+  outline: 1px dotted;
   outline-offset: 3px;
 }
 /*
@@ -2180,7 +2180,6 @@ a:focus,
 .a:focus,
 a--focus,
 .a--focus {
-  outline: none;
   outline-offset: 3px;
 }
 h2 small,
@@ -2417,7 +2416,7 @@ button:disabled {
 .control {
   position: relative;
   display: inline-block;
-  padding-left: 2em;
+  padding-left: 1.7rem;
   cursor: pointer;
 }
 .control--disabled {
@@ -2425,7 +2424,7 @@ button:disabled {
   cursor: default;
 }
 .control input {
-  width: 16px;
+  width: 1rem;
   margin-top: 8px;
   margin-left: -16px;
   border: none;
@@ -2437,13 +2436,13 @@ button:disabled {
   top: .25rem;
   left: 0;
   display: block;
-  width: 20px;
-  height: 20px;
-  line-height: 1rem;
+  width: 1.1rem;
+  height: 1.1rem;
+  line-height: 1.1rem;
   font-size: 65%;
-  color: #eee;
+  color: #ddd;
   text-align: center;
-  background-color: #eee;
+  background-color: #ddd;
   background-size: 50% 50%;
   background-position: center center;
   background-repeat: no-repeat;
@@ -2495,7 +2494,7 @@ button:disabled {
 }
 .radio input:checked ~ .control-indicator {
   background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4xLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgOCA4IiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA4IDgiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPHBhdGggZmlsbD0iI0ZGRkZGRiIgZD0iTTQsMUMyLjMsMSwxLDIuMywxLDRzMS4zLDMsMywzczMtMS4zLDMtM1M1LjcsMSw0LDF6Ii8+DQo8L3N2Zz4NCg==);
-  background-position: 5px 5px;
+  background-position: center center;
 }
 /* Alternately, use another character */
 .control-x input:checked ~ .control-indicator {
@@ -2520,7 +2519,7 @@ button:disabled {
   line-height: 1.5;
   color: #282828;
   background-color: #f2efed;
-  border: 0;
+  border: 2px solid transparent;
   border-radius: 0;
   cursor: pointer;
   outline: 0;
@@ -2555,7 +2554,7 @@ button:disabled {
 */
 /* Focus */
 .select select:focus {
-  box-shadow: 0 0 0 0.075rem #fff, 0 0 0 0.2rem #ef4028;
+  border: 2px solid #ef4028;
 }
 /* Active/open */
 .select select:active {
@@ -3199,7 +3198,7 @@ blockquote small {
   border: 3px solid #50a450;
   padding: 21px;
   padding-bottom: 7px;
-  padding-left: 92px;
+  padding-left: 4.8rem;
   min-height: 98px;
   margin-top: 42px;
   margin-bottom: 42px;
@@ -3217,9 +3216,9 @@ blockquote small {
   font-size: 1rem;
   position: absolute;
   display: block;
-  width: 50px;
-  height: 50px;
-  line-height: 50px;
+  width: 2.8rem;
+  height: 2.8rem;
+  line-height: 2.8rem;
   text-align: center;
   top: 21px;
   left: 21px;
@@ -3252,7 +3251,8 @@ blockquote small {
   border-color: #418541;
 }
 .cta__primary-link:hover,
-.cta__primary-link:active {
+.cta__primary-link:active,
+.cta__primary-link:focus {
   color: #418541;
   border-color: #418541;
 }
@@ -3275,7 +3275,8 @@ blockquote small {
   border-color: #418541;
 }
 .cta--secondary a:hover,
-.cta--secondary a:active {
+.cta--secondary a:active,
+.cta--secondary a:focus {
   color: #282828;
   border-color: #282828;
 }
@@ -3611,6 +3612,7 @@ blockquote small {
   padding-right: 66.66666667%;
 }
 .feature__bullet-wrapper {
+  min-width: 12rem;
   padding-left: 21px !important;
 }
 .feature__prefix {
@@ -3720,21 +3722,21 @@ blockquote small {
   line-height: 1.4;
   margin-bottom: 0px;
   text-transform: none;
-  padding-left: 50px;
+  padding-left: 3.2rem;
   display: block;
   border: none;
   margin: 7px 0;
   margin-bottom: 21px;
-  padding-top: 12px;
+  padding-top: 14px;
 }
 .feature-bullet__icon {
   font-size: 15px;
   font-size: 0.8333333333333334rem;
   position: absolute;
   display: block;
-  width: 45px;
-  height: 45px;
-  line-height: 42px;
+  width: 2.8rem;
+  height: 2.8rem;
+  line-height: 2.8rem;
   text-align: center;
   top: 0;
   left: -2px;
@@ -4423,6 +4425,7 @@ blockquote small {
   color: #d83a36;
   border: none;
   border-bottom: 2px solid #d83a36;
+  outline: none;
 }
 .header__button:hover .header__menu-icon-bar,
 .header__button:focus .header__menu-icon-bar {
@@ -5423,9 +5426,9 @@ blockquote small {
   font-size: 0.8333333333333334rem;
   position: absolute;
   display: block;
-  width: 35px;
-  height: 35px;
-  line-height: 33px;
+  width: 2rem;
+  height: 2rem;
+  line-height: 2rem;
   text-align: center;
   top: -3px;
   left: 0;
@@ -5434,7 +5437,8 @@ blockquote small {
   background-repeat: no-repeat;
   background-size: contain;
   color: #ffffff;
-  left: -42px;
+  left: -2rem;
+  margin-left: -7px;
 }
 .message--ok {
   color: #282828;

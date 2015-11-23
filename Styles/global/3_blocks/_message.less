@@ -16,9 +16,9 @@
 		.fontSize(@font-size--small);
 		position: absolute;
 		display: block;
-		width: 35px;
-		height: 35px;
-		line-height: 33px;
+		width: 2rem;
+		height: 2rem;
+		line-height: 2rem;
 		text-align: center;
 		top: -3px;
 		left: 0;
@@ -28,7 +28,8 @@
 		background-size: contain;
 		color: @color__white;	
 		.query-min(@screen--md; {
-			left: -(35px + @spacing--small);
+			left: -(2rem);
+			margin-left: -@spacing--small;
 		});				
 	} 
 	&--ok {
