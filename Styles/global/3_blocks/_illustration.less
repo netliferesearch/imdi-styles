@@ -90,7 +90,9 @@
         position: absolute;
         display: block;
       });
+      .query-min(@screen--md; {	
       &--hover {
+        z-index: 3;        
         .illustration__figure {
           .transform(translateY(-@spacing--medium));
         }
@@ -98,42 +100,52 @@
           display: none;  
         }
         .illustration__hover-box {
-          display: block !important;  
+          display: block !important;   
         }
       }
+      });
     }
     
     &__trigger {
-      position: relative;
-      background: none;
-      margin-bottom: 0; 
-      &:focus, &:focus {
-        .illustration__figure {
-          .transform(translateY(-@spacing--medium));
-        }
-        .illustration__trigger-caption {
-            background-image: data-uri('/UI/gfx/square--red-dark.svg');
-        }
-        .illustration__trigger-caption--contracted {
-          display: inline-block;  
-        }
-      }
-      &--expanded {
-        .illustration__figure {
-          .transform(translateY(-@spacing--medium));
-        }
-        .illustration__trigger-caption--expanded {
-          display: inline-block;  
-        }        
-        &:focus {
-          .illustration__trigger-caption--expanded {
-            display: inline-block;            
+      display: none;
+      .query-min(@screen--md; {	
+        display: block;
+        position: absolute;
+        z-index: 2;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: none;
+        margin-bottom: 0; 
+        &:focus, &:focus {
+          & + .illustration__figure {
+            .transform(translateY(-@spacing--medium));
+          }
+          .illustration__trigger-caption {
+              background-image: data-uri('/UI/gfx/square--red-dark.svg');
           }
           .illustration__trigger-caption--contracted {
-            display: none;  
+            display: inline-block;  
           }
-        }        
-      }
+        }
+        &--expanded {
+          & + .illustration__figure {
+            .transform(translateY(-@spacing--medium));
+          }
+          .illustration__trigger-caption--expanded {
+            display: inline-block;  
+          }        
+          &:focus {
+            .illustration__trigger-caption--expanded {
+              display: inline-block;            
+            }
+            .illustration__trigger-caption--contracted {
+              display: none;  
+            }
+          }        
+        }
+      });
     }
     
     &__trigger-caption {
@@ -149,7 +161,7 @@
       left: 50%;
       .transform( translateX(-50%));      
       .animation(animations__fade-in 300ms @swift-out);      
-      bottom: 10px;
+      bottom: 5px;
     }
     
     &__hover-box {
