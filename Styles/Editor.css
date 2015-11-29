@@ -64,26 +64,67 @@ p {
   text-transform: none;
 }
 
-a.button--large {
+a.button.button--large {
     EditMenuTitle: Lenkestiler;
     EditMenuName: Stor CTA knapp;
-    background: #e5201c;
-    color: #fff;
+    font-family: "Siri Medium", Tahoma, sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 18px;
+    font-size: 1rem;
+  	padding: 7px  21px;
+  	margin: 14px 0;
+  	background: #d83a36;
+  	color: #ffffff;
+  	text-align: center;
+  	display: block;
+  	border: 2px solid #d83a36;
+  	width: auto;
+  	display: inline-block;
+  	padding: 14px 42px;
+  	margin-bottom: 21px;
 }
 
-a.button--secondary {
+a.button.button--secondary {
     EditMenuName: Alternativ CTA knapp;
-    background: #fff;
-    color: #e5201c;
+    font-family: "Siri Medium", Tahoma, sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 18px;
+    font-size: 1rem;
+  	padding: 7px  21px;
+  	margin: 14px 0;
+  	width: auto;
+  	display: inline-block;  	
+    background: #f2efed;
+  	text-align: center;
+  	display: block;
+    color: #282828;
+    border: 2px solid #f2efed;
 }
 
 blockquote {
     EditMenuTitle: Blokksitering;
     EditMenuName: Sitat;
+    background: #f2efed;
+    padding: 42px 21px;
+    font-size: 24px;
+    font-size: 1.3333333333333333rem;
+    margin-bottom: 42px;
+    margin-top: 42px;
 }
 
 cite {
-    EditMenuName: Sitert;
+    EditMenuName: Sitert (legges inni et sitat);
+    font-family: "Siri",Tahoma,sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 15px;
+    font-size: .8333333333333334rem;
+    line-height: 1.4;
+    margin-bottom: 0;
+    text-transform: none;
+    display: block;
 }
 
 a,
@@ -197,3 +238,73 @@ ol ol li {
   background: none;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+table {
+  text-align: left;
+  margin-bottom: 21px;
+  font-size: 15;
+  width: auto;
+}
+table thead {
+  border-bottom: 1px solid #bfbfbf;
+}
+table th {
+  font-family: "Siri Medium", Tahoma, sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  padding: 14px 14px;
+  font-size: 18px;
+  font-size: 1rem;
+}
+table p,
+table li {
+  font-size: 15px;
+  font-size: 0.8333333333333334rem;
+}
+table td[align="right"],
+.table td[align="right"] {
+  text-align: right;
+}
+table td {
+  font-family: "Siri", Tahoma, sans-serif;
+  font-size-adjust: 0.51;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 15px;
+  font-size: 0.8333333333333334rem;
+  padding: 14px 14px;
+  vertical-align: top;
+  border-bottom: 1px solid #bfbfbf;
+}
+table td[align="right"],
+.table td[align="right"] {
+  font-size: 16px;
+  font-size: 0.8888888888888888rem;
+  text-align: right;
+  font-family: 'Consolas', 'Lucida Console', "Courier";
+}
+table caption {
+  font-family: "Siri Medium", Tahoma, sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 16px;
+  font-size: 0.8888888888888888rem;
+  line-height: 1.75;
+  margin-bottom: 0px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  /* Se mixin i _vars.less */
+  padding: 14px 14px;
+  color: #777777;
+  text-align: left;
+  text-align: left;
+}
+table caption small {
+  font-size: 0.7em;
+  line-height: 1.5em;
+  display: block;
+}
