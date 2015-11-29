@@ -4,6 +4,10 @@
 	background: @color__orange;
 	color: @color__white;
 	display: block;	
+	margin-top: @spacing;	
+	.query-min(@screen--md; {
+		margin-top: @spacing--large;
+	});	 	 
 	.query-min(@screen--lg; {	
   	background: @color__orange--dark;
 		background-image: linear-gradient(
@@ -89,6 +93,7 @@
 		width: 100%;
 		height: 100%;
 		z-index: 1;
+  	margin: 0;
 		.footer__row {
 			padding-top: 67px + 16px + 0px;
 			.query-min(@screen--sm; {

@@ -7,6 +7,9 @@
       padding-bottom: 0;      
       margin-bottom: @spacing--large;
     });
+    .only-old-ie({
+      display: none; 
+    });    
     &__background {
         display: none;
         .query-min(@screen--md; {
@@ -67,7 +70,7 @@
   				  .animation-delay(.4s);
   				}
   			}			        
-      });
+      });  
       &--mobile {
           .query-min(@screen--md; {
               display: none; 

@@ -377,7 +377,12 @@
     }
 }
 
-// Mixin that will hide the content for IE8
+// Mixin that will hide the rules for IE8<
 .not-old-ie(@rules) when (@old-ie = false) {
+  @rules();
+}
+
+// Mixin that will only show the rules for IE8<
+.only-old-ie(@rules) when (@old-ie = true) {
   @rules();
 }
