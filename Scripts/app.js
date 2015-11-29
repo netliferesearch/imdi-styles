@@ -337,25 +337,34 @@ imdi.slick_carousel = (function ($) {
           	var target = $('[data-behaviour="carousel"]');
             var toggleSlick = function () {
                 if ($(window).width() < 546) {
-                  target.slick({
-                    	slidesToShow: 1,
-                    	slidesToScroll: 1,
-                      adaptiveHeight: true,
-                      infinite: false,
-                      focusOnSelect: true,
-                      prevArrow: '[data-behaviour="carousel-prev"]',
-                      nextArrow: '[data-behaviour="carousel-next"]'
-                    });
+                  if(!slickLoaded){
+                    target.slick({
+                      	slidesToShow: 1,
+                      	slidesToScroll: 1,
+                        adaptiveHeight: true,
+                        infinite: false,
+                        focusOnSelect: true,
+                        prevArrow: '[data-behaviour="carousel-prev"]',
+                        nextArrow: '[data-behaviour="carousel-next"]'
+                      });
+                  }
                   slickLoaded = true;
                 } else {
                   if(slickLoaded){
                     target.slick('unslick');
+                    slickLoaded = false;
                   }
                 }
             }
+
             var slickLoaded = false;
+
+            // Init on load
+            toggleSlick();  
+                      
+            // Init on resize
             $(window).resize(toggleSlick);
-            toggleSlick();
+
         }
     }
 })(jQuery);  
