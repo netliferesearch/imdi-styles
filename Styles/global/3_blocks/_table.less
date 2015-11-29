@@ -23,7 +23,7 @@ table, .table {
 	&__thead, thead {
 		border-bottom:1px solid @color__canvas-grey--dark;
 	}
-	&__th, th, strong {
+	&__th, th {
 		.font-siri--medium();
         .fontSize(@font-size--small);			
         padding: @spacing--medium @spacing--medium;	
@@ -31,10 +31,7 @@ table, .table {
 	        .fontSize(@font-size--regular);			
         });	
 	}
-	strong {
-		padding: 0;
-	}	
-	p, ul, ol {
+	p, li {
         .fontSize(@font-size--small);			
 	}
 	&__th--number, td[align="right"] {

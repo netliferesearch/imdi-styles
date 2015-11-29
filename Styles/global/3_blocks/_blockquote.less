@@ -1,12 +1,16 @@
 @import "../../_vars";
 
 .blockquote, blockquote {
+  .text--large(); 
 	background: @color__canvas-grey;
 	padding: @spacing--large @gutter;	
+	margin: @spacing 0;
 	.query-min(@screen--md; {
 		width: percentage(16/14);
 		margin-left: percentage(-1/14);	
 		padding: @spacing--large percentage(1/14);
+    margin-bottom: @spacing--large;
+    margin-top: @spacing--large;		
 	});
 	.query-min(@screen--lg; {
 		width: percentage(16/12);
@@ -16,7 +20,10 @@
 	p {
 		.text--large(); 
 	}
+	
 	cite, small {
 		.text--small();
+		display: block;
+		margin-top: @spacing;
 	}
 }

@@ -18,14 +18,8 @@
         max-width: 100%;
         .transition(transform 200ms @swift-out);
         margin-bottom: @spacing;
-        .query-min(@screen--md; {	
-          margin-bottom: 0;          
-          &:hover, &:focus, &:active {
-            .transform(translateY(-@spacing--medium));
-            & + .illustration__hover-box {
-              display: block !important;
-            }
-          }
+        .query-min(@screen--md; {
+          margin-bottom: 0;         
         });
     }
     &__item {
@@ -111,19 +105,19 @@
       .query-min(@screen--md; {	
         display: block;
         position: absolute;
-        z-index: 2;
+        z-index: 3;
         top: 0;
         left: 0;
         right: 0;
         bottom: 0;
-        background: none;
-        margin-bottom: 0; 
-        &:focus, &:focus {
+        background: rgba(255,255,255,0); // Hack to get pointer events on hover on IE 10<
+        margin-bottom: 0;
+        &:focus {
           & + .illustration__figure {
             .transform(translateY(-@spacing--medium));
           }
           .illustration__trigger-caption {
-              background-image: data-uri('/UI/gfx/square--red-dark.svg');
+            background-image: data-uri('/UI/gfx/square--red-dark.svg');
           }
           .illustration__trigger-caption--contracted {
             display: inline-block;  

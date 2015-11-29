@@ -1,10 +1,11 @@
 @import "../../_vars";
 
 .footer {
-	background: @color__orange--dark;
+	background: @color__orange;
 	color: @color__white;
 	display: block;	
 	.query-min(@screen--lg; {	
+  	background: @color__orange--dark;
 		background-image: linear-gradient(
 	    	to right, 
 			@color__orange 50%, @color__orange--dark 50%
@@ -35,7 +36,6 @@
 		});
 	}
 	&__main {
-		//background: @color__orange;		
 		padding: @spacing 0 @spacing--large 0;		
 		.query-min(@screen--lg; {		
 			padding: @spacing--xlarge 0 @spacing--xlarge 0;		
