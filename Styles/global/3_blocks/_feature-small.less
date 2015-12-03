@@ -54,3 +54,32 @@
 	
 	}
 }
+
+// Fix to make content draged into section pages in EPI more promoted
+.page__footer .col--main .feature-small {
+	.query-min(@screen--md; {
+		border: 3px solid @color__canvas-grey;	
+		overflow: hidden;
+		margin-left: -(@gutter * 2);
+		margin-right: -(@gutter * 2);		
+		margin-bottom: @spacing--large;
+		margin-top: @spacing--large;
+		padding-left: (@gutter * 2);
+		padding-right: (@gutter * 2);
+	});	
+	.query-min(@screen--lg; {
+		margin-top: @spacing--large;
+		margin-bottom: @spacing--large;
+	});	
+	@media print {
+		border: 1px solid @color__canvas-grey;
+		page-break-inside: avoid;	
+	}
+}
+
+.page__footer .col--main .feature-small--publication, 
+.page__footer .col--main .feature-small--event {
+	.query-min(@screen--md; {
+		padding-bottom: @spacing;
+	});	
+}
