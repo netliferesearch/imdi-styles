@@ -64,9 +64,9 @@ p {
   text-transform: none;
 }
 
-a.button.button--large {
+a.button--editor-primary {
     EditMenuTitle: Lenkestiler;
-    EditMenuName: Stor CTA knapp;
+    EditMenuName: Stor rød knapp;
     font-family: "Siri Medium", Tahoma, sans-serif;
     font-weight: normal;
     font-style: normal;
@@ -85,8 +85,8 @@ a.button.button--large {
   	margin-bottom: 21px;
 }
 
-a.button.button--secondary {
-    EditMenuName: Alternativ CTA knapp;
+a.button--editor-secondary {
+    EditMenuName: Liten grå knapp; 
     font-family: "Siri Medium", Tahoma, sans-serif;
     font-weight: normal;
     font-style: normal;
@@ -106,10 +106,15 @@ a.button.button--secondary {
 blockquote {
     EditMenuTitle: Blokksitering;
     EditMenuName: Sitat;
+    font-family: "Siri Medium", Tahoma, sans-serif;
+    font-weight: normal;
+    font-style: normal;
     background: #f2efed;
     padding: 42px 21px;
     font-size: 24px;
     font-size: 1.3333333333333333rem;
+    margin-left: 0;
+    margin-right: 0;
     margin-bottom: 42px;
     margin-top: 42px;
 }
@@ -122,6 +127,7 @@ cite {
     font-size: 15px;
     font-size: .8333333333333334rem;
     line-height: 1.4;
+    margin-top: 15px;
     margin-bottom: 0;
     text-transform: none;
     display: block;
@@ -130,7 +136,12 @@ cite {
 a,
 .a {
   color: #e5201c;
+  text-decoration: none;
   border-bottom: 1px solid #e5201c;
+}
+
+body.epi_visualaid a {
+  background-color: transparent !important; 
 }
 
 a:hover,

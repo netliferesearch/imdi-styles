@@ -1,6 +1,6 @@
  @import "../../_vars";
 
-.button {
+.button, .button--editor-primary, .button--editor-secondary {
 	.font-siri--medium();
 	.fontSize(@font-size--regular);
 	line-height: 1;
@@ -18,10 +18,6 @@
 		display: inline-block;
 	});
 	
-	&--large {
-		padding: @spacing--medium @spacing*2;
-		margin-bottom: @spacing;
-	}
 	&--small {
 		.text--small();
 		padding: @spacing--xsmall  @spacing--small;
@@ -37,23 +33,7 @@
 
 		color: @color__white;
 	}
-	
-	&--secondary {
-		background: @color__canvas-grey;
-		color: @color__text;
-		border: 2px solid @color__canvas-grey;
-			
-		&:hover, &:focus, &:active {
-			background: darken(@color__canvas-grey, 10%);
-			border: 2px solid darken(@color__canvas-grey, 10%);
-			color: @color__text;
-		}
 		
-		&.button--active {
-			border-color: @color__orange;
-		}		
-	}
-	
 	&--option {
 		background: @color__canvas-grey;
 		color: @color__text;
@@ -82,4 +62,24 @@
 	}
 	
 	
+}
+
+.button--large, .button--editor-primary {
+	padding: @spacing--medium @spacing*2;
+	margin-bottom: @spacing;
+}
+
+.button--secondary, .button--editor-secondary {
+		background: @color__canvas-grey;
+		color: @color__text;
+		border: 2px solid @color__canvas-grey;
+			
+		&:hover, &:focus, &:active {
+			background: darken(@color__canvas-grey, 10%);
+			border: 2px solid darken(@color__canvas-grey, 10%);
+			color: @color__text;
+		}
+		&.button--active {
+			border-color: @color__orange;
+		}	
 }
