@@ -94,6 +94,37 @@
 			}
 		}	
 	}
+	&--simple {
+      margin: 0;
+      border: 0;
+      padding: 0;
+      min-height: 0;
+      .cta__title {
+        .text--small();
+        margin: 0;
+      }
+      ul, ol {
+  			padding-left: 0;
+  			margin-top: 0;
+  			margin-bottom: @spacing;
+  			li {
+  				padding-left: 0;
+  		        list-style: none;		
+  		        margin-bottom: @spacing--small;
+  			}
+  		}
+      a {
+
+        color: @color__black;
+        border-color: @color__black;
+        &:hover, &:focus {
+          color: @color__links;
+          border-color: @color__links;
+        }
+
+      }
+
+	}
 	&--with-image {
 		padding-left: @spacing;
 		padding-top: 155px; 		
