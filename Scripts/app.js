@@ -1,6 +1,7 @@
 var imdi = imdi || {};
 
 $(document).ready(function () {
+    imdi.tableOfContents.init();
     imdi.facet.init();
     imdi.scroll.init();
     imdi.main_menu_toggle.init(); 
@@ -12,6 +13,7 @@ $(document).ready(function () {
     imdi.smooth_scrolling.init();
     imdi.slick_carousel.init();
     imdi.wizard.init();
+   
 });
 
 imdi.facet = (function ($) {
@@ -30,12 +32,11 @@ imdi.scroll = (function ($) {
             var anchorid = getUrlParameter("aid");
             if (anchorid) {
                 var anchor = '#' + anchorid;
-                $('html,body').animate({ scrollTop: jQuery(anchor).offset().top }, 50);
+                $('html,body').animate({ scrollTop: jQuery(anchor).offset().top }, 700);
              }
         }
     }
 })(jQuery);
-
 
 /*------------------------------------*\
     TAG MANAGER CUSTOM TRACKING
@@ -44,9 +45,6 @@ imdi.scroll = (function ($) {
 
 imdi.gtm_tracking = (function ($) {
     return {
-        init: function () { 
-          
-        },
 
         customEvent: function (eventCategory, eventAction, eventLabel, eventValue) {
 
@@ -85,8 +83,6 @@ imdi.gtm_tracking = (function ($) {
         }
     }
 })(jQuery);
-
-
 
 /*------------------------------------*\
     MAIN MENU TOGGLE
@@ -332,13 +328,13 @@ imdi.hover_toggle = (function ($) {
         	  var hover_parent = this;
         	  
         	  // Trigger the class on the parent element when children elements receive hover
-        	  $(children, this).on('mouseenter', function () { 
-              $(hover_parent).addClass(toggle_class_expanded);
-            	$(hover_parent).show(0); // Hack to force redraw on Safari browser to get the hoverbox to show correctly. Ref JIRA: IMDI-186          
+        	  $(children, this).hover(function () { 
+                $(hover_parent).addClass(toggle_class_expanded);
+          	    $(hover_parent).show(0); // Hack to force redraw on Safari browser to get the hoverbox to show correctly. Ref JIRA: IMDI-186                
+            }, function () {
+                $(hover_parent).removeClass(toggle_class_expanded);
             });
-            $(children, this).on('mouseleave', function () {
-              $(hover_parent).removeClass(toggle_class_expanded);
-            });
+        	  
       	  });
         }
     }
@@ -391,7 +387,7 @@ imdi.slick_carousel = (function ($) {
         init: function () {
           	var target = $('[data-behaviour="carousel"]');
             var toggleSlick = function () {
-                if ($(window).width() < 546) {
+                if ($(window).width() < 720) {
                   if(!slickLoaded){
                     target.slick({
                       	slidesToShow: 1,
@@ -434,10 +430,11 @@ imdi.wizard = (function ($) {
     return {
         init: function () {
             $('[data-behaviour="wizard"]').each( function() {
-              if(window[$(this).data('source')] !== 'undefined' ) {
+                if (window[$(this).data('source')] !== 'undefined' && window[$(this).data('source')].length && window[$(this).data('source')][0]!=null) {
           
                 // Load question tree
-            		var dataTree = window[$(this).data('source')];
+                var dataTree = window[$(this).data('source')];
+
                 var dataHistory = [];
                 var startId = dataTree[0].Id;
                 var wrapper = this;
@@ -505,13 +502,12 @@ imdi.wizard = (function ($) {
                     $(wrapper).append(getConclusion(_title, _content));
                     $(wrapper).append(getHistory());
                     $(wrapper).find('h3').focus();
-                  
+
                     // Google Tag Manager call
                     var virtualUrl = window.location.pathname + '?wizard/conclusion/' + targetId;
                     var virtualTitle = _title  + ' | Veiviserkonklusjon';
                     imdi.gtm_tracking.customPageView(virtualUrl, virtualTitle);
-                  
-                  
+
                   // ERROR
                   
                   } else {
@@ -690,3 +686,35 @@ function getUrlParameter(sParam) {
     }
 };
 
+
+// Client side table of contents
+imdi.tableOfContents = (function ($) {
+    return {
+        init: function () {
+
+            if ($('#toc-enabled').length)
+            {
+                var toc_index = 1;
+
+                $("#toc-enabled h2:not([class])").each(function () {
+
+                    var anchorLink = 'title_' + toc_index;
+
+                    $(this).attr('id', anchorLink);
+                    $(this).attr('tabindex', "-1");
+                    $(this).addClass('toc__heading');
+
+                    $('#toc').append('<li><a href="#' + anchorLink + '" class="navigation__link navigation__link--anchor">' + $(this).text() + '</a></li>');
+
+                    toc_index++;
+                });
+
+                if (toc_index == 1)
+                {
+                    $('#toc-navigation').remove();
+                }
+                
+            }
+        }
+    }
+})(jQuery);
