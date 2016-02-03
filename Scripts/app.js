@@ -37,6 +37,56 @@ imdi.scroll = (function ($) {
 })(jQuery);
 
 
+/*------------------------------------*\
+    TAG MANAGER CUSTOM TRACKING
+    To track javascript events into Google Analytics by Google Tag Manager (GTM). Correct setup in GTM is needed. 
+\*------------------------------------*/
+
+imdi.gtm_tracking = (function ($) {
+    return {
+        init: function () { 
+          
+        },
+
+        customEvent: function (eventCategory, eventAction, eventLabel, eventValue) {
+
+          // Default to undefined
+          eventCategory = typeof eventCategory !== 'undefined' ? eventCategory : undefined;
+          eventAction = typeof eventAction !== 'undefined' ? eventAction : undefined;
+          eventLabel = typeof eventLabel !== 'undefined' ? eventLabel : undefined;
+          eventValue = typeof eventValue !== 'undefined' ? eventValue : undefined;
+          
+          // Google Tag Manager call
+          if(typeof dataLayer != 'undefined') {
+             dataLayer.push({
+                'event': 'customEvent',
+                'eventCategory': eventCategory,
+                'eventAction': eventAction,
+                'eventLabel': eventLabel,
+                'eventValue': eventValue
+              });
+          }
+        },
+
+        customPageView: function (virtualPageUrl, virtualPageTitle) {
+
+          // Default to undefined
+          virtualPageUrl = typeof virtualPageUrl !== 'undefined' ? virtualPageUrl : undefined;
+          virtualPageTitle = typeof virtualPageTitle !== 'undefined' ? virtualPageTitle : undefined;
+
+          // Google Tag Manager call
+          if(typeof dataLayer != 'undefined') {
+             dataLayer.push({
+                'event': 'customPageView',
+                'virtualPageUrl': virtualPageUrl,
+                'virtualPageTitle': virtualPageTitle
+              });
+          }
+        }
+    }
+})(jQuery);
+
+
 
 /*------------------------------------*\
     MAIN MENU TOGGLE
@@ -68,7 +118,11 @@ imdi.main_menu_toggle = (function ($) {
       	            _footer.css('height', a);
       	            _footer__bg.css('height', a);
       	        }			
-          			
+
+                // Google Tag Manager call
+                var currentUrl = window.location.pathname;
+                imdi.gtm_tracking.customEvent('Menu', 'Main-menu open', undefined, currentUrl);
+
           		} else {
           			$(this).attr('aria-expanded', "false");		
           			// Reset height
@@ -278,12 +332,13 @@ imdi.hover_toggle = (function ($) {
         	  var hover_parent = this;
         	  
         	  // Trigger the class on the parent element when children elements receive hover
-        	  $(children, this).hover(function () { 
-                $(hover_parent).addClass(toggle_class_expanded);
-            }, function () {
-                $(hover_parent).removeClass(toggle_class_expanded);
+        	  $(children, this).on('mouseenter', function () { 
+              $(hover_parent).addClass(toggle_class_expanded);
+            	$(hover_parent).show(0); // Hack to force redraw on Safari browser to get the hoverbox to show correctly. Ref JIRA: IMDI-186          
             });
-        	  
+            $(children, this).on('mouseleave', function () {
+              $(hover_parent).removeClass(toggle_class_expanded);
+            });
       	  });
         }
     }
@@ -300,7 +355,7 @@ imdi.hover_toggle = (function ($) {
 imdi.smooth_scrolling = (function ($) {
     return {
         init: function () {
-        	  $('a[href*=#]:not([href=#]):not([data-behaviour="main-search-toggle"]):not([data-behaviour="main-menu-toggle"]):not([data-behaviour="toggle"])').on('click', function() {
+        	  $('a[href^="#"]').not('[href="#"]').not('[data-behaviour="main-search-toggle"]').not('[data-behaviour="main-menu-toggle"]').not('[data-behaviour="toggle"]').on('click', function() {
         	    var $linkElem = $(this);
         	    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
         	      var target = $(this.hash);
@@ -432,7 +487,12 @@ imdi.wizard = (function ($) {
                     $(wrapper).append(getQuestion(_question, _instruction, _alternatives, targetId))
                       .append(getHistory())
                       .find('legend').focus();
-                  
+
+                    // Google Tag Manager call
+                    var virtualUrl = window.location.pathname + '?wizard/question/' + targetId;
+                    var virtualTitle = _question + ' | Veiviserspørsmål';
+                    imdi.gtm_tracking.customPageView(virtualUrl, virtualTitle);
+
               		// CONCLUSION
                     
                   } else if(dataRow(dataTree, targetId).Type == 'conclusion'){
@@ -445,6 +505,12 @@ imdi.wizard = (function ($) {
                     $(wrapper).append(getConclusion(_title, _content));
                     $(wrapper).append(getHistory());
                     $(wrapper).find('h3').focus();
+                  
+                    // Google Tag Manager call
+                    var virtualUrl = window.location.pathname + '?wizard/conclusion/' + targetId;
+                    var virtualTitle = _title  + ' | Veiviserkonklusjon';
+                    imdi.gtm_tracking.customPageView(virtualUrl, virtualTitle);
+                  
                   
                   // ERROR
                   
