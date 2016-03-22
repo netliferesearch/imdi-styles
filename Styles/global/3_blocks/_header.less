@@ -53,9 +53,7 @@
 			right: @spacing--small;
 			.query-min(@screen--md; {
 				top: 20px;	
-				right: 100px + @spacing;
-				right: 6.5em; 		
-				.transition(right 200ms @swift-out);				
+				right: @spacing;		
 			});			
 		}
 		&--search {
@@ -63,12 +61,13 @@
 			.query-min(@screen--md; {	
 				display: block;
 				top: 20px;
-				right: @spacing;		
-				text-align: right;							
+				right: 100px + @spacing;
+				right: 6.5em; 		
+				text-align: right;
 			});
 			&:hover, &:focus {
 				.header__search-icon {
-					background-image: data-uri('/UI/icons/red/icon-search.svg');					
+					background-image: data-uri('/UI/icons/red/icon-search.svg');
 				}
 			}			
 		}
@@ -167,8 +166,8 @@
 	
         .header__menu-icon-bar {
             opacity: 0;
-			background: @color__white;
-			width: 1rem;
+            background: @color__white;
+            width: 1rem;
             &:first-child {
                 // top: -2px;
                 opacity: 1;
@@ -193,7 +192,7 @@
 	&--search {	
 		.header__button--menu {
 			.query-min(@screen--md; {
-				right: 300px + @spacing;	
+	
 			});
 		}
 		.header__button--search {
@@ -201,12 +200,9 @@
 		}
 		.header__search {
 			.query-min(@screen--md; {
-				display: block;					
-				.search__input {				
-					.animation(animations__fade-in 200ms @swift-out both);
-					-webkit-animation-delay: 100ms;
-					animation-delay: 200ms;											
-				}
+				right: 100px + @spacing;
+				display: block;
+				.animation(animations__fade-in 1000ms @swift-out both);					
 			});
 		}		
 	}
