@@ -10,7 +10,9 @@
 	&__button {
 		
 		display: block;
+		position: relative;
 		padding: @spacing;
+		padding-right: (@spacing * 2);
 		background: @color__white;			
 		border: none;
 		margin: 0;
@@ -55,7 +57,9 @@
   	}
 	}
 	&__button-icon {
-		float: right;
+    position: absolute;
+    top: @spacing;
+    right: @spacing--medium;
 		.transition(transform 250ms @swift-out);
 	}	
 	&__section {
