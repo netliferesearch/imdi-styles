@@ -10,7 +10,7 @@
 	max-width: 15em;
 	pointer-events: none;
 	.text--small();		
-	.transform( translateX(-50%) translateY(-( @spacing * 0.5 ) - @spacing--small));
+	.transform( translateX(-50%) translateY(-( @spacing * 0.5 )));
 	&--description {
     	max-width: 20em;
       padding: @spacing--medium;
@@ -45,13 +45,13 @@
 		left: 50%;
 	}	
 	&--left {
-		.transform( translateX(-@spacing) translateY(-( @spacing * 0.5 ) - @spacing--small));		
+		.transform( translateX(-@spacing) translateY(-( @spacing * 0.5 )));		
 		.hover-box__point {
 			left: @spacing - 2px;
 		}
 	}
 	&--right {
-		.transform( translateX(-100%) translateY(-( @spacing * 0.5 ) - @spacing--small));
+		.transform( translateX(-100%) translateY(-( @spacing * 0.5 )));
 		margin-left: @spacing;
     min-width: 10em;
 		.hover-box__point {
@@ -61,7 +61,7 @@
 	}
 	&--top {
 		.transform( translateX(-50%) translateY(100%));
-		margin-bottom: -( @spacing - @spacing--small );
+		margin-bottom: -( @spacing );
 		.hover-box__point {
       bottom: auto;
       top: -( @spacing--medium * 0.5 + 1.5px );
@@ -70,7 +70,7 @@
 	}
 	&--top-left {
 		.transform( translateX(-@spacing) translateY(100%));
-		margin-bottom: -( @spacing - @spacing--small );
+		margin-bottom: -( @spacing );
 		.hover-box__point {
   		left: @spacing - 2px;
       bottom: auto;
@@ -80,19 +80,19 @@
 	}
 	&--top-right {
 		.transform( translateX(-100%) translateY(100%));
-		margin-bottom: -( @spacing - @spacing--small );
+		margin-bottom: -( @spacing );
 		margin-left: @spacing;	
     min-width: 10em;
 		.hover-box__point {
       left: auto;
-			right: @spacing - @spacing--medium; //@spacing;  		
+			right: @spacing - @spacing--medium; //@spacing;
       bottom: auto;
       top: -( @spacing--medium * 0.5 + 1.5px );
       .transform( translateX(-50%) rotate(225deg));
 		}  	
 	}
 	&--left-edge {
-		.transform( translateX(( @spacing * 0.5 ) + @spacing--small) translateY(50%));		
+		.transform( translateX( @spacing--small) translateY(50%));		
 		.hover-box__point {
 			bottom: auto;
 			left: -( @spacing--medium * 0.5 + 2px );
@@ -102,7 +102,7 @@
 	}
 	&--right-edge {
 		.transform( translateX(-100%) translateY(50%));	
-		margin-left: -( @spacing * 0.5 ) - @spacing--small;	
+		margin-left: -( @spacing * 0.5 );	
 		.hover-box__point {
 			bottom: auto;
 			right: -( @spacing--medium * 0.5 + 2px );
