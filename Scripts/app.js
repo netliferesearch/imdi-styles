@@ -32,7 +32,12 @@ imdi.scroll = (function ($) {
             var anchorid = getUrlParameter("aid");
             if (anchorid) {
                 var anchor = '#' + anchorid;
-                $('html,body').animate({ scrollTop: jQuery(anchor).offset().top }, 700);
+                $('html,body').animate({ scrollTop: jQuery(anchor).offset().top - 110 }, 700);
+                // Hack to prevent the autofocus attribute in the searchfield to override the focussetting
+                setTimeout(function() {
+                  $(anchor).focus();
+                }, 50);
+                $("input[autofocus]").blur();
              }
         }
     }

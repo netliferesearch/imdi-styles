@@ -43,10 +43,15 @@
 			color: @color__orange--dark;
 			border: none;			
 			border-bottom: 2px solid @color__orange--dark;
-			outline: none;
 			.header__menu-icon-bar {
 				background-color: @color__orange--dark;
 			}
+		}
+		&:focus {
+      outline-color: @color__black;  		
+      [data-whatinput='mouse'] & {
+        outline: 0;
+      }		
 		}
 		&--menu {
 			top: 12px;
