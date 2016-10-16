@@ -5779,6 +5779,13 @@ blockquote small {
   line-height: 1.2;
   letter-spacing: 0;
 }
+.ident--inline {
+  margin: 0;
+}
+.ident--white .ident__textmark-primary,
+.ident--white .ident__textmark-secondary {
+  color: #ffffff;
+}
 .header--overlay .ident__triangle {
   fill: #d83a36;
 }
