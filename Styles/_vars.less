@@ -37,7 +37,7 @@
 @screen--md                  : 45em;
 @screen--lg                  : 57em;
 @screen--xl                  : 71em;
-@screen--xxl                 : 92em; 
+@screen--xxl                 : 92em;
 
 
 /*------------------------------------*\
@@ -49,8 +49,8 @@
 @spacing--xlarge             : 84px;
 @spacing--large              : 42px;
 @spacing                     : 21px;
-@spacing--medium             : 14px; 
-@spacing--small              : 7px; 
+@spacing--medium             : 14px;
+@spacing--small              : 7px;
 @spacing--xsmall             : 5px;
 
 /*------------------------------------*\
@@ -58,10 +58,10 @@
 \*------------------------------------*/
 
 @font-size--regular          : 18;
-@font-size--small            : 15; // pixelfallback + rem 
+@font-size--small            : 15; // pixelfallback + rem
 @font-size--medium           : 24;
 @font-size--large            : 32;
-@font-size--xlarge           : 52; 
+@font-size--xlarge           : 52;
 
 
 
@@ -133,7 +133,7 @@
 	-webkit-animation-delay: @string;
 	-moz-animation-delay: @string;
 	-o-animation-delay: @string;
-	animation-delay: @string;	
+	animation-delay: @string;
 }
 
 
@@ -142,38 +142,38 @@
 \*------------------------------------*/
 
 .font-siri--thin() {
-	font-family: "Siri Thin", Tahoma, sans-serif; 
+	font-family: "Siri Thin", Tahoma, sans-serif;
 	font-weight: normal;
 	font-style: normal;
 }
-	
+
 .font-siri--light() {
-	font-family: "Siri Light", Tahoma, sans-serif; 
+	font-family: "Siri Light", Tahoma, sans-serif;
 }
-	
+
 .font-siri--regular() {
-	font-family: "Siri", Tahoma, sans-serif; 
-	font-size-adjust: 0.51; 
+	font-family: "Siri", Tahoma, sans-serif;
+	font-size-adjust: 0.51;
 	font-weight: normal;
 	font-style: normal;
 }
 
 .font-siri--medium() {
-	font-family: "Siri Medium", Tahoma, sans-serif; 
+	font-family: "Siri Medium", Tahoma, sans-serif;
 	font-weight: normal;
-	font-style: normal; 
+	font-style: normal;
 }
-	
-.font-siri--semibold() { 
-	font-family: "Siri SemiBold", Tahoma, sans-serif; 
-	font-weight: normal; 
+
+.font-siri--semibold() {
+	font-family: "Siri SemiBold", Tahoma, sans-serif;
+	font-weight: normal;
 	font-style: normal;
 }
 
 .font-siri--bold() {
-	font-family: "Siri Bold", Tahoma, sans-serif; 
-	font-size-adjust: 0.52; 
-	font-weight: normal; 
+	font-family: "Siri Bold", Tahoma, sans-serif;
+	font-size-adjust: 0.52;
+	font-weight: normal;
 	font-style: normal;
 }
 
@@ -182,35 +182,36 @@
 .h1() {
 	.font-siri--regular();
 	.fontSize(34);
-	line-height: (60 / @font-size--xlarge);	
+	line-height: (60 / @font-size--xlarge);
 	margin-bottom: 18px;
-	text-transform: none;		
-	.query-min(@screen--sm; { 
-		.fontSize(42);			
-		margin-bottom: 22px;	
-	});			
-	.query-min(@screen--md; { 
-		.fontSize(@font-size--xlarge);			
+	text-transform: none;
+	margin-top: @spacing--medium;
+	.query-min(@screen--sm; {
+		.fontSize(42);
+		margin-bottom: 22px;
+	});
+	.query-min(@screen--md; {
+		.fontSize(@font-size--xlarge);
 		margin-bottom: 28px;
-	});	
+	});
 	@media print {
 		.fontSize(42);
 		margin-bottom: 22px;
-	}	
+	}
 }
 
 .h2() {
 	.font-siri--medium();
 	.fontSize(24);
 	line-height: (42 / @font-size--large);
-	margin-bottom: 21px;	
+	margin-bottom: 21px;
 	text-transform: none;
 	.query-min(@screen--sm; {
-		.fontSize(26);				
-	});	
+		.fontSize(26);
+	});
 	.query-min(@screen--md; {
-		.fontSize(@font-size--large);			
-	});	
+		.fontSize(@font-size--large);
+	});
 }
 
 .h3() {
@@ -218,50 +219,50 @@
 	.fontSize(20);
 	line-height: (35 / @font-size--medium);
 	margin-bottom: 14px;
-	text-transform: none;  	
+	text-transform: none;
 	.query-min(@screen--sm; {
-		.fontSize(22);				
-	});	
+		.fontSize(22);
+	});
 	.query-min(@screen--md; {
-		.fontSize(@font-size--medium);			
-	});	
+		.fontSize(@font-size--medium);
+	});
 }
 
 .h4() {
-	.font-siri--medium();	
+	.font-siri--medium();
 	.fontSize(16);
 	line-height: (28 / 16);
 	margin-bottom: 0px;
-	text-transform: uppercase;  
+	text-transform: uppercase;
 	letter-spacing: 0.05em;
 }
 
 .text() {
 	.font-siri--regular();
 	.fontSize(@font-size--regular);
-	line-height: (28 / @font-size--regular);		
-	margin-bottom: 14px;  	
+	line-height: (28 / @font-size--regular);
+	margin-bottom: 14px;
 	text-transform: none;
 }
 
 .text--large() {
 	.font-siri--regular();
 	.fontSize(20);
-	line-height: (35 / @font-size--medium);			
+	line-height: (35 / @font-size--medium);
 	margin-bottom: 28px;
-	text-transform: none;	
-	.query-min(@screen--md; { 
+	text-transform: none;
+	.query-min(@screen--md; {
 		.fontSize(@font-size--medium);
 
-	});			
+	});
 }
 
 .text--small() {
 	.font-siri--regular();
 	.fontSize(@font-size--small);
-	line-height: (21 / @font-size--small);	
-	margin-bottom: 0px;		
-	text-transform: none;	
+	line-height: (21 / @font-size--small);
+	margin-bottom: 0px;
+	text-transform: none;
 }
 
 /*------------------------------------*\
@@ -294,7 +295,7 @@
 
   // Prevent columns from collapsing when empty
   min-height: 1px;
-  word-wrap: break-word; 
+  word-wrap: break-word;
   // Inner gutter via padding
   .query-min(@screen--sm; {
 	  padding-left:  (@_gutter / 2);
@@ -302,7 +303,7 @@
     // Calculate width based on number of columns available
     float: left;
     width: percentage(@ratio);
-  });  
+  });
 }
 
 // Generate the small column offsets
@@ -316,7 +317,7 @@
     right: percentage(@ratio);
 }
 
-// Clears the setting of .row() and .col() for responsive use. 
+// Clears the setting of .row() and .col() for responsive use.
 .clear-row() {
 	margin: 0;
 }
@@ -333,7 +334,7 @@
 
 @swift-out         : cubic-bezier(0, 0, .1, 1);
 
- 
+
 /*------------------------------------*\
     MEDIA QUERIES
 \*------------------------------------*/
@@ -347,13 +348,13 @@
     });
     --
     @fix-mqs
-	
+
 */
 
 @fix-mqs: false;
 @old-ie: false;
 
-// Mixin that will create the fixed IE styles    
+// Mixin that will create the fixed IE styles
 .query-min(@width; @rules) when (@old-ie = true) and (@fix-mqs >= @width) {
     @rules();
 }
@@ -365,7 +366,7 @@
     }
 }
 
-// Mixin that will create the fixed IE styles    
+// Mixin that will create the fixed IE styles
 .query-max(@width; @rules) when (@old-ie = true) and (@fix-mqs <= @width) {
     @rules();
 }

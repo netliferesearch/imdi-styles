@@ -41,7 +41,7 @@
     });
     --
     @fix-mqs
-	
+
 */
 /*------------------------------------*\
     $RESET
@@ -2037,6 +2037,7 @@ h1,
   line-height: 1.15384615;
   margin-bottom: 18px;
   text-transform: none;
+  margin-top: 14px;
   font-size: 42px;
   font-size: 2.3333333333333335rem;
   margin-bottom: 22px;
@@ -5221,6 +5222,7 @@ blockquote small {
   line-height: 1.15384615;
   margin-bottom: 18px;
   text-transform: none;
+  margin-top: 14px;
   font-size: 42px;
   font-size: 2.3333333333333335rem;
   margin-bottom: 22px;
