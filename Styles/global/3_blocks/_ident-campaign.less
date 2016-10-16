@@ -3,7 +3,7 @@
 .ident-campaign {
 	.fontSize(@font-size--regular);
 	.font-siri--medium();
-	display: block;
+	display: inline-block;
 	border: none;
 	position: relative;
 	padding-top: 10px;
@@ -72,12 +72,13 @@
 	}
 
 	&__textmark {
+		border-bottom: 2px solid transparent;
 		.query-min(@screen--sm; {
 			display: block;
-			padding-left: (@spacing--large + @spacing--medium);
+			margin-left: (@spacing--large + @spacing--medium);
 		});
 		.query-min(@screen--md; {
-			padding-left: 0;
+			margin-left: 0;
 		});
 		.query-min(@screen--lg; {
 
@@ -88,7 +89,10 @@
 a.ident-campaign {
 	color: @color__text;
 	&:hover, &:focus {
-		text-decoration: underline;
+		color: @color__links;
+		.ident-campaign__textmark {
+			border-bottom-color: @color__links;
+		}
 	}
 }
 .header--overlay {
