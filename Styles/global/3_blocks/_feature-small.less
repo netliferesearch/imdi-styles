@@ -1,10 +1,10 @@
 @import "../../_vars";
- 
+
 .feature-small {
 	position: relative;
 	padding-bottom: @spacing--large;
 	padding-top: @spacing--large;
-	
+
 	@media print {
 		padding-top: 0;
 		padding-bottom: @spacing;
@@ -20,22 +20,33 @@
 		margin-bottom: 0;
 	}
 	&__link {
-		 
+
 	}
+  &__link-icon {
+    display: inline-block;
+    position: absolute;
+    margin-top: @spacing--xsmall;
+    margin-left: @spacing--small;
+  }
 	&__prefix {
 		.text--small();
-		color: @color__grey;		
+		color: @color__grey;
 		margin-bottom: 0;
 	}
+  &__organizer {
+    color: @color__grey;
+    margin: @spacing--small 0;
+    line-height: 1.25;
+  }
 	&__description {
 		.text();
 		margin-bottom: @spacing--small;
 	}
 
 	&__image {
-		padding-right: @spacing; 		
+		padding-right: @spacing;
 		.query-max(@screen--lg; {
-			width: 50%;   
+			width: 50%;
 			padding-bottom: @spacing;
 		});
 	}
@@ -51,35 +62,35 @@
 		margin-top: @spacing;
 	}
 	&--publication, &--person, &--event {
-	
+
 	}
 }
 
 // Fix to make content draged into section pages in EPI more promoted
 .page__footer .col--main .feature-small {
 	.query-min(@screen--md; {
-		border: 3px solid @color__canvas-grey;	
+		border: 3px solid @color__canvas-grey;
 		overflow: hidden;
 		margin-left: -(@gutter * 2);
-		margin-right: -(@gutter * 2);		
+		margin-right: -(@gutter * 2);
 		margin-bottom: @spacing--large;
 		margin-top: @spacing--large;
 		padding-left: (@gutter * 2);
 		padding-right: (@gutter * 2);
-	});	
+	});
 	.query-min(@screen--lg; {
 		margin-top: @spacing--large;
 		margin-bottom: @spacing--large;
-	});	
+	});
 	@media print {
 		border: 1px solid @color__canvas-grey;
-		page-break-inside: avoid;	
+		page-break-inside: avoid;
 	}
 }
 
-.page__footer .col--main .feature-small--publication, 
+.page__footer .col--main .feature-small--publication,
 .page__footer .col--main .feature-small--event {
 	.query-min(@screen--md; {
 		padding-bottom: @spacing;
-	});	
+	});
 }

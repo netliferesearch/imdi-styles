@@ -1552,12 +1552,12 @@ ol.row li {
 }
 /*
 
- Use the following CSS code if you want to have a class per icon 
+ Use the following CSS code if you want to have a class per icon
 
 Instead of a list of all class selectors,
 you can use the generic selector below, but it's slower:
 [class*="icon-"] {
-  
+
 */
 .icon__add,
 .icon__apply,
@@ -2025,6 +2025,9 @@ you can use the generic selector below, but it's slower:
 }
 .icon__arrow-down.icon--red {
   background-image: url('/UI/icons/red/icon-arrow-down.svg');
+}
+.icon__external.icon--red {
+  background-image: url('/UI/icons/red/icon-external.svg');
 }
 h1,
 .h1 {
@@ -4079,6 +4082,12 @@ blockquote small {
   line-height: 1.5em;
   display: block;
 }
+.feature-small__link-icon {
+  display: inline-block;
+  position: absolute;
+  margin-top: 5px;
+  margin-left: 7px;
+}
 .feature-small__prefix {
   font-family: "Siri", Tahoma, sans-serif;
   font-size-adjust: 0.51;
@@ -4091,6 +4100,11 @@ blockquote small {
   text-transform: none;
   color: #777777;
   margin-bottom: 0;
+}
+.feature-small__organizer {
+  color: #777777;
+  margin: 7px 0;
+  line-height: 1.25;
 }
 .feature-small__description {
   font-family: "Siri", Tahoma, sans-serif;
