@@ -135,8 +135,24 @@
 		right: 0px;
 	}
   &--campaign {
-    background: @color__canvas-grey;
+    background: @color__orange;
     margin-bottom: @spacing;
+    .header__menu-icon-bar {
+      background-color: @color__white;
+    }
+    .header__button {
+      color: @color__white;
+      background: @color__orange--dark;
+      padding-left: @spacing--small;
+      padding-right: @spacing--small;
+      &:hover, &:focus {
+        border-bottom-color: @color__white;
+        color: @color__white;
+        .header__menu-icon-bar {
+          background-color: @color__white;
+        }
+      }
+    }
   }
 	&--overlay {
 		width: 100%;

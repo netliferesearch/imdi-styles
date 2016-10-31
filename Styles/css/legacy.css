@@ -4102,9 +4102,15 @@ blockquote small {
   margin-bottom: 0;
 }
 .feature-small__organizer {
+  font-size: 15px;
+  font-size: 0.8333333333333334rem;
   color: #777777;
   margin: 7px 0;
-  line-height: 1.25;
+  line-height: 1.5;
+}
+.feature-small__organizer > * {
+  font-size: 15px;
+  font-size: 0.8333333333333334rem;
 }
 .feature-small__description {
   font-family: "Siri", Tahoma, sans-serif;
@@ -4185,9 +4191,9 @@ blockquote small {
 }
 .footer__main {
   padding: 21px 0 42px 0;
-  padding: 84px 0 84px 0;
+  padding: 42px 0 70px 0;
   display: table-cell;
-  vertical-align: bottom;
+  vertical-align: top;
   width: 63.63636364%;
   margin-bottom: 0;
 }
@@ -4199,7 +4205,7 @@ blockquote small {
   padding-left: 15%;
   background: none;
   margin: 0;
-  padding: 42px 0 84px 0;
+  padding: 84px 0 84px 0;
   display: table-cell;
   vertical-align: bottom;
   padding-left: 42px;
@@ -4261,6 +4267,11 @@ blockquote small {
 }
 .footer__submenu:last-child {
   margin-bottom: 2px;
+}
+.footer__line {
+  border: none;
+  border-bottom: 3px solid #f15540;
+  margin: 42px 0;
 }
 .footer--overlay {
   position: relative;
@@ -4740,8 +4751,26 @@ blockquote small {
   right: 0px;
 }
 .header--campaign {
-  background: #f2efed;
+  background: #f15540;
   margin-bottom: 21px;
+}
+.header--campaign .header__menu-icon-bar {
+  background-color: #ffffff;
+}
+.header--campaign .header__button {
+  color: #ffffff;
+  background: #d83a36;
+  padding-left: 7px;
+  padding-right: 7px;
+}
+.header--campaign .header__button:hover,
+.header--campaign .header__button:focus {
+  border-bottom-color: #ffffff;
+  color: #ffffff;
+}
+.header--campaign .header__button:hover .header__menu-icon-bar,
+.header--campaign .header__button:focus .header__menu-icon-bar {
+  background-color: #ffffff;
 }
 .header--overlay {
   width: 100%;

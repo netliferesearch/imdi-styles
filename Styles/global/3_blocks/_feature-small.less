@@ -34,9 +34,13 @@
 		margin-bottom: 0;
 	}
   &__organizer {
+    .fontSize(@font-size--small);
     color: @color__grey;
     margin: @spacing--small 0;
-    line-height: 1.25;
+    line-height: 1.5;
+    & > * {
+      .fontSize(@font-size--small);
+    }
   }
 	&__description {
 		.text();
