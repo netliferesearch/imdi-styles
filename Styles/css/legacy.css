@@ -2187,7 +2187,7 @@ h7 {
 }
 /*
 ul, ol {
-	Se 3_blocks/_list.less 
+	Se 3_blocks/_list.less
 }
 */
 p,
@@ -2241,7 +2241,14 @@ h4 small,
 p + h2,
 ul + h2,
 ol + h2,
-.info + h2 {
+figure + h2,
+table + h2,
+nav + h2,
+.info + h2,
+.col-block-bleed + h2,
+.col-block-bleed--full + h2,
+.cta + h2,
+div[data-imdikator="embed"] + h2 {
   margin-top: 42px;
   margin-top: 60px;
   margin-top: 84px;
@@ -2249,37 +2256,72 @@ ol + h2,
 p + h3,
 ul + h3,
 ol + h3,
-.info + h3 {
+figure + h3,
+table + h3,
+nav + h3,
+.info + h3,
+.col-block-bleed + h3,
+.col-block-bleed--full + h3,
+.cta + h3,
+div[data-imdikator="embed"] + h3 {
   margin-top: 21px;
   margin-top: 42px;
 }
 p + h4,
 ul + h4,
 ol + h4,
+figure + h4,
+table + h4,
+nav + h4,
 .info + h4,
-h3 + h4 {
+h3 + h4,
+.col-block-bleed + h4,
+.col-block-bleed--full + h4,
+.cta + h4,
+div[data-imdikator="embed"] + h4 {
   margin-top: 21px;
   margin-top: 42px;
 }
 p + h5,
 ul + h5,
 ol + h5,
+figure + h5,
+table + h5,
+nav + h5,
 .info + h5,
-h4 + h5 {
+h4 + h5,
+.col-block-bleed + h5,
+.col-block-bleed--full + h5,
+.cta + h5,
+div[data-imdikator="embed"] + h5 {
   margin-top: 21px;
 }
 p + h6,
 ul + h6,
 ol + h6,
+figure + h6,
+table + h6,
+nav + h6,
 .info + h6,
-h5 + h6 {
+h5 + h6,
+.col-block-bleed + h6,
+.col-block-bleed--full + h6,
+.cta + h6,
+div[data-imdikator="embed"] + h6 {
   margin-top: 21px;
 }
 p + h7,
 ul + h7,
 ol + h7,
+figure + h7,
+table + h7,
+nav + h7,
 .info + h7,
-h6 + h7 {
+h6 + h7,
+.col-block-bleed + h7,
+.col-block-bleed--full + h7,
+.cta + h7,
+div[data-imdikator="embed"] + h7 {
   margin-top: 21px;
 }
 .text--xlarge {
@@ -6088,6 +6130,8 @@ a.ident:active .ident__triangle {
 .image-block__image--figure {
   border: 3px solid #f2efed;
   padding: 21px;
+  padding-bottom: 42px;
+  position: relative;
 }
 .image-block__caption {
   display: block;
@@ -6187,6 +6231,14 @@ a.ident:active .ident__triangle {
   .image-block--portrait .image-block__images {
     width: 50%;
   }
+}
+.image-block__figure-footer {
+  background: #f2efed;
+  position: absolute;
+  width: auto;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 .timeline {
   padding-left: 0;
