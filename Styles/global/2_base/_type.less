@@ -12,41 +12,41 @@ h2, .h2 {
 	.h2(); /* Se mixin i _vars.less */
 }
 
-h3, .h3 {	
+h3, .h3 {
 	.h3(); /* Se mixin i _vars.less */
 }
 
 h4, .h4 {
 	.h4(); /* Se mixin i _vars.less */
-} 
+}
 
 h5, .h5, h6, h7 {
 	.text(); /* Se mixin i _vars.less */
-	.font-siri--medium();	
+	.font-siri--medium();
 	margin-bottom: 0;
-}  
- 
+}
+
 .siri--regular {
-	.font-siri--regular();	
-} 
+	.font-siri--regular();
+}
 
 .siri--medium {
-	.font-siri--medium();	
-} 
+	.font-siri--medium();
+}
 
 .consolas {
 	font-weight: normal;
-	font-family: 'Consolas';	
-} 
+	font-family: 'Consolas';
+}
 
 .tahoma {
-	font-weight: normal;	
-	font-family: 'Tahoma';	
-} 
+	font-weight: normal;
+	font-family: 'Tahoma';
+}
 
 /*
 ul, ol {
-	Se 3_blocks/_list.less 
+	Se 3_blocks/_list.less
 }
 */
 
@@ -57,7 +57,7 @@ p, .text {
 a, .a {
 	color: @color__links;
 	border-bottom: 1px solid @color__links;
-	
+
 	&:hover, &--hover, &:focus, &--focus, &:active, &--active {
 		color: @color__text;
 		border-color: @color__text;
@@ -71,58 +71,56 @@ a, .a {
 h2, .h2, h3, .h3, h4, .h4 {
 	small {
 		font-size: 0.7em;
-		line-height: 1.5em;				
+		line-height: 1.5em;
 		display: block;
 	}
 }
 
-p+h2, ul + h2, ol + h2, .info + h2 {
+p+h2, ul + h2, ol + h2, figure + h2, table + h2, nav + h2, .info + h2, .col-block-bleed + h2, .col-block-bleed--full + h2, .cta + h2, div[data-imdikator="embed"] + h2 {
 	margin-top: @spacing--large;
-	.query-min(@screen--sm; {	
-		margin-top: 60px;	
+	.query-min(@screen--sm; {
+		margin-top: 60px;
 	});
 	.query-min(@screen--md; {
 		margin-top: @spacing--xlarge;
 	});
 }
 
-p+h3, ul + h3, ol + h3, .info + h3 {
+p+h3, ul + h3, ol + h3, figure + h3, table + h3, nav + h3, .info + h3, .col-block-bleed + h3, .col-block-bleed--full + h3, .cta + h3, div[data-imdikator="embed"] + h3 {
 	margin-top: @spacing;
 	.query-min(@screen--md; {
 		margin-top: @spacing--large;
 	});
 }
 
-p+h4, ul + h4, ol + h4, .info + h4, h3 + h4 {
+p+h4, ul + h4, ol + h4, figure + h4, table + h4, nav + h4, .info + h4, h3 + h4, .col-block-bleed + h4, .col-block-bleed--full + h4, .cta + h4, div[data-imdikator="embed"] + h4 {
 	margin-top: @spacing;
 	.query-min(@screen--md; {
 		margin-top: @spacing--large;
 	});
 }
 
-p+h5, ul + h5, ol + h5, .info + h5, h4 + h5 {
+p+h5, ul + h5, ol + h5, figure + h5, table + h5, nav + h5, .info + h5, h4 + h5, .col-block-bleed + h5, .col-block-bleed--full + h5, .cta + h5, div[data-imdikator="embed"] + h5 {
 	margin-top: @spacing;
 }
 
-p+h6, ul + h6, ol + h6, .info + h6, h5 + h6 {
+p+h6, ul + h6, ol + h6, figure + h6, table + h6, nav + h6, .info + h6, h5 + h6, .col-block-bleed + h6, .col-block-bleed--full + h6, .cta + h6, div[data-imdikator="embed"] + h6 {
 	margin-top: @spacing;
 }
 
-p+h7, ul + h7, ol + h7, .info + h7, h6 + h7 {
+p+h7, ul + h7, ol + h7, figure + h7, table + h7, nav + h7, .info + h7, h6 + h7, .col-block-bleed + h7, .col-block-bleed--full + h7, .cta + h7, div[data-imdikator="embed"] + h7 {
 	margin-top: @spacing;
 }
 
 
-.text--xlarge {	
+.text--xlarge {
 	.h2(); /* Se mixin i _vars.less */
 }
 
-.text--large, .text--large p  {	
+.text--large, .text--large p  {
 	.text--large(); /* Se mixin i _vars.less */
 }
 
 .text--small {
 	.text--small();
 }
-
-
