@@ -61,13 +61,27 @@
 				right: @spacing;
 			});
 		}
+    &--login {
+      display: none;
+			.query-min(@screen--md; {
+				display: block;
+				top: 20px;
+        right: 12em;
+				text-align: right;
+			});
+      &:hover, &:focus {
+				.header__login-icon {
+					background-image: data-uri('/UI/icons/red/icon-unlocked.svg');
+				}
+			}
+		}
 		&--search {
 			display: none;
 			.query-min(@screen--md; {
 				display: block;
 				top: 20px;
 				right: 100px + @spacing;
-				right: 6.5em;
+        right: 7em;
 				text-align: right;
 			});
 			&:hover, &:focus {
@@ -121,6 +135,9 @@
 	&__search-icon {
 	    margin-left: 0.25rem;
 	}
+  &__login-icon {
+	    margin-left: 0.25rem;
+  }
 	&__button-text--open {
 		display: inline;
 	}
@@ -133,6 +150,10 @@
 		position: absolute;
 		top: 14px;
 		right: 0px;
+    background: @color__white;
+    .search__button, .search__input {
+      margin-bottom: 0;
+    }
 	}
   &--campaign {
     background: @color__orange;
@@ -170,10 +191,14 @@
 				.header__search-icon {
 					background-image: data-uri('/UI/icons/white/icon-search.svg');
 				}
+        .header__login-icon {
+    			background-image: data-uri('/UI/icons/white/icon-unlocked.svg');
+    		}
 			}
 		}
 		.header__search {
 			.query-min(@screen--md; {
+        width: 247px;
 				.search--header {
 					padding-right: 100px;
 				}
@@ -188,6 +213,9 @@
 		}
 		.header__search-icon {
 			background-image: data-uri('/UI/icons/white/icon-search.svg');
+		}
+    .header__login-icon {
+			background-image: data-uri('/UI/icons/white/icon-unlocked.svg');
 		}
 
         .header__menu-icon-bar {
@@ -228,7 +256,9 @@
 			.query-min(@screen--md; {
 				right: 100px + @spacing;
 				display: block;
-				.animation(animations__fade-in 1000ms @swift-out both);
+				> * {
+          .animation(animations__fade-in 1000ms @swift-out both);
+        }
 			});
 		}
 	}
