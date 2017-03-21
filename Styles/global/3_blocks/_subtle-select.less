@@ -1,19 +1,22 @@
  @import "../../_vars";
- 
+
 .subtle-select {
 	position: relative;
 	margin-bottom: @spacing--small;
 	.query-min(@screen--md; {
-    margin-bottom: @spacing--medium;	
+    margin-bottom: @spacing--medium;
   });
+  label {
+    margin: 0;
+  }
 	&__label {
 		.text--small();
 		position: absolute;
 		z-index: 1;
-		pointer-events: none;		
+		pointer-events: none;
 		padding-left: @spacing--small;
 		padding-top: @spacing--small;
-		padding-right: @spacing--small;			
+		padding-right: @spacing--small;
 		color: @color__grey;
 		white-space: nowrap;
         overflow: hidden;
@@ -25,17 +28,18 @@
 		text-align: left;
 		padding-left: @spacing--small + @spacing;
 		padding-right: @spacing--small;
-		padding-bottom: @spacing--small;				
+		padding-bottom: @spacing--small;
 		padding-top: 1.66rem;
-		z-index: 0;		
+		z-index: 0;
 		background: @color__white;
 		word-wrap: break-word;
 		white-space: normal;
-		border: 2px solid @color__canvas-grey;	
+		border: 2px solid @color__canvas-grey;
 		white-space: nowrap;
     overflow: hidden;
     max-width: 100%;
-    text-overflow: ellipsis;		
+    text-overflow: ellipsis;
+    min-height: 62px;
 		&:hover, &:focus, &:active {
 			background: @color__canvas-grey;
 		}
@@ -59,7 +63,7 @@
 			margin: 0;
   		background-image: data-uri('/UI/icons/icon-down.svg');
   		background-position: center center;
-  		background-repeat: no-repeat;			
+  		background-repeat: no-repeat;
 			background-size: contain;
 			top: 1.85rem;
 			right: none;
@@ -67,15 +71,24 @@
 		}
 		&--expanded {
 			border: 2px solid @color__orange;
-		}		
+		}
 	}
 	&__button--add {
 		&:after {
   		background-image: data-uri('/UI/icons/icon-add.svg');
   		background-position: center center;
-  		background-repeat: no-repeat;			
+  		background-repeat: no-repeat;
 			background-size: contain;
-		}		
+		}
+	}
+  &__button--more {
+    
+		&:after {
+  		background-image: data-uri('/UI/icons/icon-arrow-right.svg');
+  		background-position: center center;
+  		background-repeat: no-repeat;
+			background-size: contain;
+		}
 	}
 	&__select select:disabled {
 		padding-left: @spacing--small;
@@ -84,14 +97,12 @@
 		border-color: transparent;
 		&:hover, &:focus, &:active {
 			background: none;
-		}		
+		}
 	}
 	&__select--disabled {
 		&:after {
 			display: none;
-		}		
-	}	
-	
+		}
+	}
+
 }
- 
- 
