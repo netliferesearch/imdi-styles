@@ -5473,6 +5473,7 @@ blockquote small {
 }
 .graph__filter-toggle {
   position: absolute;
+  z-index: 2;
 }
 .graph__types {
   text-align: right;
@@ -7547,10 +7548,7 @@ table caption small,
   outline-offset: 0;
 }
 .toggle--light .toggle__button--expanded {
-  background: #ffffff;
-  color: #d83a36;
-  border: none;
-  min-width: none;
+  min-width: 0;
 }
 .toggle--light .toggle__button--expanded:hover,
 .toggle--light .toggle__button--expanded:focus,
@@ -7562,9 +7560,6 @@ table caption small,
   padding-right: 0;
   padding-bottom: 0;
   border: none;
-}
-.toggle--light .toggle__section--expanded {
-  border-top: 2px solid #f2efed;
 }
 .toggle--only-mobile {
   margin-bottom: 0;
