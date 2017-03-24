@@ -3,11 +3,12 @@
 .wrapper {
 	width: 100%;
 	max-width: @grid-width;
-	margin: 0 auto;	
+	margin: 0 auto;
 	padding: 0 @gutter;
 	min-width: 13em;
 }
 
+/* Traditional float based */
 .row {
 	.row(); /* Se mixins in _vars.less */
 }
@@ -17,9 +18,28 @@ ul.row, ol.row {
 	margin-bottom: 0;
 	li {
 		padding-top: 0;
-		padding-bottom: 0;	
-		margin: 0;	
-		list-style: none;	
+		padding-bottom: 0;
+		margin: 0;
+		list-style: none;
+	}
+}
+/* Flexbox based */
+.flex-row {
+	display: flex;
+  flex-wrap: wrap;
+	margin-left:  (@gutter / -2);
+	margin-right: (@gutter / -2);
+	.col--fifth {
+	  min-width: 100%;
+	  flex-basis: 100%;
+		.query-min(@screen--md; {
+			min-width: 33.33%;
+			flex-basis: 33.33%;
+		});
+		.query-min(@screen--lg; {
+			min-width: 20%;
+		  flex-basis: 20%;
+		});
 	}
 }
 
@@ -31,15 +51,15 @@ ul.row, ol.row {
 	.col(1); /* Se mixins in _vars.less */
 	.query-min(@screen--md; {
 		.col(14/22); /* Se mixins in _vars.less */
-		.col-offset(1/22);		
+		.col-offset(1/22);
 	});
 	.query-min(@screen--lg; {
 		.col(12/22); /* Se mixins in _vars.less */
 		.col-offset(2/22);
-	});	
+	});
 	@media print {
 		.col(14/22); /* Se mixins in _vars.less */
-		.col-offset(0);  	
+		.col-offset(0);
 	}
 }
 
@@ -47,26 +67,26 @@ ul.row, ol.row {
 	.col(1); /* Se mixins in _vars.less */
 	.query-min(@screen--md; {
 		.col(14/22); /* Se mixins in _vars.less */
-		.col-offset(1/22);		
-	});	
+		.col-offset(1/22);
+	});
 	.query-min(@screen--lg; {
-		.col-offset(1/22);		
+		.col-offset(1/22);
 		.col(7/22); /* Se mixins in _vars.less */
-		float: right !important; // Sorry ... media queries inside less mixins is apearantly not reccommended		
-	});		
+		float: right !important; // Sorry ... media queries inside less mixins is apearantly not reccommended
+	});
 }
 
 .col--related {
 	.col(1); /* Se mixins in _vars.less */
 	.query-min(@screen--md; {
-		.col(7/22); /* Se mixins in _vars.less */	
+		.col(7/22); /* Se mixins in _vars.less */
 	});
 	.query-min(@screen--lg; {
-		.col-offset(1/22);		
+		.col-offset(1/22);
 		.col(7/22); /* Se mixins in _vars.less */
-	});		
+	});
   @media print {
-		.col-offset(0);		
+		.col-offset(0);
   }
 }
 
@@ -74,62 +94,62 @@ ul.row, ol.row {
 	.col(1); /* Se mixins in _vars.less */
 	.query-min(@screen--md; {
 		.col(21/22); /* Se mixins in _vars.less */
-		.col-offset(1/22);		
+		.col-offset(1/22);
 	});
 	.query-min(@screen--lg; {
 		.col(20/22); /* Se mixins in _vars.less */
 		.col-offset(2/22);
-	});	
+	});
   @media print {
 		.col(21/22); /* Se mixins in _vars.less */
-		.col-offset(0);    
+		.col-offset(0);
   }
 }
 
 .col--half {
-	.col(1); /* Se mixins in _vars.less */ 
+	.col(1); /* Se mixins in _vars.less */
 	.query-min(@screen--md; {
-		.col(1/2); /* Se mixins in _vars.less */	
+		.col(1/2); /* Se mixins in _vars.less */
 	});
 }
 
 .col--half-lg {
-	.col(1); /* Se mixins in _vars.less */ 
+	.col(1); /* Se mixins in _vars.less */
 	.query-min(@screen--lg; {
 		.col(1/2); /* Se mixins in _vars.less */
-	});	
+	});
 }
 
 .col--third {
-	.col(1); /* Se mixins in _vars.less */ 
+	.col(1); /* Se mixins in _vars.less */
 	.query-min(@screen--md; {
-		.col(1/2); /* Se mixins in _vars.less */	
+		.col(1/2); /* Se mixins in _vars.less */
 	});
 	.query-min(@screen--lg; {
-		.col(1/3); /* Se mixins in _vars.less */	
+		.col(1/3); /* Se mixins in _vars.less */
 	});
 }
 
-.col--quarter { 
+.col--quarter {
 	.col(1); /* Se mixins in _vars.less */
 	.query-min(@screen--md; {
-		.col(1/3); /* Se mixins in _vars.less */	
+		.col(1/3); /* Se mixins in _vars.less */
 	});
 	.query-min(@screen--lg; {
 		.col(1/4); /* Se mixins in _vars.less */
-	});		
-	
+	});
+
 }
 
 .col--fifth {
 	.col(1); /* Se mixins in _vars.less */
 	.query-min(@screen--md; {
-		.col(1/3); /* Se mixins in _vars.less */	
+		.col(1/3); /* Se mixins in _vars.less */
 	});
 	.query-min(@screen--lg; {
 		.col(1/5); /* Se mixins in _vars.less */
-	});		
-	
+	});
+
 }
 
 
@@ -137,71 +157,71 @@ ul.row, ol.row {
 	.col(1); /* Se mixins in _vars.less */
 	.query-min(@screen--lg; {
 		.col(1/6); /* Se mixins in _vars.less */
-	});		
-	
+	});
+
 }
 
 
 .col--main {
 	.col-block-bleed {
 		margin-left: -@gutter;
-		margin-right: -@gutter;		
+		margin-right: -@gutter;
 		&--inline-mobile {
-			margin-left: 0;  
-			margin-right: 0;	
+			margin-left: 0;
+			margin-right: 0;
 		}
 		.query-min(@screen--md; {
 			width: percentage(22/14);
-			margin-left: percentage(-1/14);		
-		});	
+			margin-left: percentage(-1/14);
+		});
 		.query-min(@screen--lg; {
 			width: percentage(16/12);
 			margin-left: percentage(-2/12);
-		});	
+		});
     @media print {
 			width: percentage(22/14);
-			margin-left: percentage(-1/14);      
+			margin-left: percentage(-1/14);
     }
 	}
 	.col-block-bleed--full {
 		margin-left: -@gutter;
-		margin-right: -@gutter;		
-		
+		margin-right: -@gutter;
+
 		.query-min(@screen--md; {
 			width: percentage(22/14);
-			margin-left: percentage(-1/14);		
-		});	
+			margin-left: percentage(-1/14);
+		});
 		.query-min(@screen--lg; {
 			width: percentage(22/12);
 			margin-left: percentage(-2/12);
 		});
     @media print {
 			width: percentage(22/14);
-			margin-left: percentage(-1/14);      
+			margin-left: percentage(-1/14);
     }
 	}
-	.col-block-bleed--full-right {		
+	.col-block-bleed--full-right {
 		.query-min(@screen--md; {
 			width: percentage(21/14);
-		});	
+		});
 		.query-min(@screen--lg; {
 			width: percentage(20/12);
 		});
 		@media print {
-			width: percentage(21/14);  		
+			width: percentage(21/14);
 		}
-	}	
+	}
 }
 .col--big-image {
-	.query-min(@screen--md; {		 	
+	.query-min(@screen--md; {
 		.col(2.25 / 3.25);
 	});
-} 
+}
 .col--small-image {
-	.query-min(@screen--sm; {		 		
-		.col(1 / 2);	
+	.query-min(@screen--sm; {
+		.col(1 / 2);
 	});
-	.query-min(@screen--md; {		 	
+	.query-min(@screen--md; {
 		.col(1 / 3.25);
 	});
 
@@ -216,7 +236,7 @@ ul.row, ol.row {
 
 .col--right-padding {
 	/* A modifier for columns when they may become stacked to prevent uneven linebreaks. Need spacing commented out in the markup. */
-	.query-min(@screen--md; {		 		
+	.query-min(@screen--md; {
 		padding-right: @spacing !important;
 	});
 }
