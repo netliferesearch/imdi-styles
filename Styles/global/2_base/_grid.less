@@ -30,15 +30,13 @@ ul.row, ol.row {
 	margin-left:  (@gutter / -2);
 	margin-right: (@gutter / -2);
 	.col--fifth {
-	  min-width: 100%;
-	  flex-basis: 100%;
+		width: 100%;
+	  flex-basis: auto;
 		.query-min(@screen--md; {
-			min-width: 33.33%;
-			flex-basis: 33.33%;
+			width: 33.33%;
 		});
 		.query-min(@screen--lg; {
-			min-width: 20%;
-		  flex-basis: 20%;
+		  width: 20%;
 		});
 	}
 }
