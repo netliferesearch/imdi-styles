@@ -6,7 +6,7 @@
 	.query-min(@screen--md; {
     margin-bottom: @spacing--medium;
   });
-  label {
+  > label {
     margin: 0;
   }
 	&__label {
@@ -76,18 +76,11 @@
 	&__button--add {
 		&:after {
   		background-image: data-uri('/UI/icons/icon-add.svg');
-  		background-position: center center;
-  		background-repeat: no-repeat;
-			background-size: contain;
 		}
 	}
-  &__button--more {
-    
+  &__button--location {
 		&:after {
-  		background-image: data-uri('/UI/icons/icon-arrow-right.svg');
-  		background-position: center center;
-  		background-repeat: no-repeat;
-			background-size: contain;
+  		background-image: data-uri('/UI/icons/icon-search.svg');
 		}
 	}
 	&__select select:disabled {

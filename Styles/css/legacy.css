@@ -1161,6 +1161,7 @@ body {
   padding: 0 21px;
   min-width: 13em;
 }
+/* Traditional float based */
 .row {
   margin-left: -10.5px;
   margin-right: -10.5px;
@@ -1195,6 +1196,21 @@ ol.row li {
   padding-bottom: 0;
   margin: 0;
   list-style: none;
+}
+/* Flexbox based */
+.flex-row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -10.5px;
+  margin-right: -10.5px;
+}
+.flex-row .col--fifth {
+  min-width: 100%;
+  flex-basis: 100%;
+  min-width: 33.33%;
+  flex-basis: 33.33%;
+  min-width: 20%;
+  flex-basis: 20%;
 }
 .col--full {
   position: relative;
@@ -4558,7 +4574,7 @@ blockquote small {
   position: relative;
   z-index: 1;
   margin: 0;
-  margin-top: -21px;
+  margin-top: -14px;
 }
 .field-notification--animate {
   -webkit-animation: animations__shake--vertical 700ms cubic-bezier(0, 0, 0.1, 1);
@@ -5447,10 +5463,16 @@ blockquote small {
   margin-bottom: 21px;
   position: relative;
 }
+.graph__filter {
+  position: relative;
+}
 @media print {
   .graph__filter {
     display: none;
   }
+}
+.graph__filter-toggle {
+  position: absolute;
 }
 .graph__types {
   text-align: right;
@@ -5526,14 +5548,14 @@ blockquote small {
   /*
 		-webkit-box-shadow: 0px 0px 111px -24px rgba(0,0,0,0.50);
 		-moz-box-shadow: 0px 0px 111px -24px rgba(0,0,0,0.50);
-		box-shadow: 0px 0px 111px -24px rgba(0,0,0,0.50);		
+		box-shadow: 0px 0px 111px -24px rgba(0,0,0,0.50);
 		*/
   position: absolute;
   z-index: 3;
-  top: 0;
+  top: 4.5rem;
   border: 3px solid #f15540;
   background: #ffffff;
-  margin-top: 14px;
+  margin-top: 0;
   margin-bottom: 42px;
   padding: 21px 21px;
   text-align: left;
@@ -5625,6 +5647,14 @@ blockquote small {
 }
 .lightbox__footer {
   margin-top: 0;
+}
+.lightbox--second-column .lightbox__box {
+  top: 8.5rem;
+  top: 4.5rem;
+}
+.lightbox--second-column .lightbox__point {
+  left: calc(35.33%);
+  left: calc(22%);
 }
 .lightbox--as-overlay {
   position: absolute;
@@ -6933,7 +6963,7 @@ a.ident:active .ident__triangle {
   margin-bottom: 7px;
   margin-bottom: 14px;
 }
-.subtle-select label {
+.subtle-select > label {
   margin: 0;
 }
 .subtle-select__label {
@@ -7032,15 +7062,9 @@ a.ident:active .ident__triangle {
 }
 .subtle-select__button--add:after {
   background-image: url('/UI/icons/icon-add.svg');
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: contain;
 }
-.subtle-select__button--more:after {
-  background-image: url('/UI/icons/icon-arrow-right.svg');
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: contain;
+.subtle-select__button--location:after {
+  background-image: url('/UI/icons/icon-search.svg');
 }
 .subtle-select__select select:disabled {
   padding-left: 7px;
@@ -7507,16 +7531,42 @@ table caption small,
 .toggle__caption--expanded {
   display: none;
 }
+.toggle--light .toggle__button {
+  background: #ffffff;
+  padding: 7px 0;
+  color: #d83a36;
+  border: none;
+}
+.toggle--light .toggle__button > span {
+  border-bottom: 1px solid #d83a36;
+}
+.toggle--light .toggle__button:hover,
+.toggle--light .toggle__button:focus,
+.toggle--light .toggle__button:active {
+  color: #282828;
+  outline: none;
+}
+.toggle--light .toggle__button:hover > span,
+.toggle--light .toggle__button:focus > span,
+.toggle--light .toggle__button:active > span {
+  border-bottom-color: #282828;
+}
+.toggle--light .toggle__button:focus {
+  outline: none;
+}
+.toggle--light .toggle__button:focus > span {
+  outline: 1px dotted;
+  outline-offset: 3px;
+}
 .toggle--light .toggle__button--expanded {
   background: #ffffff;
-  color: #282828;
+  color: #d83a36;
   border: none;
-  border-top: 2px solid #f2efed;
 }
 .toggle--light .toggle__button--expanded:hover,
 .toggle--light .toggle__button--expanded:focus,
 .toggle--light .toggle__button--expanded:active {
-  color: #d83a36;
+  color: #282828;
   text-decoration: underline;
 }
 .toggle--light .toggle__section {
@@ -7524,6 +7574,9 @@ table caption small,
   padding-right: 0;
   padding-bottom: 0;
   border: none;
+}
+.toggle--light .toggle__section--expanded {
+  border-top: 2px solid #f2efed;
 }
 .toggle--only-mobile {
   margin-bottom: 0;
