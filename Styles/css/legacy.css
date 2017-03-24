@@ -7534,18 +7534,30 @@ table caption small,
 }
 .toggle--light .toggle__button {
   background: #ffffff;
-  padding: 5px 7px;
-  border: 2px solid #f2efed;
-  color: #282828;
+  padding: 7px 0;
+  color: #d83a36;
+  border: none;
+}
+.toggle--light .toggle__button > span {
+  border-bottom: 1px solid #d83a36;
 }
 .toggle--light .toggle__button:hover,
 .toggle--light .toggle__button:focus,
 .toggle--light .toggle__button:active {
   color: #282828;
-  background: #f2efed;
+  outline: none;
+}
+.toggle--light .toggle__button:hover > span,
+.toggle--light .toggle__button:focus > span,
+.toggle--light .toggle__button:active > span {
+  border-bottom-color: #282828;
 }
 .toggle--light .toggle__button:focus {
-  outline-offset: 0;
+  outline: none;
+}
+.toggle--light .toggle__button:focus > span {
+  outline: 1px dotted;
+  outline-offset: 3px;
 }
 .toggle--light .toggle__button--expanded {
   min-width: 0;
@@ -7560,6 +7572,9 @@ table caption small,
   padding-right: 0;
   padding-bottom: 0;
   border: none;
+}
+.toggle--light .toggle__section--expanded {
+  border-top: 2px solid #f2efed;
 }
 .toggle--only-mobile {
   margin-bottom: 0;
