@@ -1200,7 +1200,7 @@ ol.row li {
 /* Flexbox based */
 .flex-row {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: row wrap;
   margin-left: -10.5px;
   margin-right: -10.5px;
 }
