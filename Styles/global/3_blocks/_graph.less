@@ -4,13 +4,19 @@
 	margin-bottom: @spacing;
 	position: relative;
 	@media print {
-    
-	}	
+
+	}
 	&__filter {
+    position: relative;
 		@media print {
 			display: none;
-		}								
+		}
 	}
+  &__filter-toggle {
+    .query-min(@screen--md; {
+			position: absolute;
+		});
+  }
 	&__types {
     	text-align: right;
 	}
@@ -40,7 +46,7 @@
 		});
 		@media print {
 			display: none;
-		}						
+		}
 		.button {
 			.query-min(@screen--md; {
 				display: inline-block;
@@ -49,10 +55,10 @@
 		}
 	}
 	&__functions-item {
-		display: inline-block;  	
+		display: inline-block;
   }
   &__related {
-    margin-top: @spacing;   
+    margin-top: @spacing;
     background: lighten( @color__canvas-grey, 3%);
     margin-left: -@spacing;
     margin-right: -@spacing;
