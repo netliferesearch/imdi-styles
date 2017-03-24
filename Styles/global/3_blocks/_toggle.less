@@ -90,34 +90,30 @@
 	&--light {
 		.toggle__button {
 			background: @color__white;
-			padding: @spacing--small 0;
-			color: @color__links;
-			border: none;
+			padding: @spacing--xsmall @spacing--small;
+			border: 2px solid @color__canvas-grey;
+			color: @color__text;
 			> span {
-				border-bottom: 1px solid @color__links;
+				//border-bottom: 1px solid @color__links;
 			}
 			&:hover, &:focus, &:active {
 				color: @color__text;
-				outline: none;
+				background: @color__canvas-grey;
 				> span {
-					border-bottom-color: @color__text;
+					//border-bottom-color: @color__text;
 				}
 			}
 			&:focus {
-				outline: none;
-				> span {
-					outline: 1px dotted;
-					outline-offset: 3px;
-				}
+				outline-offset: 0;
 			}
 		}
 		.toggle__button--expanded {
 			background: @color__white;
 			color: @color__links;
 			border: none;
+			min-width: none;
 			&:hover, &:focus, &:active {
 				color: @color__text;
-				text-decoration: underline;
 			}
 		}
 		.toggle__section {
