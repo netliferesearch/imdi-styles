@@ -90,29 +90,24 @@
 	&--light {
 		.toggle__button {
 			background: @color__white;
-			padding: @spacing--small 0;
-			color: @color__links;
+			padding: @spacing--xsmall;
 			border: none;
-			> span {
-				border-bottom: 1px solid @color__links;
-			}
+			border: 2px solid @color__canvas-grey;
 			&:hover, &:focus, &:active {
 				color: @color__text;
+				background: @color__canvas-grey;
 				outline: none;
-				> span {
-					border-bottom-color: @color__text;
-				}
+				border-bottom-color: @color__canvas-grey;
 			}
 			&:focus {
-				outline: none;
-				> span {
-					outline: 1px dotted;
-					outline-offset: 3px;
-				}
+				outline: 1px dotted;
+				outline-offset: 0;
+
 			}
 		}
 		.toggle__button--expanded {
 			min-width: 0;
+			color: @color__text;
 			&:hover, &:focus, &:active {
 				color: @color__text;
 			}

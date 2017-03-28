@@ -7533,33 +7533,25 @@ table caption small,
 }
 .toggle--light .toggle__button {
   background: #ffffff;
-  padding: 7px 0;
-  color: #d83a36;
+  padding: 5px;
   border: none;
-}
-.toggle--light .toggle__button > span {
-  border-bottom: 1px solid #d83a36;
+  border: 2px solid #f2efed;
 }
 .toggle--light .toggle__button:hover,
 .toggle--light .toggle__button:focus,
 .toggle--light .toggle__button:active {
   color: #282828;
+  background: #f2efed;
   outline: none;
-}
-.toggle--light .toggle__button:hover > span,
-.toggle--light .toggle__button:focus > span,
-.toggle--light .toggle__button:active > span {
-  border-bottom-color: #282828;
+  border-bottom-color: #f2efed;
 }
 .toggle--light .toggle__button:focus {
-  outline: none;
-}
-.toggle--light .toggle__button:focus > span {
   outline: 1px dotted;
-  outline-offset: 3px;
+  outline-offset: 0;
 }
 .toggle--light .toggle__button--expanded {
   min-width: 0;
+  color: #282828;
 }
 .toggle--light .toggle__button--expanded:hover,
 .toggle--light .toggle__button--expanded:focus,
