@@ -7533,20 +7533,18 @@ table caption small,
 }
 .toggle--light .toggle__button {
   background: #ffffff;
-  padding: 5px;
+  padding: 5px 0;
   border: none;
-  border: 2px solid #f2efed;
+  border-bottom: 2px solid #f2efed;
 }
 .toggle--light .toggle__button:hover,
 .toggle--light .toggle__button:focus,
 .toggle--light .toggle__button:active {
-  color: #282828;
-  background: #f2efed;
+  color: #d83a36;
   outline: none;
-  border-bottom-color: #f2efed;
 }
 .toggle--light .toggle__button:focus {
-  outline: 1px dotted;
+  outline: 1px dotted #282828;
   outline-offset: 0;
 }
 .toggle--light .toggle__button--expanded {
@@ -7556,16 +7554,13 @@ table caption small,
 .toggle--light .toggle__button--expanded:hover,
 .toggle--light .toggle__button--expanded:focus,
 .toggle--light .toggle__button--expanded:active {
-  color: #282828;
+  color: #d83a36;
 }
 .toggle--light .toggle__section {
   padding-left: 0;
   padding-right: 0;
   padding-bottom: 0;
   border: none;
-}
-.toggle--light .toggle__section--expanded {
-  border-top: 2px solid #f2efed;
 }
 .toggle--only-mobile {
   margin-bottom: 0;

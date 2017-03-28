@@ -90,26 +90,25 @@
 	&--light {
 		.toggle__button {
 			background: @color__white;
-			padding: @spacing--xsmall;
+			padding: @spacing--xsmall 0;
 			border: none;
-			border: 2px solid @color__canvas-grey;
+			border-bottom: 2px solid @color__canvas-grey;
 			&:hover, &:focus, &:active {
-				color: @color__text;
-				background: @color__canvas-grey;
+				color: @color__links;
+				//background: @color__canvas-grey;
 				outline: none;
-				border-bottom-color: @color__canvas-grey;
+				//border-bottom-color: darken(@color__canvas-grey, 10%);
 			}
 			&:focus {
-				outline: 1px dotted;
+				outline: 1px dotted @color__text;
 				outline-offset: 0;
-
 			}
 		}
 		.toggle__button--expanded {
 			min-width: 0;
 			color: @color__text;
 			&:hover, &:focus, &:active {
-				color: @color__text;
+				color: @color__links;
 			}
 		}
 		.toggle__section {
@@ -119,7 +118,7 @@
 			border: none;
 		}
 		.toggle__section--expanded {
-		  border-top: 2px solid #f2efed;
+		  //border-top: 2px solid #f2efed;
 		}
 	}
 	&--only-mobile {
