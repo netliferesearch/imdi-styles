@@ -20,11 +20,14 @@
 		background: @color__white;
 		margin-top: 0;
 		margin-bottom: @spacing--large;
+		margin-left: (-@spacing);
+		margin-right: (-@spacing);
 		padding: @spacing @gutter;
 		text-align: left;
-    width: 100%;
   	.query-min(@screen--md; {
-  		margin-left: @spacing--small;
+  		margin-left: 0;
+			margin-right: 0;
+			width: 100%;
   	});
 		.query-min(@screen--lg; {
 			padding: @spacing;
@@ -106,12 +109,12 @@
 			border-color: transparent;
 			position: absolute;
 			z-index: 2;
-			width: 100%;
 			.query-min(@screen--md; {
 				border-color: @color__canvas-grey;
 				margin: 0 auto;
 				top: 50%;
 				left: 50%;
+				width: 100%;
 				max-width: 25em;
 				.transform( translate(-50%, -50%) );
 			});
@@ -137,7 +140,6 @@
 			top: 0;
 			position: absolute;
 			border-color: @color__orange;
-			width: 100%;
 			.transform( translate(0, -100%) );
 			margin-top: -@spacing;
 			.query-min(@screen--md; {
