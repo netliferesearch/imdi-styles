@@ -1210,6 +1210,16 @@ ol.row li {
   width: 33.33%;
   width: 20%;
 }
+.flex-row .col--six {
+  width: 100%;
+  flex-basis: auto;
+  width: 33.33%;
+  width: 25%;
+  width: 16.666%;
+}
+.flex-row .col--align-bottom {
+  align-self: flex-end;
+}
 .col--full {
   position: relative;
   min-height: 1px;
@@ -7530,6 +7540,9 @@ table caption small,
 }
 .toggle__caption--expanded {
   display: none;
+}
+.toggle--light {
+  margin-bottom: 7px;
 }
 .toggle--light .toggle__button {
   background: #ffffff;
