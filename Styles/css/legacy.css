@@ -7544,7 +7544,7 @@ table caption small,
   display: none;
 }
 .toggle--light {
-  margin-bottom: 7px;
+  margin-bottom: 14px;
 }
 .toggle--light .toggle__button {
   background: #ffffff;
