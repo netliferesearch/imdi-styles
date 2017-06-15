@@ -68,6 +68,22 @@ a, .a {
 	}
 }
 
+a.trailing-arrow {
+
+  &:after {
+    content: "❯";
+    transition: 0.2s;
+    margin-left: @spacing--medium;
+    text-decoration: none;
+    position: absolute;
+  }
+
+  &:hover:after {
+    margin-left: @spacing;
+    transition: 0.2s;
+  }
+}
+
 h2, .h2, h3, .h3, h4, .h4 {
 	small {
 		font-size: 0.7em;

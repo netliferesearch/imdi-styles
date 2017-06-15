@@ -90,6 +90,22 @@ ul.row, ol.row {
 	});
 }
 
+.col--links {
+	.font-siri--xlarge();
+	.col(1); /* Se mixins in _vars.less */
+	.query-min(@screen--md; {
+		.font-siri--large();
+		.col(14/22); /* Se mixins in _vars.less */
+		.col-offset(1/22);
+	});
+	.query-min(@screen--lg; {
+		.font-siri--xlarge();
+		.col-offset(1/22);
+		.col(7/22); /* Se mixins in _vars.less */
+		float: right !important; // Sorry ... media queries inside less mixins is apearantly not reccommended
+	});
+}
+
 .col--related {
 	.col(1); /* Se mixins in _vars.less */
 	.query-min(@screen--md; {
