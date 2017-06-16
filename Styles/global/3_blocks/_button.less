@@ -17,7 +17,7 @@
 		width: auto;
 		display: inline-block;
 	});
-	
+
 	&--small {
 		.text--small();
 		padding: @spacing--xsmall  @spacing--small;
@@ -33,13 +33,13 @@
 
 		color: @color__white;
 	}
-		
+
 	&--option {
 		background: @color__canvas-grey;
 		color: @color__text;
 		border: 2px solid @color__canvas-grey;
 		width: 100%;
-		max-width: 25em;	
+		max-width: 25em;
     text-align: left;
     padding-left: @spacing--large;
     position: relative;
@@ -47,33 +47,33 @@
 			background: darken(@color__canvas-grey, 10%);
 			border: 2px solid darken(@color__canvas-grey, 10%);
 			color: @color__text;
-		}  	
+		}
 		i {
       position: absolute;
       top: 11px;
       left: @spacing--medium;
 		}
 	}
-	
+
 	&__sidekick {
 		.query-min(@screen--sm; {
-			margin-left: @spacing; 
-		});		
+			margin-left: @spacing;
+		});
 	}
-	
-	
+
+
 }
 
 .button--large, .button--editor-primary {
 	padding: @spacing--medium @spacing*2;
-	margin-bottom: @spacing;
+	margin-bottom: @spacing--large;
 }
 
 .button--secondary, .button--editor-secondary {
 		background: @color__canvas-grey;
 		color: @color__text;
 		border: 2px solid @color__canvas-grey;
-			
+
 		&:hover, &:focus, &:active {
 			background: darken(@color__canvas-grey, 10%);
 			border: 2px solid darken(@color__canvas-grey, 10%);
@@ -81,5 +81,5 @@
 		}
 		&.button--active {
 			border-color: @color__orange;
-		}	
+		}
 }

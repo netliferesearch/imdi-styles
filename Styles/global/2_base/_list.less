@@ -6,17 +6,17 @@
     margin-bottom: @spacing--large;
     @media print {
 	    margin-top: 30px;
-	    margin-bottom: 30px;	    
+	    margin-bottom: 30px;
 	}
 
     li {
       .fontSize(@font-size--regular);
-	    .font-siri--regular();        
+	    .font-siri--regular();
       margin-bottom: @spacing--small;
       list-style-image: url("/UI/gfx/bullet__small--primary.svg");
       list-style-position: outside;
       padding-left: @spacing/4;
-      margin-bottom: 1em; 
+      margin-bottom: 1em;
       line-height: 1.7em;
     }
     &--no-bullets {
@@ -33,7 +33,7 @@
 	    padding-left: @spacing*2;
 	    padding-top: @spacing;
 	    li {
-			list-style:circle;		    
+			list-style:circle;
 	    }
     }
     &--inline {
@@ -68,5 +68,5 @@
 }
 .list--numbered li, ol li {
 	list-style: decimal;
-	background: none;	
+	background: none;
 }
