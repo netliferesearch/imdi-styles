@@ -4,7 +4,7 @@ $(document).ready(function () {
     imdi.tableOfContents.init();
     imdi.facet.init();
     imdi.scroll.init();
-    imdi.main_menu_toggle.init(); 
+    imdi.main_menu_toggle.init();
     imdi.main_search_toggle.init();
     imdi.toggle.init(getUrlParameter('toggle'));
     imdi.trigger.init();
@@ -13,7 +13,8 @@ $(document).ready(function () {
     imdi.smooth_scrolling.init();
     imdi.slick_carousel.init();
     imdi.wizard.init();
-   
+    imdi.table_collapsable.init();
+
 });
 
 imdi.facet = (function ($) {
@@ -41,7 +42,7 @@ imdi.scroll = (function ($) {
 
 /*------------------------------------*\
     TAG MANAGER CUSTOM TRACKING
-    To track javascript events into Google Analytics by Google Tag Manager (GTM). Correct setup in GTM is needed. 
+    To track javascript events into Google Analytics by Google Tag Manager (GTM). Correct setup in GTM is needed.
 \*------------------------------------*/
 
 imdi.gtm_tracking = (function ($) {
@@ -54,7 +55,7 @@ imdi.gtm_tracking = (function ($) {
           eventAction = typeof eventAction !== 'undefined' ? eventAction : undefined;
           eventLabel = typeof eventLabel !== 'undefined' ? eventLabel : undefined;
           eventValue = typeof eventValue !== 'undefined' ? eventValue : undefined;
-          
+
           // Google Tag Manager call
           if(typeof dataLayer != 'undefined') {
              dataLayer.push({
@@ -94,9 +95,9 @@ imdi.main_menu_toggle = (function ($) {
     return {
         init: function () {
           	$('[data-behaviour="main-menu-toggle"]').on('click', function( event ) {
-          		
+
           		// Prevent the fallback #anchor tag to move focus
-          		event.preventDefault(); 
+          		event.preventDefault();
 
               // Get targets
               var _footer = $('#footer');
@@ -104,7 +105,7 @@ imdi.main_menu_toggle = (function ($) {
               var _footer__bg = $('#footer__bg');
               var _page_content = $('#page-content');
               var _header = $('#header')
-          		
+
           		// Toggle menu button
           		if($(this).attr('aria-expanded') === "false"){
           			$(this).attr('aria-expanded', "true");
@@ -114,25 +115,25 @@ imdi.main_menu_toggle = (function ($) {
       	        if (a > b) {
       	            _footer.css('height', a);
       	            _footer__bg.css('height', a);
-      	        }			
+      	        }
 
                 // Google Tag Manager call
                 var currentUrl = window.location.pathname;
                 imdi.gtm_tracking.customEvent('Menu', 'Main-menu open', undefined, currentUrl);
 
           		} else {
-          			$(this).attr('aria-expanded', "false");		
+          			$(this).attr('aria-expanded', "false");
           			// Reset height
                 _footer.css('height', 'auto');
-                _footer__bg.css('height', 'auto');     
+                _footer__bg.css('height', 'auto');
           		}
-          		
+
           		// Toggle menu overlay
           		_page_content.toggle();
-          		_footer.toggleClass($('#footer').attr('data-toggle-menu'));	
-          		_header.toggleClass($('#header').attr('data-toggle-menu'));	
-          					
-          	});  
+          		_footer.toggleClass($('#footer').attr('data-toggle-menu'));
+          		_header.toggleClass($('#header').attr('data-toggle-menu'));
+
+          	});
         }
     }
 })(jQuery);
@@ -141,46 +142,46 @@ imdi.main_menu_toggle = (function ($) {
 
 /*------------------------------------*\
     MAIN SEARCH TOGGLE
-    Open a searchfield in the header when the search button is pressed. 
+    Open a searchfield in the header when the search button is pressed.
     Is removed if the focus moves away from the search input field, or search button.
-\*------------------------------------*/	
+\*------------------------------------*/
 
 imdi.main_search_toggle = (function ($) {
     return {
         init: function () {
           	$('[data-behaviour="main-search-toggle"]').on('click', function( event) {
-          		
+
           		// Prevent the fallback #anchor tag to move focus
-          		event.preventDefault();	
-          		
+          		event.preventDefault();
+
               // Get targets
-              var _header = $('#header');    
-              var _header_search = $('#header-search');      		
-          		
-          		_header.toggleClass(_header.attr('data-toggle-search'));	
-          		
-          		// Set focus in 
+              var _header = $('#header');
+              var _header_search = $('#header-search');
+
+          		_header.toggleClass(_header.attr('data-toggle-search'));
+
+          		// Set focus in
           		_header_search.focus();
-          				
-          	});  
-          	
-          	$('body').on('blur', '#header-search', function() {  
+
+          	});
+
+          	$('body').on('blur', '#header-search', function() {
           		setTimeout(function(){
           			if(!$('#header-search-button').is(":focus")){
           				$('#header').removeClass($('#header')
           				  .attr('data-toggle-search'));
           			}
-          		}, 500);		
-          	}); 		
-          
-          	$('body').on('blur', '#header-search-button', function() {  
+          		}, 500);
+          	});
+
+          	$('body').on('blur', '#header-search-button', function() {
           		setTimeout(function(){
           			if(!$('#header-search').is(":focus")){
           				$('#header').removeClass($('#header')
           				  .attr('data-toggle-search'));
-          			}		
-          		}, 500);		
-          	}); 
+          			}
+          		}, 500);
+          	});
         }
     }
 })(jQuery);
@@ -195,67 +196,67 @@ imdi.toggle = (function ($) {
     return {
         init: function ( openSectionOnLoad ) {
           	$('[data-behaviour~="toggle"]').on('click',function( event ) {
-          		
+
           		// Prevent the fallback #anchor tag to move focus
-          		event.preventDefault();			
-          		
+          		event.preventDefault();
+
           	    // Set duration of animation in miliseconds
           	    var transition_duration = 200;
-          	    
+
           	    // Get classes and relationships
           	    var toggle_class_expanded = $(this).data('class-expanded');
-          	    var section = '#' + $(this).attr('aria-controls');    
+          	    var section = '#' + $(this).attr('aria-controls');
           	    var section_class_expanded = $(section).data('class-expanded');
-          	    var section_class_contracted = $(section).data('class-contracted');	    
+          	    var section_class_contracted = $(section).data('class-contracted');
           	    var section_caption_expanded = $(this).data('caption-expanded');
-          	    var section_caption_contracted = $(this).data('caption-contracted');    
-          	    
+          	    var section_caption_contracted = $(this).data('caption-contracted');
+
           	    // Get current state
-          	    var state = $(this).attr('aria-expanded') === 'false' ? true : false;    
-          	    
+          	    var state = $(this).attr('aria-expanded') === 'false' ? true : false;
+
           	    if(section_caption_contracted){
           		    if($(this).hasClass(toggle_class_expanded)){
           			    $(this).html(section_caption_contracted);
           		    } else {
-          			    $(this).html(section_caption_expanded);		    
+          			    $(this).html(section_caption_expanded);
           		    }
-          	    }    
-          	    
+          	    }
+
           	    // Toggle attributes
-          	    $(this).attr('aria-expanded', state);    
-          	    $(section).attr('aria-hidden', !state);  
+          	    $(this).attr('aria-expanded', state);
+          	    $(section).attr('aria-hidden', !state);
           	    $(this).toggleClass(toggle_class_expanded);
-          	    if(state){ 
+          	    if(state){
           	        // On opening
           	        $(section).show(0,function(){
           	           // Delay to be able to use css transitions and hide from screenreaders
           	           $(section).css( "display", "block"); // Fix for allready visible sections by hover
              	         $(section).removeClass(section_class_contracted)
-             	            .addClass(section_class_expanded); 
+             	            .addClass(section_class_expanded);
           	           // $(section).focus();
           	        });
           	        if(section_caption_contracted){
           			    $(this).html(section_caption_contracted);
           		    }
-          	    } else { 
+          	    } else {
           	        // On closing
           	        $(section).removeClass(section_class_expanded)
-          	            .addClass(section_class_contracted);	        
+          	            .addClass(section_class_contracted);
           	        setTimeout(function() { $(section).hide(); }, transition_duration);
           	        if(section_caption_contracted){
           			    $(this).html(section_caption_expanded);
           		    }
           	    }
-          	
-          	});  
-              
+
+          	});
+
           	$('[data-behaviour~="toggle"]').each(function() {
           	    // Hide sections on load
           	    var section = $(this).attr('data-controls');
 
           	    $(this).attr('aria-expanded','false')
           	        .attr('aria-controls',section)
-          	        .attr('role','button');	    	    
+          	        .attr('role','button');
           	    $('#' + section).attr('aria-hidden','true')
           	        .hide();
 
@@ -277,21 +278,21 @@ imdi.toggle = (function ($) {
 
 /*------------------------------------*\
     TRIGGER
-\*------------------------------------*/	
+\*------------------------------------*/
 
 imdi.trigger = (function ($) {
     return {
         init: function () {
           	$('[data-behaviour="trigger"]').on('click', function( event ) {
           		// Prevent the fallback #anchor tag to move focus
-          		event.preventDefault();			
-          		
-          		var target = '#' + $(this).attr('data-controls');  
-          		
-          		$(target).focus();		
-          		$(target).trigger("click");		
-          		
-          	});	
+          		event.preventDefault();
+
+          		var target = '#' + $(this).attr('data-controls');
+
+          		$(target).focus();
+          		$(target).trigger("click");
+
+          	});
         }
     }
 })(jQuery);
@@ -300,15 +301,15 @@ imdi.trigger = (function ($) {
 
 /*------------------------------------*\
     SELECT ALL
-\*------------------------------------*/	
+\*------------------------------------*/
 
 imdi.selectall = (function ($) {
     return {
         init: function () {
           	$('[data-behaviour="selectall"]').on('click', function( event ) {
-          		$(this).select();		
-          		
-          	});		
+          		$(this).select();
+
+          	});
         }
     }
 })(jQuery);
@@ -317,25 +318,25 @@ imdi.selectall = (function ($) {
 
 /*------------------------------------*\
     ADVENCED HOVER TOGGLE
-\*------------------------------------*/	
+\*------------------------------------*/
 
 imdi.hover_toggle = (function ($) {
     return {
         init: function () {
       	  $('[data-behaviour~="hover-toggle"]').each(function(){
-        	  
+
         	  var toggle_class_expanded = $(this).data('class-expanded');
         	  var children = $(this).data('hover-children');
         	  var hover_parent = this;
-        	  
+
         	  // Trigger the class on the parent element when children elements receive hover
-        	  $(children, this).hover(function () { 
+        	  $(children, this).hover(function () {
                 $(hover_parent).addClass(toggle_class_expanded);
-          	    $(hover_parent).show(0); // Hack to force redraw on Safari browser to get the hoverbox to show correctly. Ref JIRA: IMDI-186                
+          	    $(hover_parent).show(0); // Hack to force redraw on Safari browser to get the hoverbox to show correctly. Ref JIRA: IMDI-186
             }, function () {
                 $(hover_parent).removeClass(toggle_class_expanded);
             });
-        	  
+
       	  });
         }
     }
@@ -345,7 +346,7 @@ imdi.hover_toggle = (function ($) {
 
 /*------------------------------------*\
     SMOOTH SCROLLING
-\*------------------------------------*/		
+\*------------------------------------*/
 
 /* Basics lifted from a CSS Tricks demo (http://css-tricks.com/snippets/jquery/smooth-scrolling/), with focus() and URL hash updating added where commented */
 
@@ -372,7 +373,7 @@ imdi.smooth_scrolling = (function ($) {
         	        return false;
         	      }
         	    }
-        	  });	
+        	  });
         }
     }
 })(jQuery);
@@ -381,7 +382,7 @@ imdi.smooth_scrolling = (function ($) {
 
 /*------------------------------------*\
     SLICK CARSOUSEL ON MOBILE
-\*------------------------------------*/	
+\*------------------------------------*/
 
 imdi.slick_carousel = (function ($) {
     return {
@@ -412,14 +413,52 @@ imdi.slick_carousel = (function ($) {
             var slickLoaded = false;
 
             // Init on load
-            toggleSlick();  
-                      
+            toggleSlick();
+
             // Init on resize
             $(window).resize(toggleSlick);
 
         }
     }
-})(jQuery);  
+})(jQuery);
+
+
+
+/*------------------------------------*\
+    RESPONSIVE TABLE
+\*------------------------------------*/
+
+imdi.table_collapsable = (function ($) {
+    return {
+        init: function () {
+            var toggleAccordion = function(e) {
+              var trigger = e.target;
+              var parent = trigger.parentNode;
+              var isHidden = parent.getAttribute('aria-hidden') === 'true';
+              if (isHidden) {
+                $(trigger).removeClass('expanded');
+                parent.setAttribute('aria-hidden', false);
+              } else {
+                $(trigger).addClass('expanded');
+                parent.setAttribute('aria-hidden', true);
+              }
+            };
+
+            $('[data-table-collapsable]').each(function() {
+
+              var tableRows = $(this).find('tr');
+
+              $(tableRows).each(function (){
+                var columns = $(this).children();
+                var trigger = columns[0];
+                trigger.addEventListener('click', toggleAccordion);
+              });
+
+            });
+
+        }
+    }
+})(jQuery);
 
 
 
@@ -432,27 +471,27 @@ imdi.wizard = (function ($) {
         init: function () {
             $('[data-behaviour="wizard"]').each( function() {
                 if (window[$(this).data('source')] !== 'undefined' && window[$(this).data('source')].length && window[$(this).data('source')][0]!=null) {
-          
+
                 // Load question tree
                 var dataTree = window[$(this).data('source')];
 
                 var dataHistory = [];
                 var startId = dataTree[0].Id;
                 var wrapper = this;
-          
+
                 var captionLeadtext = $(this).data('caption-leadtext') ? $(this).data('caption-leadtext') : '';
-                var captionStartWizard = $(this).data('caption-start-wizard') ? $(this).data('caption-start-wizard') : 'Start veiviser';      
+                var captionStartWizard = $(this).data('caption-start-wizard') ? $(this).data('caption-start-wizard') : 'Start veiviser';
                 var captionHistoryTitle = $(this).data('caption-history-title') ? $(this).data('caption-history-title') : 'Tidligere svar';
-                var captionStartOver = $(this).data('caption-start-over') ? $(this).data('caption-start-over') : 'Start på nytt';      
-                var captionError = $(this).data('caption-error') ? $(this).data('caption-error') : 'Det skjedde en feil. Vennligst prøv å last siden på nytt.';      
-                
-                
+                var captionStartOver = $(this).data('caption-start-over') ? $(this).data('caption-start-over') : 'Start på nytt';
+                var captionError = $(this).data('caption-error') ? $(this).data('caption-error') : 'Det skjedde en feil. Vennligst prøv å last siden på nytt.';
+
+
                 //
                 // Function redraws each step
                 //
-                
+
             		var updateWizard = function( currentId, selectedOption, targetId ) {
-          
+
                   var dataRow = function (rows, id) {
                       var i = null;
                       for (i = 0; rows.length > i; i += 1) {
@@ -462,25 +501,25 @@ imdi.wizard = (function ($) {
                       }
                       return null;
                   };
-          
+
                   if(currentId != -1){
                     dataHistory.push({
-                      'Id' : currentId, 
+                      'Id' : currentId,
                       'Question': dataRow(dataTree, currentId).Question,
                       'Answer': selectedOption
                       });
                   }
                		$(wrapper).html('<hr class="line line--light t-margin-bottom"/>');
-              		
+
               		// QUESTION
-              		
+
               		if(dataRow(dataTree, targetId).Type == 'step'){
-              		
+
                 		// Get data
                 		var _question = dataRow(dataTree, targetId).Question;
                 		var _instruction = dataRow(dataTree, targetId).Instruction;
-                		var _alternatives = dataRow(dataTree, targetId).Alternatives;    		
-            
+                		var _alternatives = dataRow(dataTree, targetId).Alternatives;
+
                     // Construct markup
                     $(wrapper).append(getQuestion(_question, _instruction, _alternatives, targetId))
                       .append(getHistory())
@@ -492,9 +531,9 @@ imdi.wizard = (function ($) {
                     imdi.gtm_tracking.customPageView(virtualUrl, virtualTitle);
 
               		// CONCLUSION
-                    
+
                   } else if(dataRow(dataTree, targetId).Type == 'conclusion'){
-          
+
                 		// Get data
                     var _title = dataRow(dataTree, targetId).Title;
                     var _content = dataRow(dataTree, targetId).Content;
@@ -510,59 +549,59 @@ imdi.wizard = (function ($) {
                     imdi.gtm_tracking.customPageView(virtualUrl, virtualTitle);
 
                   // ERROR
-                  
+
                   } else {
                     $(wrapper).append('<p><em>' + captionError + '</em></p>');
-                    $(wrapper).focus(); 
+                    $(wrapper).focus();
                   }
-                  
+
             		}
-            		
-          
+
+
                 //
                 // Function that reset the interaction
                 //
-          
+
                 var resetWizard = function() {
-          
+
                   // Reset history and markup
                   dataHistory = [];
                   $(wrapper).html('');
-          
+
                   // Construct markup
                   var htmlleadtext = $("<p>", {
                     'html': captionLeadtext
                   });
-                  
+
                   var htmlbutton = $("<button>", {
                     'type': 'button',
-                    'class': "button button--large", 
-                    'html': captionStartWizard, 
+                    'class': "button button--large",
+                    'html': captionStartWizard,
                     'click': $.proxy(updateWizard, null, -1, -1, startId)
                     });
-          
+
                   $(wrapper).append(htmlleadtext);
                   $(wrapper).append(htmlbutton);
                 }
-            		
+
                 //
                 // Function fornavigating back in history
-                //  		
-            		
+                //
+
             		var goBackInHistory = function(targetId, index) {
               		// Go back to index and remove the following children in the history
               		dataHistory.splice(index, dataHistory.length - index)
-          
+
                   // Load target question
               		updateWizard(-1, -1, targetId);
-          
+
               		return false;
             		}
-          
+
                 //
                 // Function for constructing HTML for question
-                //  		
-          
+                //
+
             		var getQuestion = function(_question, _instruction, _alternatives, targetId) {
                     var html = $('<fieldset>', {
                       'class': 't-margin-bottom--large animations__fade-in-left'
@@ -572,63 +611,63 @@ imdi.wizard = (function ($) {
                       'tabindex': '-1',
                       'html': _question
                       }).appendTo($(html));
-                      
+
                     if(_instruction.length > 0)
                       $('<p/>',{
                         'class': 'text--small'
                         }).append(_instruction).appendTo($(html));
-          
+
                     var htmllist = $('<ul>',{
                         class: 't-no-list-styles'
                         })
                     $.each(_alternatives, function() {
                         $('<button/>',{
-                          'type': 'button', 
+                          'type': 'button',
                           'class': 'button button--option',
                           'html': this.Caption + ' <i class="icon__arrow-right"></i>',
                           'click': $.proxy(updateWizard, null, targetId, this.Caption, this.Target)
                           })
-                          .appendTo($('<li>').appendTo($(htmllist))); 
+                          .appendTo($('<li>').appendTo($(htmllist)));
                     });
-            
+
                     $(html).append(htmllist);
-                    
+
                     return html;
                 }
-          
+
                 //
                 // Function for constructing HTML for a conclusion
-                //  		
-          
+                //
+
             		var getConclusion = function(_title, _content) {
-          
+
               		  var html = $('<section/>', {
                       'class': 't-margin-bottom--large animations__fade-in-left'
                     });
-          
+
                     $('<h3/>',{
                       'class': 'h2 t-no-focus',
                       'tabindex': '-1',
                       'html': _title
                       }).appendTo($(html));
-                      
+
                     $(html).append(_content);
-                    
+
                     $('<button/>',{
-                      'type': 'button', 
+                      'type': 'button',
                       'class': 'button',
                       'html': captionStartOver,
                       'click': $.proxy(resetWizard, null)
                       })
                       .appendTo($(html));
-          
+
                     return html;
                 }
-          
+
                 //
                 // Function for constructing HTML for the history
-                //  		
-          
+                //
+
             		var getHistory = function() {
               		  if (dataHistory.length < 1) return null;
               		 // Construct markup
@@ -660,12 +699,12 @@ imdi.wizard = (function ($) {
                     $(html).append(htmllist);
                     return html;
             		}
-          
+
                 // Trigger on load
             		resetWizard();
-            		
+
           		} else {
-            	  $(this).innerHTML('<p><em>' + captionError + '</em></p>');	
+            	  $(this).innerHTML('<p><em>' + captionError + '</em></p>');
           		}
           	});
         }
@@ -714,7 +753,7 @@ imdi.tableOfContents = (function ($) {
                 {
                     $('#toc-navigation').remove();
                 }
-                
+
             }
         }
     }

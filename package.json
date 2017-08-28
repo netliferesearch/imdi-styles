@@ -5,7 +5,8 @@
   "main": "index.js",
   "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "gulp"
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,17 @@
   "bugs": {
     "url": "https://github.com/netliferesearch/imdi-styles/issues"
   },
-  "homepage": "https://github.com/netliferesearch/imdi-styles#readme"
+  "homepage": "https://github.com/netliferesearch/imdi-styles#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-continuous-concat": "^0.1.1",
+    "gulp-less": "^3.3.0",
+    "gulp-uglify": "^3.0.0",
+    "gulp-watch": "^4.3.11",
+    "gulp-watch-less": "^1.0.1",
+    "gulp-watch-less2": "^2.0.4"
+  },
+  "dependencies": {
+    "gulp-uglifycss": "^1.0.8"
+  }
 }
