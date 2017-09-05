@@ -6,13 +6,13 @@
 		display: table;
 		position: relative;
 		.clearfix();
-	
+
 		// Flag elements
 		&__item {
 			display: table-cell;
 			vertical-align: middle;
 		}
-	
+
 		&__item {
 			width: 50%;
 			padding: 0px;
@@ -24,31 +24,34 @@
 			}
 			&--66 {
 				width: percentage( 2 / 3 );
-			}			
+			}
 			&--40 {
 				width: 40%;
 			}
 			&--60 {
 				width: 60%;
-			}			
+			}
+      &--100 {
+        width: 100%;
+      }
 		}
 
 		// Flag modifiers
 		&--rev {
 			direction: rtl;
-	
+
 			.flag__item {
 				direction: ltr;
 			}
 
 		}
-	
+
 		&--top {
 			.flag__item {
 				vertical-align: top;
 			}
 		}
-	
+
 		&--bottom {
 			.flag__item {
 				vertical-align: bottom;
@@ -56,13 +59,13 @@
 		}
 	});
 	&--min-lg {
-		.query-max(@screen--lg; {			
+		.query-max(@screen--lg; {
 			display: block;
 			position: static;
 			.flag__item {
 				display: block;
 				width: auto;
-			}	
+			}
 		});
 	}
 }
