@@ -471,16 +471,19 @@ imdi.to_top_button = (function ($) {
     return {
         init: function () {
 
-            $('#to-top-button').on('click', function () {
+            var toTopButton = $('#to-top-button');
+            var distanceBeforeButtonAppears = 300;
+
+            $(toTopButton).on('click', function () {
               $("html, body").animate({ scrollTop: 0 }, "fast");
             });
 
             var hideAndShowButton = function () {
               var scrollPosition = $(document).scrollTop();
-              if (scrollPosition < 10) {
-                $('#to-top-button').hide();
+              if (scrollPosition < distanceBeforeButtonAppears) {
+                $(toTopButton).hide();
               } else {
-                $('#to-top-button').show();
+                $(toTopButton).show();
               }
             }
 
