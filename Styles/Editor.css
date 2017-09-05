@@ -218,7 +218,7 @@ ol li {
   font-weight: normal;
   font-style: normal;
   margin-bottom: 7px;
-  list-style-image: url("/UI/gfx/bullet__small--primary.svg");
+  list-style-image: url("https://www.imdi.no/UI/gfx/bullet__small--primary.svg");
   list-style-position: outside;
   padding-left: 5.25px;
   margin-bottom: 1em;
@@ -241,7 +241,7 @@ ul ul li,
 ol ul li,
 ul ol li,
 ol ol li {
-  list-style-image: url("/UI/gfx/bullet__small--secondary.svg");
+  list-style-image: url("https://www.imdi.no/UI/gfx/bullet__small--secondary.svg");
 }
 ul ol li,
 ol ol li {
