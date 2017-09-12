@@ -471,7 +471,7 @@ imdi.to_top_button = (function ($) {
     return {
         init: function () {
 
-            var toTopButton = $('#to-top-button');
+            var toTopButton = $('[data-behaviour=to-top]');
             var distanceBeforeButtonAppears = 300;
 
             $(toTopButton).on('click', function () {
