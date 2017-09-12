@@ -6,13 +6,14 @@
   "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "gulp"
+    "dev": "gulp",
+    "build": "gulp scripts styles && firebase deploy"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/netliferesearch/imdi-styles.git"
   },
-  "author": "Netlife Research",
+  "author": "Netlife",
   "bugs": {
     "url": "https://github.com/netliferesearch/imdi-styles/issues"
   },
