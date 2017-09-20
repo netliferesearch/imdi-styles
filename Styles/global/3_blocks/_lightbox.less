@@ -1,5 +1,19 @@
 @import "../../_vars";
 
+//  give search button a different look than elements that are close
+.lightbox__box .lightbox__footer button.button,
+.lightbox__box .lightbox__footer button.button:hover {
+ background-color: white;
+ color: #333;
+}
+
+//  prevent cropping of 'sammenliknet med' lightbox on supersmall devices
+@media screen and (max-width: 340px) {
+ .lightbox__box .t-no-list-styles .col--flow:nth-last-child(-n+5) {
+    display: none;
+  }
+}
+
 .lightbox {
 	//display: none;
 
