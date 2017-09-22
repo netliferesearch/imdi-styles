@@ -5670,10 +5670,10 @@ blockquote small {
 .feature-small__link-icon {
   display: inline-block;
   position: absolute;
-  margin-top: 7px;
+  margin-top: 5px;
   margin-left: 7px;
-  width: 0.8em;
-  height: 0.8em;
+  width: 1em;
+  height: 1em;
 }
 .feature-small__prefix {
   font-family: "Siri", Tahoma, sans-serif;
@@ -5927,6 +5927,14 @@ blockquote small {
   text-transform: uppercase;
   letter-spacing: 0.05em;
 }
+.feature__link-icon {
+  display: inline-block;
+  position: absolute;
+  margin-top: 7px;
+  margin-left: 7px;
+  width: 0.8em;
+  height: 0.8em;
+}
 .feature__section-title {
   font-family: "Siri Medium", Tahoma, sans-serif;
   font-weight: normal;
@@ -5976,10 +5984,10 @@ blockquote small {
   .feature__title a {
     /*
 				color: @color__text;
-				border-bottom-color: @color__canvas-grey--dark; 
+				border-bottom-color: @color__canvas-grey--dark;
 				&:hover, &:focus {
 					color: @color__links;
-					border-bottom-color: @color__links; 				
+					border-bottom-color: @color__links;
 				}
 				*/
   }
@@ -11444,6 +11452,19 @@ table caption,
   text-transform: none;
   vertical-align: top;
   opacity: 0.7;
+}
+
+.toggle-view {
+  margin-bottom: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+.toggle-view button.button--secondary.button--small.selected {
+  color: #b72724;
 }
 
 /*------------------------------------*\
