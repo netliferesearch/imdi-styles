@@ -1315,15 +1315,15 @@ body {
 /* @import url("//hello.myfonts.net/count/2e1a0e"); */
 @font-face {
   font-family: 'Siri';
-  src: url('https://www.imdi.no/UI/fonts/siri/2E1A0E_0_0.eot');
-  src: url('https://www.imdi.no/UI/fonts/siri/2E1A0E_0_0.eot?#iefix') format('embedded-opentype'), url('https://www.imdi.no/UI/fonts/siri/2E1A0E_0_0.woff2') format('woff2'), url('https://www.imdi.no/UI/fonts/siri/2E1A0E_0_0.woff') format('woff'), url('https://www.imdi.no/UI/fonts/siri/2E1A0E_0_0.ttf') format('truetype');
+  src: url('https://imdi-styles.firebaseapp.com/UI/fonts/siri/2E1A0E_0_0.eot');
+  src: url('https://imdi-styles.firebaseapp.com/UI/fonts/siri/2E1A0E_0_0.eot?#iefix') format('embedded-opentype'), url('https://imdi-styles.firebaseapp.com/UI/fonts/siri/2E1A0E_0_0.woff2') format('woff2'), url('https://imdi-styles.firebaseapp.com/UI/fonts/siri/2E1A0E_0_0.woff') format('woff'), url('https://imdi-styles.firebaseapp.com/UI/fonts/siri/2E1A0E_0_0.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: 'Siri Medium';
-  src: url('https://www.imdi.no/UI/fonts/siri/2E1A0E_1_0.eot');
-  src: url('https://www.imdi.no/UI/fonts/siri/2E1A0E_1_0.eot?#iefix') format('embedded-opentype'), url('https://www.imdi.no/UI/fonts/siri/2E1A0E_1_0.woff2') format('woff2'), url('https://www.imdi.no/UI/fonts/siri/2E1A0E_1_0.woff') format('woff'), url('https://www.imdi.no/UI/fonts/siri/2E1A0E_1_0.ttf') format('truetype');
+  src: url('https://imdi-styles.firebaseapp.com/UI/fonts/siri/2E1A0E_1_0.eot');
+  src: url('https://imdi-styles.firebaseapp.com/UI/fonts/siri/2E1A0E_1_0.eot?#iefix') format('embedded-opentype'), url('https://imdi-styles.firebaseapp.com/UI/fonts/siri/2E1A0E_1_0.woff2') format('woff2'), url('https://imdi-styles.firebaseapp.com/UI/fonts/siri/2E1A0E_1_0.woff') format('woff'), url('https://imdi-styles.firebaseapp.com/UI/fonts/siri/2E1A0E_1_0.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -2758,7 +2758,15 @@ you can use the generic selector below, but it's slower:
 .icon__zoom-in,
 .icon__zoom-out,
 .icon__related,
-.icon__table {
+.icon__table,
+.icon__apartment,
+.icon__calculator,
+.icon__clipboard-check,
+.icon__license,
+.icon__register,
+.icon__spell-check,
+.icon__document,
+.icon__bar {
   display: inline-block;
   height: 1em;
   width: 1em;
@@ -2769,403 +2777,427 @@ you can use the generic selector below, but it's slower:
   background-position: center center;
 }
 .icon__add {
-  background-image: url('https://www.imdi.no/UI/icons/icon-add.svg');
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/icon-add.svg');
 }
 .icon__apply {
-  background-image: url('https://www.imdi.no/UI/icons/icon-apply.svg');
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/icon-apply.svg');
 }
 .icon__arrow-down {
-  background-image: url('https://www.imdi.no/UI/icons/icon-arrow-down.svg');
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/icon-arrow-down.svg');
 }
 .icon__arrow-left {
-  background-image: url('https://www.imdi.no/UI/icons/icon-arrow-left.svg');
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/icon-arrow-left.svg');
 }
 .icon__arrow-right {
-  background-image: url('https://www.imdi.no/UI/icons/icon-arrow-right.svg');
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/icon-arrow-right.svg');
 }
 .icon__arrow-up {
-  background-image: url('https://www.imdi.no/UI/icons/icon-arrow-up.svg');
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/icon-arrow-up.svg');
 }
 .icon__attatchment {
-  background-image: url('https://www.imdi.no/UI/icons/icon-attatchment.svg');
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/icon-attatchment.svg');
 }
 .icon__call {
-  background-image: url('https://www.imdi.no/UI/icons/icon-call.svg');
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/icon-call.svg');
 }
 .icon__chart-bars {
-  background-image: url('https://www.imdi.no/UI/icons/icon-chart-bars.svg');
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/icon-chart-bars.svg');
 }
 .icon__chart-line {
-  background-image: url('https://www.imdi.no/UI/icons/icon-chart-line.svg');
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/icon-chart-line.svg');
 }
 .icon__chart-pie {
-  background-image: url('https://www.imdi.no/UI/icons/icon-chart-pie.svg');
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/icon-chart-pie.svg');
 }
 .icon__chart-set {
-  background-image: url('https://www.imdi.no/UI/icons/icon-chart-set.svg');
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/icon-chart-set.svg');
 }
 .icon__chat {
-  background-image: url('https://www.imdi.no/UI/icons/icon-chat.svg');
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/icon-chat.svg');
 }
 .icon__check {
-  background-image: url('https://www.imdi.no/UI/icons/icon-check.svg');
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/icon-check.svg');
 }
 .icon__close {
-  background-image: url('https://www.imdi.no/UI/icons/icon-close.svg');
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/icon-close.svg');
 }
 .icon__comments {
-  background-image: url('https://www.imdi.no/UI/icons/icon-comments.svg');
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/icon-comments.svg');
 }
 .icon__contract {
-  background-image: url('https://www.imdi.no/UI/icons/icon-contract.svg');
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/icon-contract.svg');
 }
 .icon__controls {
-  background-image: url('https://www.imdi.no/UI/icons/icon-controls.svg');
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/icon-controls.svg');
 }
 .icon__date {
-  background-image: url('https://www.imdi.no/UI/icons/icon-date.svg');
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/icon-date.svg');
 }
 .icon__discussion {
-  background-image: url('https://www.imdi.no/UI/icons/icon-discussion.svg');
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/icon-discussion.svg');
 }
 .icon__down {
-  background-image: url('https://www.imdi.no/UI/icons/icon-down.svg');
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/icon-down.svg');
 }
 .icon__download {
-  background-image: url('https://www.imdi.no/UI/icons/icon-download.svg');
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/icon-download.svg');
 }
 .icon__edit {
-  background-image: url('https://www.imdi.no/UI/icons/icon-edit.svg');
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/icon-edit.svg');
 }
 .icon__email {
-  background-image: url('https://www.imdi.no/UI/icons/icon-email.svg');
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/icon-email.svg');
 }
 .icon__expand {
-  background-image: url('https://www.imdi.no/UI/icons/icon-expand.svg');
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/icon-expand.svg');
 }
 .icon__export {
-  background-image: url('https://www.imdi.no/UI/icons/icon-export.svg');
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/icon-export.svg');
 }
 .icon__external {
-  background-image: url('https://www.imdi.no/UI/icons/icon-external.svg');
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/icon-external.svg');
 }
 .icon__facebook {
-  background-image: url('https://www.imdi.no/UI/icons/icon-facebook.svg');
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/icon-facebook.svg');
 }
 .icon__favorite {
-  background-image: url('https://www.imdi.no/UI/icons/icon-favorite.svg');
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/icon-favorite.svg');
 }
 .icon__female {
-  background-image: url('https://www.imdi.no/UI/icons/icon-female.svg');
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/icon-female.svg');
 }
 .icon__file {
-  background-image: url('https://www.imdi.no/UI/icons/icon-file.svg');
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/icon-file.svg');
 }
 .icon__files {
-  background-image: url('https://www.imdi.no/UI/icons/icon-files.svg');
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/icon-files.svg');
 }
 .icon__flag {
-  background-image: url('https://www.imdi.no/UI/icons/icon-flag.svg');
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/icon-flag.svg');
 }
 .icon__folder {
-  background-image: url('https://www.imdi.no/UI/icons/icon-folder.svg');
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/icon-folder.svg');
 }
 .icon__home {
-  background-image: url('https://www.imdi.no/UI/icons/icon-home.svg');
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/icon-home.svg');
 }
 .icon__info {
-  background-image: url('https://www.imdi.no/UI/icons/icon-info.svg');
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/icon-info.svg');
 }
 .icon__key {
-  background-image: url('https://www.imdi.no/UI/icons/icon-key.svg');
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/icon-key.svg');
 }
 .icon__left {
-  background-image: url('https://www.imdi.no/UI/icons/icon-left.svg');
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/icon-left.svg');
 }
 .icon__link {
-  background-image: url('https://www.imdi.no/UI/icons/icon-link.svg');
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/icon-link.svg');
 }
 .icon__location {
-  background-image: url('https://www.imdi.no/UI/icons/icon-location.svg');
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/icon-location.svg');
 }
 .icon__locked {
-  background-image: url('https://www.imdi.no/UI/icons/icon-locked.svg');
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/icon-locked.svg');
 }
 .icon__mail {
-  background-image: url('https://www.imdi.no/UI/icons/icon-mail.svg');
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/icon-mail.svg');
 }
 .icon__male {
-  background-image: url('https://www.imdi.no/UI/icons/icon-male.svg');
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/icon-male.svg');
 }
 .icon__map {
-  background-image: url('https://www.imdi.no/UI/icons/icon-map.svg');
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/icon-map.svg');
 }
 .icon__merge {
-  background-image: url('https://www.imdi.no/UI/icons/icon-merge.svg');
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/icon-merge.svg');
 }
 .icon__pay {
-  background-image: url('https://www.imdi.no/UI/icons/icon-pay.svg');
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/icon-pay.svg');
 }
 .icon__print {
-  background-image: url('https://www.imdi.no/UI/icons/icon-print.svg');
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/icon-print.svg');
 }
 .icon__rate {
-  background-image: url('https://www.imdi.no/UI/icons/icon-rate.svg');
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/icon-rate.svg');
 }
 .icon__right {
-  background-image: url('https://www.imdi.no/UI/icons/icon-right.svg');
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/icon-right.svg');
 }
 .icon__search {
-  background-image: url('https://www.imdi.no/UI/icons/icon-search.svg');
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/icon-search.svg');
 }
 .icon__settings {
-  background-image: url('https://www.imdi.no/UI/icons/icon-settings.svg');
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/icon-settings.svg');
 }
 .icon__stack {
-  background-image: url('https://www.imdi.no/UI/icons/icon-stack.svg');
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/icon-stack.svg');
 }
 .icon__tooltip {
-  background-image: url('https://www.imdi.no/UI/icons/icon-tooltip.svg');
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/icon-tooltip.svg');
 }
 .icon__twitter {
-  background-image: url('https://www.imdi.no/UI/icons/icon-twitter.svg');
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/icon-twitter.svg');
 }
 .icon__unlocked {
-  background-image: url('https://www.imdi.no/UI/icons/icon-unlocked.svg');
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/icon-unlocked.svg');
 }
 .icon__up {
-  background-image: url('https://www.imdi.no/UI/icons/icon-up.svg');
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/icon-up.svg');
 }
 .icon__update {
-  background-image: url('https://www.imdi.no/UI/icons/icon-update.svg');
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/icon-update.svg');
 }
 .icon__upload {
-  background-image: url('https://www.imdi.no/UI/icons/icon-upload.svg');
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/icon-upload.svg');
 }
 .icon__user {
-  background-image: url('https://www.imdi.no/UI/icons/icon-user.svg');
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/icon-user.svg');
 }
 .icon__users {
-  background-image: url('https://www.imdi.no/UI/icons/icon-users.svg');
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/icon-users.svg');
 }
 .icon__youtube {
-  background-image: url('https://www.imdi.no/UI/icons/icon-youtube.svg');
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/icon-youtube.svg');
 }
 .icon__zoom-in {
-  background-image: url('https://www.imdi.no/UI/icons/icon-zoom-in.svg');
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/icon-zoom-in.svg');
 }
 .icon__zoom-out {
-  background-image: url('https://www.imdi.no/UI/icons/icon-zoom-out.svg');
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/icon-zoom-out.svg');
 }
 .icon__related {
-  background-image: url('https://www.imdi.no/UI/icons/icon-related.svg');
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/icon-related.svg');
 }
 .icon__table {
-  background-image: url('https://www.imdi.no/UI/icons/icon-table.svg');
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/icon-table.svg');
 }
 .icon__add.icon--white {
-  background-image: url('https://www.imdi.no/UI/icons/white/icon-add.svg');
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/white/icon-add.svg');
 }
 .icon__apply.icon--white {
-  background-image: url('https://www.imdi.no/UI/icons/white/icon-apply.svg');
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/white/icon-apply.svg');
 }
 .icon__arrow-down.icon--white {
-  background-image: url('https://www.imdi.no/UI/icons/white/icon-arrow-down.svg');
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/white/icon-arrow-down.svg');
 }
 .icon__arrow-left.icon--white {
-  background-image: url('https://www.imdi.no/UI/icons/white/icon-arrow-left.svg');
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/white/icon-arrow-left.svg');
 }
 .icon__arrow-right.icon--white {
-  background-image: url('https://www.imdi.no/UI/icons/white/icon-arrow-right.svg');
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/white/icon-arrow-right.svg');
 }
 .icon__arrow-up.icon--white {
-  background-image: url('https://www.imdi.no/UI/icons/white/icon-arrow-up.svg');
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/white/icon-arrow-up.svg');
 }
 .icon__attatchment.icon--white {
-  background-image: url('https://www.imdi.no/UI/icons/white/icon-attatchment.svg');
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/white/icon-attatchment.svg');
 }
 .icon__call.icon--white {
-  background-image: url('https://www.imdi.no/UI/icons/white/icon-call.svg');
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/white/icon-call.svg');
 }
 .icon__chart-bars.icon--white {
-  background-image: url('https://www.imdi.no/UI/icons/white/icon-chart-bars.svg');
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/white/icon-chart-bars.svg');
 }
 .icon__chart-line.icon--white {
-  background-image: url('https://www.imdi.no/UI/icons/white/icon-chart-line.svg');
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/white/icon-chart-line.svg');
 }
 .icon__chart-pie.icon--white {
-  background-image: url('https://www.imdi.no/UI/icons/white/icon-chart-pie.svg');
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/white/icon-chart-pie.svg');
 }
 .icon__chat.icon--white {
-  background-image: url('https://www.imdi.no/UI/icons/white/icon-chat.svg');
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/white/icon-chat.svg');
 }
 .icon__check.icon--white {
-  background-image: url('https://www.imdi.no/UI/icons/white/icon-check.svg');
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/white/icon-check.svg');
 }
 .icon__close.icon--white {
-  background-image: url('https://www.imdi.no/UI/icons/white/icon-close.svg');
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/white/icon-close.svg');
 }
 .icon__comments.icon--white {
-  background-image: url('https://www.imdi.no/UI/icons/white/icon-comments.svg');
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/white/icon-comments.svg');
 }
 .icon__contract.icon--white {
-  background-image: url('https://www.imdi.no/UI/icons/white/icon-contract.svg');
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/white/icon-contract.svg');
 }
 .icon__controls.icon--white {
-  background-image: url('https://www.imdi.no/UI/icons/white/icon-controls.svg');
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/white/icon-controls.svg');
 }
 .icon__date.icon--white {
-  background-image: url('https://www.imdi.no/UI/icons/white/icon-date.svg');
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/white/icon-date.svg');
 }
 .icon__discussion.icon--white {
-  background-image: url('https://www.imdi.no/UI/icons/white/icon-discussion.svg');
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/white/icon-discussion.svg');
 }
 .icon__down.icon--white {
-  background-image: url('https://www.imdi.no/UI/icons/white/icon-down.svg');
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/white/icon-down.svg');
 }
 .icon__download.icon--white {
-  background-image: url('https://www.imdi.no/UI/icons/white/icon-download.svg');
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/white/icon-download.svg');
 }
 .icon__edit.icon--white {
-  background-image: url('https://www.imdi.no/UI/icons/white/icon-edit.svg');
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/white/icon-edit.svg');
 }
 .icon__email.icon--white {
-  background-image: url('https://www.imdi.no/UI/icons/white/icon-email.svg');
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/white/icon-email.svg');
 }
 .icon__expand.icon--white {
-  background-image: url('https://www.imdi.no/UI/icons/white/icon-expand.svg');
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/white/icon-expand.svg');
 }
 .icon__export.icon--white {
-  background-image: url('https://www.imdi.no/UI/icons/white/icon-export.svg');
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/white/icon-export.svg');
 }
 .icon__external.icon--white {
-  background-image: url('https://www.imdi.no/UI/icons/white/icon-external.svg');
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/white/icon-external.svg');
 }
 .icon__facebook.icon--white {
-  background-image: url('https://www.imdi.no/UI/icons/white/icon-facebook.svg');
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/white/icon-facebook.svg');
 }
 .icon__favorite.icon--white {
-  background-image: url('https://www.imdi.no/UI/icons/white/icon-favorite.svg');
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/white/icon-favorite.svg');
 }
 .icon__female.icon--white {
-  background-image: url('https://www.imdi.no/UI/icons/white/icon-female.svg');
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/white/icon-female.svg');
 }
 .icon__file.icon--white {
-  background-image: url('https://www.imdi.no/UI/icons/white/icon-file.svg');
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/white/icon-file.svg');
 }
 .icon__files.icon--white {
-  background-image: url('https://www.imdi.no/UI/icons/white/icon-files.svg');
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/white/icon-files.svg');
 }
 .icon__flag.icon--white {
-  background-image: url('https://www.imdi.no/UI/icons/white/icon-flag.svg');
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/white/icon-flag.svg');
 }
 .icon__folder.icon--white {
-  background-image: url('https://www.imdi.no/UI/icons/white/icon-folder.svg');
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/white/icon-folder.svg');
 }
 .icon__home.icon--white {
-  background-image: url('https://www.imdi.no/UI/icons/white/icon-home.svg');
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/white/icon-home.svg');
 }
 .icon__info.icon--white {
-  background-image: url('https://www.imdi.no/UI/icons/white/icon-info.svg');
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/white/icon-info.svg');
 }
 .icon__key.icon--white {
-  background-image: url('https://www.imdi.no/UI/icons/white/icon-key.svg');
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/white/icon-key.svg');
 }
 .icon__left.icon--white {
-  background-image: url('https://www.imdi.no/UI/icons/white/icon-left.svg');
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/white/icon-left.svg');
 }
 .icon__link.icon--white {
-  background-image: url('https://www.imdi.no/UI/icons/white/icon-link.svg');
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/white/icon-link.svg');
 }
 .icon__location.icon--white {
-  background-image: url('https://www.imdi.no/UI/icons/white/icon-location.svg');
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/white/icon-location.svg');
 }
 .icon__locked.icon--white {
-  background-image: url('https://www.imdi.no/UI/icons/white/icon-locked.svg');
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/white/icon-locked.svg');
 }
 .icon__mail.icon--white {
-  background-image: url('https://www.imdi.no/UI/icons/white/icon-mail.svg');
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/white/icon-mail.svg');
 }
 .icon__male.icon--white {
-  background-image: url('https://www.imdi.no/UI/icons/white/icon-male.svg');
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/white/icon-male.svg');
 }
 .icon__map.icon--white {
-  background-image: url('https://www.imdi.no/UI/icons/white/icon-map.svg');
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/white/icon-map.svg');
 }
 .icon__merge.icon--white {
-  background-image: url('https://www.imdi.no/UI/icons/white/icon-merge.svg');
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/white/icon-merge.svg');
 }
 .icon__pay.icon--white {
-  background-image: url('https://www.imdi.no/UI/icons/white/icon-pay.svg');
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/white/icon-pay.svg');
 }
 .icon__print.icon--white {
-  background-image: url('https://www.imdi.no/UI/icons/white/icon-print.svg');
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/white/icon-print.svg');
 }
 .icon__rate.icon--white {
-  background-image: url('https://www.imdi.no/UI/icons/white/icon-rate.svg');
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/white/icon-rate.svg');
 }
 .icon__right.icon--white {
-  background-image: url('https://www.imdi.no/UI/icons/white/icon-right.svg');
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/white/icon-right.svg');
 }
 .icon__search.icon--white {
-  background-image: url('https://www.imdi.no/UI/icons/white/icon-search.svg');
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/white/icon-search.svg');
 }
 .icon__settings.icon--white {
-  background-image: url('https://www.imdi.no/UI/icons/white/icon-settings.svg');
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/white/icon-settings.svg');
 }
 .icon__stack.icon--white {
-  background-image: url('https://www.imdi.no/UI/icons/white/icon-stack.svg');
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/white/icon-stack.svg');
 }
 .icon__tooltip.icon--white {
-  background-image: url('https://www.imdi.no/UI/icons/white/icon-tooltip.svg');
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/white/icon-tooltip.svg');
 }
 .icon__twitter.icon--white {
-  background-image: url('https://www.imdi.no/UI/icons/white/icon-twitter.svg');
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/white/icon-twitter.svg');
 }
 .icon__unlocked.icon--white {
-  background-image: url('https://www.imdi.no/UI/icons/white/icon-unlocked.svg');
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/white/icon-unlocked.svg');
 }
 .icon__up.icon--white {
-  background-image: url('https://www.imdi.no/UI/icons/white/icon-up.svg');
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/white/icon-up.svg');
 }
 .icon__update.icon--white {
-  background-image: url('https://www.imdi.no/UI/icons/white/icon-update.svg');
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/white/icon-update.svg');
 }
 .icon__upload.icon--white {
-  background-image: url('https://www.imdi.no/UI/icons/white/icon-upload.svg');
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/white/icon-upload.svg');
 }
 .icon__user.icon--white {
-  background-image: url('https://www.imdi.no/UI/icons/white/icon-user.svg');
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/white/icon-user.svg');
 }
 .icon__users.icon--white {
-  background-image: url('https://www.imdi.no/UI/icons/white/icon-users.svg');
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/white/icon-users.svg');
 }
 .icon__youtube.icon--white {
-  background-image: url('https://www.imdi.no/UI/icons/white/icon-youtube.svg');
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/white/icon-youtube.svg');
 }
 .icon__zoom-in.icon--white {
-  background-image: url('https://www.imdi.no/UI/icons/white/icon-zoom-in.svg');
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/white/icon-zoom-in.svg');
 }
 .icon__zoom-out.icon--white {
-  background-image: url('https://www.imdi.no/UI/icons/white/icon-zoom-out.svg');
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/white/icon-zoom-out.svg');
 }
 .icon__related.icon--white {
-  background-image: url('https://www.imdi.no/UI/icons/white/icon-related.svg');
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/white/icon-related.svg');
 }
 .icon__search.icon--red {
-  background-image: url('https://www.imdi.no/UI/icons/red/icon-search.svg');
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/red/icon-search.svg');
 }
 .icon__close.icon--red {
-  background-image: url('https://www.imdi.no/UI/icons/red/icon-close.svg');
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/red/icon-close.svg');
 }
 .icon__arrow-down.icon--red {
-  background-image: url('https://www.imdi.no/UI/icons/red/icon-arrow-down.svg');
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/red/icon-arrow-down.svg');
 }
 .icon__external.icon--red {
-  background-image: url('https://www.imdi.no/UI/icons/red/icon-external.svg');
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/red/icon-external.svg');
 }
 .icon__arrow-right.icon--red {
-  background-image: url('https://www.imdi.no/UI/icons/red/icon-arrow-right.svg');
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/red/icon-arrow-right.svg');
+}
+.icon__apartment.icon--green {
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/green/icon-apartment.svg');
+}
+.icon__bar.icon--green {
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/green/icon-bar.svg');
+}
+.icon__calculator.icon--green {
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/green/icon-calculator.svg');
+}
+.icon__clipboard-check.icon--green {
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/green/icon-clipboard-check.svg');
+}
+.icon__license.icon--green {
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/green/icon-license.svg');
+}
+.icon__register.icon--green {
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/green/icon-register.svg');
+}
+.icon__spell-check.icon--green {
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/green/icon-spell-check.svg');
+}
+.icon__document.icon--green {
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/green/icon-document.svg');
 }
 
 /*------------------------------------*\
@@ -3234,7 +3266,7 @@ ol li {
   font-weight: normal;
   font-style: normal;
   margin-bottom: 7px;
-  list-style-image: url("https://www.imdi.no/UI/gfx/bullet__small--primary.svg");
+  list-style-image: url("https://imdi-styles.firebaseapp.com/UI/gfx/bullet__small--primary.svg");
   list-style-position: outside;
   padding-left: 5.25px;
   margin-bottom: 1em;
@@ -3304,7 +3336,7 @@ ol ul li,
 .list ol li,
 ul ol li,
 ol ol li {
-  list-style-image: url("https://www.imdi.no/UI/gfx/bullet__small--secondary.svg");
+  list-style-image: url("https://imdi-styles.firebaseapp.com/UI/gfx/bullet__small--secondary.svg");
 }
 .list--numbered .list--numbered li,
 ol .list--numbered li,
@@ -4209,7 +4241,7 @@ blockquote small {
 @media (min-width: 57em) {
   .bullet {
     width: 100%;
-    background-image: url('https://www.imdi.no/UI/gfx/square--red.svg');
+    background-image: url('https://imdi-styles.firebaseapp.com/UI/gfx/square--red.svg');
     background-position: center center;
     background-repeat: no-repeat;
     background-size: contain;
@@ -4232,7 +4264,7 @@ blockquote small {
 @media (min-width: 57em) {
   .bullet--cta {
     border: none;
-    background-image: url('https://www.imdi.no/UI/gfx/square--green-dark.svg');
+    background-image: url('https://imdi-styles.firebaseapp.com/UI/gfx/square--green-dark.svg');
   }
 }
 @media print {
@@ -4274,7 +4306,7 @@ blockquote small {
   text-align: center;
   top: 21px;
   left: 21px;
-  background-image: url('https://www.imdi.no/UI/gfx/square--red.svg');
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/gfx/square--red.svg');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -4298,7 +4330,7 @@ blockquote small {
   }
 }
 .bullet--cta .bullet__icon {
-  background-image: url('https://www.imdi.no/UI/gfx/square--green.svg');
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/gfx/square--green.svg');
 }
 @media (min-width: 57em) {
   .bullet--cta .bullet__icon {
@@ -4754,7 +4786,7 @@ blockquote small {
   display: table-cell;
   vertical-align: top;
   color: #418541;
-  background-image: url('https://www.imdi.no/UI/gfx/square--green-outline.svg');
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/gfx/square--green-outline.svg');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -4864,7 +4896,7 @@ blockquote small {
 .cta-frontpage__link:hover .cta-frontpage__bullet,
 .cta-frontpage__link:focus .cta-frontpage__bullet {
   color: #ffffff;
-  background-image: url('https://www.imdi.no/UI/gfx/square--green.svg');
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/gfx/square--green.svg');
 }
 .cta-frontpage__link:hover .cta-frontpage__text,
 .cta-frontpage__link:focus .cta-frontpage__text {
@@ -4957,7 +4989,7 @@ blockquote small {
   text-align: center;
   top: 21px;
   left: 21px;
-  background-image: url('https://www.imdi.no/UI/gfx/square--green.svg');
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/gfx/square--green.svg');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -5233,7 +5265,7 @@ blockquote small {
   text-align: center;
   top: 0;
   left: -2px;
-  background-image: url('https://www.imdi.no/UI/gfx/square--red.svg');
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/gfx/square--red.svg');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -5259,10 +5291,10 @@ blockquote small {
   border-color: #d83a36;
 }
 .feature-bullet--link .feature-bullet__icon {
-  background-image: url('https://www.imdi.no/UI/gfx/square--green.svg');
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/gfx/square--green.svg');
 }
 .feature-bullet--indicator .feature-bullet__icon {
-  background-image: url('https://www.imdi.no/UI/gfx/square--blue.svg');
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/gfx/square--blue.svg');
 }
 @media (min-width: 57em) {
   .feature-bullet--large {
@@ -5272,19 +5304,19 @@ blockquote small {
     width: 100%;
     height: 0;
     text-align: center;
-    background-image: url('https://www.imdi.no/UI/gfx/square--red.svg');
+    background-image: url('https://imdi-styles.firebaseapp.com/UI/gfx/square--red.svg');
     background-position: center center;
     background-repeat: no-repeat;
     background-size: contain;
     border: none;
   }
   .feature-bullet--large.feature-bullet--link {
-    background-image: url('https://www.imdi.no/UI/gfx/square--green.svg');
+    background-image: url('https://imdi-styles.firebaseapp.com/UI/gfx/square--green.svg');
   }
   .feature-bullet--large.feature-bullet--link:hover,
   .feature-bullet--large.feature-bullet--link:active,
   .feature-bullet--large.feature-bullet--link:focus {
-    background-image: url('https://www.imdi.no/UI/gfx/square--green-dark.svg');
+    background-image: url('https://imdi-styles.firebaseapp.com/UI/gfx/square--green-dark.svg');
   }
   .feature-bullet--large.feature-bullet--link:hover .feature-bullet__linktext,
   .feature-bullet--large.feature-bullet--link:active .feature-bullet__linktext,
@@ -5339,7 +5371,7 @@ blockquote small {
 }
 @media (min-width: 57em) {
   .feature-bullet--large .feature-bullet__link {
-    background-image: url('https://www.imdi.no/UI/gfx/square--green.svg');
+    background-image: url('https://imdi-styles.firebaseapp.com/UI/gfx/square--green.svg');
   }
 }
 @media (min-width: 57em) {
@@ -5956,7 +5988,7 @@ blockquote small {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  background-image: url('https://www.imdi.no/UI/icons/red/icon-add.svg');
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/red/icon-add.svg');
   float: left;
   margin-top: 0.25em;
   padding-right: 28px;
@@ -6719,7 +6751,7 @@ blockquote small {
 }
 .header__button--login:hover .header__login-icon,
 .header__button--login:focus .header__login-icon {
-  background-image: url('https://www.imdi.no/UI/icons/red/icon-unlocked.svg');
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/red/icon-unlocked.svg');
 }
 .header__button--search {
   display: none;
@@ -6735,7 +6767,7 @@ blockquote small {
 }
 .header__button--search:hover .header__search-icon,
 .header__button--search:focus .header__search-icon {
-  background-image: url('https://www.imdi.no/UI/icons/red/icon-search.svg');
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/red/icon-search.svg');
 }
 .header__menu-icon {
   display: inline-block;
@@ -6843,11 +6875,11 @@ blockquote small {
 }
 .header--overlay .header__button:hover .header__search-icon,
 .header--overlay .header__button:focus .header__search-icon {
-  background-image: url('https://www.imdi.no/UI/icons/white/icon-search.svg');
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/white/icon-search.svg');
 }
 .header--overlay .header__button:hover .header__login-icon,
 .header--overlay .header__button:focus .header__login-icon {
-  background-image: url('https://www.imdi.no/UI/icons/white/icon-unlocked.svg');
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/white/icon-unlocked.svg');
 }
 @media (min-width: 45em) {
   .header--overlay .header__search {
@@ -6865,10 +6897,10 @@ blockquote small {
   }
 }
 .header--overlay .header__search-icon {
-  background-image: url('https://www.imdi.no/UI/icons/white/icon-search.svg');
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/white/icon-search.svg');
 }
 .header--overlay .header__login-icon {
-  background-image: url('https://www.imdi.no/UI/icons/white/icon-unlocked.svg');
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/white/icon-unlocked.svg');
 }
 .header--overlay .header__menu-icon-bar {
   opacity: 0;
@@ -7635,7 +7667,7 @@ a.ident:active .ident__triangle {
   .illustration__trigger:focus {
     /*
           .illustration__trigger-caption {
-            background-image: data-uri('https://www.imdi.no/UI/gfx/square--red-dark.svg');
+            background-image: data-uri('https://imdi-styles.firebaseapp.com/UI/gfx/square--red-dark.svg');
           }
           .illustration__trigger-caption--contracted {
             display: inline-block;  
@@ -7669,7 +7701,7 @@ a.ident:active .ident__triangle {
 }
 .illustration__trigger-caption {
   display: none;
-  background-image: url('https://www.imdi.no/UI/gfx/square--red.svg');
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/gfx/square--red.svg');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -8642,12 +8674,12 @@ a.ident:active .ident__triangle {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center center;
-  background-image: url('https://www.imdi.no/UI/icons/icon-update.svg');
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/icon-update.svg');
   -webkit-animation: spin 800ms linear infinite;
   animation: spin 800ms linear infinite;
 }
 .loading-indicator--white {
-  background-image: url('https://www.imdi.no/UI/icons/white/icon-update.svg');
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/white/icon-update.svg');
 }
 
 /*------------------------------------*\
@@ -8946,7 +8978,7 @@ a.ident:active .ident__triangle {
   text-align: center;
   top: -3px;
   left: 0;
-  background-image: url('https://www.imdi.no/UI/gfx/square--red.svg');
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/gfx/square--red.svg');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -8962,7 +8994,7 @@ a.ident:active .ident__triangle {
   color: #282828;
 }
 .message--ok .message__icon {
-  background-image: url('https://www.imdi.no/UI/gfx/square--green.svg');
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/gfx/square--green.svg');
 }
 .message--inline {
   margin-bottom: 7px;
@@ -9841,7 +9873,7 @@ a.ident:active .ident__triangle {
   transition: all 0.2s ease;
 }
 .search__button-icon {
-  background-image: url('https://www.imdi.no/UI/icons/white/icon-search.svg');
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/white/icon-search.svg');
   margin-left: 0.25rem;
 }
 .search--autocomplete {
@@ -9857,7 +9889,7 @@ a.ident:active .ident__triangle {
   right: 0.5rem;
   z-index: 2;
   pointer-events: none;
-  background-image: url('https://www.imdi.no/UI/icons/red/icon-search.svg');
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/red/icon-search.svg');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: 1rem 1rem;
@@ -10462,7 +10494,7 @@ a.skiptocontent:focus {
   height: 1rem;
   pointer-events: none;
   margin: 0;
-  background-image: url('https://www.imdi.no/UI/icons/icon-down.svg');
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/icon-down.svg');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -10475,10 +10507,10 @@ a.skiptocontent:focus {
   border: 2px solid #f15540;
 }
 .subtle-select__button--add:after {
-  background-image: url('https://www.imdi.no/UI/icons/icon-add.svg');
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/icon-add.svg');
 }
 .subtle-select__button--location:after {
-  background-image: url('https://www.imdi.no/UI/icons/icon-search.svg');
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/icon-search.svg');
 }
 .subtle-select__select select:disabled {
   padding-left: 7px;
@@ -11279,7 +11311,7 @@ table caption,
   content: "";
   display: block;
   position: absolute;
-  background-image: url('https://www.imdi.no/UI/gfx/bullet__small--primary.svg');
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/gfx/bullet__small--primary.svg');
   background-position: center center;
   background-repeat: no-repeat;
   width: 25px;
