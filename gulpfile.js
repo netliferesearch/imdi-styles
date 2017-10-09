@@ -37,6 +37,11 @@ gulp.task('scripts', function () {
     .pipe(gulp.dest('public/'))
 })
 
+gulp.task('UI', function(){
+  gulp.src('UI/**/*.*', { base: './' })
+  .pipe(gulp.dest('public/'));
+});
+
 // ==============================================
 //  UNCOMMENT BELOW IN DEVELOPMENT
 
