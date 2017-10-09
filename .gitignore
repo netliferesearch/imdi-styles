@@ -3,7 +3,5 @@ node_modules
 public/*
 Styles/min/
 Scripts/min
-public/styles.css
-public/styles.min.css
-public/app.js
-public/app.min.js
+public/*.css
+public/*.js
