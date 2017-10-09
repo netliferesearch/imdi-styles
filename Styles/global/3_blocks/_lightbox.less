@@ -83,6 +83,12 @@
 	}
 	&__footer {
 		margin-top: 0;
+
+		button.button,
+		button.button:hover {
+			background-color: white;
+			color: #333;
+		}
 	}
 	&--second-column {
 		.lightbox__box {
@@ -168,5 +174,12 @@
 	}
 	&--inline {
 		position: static;
+	}
+}
+
+// remove loooong list of sammenlignet med on mobile
+@media screen and (max-width: 340px) {
+	.lightbox__box .t-no-list-styles .col--flow:nth-last-child(-n+5) {
+	  display: none;
 	}
 }
