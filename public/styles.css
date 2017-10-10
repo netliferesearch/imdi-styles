@@ -8737,6 +8737,11 @@ a.ident:active .ident__triangle {
 .lightbox__footer {
   margin-top: 0;
 }
+.lightbox__footer button.button,
+.lightbox__footer button.button:hover {
+  background-color: white;
+  color: #333;
+}
 .lightbox--second-column .lightbox__box {
   top: 8.5rem;
 }
@@ -8831,6 +8836,11 @@ a.ident:active .ident__triangle {
 }
 .lightbox--inline {
   position: static;
+}
+@media screen and (max-width: 340px) {
+  .lightbox__box .t-no-list-styles .col--flow:nth-last-child(-n+5) {
+    display: none;
+  }
 }
 
 /*------------------------------------*\
@@ -11485,6 +11495,7 @@ table caption,
   }
 }
 .tabs-mini__item {
+  margin-top: 20px;
   font-family: "Siri", Tahoma, sans-serif;
   font-size-adjust: 0.51;
   font-weight: normal;

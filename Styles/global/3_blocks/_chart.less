@@ -7,6 +7,11 @@
   overflow: auto;
   overflow-y: hidden;
   -ms-overflow-y: hidden;
+
+  text.svg-text.title {
+    font-size: 25;
+  }
+
   &--bubble {
     width: 700px;
     height: 700px;
@@ -133,4 +138,19 @@
   &__node {
     
   }	
+}
+
+//  remove description below charts
+.graph__description {
+  display: none;
+}
+
+//  remove source below charts
+.toggle.toggle--light.t-no-margin p {
+  display: none;
+}
+
+//  move download buttons (below diagram) a bit up
+.graph__functions {
+  transform: translateY(-45px);
 }
