@@ -22,13 +22,6 @@ https://imdi-styles.firebaseapp.com/scripts-test
 https://imdi-styles.firebaseapp.com/UI-test
 ```
 
-Assets will be available at
-* `https://imdi-styles.firebaseapp.com/app.js`
-* `https://imdi-styles.firebaseapp.com/app.min.js`
-* `https://imdi-styles.firebaseapp.com/styles.css`
-* `https://imdi-styles.firebaseapp.com/styles.min.css`
-
-
 ## Eier av kodebasen
 Integrerings- og mangfoldsdirektoratet (IMDi)
 
