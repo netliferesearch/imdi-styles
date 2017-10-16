@@ -1,33 +1,53 @@
 @import "../../_vars";
 
 .tabs-mini {
-  margin: 0;
-  padding: @spacing--small 0;
-  @media print {
-    display: none;
-  }	
-  &__item {
-      .text--small();        
-      margin: 0;
-      padding: 0;
-      list-style: none;        
-      display: inline-block;
-      color: @color__grey;
-      &:after {
-          content: '|';  
-          padding: 0 @spacing--small;            
+    margin: 0;
+    padding: @spacing--small 0;
+  
+    @media print {
+      display: none;
+    }
+  
+    &__item {
+        margin-top: 20px;
+      a {
+        color: #333;
+        padding-bottom: 5px;
+        border-bottom: 2px solid rgba(0,0,0,0);
       }
-      &:last-child {
-          &:after {
-              display: none;
-          }
+  
+      .text--small();
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: inline-block;
+        color: #333;
+  
+        &:after {
+            content: '|';  
+            padding: 0 @spacing--small;            
+        }
+  
+        &:last-child {
+            &:after {
+                display: none;
+            }
+        }
+    }
+  
+    &__link {
+      color: #333;    
+      border-bottom: 2px solid #d83a36;        
+  
+      &:hover {
+        color: #d83a36;
+        border-bottom: 2px solid #d83a36;  
       }
+    }
   }
-  &__link {
-      &--current {
-        color: #777777;
-        border: none;
-        cursor: default;
-      }
+  
+  a.tabs-mini__link.tabs-mini__link--current {
+      border-bottom: 2px solid #d83a36;      
+      color: #333;
+      cursor: default;
   }
-}

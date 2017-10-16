@@ -18,6 +18,22 @@
 		display: inline-block;
 	});
 
+	&__underline,
+	&__underline:hover,
+	&__underline:focus {
+    background-color: inherit;
+    color: inherit;
+    border: 2px solid rgba(0,0,0,0);
+    font-weight: 400;
+    font-size: 16px;
+  }
+  
+	&__selected,
+	&__selected:hover,
+	&__selected:focus {
+    border-bottom: 2px solid #f15540;
+  }
+
 	&--small {
 		.text--small();
 		padding: @spacing--xsmall  @spacing--small;
@@ -68,8 +84,6 @@
 			margin-left: @spacing;
 		});
 	}
-
-
 }
 
 .button--large, .button--editor-primary {
@@ -90,4 +104,8 @@
 		&.button--active {
 			border-color: @color__orange;
 		}
+}
+
+.image-block a.button.button--secondary {
+	transform: translateY(15px);
 }

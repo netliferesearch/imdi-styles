@@ -7,6 +7,11 @@
   overflow: auto;
   overflow-y: hidden;
   -ms-overflow-y: hidden;
+
+  text.svg-text.title {
+    font-size: 25;
+  }
+
   &--bubble {
     width: 700px;
     height: 700px;
@@ -19,6 +24,7 @@
     display:inline-block;    
   }
   &__svg {
+    padding-top: 2px; // for text above graphs
     @media print {
       width: 100%;
       height: auto;
@@ -54,6 +60,8 @@
   	}
 	}
 	&__text {
+    font-size: 16px;
+    transform: translateY(-6px);
   	&--benchmark {
       fill: rgb(64, 57, 53);	
   	}	

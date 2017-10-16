@@ -1,5 +1,10 @@
  @import "../../_vars";
 
+//  remove source below charts
+.toggle.toggle--light.t-no-margin p {
+  display: none;
+}
+
 .graph {
 	margin-bottom: @spacing;
 	position: relative;
@@ -22,9 +27,10 @@
     	text-align: right;
 	}
 	&__description {
-		.text();
-		max-width: 35em;
-		margin-bottom: @spacing;
+		display: none;
+		// .text();
+		// max-width: 35em;
+		// margin-bottom: @spacing;
 	}
 	&__annotations {
 		p, li {
@@ -40,7 +46,7 @@
 		max-width: 35em;
 	}
 	&__functions {
-    transform: translateY(42px);
+		transform: translateY(-47px);
 		margin-bottom: @spacing;
 		position: relative;
 		.query-min(@screen--md; {
