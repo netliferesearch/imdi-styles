@@ -4755,6 +4755,7 @@ blockquote small {
   display: none;
   right: 0;
   z-index: 1;
+  max-width: 63px;
   bottom: 14px;
 }
 @media (min-width: 22em) {
