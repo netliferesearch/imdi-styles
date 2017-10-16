@@ -1,6 +1,6 @@
 {
   "name": "imdi-styles",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Stilsett, javascript og grafikk for imdi.no og andre IMDi nettsider",
   "main": "index.js",
   "private": true,
@@ -8,7 +8,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "gulp default",
     "build": "npm run build:patch",
-    "build:patch": "npm version patch && gulp scripts styles UI && firebase deploy",    
+    "build:patch": "npm version patch && gulp scripts styles UI && firebase deploy",
     "build:minor": "npm version minor && gulp scripts styles UI && firebase deploy",
     "build:major": "npm version major && gulp scripts styles UI && firebase deploy"
   },
