@@ -10,7 +10,7 @@
     "build": "build:patch",
     "build:patch": "npm version patch && gulp scripts styles UI && firebase deploy",    
     "build:minor": "npm version minor && gulp scripts styles UI && firebase deploy",
-    "build:major": "npm version major && gulp scripts styles UI && firebase deploy",
+    "build:major": "npm version major && gulp scripts styles UI && firebase deploy"
   },
   "repository": {
     "type": "git",
