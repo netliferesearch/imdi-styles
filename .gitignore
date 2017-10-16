@@ -1,7 +1,5 @@
 .DS_Store
 node_modules
-public/*
+public
 Styles/min/
 Scripts/min
-public/*.css
-public/*.js
