@@ -7,6 +7,9 @@ var uglify = require('gulp-uglify')
 var minifycss = require('gulp-minify-css')
 var less = require('gulp-less')
 
+var package = require('./package.json');
+var version = package.version;
+
 gulp.task('styles', function () {
   gulp.src(['Styles/global/**/*.less'])
     .pipe(plumber({
@@ -16,7 +19,7 @@ gulp.task('styles', function () {
       }}))
     .pipe(less())
     .pipe(autoprefixer('last 2 versions'))
-    .pipe(concat('styles.css'))
+    .pipe(concat(`styles@${version}.css`))
     .pipe(gulp.dest('public/'))
     .pipe(rename({suffix: '.min'}))
     .pipe(minifycss())
@@ -30,7 +33,7 @@ gulp.task('scripts', function () {
         console.log(error.message)
         this.emit('end')
       }}))
-    .pipe(concat('app.js'))
+    .pipe(concat(`app@${version}.js`))
     .pipe(gulp.dest('public/'))
     .pipe(rename({suffix: '.min'}))
     .pipe(uglify())

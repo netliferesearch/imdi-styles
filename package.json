@@ -7,7 +7,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "gulp default",
-    "build": "gulp scripts styles UI && firebase deploy"
+    "build": "npm version patch && gulp scripts styles UI"
   },
   "repository": {
     "type": "git",
