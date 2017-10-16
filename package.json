@@ -8,6 +8,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "gulp default",
     "build": "npm run build:patch",
+    "build:test": "gulp scripts-test styles-test UI-test && firebase deploy",
     "build:patch": "npm version patch && gulp scripts styles UI && firebase deploy",
     "build:minor": "npm version minor && gulp scripts styles UI && firebase deploy",
     "build:major": "npm version major && gulp scripts styles UI && firebase deploy"

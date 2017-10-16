@@ -26,6 +26,19 @@ gulp.task('styles', function () {
     .pipe(gulp.dest('public/'))
 })
 
+gulp.task('styles-test', function () {
+  gulp.src(['Styles/global/**/*.less'])
+    .pipe(plumber({
+      errorHandler: function (error) {
+        console.log(error.message)
+        this.emit('end')
+      }}))
+    .pipe(less())
+    .pipe(autoprefixer('last 2 versions'))
+    .pipe(concat(`styles-test.css`))
+    .pipe(gulp.dest('public/'))
+})
+
 gulp.task('scripts', function () {
   return gulp.src('Scripts/app.js')
     .pipe(plumber({
@@ -40,8 +53,25 @@ gulp.task('scripts', function () {
     .pipe(gulp.dest('public/'))
 })
 
+gulp.task('scripts-test', function () {
+  return gulp.src('Scripts/app.js')
+    .pipe(plumber({
+      errorHandler: function (error) {
+        console.log(error.message)
+        this.emit('end')
+      }}))
+    .pipe(concat(`app-test.js`))
+    .pipe(gulp.dest('public/'))
+})
+
 gulp.task('UI', function(){
   gulp.src('UI/**/*.*', { base: './' })
+  .pipe(gulp.dest('public/'));
+});
+
+gulp.task('UI-test', function(){
+  gulp.src('UI/**/*.*', { base: './' })
+  .pipe(concat(`UI-test`))
   .pipe(gulp.dest('public/'));
 });
 
