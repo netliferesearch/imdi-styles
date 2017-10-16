@@ -30,7 +30,6 @@
 		display: inline-block;
 		border: 2px solid @color__canvas-grey;		
 		margin-bottom: @spacing--small;
-				
 		.query-min(@screen--md; {	
 			.fontSize(@font-size--regular);			
 			.transition(border-color 0.2s ease);	
@@ -38,7 +37,7 @@
 			background: none;
 			padding: @spacing--xsmall 0 @spacing--xsmall 0;
 			border: none;			
-			border-bottom: 3px solid @color__orange;	
+			border-bottom: 3px solid transparent;	
 			border-color: transparent;
 			margin: 0 @spacing--medium;			
 			margin-bottom: -3px;			
@@ -48,9 +47,11 @@
 		});
 		&--current {
 			background: @color__white;
+			border-bottom: 3px solid @color__orange;
+			
 			.query-min(@screen--md; {			
 				color: @color__text;
-				border-color:  @color__orange;
+				border-bottom: 3px solid @color__orange;			
 				background: none;
 			});
 			.tabs-menu__icon {
@@ -74,9 +75,8 @@
 				border-color: darken(@color__canvas-grey, 10%);
 				.query-min(@screen--md; {
 					background: inherit;			
-					color: @color__text;				
 					color: @color__links;
-					border-color:  @color__orange;
+					border-bottom: 3px solid @color__orange;
 				});
 			}			
 		}
@@ -113,7 +113,7 @@
 			}
 			.tabs-menu__link--current {
 				background: none;
-				border-color:  @color__orange;				
+				border-bottom: 3px solid @color__orange;
 			} 			
 		});
 		.query-min(@screen--sm; {

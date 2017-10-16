@@ -4754,8 +4754,14 @@ blockquote small {
   position: fixed;
   display: none;
   right: 0;
+<<<<<<< HEAD
+=======
   z-index: 1;
+<<<<<<< HEAD
   max-width: 63px;
+=======
+>>>>>>> 5dde71798946a749ff7982c95f13e333e2cd0d18
+>>>>>>> f7282082905b67914cd925899f477f12cfce6324
   bottom: 14px;
 }
 @media (min-width: 22em) {

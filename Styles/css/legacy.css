@@ -1,4 +1,4 @@
-/*------------------------------------*\
+/* /*------------------------------------*\
     Set media query mixin to always include styles for the widest breakpoint
     Lazy loading of variables in LESS overwrite the settings in the vars file. 
 \*------------------------------------*/
@@ -7890,4 +7890,4 @@ ul#epi-quickNavigator li {
 }
 ul#epi-quickNavigator li a {
   border-bottom: none;
-}
+} */
