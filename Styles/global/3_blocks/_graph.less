@@ -8,6 +8,14 @@
 .graph {
 	margin-bottom: @spacing;
 	position: relative;
+
+	&__actions {
+		display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+	}
+
 	@media print {
 
 	}
@@ -50,8 +58,6 @@
 		max-width: 35em;
 	}
 	&__functions {
-		transform: translateY(-47px);
-		margin-bottom: @spacing;
 		position: relative;
 		.query-min(@screen--md; {
 			float: right;
