@@ -388,7 +388,7 @@ imdi.smooth_scrolling = (function ($) {
 imdi.slick_carousel = (function ($) {
     return {
         init: function () {
-          	var target = $('[data-behaviour="carousel"]');
+            var target = $('[data-behaviour="carousel"]');
             var toggleSlick = function () {
                 if ($(window).width() < 720) {
                   if(!slickLoaded){
@@ -448,7 +448,7 @@ imdi.table_collapsable = (function ($) {
             $('[data-table-collapsable]').each(function() {
 
               var tableRows = $(this).find('tr');
-
+                console.log('living')
               $(tableRows).each(function (){
                 var columns = $(this).children();
                 var trigger = columns[0];
