@@ -8,7 +8,8 @@
 		page-break-inside: avoid;
 	}
 	&__button {
-		
+		z-index: 1;
+		opacity: .99;
 		display: block;
 		position: relative;
 		padding: @spacing;
@@ -75,8 +76,12 @@
 		}	
 		&--contracted {
 			.animation(animations__fade-out-up 250ms @swift-out);				
-		}		
+		}
+
 		&--expanded {
+			z-index: 2;
+			position: relative;
+
 			.animation(animations__fade-in-down 400ms @swift-out both);	
 			.query-min(@screen--md; {
 				width: percentage(21/14);

@@ -8,10 +8,19 @@
 .graph {
 	margin-bottom: @spacing;
 	position: relative;
+
+	&__actions {
+		display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+	}
+
 	@media print {
 
 	}
 	&__filter {
+		margin-bottom: 15px;
     position: relative;
 		@media print {
 			display: none;
@@ -24,7 +33,10 @@
 		});
   }
 	&__types {
-    	text-align: right;
+		text-align: right;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
 	}
 	&__description {
 		display: none;
@@ -46,8 +58,6 @@
 		max-width: 35em;
 	}
 	&__functions {
-		transform: translateY(-47px);
-		margin-bottom: @spacing;
 		position: relative;
 		.query-min(@screen--md; {
 			float: right;
