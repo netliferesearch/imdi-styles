@@ -390,6 +390,7 @@ imdi.slick_carousel = (function ($) {
     return {
         init: function () {
             var target = $('[data-behaviour="carousel"]');
+            if (!target) return
             var toggleSlick = function () {
                 if ($(window).width() < 720) {
                   if(!slickLoaded){
@@ -434,6 +435,7 @@ imdi.table_collapsable = (function ($) {
     return {
         init: function () {
             var toggleAccordion = function(e) {
+                console.log('toggleAccordion')
               var trigger = e.target;
               var parent = trigger.parentNode;
               var isHidden = parent.getAttribute('aria-hidden') === 'true';
