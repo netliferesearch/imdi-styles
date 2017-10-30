@@ -29,6 +29,7 @@
     "gulp-continuous-concat": "^0.1.1",
     "gulp-less": "^3.3.0",
     "gulp-plumber": "^1.1.0",
+    "gulp-rename": "^1.2.2",
     "gulp-uglify": "^3.0.0",
     "gulp-watch": "^4.3.11",
     "gulp-watch-less": "^1.0.1",
