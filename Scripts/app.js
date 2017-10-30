@@ -15,6 +15,7 @@ $(document).ready(function () {
     imdi.wizard.init();
     imdi.table_collapsable.init();
     imdi.to_top_button.init();
+    imdi.removeDoubleCTA.init();
 
 });
 
@@ -459,6 +460,26 @@ imdi.table_collapsable = (function ($) {
 
         }
     }
+})(jQuery);
+
+/*------------------------------------*\
+    REMOVE DOUBLE CTA
+\*------------------------------------*/
+
+imdi.removeDoubleCTA = (function ($) {
+  return {
+    init: function () {
+      var toc = $('#toc-disabled')[0];
+      var secondCTA = $(toc).find('.cta')[1];
+
+      var tocHeight = toc.offsetHeight;
+      var windowHeight = window.innerHeight;
+
+      if (tocHeight < windowHeight+300) {
+        $(secondCTA).hide();
+      }
+    }
+  }
 })(jQuery);
 
 
