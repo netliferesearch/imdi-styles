@@ -1,10 +1,6 @@
 {
   "name": "imdi-styles",
-<<<<<<< HEAD
-  "version": "0.4.1",
-=======
   "version": "0.1.9",
->>>>>>> 5065782a747de821ed4cb5eca887007f824ad7ca
   "description": "Stilsett, javascript og grafikk for imdi.no og andre IMDi nettsider",
   "main": "index.js",
   "private": true,
