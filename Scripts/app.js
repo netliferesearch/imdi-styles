@@ -465,6 +465,30 @@ imdi.table_collapsable = (function ($) {
 })(jQuery);
 
 /*------------------------------------*\
+    RESPONSIVE TABLE (for epinova)
+\*------------------------------------*/
+imdi.responsiveTableSetup = (function ($) {
+    return {
+      init: function () {
+        $("table").each(function(tableIndex, table) {
+            var $table = $(table);
+            $table.addClass("table table--collapsable table--fluid");
+            var bodyRows = $table.find("tbody tr");
+            $table.find("thead th").each(function (thIndex, th) {
+              var $th = $(th);
+              $th.attr("scope", "col");
+              bodyRows.each(function(trIndex, tr) {
+                var td = $(tr).children().get(thIndex);
+                $(td).attr("data-label", $th.text());
+              });
+            });
+            $table.find("tbody").attr("data-table-collapsable", "");
+        });
+      }
+    }
+  })(jQuery);
+
+/*------------------------------------*\
     REMOVE DOUBLE CTA
 \*------------------------------------*/
 
