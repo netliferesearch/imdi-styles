@@ -7,8 +7,8 @@
 	padding: @spacing;
 	margin-bottom: @spacing--large;
 	min-height: 50px + @spacing + @spacing + 6px;
-		 
-	.query-min(@screen--lg; {	
+
+	.query-min(@screen--lg; {
 		width: 100%;
 		background-image: data-uri('https://imdi-styles.firebaseapp.com/UI/gfx/square--red.svg');
 		background-position: center center;
@@ -23,23 +23,24 @@
 	});
 	@media print {
 		border-width: 1px;
-	}	
+	}
 	&--cta {
 		border: 3px solid @color__green;
-		.query-min(@screen--lg; {	
-			border: none;			 			 
+		.query-min(@screen--lg; {
+			border: none;
 			background-image: data-uri('https://imdi-styles.firebaseapp.com/UI/gfx/square--green-dark.svg');
 		});
 		@media print {
 			border-width: 1px;
-		}			
+		}
 	}
 	&__content {
 		padding-left: 50px + @spacing;
 		p, span {
 			margin-bottom: 0;
-		} 
-		.query-min(@screen--lg; {			 
+		}
+		.query-min(@screen--lg; {
+			word-wrap: normal;		 
 			position: absolute;
 			width: 100%;
 			top: 50%;
@@ -48,7 +49,7 @@
 			text-align: center;
 			padding: @spacing--large;
 			a {
-				color: @color__white;			 
+				color: @color__white;
 				border-color: @color__white;
 			}
 		});
@@ -59,7 +60,7 @@
 		position: absolute;
 		display: block;
 		width: 50px;
-		height: 50px;		 
+		height: 50px;
 		line-height: 50px;
 		text-align: center;
 		top: @spacing;
@@ -69,9 +70,9 @@
 		background-repeat: no-repeat;
 		background-size: contain;
 		color: @color__white;
-		
-		.query-min(@screen--lg; {			 
-			.fontSize(@font-size--large);			 
+
+		.query-min(@screen--lg; {
+			.fontSize(@font-size--large);
 			position: static;
 			top: auto;
 			left: auto;
@@ -88,10 +89,10 @@
 }
 .bullet--cta {
 	.bullet__icon {
-			background-image: data-uri('https://imdi-styles.firebaseapp.com/UI/gfx/square--green.svg');		
-  		.query-min(@screen--lg; {	
-				background: none;	
-			}); 
+			background-image: data-uri('https://imdi-styles.firebaseapp.com/UI/gfx/square--green.svg');
+  		.query-min(@screen--lg; {
+				background: none;
+			});
 	}
 	.bullet__content {
 		a {
@@ -100,14 +101,14 @@
 			&:hover, &:active {
 				color: @color__text;
 				border-color: @color__text;
-			}			
-  		.query-min(@screen--lg; {	
+			}
+  		.query-min(@screen--lg; {
 				color: @color__white;
 				border-color: @color__white;
 				&:hover, &:active {
 					color: @color__white;
 					border-color: @color__text;
-				}							
+				}
 			});
 		}
 	}
