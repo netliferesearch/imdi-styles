@@ -496,6 +496,9 @@ imdi.removeDoubleCTA = (function ($) {
   return {
     init: function () {
       var toc = $('#toc-disabled')[0];
+
+      if(!toc ) {return};
+
       var secondCTA = $(toc).find('.cta')[1];
 
       var tocHeight = toc.offsetHeight;

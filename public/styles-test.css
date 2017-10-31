@@ -4511,6 +4511,7 @@ blockquote small {
 }
 @media (min-width: 57em) {
   .bullet__content {
+    word-wrap: normal;
     position: absolute;
     width: 100%;
     top: 50%;
