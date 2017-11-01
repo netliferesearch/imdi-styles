@@ -4511,6 +4511,7 @@ blockquote small {
 }
 @media (min-width: 57em) {
   .bullet__content {
+    word-wrap: normal;
     position: absolute;
     width: 100%;
     top: 50%;
@@ -6701,12 +6702,16 @@ blockquote small {
     @fix-mqs
 
 */
-.toggle.toggle--light.t-no-margin p {
+[data-chart-source] {
   display: none;
 }
 .graph {
   margin-bottom: 21px;
   position: relative;
+}
+.graph__functions {
+  -webkit-transform: translateY(15px);
+          transform: translateY(15px);
 }
 .graph__actions {
   display: -webkit-box;
@@ -6719,9 +6724,6 @@ blockquote small {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 .graph__filter {
   margin-bottom: 15px;

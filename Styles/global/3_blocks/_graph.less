@@ -1,19 +1,21 @@
  @import "../../_vars";
 
-//  remove source below charts
-.toggle.toggle--light.t-no-margin p {
-  display: none;
+ [data-chart-source] {
+	display: none;
 }
 
 .graph {
 	margin-bottom: @spacing;
 	position: relative;
 
+	&__functions {
+		transform: translateY(15px);
+	}
+
 	&__actions {
 		display: flex;
     flex-direction: row-reverse;
-    justify-content: space-between;
-    align-items: center;
+		justify-content: space-between;
 	}
 
 	@media print {
