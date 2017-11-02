@@ -9,6 +9,8 @@ $(document).ready(function () {
     imdi.toggle.init(getUrlParameter('toggle'));
     imdi.trigger.init();
     imdi.selectall.init();
+    imdi.responsive_table_setup.init();
+    imdi.table_collapsable.init();
     imdi.hover_toggle.init();
     imdi.smooth_scrolling.init();
     imdi.slick_carousel.init();
@@ -467,7 +469,7 @@ imdi.table_collapsable = (function ($) {
 /*------------------------------------*\
     RESPONSIVE TABLE (for epinova)
 \*------------------------------------*/
-imdi.responsiveTableSetup = (function ($) {
+imdi.responsive_table_setup = (function ($) {
     return {
       init: function () {
         $("table").each(function(tableIndex, table) {
