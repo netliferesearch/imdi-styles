@@ -4393,7 +4393,7 @@ blockquote small {
   list-style-type: none;
 }
 .breadcrumbs__divider {
-  color: #777777;
+  color: #585858;
   margin: 0 1.75px 0 3.5px;
 }
 .breadcrumbs__list-item {
@@ -4409,7 +4409,7 @@ blockquote small {
   display: inline;
 }
 .breadcrumbs__list-item--current {
-  color: #777777;
+  color: #585858;
 }
 .breadcrumbs__link {
   border-bottom: none;
@@ -5549,7 +5549,7 @@ blockquote small {
   display: inline;
   font-size: 15px;
   font-size: 0.8333333333333334rem;
-  color: #777777;
+  color: #585858;
   overflow: hidden;
   white-space: nowrap;
 }
@@ -5717,7 +5717,7 @@ blockquote small {
   line-height: 1.4;
   margin-bottom: 0px;
   text-transform: none;
-  color: #777777;
+  color: #585858;
 }
 .feature-small__title {
   font-family: "Siri Medium", Tahoma, sans-serif;
@@ -5768,13 +5768,13 @@ blockquote small {
   line-height: 1.4;
   margin-bottom: 0px;
   text-transform: none;
-  color: #777777;
+  color: #585858;
   margin-bottom: 0;
 }
 .feature-small__organizer {
   font-size: 15px;
   font-size: 0.8333333333333334rem;
-  color: #777777;
+  color: #585858;
   margin: 7px 0;
   line-height: 1.5;
 }
@@ -5910,7 +5910,6 @@ blockquote small {
 }
 @media (min-width: 45em) {
   .feature__image {
-    display: block;
     position: absolute;
     margin-top: 0;
     max-width: none;
@@ -6247,7 +6246,7 @@ blockquote small {
 }
 .filter-choice input:checked ~ .filter-choice__control--disabled {
   background-color: #f2efed;
-  color: #777777;
+  color: #585858;
 }
 .filter-choice input:checked ~ .filter-choice__control .filter-choice__indicator {
   background-color: transparent;
@@ -7260,7 +7259,7 @@ blockquote small {
   line-height: 1.4;
   margin-bottom: 0px;
   text-transform: none;
-  color: #777777;
+  color: #585858;
   border: 1px solid #f2efed;
   font-style: italic;
   padding: 5px 7px;
@@ -7280,7 +7279,7 @@ blockquote small {
   line-height: 1.4;
   margin-bottom: 0px;
   text-transform: none;
-  color: #777777;
+  color: #585858;
   font-style: italic;
   margin-left: 21px;
 }
@@ -8315,11 +8314,11 @@ a.ident:active .ident__triangle {
   line-height: 1.4;
   margin-bottom: 0px;
   text-transform: none;
-  color: #777777;
+  color: #585858;
 }
 .indicator__subtext a {
-  color: #777777;
-  border-color: #777777;
+  color: #585858;
+  border-color: #585858;
 }
 
 /*------------------------------------*\
@@ -8712,7 +8711,7 @@ a.ident:active .ident__triangle {
   text-transform: uppercase;
   letter-spacing: 0.05em;
   margin-bottom: 21px;
-  color: #777777;
+  color: #585858;
 }
 .lightbox__close-button {
   font-family: "Siri Medium", Tahoma, sans-serif;
@@ -9345,7 +9344,7 @@ a.ident:active .ident__triangle {
   line-height: 1.4;
   margin-bottom: 0px;
   text-transform: none;
-  color: #777777;
+  color: #585858;
   margin-bottom: 42px;
 }
 .meta--bottom {
@@ -10722,7 +10721,7 @@ a.skiptocontent:focus {
   padding-left: 7px;
   padding-top: 7px;
   padding-right: 7px;
-  color: #777777;
+  color: #585858;
   white-space: nowrap;
   overflow: hidden;
   max-width: 100%;
@@ -11051,7 +11050,7 @@ table caption,
   text-transform: uppercase;
   letter-spacing: 0.05em;
   padding: 14px 14px;
-  color: #777777;
+  color: #585858;
   text-align: left;
 }
 @media (min-width: 45em) {
@@ -11390,7 +11389,7 @@ table caption,
   opacity: 1;
 }
 .tabs-menu__link--disabled {
-  color: #777777;
+  color: #585858;
 }
 .tabs-menu__link--disabled .tabs-menu__icon {
   opacity: 0.5;
@@ -11398,7 +11397,7 @@ table caption,
 .tabs-menu__link--disabled:hover,
 .tabs-menu__link--disabled:focus,
 .tabs-menu__link--disabled:active {
-  color: #777777;
+  color: #585858;
   border-color: transparent;
   cursor: default;
 }
@@ -11619,7 +11618,7 @@ a.tabs-mini__link.tabs-mini__link--current {
   margin-bottom: 0;
   padding-bottom: 7px;
   padding-left: 21px;
-  border-left: 2px solid #777777;
+  border-left: 2px solid #585858;
   list-style: none;
 }
 .timeline__item:before {
@@ -11708,7 +11707,7 @@ a.tabs-mini__link.tabs-mini__link--current {
   display: block;
   border: none;
   text-decoration: underline;
-  color: #777777;
+  color: #585858;
   margin-top: 42px;
   margin-bottom: 21px;
 }
@@ -11819,7 +11818,7 @@ a.tabs-mini__link.tabs-mini__link--current {
   }
 }
 .toggle-list__button--disablet {
-  color: #777777;
+  color: #585858;
 }
 .toggle-list__button--expanded {
   background: #f8f7f6;
