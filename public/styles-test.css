@@ -2531,20 +2531,20 @@ ol.row li {
 }
 @media (min-width: 45em) {
   .col--main .col-block-bleed {
-    width: 157.14285714%;
-    margin-left: -7.14285714%;
+    width: 114%;
+    margin-left: -7%;
   }
 }
 @media (min-width: 57em) {
   .col--main .col-block-bleed {
-    width: 133.33333333%;
-    margin-left: -16.66666667%;
+    width: 114%;
+    margin-left: -7%;
   }
 }
 @media print {
   .col--main .col-block-bleed {
-    width: 157.14285714%;
-    margin-left: -7.14285714%;
+    width: 114%;
+    margin-left: -7%;
   }
 }
 .col--main .col-block-bleed--full {
@@ -2783,7 +2783,7 @@ you can use the generic selector below, but it's slower:
   background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/icon-apply.svg');
 }
 .icon__arrow-down {
-  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/icon-arrow-down.svg');
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/icon-arrow-up.svg');
 }
 .icon__arrow-left {
   background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/icon-arrow-left.svg');
@@ -3402,6 +3402,7 @@ h1,
   font-size: 1.8888888888888888rem;
   line-height: 1.15384615;
   margin-bottom: 18px;
+  word-wrap: normal;
   text-transform: none;
   margin-top: 14px;
   /* Se mixin i _vars.less */
@@ -4860,6 +4861,7 @@ blockquote small {
 }
 .chart__svg {
   padding-top: 2px;
+  margin-bottom: 15px;
 }
 @media print {
   .chart__svg {
@@ -5886,11 +5888,11 @@ blockquote small {
 */
 .feature {
   position: relative;
-  padding: 21px 0;
+  padding: 42px 0px 0px 0px;
 }
 @media (min-width: 45em) {
   .feature {
-    padding: 42px 0 42px 0;
+    padding: 42px 0px 0px 0px;
   }
 }
 @media print {
@@ -5942,7 +5944,7 @@ blockquote small {
     padding-left: 4.54545455%;
     max-width: 68.18181818%;
     padding-top: 42px;
-    padding-bottom: 42px;
+    padding-bottom: 24px;
   }
 }
 @media (min-width: 57em) {
@@ -6014,49 +6016,11 @@ blockquote small {
   height: 0.8em;
 }
 .feature__section-title {
-  font-family: "Siri Medium", Tahoma, sans-serif;
-  font-weight: normal;
-  font-style: normal;
-  font-size: 24px;
-  font-size: 1.3333333333333333rem;
-  line-height: 1.3125;
-  margin-bottom: 21px;
-  text-transform: none;
+  font-size: 26px;
   margin-bottom: 42px;
 }
-@media (min-width: 22em) {
-  .feature__section-title {
-    font-size: 26px;
-    font-size: 1.4444444444444444rem;
-  }
-}
-@media (min-width: 45em) {
-  .feature__section-title {
-    font-size: 32px;
-    font-size: 1.7777777777777777rem;
-  }
-}
 .feature__title {
-  font-family: "Siri Medium", Tahoma, sans-serif;
-  font-weight: normal;
-  font-style: normal;
-  font-size: 24px;
-  font-size: 1.3333333333333333rem;
-  line-height: 1.3125;
-  margin-bottom: 21px;
-  text-transform: none;
-}
-@media (min-width: 22em) {
-  .feature__title {
-    font-size: 26px;
-    font-size: 1.4444444444444444rem;
-  }
-}
-@media (min-width: 45em) {
-  .feature__title {
-    font-size: 32px;
-    font-size: 1.7777777777777777rem;
-  }
+  font-size: 26px;
 }
 @media (min-width: 45em) {
   .feature__title a {
@@ -8491,6 +8455,7 @@ a.ident:active .ident__triangle {
   font-size: 1.8888888888888888rem;
   line-height: 1.15384615;
   margin-bottom: 18px;
+  word-wrap: normal;
   text-transform: none;
   margin-top: 14px;
 }

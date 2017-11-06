@@ -6,13 +6,15 @@
 	background: @color__white;	
 	margin-top: @spacing--large;
 	margin-bottom: @spacing--large;	
-	padding: @spacing @gutter;	
+	padding: @spacing @gutter;
+
 	.query-min(@screen--lg; {		
 		padding: @spacing--large;
 		padding-bottom: @spacing;	
 		margin-top: @spacing--large;
 		margin-bottom: @spacing--large;			
 	});
+
 	@media print {
 		padding: @spacing--large;
 		padding-bottom: @spacing;	
@@ -21,7 +23,8 @@
 		border-width: 1px;	
 		page-break-inside: avoid;	
 		margin-top: @spacing;	
-	}	
+	}
+
 	&__title {
 		.h3();
 		margin-bottom: @spacing;
