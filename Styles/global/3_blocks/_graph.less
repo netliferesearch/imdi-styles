@@ -9,10 +9,6 @@
 	position: relative;
 	margin-bottom: 15px;
 
-	&__functions {
-		transform: translateY(15px);
-	}
-
 	&__actions {
 		display: flex;
     flex-direction: row-reverse;
@@ -75,8 +71,11 @@
 	&__about {
 		max-width: 35em;
 	}
+
 	&__functions {
 		position: relative;
+		display: initial;
+
 		.query-min(@screen--md; {
 			float: right;
 		});
@@ -90,6 +89,15 @@
 			});
 		}
 	}
+
+	@media screen and (max-width: 420px) {
+		&__functions {
+			display: flex;
+			justify-content: flex-end;
+			flex-direction: column;
+		}
+	}
+
 	&__functions-item {
 		display: inline-block;
   }
