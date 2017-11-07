@@ -7,7 +7,6 @@ $(document).ready(function () {
     imdi.main_menu_toggle.init();
     imdi.main_search_toggle.init();
     imdi.toggle.init(getUrlParameter('toggle'));
-    imdi.accordion.init();
     imdi.trigger.init();
     imdi.selectall.init();
     imdi.responsive_table_setup.init();
@@ -280,65 +279,6 @@ imdi.toggle = (function ($) {
 })(jQuery);
 
 
-/*------------------------------------*\
-    ACCORDION
-\*------------------------------------*/
-imdi.accordion = (function () {
-    return {
-        init: function () {
-    
-            'use strict';
-            
-            document.addEventListener('DOMContentLoaded', function () {
-            
-                var elements = document.querySelectorAll('.accordion li');
-            
-                var _loop = function _loop(i) {
-                    var content = elements[i].querySelector('.accordion--content');
-                
-                    elements[i].addEventListener('click', function () {
-                
-                        //  toggle aria-expanded
-                        var ariaExpanded = content.getAttribute('aria-expanded');
-                        console.log(ariaExpanded);
-                        content.setAttribute('aria-expanded', ariaExpanded === 'true' ? false : true);
-                
-                        //  toggle aria-hidden
-                        var ariaHidden = content.getAttribute('aria-hidden');
-                        content.setAttribute('aria-hidden', ariaHidden === 'true' ? false : true);
-                
-                        //  toggle content visibility
-                        elements[i].querySelector('.accordion--title img').classList.toggle('open');
-                        content.classList.toggle('open');
-                    });
-                };
-            
-                for (var i = 0; i < elements.length; i++) {
-                    _loop(i);
-                }
-            
-                // prevent spacebar from scrolling
-                window.onkeydown = function (e) {
-                    return !(e.keyCode == 32);
-                };
-            
-                document.body.onkeyup = function (e) {
-            
-                //spacebar or enter will click the focused element
-                if (e.keyCode == 32 || e.keyCode == 13) {
-            
-                    try {
-                        document.activeElement.click();
-                    } catch (e) {
-                        console.log(e);
-                    }
-                }
-                };
-            });
-        }
-    };
-})();
-    
 
 /*------------------------------------*\
     TRIGGER
