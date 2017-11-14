@@ -18,7 +18,6 @@ $(document).ready(function () {
     imdi.wizard.init();
     imdi.to_top_button.init();
     imdi.removeDoubleCTA.init();
-
 });
 
 imdi.facet = (function ($) {

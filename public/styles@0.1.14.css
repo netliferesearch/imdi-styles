@@ -2971,12 +2971,18 @@ you can use the generic selector below, but it's slower:
 .icon__table {
   background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/icon-table.svg');
 }
-<<<<<<< HEAD
-=======
 .icon__hammer-wrench {
   background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/icon-hammer-wrench.svg');
 }
->>>>>>> 141ebe88c7fed16cb589ad98bc830d076a436524
+.icon__pie-chart {
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/icon-pie-chart.svg');
+}
+.icon__bag-nok {
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/icon-bag-nok.svg');
+}
+.icon__register {
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/icon-register.svg');
+}
 .icon__add.icon--white {
   background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/white/icon-add.svg');
 }
@@ -3166,6 +3172,21 @@ you can use the generic selector below, but it's slower:
 .icon__related.icon--white {
   background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/white/icon-related.svg');
 }
+.icon__hammer-wrench.icon--white {
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/white/icon-hammer-wrench.svg');
+}
+.icon__pie-chart.icon--white {
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/white/icon-pie-chart.svg');
+}
+.icon__bag-nok.icon--white {
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/white/icon-bag-nok.svg');
+}
+.icon__register.icon--white {
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/white/icon-register.svg');
+}
+.icon__bubbles.icon--white {
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/white/icon-bubbles.svg');
+}
 .icon__search.icon--red {
   background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/red/icon-search.svg');
 }
@@ -3204,6 +3225,24 @@ you can use the generic selector below, but it's slower:
 }
 .icon__document.icon--green {
   background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/green/icon-document.svg');
+}
+.icon__hammer-wrench.icon--green {
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/green/icon-hammer-wrench.svg');
+}
+.icon__pie-chart.icon--green {
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/green/icon-pie-chart.svg');
+}
+.icon__bag-nok.icon--green {
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/green/icon-bag-nok.svg');
+}
+.icon__home.icon--green {
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/green/icon-home.svg');
+}
+.icon__register.icon--green {
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/green/icon-register.svg');
+}
+.icon__bubbles.icon--green {
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/green/icon-bubbles.svg');
 }
 
 /*------------------------------------*\
@@ -5538,7 +5577,6 @@ blockquote small {
 }
 .feature-bullet__icon {
   font-size: 15px;
-  font-size: 0.8333333333333334rem;
   position: absolute;
   display: block;
   width: 2.8rem;
@@ -6762,10 +6800,6 @@ blockquote small {
 }
 .graph__functions {
   position: relative;
-<<<<<<< HEAD
-  display: initial;
-=======
->>>>>>> 141ebe88c7fed16cb589ad98bc830d076a436524
 }
 @media (min-width: 45em) {
   .graph__functions {
@@ -6783,23 +6817,6 @@ blockquote small {
     margin: 0;
   }
 }
-<<<<<<< HEAD
-@media screen and (max-width: 420px) {
-  .graph__functions {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-}
-=======
->>>>>>> 141ebe88c7fed16cb589ad98bc830d076a436524
 .graph__functions-item {
   display: inline-block;
 }
@@ -9109,11 +9126,7 @@ a.ident:active .ident__triangle {
     @fix-mqs
 
 */
-<<<<<<< HEAD
-.menu-frontpage {
-=======
 .menu-deeplinks {
->>>>>>> 141ebe88c7fed16cb589ad98bc830d076a436524
   margin-top: 42px;
   margin-bottom: 100px;
   margin-left: -10.5px;
@@ -9128,11 +9141,7 @@ a.ident:active .ident__triangle {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
-<<<<<<< HEAD
-.menu-frontpage__item {
-=======
 .menu-deeplinks__item {
->>>>>>> 141ebe88c7fed16cb589ad98bc830d076a436524
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -9140,28 +9149,16 @@ a.ident:active .ident__triangle {
   margin-bottom: 21px;
 }
 @media (min-width: 45em) {
-<<<<<<< HEAD
-  .menu-frontpage__item {
-=======
   .menu-deeplinks__item {
->>>>>>> 141ebe88c7fed16cb589ad98bc830d076a436524
     width: 50%;
   }
 }
 @media (min-width: 57em) {
-<<<<<<< HEAD
-  .menu-frontpage__item {
-    width: 33.333%;
-  }
-}
-.menu-frontpage__content {
-=======
   .menu-deeplinks__item {
     width: 33.333%;
   }
 }
 .menu-deeplinks__content {
->>>>>>> 141ebe88c7fed16cb589ad98bc830d076a436524
   padding: 30px;
   border: 3px solid #f2efed;
   margin: 10.5px;
@@ -9179,19 +9176,11 @@ a.ident:active .ident__triangle {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-<<<<<<< HEAD
-.menu-frontpage__heading {
-  position: relative;
-  background: #fff;
-}
-.menu-frontpage__title {
-=======
 .menu-deeplinks__heading {
   position: relative;
   background: #fff;
 }
 .menu-deeplinks__title {
->>>>>>> 141ebe88c7fed16cb589ad98bc830d076a436524
   font-size: 20px;
   font-weight: 800;
   text-align: left;
@@ -9199,11 +9188,7 @@ a.ident:active .ident__triangle {
   margin-top: 42px;
   text-transform: uppercase;
 }
-<<<<<<< HEAD
-.menu-frontpage__icon {
-=======
 .menu-deeplinks__icon {
->>>>>>> 141ebe88c7fed16cb589ad98bc830d076a436524
   position: absolute;
   background: #fff;
   border: 2px solid #51a451;
@@ -9215,30 +9200,18 @@ a.ident:active .ident__triangle {
   font-size: 21px;
   top: -42px;
 }
-<<<<<<< HEAD
-.menu-frontpage__icon i {
-=======
 .menu-deeplinks__icon i {
->>>>>>> 141ebe88c7fed16cb589ad98bc830d076a436524
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
   position: absolute;
   top: 7px;
   left: 7px;
 }
-<<<<<<< HEAD
-.menu-frontpage__list {
-  display: block;
-  margin-top: 21px;
-}
-.menu-frontpage__list-item {
-=======
 .menu-deeplinks__list {
   display: block;
   margin-top: 21px;
 }
 .menu-deeplinks__list-item {
->>>>>>> 141ebe88c7fed16cb589ad98bc830d076a436524
   color: #000;
   cursor: pointer;
   display: block;
@@ -9249,16 +9222,6 @@ a.ident:active .ident__triangle {
   -webkit-transition: all .2s ease;
   transition: all .2s ease;
 }
-<<<<<<< HEAD
-.menu-frontpage__list-item:hover {
-  color: #df2525;
-  border-bottom: 1px solid #df2525;
-}
-.menu-frontpage__list-item i {
-  float: right;
-}
-.menu-frontpage__see-all {
-=======
 .menu-deeplinks__list-item:hover {
   color: #df2525;
   border-bottom: 1px solid #df2525;
@@ -9267,24 +9230,15 @@ a.ident:active .ident__triangle {
   float: right;
 }
 .menu-deeplinks__see-all {
->>>>>>> 141ebe88c7fed16cb589ad98bc830d076a436524
   margin-top: auto;
   padding-top: 42px;
   text-align: left;
 }
-<<<<<<< HEAD
-.menu-frontpage__see-all a {
-  color: #000;
-  border: 0;
-}
-.menu-frontpage__see-all a:hover {
-=======
 .menu-deeplinks__see-all a {
   color: #000;
   border: 0;
 }
 .menu-deeplinks__see-all a:hover {
->>>>>>> 141ebe88c7fed16cb589ad98bc830d076a436524
   color: #d83a36;
   border-bottom: 1px solid #d83a36;
 }

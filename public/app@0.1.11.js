@@ -7,7 +7,6 @@ $(document).ready(function () {
     imdi.main_menu_toggle.init();
     imdi.main_search_toggle.init();
     imdi.toggle.init(getUrlParameter('toggle'));
-    imdi.accordion.init();
     imdi.trigger.init();
     imdi.selectall.init();
     imdi.responsive_table_setup.init();
@@ -16,10 +15,7 @@ $(document).ready(function () {
     imdi.smooth_scrolling.init();
     imdi.slick_carousel.init();
     imdi.wizard.init();
-    imdi.to_top_button.init();
-    imdi.removeDoubleCTA.init();
-
-});
+    imdi.table_collapsable.init();
 
 imdi.facet = (function ($) {
     return {
@@ -279,6 +275,7 @@ imdi.toggle = (function ($) {
 })(jQuery);
 
 
+<<<<<<< HEAD
 /*------------------------------------*\
     ACCORDION
 \*------------------------------------*/
@@ -335,6 +332,8 @@ imdi.accordion = (function () {
     };
 })();
     
+=======
+>>>>>>> 141ebe88c7fed16cb589ad98bc830d076a436524
 
 /*------------------------------------*\
     TRIGGER
