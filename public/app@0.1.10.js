@@ -16,6 +16,7 @@ $(document).ready(function () {
     imdi.smooth_scrolling.init();
     imdi.slick_carousel.init();
     imdi.wizard.init();
+    imdi.table_collapsable.init();
     imdi.to_top_button.init();
     imdi.removeDoubleCTA.init();
 
