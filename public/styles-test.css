@@ -2783,7 +2783,7 @@ you can use the generic selector below, but it's slower:
   background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/icon-apply.svg');
 }
 .icon__arrow-down {
-  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/icon-arrow-up.svg');
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/icon-arrow-down.svg');
 }
 .icon__arrow-left {
   background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/icon-arrow-left.svg');
@@ -11052,6 +11052,7 @@ a.skiptocontent:focus {
 }
 .download-buttons .download__button {
   margin-bottom: 10px;
+  cursor: pointer;
 }
 
 /*------------------------------------*\

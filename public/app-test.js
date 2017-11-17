@@ -43,13 +43,13 @@ imdi.tocbot = (function ($) {
                 tocbot.init({
                     // Where to render the table of contents.
                     tocSelector: '.toc-sidebar',
-                    
+
                     // Where to grab the headings to build the table of contents.
                     contentSelector: '#toc-enabled',
 
                     // Which headings to grab inside of the contentSelector element.
                     headingSelector: 'h2:not(.h4), h3',
-                    
+
                     // class given to the current link item
                     activeLinkClass: 'active-link',
 
