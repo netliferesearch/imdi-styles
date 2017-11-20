@@ -11893,14 +11893,20 @@ a.tabs-mini__link.tabs-mini__link--current {
 #toc-enabled .navigation:not(.navigation--footer) {
   display: none;
 }
+#toc-enabled #header-1 {
+  margin-top: 0px;
+}
+.stick-to-top {
+  position: fixed;
+  z-index: 3;
+  margin-left: calc(64%);
+  left: 0;
+}
 .toc-sidebar {
-  position: -webkit-sticky;
-  position: sticky;
   -webkit-transform: translateX(15px);
           transform: translateX(15px);
   overflow-y: auto;
   overflow-x: hidden;
-  top: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -11908,6 +11914,8 @@ a.tabs-mini__link.tabs-mini__link--current {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  left: 0;
+  top: 25px;
 }
 .toc-sidebar .toc-list {
   position: relative;
@@ -11989,27 +11997,19 @@ a.tabs-mini__link.tabs-mini__link--current {
   height: 20px;
   width: 20px;
   left: 0;
-  background-image: url(https://imdi-styles.firebaseapp.com/UI/gfx/bullet__small--primary.svg);
+  background-image: url(../../../UI/gfx/bullet__small--primary.svg);
   background-repeat: no-repeat;
 }
 @media screen and (max-width: 1100px) {
   .toc-sidebar .toc-link {
     max-width: 300px;
   }
-  .toc-sidebar .table-of-contents {
-    right: calc(25.5%);
-  }
-}
-@media screen and (max-width: 870px) {
-  .toc-sidebar .toc-link {
-    max-width: 200px;
-  }
-  .toc-sidebar .table-of-contents {
-    right: calc(30.5%);
-  }
 }
 @media screen and (max-width: 720px) {
   .toc-sidebar .table-of-contents {
+    display: none;
+  }
+  .stick-to-top {
     display: none;
   }
   .navigation {
