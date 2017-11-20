@@ -4851,7 +4851,7 @@ blockquote small {
   position: fixed;
   display: none;
   right: 0;
-  z-index: 1;
+  z-index: 3;
   max-width: 63px;
   bottom: 14px;
 }
@@ -9428,6 +9428,12 @@ a.ident:active .ident__triangle {
 }
 .message--ok .message__icon {
   background-image: url('https://imdi-styles.firebaseapp.com/UI/gfx/square--green.svg');
+}
+.message--info {
+  color: #282828;
+}
+.message--info .message__icon {
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/gfx/square--yellow.svg');
 }
 .message--inline {
   margin-bottom: 7px;
