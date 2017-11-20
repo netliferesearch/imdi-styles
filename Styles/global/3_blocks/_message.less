@@ -1,17 +1,17 @@
 @import "../../_vars";
- 
+
 .message {
-	display: block;	
+	display: block;
 	position: relative;
 	padding-top: 3px;
 	padding-left: 35px + @spacing--small;
 	margin: @spacing--small 0;
 	margin-bottom: @spacing;
 	color: @color__orange--dark;
-	.fontSize(@font-size--medium);	
+	.fontSize(@font-size--medium);
 	.query-min(@screen--md; {
 		padding-left: 0;
-	});	
+	});
 	&__icon {
 		.fontSize(@font-size--small);
 		position: absolute;
@@ -24,27 +24,33 @@
 		left: 0;
 		background-image: data-uri('https://imdi-styles.firebaseapp.com/UI/gfx/square--red.svg');
 		background-position: center center;
-		background-repeat: no-repeat;			
+		background-repeat: no-repeat;
 		background-size: contain;
-		color: @color__white;	
+		color: @color__white;
 		.query-min(@screen--md; {
 			left: -(2rem);
 			margin-left: -@spacing--small;
-		});				
-	} 
+		});
+	}
 	&--ok {
 		color: @color__black;
 		.message__icon {
 			background-image: data-uri('https://imdi-styles.firebaseapp.com/UI/gfx/square--green.svg');
 		}
 	}
+  &--info {
+    color: @color__black;
+    .message__icon {
+      background-image: data-uri('https://imdi-styles.firebaseapp.com/UI/gfx/square--yellow.svg');
+    }
+  }
 	&--inline {
 		margin-bottom: @spacing--small;
-		padding: @spacing--small 0;		
+		padding: @spacing--small 0;
 		.fontSize(@font-size--regular);
 		.message__icon {
 			top: 0px;
 		}
 	}
-	
+
 }
