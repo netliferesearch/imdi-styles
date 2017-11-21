@@ -12029,6 +12029,8 @@ a.tabs-mini__link.tabs-mini__link--current {
 .toc-sidebar .toc-list {
   overflow-y: auto;
   position: relative;
+  height: 100%;
+  max-height: calc(100vh - 30px);
 }
 .toc-sidebar .toc-list-item {
   padding-left: 20px;
@@ -12044,6 +12046,7 @@ a.tabs-mini__link.tabs-mini__link--current {
 }
 .toc-sidebar a {
   border-bottom: none;
+  text-overflow: ellipsis;
 }
 .toc-sidebar li:not(.active-link) {
   list-style: none;

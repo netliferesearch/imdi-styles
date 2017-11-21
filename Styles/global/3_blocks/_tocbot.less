@@ -23,6 +23,8 @@
   .toc-list {
     overflow-y: auto;
     position: relative;
+    height: 100%;
+    max-height: ~"calc(100vh - 30px)";
   }
 
   .toc-list-item {
@@ -41,6 +43,7 @@
   
   a {
     border-bottom: none;
+    text-overflow: ellipsis;
   }
   
   li:not(.active-link) {
