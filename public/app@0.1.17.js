@@ -51,8 +51,6 @@ imdi.stickToTop = () => {
             const stickyElement = document.querySelector(stickySelector)
             const triggerElement = document.querySelector(triggerSelector)
             
-            if (!triggerElement) return // don't call getBoundingClientRect() if it doesn't exist
-
             //  get the height of the triggering element
             const { y, right } = triggerElement.getBoundingClientRect()
 
