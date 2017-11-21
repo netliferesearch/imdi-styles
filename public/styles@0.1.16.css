@@ -2127,22 +2127,6 @@ ol.row li {
     width: 31.81818182%;
   }
 }
-.col--toc {
-  margin-left: 4.54545455%;
-  position: relative;
-  min-height: 1px;
-  word-wrap: break-word;
-  /* Se mixins in _vars.less */
-  float: right !important;
-}
-@media (min-width: 22em) {
-  .col--toc {
-    padding-left: 10.5px;
-    padding-right: 10.5px;
-    float: left;
-    width: 31.81818182%;
-  }
-}
 .col--shortcuts {
   position: relative;
   min-height: 1px;
@@ -9621,6 +9605,7 @@ a.ident:active .ident__triangle {
   .meta__button {
     display: inline-block;
     margin-top: 0;
+    margin-left: 7px;
   }
 }
 .ingress + .meta {
@@ -12006,16 +11991,18 @@ a.tabs-mini__link.tabs-mini__link--current {
 #toc-enabled .navigation:not(.navigation--footer) {
   display: none;
 }
-#toc-enabled #title_1 {
+#toc-enabled #header-1 {
   margin-top: 0px;
 }
 .stick-to-top {
   position: fixed;
   z-index: 3;
+  margin-left: calc(64%);
+  left: 0;
 }
 .toc-sidebar {
-  -webkit-transform: translateX(35px);
-          transform: translateX(35px);
+  -webkit-transform: translateX(15px);
+          transform: translateX(15px);
   overflow-y: auto;
   overflow-x: hidden;
   display: -webkit-box;
@@ -12025,6 +12012,7 @@ a.tabs-mini__link.tabs-mini__link--current {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  left: 0;
   top: 25px;
 }
 .toc-sidebar .toc-list {
@@ -12110,7 +12098,12 @@ a.tabs-mini__link.tabs-mini__link--current {
   background-image: url(../../../UI/gfx/bullet__small--primary.svg);
   background-repeat: no-repeat;
 }
-@media screen and (max-width: 912px) {
+@media screen and (max-width: 1100px) {
+  .toc-sidebar .toc-link {
+    max-width: 300px;
+  }
+}
+@media screen and (max-width: 720px) {
   .toc-sidebar .table-of-contents {
     display: none;
   }
@@ -12484,8 +12477,9 @@ a.tabs-mini__link.tabs-mini__link--current {
 .toggle__link:hover,
 .toggle__link:focus,
 .toggle__link:active {
-  background: #f2efed;
-  border: 2px solid #f2efed;
+  background: #ddd5cf;
+  border: 2px solid #ddd5cf;
+  color: #282828;
 }
 .toggle__link--expanded .toggle__icon {
   -webkit-transform: rotate(180deg);
@@ -12493,8 +12487,8 @@ a.tabs-mini__link.tabs-mini__link--current {
 }
 .toggle__section {
   padding: 21px 21px;
+  border: 3px solid #f15540;
   margin-bottom: 42px !important;
-  background-color: #f2efed;
 }
 .toggle__section--contracted {
   -webkit-animation: animations__fade-out-up 300ms linear;
