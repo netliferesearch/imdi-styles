@@ -23,7 +23,6 @@
   
   .toc-list {
     position: relative;
-    left: 20px;
   }
 
   .is-collapsible {
@@ -50,6 +49,7 @@
     height: 25px;
     top: 14px;
     left: 25px;
+    padding-right: 25px;
   }
   
   // remove stupid default list styling
@@ -76,11 +76,14 @@
     text-overflow: ellipsis;
     width: 100%;
     max-width: 400px;
+    color: #d83a36;
+    opacity: 0.9;
   }
 
   .active-link {
     font-weight: bold;
     transform: translateX(-20px);
+    opacity: 1;
   }
 
   .toc-link.active-link::before {
