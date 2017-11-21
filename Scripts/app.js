@@ -30,6 +30,7 @@ imdi.stickToTop = (function ($) {
     return {
         init: function () {
 
+            // converted to ES5 because IE 11
             'use strict';
             
             // param 1: element being sticky
@@ -41,7 +42,6 @@ imdi.stickToTop = (function ($) {
             
                 // listens to scroll events and triggers adding / removing of classes
                 window.addEventListener('scroll', function () {
-                    console.log('scroll event')
                     throttle(makeElementStickyIfConditionIsMet(), throttleTimeout);
                 });
             
@@ -61,11 +61,7 @@ imdi.stickToTop = (function ($) {
                     //  get the height of the triggering element
                     var _triggerElement$getBo = triggerElement.getBoundingClientRect(),
                         top = _triggerElement$getBo.top,
-                        right = _triggerElement$getBo.right;
-
-                    console.log(_triggerElement$getBo)
-                    console.log(_triggerElement$getBo.top)
-                    console.log(_triggerElement$getBo.right)                    
+                        right = _triggerElement$getBo.right;               
             
                     //  add sticky class when scroll position is met            
                     if (top < 0) {
@@ -104,6 +100,8 @@ imdi.stickToTop = (function ($) {
 imdi.tocbot = (function ($) {
     return {
         init: function () {
+
+            // converted to ES5 because IE 11            
             'use strict';
             
             function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
@@ -130,7 +128,10 @@ imdi.tocbot = (function ($) {
                     contentSelector: '#toc-enabled',
             
                     // Which headings to grab inside of the contentSelector element.
-                    headingSelector: 'h2:not(.h4), h3',
+                    // and which to not use
+                    headingSelector: 'h2, h3',
+
+                    ignoreSelector: '.no-toc',
             
                     // class given to the current link item
                     activeLinkClass: 'active-link',
