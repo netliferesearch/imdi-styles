@@ -90,6 +90,12 @@ ul.row, ol.row {
 	});
 }
 
+.col--toc {
+	.col-offset(1/22);
+	.col(7/22); /* Se mixins in _vars.less */
+	float: right !important; // Sorry ... media queries inside less mixins is apearantly not reccommended
+}
+
 .col--shortcuts {
 	.col(1); /* Se mixins in _vars.less */
 	.query-min(@screen--md; {
@@ -176,18 +182,14 @@ ul.row, ol.row {
 	.query-min(@screen--lg; {
 		.col(1/5); /* Se mixins in _vars.less */
 	});
-
 }
-
 
 .col--six {
 	.col(1); /* Se mixins in _vars.less */
 	.query-min(@screen--lg; {
 		.col(1/6); /* Se mixins in _vars.less */
 	});
-
 }
-
 
 .col--main {
 	.col-block-bleed {

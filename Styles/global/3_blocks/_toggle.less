@@ -61,9 +61,9 @@
 		color: @color__text;
 		.transition(min-width 250ms @swift-out);
 		&:hover, &:focus, &:active {
-			background: darken(@color__canvas-grey, 10%);
-			border: 2px solid darken(@color__canvas-grey, 10%);
-			color: @color__text;
+			background: @color__canvas-grey;
+			border: 2px solid @color__canvas-grey;
+			// color: @color__text;
 		}
 
 		&--expanded {
@@ -74,8 +74,9 @@
 	}
 	&__section {
 		padding: @spacing @spacing;
-		border: 3px solid @color__orange;
 		margin-bottom: @spacing--large !important;
+		background-color: #f2efed;
+
 		&--contracted {
 			.animation(animations__fade-out-up 300ms linear);
 		}

@@ -31,12 +31,17 @@ imdi.stickToTop = () => {
     // param 1: element being sticky
     // param 2: class that is added to the sticky element on scroll position
     const stickToTop = (triggerSelector, stickySelector, stickyClass) => {
-            
-        // currently triggers 5 scroll events pr second
-        const throttleTimeout = 200
+
+        const throttleTimeout = 200 // currently triggers 5 scroll events pr second
+        const leftPadding = 90 // how much space between main column and toc
         
         // listens to scroll events and triggers adding / removing of classes
         window.addEventListener('scroll', () => {
+            throttle(makeElementStickyIfConditionIsMet(), throttleTimeout)
+        })
+
+        // listens to scroll events and triggers adding / removing of classes
+        window.addEventListener('resize', () => {
             throttle(makeElementStickyIfConditionIsMet(), throttleTimeout)
         })
 
@@ -47,19 +52,18 @@ imdi.stickToTop = () => {
             const triggerElement = document.querySelector(triggerSelector)
             
             //  get the height of the triggering element
-            const { y } = triggerElement.getBoundingClientRect()
-
-            //  get the scroll position
-            const { scrollY } = window
+            const { y, right } = triggerElement.getBoundingClientRect()
 
             //  add sticky class when scroll position is met
-            if (y <= 0) {
+            if (y < 0) {
                 stickyElement.classList.add(stickyClass)
+                // stickyElement.style.marginLeft = `${right + leftPadding}px`
             }
             
             //  remove sticky class when scroll position is met
             else {
                 stickyElement.classList.remove(stickyClass)
+                // stickyElement.style.left = `${leftPadding}px`
             }
         }
         
@@ -95,7 +99,7 @@ imdi.tocbot = (function ($) {
                 //  append an id to all h2 and h3
                 const allHeaderTags = document.querySelectorAll('h2, h3')
                 allHeaderTags.forEach((header, index) => {
-                    header.id = `header-${index}`
+                    header.id = `title_${index}`
                 })
                 
                 tocbot.init({
