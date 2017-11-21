@@ -9342,6 +9342,98 @@ a.ident:active .ident__triangle {
     @fix-mqs
 
 */
+.menu-frontpage {
+  margin-top: 42px;
+  margin-bottom: 100px;
+  margin-left: -10.5px;
+  margin-right: -10.5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.menu-frontpage__item {
+  width: 100%;
+  margin-bottom: 21px;
+}
+@media (min-width: 45em) {
+  .menu-frontpage__item {
+    width: 50%;
+  }
+}
+@media (min-width: 57em) {
+  .menu-frontpage__item {
+    width: 33.333%;
+  }
+}
+.menu-frontpage__content {
+  padding: 30px;
+  background: #f1f1f1;
+  cursor: pointer;
+  margin: 10.5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  height: 100%;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+.menu-frontpage__content:hover {
+  background: #50a450;
+  color: #fff;
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+}
+.menu-frontpage__content:hover .menu-frontpage__desc {
+  color: #fff;
+}
+.menu-frontpage__content:hover .icon--green {
+  opacity: 0;
+}
+.menu-frontpage__content:hover .icon--white {
+  opacity: 1;
+}
+.menu-frontpage__icon {
+  display: inline-block;
+  position: relative;
+  width: 42px;
+  font-size: 42px;
+}
+.menu-frontpage__icon i {
+  width: 42px;
+  height: 42px;
+}
+.menu-frontpage__icon .icon--green {
+  position: absolute;
+  opacity: 1;
+}
+.menu-frontpage__icon .icon--white {
+  position: absolute;
+  opacity: 0;
+}
+.menu-frontpage__text {
+  margin-left: 42px;
+}
+.menu-frontpage__title {
+  display: inline-block;
+  font-size: 1.3rem;
+  font-weight: 800;
+  text-align: left;
+  margin-top: 14px;
+  margin-bottom: 21px;
+}
+.menu-frontpage__desc {
+  color: #585858;
+}
 
 /*------------------------------------*\
     COLOR PALETTE
