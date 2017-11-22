@@ -7,6 +7,9 @@ table, .table {
 	margin-bottom: @spacing;
 	font-size: @font-size--small;
 	width:auto;
+	position: relative;
+	z-index: 1;
+
 	&--fluid {
 		min-width:100%;
 	}
@@ -53,10 +56,9 @@ table, .table {
     .fontSize(@font-size--small);
     padding: @spacing--medium @spacing--medium;
     vertical-align: top;
-    border-bottom: 1px solid @color__canvas-grey--dark
+		border-bottom: 1px solid @color__canvas-grey--dark;
+		background-color: white;
 	}
-
-
 
 	&__td--number, td[align="right"] {
 		.fontSize(16);

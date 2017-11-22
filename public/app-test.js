@@ -113,13 +113,13 @@ imdi.tocbot = (function ($) {
                 var _tocbot$init;
             
                 tocbot.destroy();
-            
+
                 //  append an id to all h2 and h3. it will be used as anchor links
                 var allHeaderTags = document.querySelectorAll('h2, h3');
                 for (var i = 0; i < allHeaderTags.length; i++) {
                     allHeaderTags[i].id = 'title_' + i;
                 }
-
+               
                 tocbot.init((_tocbot$init = {
                     // Where to render the table of contents.
                     tocSelector: '.toc-sidebar',
@@ -154,7 +154,29 @@ imdi.tocbot = (function ($) {
             
                 }, _defineProperty(_tocbot$init, 'smoothScroll', true), _defineProperty(_tocbot$init, 'smoothScrollDuration', 200), _tocbot$init));
             
+
                 tocbot.refresh();
+
+                // if a innholdsfortegnelse already exists on the page, make it's
+                // header look like a <p> in the toc sidebar
+                var tocList = document.querySelectorAll('.node-name--H2')
+
+                for (var i = 0; i < tocList.length; i++) {
+                    if (tocList[i].textContent.toLowerCase() === 'innholdsfortegnelse') {
+
+                        // make existing <a> invisible (display none)
+                        tocList[0].classList.add('descriptive-header')
+                        
+                        // create new header for toc
+                        var tocHeader = document.createElement('p')
+                        var tocHeaderText = document.createTextNode('Innholdsfortegnelse')
+                        tocHeader.appendChild(tocHeaderText)
+    
+                        console.log(allHeaderTags[0])
+                        // insert new header as a <p> sibling to invisble <a>. not pretty.
+                        tocList[0].insertAdjacentHTML('beforebegin', '<p>Innholdsfortegnelse</p>')
+                    }
+                }
             }
             
         }
