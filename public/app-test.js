@@ -164,15 +164,9 @@ imdi.tocbot = (function ($) {
                 for (var i = 0; i < tocList.length; i++) {
                     if (tocList[i].textContent.toLowerCase() === 'innholdsfortegnelse') {
 
-                        // make existing <a> invisible (display none)
+                        // add class to make existing <a> invisible (display none)
                         tocList[0].classList.add('descriptive-header')
-                        
-                        // create new header for toc
-                        var tocHeader = document.createElement('p')
-                        var tocHeaderText = document.createTextNode('Innholdsfortegnelse')
-                        tocHeader.appendChild(tocHeaderText)
-    
-                        console.log(allHeaderTags[0])
+
                         // insert new header as a <p> sibling to invisble <a>. not pretty.
                         tocList[0].insertAdjacentHTML('beforebegin', '<p>Innholdsfortegnelse</p>')
                     }
