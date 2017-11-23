@@ -4,7 +4,7 @@
 table, .table {
 
 	text-align: left;
-	margin-bottom: @spacing;
+	margin-bottom: calc(@spacing * 2);
 	font-size: @font-size--small;
 	width:auto;
 	position: relative;
@@ -12,6 +12,13 @@ table, .table {
 
 	&--fluid {
 		min-width:100%;
+	}
+
+	&--full-width {
+		width: 150%;
+		.query-min(@screen--sm; {
+			width: 100%;
+		});
 	}
 	&__wrapper {
 		width: 100%;
