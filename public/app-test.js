@@ -409,26 +409,26 @@ imdi.toggle = (function ($) {
 
           	});
 
-          	$('[data-behaviour~="toggle"]').each(function() {
-          	    // Hide sections on load
-          	    var section = $(this).attr('data-controls');
+          	// $('[data-behaviour~="toggle"]').each(function() {
+          	//     // Hide sections on load
+          	//     var section = $(this).attr('data-controls');
 
-          	    $(this).attr('aria-expanded','false')
-          	        .attr('aria-controls',section)
-          	        .attr('role','button');
-          	    $('#' + section).attr('aria-hidden','true')
-          	        .hide();
+          	//     $(this).attr('aria-expanded','false')
+          	//         .attr('aria-controls',section)
+          	//         .attr('role','button');
+          	//     $('#' + section).attr('aria-hidden','true')
+          	//         .hide();
 
-          	    // If the url has an open section parameter
-          	    if (openSectionOnLoad && openSectionOnLoad === section){
-          		    $(this).trigger("click");
-          	    }
+          	//     // If the url has an open section parameter
+          	//     if (openSectionOnLoad && openSectionOnLoad === section){
+          	// 	    $(this).trigger("click");
+          	//     }
 
-          	    // If the section is marked to expand
-          	    if ( $(this).attr('data-state') === 'expanded'){
-          		    $(this).trigger("click");
-          	    }
-          	});
+          	//     // If the section is marked to expand
+          	//     if ( $(this).attr('data-state') === 'expanded'){
+          	// 	    $(this).trigger("click");
+          	//     }
+          	// });
         }
     }
 })(jQuery);
