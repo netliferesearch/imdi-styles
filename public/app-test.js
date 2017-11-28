@@ -26,6 +26,7 @@ $(document).ready(function () {
     imdi.tocbot.init()
 })
 
+// make an element stick to top of it's parent element
 imdi.stickToTop = (function ($) {
     return {
         init: function () {
@@ -97,10 +98,11 @@ imdi.stickToTop = (function ($) {
 }
 })(jQuery);
 
-imdi.tocbot = (function ($) {
+//  make sidebar with table of contents where the pages h2's and h3's
+//  generate the table of contents
+imdi.tocbot = (function () {
     return {
         init: function () {
-
             // converted to ES5 because IE 11            
             'use strict';
             
@@ -114,7 +116,7 @@ imdi.tocbot = (function ($) {
             
                 tocbot.destroy();
 
-                //  append an id to all h2 and h3. it will be used as anchor links
+                //  append an id to all h2 and h3. this will be used as anchor links for the table of contents
                 var allHeaderTags = document.querySelectorAll('h2, h3');
                 for (var i = 0; i < allHeaderTags.length; i++) {
                     allHeaderTags[i].id = 'title_' + i;
@@ -141,9 +143,6 @@ imdi.tocbot = (function ($) {
             
                     // Smooth scroll duration.
                     smoothScrollDuration: 0,
-            
-                    // tweak position that triggers new toc list link to be active
-                    headingsOffset: -300,
             
                     // class to add to inactive link items
                     isCollapsedClass: 'is-collapsed',

@@ -8194,6 +8194,7 @@ a.ident:active .ident__triangle {
 }
 .image-block__images {
   position: relative;
+  z-index: 1;
 }
 .image-block__image {
   display: block;
@@ -8203,7 +8204,6 @@ a.ident:active .ident__triangle {
 .image-block__image--figure {
   border: 3px solid #f2efed;
   padding: 21px;
-  padding-bottom: 42px;
   position: relative;
 }
 .image-block__image--figure h3.h4 {
@@ -12055,6 +12055,7 @@ a.tabs-mini__link.tabs-mini__link--current {
 }
 .toc-sidebar .toc-list-item {
   padding-left: 20px;
+  font-size: 0.9rem;
 }
 .toc-sidebar .is-collapsible {
   max-height: 1000px;
@@ -12431,7 +12432,7 @@ a.tabs-mini__link.tabs-mini__link--current {
 
 */
 .toggle {
-  margin-bottom: 21px;
+  margin-bottom: 40px;
 }
 .toggle__icon {
   display: inline-block;
