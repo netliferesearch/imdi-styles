@@ -127,11 +127,11 @@ imdi.tocbot = (function () {
                     tocSelector: '.toc-sidebar',
             
                     // Where to grab the headings to build the table of contents.
-                    contentSelector: '#toc-enabled',
+                    contentSelector: '#toc-enabled:not(.no-toc)',
             
                     // Which headings to grab inside of the contentSelector element.
                     // and which to not use
-                    headingSelector: 'h2, h3',
+                    headingSelector: 'h2:not(.no-toc), h3(.no-toc)',
 
                     ignoreSelector: '.no-toc',
             
@@ -384,7 +384,8 @@ imdi.toggle = (function ($) {
           	    // Toggle attributes
           	    $(this).attr('aria-expanded', state);
           	    $(section).attr('aria-hidden', !state);
-          	    $(this).toggleClass(toggle_class_expanded);
+                  $(this).toggleClass(toggle_class_expanded);
+
           	    if(state){
           	        // On opening
           	        $(section).show(0,function(){
@@ -396,7 +397,8 @@ imdi.toggle = (function ($) {
           	        });
           	        if(section_caption_contracted){
           			    $(this).html(section_caption_contracted);
-          		    }
+                      }
+
           	    } else {
           	        // On closing
           	        $(section).removeClass(section_class_expanded)
@@ -406,29 +408,28 @@ imdi.toggle = (function ($) {
           			    $(this).html(section_caption_expanded);
           		    }
           	    }
-
           	});
 
-          	// $('[data-behaviour~="toggle"]').each(function() {
-          	//     // Hide sections on load
-          	//     var section = $(this).attr('data-controls');
+          	$('[data-behaviour~="toggle"]').each(function() {
+          	    // Hide sections on load
+          	    var section = $(this).attr('data-controls');
 
-          	//     $(this).attr('aria-expanded','false')
-          	//         .attr('aria-controls',section)
-          	//         .attr('role','button');
-          	//     $('#' + section).attr('aria-hidden','true')
-          	//         .hide();
+          	    $(this).attr('aria-expanded','false')
+          	        .attr('aria-controls',section)
+          	        .attr('role','button');
+          	    $('#' + section).attr('aria-hidden','true')
+          	        .hide();
 
-          	//     // If the url has an open section parameter
-          	//     if (openSectionOnLoad && openSectionOnLoad === section){
-          	// 	    $(this).trigger("click");
-          	//     }
+          	    // If the url has an open section parameter
+          	    if (openSectionOnLoad && openSectionOnLoad === section){
+          		    $(this).trigger("click");
+          	    }
 
-          	//     // If the section is marked to expand
-          	//     if ( $(this).attr('data-state') === 'expanded'){
-          	// 	    $(this).trigger("click");
-          	//     }
-          	// });
+          	    // If the section is marked to expand
+          	    if ( $(this).attr('data-state') === 'expanded'){
+          		    $(this).trigger("click");
+          	    }
+          	});
         }
     }
 })(jQuery);
