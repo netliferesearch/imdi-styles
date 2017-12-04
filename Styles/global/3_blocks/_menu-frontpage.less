@@ -85,8 +85,36 @@
      margin-bottom: @spacing;
    }
 
-   &__desc {
-     color: @color__grey;
+   &__tags {
+     display: block;
+   }
+
+   &__tag {
+     display: inline-block;
+     margin-right: @spacing;
+     padding-bottom: @spacing--small;
+     position: relative;
+   }
+
+   &__tag:after {
+     content: '';
+     width: @spacing--xsmall;
+     height: @spacing--xsmall;
+     right: -@spacing--medium;
+     top: 25%;
+     transition: all 0.5s ease;
+     position: absolute;
+     transform: rotate(45deg) scale(1);
+     background: #50a450;
+   }
+
+   &__tag:last-child:after {
+     display: none;
+   }
+
+   &__content:hover .menu-frontpage__tag:after {
+     background: #fff;
+     transform: rotate(45deg) scale(1.2);
    }
 
  }
