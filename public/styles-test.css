@@ -9456,8 +9456,35 @@ a.ident:active .ident__triangle {
   margin-top: 14px;
   margin-bottom: 21px;
 }
-.menu-frontpage__desc {
-  color: #585858;
+.menu-frontpage__tags {
+  display: block;
+}
+.menu-frontpage__tag {
+  display: inline-block;
+  margin-right: 21px;
+  padding-bottom: 7px;
+  position: relative;
+}
+.menu-frontpage__tag:after {
+  content: '';
+  width: 5px;
+  height: 5px;
+  right: -14px;
+  top: 25%;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  position: absolute;
+  -webkit-transform: rotate(45deg) scale(1);
+          transform: rotate(45deg) scale(1);
+  background: #50a450;
+}
+.menu-frontpage__tag:last-child:after {
+  display: none;
+}
+.menu-frontpage__content:hover .menu-frontpage__tag:after {
+  background: #fff;
+  -webkit-transform: rotate(45deg) scale(1.2);
+          transform: rotate(45deg) scale(1.2);
 }
 
 /*------------------------------------*\
