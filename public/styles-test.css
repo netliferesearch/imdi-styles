@@ -4400,7 +4400,6 @@ blockquote small {
   .box {
     padding: 42px;
     padding-bottom: 21px;
-    margin-top: 42px;
     margin-bottom: 42px;
   }
 }
@@ -4408,7 +4407,6 @@ blockquote small {
   .box {
     padding: 42px;
     padding-bottom: 21px;
-    margin-top: 42px;
     margin-bottom: 42px;
     border-width: 1px;
     page-break-inside: avoid;
