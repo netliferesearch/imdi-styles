@@ -11261,7 +11261,7 @@ table--full-width,
 .table--full-width {
   width: 150%;
 }
-@media (min-width: 22em) {
+@media (max-width: 57em) {
   table--full-width,
   .table--full-width {
     width: 100%;
