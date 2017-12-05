@@ -38,8 +38,8 @@ imdi.stickToTop = (function ($) {
             // param 2: class that is added to the sticky element on scroll position
             var stickToTop = function stickToTop(triggerSelector, stickySelector, stickyClass) {
             
-                var throttleTimeout = 200; // currently triggers 5 scroll events pr second
-                var leftPadding = 90; // how much space between main column and toc
+                var throttleTimeout = 200; // 5 scroll events pr second
+                var leftPadding = 90; // space between main column and toc
             
                 // listens to scroll events and triggers adding / removing of classes
                 window.addEventListener('scroll', function () {
@@ -63,7 +63,7 @@ imdi.stickToTop = (function ($) {
                     var _triggerElement$getBo = triggerElement.getBoundingClientRect(),
                         top = _triggerElement$getBo.top,
                         right = _triggerElement$getBo.right;               
-            
+
                     //  add sticky class when scroll position is met            
                     if (top < 0) {
                         stickyElement.classList.add(stickyClass);
@@ -109,7 +109,7 @@ imdi.tocbot = (function () {
             function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
             
             // only create sidebar with toc if #toc-enabled exists
-            var tocEnabled = document.querySelector('#toc-enabled');
+            var tocEnabled = document.querySelector('.toc-mobile');
             
             if (tocEnabled) {
                 var _tocbot$init;
@@ -125,11 +125,11 @@ imdi.tocbot = (function () {
                     tocSelector: '.toc-sidebar',
             
                     // Where to grab the headings to build the table of contents.
-                    contentSelector: '#toc-enabled',
+                    contentSelector: '.toc-mobile',
             
                     // Which headings to grab inside of the contentSelector element.
                     // and which to not use
-                    headingSelector: 'h2:not(.no-toc), h3:not(.no-toc)',
+                    headingSelector: 'h2:not(.notoc), h3:not(.notoc)',
             
                     // class given to the current link item
                     activeLinkClass: 'active-link',
@@ -163,6 +163,8 @@ imdi.tocbot = (function () {
 
                         // insert new header as a <p> sibling to invisble <a>. not pretty.
                         tocList[0].insertAdjacentHTML('beforebegin', '<p>Innholdsfortegnelse</p>')
+
+                        tocList[0].previousSibling.classList.add('toc-list__header')
                     }
                 }
             }
@@ -253,45 +255,15 @@ imdi.main_menu_toggle = (function ($) {
           		// Prevent the fallback #anchor tag to move focus
           		event.preventDefault();
 
-              // Get targets
-              var _footer = $('#footer');
-              var _footer__bg = $('#footer__bg');
-              var _footer__bg = $('#footer__bg');
-              var _page_content = $('#page-content');
-              var _header = $('#header')
+                var topMenuVisible = document.querySelector('.top-menu')
 
-          		// Toggle menu button
-          		if($(this).attr('aria-expanded') === "false"){
-          			$(this).attr('aria-expanded', "true");
-          			// Set min height to 100% of window on desktop
-      	        var a = $(window).height();
-      	        var b = _footer.height();
-      	        if (a > b) {
-      	            _footer.css('height', a);
-      	            _footer__bg.css('height', a);
-      	        }
-
-                // Google Tag Manager call
-                var currentUrl = window.location.pathname;
-                imdi.gtm_tracking.customEvent('Menu', 'Main-menu open', undefined, currentUrl);
-
-          		} else {
-          			$(this).attr('aria-expanded', "false");
-          			// Reset height
-                _footer.css('height', 'auto');
-                _footer__bg.css('height', 'auto');
-          		}
-
-          		// Toggle menu overlay
-          		_page_content.toggle();
-          		_footer.toggleClass($('#footer').attr('data-toggle-menu'));
-          		_header.toggleClass($('#header').attr('data-toggle-menu'));
-
+                // toggle class
+                topMenuVisible.classList.toggle('top-menu--visible')
+                topMenuVisible.classList.toggle('top-menu--hidden')
           	});
         }
     }
 })(jQuery);
-
 
 
 /*------------------------------------*\
@@ -1034,8 +1006,6 @@ imdi.tableOfContents = (function ($) {
                     var elements = $(this)
                     var element = elements[0]
                     var id = element.id
-                    
-                    console.log(elements, element, id)
 
                     $(this).attr('tabindex', "-1");
                     $(this).addClass('toc__heading');

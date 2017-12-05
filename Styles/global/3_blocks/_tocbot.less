@@ -1,5 +1,5 @@
-#toc-enabled {
-  .navigation:not(.navigation--footer) {
+.toc-mobile {
+  .navigation:not(.navigation--footer):not(.navigation--top-menu) {
     display: none;
   }
 
@@ -8,23 +8,29 @@
   }
 }
 
-.stick-to-top {
-  position: fixed;
-  z-index: 0;
-}
-
 .toc-sidebar {
   transform: translateX(35px);
   overflow-x: hidden;
   display: flex;
   flex-direction: column;
-  top: 25px;
+  position: relative;
+  top: 80px;
+
+  &.stick-to-top {
+    position: fixed;
+    z-index: 0;
+  }
   
   .toc-list {
     overflow-y: auto;
     position: relative;
     height: 100%;
     max-height: ~"calc(100vh - 30px)";
+
+    &__header {
+      text-transform: uppercase;
+      font-size: 16px;
+    }
   }
 
   .toc-list-item {
@@ -123,5 +129,11 @@
 
   .navigation {
     display: block !important;
+  }
+
+  .toc-mobile {
+    .navigation:not(.navigation--footer):not(.navigation--top-menu) {
+      display: block;
+    }
   }
 }
