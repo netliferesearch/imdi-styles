@@ -109,7 +109,7 @@ imdi.tocbot = (function () {
             function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
             
             // only create sidebar with toc if #toc-enabled exists
-            var tocEnabled = document.querySelector('.toc-mobile');
+            var tocEnabled = document.querySelector('#toc-enabled');
             
             if (tocEnabled) {
                 var _tocbot$init;
@@ -136,6 +136,8 @@ imdi.tocbot = (function () {
             
                     // Smooth scrolling enabled.
                     smoothScroll: true,
+
+                    headingsOffset: -447,
             
                     // Smooth scroll duration.
                     smoothScrollDuration: 0,
@@ -256,10 +258,39 @@ imdi.main_menu_toggle = (function ($) {
           		event.preventDefault();
 
                 var topMenuVisible = document.querySelector('.top-menu')
-
-                // toggle class
+                var pageContent = document.querySelector('.page__master')
+                var header = document.querySelector('#header')
+                var skipToContent = document.querySelector('.skiptocontent')
+                var footer = document.querySelector('#footer')
+                // TOGGLE TOP MENU
                 topMenuVisible.classList.toggle('top-menu--visible')
                 topMenuVisible.classList.toggle('top-menu--hidden')
+
+                // TOGGLE HEADER
+                header.classList.toggle('header--overlay')
+
+
+                // TOGGLE BODY
+                if (pageContent.style.display === 'none') {
+                    pageContent.style.display = 'block'
+                } else {
+                    pageContent.style.display = 'none'
+                }
+
+                // TOGGLE ACCESSABILITY BUTTON
+                if (skipToContent.style.display === 'none') {
+                    skipToContent.style.display = 'block'
+                } else {
+                    skipToContent.style.display = 'none'
+                }
+
+                // TOGGLE FOOTER
+                if (footer.style.display === 'none') {
+                    footer.style.display = 'block'
+                } else {
+                    footer.style.display = 'none'
+                }
+
           	});
         }
     }
@@ -998,11 +1029,11 @@ imdi.tableOfContents = (function ($) {
     return {
         init: function () {
 
-            if ($('#toc-enabled').length)
+            if ($('.toc-mobile').length)
             {
                 var toc_index = 1;
 
-                $("#toc-enabled h2:not([class]):not(.no-toc)").each(function (index, value) {
+                $(".toc-mobile h2:not([class]):not(.no-toc)").each(function (index, value) {
                     var elements = $(this)
                     var element = elements[0]
                     var id = element.id

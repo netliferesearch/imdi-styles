@@ -13,6 +13,7 @@
 		padding-right: 5%;
 	}
 	&__row {
+		z-index: 4;
 		.clearfix();
 		position: relative;
 	}
@@ -178,8 +179,10 @@
 	&--overlay {
 		width: 100%;
 		position: absolute;
-		z-index: 2;
-    background: none;
+		z-index: 3;
+		background: none;
+		top: 0;
+
 		.header__button {
 			color: @color__white;
 			&:hover, &:focus {

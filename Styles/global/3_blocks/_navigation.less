@@ -89,5 +89,35 @@
 				border-color: @color__white;
 			}		
 		}
+	}
+
+	&--top-menu {
+		.navigation__link {
+			margin-bottom: 0;
+			display: inline-block;
+			padding-bottom: 0;				
+			margin-bottom: 0;
+			border-bottom: 1px solid @color__orange--dark;				
+			&:hover, &:focus, &:active {
+				border-color: @color__white;
+			}				
+		}	
+		.navigation__link--primary {
+			display: inline-block;	
+			padding-bottom: @spacing--xsmall;				
+			.fontSize(24);
+			.query-min(@screen--sm; {
+				.fontSize(26);				
+			});	
+			.query-min(@screen--sm; {
+				.fontSize(@font-size--large);			
+			});	
+			margin: 0;		
+			margin-bottom: @spacing--small;
+			border-bottom: 1px solid transparent;	
+			&:hover, &:focus, &:active {
+				border-color: @color__white;
+			}		
+		}
 	}	
 }

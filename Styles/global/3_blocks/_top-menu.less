@@ -1,8 +1,11 @@
 @import "../../_vars";
 
 .top-menu {
-	background: @color__orange;
+	position: relative;
 	color: @color__white;
+	z-index: 4;
+	background: @color__orange;
+	min-height: 100vh;
 
 	.query-min(@screen--lg; {
   	background: @color__orange--dark;
@@ -21,15 +24,7 @@
 	}
 
 	&--visible {
-		position: fixed;
-    height: 100%;
-    width: 100%;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 10;
-    background-color: rebeccapurple;
+    z-index: 2;
 	}
 
 	a {
@@ -48,6 +43,7 @@
 		});
 	}
 	&__row {
+		padding-top: 64px;
 		.query-min(@screen--lg; {
 			display: table;
 			width: 100%;
@@ -160,5 +156,4 @@
 			});
 		}
 	}
-
 }

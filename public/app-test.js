@@ -109,7 +109,7 @@ imdi.tocbot = (function () {
             function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
             
             // only create sidebar with toc if #toc-enabled exists
-            var tocEnabled = document.querySelector('.toc-mobile');
+            var tocEnabled = document.querySelector('#toc-enabled');
             
             if (tocEnabled) {
                 var _tocbot$init;
@@ -136,6 +136,8 @@ imdi.tocbot = (function () {
             
                     // Smooth scrolling enabled.
                     smoothScroll: true,
+
+                    headingsOffset: -447,
             
                     // Smooth scroll duration.
                     smoothScrollDuration: 0,
@@ -256,63 +258,43 @@ imdi.main_menu_toggle = (function ($) {
           		event.preventDefault();
 
                 var topMenuVisible = document.querySelector('.top-menu')
-
-                // toggle class
+                var pageContent = document.querySelector('.page__master')
+                var header = document.querySelector('#header')
+                var skipToContent = document.querySelector('.skiptocontent')
+                var footer = document.querySelector('#footer')
+                // TOGGLE TOP MENU
                 topMenuVisible.classList.toggle('top-menu--visible')
                 topMenuVisible.classList.toggle('top-menu--hidden')
+
+                // TOGGLE HEADER
+                header.classList.toggle('header--overlay')
+
+
+                // TOGGLE BODY
+                if (pageContent.style.display === 'none') {
+                    pageContent.style.display = 'block'
+                } else {
+                    pageContent.style.display = 'none'
+                }
+
+                // TOGGLE ACCESSABILITY BUTTON
+                if (skipToContent.style.display === 'none') {
+                    skipToContent.style.display = 'block'
+                } else {
+                    skipToContent.style.display = 'none'
+                }
+
+                // TOGGLE FOOTER
+                if (footer.style.display === 'none') {
+                    footer.style.display = 'block'
+                } else {
+                    footer.style.display = 'none'
+                }
+
           	});
         }
     }
 })(jQuery);
-
-
-// imdi.main_menu_toggle = (function ($) {
-//     return {
-//         init: function () {
-//           	$('[data-behaviour="main-menu-toggle"]').on('click', function( event ) {
-
-//           		// Prevent the fallback #anchor tag to move focus
-//           		event.preventDefault();
-
-//               // Get targets
-//               var _footer = $('#footer');
-//               var _footer__bg = $('#footer__bg');
-//               var _footer__bg = $('#footer__bg');
-//               var _page_content = $('#page-content');
-//               var _header = $('#header')
-
-//           		// Toggle menu button
-//           		if($(this).attr('aria-expanded') === "false"){
-//           			$(this).attr('aria-expanded', "true");
-//           			// Set min height to 100% of window on desktop
-//       	        var a = $(window).height();
-//       	        var b = _footer.height();
-//       	        if (a > b) {
-//       	            _footer.css('height', a);
-//       	            _footer__bg.css('height', a);
-//       	        }
-
-//                 // Google Tag Manager call
-//                 var currentUrl = window.location.pathname;
-//                 imdi.gtm_tracking.customEvent('Menu', 'Main-menu open', undefined, currentUrl);
-
-//           		} else {
-//           			$(this).attr('aria-expanded', "false");
-//           			// Reset height
-//                 _footer.css('height', 'auto');
-//                 _footer__bg.css('height', 'auto');
-//           		}
-
-//           		// Toggle menu overlay
-//           		_page_content.toggle();
-//           		_footer.toggleClass($('#footer').attr('data-toggle-menu'));
-//           		_header.toggleClass($('#header').attr('data-toggle-menu'));
-
-//           	});
-//         }
-//     }
-// })(jQuery);
-
 
 
 /*------------------------------------*\
@@ -1047,11 +1029,11 @@ imdi.tableOfContents = (function ($) {
     return {
         init: function () {
 
-            if ($('#toc-enabled').length)
+            if ($('.toc-mobile').length)
             {
                 var toc_index = 1;
 
-                $("#toc-enabled h2:not([class]):not(.no-toc)").each(function (index, value) {
+                $(".toc-mobile h2:not([class]):not(.no-toc)").each(function (index, value) {
                     var elements = $(this)
                     var element = elements[0]
                     var id = element.id
