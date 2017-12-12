@@ -572,236 +572,6 @@ img {
     @fix-mqs
 
 */
-ul#epi-quickNavigator li {
-  margin: 0;
-  padding: 0;
-}
-ul#epi-quickNavigator li a {
-  border-bottom: none;
-}
-
-/*------------------------------------*\
-    COLOR PALETTE
-\*------------------------------------*/
-/*------------------------------------*\
-    BREAKPOINTS
-\*------------------------------------*/
-/*------------------------------------*\
-    GRID
-\*------------------------------------*/
-/*------------------------------------*\
-    #TYPE
-\*------------------------------------*/
-/*------------------------------------*\
-    $LINE HEIGHTS
-\*------------------------------------*/
-/*------------------------------------*\
-    $MIXINS
-\*------------------------------------*/
-/*------------------------------------*\
-    $FONTS
-\*------------------------------------*/
-/*------------------------------------*\
-   GRID
-\*------------------------------------*/
-/* Based on the css from the Grid System in Bootstrap */
-/* http://getbootstrap.com/css/#grid */
-/*------------------------------------*\
-    ANIMATIONS
-\*------------------------------------*/
-/*------------------------------------*\
-    MEDIA QUERIES
-\*------------------------------------*/
-/*
-  In use:
-  .query-min(@screen--md; {
-        color: blue;
-    });
-    --
-    @fix-mqs
-
-*/
-@page {
-  margin: 1.5cm 0;
-}
-
-/*------------------------------------*\
-    COLOR PALETTE
-\*------------------------------------*/
-/*------------------------------------*\
-    BREAKPOINTS
-\*------------------------------------*/
-/*------------------------------------*\
-    GRID
-\*------------------------------------*/
-/*------------------------------------*\
-    #TYPE
-\*------------------------------------*/
-/*------------------------------------*\
-    $LINE HEIGHTS
-\*------------------------------------*/
-/*------------------------------------*\
-    $MIXINS
-\*------------------------------------*/
-/*------------------------------------*\
-    $FONTS
-\*------------------------------------*/
-/*------------------------------------*\
-   GRID
-\*------------------------------------*/
-/* Based on the css from the Grid System in Bootstrap */
-/* http://getbootstrap.com/css/#grid */
-/*------------------------------------*\
-    ANIMATIONS
-\*------------------------------------*/
-/*------------------------------------*\
-    MEDIA QUERIES
-\*------------------------------------*/
-/*
-  In use:
-  .query-min(@screen--md; {
-        color: blue;
-    });
-    --
-    @fix-mqs
-
-*/
-.t-only-screenreaders {
-  position: absolute;
-  overflow: hidden;
-  width: 1px;
-  height: 1px;
-}
-.t-no-list-styles,
-.t-no-list-styles > li {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-.t-position {
-  position: relative;
-}
-.t-position::before,
-.t-position::after {
-  content: "";
-  display: table;
-}
-.t-position::after {
-  clear: both;
-}
-.t-no-margin {
-  margin: 0;
-}
-.t-margin-bottom {
-  margin-bottom: 21px;
-}
-.t-margin-bottom--large {
-  margin-bottom: 42px;
-}
-.t-margin-bottom--xlarge {
-  margin-bottom: 84px;
-}
-.t-margin-top {
-  margin-top: 21px;
-}
-.t-margin-top--large {
-  margin-top: 42px;
-}
-.t-show-on-desktop {
-  display: none;
-}
-@media (min-width: 57em) {
-  .t-show-on-desktop {
-    display: block;
-  }
-}
-@media print {
-  .t-show-on-desktop {
-    display: block;
-  }
-}
-.t-show-on-tablet {
-  display: none;
-}
-@media (min-width: 45em) {
-  .t-show-on-tablet {
-    display: inherit;
-  }
-}
-@media print {
-  .t-show-on-tablet {
-    display: inherit;
-  }
-}
-@media (min-width: 45em) {
-  .t-hide-on-tablet {
-    display: none;
-  }
-}
-@media print {
-  .t-hide-on-tablet {
-    display: none;
-  }
-}
-.t-align-right {
-  text-align: right;
-}
-.t-float-left {
-  float: left;
-}
-.t-float-right {
-  float: right;
-}
-@media print {
-  .t-hide-on-print {
-    display: none;
-  }
-}
-.t-no-focus:focus {
-  outline: none;
-}
-
-/*------------------------------------*\
-    COLOR PALETTE
-\*------------------------------------*/
-/*------------------------------------*\
-    BREAKPOINTS
-\*------------------------------------*/
-/*------------------------------------*\
-    GRID
-\*------------------------------------*/
-/*------------------------------------*\
-    #TYPE
-\*------------------------------------*/
-/*------------------------------------*\
-    $LINE HEIGHTS
-\*------------------------------------*/
-/*------------------------------------*\
-    $MIXINS
-\*------------------------------------*/
-/*------------------------------------*\
-    $FONTS
-\*------------------------------------*/
-/*------------------------------------*\
-   GRID
-\*------------------------------------*/
-/* Based on the css from the Grid System in Bootstrap */
-/* http://getbootstrap.com/css/#grid */
-/*------------------------------------*\
-    ANIMATIONS
-\*------------------------------------*/
-/*------------------------------------*\
-    MEDIA QUERIES
-\*------------------------------------*/
-/*
-  In use:
-  .query-min(@screen--md; {
-        color: blue;
-    });
-    --
-    @fix-mqs
-
-*/
 /*!
 Animate.css - http://daneden.me/animate
 Licensed under the MIT license - http://opensource.org/licenses/MIT
@@ -4178,6 +3948,236 @@ div[data-imdikator="embed"] + h7 {
   text-transform: none;
 }
 
+/*------------------------------------*\
+    COLOR PALETTE
+\*------------------------------------*/
+/*------------------------------------*\
+    BREAKPOINTS
+\*------------------------------------*/
+/*------------------------------------*\
+    GRID
+\*------------------------------------*/
+/*------------------------------------*\
+    #TYPE
+\*------------------------------------*/
+/*------------------------------------*\
+    $LINE HEIGHTS
+\*------------------------------------*/
+/*------------------------------------*\
+    $MIXINS
+\*------------------------------------*/
+/*------------------------------------*\
+    $FONTS
+\*------------------------------------*/
+/*------------------------------------*\
+   GRID
+\*------------------------------------*/
+/* Based on the css from the Grid System in Bootstrap */
+/* http://getbootstrap.com/css/#grid */
+/*------------------------------------*\
+    ANIMATIONS
+\*------------------------------------*/
+/*------------------------------------*\
+    MEDIA QUERIES
+\*------------------------------------*/
+/*
+  In use:
+  .query-min(@screen--md; {
+        color: blue;
+    });
+    --
+    @fix-mqs
+
+*/
+ul#epi-quickNavigator li {
+  margin: 0;
+  padding: 0;
+}
+ul#epi-quickNavigator li a {
+  border-bottom: none;
+}
+
+/*------------------------------------*\
+    COLOR PALETTE
+\*------------------------------------*/
+/*------------------------------------*\
+    BREAKPOINTS
+\*------------------------------------*/
+/*------------------------------------*\
+    GRID
+\*------------------------------------*/
+/*------------------------------------*\
+    #TYPE
+\*------------------------------------*/
+/*------------------------------------*\
+    $LINE HEIGHTS
+\*------------------------------------*/
+/*------------------------------------*\
+    $MIXINS
+\*------------------------------------*/
+/*------------------------------------*\
+    $FONTS
+\*------------------------------------*/
+/*------------------------------------*\
+   GRID
+\*------------------------------------*/
+/* Based on the css from the Grid System in Bootstrap */
+/* http://getbootstrap.com/css/#grid */
+/*------------------------------------*\
+    ANIMATIONS
+\*------------------------------------*/
+/*------------------------------------*\
+    MEDIA QUERIES
+\*------------------------------------*/
+/*
+  In use:
+  .query-min(@screen--md; {
+        color: blue;
+    });
+    --
+    @fix-mqs
+
+*/
+@page {
+  margin: 1.5cm 0;
+}
+
+/*------------------------------------*\
+    COLOR PALETTE
+\*------------------------------------*/
+/*------------------------------------*\
+    BREAKPOINTS
+\*------------------------------------*/
+/*------------------------------------*\
+    GRID
+\*------------------------------------*/
+/*------------------------------------*\
+    #TYPE
+\*------------------------------------*/
+/*------------------------------------*\
+    $LINE HEIGHTS
+\*------------------------------------*/
+/*------------------------------------*\
+    $MIXINS
+\*------------------------------------*/
+/*------------------------------------*\
+    $FONTS
+\*------------------------------------*/
+/*------------------------------------*\
+   GRID
+\*------------------------------------*/
+/* Based on the css from the Grid System in Bootstrap */
+/* http://getbootstrap.com/css/#grid */
+/*------------------------------------*\
+    ANIMATIONS
+\*------------------------------------*/
+/*------------------------------------*\
+    MEDIA QUERIES
+\*------------------------------------*/
+/*
+  In use:
+  .query-min(@screen--md; {
+        color: blue;
+    });
+    --
+    @fix-mqs
+
+*/
+.t-only-screenreaders {
+  position: absolute;
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+}
+.t-no-list-styles,
+.t-no-list-styles > li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.t-position {
+  position: relative;
+}
+.t-position::before,
+.t-position::after {
+  content: "";
+  display: table;
+}
+.t-position::after {
+  clear: both;
+}
+.t-no-margin {
+  margin: 0;
+}
+.t-margin-bottom {
+  margin-bottom: 21px;
+}
+.t-margin-bottom--large {
+  margin-bottom: 42px;
+}
+.t-margin-bottom--xlarge {
+  margin-bottom: 84px;
+}
+.t-margin-top {
+  margin-top: 21px;
+}
+.t-margin-top--large {
+  margin-top: 42px;
+}
+.t-show-on-desktop {
+  display: none;
+}
+@media (min-width: 57em) {
+  .t-show-on-desktop {
+    display: block;
+  }
+}
+@media print {
+  .t-show-on-desktop {
+    display: block;
+  }
+}
+.t-show-on-tablet {
+  display: none;
+}
+@media (min-width: 45em) {
+  .t-show-on-tablet {
+    display: inherit;
+  }
+}
+@media print {
+  .t-show-on-tablet {
+    display: inherit;
+  }
+}
+@media (min-width: 45em) {
+  .t-hide-on-tablet {
+    display: none;
+  }
+}
+@media print {
+  .t-hide-on-tablet {
+    display: none;
+  }
+}
+.t-align-right {
+  text-align: right;
+}
+.t-float-left {
+  float: left;
+}
+.t-float-right {
+  float: right;
+}
+@media print {
+  .t-hide-on-print {
+    display: none;
+  }
+}
+.t-no-focus:focus {
+  outline: none;
+}
+
 .accordion li {
   cursor: pointer;
   display: -webkit-box;
@@ -6489,3 +6489,6370 @@ blockquote small {
   margin-bottom: 21px;
 }
 
+
+.footer {
+  width: calc(100vw - 15px);
+  height: 100%;
+  background-color: #3E3F3F !important;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.footer__column-pair-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+}
+@media (max-width: 920px) {
+  .footer__column-pair-wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+.footer__header {
+  text-align: center;
+  padding: 15px;
+  background-color: #A6AAA9;
+}
+.footer__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+@media (max-width: 720px) {
+  .footer__body {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+.footer__column {
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.footer__column ul {
+  width: 100%;
+  max-width: 300px;
+}
+@media (max-width: 720px) {
+  .footer__column {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+@media (min-width: 920px) {
+  .footer__column {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+}
+.footer__column h3,
+.footer__column h2,
+.footer__column p,
+.footer__column ol,
+.footer__column li,
+.footer__column a {
+  color: white;
+  text-decoration: none;
+  border-bottom: 0px solid white;
+}
+.footer__column .underline,
+.footer__column a:hover {
+  text-decoration: underline;
+}
+.footer__column ol {
+  padding: 0;
+}
+.footer__column li {
+  list-style: none;
+  margin-bottom: 0;
+}
+
+/*------------------------------------*\
+    COLOR PALETTE
+\*------------------------------------*/
+/*------------------------------------*\
+    BREAKPOINTS
+\*------------------------------------*/
+/*------------------------------------*\
+    GRID
+\*------------------------------------*/
+/*------------------------------------*\
+    #TYPE
+\*------------------------------------*/
+/*------------------------------------*\
+    $LINE HEIGHTS
+\*------------------------------------*/
+/*------------------------------------*\
+    $MIXINS
+\*------------------------------------*/
+/*------------------------------------*\
+    $FONTS
+\*------------------------------------*/
+/*------------------------------------*\
+   GRID
+\*------------------------------------*/
+/* Based on the css from the Grid System in Bootstrap */
+/* http://getbootstrap.com/css/#grid */
+/*------------------------------------*\
+    ANIMATIONS
+\*------------------------------------*/
+/*------------------------------------*\
+    MEDIA QUERIES
+\*------------------------------------*/
+/*
+  In use:
+  .query-min(@screen--md; {
+        color: blue;
+    });
+    --
+    @fix-mqs
+
+*/
+[data-chart-source] {
+  display: none;
+}
+.graph {
+  margin-bottom: 21px;
+  position: relative;
+  margin-bottom: 15px;
+}
+.graph__actions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.graph__filter {
+  margin-bottom: 15px;
+  position: relative;
+}
+@media print {
+  .graph__filter {
+    display: none;
+  }
+}
+@media (min-width: 45em) {
+  .graph__filter-toggle {
+    position: absolute;
+    z-index: 2;
+  }
+}
+.graph__types {
+  text-align: right;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  margin-bottom: 15px;
+}
+.graph__types.right {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+.graph__types .tabs-mini {
+  float: right;
+}
+.graph__description {
+  display: none;
+}
+.graph__description.embed {
+  display: block;
+  margin-top: 15px;
+}
+.graph__annotations {
+  max-width: 35em;
+  margin-bottom: 21px;
+}
+.graph__annotations p,
+.graph__annotations li {
+  font-family: "Siri", Tahoma, sans-serif;
+  font-size-adjust: 0.51;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 15px;
+  font-size: 0.8333333333333334rem;
+  line-height: 1.4;
+  margin-bottom: 0px;
+  text-transform: none;
+}
+.graph__annotations li {
+  list-style: decimal;
+}
+.graph__about {
+  max-width: 35em;
+}
+.graph__functions {
+  position: relative;
+  display: initial;
+}
+@media (min-width: 45em) {
+  .graph__functions {
+    float: right;
+  }
+}
+@media print {
+  .graph__functions {
+    display: none;
+  }
+}
+@media (min-width: 45em) {
+  .graph__functions .button {
+    display: inline-block;
+    margin: 0;
+  }
+}
+@media screen and (max-width: 420px) {
+  .graph__functions {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+.graph__functions-item {
+  display: inline-block;
+}
+.graph__related {
+  margin-top: 21px;
+  background: #f8f7f6;
+  margin-left: -21px;
+  margin-right: -21px;
+  margin-bottom: -21px;
+  padding: 21px;
+  padding-bottom: 1px;
+}
+
+/*------------------------------------*\
+    COLOR PALETTE
+\*------------------------------------*/
+/*------------------------------------*\
+    BREAKPOINTS
+\*------------------------------------*/
+/*------------------------------------*\
+    GRID
+\*------------------------------------*/
+/*------------------------------------*\
+    #TYPE
+\*------------------------------------*/
+/*------------------------------------*\
+    $LINE HEIGHTS
+\*------------------------------------*/
+/*------------------------------------*\
+    $MIXINS
+\*------------------------------------*/
+/*------------------------------------*\
+    $FONTS
+\*------------------------------------*/
+/*------------------------------------*\
+   GRID
+\*------------------------------------*/
+/* Based on the css from the Grid System in Bootstrap */
+/* http://getbootstrap.com/css/#grid */
+/*------------------------------------*\
+    ANIMATIONS
+\*------------------------------------*/
+/*------------------------------------*\
+    MEDIA QUERIES
+\*------------------------------------*/
+/*
+  In use:
+  .query-min(@screen--md; {
+        color: blue;
+    });
+    --
+    @fix-mqs
+
+*/
+.header-bullet {
+  width: 100%;
+  max-width: 100%;
+}
+@media (min-width: 57em) {
+  .header-bullet {
+    width: 50%;
+    position: absolute;
+    top: 0;
+    left: 108.33333333%;
+    overflow: visible;
+    -webkit-transform: translateY(-66%);
+    transform: translateY(-66%);
+  }
+}
+@media (min-width: 45em) {
+  .header-bullet--image {
+    position: absolute;
+    width: 33.33333333%;
+    left: 108.33333333%;
+    top: 5em;
+    z-index: 2;
+  }
+}
+@media (min-width: 57em) {
+  .header-bullet--image {
+    top: 5em;
+    -webkit-transform: translateY(0%);
+    transform: translateY(0%);
+    left: 108.33333333%;
+  }
+}
+.header-bullet__image {
+  margin-left: -21px;
+  margin-right: -21px;
+}
+@media (min-width: 45em) {
+  .header-bullet__image {
+    margin: 0;
+    width: 200%;
+  }
+}
+@media (min-width: 57em) {
+  .header-bullet__bullet {
+    width: 100%;
+  }
+}
+@media (min-width: 57em) {
+  .header-bullet + .header-bullet {
+    margin-top: 75%;
+    padding-top: 21px;
+  }
+}
+
+/*------------------------------------*\
+    COLOR PALETTE
+\*------------------------------------*/
+/*------------------------------------*\
+    BREAKPOINTS
+\*------------------------------------*/
+/*------------------------------------*\
+    GRID
+\*------------------------------------*/
+/*------------------------------------*\
+    #TYPE
+\*------------------------------------*/
+/*------------------------------------*\
+    $LINE HEIGHTS
+\*------------------------------------*/
+/*------------------------------------*\
+    $MIXINS
+\*------------------------------------*/
+/*------------------------------------*\
+    $FONTS
+\*------------------------------------*/
+/*------------------------------------*\
+   GRID
+\*------------------------------------*/
+/* Based on the css from the Grid System in Bootstrap */
+/* http://getbootstrap.com/css/#grid */
+/*------------------------------------*\
+    ANIMATIONS
+\*------------------------------------*/
+/*------------------------------------*\
+    MEDIA QUERIES
+\*------------------------------------*/
+/*
+  In use:
+  .query-min(@screen--md; {
+        color: blue;
+    });
+    --
+    @fix-mqs
+
+*/
+.header {
+  display: block;
+  padding-top: 16px;
+  padding-bottom: 25px;
+}
+@media (min-width: 45em) {
+  .header {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+}
+@media print {
+  .header {
+    padding-left: 10%;
+    padding-right: 5%;
+  }
+}
+.header__row {
+  z-index: 4;
+  position: relative;
+}
+.header__row::before,
+.header__row::after {
+  content: "";
+  display: table;
+}
+.header__row::after {
+  clear: both;
+}
+.header__ident {
+  margin-top: 0.45em;
+}
+@media (min-width: 45em) {
+  .header__ident {
+    margin-top: 0;
+  }
+}
+.header__button {
+  position: absolute;
+  background: transparent;
+  color: #282828;
+  border: none;
+  border-bottom: 2px solid transparent;
+  width: auto;
+  font-size: 18px;
+  font-size: 1rem;
+  padding: 7px 0;
+  margin: 0;
+}
+@media (min-width: 45em) {
+  .header__button {
+    padding: 7px 0;
+  }
+}
+@media print {
+  .header__button {
+    display: none !important;
+  }
+}
+.header__button:hover,
+.header__button:focus {
+  background: transparent;
+  color: #d83a36;
+  border: none;
+  border-bottom: 2px solid #d83a36;
+}
+.header__button:hover .header__menu-icon-bar,
+.header__button:focus .header__menu-icon-bar {
+  background-color: #d83a36;
+}
+.header__button:focus {
+  outline-color: #282828;
+}
+[data-whatinput='mouse'] .header__button:focus {
+  outline: 0;
+}
+.header__button--menu {
+  top: 12px;
+  right: 7px;
+}
+@media (min-width: 45em) {
+  .header__button--menu {
+    top: 20px;
+    right: 21px;
+  }
+}
+.header__button--login {
+  display: none;
+}
+@media (min-width: 45em) {
+  .header__button--login {
+    display: block;
+    top: 20px;
+    right: 12em;
+    text-align: right;
+  }
+}
+.header__button--login:hover .header__login-icon,
+.header__button--login:focus .header__login-icon {
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/red/icon-unlocked.svg');
+}
+.header__button--search {
+  display: none;
+}
+@media (min-width: 45em) {
+  .header__button--search {
+    display: block;
+    top: 20px;
+    right: 121px;
+    right: 7em;
+    text-align: right;
+  }
+}
+.header__button--search:hover .header__search-icon,
+.header__button--search:focus .header__search-icon {
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/red/icon-search.svg');
+}
+.header__menu-icon {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  width: 1rem;
+  height: 1rem;
+  top: 1px;
+  -webkit-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+  -webkit-transition: transform 0.3s cubic-bezier(0, 0, 0.1, 1);
+  -webkit-transition: -webkit-transform 0.3s cubic-bezier(0, 0, 0.1, 1);
+  transition: -webkit-transform 0.3s cubic-bezier(0, 0, 0.1, 1);
+  transition: transform 0.3s cubic-bezier(0, 0, 0.1, 1);
+  transition: transform 0.3s cubic-bezier(0, 0, 0.1, 1), -webkit-transform 0.3s cubic-bezier(0, 0, 0.1, 1);
+  margin-left: 0.25rem;
+}
+.header__menu-icon-bar {
+  position: absolute;
+  display: block;
+  height: 2px;
+  width: 1rem;
+  margin-bottom: 2px;
+  border-radius: 1px;
+  background-color: #282828;
+  -webkit-transform-origin: left top;
+  transform-origin: left top;
+  -webkit-transition: all 0.3s cubic-bezier(0, 0, 0.1, 1);
+  transition: all 0.3s cubic-bezier(0, 0, 0.1, 1);
+  top: 0.33333333rem;
+}
+.header__menu-icon-bar:first-child {
+  margin-top: 0;
+  top: 0;
+}
+.header__menu-icon-bar:last-child {
+  margin-top: 0;
+  top: 0.66666667rem;
+  -webkit-transform-origin: left bottom;
+  transform-origin: left bottom;
+}
+.header__search-icon {
+  margin-left: 0.25rem;
+}
+.header__login-icon {
+  margin-left: 0.25rem;
+}
+.header__button-text--open {
+  display: inline;
+}
+.header__button-text--close {
+  display: none;
+}
+.header__search {
+  display: none;
+  width: 300px;
+  position: absolute;
+  top: 14px;
+  right: 0px;
+  background: #ffffff;
+}
+.header__search .search__button,
+.header__search .search__input {
+  margin-bottom: 0;
+}
+.header--campaign {
+  background: #f15540;
+  margin-bottom: 21px;
+}
+.header--campaign .header__menu-icon-bar {
+  background-color: #ffffff;
+}
+.header--campaign .header__button {
+  color: #ffffff;
+  background: #d83a36;
+  padding-left: 7px;
+  padding-right: 7px;
+}
+.header--campaign .header__button:hover,
+.header--campaign .header__button:focus {
+  border-bottom-color: #ffffff;
+  color: #ffffff;
+}
+.header--campaign .header__button:hover .header__menu-icon-bar,
+.header--campaign .header__button:focus .header__menu-icon-bar {
+  background-color: #ffffff;
+}
+.header--overlay {
+  width: 100%;
+  position: absolute;
+  z-index: 3;
+  background: none;
+  top: 0;
+}
+.header--overlay .header__button {
+  color: #ffffff;
+}
+.header--overlay .header__button:hover,
+.header--overlay .header__button:focus {
+  border-bottom-color: #ffffff;
+  color: #ffffff;
+}
+.header--overlay .header__button:hover .header__menu-icon-bar,
+.header--overlay .header__button:focus .header__menu-icon-bar {
+  background-color: #ffffff;
+}
+.header--overlay .header__button:hover .header__search-icon,
+.header--overlay .header__button:focus .header__search-icon {
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/white/icon-search.svg');
+}
+.header--overlay .header__button:hover .header__login-icon,
+.header--overlay .header__button:focus .header__login-icon {
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/white/icon-unlocked.svg');
+}
+@media (min-width: 45em) {
+  .header--overlay .header__search {
+    width: 247px;
+  }
+  .header--overlay .header__search .search--header {
+    padding-right: 100px;
+  }
+  .header--overlay .header__search .search__input:focus {
+    border-color: #ffffff;
+  }
+  .header--overlay .header__search .search__button,
+  .header--overlay .header__search .search__input {
+    border-color: #ffffff;
+  }
+}
+.header--overlay .header__search-icon {
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/white/icon-search.svg');
+}
+.header--overlay .header__login-icon {
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/white/icon-unlocked.svg');
+}
+.header--overlay .header__menu-icon-bar {
+  opacity: 0;
+  background: #ffffff;
+  width: 1rem;
+}
+.header--overlay .header__menu-icon-bar:first-child {
+  opacity: 1;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.header--overlay .header__menu-icon-bar:last-child {
+  top: 0.66666667rem;
+  opacity: 1;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+.header--overlay .header__button-text--open {
+  display: none;
+}
+.header--overlay .header__button-text--close {
+  display: inline;
+}
+.header--overlay .search .search__input:focus + .search__button {
+  border-color: #ffffff;
+}
+.header--search .header__button--search {
+  display: none;
+}
+@media (min-width: 45em) {
+  .header--search .header__search {
+    right: 121px;
+    display: block;
+  }
+  .header--search .header__search > * {
+    -webkit-animation: animations__fade-in 1000ms cubic-bezier(0, 0, 0.1, 1) both;
+    animation: animations__fade-in 1000ms cubic-bezier(0, 0, 0.1, 1) both;
+  }
+}
+
+/*------------------------------------*\
+    COLOR PALETTE
+\*------------------------------------*/
+/*------------------------------------*\
+    BREAKPOINTS
+\*------------------------------------*/
+/*------------------------------------*\
+    GRID
+\*------------------------------------*/
+/*------------------------------------*\
+    #TYPE
+\*------------------------------------*/
+/*------------------------------------*\
+    $LINE HEIGHTS
+\*------------------------------------*/
+/*------------------------------------*\
+    $MIXINS
+\*------------------------------------*/
+/*------------------------------------*\
+    $FONTS
+\*------------------------------------*/
+/*------------------------------------*\
+   GRID
+\*------------------------------------*/
+/* Based on the css from the Grid System in Bootstrap */
+/* http://getbootstrap.com/css/#grid */
+/*------------------------------------*\
+    ANIMATIONS
+\*------------------------------------*/
+/*------------------------------------*\
+    MEDIA QUERIES
+\*------------------------------------*/
+/*
+  In use:
+  .query-min(@screen--md; {
+        color: blue;
+    });
+    --
+    @fix-mqs
+
+*/
+.hint {
+  font-family: "Siri", Tahoma, sans-serif;
+  font-size-adjust: 0.51;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 15px;
+  font-size: 0.8333333333333334rem;
+  line-height: 1.4;
+  margin-bottom: 0px;
+  text-transform: none;
+  color: #585858;
+  border: 1px solid #f2efed;
+  font-style: italic;
+  padding: 5px 7px;
+  margin-left: 7px;
+}
+.hint:hover,
+.hint:focus {
+  background: #e7e2de;
+}
+.hint__prefix {
+  font-family: "Siri", Tahoma, sans-serif;
+  font-size-adjust: 0.51;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 15px;
+  font-size: 0.8333333333333334rem;
+  line-height: 1.4;
+  margin-bottom: 0px;
+  text-transform: none;
+  color: #585858;
+  font-style: italic;
+  margin-left: 21px;
+}
+
+/*------------------------------------*\
+    COLOR PALETTE
+\*------------------------------------*/
+/*------------------------------------*\
+    BREAKPOINTS
+\*------------------------------------*/
+/*------------------------------------*\
+    GRID
+\*------------------------------------*/
+/*------------------------------------*\
+    #TYPE
+\*------------------------------------*/
+/*------------------------------------*\
+    $LINE HEIGHTS
+\*------------------------------------*/
+/*------------------------------------*\
+    $MIXINS
+\*------------------------------------*/
+/*------------------------------------*\
+    $FONTS
+\*------------------------------------*/
+/*------------------------------------*\
+   GRID
+\*------------------------------------*/
+/* Based on the css from the Grid System in Bootstrap */
+/* http://getbootstrap.com/css/#grid */
+/*------------------------------------*\
+    ANIMATIONS
+\*------------------------------------*/
+/*------------------------------------*\
+    MEDIA QUERIES
+\*------------------------------------*/
+/*
+  In use:
+  .query-min(@screen--md; {
+        color: blue;
+    });
+    --
+    @fix-mqs
+
+*/
+.hover-box {
+  position: absolute;
+  z-index: 3;
+  border: 2px solid #f15540;
+  background: #ffffff;
+  padding: 7px;
+  min-width: 7em;
+  max-width: 15em;
+  pointer-events: none;
+  font-family: "Siri", Tahoma, sans-serif;
+  font-size-adjust: 0.51;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 15px;
+  font-size: 0.8333333333333334rem;
+  line-height: 1.4;
+  margin-bottom: 0px;
+  text-transform: none;
+  -webkit-transform: translateX(-50%) translateY(-10.5px);
+  transform: translateX(-50%) translateY(-10.5px);
+}
+.hover-box--description {
+  max-width: 20em;
+  padding: 14px;
+  padding-bottom: 21px;
+  pointer-events: all;
+}
+.hover-box--description p {
+  font-family: "Siri", Tahoma, sans-serif;
+  font-size-adjust: 0.51;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 15px;
+  font-size: 0.8333333333333334rem;
+  line-height: 1.4;
+  margin-bottom: 0px;
+  text-transform: none;
+}
+.hover-box--animate {
+  -webkit-animation: animations__fade-in 50ms cubic-bezier(0, 0, 0.1, 1);
+  animation: animations__fade-in 50ms cubic-bezier(0, 0, 0.1, 1);
+}
+.hover-box__title {
+  display: block;
+  font-family: "Siri Medium", Tahoma, sans-serif;
+  font-weight: normal;
+  font-style: normal;
+}
+.hover-box strong {
+  font-weight: normal;
+  font-family: 'Consolas', 'Lucida Console', "Courier";
+}
+.hover-box__point {
+  display: block;
+  position: absolute;
+  z-index: -1;
+  background: #ffffff;
+  border-bottom: 2px solid #f15540;
+  border-right: 2px solid #f15540;
+  height: 14px;
+  width: 14px;
+  -webkit-transform: translateX(-50%) rotate(45deg);
+  transform: translateX(-50%) rotate(45deg);
+  bottom: -8.5px;
+  left: 50%;
+}
+.hover-box--left {
+  -webkit-transform: translateX(-21px) translateY(-10.5px);
+  transform: translateX(-21px) translateY(-10.5px);
+}
+.hover-box--left .hover-box__point {
+  left: 19px;
+}
+.hover-box--right {
+  -webkit-transform: translateX(-100%) translateY(-10.5px);
+  transform: translateX(-100%) translateY(-10.5px);
+  margin-left: 21px;
+  min-width: 10em;
+}
+.hover-box--right .hover-box__point {
+  left: auto;
+  right: 7px;
+}
+.hover-box--top {
+  -webkit-transform: translateX(-50%) translateY(100%);
+  transform: translateX(-50%) translateY(100%);
+  margin-bottom: -21px;
+}
+.hover-box--top .hover-box__point {
+  bottom: auto;
+  top: -8.5px;
+  -webkit-transform: translateX(-50%) rotate(225deg);
+  transform: translateX(-50%) rotate(225deg);
+}
+.hover-box--top-left {
+  -webkit-transform: translateX(-21px) translateY(100%);
+  transform: translateX(-21px) translateY(100%);
+  margin-bottom: -21px;
+}
+.hover-box--top-left .hover-box__point {
+  left: 19px;
+  bottom: auto;
+  top: -8.5px;
+  -webkit-transform: translateX(-50%) rotate(225deg);
+  transform: translateX(-50%) rotate(225deg);
+}
+.hover-box--top-right {
+  -webkit-transform: translateX(-100%) translateY(100%);
+  transform: translateX(-100%) translateY(100%);
+  margin-bottom: -21px;
+  margin-left: 21px;
+  min-width: 10em;
+}
+.hover-box--top-right .hover-box__point {
+  left: auto;
+  right: 7px;
+  bottom: auto;
+  top: -8.5px;
+  -webkit-transform: translateX(-50%) rotate(225deg);
+  transform: translateX(-50%) rotate(225deg);
+}
+.hover-box--left-edge {
+  -webkit-transform: translateX(7px) translateY(50%);
+  transform: translateX(7px) translateY(50%);
+}
+.hover-box--left-edge .hover-box__point {
+  bottom: auto;
+  left: -9px;
+  top: 50%;
+  -webkit-transform: translateY(-50%) rotate(135deg);
+  transform: translateY(-50%) rotate(135deg);
+}
+.hover-box--right-edge {
+  -webkit-transform: translateX(-100%) translateY(50%);
+  transform: translateX(-100%) translateY(50%);
+  margin-left: -10.5px;
+}
+.hover-box--right-edge .hover-box__point {
+  bottom: auto;
+  right: -9px;
+  left: auto;
+  top: 50%;
+  -webkit-transform: translateY(-50%) rotate(315deg);
+  transform: translateY(-50%) rotate(315deg);
+}
+
+/*------------------------------------*\
+    COLOR PALETTE
+\*------------------------------------*/
+/*------------------------------------*\
+    BREAKPOINTS
+\*------------------------------------*/
+/*------------------------------------*\
+    GRID
+\*------------------------------------*/
+/*------------------------------------*\
+    #TYPE
+\*------------------------------------*/
+/*------------------------------------*\
+    $LINE HEIGHTS
+\*------------------------------------*/
+/*------------------------------------*\
+    $MIXINS
+\*------------------------------------*/
+/*------------------------------------*\
+    $FONTS
+\*------------------------------------*/
+/*------------------------------------*\
+   GRID
+\*------------------------------------*/
+/* Based on the css from the Grid System in Bootstrap */
+/* http://getbootstrap.com/css/#grid */
+/*------------------------------------*\
+    ANIMATIONS
+\*------------------------------------*/
+/*------------------------------------*\
+    MEDIA QUERIES
+\*------------------------------------*/
+/*
+  In use:
+  .query-min(@screen--md; {
+        color: blue;
+    });
+    --
+    @fix-mqs
+
+*/
+.ident-campaign {
+  font-size: 18px;
+  font-size: 1rem;
+  font-family: "Siri Medium", Tahoma, sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  display: inline-block;
+  border: none;
+  position: relative;
+  padding-top: 10px;
+  margin-bottom: 0;
+}
+@media (min-width: 45em) {
+  .ident-campaign {
+    font-size: 24px;
+    font-size: 1.3333333333333333rem;
+    padding-top: 2px;
+    margin-top: 21px;
+  }
+}
+.ident-campaign__textmark {
+  border-bottom: 2px solid transparent;
+  color: #ffffff;
+}
+@media (min-width: 22em) {
+  .ident-campaign__textmark {
+    display: block;
+  }
+}
+a.ident-campaign {
+  color: #ffffff;
+}
+a.ident-campaign:hover,
+a.ident-campaign:focus {
+  color: #d83a36;
+}
+a.ident-campaign:hover .ident-campaign__textmark,
+a.ident-campaign:focus .ident-campaign__textmark {
+  border-bottom-color: #ffffff;
+}
+.header--overlay .ident-campaign__textmark {
+  color: #ffffff;
+}
+
+/*------------------------------------*\
+    COLOR PALETTE
+\*------------------------------------*/
+/*------------------------------------*\
+    BREAKPOINTS
+\*------------------------------------*/
+/*------------------------------------*\
+    GRID
+\*------------------------------------*/
+/*------------------------------------*\
+    #TYPE
+\*------------------------------------*/
+/*------------------------------------*\
+    $LINE HEIGHTS
+\*------------------------------------*/
+/*------------------------------------*\
+    $MIXINS
+\*------------------------------------*/
+/*------------------------------------*\
+    $FONTS
+\*------------------------------------*/
+/*------------------------------------*\
+   GRID
+\*------------------------------------*/
+/* Based on the css from the Grid System in Bootstrap */
+/* http://getbootstrap.com/css/#grid */
+/*------------------------------------*\
+    ANIMATIONS
+\*------------------------------------*/
+/*------------------------------------*\
+    MEDIA QUERIES
+\*------------------------------------*/
+/*
+  In use:
+  .query-min(@screen--md; {
+        color: blue;
+    });
+    --
+    @fix-mqs
+
+*/
+.ident {
+  display: block;
+  border: none;
+  position: relative;
+  height: 45px;
+  height: 2.5rem;
+  width: 135px;
+  width: 7.5rem;
+  font-size: 18px;
+  font-size: 1rem;
+  margin-bottom: 0;
+}
+@media (min-width: 45em) {
+  .ident {
+    height: 72px;
+    height: 4rem;
+    width: 216px;
+    width: 12rem;
+  }
+}
+@media (min-width: 57em) {
+  .ident {
+    height: 90px;
+    height: 5rem;
+    width: 240px;
+    width: 13.2em;
+    margin-left: -94px;
+    margin-left: -5.25rem;
+  }
+}
+.ident__symbol {
+  position: absolute;
+  display: block;
+  width: 45px;
+  width: 2.5rem;
+}
+@media (min-width: 45em) {
+  .ident__symbol {
+    width: 72px;
+    width: 4rem;
+  }
+}
+@media (min-width: 57em) {
+  .ident__symbol {
+    width: 90px;
+    width: 5rem;
+  }
+}
+.ident__symbol svg,
+.ident__symbol img {
+  width: 100%;
+  height: 45px;
+  height: 2.5rem;
+}
+@media (min-width: 45em) {
+  .ident__symbol svg,
+  .ident__symbol img {
+    height: 72px;
+    height: 4rem;
+  }
+}
+@media (min-width: 57em) {
+  .ident__symbol svg,
+  .ident__symbol img {
+    height: 90px;
+    height: 5rem;
+  }
+}
+.ident__textmark {
+  position: absolute;
+  overflow: hidden;
+  display: block;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-top: 10px;
+  padding-top: 0.57rem;
+  margin-left: 48px;
+  margin-left: 2.7rem;
+  width: 90px;
+  width: 5rem;
+}
+@media (min-width: 45em) {
+  .ident__textmark {
+    padding-top: 11px;
+    padding-top: 0.6rem;
+    margin-left: 75px;
+    margin-left: 4.2rem;
+    width: 144px;
+    width: 8rem;
+  }
+}
+@media (min-width: 57em) {
+  .ident__textmark {
+    padding-top: 9px;
+    padding-top: 0.5rem;
+    margin-left: 94px;
+    margin-left: 5.25rem;
+    top: 6px;
+    width: 162px;
+    width: 9rem;
+  }
+}
+.ident__textmark .ident__textmark-primary {
+  font-family: "Siri Medium", Tahoma, sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  font-size: 1.3333333333333333rem;
+  display: block;
+  color: #282828;
+  margin: 0;
+  line-height: 1;
+  margin-left: -2px;
+}
+@media (min-width: 57em) {
+  .ident__textmark .ident__textmark-primary {
+    font-size: 32px;
+    font-size: 1.7777777777777777rem;
+  }
+}
+.ident__textmark .ident__textmark-secondary {
+  display: none;
+}
+@media (min-width: 45em) {
+  .ident__textmark .ident__textmark-secondary {
+    font-family: "Siri", Tahoma, sans-serif;
+    font-size-adjust: 0.51;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 12px;
+    font-size: 0.6666666666666666rem;
+    line-height: 1.13333333;
+    margin-bottom: 0px;
+    margin-top: -0.05rem;
+    display: block;
+    color: #282828;
+    letter-spacing: 0.25px;
+  }
+}
+@media (min-width: 57em) {
+  .ident__textmark .ident__textmark-secondary {
+    font-size: 13px;
+    font-size: 0.7222222222222222rem;
+    line-height: 1.2;
+    letter-spacing: 0;
+  }
+}
+.ident--inline {
+  margin: 0;
+}
+.ident--white .ident__textmark-primary,
+.ident--white .ident__textmark-secondary {
+  color: #ffffff;
+}
+.header--overlay .ident__triangle {
+  fill: #d83a36;
+}
+.header--overlay .ident__textmark-primary,
+.header--overlay .ident__textmark-secondary {
+  color: #ffffff;
+}
+a.ident .ident__triangle {
+  -webkit-transition: all 250ms cubic-bezier(0, 0, 0.1, 1);
+  transition: all 250ms cubic-bezier(0, 0, 0.1, 1);
+}
+a.ident:hover .ident__triangle,
+a.ident:focus .ident__triangle,
+a.ident:active .ident__triangle {
+  -webkit-transform: translate(1em, 1em);
+  transform: translate(1em, 1em);
+}
+
+/*------------------------------------*\
+    COLOR PALETTE
+\*------------------------------------*/
+/*------------------------------------*\
+    BREAKPOINTS
+\*------------------------------------*/
+/*------------------------------------*\
+    GRID
+\*------------------------------------*/
+/*------------------------------------*\
+    #TYPE
+\*------------------------------------*/
+/*------------------------------------*\
+    $LINE HEIGHTS
+\*------------------------------------*/
+/*------------------------------------*\
+    $MIXINS
+\*------------------------------------*/
+/*------------------------------------*\
+    $FONTS
+\*------------------------------------*/
+/*------------------------------------*\
+   GRID
+\*------------------------------------*/
+/* Based on the css from the Grid System in Bootstrap */
+/* http://getbootstrap.com/css/#grid */
+/*------------------------------------*\
+    ANIMATIONS
+\*------------------------------------*/
+/*------------------------------------*\
+    MEDIA QUERIES
+\*------------------------------------*/
+/*
+  In use:
+  .query-min(@screen--md; {
+        color: blue;
+    });
+    --
+    @fix-mqs
+
+*/
+.illustration {
+  position: relative;
+  padding-bottom: 63px;
+}
+@media (min-width: 45em) {
+  .illustration {
+    padding-bottom: 0;
+    margin-bottom: 42px;
+  }
+}
+.illustration__background {
+  display: none;
+}
+@media (min-width: 45em) {
+  .illustration__background {
+    display: block;
+  }
+}
+.illustration__figure {
+  width: auto;
+  max-width: 100%;
+  -webkit-transition: transform 200ms cubic-bezier(0, 0, 0.1, 1);
+  -webkit-transition: -webkit-transform 200ms cubic-bezier(0, 0, 0.1, 1);
+  transition: -webkit-transform 200ms cubic-bezier(0, 0, 0.1, 1);
+  transition: transform 200ms cubic-bezier(0, 0, 0.1, 1);
+  transition: transform 200ms cubic-bezier(0, 0, 0.1, 1), -webkit-transform 200ms cubic-bezier(0, 0, 0.1, 1);
+  margin-bottom: 21px;
+}
+@media (min-width: 45em) {
+  .illustration__figure {
+    margin-bottom: 0;
+  }
+}
+@media (min-width: 45em) {
+  .illustration__item .illustration__figure {
+    -webkit-animation: animations__fade-in-down 500ms cubic-bezier(0, 0, 0.1, 1) backwards;
+    animation: animations__fade-in-down 500ms cubic-bezier(0, 0, 0.1, 1) backwards;
+  }
+  .illustration__item:nth-child(1) .illustration__figure {
+    -webkit-animation-delay: 0.05s;
+    animation-delay: 0.05s;
+  }
+  .illustration__item:nth-child(2) .illustration__figure {
+    -webkit-animation-delay: 0.1s;
+    animation-delay: 0.1s;
+  }
+  .illustration__item:nth-child(3) .illustration__figure {
+    -webkit-animation-delay: 0.15s;
+    animation-delay: 0.15s;
+  }
+  .illustration__item:nth-child(4) .illustration__figure {
+    -webkit-animation-delay: 0.2s;
+    animation-delay: 0.2s;
+  }
+  .illustration__item:nth-child(5) .illustration__figure {
+    -webkit-animation-delay: 0.25s;
+    animation-delay: 0.25s;
+  }
+  .illustration__item:nth-child(6) .illustration__figure {
+    -webkit-animation-delay: 0.3s;
+    animation-delay: 0.3s;
+  }
+  .illustration__item:nth-child(7) .illustration__figure {
+    -webkit-animation-delay: 0.35s;
+    animation-delay: 0.35s;
+  }
+  .illustration__item:nth-child(8) .illustration__figure {
+    -webkit-animation-delay: 0.4s;
+    animation-delay: 0.4s;
+  }
+}
+@media (min-width: 45em) {
+  .illustration__item--mobile {
+    display: none;
+  }
+}
+.illustration__container {
+  padding: 0 21px;
+}
+@media (max-width: 45em) {
+  .illustration__container {
+    width: auto !important;
+  }
+}
+@media (min-width: 45em) {
+  .illustration__container {
+    padding: 0;
+    position: absolute;
+    display: block;
+  }
+}
+@media (min-width: 45em) {
+  .illustration__container--hover {
+    z-index: 4;
+  }
+  .illustration__container--hover .illustration__figure {
+    -webkit-transform: translateY(-14px);
+    transform: translateY(-14px);
+  }
+  .illustration__container--hover .illustration__trigger-caption--contracted {
+    display: none;
+  }
+  .illustration__container--hover .illustration__hover-box {
+    display: block !important;
+  }
+}
+.illustration__trigger {
+  display: none;
+}
+@media (min-width: 45em) {
+  .illustration__trigger {
+    display: block;
+    position: absolute;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0);
+    margin-bottom: 0;
+  }
+  .illustration__trigger:focus {
+    /*
+          .illustration__trigger-caption {
+            background-image: data-uri('https://imdi-styles.firebaseapp.com/UI/gfx/square--red-dark.svg');
+          }
+          .illustration__trigger-caption--contracted {
+            display: inline-block;  
+          }
+          */
+  }
+  .illustration__trigger:focus + .illustration__figure {
+    -webkit-transform: translateY(-14px);
+    transform: translateY(-14px);
+  }
+  .illustration__trigger:focus .illustration__trigger-caption--contracted {
+    display: inline;
+    position: absolute;
+    overflow: hidden;
+    width: 1px;
+    height: 1px;
+  }
+  .illustration__trigger--expanded + .illustration__figure {
+    -webkit-transform: translateY(-14px);
+    transform: translateY(-14px);
+  }
+  .illustration__trigger--expanded .illustration__trigger-caption--expanded {
+    display: inline-block;
+  }
+  .illustration__trigger--expanded:focus .illustration__trigger-caption--expanded {
+    display: inline-block;
+  }
+  .illustration__trigger--expanded:focus .illustration__trigger-caption--contracted {
+    display: none;
+  }
+}
+.illustration__trigger-caption {
+  display: none;
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/gfx/square--red.svg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 2.5rem;
+  height: 2.5rem;
+  line-height: 2.5rem;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  -webkit-animation: animations__fade-in 300ms cubic-bezier(0, 0, 0.1, 1);
+  animation: animations__fade-in 300ms cubic-bezier(0, 0, 0.1, 1);
+  bottom: 5px;
+}
+.illustration__hover-box {
+  width: 20em;
+}
+@media (max-width: 45em) {
+  .illustration__hover-box {
+    display: block !important;
+    position: static;
+    left: auto !important;
+    bottom: auto !important;
+    -webkit-transform: none;
+    transform: none;
+    width: 100%;
+    padding: 0;
+    border: none;
+    max-width: none;
+    margin-bottom: 21px;
+  }
+  .illustration__hover-box .hover-box__point {
+    display: none;
+  }
+}
+.illustration__carousel-button {
+  position: absolute;
+  width: auto;
+  z-index: 2;
+}
+@media (min-width: 45em) {
+  .illustration__carousel-button {
+    display: none !important;
+  }
+}
+.illustration__carousel-button--previous {
+  left: 0;
+  bottom: 0;
+}
+.illustration__carousel-button--next {
+  right: 0;
+  bottom: 0;
+}
+
+/*------------------------------------*\
+    COLOR PALETTE
+\*------------------------------------*/
+/*------------------------------------*\
+    BREAKPOINTS
+\*------------------------------------*/
+/*------------------------------------*\
+    GRID
+\*------------------------------------*/
+/*------------------------------------*\
+    #TYPE
+\*------------------------------------*/
+/*------------------------------------*\
+    $LINE HEIGHTS
+\*------------------------------------*/
+/*------------------------------------*\
+    $MIXINS
+\*------------------------------------*/
+/*------------------------------------*\
+    $FONTS
+\*------------------------------------*/
+/*------------------------------------*\
+   GRID
+\*------------------------------------*/
+/* Based on the css from the Grid System in Bootstrap */
+/* http://getbootstrap.com/css/#grid */
+/*------------------------------------*\
+    ANIMATIONS
+\*------------------------------------*/
+/*------------------------------------*\
+    MEDIA QUERIES
+\*------------------------------------*/
+/*
+  In use:
+  .query-min(@screen--md; {
+        color: blue;
+    });
+    --
+    @fix-mqs
+
+*/
+.image-block {
+  margin-top: 42px;
+  margin-bottom: 42px;
+}
+.image-block__images {
+  position: relative;
+  z-index: 1;
+}
+.image-block__image {
+  display: block;
+  width: 100%;
+  margin-bottom: 14px;
+}
+.image-block__image--figure {
+  border: 3px solid #f2efed;
+  padding: 21px;
+  position: relative;
+}
+.image-block__image--figure h3.h4 {
+  margin-bottom: 10px;
+}
+.image-block__caption {
+  font-family: "Siri", Tahoma, sans-serif;
+  font-size-adjust: 0.51;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 15px;
+  font-size: 0.8333333333333334rem;
+  line-height: 1.4;
+  margin-bottom: 0px;
+  text-transform: none;
+  display: block;
+}
+.image-block__caption.embed {
+  display: block;
+}
+.image-block__caption.embed .graph-description {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  display: block;
+}
+.image-block--two-big-left,
+.image-block--two-big-right {
+  position: relative;
+}
+.image-block--two-big-left .image-block__images::before,
+.image-block--two-big-right .image-block__images::before,
+.image-block--two-big-left .image-block__images::after,
+.image-block--two-big-right .image-block__images::after {
+  content: "";
+  display: table;
+}
+.image-block--two-big-left .image-block__images::after,
+.image-block--two-big-right .image-block__images::after {
+  clear: both;
+}
+@media (min-width: 45em) {
+  .image-block--two-big-left .image-block__images,
+  .image-block--two-big-right .image-block__images {
+    margin-right: 21px;
+  }
+}
+@media print {
+  .image-block--two-big-left .image-block__images,
+  .image-block--two-big-right .image-block__images {
+    margin-right: 21px;
+  }
+}
+@media (min-width: 45em) {
+  .image-block--two-big-left .image-block__image:nth-child(2),
+  .image-block--two-big-right .image-block__image:nth-child(2) {
+    margin-left: 21px;
+    margin-right: -21px;
+  }
+}
+@media print {
+  .image-block--two-big-left .image-block__image:nth-child(2),
+  .image-block--two-big-right .image-block__image:nth-child(2) {
+    margin-left: 21px;
+    margin-right: -21px;
+  }
+}
+.image-block--two-big-left .image-block__image--small,
+.image-block--two-big-right .image-block__image--small {
+  margin-left: 21px;
+  width: 50%;
+}
+@media (min-width: 45em) {
+  .image-block--two-big-left .image-block__image--small,
+  .image-block--two-big-right .image-block__image--small {
+    margin-left: 0;
+    float: left;
+    width: 30.76923077%;
+  }
+}
+@media print {
+  .image-block--two-big-left .image-block__image--small,
+  .image-block--two-big-right .image-block__image--small {
+    margin-left: 0;
+    float: left;
+    width: 30.76923077%;
+  }
+}
+@media (min-width: 45em) {
+  .image-block--two-big-left .image-block__image--big,
+  .image-block--two-big-right .image-block__image--big {
+    float: left;
+    width: 69.23076923%;
+  }
+}
+@media print {
+  .image-block--two-big-left .image-block__image--big,
+  .image-block--two-big-right .image-block__image--big {
+    float: left;
+    width: 69.23076923%;
+  }
+}
+@media (min-width: 22em) {
+  .image-block--portrait .image-block__images {
+    width: 50%;
+  }
+}
+@media print {
+  .image-block--portrait .image-block__images {
+    width: 50%;
+  }
+}
+@media (min-width: 57em) {
+  .image-block--portrait .image-block__images {
+    width: 50%;
+  }
+}
+@media print {
+  .image-block--portrait .image-block__images {
+    width: 50%;
+  }
+}
+.image-block__figure-footer {
+  background: #f2efed;
+  position: absolute;
+  width: auto;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+/*------------------------------------*\
+    COLOR PALETTE
+\*------------------------------------*/
+/*------------------------------------*\
+    BREAKPOINTS
+\*------------------------------------*/
+/*------------------------------------*\
+    GRID
+\*------------------------------------*/
+/*------------------------------------*\
+    #TYPE
+\*------------------------------------*/
+/*------------------------------------*\
+    $LINE HEIGHTS
+\*------------------------------------*/
+/*------------------------------------*\
+    $MIXINS
+\*------------------------------------*/
+/*------------------------------------*\
+    $FONTS
+\*------------------------------------*/
+/*------------------------------------*\
+   GRID
+\*------------------------------------*/
+/* Based on the css from the Grid System in Bootstrap */
+/* http://getbootstrap.com/css/#grid */
+/*------------------------------------*\
+    ANIMATIONS
+\*------------------------------------*/
+/*------------------------------------*\
+    MEDIA QUERIES
+\*------------------------------------*/
+/*
+  In use:
+  .query-min(@screen--md; {
+        color: blue;
+    });
+    --
+    @fix-mqs
+
+*/
+.indicator {
+  background: #ffffff;
+  padding: 21px;
+  margin-bottom: 21px;
+}
+@media print {
+  .indicator {
+    padding: 0;
+    background: none;
+  }
+}
+.indicator__primary {
+  font-family: "Siri Medium", Tahoma, sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 20px;
+  font-size: 1.1111111111111112rem;
+  line-height: 1.45833333;
+  margin-bottom: 14px;
+  text-transform: none;
+  margin-bottom: 0;
+}
+@media (min-width: 22em) {
+  .indicator__primary {
+    font-size: 22px;
+    font-size: 1.2222222222222223rem;
+  }
+}
+@media (min-width: 45em) {
+  .indicator__primary {
+    font-size: 24px;
+    font-size: 1.3333333333333333rem;
+  }
+}
+.indicator__secondary {
+  font-family: "Siri", Tahoma, sans-serif;
+  font-size-adjust: 0.51;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 15px;
+  font-size: 0.8333333333333334rem;
+  line-height: 1.4;
+  margin-bottom: 0px;
+  text-transform: none;
+  margin-bottom: 21px;
+}
+.indicator__graph {
+  margin: 21px 0;
+}
+.indicator__graph img {
+  width: 100%;
+  max-width: none;
+}
+.indicator__cta {
+  margin-bottom: 0;
+}
+.indicator__subtext {
+  font-family: "Siri", Tahoma, sans-serif;
+  font-size-adjust: 0.51;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 15px;
+  font-size: 0.8333333333333334rem;
+  line-height: 1.4;
+  margin-bottom: 0px;
+  text-transform: none;
+  color: #585858;
+}
+.indicator__subtext a {
+  color: #585858;
+  border-color: #585858;
+}
+
+/*------------------------------------*\
+    COLOR PALETTE
+\*------------------------------------*/
+/*------------------------------------*\
+    BREAKPOINTS
+\*------------------------------------*/
+/*------------------------------------*\
+    GRID
+\*------------------------------------*/
+/*------------------------------------*\
+    #TYPE
+\*------------------------------------*/
+/*------------------------------------*\
+    $LINE HEIGHTS
+\*------------------------------------*/
+/*------------------------------------*\
+    $MIXINS
+\*------------------------------------*/
+/*------------------------------------*\
+    $FONTS
+\*------------------------------------*/
+/*------------------------------------*\
+   GRID
+\*------------------------------------*/
+/* Based on the css from the Grid System in Bootstrap */
+/* http://getbootstrap.com/css/#grid */
+/*------------------------------------*\
+    ANIMATIONS
+\*------------------------------------*/
+/*------------------------------------*\
+    MEDIA QUERIES
+\*------------------------------------*/
+/*
+  In use:
+  .query-min(@screen--md; {
+        color: blue;
+    });
+    --
+    @fix-mqs
+
+*/
+.info {
+  margin-bottom: 21px;
+}
+@media (min-width: 45em) {
+  .info {
+    margin-bottom: 42px;
+  }
+}
+.info--inline {
+  margin: 0;
+}
+.info__title {
+  font-family: "Siri", Tahoma, sans-serif;
+  font-size-adjust: 0.51;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 15px;
+  font-size: 0.8333333333333334rem;
+  line-height: 1.4;
+  margin-bottom: 0px;
+  text-transform: none;
+  margin-bottom: 0;
+  font-weight: normal !important;
+  display: block;
+}
+.info__number-caption {
+  font-family: "Siri", Tahoma, sans-serif;
+  font-size-adjust: 0.51;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 15px;
+  font-size: 0.8333333333333334rem;
+  line-height: 1.4;
+  margin-bottom: 0px;
+  text-transform: none;
+  display: block;
+}
+.info--large .info__title {
+  font-family: "Siri", Tahoma, sans-serif;
+  font-size-adjust: 0.51;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 18px;
+  font-size: 1rem;
+  line-height: 1.55555556;
+  margin-bottom: 14px;
+  text-transform: none;
+  margin-bottom: 0;
+}
+.info--large p {
+  font-family: "Siri Medium", Tahoma, sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 20px;
+  font-size: 1.1111111111111112rem;
+  line-height: 1.45833333;
+  margin-bottom: 14px;
+  text-transform: none;
+}
+@media (min-width: 22em) {
+  .info--large p {
+    font-size: 22px;
+    font-size: 1.2222222222222223rem;
+  }
+}
+@media (min-width: 45em) {
+  .info--large p {
+    font-size: 24px;
+    font-size: 1.3333333333333333rem;
+  }
+}
+.info--xlarge .info__title {
+  font-family: "Siri", Tahoma, sans-serif;
+  font-size-adjust: 0.51;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 18px;
+  font-size: 1rem;
+  line-height: 1.55555556;
+  margin-bottom: 14px;
+  text-transform: none;
+  margin-bottom: 0;
+}
+.info--xlarge p {
+  font-family: "Siri", Tahoma, sans-serif;
+  font-size-adjust: 0.51;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 34px;
+  font-size: 1.8888888888888888rem;
+  line-height: 1.15384615;
+  margin-bottom: 18px;
+  word-wrap: normal;
+  text-transform: none;
+  margin-top: 14px;
+}
+@media (min-width: 22em) {
+  .info--xlarge p {
+    font-size: 42px;
+    font-size: 2.3333333333333335rem;
+    margin-bottom: 22px;
+  }
+}
+@media (min-width: 45em) {
+  .info--xlarge p {
+    font-size: 52px;
+    font-size: 2.888888888888889rem;
+    margin-bottom: 28px;
+  }
+}
+@media print {
+  .info--xlarge p {
+    font-size: 42px;
+    font-size: 2.3333333333333335rem;
+    margin-bottom: 22px;
+  }
+}
+.info--numbers .info__title {
+  font-family: "Siri", Tahoma, sans-serif;
+  font-size-adjust: 0.51;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 18px;
+  font-size: 1rem;
+  line-height: 1.55555556;
+  margin-bottom: 14px;
+  text-transform: none;
+  margin-bottom: 0;
+}
+.info--numbers p {
+  font-family: "Siri Medium", Tahoma, sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  font-size: 1.3333333333333333rem;
+  line-height: 1.3125;
+  margin-bottom: 21px;
+  text-transform: none;
+}
+@media (min-width: 22em) {
+  .info--numbers p {
+    font-size: 26px;
+    font-size: 1.4444444444444444rem;
+  }
+}
+@media (min-width: 45em) {
+  .info--numbers p {
+    font-size: 32px;
+    font-size: 1.7777777777777777rem;
+  }
+}
+
+/*------------------------------------*\
+    COLOR PALETTE
+\*------------------------------------*/
+/*------------------------------------*\
+    BREAKPOINTS
+\*------------------------------------*/
+/*------------------------------------*\
+    GRID
+\*------------------------------------*/
+/*------------------------------------*\
+    #TYPE
+\*------------------------------------*/
+/*------------------------------------*\
+    $LINE HEIGHTS
+\*------------------------------------*/
+/*------------------------------------*\
+    $MIXINS
+\*------------------------------------*/
+/*------------------------------------*\
+    $FONTS
+\*------------------------------------*/
+/*------------------------------------*\
+   GRID
+\*------------------------------------*/
+/* Based on the css from the Grid System in Bootstrap */
+/* http://getbootstrap.com/css/#grid */
+/*------------------------------------*\
+    ANIMATIONS
+\*------------------------------------*/
+/*------------------------------------*\
+    MEDIA QUERIES
+\*------------------------------------*/
+/*
+  In use:
+  .query-min(@screen--md; {
+        color: blue;
+    });
+    --
+    @fix-mqs
+
+*/
+.ingress {
+  font-family: "Siri", Tahoma, sans-serif;
+  font-size-adjust: 0.51;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 20px;
+  font-size: 1.1111111111111112rem;
+  line-height: 1.45833333;
+  margin-bottom: 28px;
+  text-transform: none;
+  margin-bottom: 42px;
+}
+@media (min-width: 45em) {
+  .ingress {
+    font-size: 24px;
+    font-size: 1.3333333333333333rem;
+  }
+}
+@media (min-width: 45em) {
+  .ingress {
+    margin-bottom: 42px;
+  }
+}
+@media (min-width: 45em) {
+  .ingress {
+    margin-bottom: 42px;
+  }
+}
+.ingress p {
+  font-family: "Siri", Tahoma, sans-serif;
+  font-size-adjust: 0.51;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 20px;
+  font-size: 1.1111111111111112rem;
+  line-height: 1.45833333;
+  margin-bottom: 28px;
+  text-transform: none;
+}
+@media (min-width: 45em) {
+  .ingress p {
+    font-size: 24px;
+    font-size: 1.3333333333333333rem;
+  }
+}
+
+/*------------------------------------*\
+    COLOR PALETTE
+\*------------------------------------*/
+/*------------------------------------*\
+    BREAKPOINTS
+\*------------------------------------*/
+/*------------------------------------*\
+    GRID
+\*------------------------------------*/
+/*------------------------------------*\
+    #TYPE
+\*------------------------------------*/
+/*------------------------------------*\
+    $LINE HEIGHTS
+\*------------------------------------*/
+/*------------------------------------*\
+    $MIXINS
+\*------------------------------------*/
+/*------------------------------------*\
+    $FONTS
+\*------------------------------------*/
+/*------------------------------------*\
+   GRID
+\*------------------------------------*/
+/* Based on the css from the Grid System in Bootstrap */
+/* http://getbootstrap.com/css/#grid */
+/*------------------------------------*\
+    ANIMATIONS
+\*------------------------------------*/
+/*------------------------------------*\
+    MEDIA QUERIES
+\*------------------------------------*/
+/*
+  In use:
+  .query-min(@screen--md; {
+        color: blue;
+    });
+    --
+    @fix-mqs
+
+*/
+.lightbox__box .lightbox__footer button.button,
+.lightbox__box .lightbox__footer button.button:hover {
+  background-color: white;
+  color: #333;
+}
+@media screen and (max-width: 340px) {
+  .lightbox__box .t-no-list-styles .col--flow:nth-last-child(-n+5) {
+    display: none;
+  }
+}
+.lightbox--animate {
+  -webkit-animation: animations__fade-in 200ms cubic-bezier(0, 0, 0.1, 1);
+  animation: animations__fade-in 200ms cubic-bezier(0, 0, 0.1, 1);
+}
+.lightbox__box {
+  /*
+		-webkit-box-shadow: 0px 0px 111px -24px rgba(0,0,0,0.50);
+		-moz-box-shadow: 0px 0px 111px -24px rgba(0,0,0,0.50);
+		box-shadow: 0px 0px 111px -24px rgba(0,0,0,0.50);
+		*/
+  position: absolute;
+  z-index: 3;
+  top: 4.5rem;
+  left: 0;
+  border: 3px solid #f15540;
+  background: #ffffff;
+  margin-top: 0;
+  margin-bottom: 42px;
+  margin-left: -21px;
+  margin-right: -21px;
+  padding: 21px 21px;
+  text-align: left;
+}
+@media (min-width: 45em) {
+  .lightbox__box {
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+  }
+}
+@media (min-width: 57em) {
+  .lightbox__box {
+    padding: 21px;
+    padding-bottom: 21px;
+  }
+}
+.lightbox__point {
+  display: block;
+  position: absolute;
+  background: #ffffff;
+  border-top: 3px solid #f15540;
+  border-left: 3px solid #f15540;
+  height: 21px;
+  width: 21px;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  top: -12.5px;
+}
+.lightbox__title {
+  font-family: "Siri Medium", Tahoma, sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 16px;
+  font-size: 0.8888888888888888rem;
+  line-height: 1.75;
+  margin-bottom: 0px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 21px;
+  color: #585858;
+}
+.lightbox__close-button {
+  font-family: "Siri Medium", Tahoma, sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  font-size: 1.3333333333333333rem;
+  line-height: 1.3125;
+  margin-bottom: 21px;
+  text-transform: none;
+  line-height: 1;
+  margin: 0;
+  display: inline-block;
+  float: right;
+  padding: 7px;
+  margin-top: -14px;
+  margin-right: -7px;
+  white-space: nowrap;
+  overflow: hidden;
+  background: #ffffff;
+  width: auto;
+}
+@media (min-width: 22em) {
+  .lightbox__close-button {
+    font-size: 26px;
+    font-size: 1.4444444444444444rem;
+  }
+}
+@media (min-width: 45em) {
+  .lightbox__close-button {
+    font-size: 32px;
+    font-size: 1.7777777777777777rem;
+  }
+}
+.lightbox__close-button:hover,
+.lightbox__close-button:focus,
+.lightbox__close-button:active {
+  background: #f2efed;
+}
+.lightbox__footer {
+  margin-top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.lightbox__footer button.button,
+.lightbox__footer button.button:hover {
+  background-color: white;
+  color: #333;
+}
+.lightbox--second-column .lightbox__box {
+  top: 8.5rem;
+}
+@media (min-width: 45em) {
+  .lightbox--second-column .lightbox__box {
+    top: 4.5rem;
+  }
+}
+@media (min-width: 45em) {
+  .lightbox--second-column .lightbox__point {
+    left: calc(35.33%);
+  }
+}
+@media (min-width: 57em) {
+  .lightbox--second-column .lightbox__point {
+    left: calc(22%);
+  }
+}
+.lightbox--as-overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #ffffff;
+  border: none;
+}
+@media (min-width: 45em) {
+  .lightbox--as-overlay {
+    background: rgba(0, 0, 0, 0.2);
+  }
+}
+.lightbox--as-overlay .lightbox__point {
+  display: none;
+}
+.lightbox--as-overlay .lightbox__box {
+  border-color: transparent;
+  position: absolute;
+  z-index: 2;
+}
+@media (min-width: 45em) {
+  .lightbox--as-overlay .lightbox__box {
+    border-color: #f2efed;
+    margin: 0 auto;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    max-width: 25em;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+}
+.lightbox--as-popup {
+  position: relative;
+  border: none;
+}
+.lightbox--as-popup .lightbox__point {
+  top: auto;
+  -webkit-transform: rotate(225deg);
+  transform: rotate(225deg);
+  bottom: -11.5px;
+}
+@media (min-width: 45em) {
+  .lightbox--as-popup .lightbox__point {
+    margin-left: 220px;
+  }
+}
+.lightbox--as-popup .lightbox__box {
+  margin-top: 0;
+  border-color: transparent;
+  z-index: 2;
+  top: 0;
+  position: absolute;
+  border-color: #f15540;
+  -webkit-transform: translate(0, -100%);
+  transform: translate(0, -100%);
+  margin-top: -21px;
+}
+@media (min-width: 45em) {
+  .lightbox--as-popup .lightbox__box {
+    width: 25em;
+    left: auto;
+    right: 0;
+  }
+}
+.lightbox--as-popup.lightbox--animate {
+  -webkit-animation: animations__fade-in 200ms cubic-bezier(0, 0, 0.1, 1);
+  animation: animations__fade-in 200ms cubic-bezier(0, 0, 0.1, 1);
+}
+.lightbox--inline {
+  position: static;
+}
+@media screen and (max-width: 340px) {
+  .lightbox__box .t-no-list-styles .col--flow:nth-last-child(-n+5) {
+    display: none;
+  }
+}
+
+/*------------------------------------*\
+    COLOR PALETTE
+\*------------------------------------*/
+/*------------------------------------*\
+    BREAKPOINTS
+\*------------------------------------*/
+/*------------------------------------*\
+    GRID
+\*------------------------------------*/
+/*------------------------------------*\
+    #TYPE
+\*------------------------------------*/
+/*------------------------------------*\
+    $LINE HEIGHTS
+\*------------------------------------*/
+/*------------------------------------*\
+    $MIXINS
+\*------------------------------------*/
+/*------------------------------------*\
+    $FONTS
+\*------------------------------------*/
+/*------------------------------------*\
+   GRID
+\*------------------------------------*/
+/* Based on the css from the Grid System in Bootstrap */
+/* http://getbootstrap.com/css/#grid */
+/*------------------------------------*\
+    ANIMATIONS
+\*------------------------------------*/
+/*------------------------------------*\
+    MEDIA QUERIES
+\*------------------------------------*/
+/*
+  In use:
+  .query-min(@screen--md; {
+        color: blue;
+    });
+    --
+    @fix-mqs
+
+*/
+.line {
+  border-top: 3px solid #f2efed;
+  border-bottom: none;
+  margin: 0 0 42px 0;
+}
+.line--light {
+  border-color: #f2efed;
+}
+
+/*------------------------------------*\
+    COLOR PALETTE
+\*------------------------------------*/
+/*------------------------------------*\
+    BREAKPOINTS
+\*------------------------------------*/
+/*------------------------------------*\
+    GRID
+\*------------------------------------*/
+/*------------------------------------*\
+    #TYPE
+\*------------------------------------*/
+/*------------------------------------*\
+    $LINE HEIGHTS
+\*------------------------------------*/
+/*------------------------------------*\
+    $MIXINS
+\*------------------------------------*/
+/*------------------------------------*\
+    $FONTS
+\*------------------------------------*/
+/*------------------------------------*\
+   GRID
+\*------------------------------------*/
+/* Based on the css from the Grid System in Bootstrap */
+/* http://getbootstrap.com/css/#grid */
+/*------------------------------------*\
+    ANIMATIONS
+\*------------------------------------*/
+/*------------------------------------*\
+    MEDIA QUERIES
+\*------------------------------------*/
+/*
+  In use:
+  .query-min(@screen--md; {
+        color: blue;
+    });
+    --
+    @fix-mqs
+
+*/
+.loading-indicator {
+  display: inline-block;
+  height: 1em;
+  width: 1em;
+  speak: none;
+  vertical-align: middle;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/icon-update.svg');
+  -webkit-animation: spin 800ms linear infinite;
+  animation: spin 800ms linear infinite;
+}
+.loading-indicator--white {
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/white/icon-update.svg');
+}
+
+/*------------------------------------*\
+    COLOR PALETTE
+\*------------------------------------*/
+/*------------------------------------*\
+    BREAKPOINTS
+\*------------------------------------*/
+/*------------------------------------*\
+    GRID
+\*------------------------------------*/
+/*------------------------------------*\
+    #TYPE
+\*------------------------------------*/
+/*------------------------------------*\
+    $LINE HEIGHTS
+\*------------------------------------*/
+/*------------------------------------*\
+    $MIXINS
+\*------------------------------------*/
+/*------------------------------------*\
+    $FONTS
+\*------------------------------------*/
+/*------------------------------------*\
+   GRID
+\*------------------------------------*/
+/* Based on the css from the Grid System in Bootstrap */
+/* http://getbootstrap.com/css/#grid */
+/*------------------------------------*\
+    ANIMATIONS
+\*------------------------------------*/
+/*------------------------------------*\
+    MEDIA QUERIES
+\*------------------------------------*/
+/*
+  In use:
+  .query-min(@screen--md; {
+        color: blue;
+    });
+    --
+    @fix-mqs
+
+*/
+.masked-figure {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding: 0;
+}
+.masked-figure--square {
+  padding-bottom: 100%;
+}
+.masked-figure--height-relative {
+  position: absolute;
+  height: 100%;
+  left: 0;
+  max-width: none;
+  overflow: hidden;
+}
+.masked-figure--height-relative .masked-figure__svg {
+  width: auto;
+  height: 100%;
+}
+.masked-figure__svg {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0;
+}
+
+/*------------------------------------*\
+    COLOR PALETTE
+\*------------------------------------*/
+/*------------------------------------*\
+    BREAKPOINTS
+\*------------------------------------*/
+/*------------------------------------*\
+    GRID
+\*------------------------------------*/
+/*------------------------------------*\
+    #TYPE
+\*------------------------------------*/
+/*------------------------------------*\
+    $LINE HEIGHTS
+\*------------------------------------*/
+/*------------------------------------*\
+    $MIXINS
+\*------------------------------------*/
+/*------------------------------------*\
+    $FONTS
+\*------------------------------------*/
+/*------------------------------------*\
+   GRID
+\*------------------------------------*/
+/* Based on the css from the Grid System in Bootstrap */
+/* http://getbootstrap.com/css/#grid */
+/*------------------------------------*\
+    ANIMATIONS
+\*------------------------------------*/
+/*------------------------------------*\
+    MEDIA QUERIES
+\*------------------------------------*/
+/*
+  In use:
+  .query-min(@screen--md; {
+        color: blue;
+    });
+    --
+    @fix-mqs
+
+*/
+.menu-deeplinks {
+  margin-top: 42px;
+  margin-bottom: 100px;
+  margin-left: -10.5px;
+  margin-right: -10.5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.menu-deeplinks__item {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 21px;
+}
+@media (min-width: 45em) {
+  .menu-deeplinks__item {
+    width: 50%;
+  }
+}
+@media (min-width: 57em) {
+  .menu-deeplinks__item {
+    width: 33.333%;
+  }
+}
+.menu-deeplinks__content {
+  padding: 30px;
+  border: 3px solid #f2efed;
+  margin: 10.5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.menu-deeplinks__heading {
+  position: relative;
+  background: #fff;
+}
+.menu-deeplinks__title {
+  font-size: 20px;
+  font-weight: 800;
+  text-align: left;
+  margin-left: 0px;
+  margin-top: 42px;
+  text-transform: uppercase;
+}
+.menu-deeplinks__icon {
+  position: absolute;
+  background: #fff;
+  border: 2px solid #51a451;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  left: 14px;
+  width: 42px;
+  height: 42px;
+  font-size: 21px;
+  top: -42px;
+}
+.menu-deeplinks__icon i {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  position: absolute;
+  top: 7px;
+  left: 7px;
+}
+.menu-deeplinks__list {
+  display: block;
+  margin-top: 21px;
+}
+.menu-deeplinks__list-item {
+  color: #000;
+  cursor: pointer;
+  display: block;
+  padding: 2px 0 5px;
+  margin-bottom: 7px;
+  margin-right: 14px;
+  border-bottom: 1px solid #000;
+  -webkit-transition: all .2s ease;
+  transition: all .2s ease;
+}
+.menu-deeplinks__list-item:hover {
+  color: #df2525;
+  border-bottom: 1px solid #df2525;
+}
+.menu-deeplinks__list-item i {
+  float: right;
+}
+.menu-deeplinks__see-all {
+  margin-top: auto;
+  padding-top: 42px;
+  text-align: left;
+}
+.menu-deeplinks__see-all a {
+  color: #000;
+  border: 0;
+}
+.menu-deeplinks__see-all a:hover {
+  color: #d83a36;
+  border-bottom: 1px solid #d83a36;
+}
+
+/*------------------------------------*\
+    COLOR PALETTE
+\*------------------------------------*/
+/*------------------------------------*\
+    BREAKPOINTS
+\*------------------------------------*/
+/*------------------------------------*\
+    GRID
+\*------------------------------------*/
+/*------------------------------------*\
+    #TYPE
+\*------------------------------------*/
+/*------------------------------------*\
+    $LINE HEIGHTS
+\*------------------------------------*/
+/*------------------------------------*\
+    $MIXINS
+\*------------------------------------*/
+/*------------------------------------*\
+    $FONTS
+\*------------------------------------*/
+/*------------------------------------*\
+   GRID
+\*------------------------------------*/
+/* Based on the css from the Grid System in Bootstrap */
+/* http://getbootstrap.com/css/#grid */
+/*------------------------------------*\
+    ANIMATIONS
+\*------------------------------------*/
+/*------------------------------------*\
+    MEDIA QUERIES
+\*------------------------------------*/
+/*
+  In use:
+  .query-min(@screen--md; {
+        color: blue;
+    });
+    --
+    @fix-mqs
+
+*/
+.menu-frontpage {
+  margin-top: 42px;
+  margin-bottom: 100px;
+  margin-left: -10.5px;
+  margin-right: -10.5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.menu-frontpage a {
+  color: #282828;
+}
+.menu-frontpage__item {
+  width: 100%;
+  margin-bottom: 21px;
+}
+@media (min-width: 57em) {
+  .menu-frontpage__item {
+    width: 50%;
+  }
+}
+@media (min-width: 1300px) {
+  .menu-frontpage__item {
+    width: 33.333%;
+  }
+}
+.menu-frontpage__content {
+  padding: 30px;
+  background: #f1f1f1;
+  cursor: pointer;
+  margin: 10.5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  height: 100%;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+.menu-frontpage__content:hover {
+  background: #50a450;
+  color: #fff;
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+}
+.menu-frontpage__content:hover .menu-frontpage__desc {
+  color: #fff;
+}
+.menu-frontpage__content:hover .icon--green {
+  opacity: 0;
+}
+.menu-frontpage__content:hover .icon--white {
+  opacity: 1;
+}
+.menu-frontpage__icon {
+  display: inline-block;
+  position: relative;
+  width: 42px;
+  font-size: 42px;
+}
+.menu-frontpage__icon i {
+  width: 42px;
+  height: 42px;
+}
+.menu-frontpage__icon .icon--green {
+  position: absolute;
+  opacity: 1;
+}
+.menu-frontpage__icon .icon--white {
+  position: absolute;
+  opacity: 0;
+}
+.menu-frontpage__text {
+  margin-left: 42px;
+}
+.menu-frontpage__title {
+  display: inline-block;
+  font-size: 1.3rem;
+  font-weight: 800;
+  text-align: left;
+  margin-top: 14px;
+  margin-bottom: 21px;
+}
+.menu-frontpage__tags {
+  display: block;
+  width: calc(100% + 58px);
+  -webkit-transform: translateX(-58px);
+          transform: translateX(-58px);
+}
+.menu-frontpage__tags ul {
+  margin: 0;
+  padding: 0;
+}
+.menu-frontpage__tag,
+.menu-frontpage ul li {
+  line-height: 0;
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  margin-right: 21px;
+  padding-bottom: 12px;
+  position: relative;
+  line-height: 8px;
+}
+.menu-frontpage__tag:after,
+.menu-frontpage ul li:after {
+  content: '';
+  width: 5px;
+  height: 5px;
+  right: -14px;
+  top: 25%;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  position: absolute;
+  -webkit-transform: translateY(-5px) rotate(45deg) scale(1);
+          transform: translateY(-5px) rotate(45deg) scale(1);
+  background: #50a450;
+}
+.menu-frontpage__tag:last-child:after,
+.menu-frontpage ul li:last-child:after {
+  display: none;
+}
+.menu-frontpage__content:hover ul li:after {
+  background: #fff;
+  -webkit-transform: translateY(-5px) rotate(45deg) scale(1.2);
+          transform: translateY(-5px) rotate(45deg) scale(1.2);
+}
+
+/*------------------------------------*\
+    COLOR PALETTE
+\*------------------------------------*/
+/*------------------------------------*\
+    BREAKPOINTS
+\*------------------------------------*/
+/*------------------------------------*\
+    GRID
+\*------------------------------------*/
+/*------------------------------------*\
+    #TYPE
+\*------------------------------------*/
+/*------------------------------------*\
+    $LINE HEIGHTS
+\*------------------------------------*/
+/*------------------------------------*\
+    $MIXINS
+\*------------------------------------*/
+/*------------------------------------*\
+    $FONTS
+\*------------------------------------*/
+/*------------------------------------*\
+   GRID
+\*------------------------------------*/
+/* Based on the css from the Grid System in Bootstrap */
+/* http://getbootstrap.com/css/#grid */
+/*------------------------------------*\
+    ANIMATIONS
+\*------------------------------------*/
+/*------------------------------------*\
+    MEDIA QUERIES
+\*------------------------------------*/
+/*
+  In use:
+  .query-min(@screen--md; {
+        color: blue;
+    });
+    --
+    @fix-mqs
+
+*/
+.message {
+  display: block;
+  position: relative;
+  padding-top: 3px;
+  padding-left: 42px;
+  margin: 7px 0;
+  margin-bottom: 21px;
+  color: #d83a36;
+  font-size: 24px;
+  font-size: 1.3333333333333333rem;
+}
+@media (min-width: 45em) {
+  .message {
+    padding-left: 0;
+  }
+}
+.message__icon {
+  font-size: 15px;
+  font-size: 0.8333333333333334rem;
+  position: absolute;
+  display: block;
+  width: 2rem;
+  height: 2rem;
+  line-height: 2rem;
+  text-align: center;
+  top: -3px;
+  left: 0;
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/gfx/square--red.svg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  color: #ffffff;
+}
+@media (min-width: 45em) {
+  .message__icon {
+    left: -2rem;
+    margin-left: -7px;
+  }
+}
+.message--ok {
+  color: #282828;
+}
+.message--ok .message__icon {
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/gfx/square--green.svg');
+}
+.message--info {
+  color: #282828;
+}
+.message--info .message__icon {
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/gfx/square--yellow.svg');
+}
+.message--inline {
+  margin-bottom: 7px;
+  padding: 7px 0;
+  font-size: 18px;
+  font-size: 1rem;
+}
+.message--inline .message__icon {
+  top: 0px;
+}
+
+/*------------------------------------*\
+    COLOR PALETTE
+\*------------------------------------*/
+/*------------------------------------*\
+    BREAKPOINTS
+\*------------------------------------*/
+/*------------------------------------*\
+    GRID
+\*------------------------------------*/
+/*------------------------------------*\
+    #TYPE
+\*------------------------------------*/
+/*------------------------------------*\
+    $LINE HEIGHTS
+\*------------------------------------*/
+/*------------------------------------*\
+    $MIXINS
+\*------------------------------------*/
+/*------------------------------------*\
+    $FONTS
+\*------------------------------------*/
+/*------------------------------------*\
+   GRID
+\*------------------------------------*/
+/* Based on the css from the Grid System in Bootstrap */
+/* http://getbootstrap.com/css/#grid */
+/*------------------------------------*\
+    ANIMATIONS
+\*------------------------------------*/
+/*------------------------------------*\
+    MEDIA QUERIES
+\*------------------------------------*/
+/*
+  In use:
+  .query-min(@screen--md; {
+        color: blue;
+    });
+    --
+    @fix-mqs
+
+*/
+.meta {
+  font-family: "Siri", Tahoma, sans-serif;
+  font-size-adjust: 0.51;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 15px;
+  font-size: 0.8333333333333334rem;
+  line-height: 1.4;
+  margin-bottom: 0px;
+  text-transform: none;
+  color: #585858;
+  margin-bottom: 42px;
+}
+.meta--bottom {
+  margin-top: 42px;
+}
+.meta--no-margin {
+  margin: 0 !important;
+}
+.meta__button {
+  display: block;
+  background: #f2efed;
+  padding: 10px;
+}
+@media (min-width: 45em) {
+  .meta__button {
+    display: inline-block;
+    margin-top: 0;
+  }
+}
+.ingress + .meta {
+  margin-top: -14px;
+}
+@media (min-width: 45em) {
+  .ingress + .meta {
+    margin-bottom: 42px;
+  }
+}
+@media (min-width: 45em) {
+  .ingress + .meta {
+    margin-bottom: 42px;
+  }
+}
+@media print {
+  .ingress + .meta {
+    margin-bottom: 21px;
+  }
+}
+
+/*------------------------------------*\
+    COLOR PALETTE
+\*------------------------------------*/
+/*------------------------------------*\
+    BREAKPOINTS
+\*------------------------------------*/
+/*------------------------------------*\
+    GRID
+\*------------------------------------*/
+/*------------------------------------*\
+    #TYPE
+\*------------------------------------*/
+/*------------------------------------*\
+    $LINE HEIGHTS
+\*------------------------------------*/
+/*------------------------------------*\
+    $MIXINS
+\*------------------------------------*/
+/*------------------------------------*\
+    $FONTS
+\*------------------------------------*/
+/*------------------------------------*\
+   GRID
+\*------------------------------------*/
+/* Based on the css from the Grid System in Bootstrap */
+/* http://getbootstrap.com/css/#grid */
+/*------------------------------------*\
+    ANIMATIONS
+\*------------------------------------*/
+/*------------------------------------*\
+    MEDIA QUERIES
+\*------------------------------------*/
+/*
+  In use:
+  .query-min(@screen--md; {
+        color: blue;
+    });
+    --
+    @fix-mqs
+
+*/
+.navigation {
+  margin-top: 7px;
+  margin-bottom: 42px;
+}
+@media (min-width: 22em) {
+  .navigation {
+    margin-top: 21px;
+  }
+}
+@media (min-width: 57em) {
+  .navigation {
+    margin-top: 21px;
+  }
+}
+@media print {
+  .navigation {
+    margin-bottom: 30px;
+  }
+}
+.navigation h2,
+.navigation h3,
+.navigation h4 {
+  margin-bottom: 21px;
+}
+.navigation__title {
+  font-family: "Siri Medium", Tahoma, sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 16px;
+  font-size: 0.8888888888888888rem;
+  line-height: 1.75;
+  margin-bottom: 0px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.navigation__link {
+  display: block;
+  border-bottom: 1px solid #f15540;
+  margin-bottom: 7px;
+  padding: 2px 0 5px 0;
+  -webkit-transition: border-color 0.2s ease;
+  transition: border-color 0.2s ease;
+}
+.navigation__link--primary {
+  font-family: "Siri Medium", Tahoma, sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 20px;
+  font-size: 1.1111111111111112rem;
+  border: none;
+  line-height: 1;
+  margin: 0;
+  padding: 21px 0 18px 0;
+  border-bottom: 1px solid #f15540;
+  color: #d83a36;
+  position: relative;
+}
+@media (min-width: 22em) {
+  .navigation__link--primary {
+    font-size: 22px;
+    font-size: 1.2222222222222223rem;
+  }
+}
+@media (min-width: 45em) {
+  .navigation__link--primary {
+    padding: 24px 0 14px 0;
+    font-size: 24px;
+    font-size: 1.3333333333333333rem;
+    line-height: 1.45833333;
+  }
+}
+.navigation__link--primary i {
+  float: right;
+}
+.navigation__link--primary:hover,
+.navigation__link--primary:focus,
+.navigation__link--primary:active {
+  color: #282828;
+  border-color: #282828;
+}
+@media print {
+  .navigation__link--anchor {
+    color: #282828;
+    border-bottom-color: #282828;
+  }
+}
+.navigation__link-icon {
+  margin-left: 0.25em;
+}
+.navigation--footer .navigation__link {
+  display: inline-block;
+  padding-bottom: 0;
+  margin-bottom: 0;
+  border-bottom: 1px solid #d83a36;
+}
+.navigation--footer .navigation__link:hover,
+.navigation--footer .navigation__link:focus,
+.navigation--footer .navigation__link:active {
+  border-color: #ffffff;
+}
+.navigation--footer .navigation__link--primary {
+  display: inline-block;
+  padding-bottom: 5px;
+  font-size: 24px;
+  font-size: 1.3333333333333333rem;
+  margin: 0;
+  margin-bottom: 7px;
+  border-bottom: 1px solid transparent;
+}
+@media (min-width: 22em) {
+  .navigation--footer .navigation__link--primary {
+    font-size: 26px;
+    font-size: 1.4444444444444444rem;
+  }
+}
+@media (min-width: 22em) {
+  .navigation--footer .navigation__link--primary {
+    font-size: 32px;
+    font-size: 1.7777777777777777rem;
+  }
+}
+.navigation--footer .navigation__link--primary:hover,
+.navigation--footer .navigation__link--primary:focus,
+.navigation--footer .navigation__link--primary:active {
+  border-color: #ffffff;
+}
+.navigation--top-menu .navigation__link {
+  display: inline-block;
+  padding-bottom: 0;
+  margin-bottom: 0;
+  border-bottom: 1px solid #d83a36;
+}
+.navigation--top-menu .navigation__link:hover,
+.navigation--top-menu .navigation__link:focus,
+.navigation--top-menu .navigation__link:active {
+  border-color: #ffffff;
+}
+.navigation--top-menu .navigation__link--primary {
+  display: inline-block;
+  padding-bottom: 5px;
+  font-size: 24px;
+  font-size: 1.3333333333333333rem;
+  margin: 0;
+  margin-bottom: 7px;
+  border-bottom: 1px solid transparent;
+}
+@media (min-width: 22em) {
+  .navigation--top-menu .navigation__link--primary {
+    font-size: 26px;
+    font-size: 1.4444444444444444rem;
+  }
+}
+@media (min-width: 22em) {
+  .navigation--top-menu .navigation__link--primary {
+    font-size: 32px;
+    font-size: 1.7777777777777777rem;
+  }
+}
+.navigation--top-menu .navigation__link--primary:hover,
+.navigation--top-menu .navigation__link--primary:focus,
+.navigation--top-menu .navigation__link--primary:active {
+  border-color: #ffffff;
+}
+
+/*------------------------------------*\
+    COLOR PALETTE
+\*------------------------------------*/
+/*------------------------------------*\
+    BREAKPOINTS
+\*------------------------------------*/
+/*------------------------------------*\
+    GRID
+\*------------------------------------*/
+/*------------------------------------*\
+    #TYPE
+\*------------------------------------*/
+/*------------------------------------*\
+    $LINE HEIGHTS
+\*------------------------------------*/
+/*------------------------------------*\
+    $MIXINS
+\*------------------------------------*/
+/*------------------------------------*\
+    $FONTS
+\*------------------------------------*/
+/*------------------------------------*\
+   GRID
+\*------------------------------------*/
+/* Based on the css from the Grid System in Bootstrap */
+/* http://getbootstrap.com/css/#grid */
+/*------------------------------------*\
+    ANIMATIONS
+\*------------------------------------*/
+/*------------------------------------*\
+    MEDIA QUERIES
+\*------------------------------------*/
+/*
+  In use:
+  .query-min(@screen--md; {
+        color: blue;
+    });
+    --
+    @fix-mqs
+
+*/
+.newsletter__wrapper {
+  padding: 21px;
+  max-width: 40rem;
+  margin: 0 auto;
+}
+.newsletter__header {
+  margin-bottom: 21px;
+}
+.newsletter__logo {
+  display: block;
+  width: 10rem;
+  border: none;
+}
+.newsletter__logo img {
+  width: 100%;
+}
+.newsletter__footer {
+  background: #f2efed;
+}
+.newsletter__footer p {
+  font-family: "Siri", Tahoma, sans-serif;
+  font-size-adjust: 0.51;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 15px;
+  font-size: 0.8333333333333334rem;
+  line-height: 1.4;
+  margin-bottom: 0px;
+  text-transform: none;
+  margin-bottom: 7px;
+}
+.newsletter__footer a {
+  color: #282828;
+  border-color: #282828;
+}
+.newsletter__footer a:hover,
+.newsletter__footer a:focus,
+.newsletter__footer a:active {
+  color: #d83a36;
+  border-color: #d83a36;
+}
+.newsletter .feature-small {
+  padding-bottom: 21px;
+  padding-top: 21px;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: rgba(255, 255, 255, 0.87);
+  z-index: 10;
+}
+
+/*------------------------------------*\
+    COLOR PALETTE
+\*------------------------------------*/
+/*------------------------------------*\
+    BREAKPOINTS
+\*------------------------------------*/
+/*------------------------------------*\
+    GRID
+\*------------------------------------*/
+/*------------------------------------*\
+    #TYPE
+\*------------------------------------*/
+/*------------------------------------*\
+    $LINE HEIGHTS
+\*------------------------------------*/
+/*------------------------------------*\
+    $MIXINS
+\*------------------------------------*/
+/*------------------------------------*\
+    $FONTS
+\*------------------------------------*/
+/*------------------------------------*\
+   GRID
+\*------------------------------------*/
+/* Based on the css from the Grid System in Bootstrap */
+/* http://getbootstrap.com/css/#grid */
+/*------------------------------------*\
+    ANIMATIONS
+\*------------------------------------*/
+/*------------------------------------*\
+    MEDIA QUERIES
+\*------------------------------------*/
+/*
+  In use:
+  .query-min(@screen--md; {
+        color: blue;
+    });
+    --
+    @fix-mqs
+
+*/
+.page-by-logo {
+  display: none;
+}
+@media (min-width: 45em) {
+  .page-by-logo {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 126px;
+  }
+}
+.header--overlay .page-by-logo {
+  display: none;
+}
+
+/*------------------------------------*\
+    COLOR PALETTE
+\*------------------------------------*/
+/*------------------------------------*\
+    BREAKPOINTS
+\*------------------------------------*/
+/*------------------------------------*\
+    GRID
+\*------------------------------------*/
+/*------------------------------------*\
+    #TYPE
+\*------------------------------------*/
+/*------------------------------------*\
+    $LINE HEIGHTS
+\*------------------------------------*/
+/*------------------------------------*\
+    $MIXINS
+\*------------------------------------*/
+/*------------------------------------*\
+    $FONTS
+\*------------------------------------*/
+/*------------------------------------*\
+   GRID
+\*------------------------------------*/
+/* Based on the css from the Grid System in Bootstrap */
+/* http://getbootstrap.com/css/#grid */
+/*------------------------------------*\
+    ANIMATIONS
+\*------------------------------------*/
+/*------------------------------------*\
+    MEDIA QUERIES
+\*------------------------------------*/
+/*
+  In use:
+  .query-min(@screen--md; {
+        color: blue;
+    });
+    --
+    @fix-mqs
+
+*/
+.page {
+  display: block;
+}
+@media print {
+  .page {
+    padding-left: 10%;
+    padding-right: 5%;
+  }
+}
+.page__master {
+  max-width: 100em;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.page__content {
+  margin-bottom: 42px;
+}
+@media (min-width: 45em) {
+  .page__content {
+    margin-bottom: 84px;
+  }
+}
+.page__content--section {
+  margin-bottom: 0;
+}
+.page__section {
+  display: block;
+}
+.page__section--grey {
+  padding-top: 42px;
+  padding-bottom: 42px;
+  background: #f2efed;
+}
+@media print {
+  .page__section--grey {
+    padding: 0;
+    background: none;
+  }
+}
+.page__section-title {
+  font-family: "Siri Medium", Tahoma, sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  font-size: 1.3333333333333333rem;
+  line-height: 1.3125;
+  margin-bottom: 21px;
+  text-transform: none;
+  margin-bottom: 42px;
+}
+@media (min-width: 22em) {
+  .page__section-title {
+    font-size: 26px;
+    font-size: 1.4444444444444444rem;
+  }
+}
+@media (min-width: 45em) {
+  .page__section-title {
+    font-size: 32px;
+    font-size: 1.7777777777777777rem;
+  }
+}
+@media print {
+  .page__section-title {
+    margin-bottom: 21px;
+  }
+}
+
+/*------------------------------------*\
+    COLOR PALETTE
+\*------------------------------------*/
+/*------------------------------------*\
+    BREAKPOINTS
+\*------------------------------------*/
+/*------------------------------------*\
+    GRID
+\*------------------------------------*/
+/*------------------------------------*\
+    #TYPE
+\*------------------------------------*/
+/*------------------------------------*\
+    $LINE HEIGHTS
+\*------------------------------------*/
+/*------------------------------------*\
+    $MIXINS
+\*------------------------------------*/
+/*------------------------------------*\
+    $FONTS
+\*------------------------------------*/
+/*------------------------------------*\
+   GRID
+\*------------------------------------*/
+/* Based on the css from the Grid System in Bootstrap */
+/* http://getbootstrap.com/css/#grid */
+/*------------------------------------*\
+    ANIMATIONS
+\*------------------------------------*/
+/*------------------------------------*\
+    MEDIA QUERIES
+\*------------------------------------*/
+/*
+  In use:
+  .query-min(@screen--md; {
+        color: blue;
+    });
+    --
+    @fix-mqs
+
+*/
+.pagination {
+  margin-top: 21px;
+  display: block;
+}
+.pagination::before,
+.pagination::after {
+  content: "";
+  display: table;
+}
+.pagination::after {
+  clear: both;
+}
+.pagination__link {
+  border: none;
+  text-decoration: none;
+}
+.pagination__link--next {
+  float: right;
+}
+.pagination__link--previuos {
+  float: left;
+}
+
+/*------------------------------------*\
+    COLOR PALETTE
+\*------------------------------------*/
+/*------------------------------------*\
+    BREAKPOINTS
+\*------------------------------------*/
+/*------------------------------------*\
+    GRID
+\*------------------------------------*/
+/*------------------------------------*\
+    #TYPE
+\*------------------------------------*/
+/*------------------------------------*\
+    $LINE HEIGHTS
+\*------------------------------------*/
+/*------------------------------------*\
+    $MIXINS
+\*------------------------------------*/
+/*------------------------------------*\
+    $FONTS
+\*------------------------------------*/
+/*------------------------------------*\
+   GRID
+\*------------------------------------*/
+/* Based on the css from the Grid System in Bootstrap */
+/* http://getbootstrap.com/css/#grid */
+/*------------------------------------*\
+    ANIMATIONS
+\*------------------------------------*/
+/*------------------------------------*\
+    MEDIA QUERIES
+\*------------------------------------*/
+/*
+  In use:
+  .query-min(@screen--md; {
+        color: blue;
+    });
+    --
+    @fix-mqs
+
+*/
+.person {
+  padding-right: 21px;
+  margin-bottom: 42px;
+  display: table;
+  width: 100%;
+}
+@media screen and (min-width: 45em) {
+  .person {
+    display: block;
+  }
+}
+.person__image {
+  display: table-cell;
+  vertical-align: middle;
+  width: 33%;
+  padding-right: 10.5px;
+}
+@media (min-width: 45em) {
+  .person__image {
+    display: block;
+    width: 100%;
+    margin-bottom: 21px;
+    padding: 0;
+  }
+}
+.person__content {
+  display: table-cell;
+  vertical-align: middle;
+  width: 66%;
+  text-align: left;
+  padding-left: 10.5px;
+}
+@media (min-width: 45em) {
+  .person__content {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 0;
+  }
+}
+.person__name {
+  font-family: "Siri", Tahoma, sans-serif;
+  font-size-adjust: 0.51;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 18px;
+  font-size: 1rem;
+  line-height: 1.55555556;
+  margin-bottom: 14px;
+  text-transform: none;
+  font-weight: bold;
+  margin-bottom: 0;
+}
+.person p {
+  font-family: "Siri", Tahoma, sans-serif;
+  font-size-adjust: 0.51;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 15px;
+  font-size: 0.8333333333333334rem;
+  line-height: 1.4;
+  margin-bottom: 0px;
+  text-transform: none;
+}
+
+/*------------------------------------*\
+    COLOR PALETTE
+\*------------------------------------*/
+/*------------------------------------*\
+    BREAKPOINTS
+\*------------------------------------*/
+/*------------------------------------*\
+    GRID
+\*------------------------------------*/
+/*------------------------------------*\
+    #TYPE
+\*------------------------------------*/
+/*------------------------------------*\
+    $LINE HEIGHTS
+\*------------------------------------*/
+/*------------------------------------*\
+    $MIXINS
+\*------------------------------------*/
+/*------------------------------------*\
+    $FONTS
+\*------------------------------------*/
+/*------------------------------------*\
+   GRID
+\*------------------------------------*/
+/* Based on the css from the Grid System in Bootstrap */
+/* http://getbootstrap.com/css/#grid */
+/*------------------------------------*\
+    ANIMATIONS
+\*------------------------------------*/
+/*------------------------------------*\
+    MEDIA QUERIES
+\*------------------------------------*/
+/*
+  In use:
+  .query-min(@screen--md; {
+        color: blue;
+    });
+    --
+    @fix-mqs
+
+*/
+.search-result {
+  margin: 0;
+  position: absolute;
+  z-index: 3;
+  margin-top: -21px;
+  width: 100%;
+  padding: 0;
+  border: 2px solid #bbbbbb;
+  border-top: 0;
+}
+.search-result__icon {
+  float: right;
+  margin-top: 7px;
+  display: none;
+}
+.search-result__result {
+  display: block;
+  padding: 7px 21px;
+  padding-left: 14px;
+  border: none;
+  border-left: 4px solid #f8f7f6;
+  background: #f8f7f6;
+  color: #282828;
+}
+.search-result__result:hover {
+  background: #f2efed;
+  border-color: none;
+  border-left: 4px solid #ffffff;
+}
+.search-result__result--selected .search-result__icon,
+.search-result__result:hover .search-result__icon,
+.search-result__result:focus .search-result__icon,
+.search-result__result:active .search-result__icon {
+  display: inline-block;
+}
+.search-result__result--selected,
+.search-result__result:focus,
+.search-result__result:active {
+  background: #ffffff;
+  border-left: 6px solid #d83a36;
+  margin-left: -2px;
+  color: #d83a36;
+}
+.search-result__result--selected:hover,
+.search-result__result:focus:hover,
+.search-result__result:active:hover {
+  background: #ffffff;
+  border-left: 6px solid #d83a36;
+  color: #d83a36;
+}
+.search-result__result--message:hover {
+  background: #f8f7f6;
+}
+.search-result li {
+  height: 44px;
+  border-bottom: 2px solid #f2efed;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/*------------------------------------*\
+    COLOR PALETTE
+\*------------------------------------*/
+/*------------------------------------*\
+    BREAKPOINTS
+\*------------------------------------*/
+/*------------------------------------*\
+    GRID
+\*------------------------------------*/
+/*------------------------------------*\
+    #TYPE
+\*------------------------------------*/
+/*------------------------------------*\
+    $LINE HEIGHTS
+\*------------------------------------*/
+/*------------------------------------*\
+    $MIXINS
+\*------------------------------------*/
+/*------------------------------------*\
+    $FONTS
+\*------------------------------------*/
+/*------------------------------------*\
+   GRID
+\*------------------------------------*/
+/* Based on the css from the Grid System in Bootstrap */
+/* http://getbootstrap.com/css/#grid */
+/*------------------------------------*\
+    ANIMATIONS
+\*------------------------------------*/
+/*------------------------------------*\
+    MEDIA QUERIES
+\*------------------------------------*/
+/*
+  In use:
+  .query-min(@screen--md; {
+        color: blue;
+    });
+    --
+    @fix-mqs
+
+*/
+.search {
+  width: 100%;
+  max-width: 28em;
+  position: relative;
+  padding-right: 105px;
+}
+.search input[type="search"] {
+  -webkit-appearance: textfield;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.search ::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: white;
+}
+.search--full {
+  max-width: none;
+}
+.search--inline {
+  display: inline-block;
+  width: auto;
+}
+.search__input {
+  width: 100%;
+  background: none;
+  border: none;
+  border-bottom: 2px solid #fff;
+  color: #fff;
+  margin-bottom: 21px;
+  padding-right: 70px;
+  padding: 11px 7px;
+  -webkit-transition: all .2s ease;
+  transition: all .2s ease;
+}
+.search__button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0;
+  width: auto;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+.search__button-icon {
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/white/icon-search.svg');
+  margin-left: 0.25rem;
+}
+.search--autocomplete {
+  padding-right: 0;
+}
+.search--autocomplete:after {
+  content: " ";
+  display: block;
+  width: 1.5rem;
+  height: 1.5rem;
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  z-index: 2;
+  pointer-events: none;
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/red/icon-search.svg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 1rem 1rem;
+}
+.search--footer {
+  padding-right: 0;
+}
+.search--footer .search__input {
+  background: none;
+  border: none;
+  border-bottom: 2px solid #ffffff;
+  color: #ffffff;
+  margin-bottom: 21px;
+  padding-right: 70px;
+  padding: 11px 7px;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+.search--footer .search__input::-webkit-input-placeholder {
+  color: #ffffff;
+}
+.search--footer .search__input:-moz-placeholder {
+  /* Firefox 18- */
+  color: #ffffff;
+}
+.search--footer .search__input::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #ffffff;
+}
+.search--footer .search__input:-ms-input-placeholder {
+  color: #ffffff;
+}
+.search--footer .search__input:focus {
+  background: #ffffff;
+  color: #282828;
+  border-color: #ffffff;
+}
+.search--footer .search__button {
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  top: 2px;
+  right: 2px;
+}
+.search--footer .search__button:hover,
+.search--footer .search__button:focus {
+  background: #f15540;
+  border: none;
+}
+.search--footer .search__input:focus + .search__button {
+  background: #d83a36;
+  color: #ffffff;
+  border-bottom-color: #ffffff;
+}
+
+/*------------------------------------*\
+    COLOR PALETTE
+\*------------------------------------*/
+/*------------------------------------*\
+    BREAKPOINTS
+\*------------------------------------*/
+/*------------------------------------*\
+    GRID
+\*------------------------------------*/
+/*------------------------------------*\
+    #TYPE
+\*------------------------------------*/
+/*------------------------------------*\
+    $LINE HEIGHTS
+\*------------------------------------*/
+/*------------------------------------*\
+    $MIXINS
+\*------------------------------------*/
+/*------------------------------------*\
+    $FONTS
+\*------------------------------------*/
+/*------------------------------------*\
+   GRID
+\*------------------------------------*/
+/* Based on the css from the Grid System in Bootstrap */
+/* http://getbootstrap.com/css/#grid */
+/*------------------------------------*\
+    ANIMATIONS
+\*------------------------------------*/
+/*------------------------------------*\
+    MEDIA QUERIES
+\*------------------------------------*/
+/*
+  In use:
+  .query-min(@screen--md; {
+        color: blue;
+    });
+    --
+    @fix-mqs
+
+*/
+.sentence-filter {
+  display: table-row;
+  margin: 0;
+  padding: 0 7px;
+  margin-top: 42px;
+  margin-bottom: 42px;
+}
+@media (min-width: 45em) {
+  .sentence-filter {
+    margin-top: 84px;
+  }
+}
+.sentence-filter__legend {
+  margin-bottom: 7px;
+  padding-right: 7px;
+  white-space: nowrap;
+}
+.sentence-filter__list,
+.sentence-filter__list > li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.sentence-filter__list {
+  background: #ffffff;
+  padding: 7px;
+  max-width: 15em;
+  margin-top: -7px;
+}
+.sentence-filter__cell {
+  display: table-cell;
+  vertical-align: top;
+}
+.sentence-filter label {
+  font-family: "Siri", Tahoma, sans-serif;
+  font-size-adjust: 0.51;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 15px;
+  font-size: 0.8333333333333334rem;
+  line-height: 1.4;
+  margin-bottom: 0px;
+  text-transform: none;
+  margin-bottom: 7px;
+}
+.sentence-filter label .control-indicator {
+  top: 0;
+}
+
+/*------------------------------------*\
+    COLOR PALETTE
+\*------------------------------------*/
+/*------------------------------------*\
+    BREAKPOINTS
+\*------------------------------------*/
+/*------------------------------------*\
+    GRID
+\*------------------------------------*/
+/*------------------------------------*\
+    #TYPE
+\*------------------------------------*/
+/*------------------------------------*\
+    $LINE HEIGHTS
+\*------------------------------------*/
+/*------------------------------------*\
+    $MIXINS
+\*------------------------------------*/
+/*------------------------------------*\
+    $FONTS
+\*------------------------------------*/
+/*------------------------------------*\
+   GRID
+\*------------------------------------*/
+/* Based on the css from the Grid System in Bootstrap */
+/* http://getbootstrap.com/css/#grid */
+/*------------------------------------*\
+    ANIMATIONS
+\*------------------------------------*/
+/*------------------------------------*\
+    MEDIA QUERIES
+\*------------------------------------*/
+/*
+  In use:
+  .query-min(@screen--md; {
+        color: blue;
+    });
+    --
+    @fix-mqs
+
+*/
+.shortcuts li {
+  font-size: 32px;
+  font-size: 1.7777777777777777rem;
+}
+@media (min-width: 57em) {
+  .shortcuts li {
+    font-size: 18px;
+    font-size: 1rem;
+  }
+}
+.shortcuts legend {
+  font-size: 24px;
+  font-size: 1.3333333333333333rem;
+}
+@media (min-width: 57em) {
+  .shortcuts legend {
+    font-size: 18px;
+    font-size: 1rem;
+  }
+}
+
+/*------------------------------------*\
+    COLOR PALETTE
+\*------------------------------------*/
+/*------------------------------------*\
+    BREAKPOINTS
+\*------------------------------------*/
+/*------------------------------------*\
+    GRID
+\*------------------------------------*/
+/*------------------------------------*\
+    #TYPE
+\*------------------------------------*/
+/*------------------------------------*\
+    $LINE HEIGHTS
+\*------------------------------------*/
+/*------------------------------------*\
+    $MIXINS
+\*------------------------------------*/
+/*------------------------------------*\
+    $FONTS
+\*------------------------------------*/
+/*------------------------------------*\
+   GRID
+\*------------------------------------*/
+/* Based on the css from the Grid System in Bootstrap */
+/* http://getbootstrap.com/css/#grid */
+/*------------------------------------*\
+    ANIMATIONS
+\*------------------------------------*/
+/*------------------------------------*\
+    MEDIA QUERIES
+\*------------------------------------*/
+/*
+  In use:
+  .query-min(@screen--md; {
+        color: blue;
+    });
+    --
+    @fix-mqs
+
+*/
+a.skiptocontent {
+  font-family: "Siri Medium", Tahoma, sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 18px;
+  font-size: 1rem;
+  padding: 7px 0;
+  color: #d83a36;
+  background: #ffffff;
+  position: absolute;
+  top: -80px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  -webkit-transition: top 0.2s ease-out, background 0.2s linear;
+  transition: top 0.2s ease-out, background 0.2s linear;
+  z-index: 100;
+  text-align: center;
+  border-bottom: 2px solid #d83a36;
+  width: 100%;
+}
+@media (min-width: 45em) {
+  a.skiptocontent {
+    width: auto;
+  }
+}
+a.skiptocontent:focus {
+  position: absolute;
+  top: -10px;
+  outline-color: #282828;
+}
+@media (min-width: 45em) {
+  a.skiptocontent:focus {
+    top: -30px;
+  }
+}
+
+/*------------------------------------*\
+    COLOR PALETTE
+\*------------------------------------*/
+/*------------------------------------*\
+    BREAKPOINTS
+\*------------------------------------*/
+/*------------------------------------*\
+    GRID
+\*------------------------------------*/
+/*------------------------------------*\
+    #TYPE
+\*------------------------------------*/
+/*------------------------------------*\
+    $LINE HEIGHTS
+\*------------------------------------*/
+/*------------------------------------*\
+    $MIXINS
+\*------------------------------------*/
+/*------------------------------------*\
+    $FONTS
+\*------------------------------------*/
+/*------------------------------------*\
+   GRID
+\*------------------------------------*/
+/* Based on the css from the Grid System in Bootstrap */
+/* http://getbootstrap.com/css/#grid */
+/*------------------------------------*\
+    ANIMATIONS
+\*------------------------------------*/
+/*------------------------------------*\
+    MEDIA QUERIES
+\*------------------------------------*/
+/*
+  In use:
+  .query-min(@screen--md; {
+        color: blue;
+    });
+    --
+    @fix-mqs
+
+*/
+/* Slider */
+.slick-slider {
+  position: relative;
+  display: block;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+  -khtml-user-select: none;
+  -ms-touch-action: pan-y;
+  touch-action: pan-y;
+  -webkit-tap-highlight-color: transparent;
+}
+.slick-list {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+.slick-list:focus {
+  outline: none;
+}
+.slick-list.dragging {
+  cursor: pointer;
+  cursor: hand;
+}
+.slick-slider .slick-track,
+.slick-slider .slick-list {
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+.slick-track {
+  position: relative;
+  top: 0;
+  left: 0;
+  display: block;
+}
+.slick-track:before,
+.slick-track:after {
+  display: table;
+  content: '';
+}
+.slick-track:after {
+  clear: both;
+}
+.slick-loading .slick-track {
+  visibility: hidden;
+}
+.slick-slide {
+  display: none;
+  float: left;
+  height: 100%;
+  min-height: 1px;
+}
+[dir='rtl'] .slick-slide {
+  float: right;
+}
+.slick-slide img {
+  display: block;
+}
+.slick-slide.slick-loading img {
+  display: none;
+}
+.slick-slide.dragging img {
+  pointer-events: none;
+}
+.slick-initialized .slick-slide {
+  display: block;
+}
+.slick-loading .slick-slide {
+  visibility: hidden;
+}
+.slick-vertical .slick-slide {
+  display: block;
+  height: auto;
+  border: 1px solid transparent;
+}
+.slick-arrow.slick-hidden {
+  display: none;
+}
+.slick-disabled {
+  display: none !important;
+}
+
+/*------------------------------------*\
+    COLOR PALETTE
+\*------------------------------------*/
+/*------------------------------------*\
+    BREAKPOINTS
+\*------------------------------------*/
+/*------------------------------------*\
+    GRID
+\*------------------------------------*/
+/*------------------------------------*\
+    #TYPE
+\*------------------------------------*/
+/*------------------------------------*\
+    $LINE HEIGHTS
+\*------------------------------------*/
+/*------------------------------------*\
+    $MIXINS
+\*------------------------------------*/
+/*------------------------------------*\
+    $FONTS
+\*------------------------------------*/
+/*------------------------------------*\
+   GRID
+\*------------------------------------*/
+/* Based on the css from the Grid System in Bootstrap */
+/* http://getbootstrap.com/css/#grid */
+/*------------------------------------*\
+    ANIMATIONS
+\*------------------------------------*/
+/*------------------------------------*\
+    MEDIA QUERIES
+\*------------------------------------*/
+/*
+  In use:
+  .query-min(@screen--md; {
+        color: blue;
+    });
+    --
+    @fix-mqs
+
+*/
+.subsection {
+  border: 3px solid #f2efed;
+  background: #ffffff;
+  background: #f8f7f6;
+  margin-bottom: 42px;
+  padding: 21px 21px;
+}
+.subsection--contracted {
+  -webkit-animation: animations__fade-out-up 300ms linear;
+  animation: animations__fade-out-up 300ms linear;
+}
+.subsection--expanded {
+  -webkit-animation: animations__fade-in-down 400ms linear both;
+  animation: animations__fade-in-down 400ms linear both;
+}
+
+/*------------------------------------*\
+    COLOR PALETTE
+\*------------------------------------*/
+/*------------------------------------*\
+    BREAKPOINTS
+\*------------------------------------*/
+/*------------------------------------*\
+    GRID
+\*------------------------------------*/
+/*------------------------------------*\
+    #TYPE
+\*------------------------------------*/
+/*------------------------------------*\
+    $LINE HEIGHTS
+\*------------------------------------*/
+/*------------------------------------*\
+    $MIXINS
+\*------------------------------------*/
+/*------------------------------------*\
+    $FONTS
+\*------------------------------------*/
+/*------------------------------------*\
+   GRID
+\*------------------------------------*/
+/* Based on the css from the Grid System in Bootstrap */
+/* http://getbootstrap.com/css/#grid */
+/*------------------------------------*\
+    ANIMATIONS
+\*------------------------------------*/
+/*------------------------------------*\
+    MEDIA QUERIES
+\*------------------------------------*/
+/*
+  In use:
+  .query-min(@screen--md; {
+        color: blue;
+    });
+    --
+    @fix-mqs
+
+*/
+.subtle-select {
+  position: relative;
+  margin-bottom: 7px;
+}
+.subtle-select select::after {
+  margin-left: 85px;
+}
+@media (min-width: 45em) {
+  .subtle-select {
+    margin-bottom: 14px;
+  }
+}
+.subtle-select > label {
+  margin: 0;
+}
+.subtle-select__label {
+  font-family: "Siri", Tahoma, sans-serif;
+  font-size-adjust: 0.51;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 15px;
+  font-size: 0.8333333333333334rem;
+  line-height: 1.4;
+  margin-bottom: 0px;
+  text-transform: none;
+  position: absolute;
+  z-index: 1;
+  pointer-events: none;
+  padding-left: 7px;
+  padding-top: 7px;
+  padding-right: 7px;
+  color: #585858;
+  white-space: nowrap;
+  overflow: hidden;
+  max-width: 100%;
+  text-overflow: ellipsis;
+}
+.subtle-select__select select,
+.subtle-select__button {
+  font-family: "Siri", Tahoma, sans-serif;
+  font-size-adjust: 0.51;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 15px;
+  font-size: 0.8333333333333334rem;
+  line-height: 1.4;
+  margin-bottom: 0px;
+  text-transform: none;
+  text-align: left;
+  padding-left: 28px;
+  padding-right: 7px;
+  padding-bottom: 7px;
+  padding-top: 1.66rem;
+  z-index: 0;
+  background: #ffffff;
+  word-wrap: break-word;
+  white-space: normal;
+  border: 2px solid #f2efed;
+  white-space: nowrap;
+  overflow: hidden;
+  max-width: 100%;
+  text-overflow: ellipsis;
+  min-height: 62px;
+}
+.subtle-select__select select:hover,
+.subtle-select__button:hover,
+.subtle-select__select select:focus,
+.subtle-select__button:focus,
+.subtle-select__select select:active,
+.subtle-select__button:active {
+  background: #f2efed;
+}
+.subtle-select__select select:focus,
+.subtle-select__button:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border: 1px solid #f15540;
+}
+.subtle-select__select,
+.subtle-select__button {
+  width: 100%;
+}
+.subtle-select__select:after,
+.subtle-select__button:after {
+  border: none;
+  -webkit-transform: none;
+  transform: none;
+  background: none;
+  position: absolute;
+  display: inline-block;
+  content: "";
+  width: 1rem;
+  height: 1rem;
+  pointer-events: none;
+  margin: 0;
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/icon-down.svg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  top: 1.85rem;
+  right: none;
+  left: 7px;
+}
+.subtle-select__select--expanded,
+.subtle-select__button--expanded {
+  border: 2px solid #f15540;
+}
+.subtle-select__button--add:after {
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/icon-add.svg');
+}
+.subtle-select__button--location:after {
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/icon-search.svg');
+}
+.subtle-select__select select:disabled {
+  padding-left: 7px;
+  font-style: italic;
+  cursor: default;
+  border-color: transparent;
+}
+.subtle-select__select select:disabled:hover,
+.subtle-select__select select:disabled:focus,
+.subtle-select__select select:disabled:active {
+  background: none;
+}
+.subtle-select__select--disabled:after {
+  display: none;
+}
+
+/*------------------------------------*\
+    COLOR PALETTE
+\*------------------------------------*/
+/*------------------------------------*\
+    BREAKPOINTS
+\*------------------------------------*/
+/*------------------------------------*\
+    GRID
+\*------------------------------------*/
+/*------------------------------------*\
+    #TYPE
+\*------------------------------------*/
+/*------------------------------------*\
+    $LINE HEIGHTS
+\*------------------------------------*/
+/*------------------------------------*\
+    $MIXINS
+\*------------------------------------*/
+/*------------------------------------*\
+    $FONTS
+\*------------------------------------*/
+/*------------------------------------*\
+   GRID
+\*------------------------------------*/
+/* Based on the css from the Grid System in Bootstrap */
+/* http://getbootstrap.com/css/#grid */
+/*------------------------------------*\
+    ANIMATIONS
+\*------------------------------------*/
+/*------------------------------------*\
+    MEDIA QUERIES
+\*------------------------------------*/
+/*
+  In use:
+  .query-min(@screen--md; {
+        color: blue;
+    });
+    --
+    @fix-mqs
+
+*/
+.summary {
+  margin-bottom: 42px;
+}
+.summary__list {
+  padding: 0;
+  margin: 0;
+}
+.summary__list-item {
+  font-family: "Siri", Tahoma, sans-serif;
+  font-size-adjust: 0.51;
+  font-weight: normal;
+  font-style: normal;
+  padding: 7px 21px;
+  background: #f2efed;
+  list-style: none;
+  margin: 0;
+  margin-bottom: 7px;
+}
+@media (min-width: 45em) {
+  .summary__list-item {
+    padding-right: 110px;
+  }
+}
+.summary__value {
+  font-family: "Siri", Tahoma, sans-serif;
+  font-size-adjust: 0.51;
+  font-weight: normal;
+  font-style: normal;
+  display: block;
+}
+@media (min-width: 45em) {
+  .summary__edit {
+    position: absolute;
+  }
+}
+
+.download-buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.download-buttons .download__button {
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+/*------------------------------------*\
+    COLOR PALETTE
+\*------------------------------------*/
+/*------------------------------------*\
+    BREAKPOINTS
+\*------------------------------------*/
+/*------------------------------------*\
+    GRID
+\*------------------------------------*/
+/*------------------------------------*\
+    #TYPE
+\*------------------------------------*/
+/*------------------------------------*\
+    $LINE HEIGHTS
+\*------------------------------------*/
+/*------------------------------------*\
+    $MIXINS
+\*------------------------------------*/
+/*------------------------------------*\
+    $FONTS
+\*------------------------------------*/
+/*------------------------------------*\
+   GRID
+\*------------------------------------*/
+/* Based on the css from the Grid System in Bootstrap */
+/* http://getbootstrap.com/css/#grid */
+/*------------------------------------*\
+    ANIMATIONS
+\*------------------------------------*/
+/*------------------------------------*\
+    MEDIA QUERIES
+\*------------------------------------*/
+/*
+  In use:
+  .query-min(@screen--md; {
+        color: blue;
+    });
+    --
+    @fix-mqs
+
+*/
+table,
+.table {
+  text-align: left;
+  margin-bottom: calc(42px);
+  font-size: 15;
+  width: auto;
+  position: relative;
+  z-index: 1;
+}
+table--fluid,
+.table--fluid {
+  min-width: 100%;
+}
+table--full-width,
+.table--full-width {
+  width: 150%;
+}
+@media (max-width: 57em) {
+  table--full-width,
+  .table--full-width {
+    width: 100%;
+  }
+}
+table__wrapper,
+.table__wrapper {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin-top: 42px;
+  margin-bottom: 42px;
+}
+@media (min-width: 57em) {
+  table__wrapper,
+  .table__wrapper {
+    margin-top: 84px;
+    margin-bottom: 84px;
+  }
+}
+table__thead,
+.table__thead,
+table thead,
+.table thead {
+  border-bottom: 1px solid #bfbfbf;
+}
+table__th,
+.table__th,
+table th,
+.table th {
+  font-family: "Siri Medium", Tahoma, sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 15px;
+  font-size: 0.8333333333333334rem;
+  padding: 14px 14px;
+  border-bottom: 1px solid #bfbfbf;
+}
+@media (min-width: 45em) {
+  table__th,
+  .table__th,
+  table th,
+  .table th {
+    font-size: 18px;
+    font-size: 1rem;
+  }
+}
+table .table__th--row,
+.table .table__th--row {
+  font-family: "Siri Medium", Tahoma, sans-serif;
+  font-style: normal;
+  font-size: 15px;
+  font-size: 0.8333333333333334rem;
+  font-weight: normal;
+  padding: 14px 14px;
+  vertical-align: top;
+  border-bottom: 1px solid #bfbfbf;
+}
+table p,
+.table p,
+table li,
+.table li {
+  font-size: 15px;
+  font-size: 0.8333333333333334rem;
+}
+table__th--number,
+.table__th--number,
+table td[align="right"],
+.table td[align="right"] {
+  text-align: right;
+}
+table__td,
+.table__td,
+table td,
+.table td {
+  font-family: "Siri", Tahoma, sans-serif;
+  font-size-adjust: 0.51;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 15px;
+  font-size: 0.8333333333333334rem;
+  padding: 14px 14px;
+  vertical-align: top;
+  border-bottom: 1px solid #bfbfbf;
+  background-color: white;
+}
+table__td--number,
+.table__td--number,
+table td[align="right"],
+.table td[align="right"] {
+  font-size: 16px;
+  font-size: 0.8888888888888888rem;
+  text-align: right;
+  font-family: 'Consolas', 'Lucida Console', "Courier";
+}
+table__caption,
+.table__caption,
+table caption,
+.table caption {
+  font-family: "Siri Medium", Tahoma, sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 16px;
+  font-size: 0.8888888888888888rem;
+  line-height: 1.75;
+  margin-bottom: 0px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 14px 14px;
+  color: #585858;
+  text-align: left;
+}
+@media (min-width: 45em) {
+  table__caption,
+  .table__caption,
+  table caption,
+  .table caption {
+    text-align: left;
+  }
+}
+.table--collapsable {
+  border: 1px solid #ddd;
+  border-collapse: collapse;
+  -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto;
+  border-bottom: 0;
+  padding: 0;
+  table-layout: fixed;
+}
+.table--collapsable thead {
+  border-bottom: 0;
+}
+.table--collapsable th,
+.table--collapsable td {
+  padding: 15px;
+  text-align: left;
+}
+.table--collapsable th {
+  font-size: 14px;
+  background: #fafafa;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  padding: 15px;
+  border-bottom: 2px solid #ddd;
+}
+@media screen and (max-width: 600px) {
+  .table--collapsable thead tr th {
+    display: none;
+  }
+  .table--collapsable thead tr th:first-of-type {
+    display: block;
+    width: 100%;
+  }
+  .table--collapsable tr {
+    display: block;
+  }
+  .table--collapsable td:first-of-type {
+    border-bottom: 1px solid #ddd;
+    display: block;
+    font-size: .8em;
+    text-align: left;
+    padding-right: 30px;
+  }
+  .table--collapsable td:first-of-type:before {
+    /*
+	    * aria-label has no advantage, it won't be read inside a table
+	    content: attr(aria-label);
+	    */
+    content: '';
+    float: right;
+  }
+  .table--collapsable td {
+    border-bottom: 1px solid #ddd;
+    display: block;
+    font-size: .8em;
+    text-align: right;
+    padding-right: 30px;
+  }
+  .table--collapsable td:before {
+    /*
+	    * aria-label has no advantage, it won't be read inside a table
+	    content: attr(aria-label);
+	    */
+    content: attr(data-label);
+    float: left;
+  }
+  .table--collapsable td:first-child {
+    cursor: pointer;
+  }
+  .table--collapsable td.expanded {
+    border-bottom: 2px solid #ddd;
+  }
+  .table--collapsable td:first-child:after {
+    content: '';
+    position: absolute;
+    background: url(https://imdi-styles.firebaseapp.com/UI/icons/icon-arrow-down.svg);
+    -webkit-transition: all 0.1s ease;
+    transition: all 0.1s ease;
+    color: #6f6f6f;
+    height: 28px;
+    background-size: 19px;
+    background-repeat: no-repeat;
+    right: 20px;
+    width: 24px;
+  }
+  .table--collapsable td.expanded:after {
+    content: '';
+    color: #6f6f6f;
+    -webkit-transform: rotate(180deg) translateY(10px);
+            transform: rotate(180deg) translateY(10px);
+    right: 24px;
+    padding-left: 10px;
+  }
+  .table--collapsable td.expanded ~ td {
+    display: block;
+    background: #fafafa;
+    -webkit-animation-name: animations__fade-in-down;
+            animation-name: animations__fade-in-down;
+    -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+  }
+  .table--collapsable td ~ td {
+    display: none;
+  }
+}
+
+/*------------------------------------*\
+    COLOR PALETTE
+\*------------------------------------*/
+/*------------------------------------*\
+    BREAKPOINTS
+\*------------------------------------*/
+/*------------------------------------*\
+    GRID
+\*------------------------------------*/
+/*------------------------------------*\
+    #TYPE
+\*------------------------------------*/
+/*------------------------------------*\
+    $LINE HEIGHTS
+\*------------------------------------*/
+/*------------------------------------*\
+    $MIXINS
+\*------------------------------------*/
+/*------------------------------------*\
+    $FONTS
+\*------------------------------------*/
+/*------------------------------------*\
+   GRID
+\*------------------------------------*/
+/* Based on the css from the Grid System in Bootstrap */
+/* http://getbootstrap.com/css/#grid */
+/*------------------------------------*\
+    ANIMATIONS
+\*------------------------------------*/
+/*------------------------------------*\
+    MEDIA QUERIES
+\*------------------------------------*/
+/*
+  In use:
+  .query-min(@screen--md; {
+        color: blue;
+    });
+    --
+    @fix-mqs
+
+*/
+.tabs-button-menu {
+  margin-bottom: 28px;
+}
+@media (min-width: 57em) {
+  .tabs-button-menu {
+    max-width: 45em;
+  }
+}
+@media print {
+  .tabs-button-menu {
+    display: none;
+  }
+}
+.tabs-button-menu__title {
+  font-family: "Siri Medium", Tahoma, sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 16px;
+  font-size: 0.8888888888888888rem;
+  line-height: 1.75;
+  margin-bottom: 0px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 21px;
+}
+.tabs-button-menu__list-item {
+  display: inline-block;
+}
+.tabs-button-menu__link {
+  font-family: "Siri Medium", Tahoma, sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 18px;
+  font-size: 1rem;
+  padding: 7px 21px;
+  background: white;
+  color: #282828;
+  text-align: center;
+  display: inline-block;
+  border: 1px solid transparent;
+  margin-bottom: 14px;
+  margin-right: 14px;
+}
+.tabs-button-menu__link--current {
+  background: transparent;
+  color: #282828;
+  border-color: #ddd5cf;
+}
+.tabs-button-menu__link--current .tabs-button-menu__icon {
+  opacity: 1;
+}
+.tabs-button-menu__link:not(.tabs-button-menu__link--current):hover,
+.tabs-button-menu__link:not(.tabs-button-menu__link--current):focus,
+.tabs-button-menu__link:not(.tabs-button-menu__link--current):active {
+  background: #f8f7f6;
+  border-color: #f8f7f6;
+  color: #d83a36;
+}
+.tabs-button-menu__icon {
+  margin-right: 0.25em;
+  vertical-align: baseline;
+  opacity: 1;
+}
+
+/*------------------------------------*\
+    COLOR PALETTE
+\*------------------------------------*/
+/*------------------------------------*\
+    BREAKPOINTS
+\*------------------------------------*/
+/*------------------------------------*\
+    GRID
+\*------------------------------------*/
+/*------------------------------------*\
+    #TYPE
+\*------------------------------------*/
+/*------------------------------------*\
+    $LINE HEIGHTS
+\*------------------------------------*/
+/*------------------------------------*\
+    $MIXINS
+\*------------------------------------*/
+/*------------------------------------*\
+    $FONTS
+\*------------------------------------*/
+/*------------------------------------*\
+   GRID
+\*------------------------------------*/
+/* Based on the css from the Grid System in Bootstrap */
+/* http://getbootstrap.com/css/#grid */
+/*------------------------------------*\
+    ANIMATIONS
+\*------------------------------------*/
+/*------------------------------------*\
+    MEDIA QUERIES
+\*------------------------------------*/
+/*
+  In use:
+  .query-min(@screen--md; {
+        color: blue;
+    });
+    --
+    @fix-mqs
+
+*/
+.tabs-menu {
+  margin-bottom: 42px;
+}
+@media (min-width: 45em) {
+  .tabs-menu {
+    margin-bottom: 0;
+  }
+}
+@media print {
+  .tabs-menu {
+    display: none;
+  }
+}
+@media (min-width: 45em) {
+  .tabs-menu__list {
+    display: table;
+  }
+}
+.tabs-menu__list-item {
+  display: inline-block;
+}
+@media (min-width: 45em) {
+  .tabs-menu__list-item {
+    display: table-cell;
+    text-align: center;
+    vertical-align: bottom;
+  }
+}
+.tabs-menu__link {
+  font-size: 15px;
+  font-size: 0.8333333333333334rem;
+  padding: 5px 14px;
+  background: #f2efed;
+  color: #282828;
+  text-align: center;
+  display: inline-block;
+  border: 2px solid #f2efed;
+  margin-bottom: 7px;
+}
+@media (min-width: 45em) {
+  .tabs-menu__link {
+    font-size: 18px;
+    font-size: 1rem;
+    -webkit-transition: border-color 0.2s ease;
+    transition: border-color 0.2s ease;
+    margin-bottom: 0;
+    background: none;
+    padding: 5px 0 5px 0;
+    border: none;
+    border-bottom: 3px solid transparent;
+    border-color: transparent;
+    margin: 0 14px;
+    margin-bottom: -3px;
+  }
+}
+@media (min-width: 57em) {
+  .tabs-menu__link {
+    margin: 0 21px;
+  }
+}
+.tabs-menu__link--current {
+  background: #ffffff;
+  border-bottom: 3px solid #f15540;
+}
+@media (min-width: 45em) {
+  .tabs-menu__link--current {
+    color: #282828;
+    border-bottom: 3px solid #f15540;
+    background: none;
+  }
+}
+.tabs-menu__link--current .tabs-menu__icon {
+  opacity: 1;
+}
+.tabs-menu__link--disabled {
+  color: #585858;
+}
+.tabs-menu__link--disabled .tabs-menu__icon {
+  opacity: 0.5;
+}
+.tabs-menu__link--disabled:hover,
+.tabs-menu__link--disabled:focus,
+.tabs-menu__link--disabled:active {
+  color: #585858;
+  border-color: transparent;
+  cursor: default;
+}
+.tabs-menu__link:not(.tabs-menu__link--current):not(.tabs-menu__link--disabled):hover,
+.tabs-menu__link:not(.tabs-menu__link--current):not(.tabs-menu__link--disabled):focus,
+.tabs-menu__link:not(.tabs-menu__link--current):not(.tabs-menu__link--disabled):active {
+  background: #ddd5cf;
+  border-color: #ddd5cf;
+}
+@media (min-width: 45em) {
+  .tabs-menu__link:not(.tabs-menu__link--current):not(.tabs-menu__link--disabled):hover,
+  .tabs-menu__link:not(.tabs-menu__link--current):not(.tabs-menu__link--disabled):focus,
+  .tabs-menu__link:not(.tabs-menu__link--current):not(.tabs-menu__link--disabled):active {
+    background: inherit;
+    color: #d83a36;
+    border-bottom: 3px solid #f15540;
+  }
+}
+.tabs-menu__icon {
+  margin-right: 0.25rem;
+  vertical-align: baseline;
+  opacity: 1;
+}
+@media (max-width: 45em) {
+  .tabs-menu--compact-mobile {
+    margin-bottom: 0;
+  }
+  .tabs-menu--compact-mobile .tabs-menu__list {
+    display: table;
+  }
+  .tabs-menu--compact-mobile .tabs-menu__list-item {
+    display: table-cell;
+    text-align: center;
+  }
+  .tabs-menu--compact-mobile .tabs-menu__link {
+    background: none;
+    max-width: 42px;
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 0;
+    padding: 5px 5px 5px 5px;
+    border: none;
+    border-bottom: 3px solid transparent;
+  }
+  .tabs-menu--compact-mobile .tabs-menu__icon {
+    margin: 0 7px;
+    margin-right: 42px;
+  }
+  .tabs-menu--compact-mobile .tabs-menu__link--current {
+    background: none;
+    border-bottom: 3px solid #f15540;
+  }
+}
+@media (min-width: 22em) {
+  .tabs-menu--compact-mobile .tabs-menu__link--current {
+    max-width: none;
+  }
+  .tabs-menu--compact-mobile .tabs-menu__link--current .tabs-menu__icon {
+    margin: 0;
+    margin-right: 0.25em;
+  }
+}
+@media (min-width: 45em) {
+  .tabs-menu--large .tabs-menu__link {
+    font-size: 15px;
+    font-size: 0.8333333333333334rem;
+    padding: 5px 0 5px 0;
+  }
+}
+@media (min-width: 57em) {
+  .tabs-menu--large .tabs-menu__link {
+    font-size: 18px;
+    font-size: 1rem;
+    padding: 14px 0 14px 0;
+    margin-left: 0;
+    margin-right: 21px;
+  }
+}
+
+/*------------------------------------*\
+    COLOR PALETTE
+\*------------------------------------*/
+/*------------------------------------*\
+    BREAKPOINTS
+\*------------------------------------*/
+/*------------------------------------*\
+    GRID
+\*------------------------------------*/
+/*------------------------------------*\
+    #TYPE
+\*------------------------------------*/
+/*------------------------------------*\
+    $LINE HEIGHTS
+\*------------------------------------*/
+/*------------------------------------*\
+    $MIXINS
+\*------------------------------------*/
+/*------------------------------------*\
+    $FONTS
+\*------------------------------------*/
+/*------------------------------------*\
+   GRID
+\*------------------------------------*/
+/* Based on the css from the Grid System in Bootstrap */
+/* http://getbootstrap.com/css/#grid */
+/*------------------------------------*\
+    ANIMATIONS
+\*------------------------------------*/
+/*------------------------------------*\
+    MEDIA QUERIES
+\*------------------------------------*/
+/*
+  In use:
+  .query-min(@screen--md; {
+        color: blue;
+    });
+    --
+    @fix-mqs
+
+*/
+.tabs-mini {
+  margin: 0;
+  padding: 7px 0;
+}
+@media print {
+  .tabs-mini {
+    display: none;
+  }
+}
+.tabs-mini__item {
+  margin-top: 20px;
+  font-family: "Siri", Tahoma, sans-serif;
+  font-size-adjust: 0.51;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 15px;
+  font-size: 0.8333333333333334rem;
+  line-height: 1.4;
+  margin-bottom: 0px;
+  text-transform: none;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: inline-block;
+  color: #333;
+}
+.tabs-mini__item a {
+  color: #333;
+  padding-bottom: 5px;
+  border-bottom: 2px solid rgba(0, 0, 0, 0);
+}
+.tabs-mini__item:after {
+  content: '|';
+  padding: 0 7px;
+}
+.tabs-mini__item:last-child:after {
+  display: none;
+}
+.tabs-mini__link {
+  color: #333;
+  border-bottom: 2px solid #d83a36;
+}
+.tabs-mini__link:hover {
+  color: #d83a36;
+  border-bottom: 2px solid #d83a36;
+}
+a.tabs-mini__link.tabs-mini__link--current {
+  border-bottom: 2px solid #d83a36;
+  color: #333;
+  cursor: default;
+}
+
+/*------------------------------------*\
+    COLOR PALETTE
+\*------------------------------------*/
+/*------------------------------------*\
+    BREAKPOINTS
+\*------------------------------------*/
+/*------------------------------------*\
+    GRID
+\*------------------------------------*/
+/*------------------------------------*\
+    #TYPE
+\*------------------------------------*/
+/*------------------------------------*\
+    $LINE HEIGHTS
+\*------------------------------------*/
+/*------------------------------------*\
+    $MIXINS
+\*------------------------------------*/
+/*------------------------------------*\
+    $FONTS
+\*------------------------------------*/
+/*------------------------------------*\
+   GRID
+\*------------------------------------*/
+/* Based on the css from the Grid System in Bootstrap */
+/* http://getbootstrap.com/css/#grid */
+/*------------------------------------*\
+    ANIMATIONS
+\*------------------------------------*/
+/*------------------------------------*\
+    MEDIA QUERIES
+\*------------------------------------*/
+/*
+  In use:
+  .query-min(@screen--md; {
+        color: blue;
+    });
+    --
+    @fix-mqs
+
+*/
+.timeline {
+  padding-left: 0;
+}
+.timeline__item {
+  margin-bottom: 0;
+  padding-bottom: 7px;
+  padding-left: 21px;
+  border-left: 2px solid #585858;
+  list-style: none;
+}
+.timeline__item:before {
+  content: "";
+  display: block;
+  position: absolute;
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/gfx/bullet__small--primary.svg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  width: 25px;
+  height: 25px;
+  margin-left: -35px;
+}
+@media print {
+  .timeline__item {
+    padding-left: 0;
+    border: none;
+  }
+  .timeline__item:before {
+    display: none;
+  }
+}
+.timeline__item:last-child {
+  border: none;
+}
+
+/*------------------------------------*\
+    COLOR PALETTE
+\*------------------------------------*/
+/*------------------------------------*\
+    BREAKPOINTS
+\*------------------------------------*/
+/*------------------------------------*\
+    GRID
+\*------------------------------------*/
+/*------------------------------------*\
+    #TYPE
+\*------------------------------------*/
+/*------------------------------------*\
+    $LINE HEIGHTS
+\*------------------------------------*/
+/*------------------------------------*\
+    $MIXINS
+\*------------------------------------*/
+/*------------------------------------*\
+    $FONTS
+\*------------------------------------*/
+/*------------------------------------*\
+   GRID
+\*------------------------------------*/
+/* Based on the css from the Grid System in Bootstrap */
+/* http://getbootstrap.com/css/#grid */
+/*------------------------------------*\
+    ANIMATIONS
+\*------------------------------------*/
+/*------------------------------------*\
+    MEDIA QUERIES
+\*------------------------------------*/
+/*
+  In use:
+  .query-min(@screen--md; {
+        color: blue;
+    });
+    --
+    @fix-mqs
+
+*/
+.toc:focus {
+  border: none;
+  outline: none;
+}
+.toc__heading:focus {
+  border: none;
+  outline: none;
+}
+.toc__back {
+  font-family: "Siri", Tahoma, sans-serif;
+  font-size-adjust: 0.51;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 15px;
+  font-size: 0.8333333333333334rem;
+  line-height: 1.4;
+  margin-bottom: 0px;
+  text-transform: none;
+  display: block;
+  border: none;
+  text-decoration: underline;
+  color: #585858;
+  margin-top: 42px;
+  margin-bottom: 21px;
+}
+.toc__back:hover,
+.toc__back:focus,
+.toc__back:active {
+  color: #d83a36;
+}
+.toc__back-icon {
+  font-family: "Siri", Tahoma, sans-serif;
+  font-size-adjust: 0.51;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 18px;
+  font-size: 1rem;
+  line-height: 1.55555556;
+  margin-bottom: 14px;
+  text-transform: none;
+  vertical-align: top;
+  opacity: 0.7;
+}
+
+.toc-mobile .navigation:not(.navigation--footer):not(.navigation--top-menu) {
+  display: none;
+}
+.toc-mobile #title_1 {
+  margin-top: 0px;
+}
+.toc-sidebar {
+  -webkit-transform: translateX(35px);
+          transform: translateX(35px);
+  overflow-x: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+  top: 80px;
+}
+.toc-sidebar.stick-to-top {
+  position: fixed;
+  z-index: 0;
+}
+.toc-sidebar .toc-list {
+  overflow-y: auto;
+  position: relative;
+  height: 100%;
+  max-height: calc(100vh - 30px);
+}
+.toc-sidebar .toc-list__header {
+  text-transform: uppercase;
+  font-size: 16px;
+}
+.toc-sidebar .toc-list-item {
+  padding-left: 20px;
+  font-size: 0.9rem;
+}
+.toc-sidebar .is-collapsible {
+  max-height: 1000px;
+  overflow: hidden;
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+}
+.toc-sidebar .is-collapsed {
+  max-height: 0;
+}
+.toc-sidebar a {
+  border-bottom: none;
+  text-overflow: ellipsis;
+}
+.toc-sidebar li:not(.active-link) {
+  list-style: none;
+}
+.toc-sidebar .node-name--H3 {
+  position: relative;
+  top: 14px;
+  left: 25px;
+  padding-right: 25px;
+}
+.toc-sidebar ol,
+.toc-sidebar ul {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+.toc-sidebar h1::before,
+.toc-sidebar h2::before,
+.toc-sidebar h3::before,
+.toc-sidebar h4::before,
+.toc-sidebar h5::before,
+.toc-sidebar h6::before {
+  display: block;
+  content: " ";
+  height: 60px;
+  margin-top: -60px;
+  visibility: hidden;
+}
+.toc-sidebar .toc-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  text-overflow: ellipsis;
+  width: 100%;
+  max-width: 210px;
+  color: #d83a36;
+  opacity: 0.9;
+}
+.toc-sidebar .descriptive-header {
+  display: none;
+}
+.toc-sidebar .active-link {
+  font-weight: bold;
+  -webkit-transform: translateX(-20px);
+          transform: translateX(-20px);
+  opacity: 1;
+}
+.toc-sidebar .toc-link.active-link::before {
+  content: "";
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 20px;
+  width: 20px;
+  padding: 5px;
+  left: 0;
+  background-image: url(../../../UI/gfx/bullet__small--primary.svg);
+  background-repeat: no-repeat;
+}
+@media screen and (max-width: 912px) {
+  .toc-sidebar {
+    display: none;
+  }
+  .stick-to-top {
+    display: none;
+  }
+  .navigation {
+    display: block !important;
+  }
+  .toc-mobile .navigation:not(.navigation--footer):not(.navigation--top-menu) {
+    display: block;
+  }
+}
+
+.toggle-view {
+  margin-bottom: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+.toggle-view button.button--secondary.button--small.selected {
+  color: #b72724;
+}
+
+/*------------------------------------*\
+    COLOR PALETTE
+\*------------------------------------*/
+/*------------------------------------*\
+    BREAKPOINTS
+\*------------------------------------*/
+/*------------------------------------*\
+    GRID
+\*------------------------------------*/
+/*------------------------------------*\
+    #TYPE
+\*------------------------------------*/
+/*------------------------------------*\
+    $LINE HEIGHTS
+\*------------------------------------*/
+/*------------------------------------*\
+    $MIXINS
+\*------------------------------------*/
+/*------------------------------------*\
+    $FONTS
+\*------------------------------------*/
+/*------------------------------------*\
+   GRID
+\*------------------------------------*/
+/* Based on the css from the Grid System in Bootstrap */
+/* http://getbootstrap.com/css/#grid */
+/*------------------------------------*\
+    ANIMATIONS
+\*------------------------------------*/
+/*------------------------------------*\
+    MEDIA QUERIES
+\*------------------------------------*/
+/*
+  In use:
+  .query-min(@screen--md; {
+        color: blue;
+    });
+    --
+    @fix-mqs
+
+*/
+.toggle-list {
+  display: block;
+  margin: 21px 0;
+}
+@media print {
+  .toggle-list {
+    margin-left: -21px;
+    page-break-inside: avoid;
+  }
+}
+.toggle-list__button {
+  z-index: 1;
+  opacity: .99;
+  display: block;
+  position: relative;
+  padding: 21px;
+  padding-right: 42px;
+  background: #ffffff;
+  border: none;
+  margin: 0;
+  color: #282828;
+}
+.toggle-list__button:hover,
+.toggle-list__button:focus,
+.toggle-list__button:active {
+  color: #d83a36;
+  background: #f8f7f6;
+}
+@media print {
+  .toggle-list__button {
+    display: none;
+  }
+}
+.toggle-list__button--disablet {
+  color: #585858;
+}
+.toggle-list__button--expanded {
+  background: #f8f7f6;
+  margin: 0 -21px;
+  border: none;
+}
+@media (min-width: 45em) {
+  .toggle-list__button--expanded {
+    margin: 0;
+    width: 150%;
+  }
+}
+@media (min-width: 57em) {
+  .toggle-list__button--expanded {
+    width: 166.66666667%;
+  }
+}
+@media print {
+  .toggle-list__button--expanded {
+    display: block;
+    padding: 0;
+    background: none;
+  }
+}
+.toggle-list__button--expanded .toggle-list__button-icon {
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+.toggle-list__button-title {
+  font-family: "Siri Medium", Tahoma, sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 20px;
+  font-size: 1.1111111111111112rem;
+  line-height: 1.45833333;
+  margin-bottom: 14px;
+  text-transform: none;
+  line-height: 1;
+  margin: 0;
+}
+@media (min-width: 22em) {
+  .toggle-list__button-title {
+    font-size: 22px;
+    font-size: 1.2222222222222223rem;
+  }
+}
+@media (min-width: 45em) {
+  .toggle-list__button-title {
+    font-size: 24px;
+    font-size: 1.3333333333333333rem;
+  }
+}
+@media print {
+  .toggle-list__button-title {
+    margin-left: 21px;
+  }
+}
+.toggle-list__button-icon {
+  position: absolute;
+  top: 21px;
+  right: 14px;
+  -webkit-transition: transform 250ms cubic-bezier(0, 0, 0.1, 1);
+  -webkit-transition: -webkit-transform 250ms cubic-bezier(0, 0, 0.1, 1);
+  transition: -webkit-transform 250ms cubic-bezier(0, 0, 0.1, 1);
+  transition: transform 250ms cubic-bezier(0, 0, 0.1, 1);
+  transition: transform 250ms cubic-bezier(0, 0, 0.1, 1), -webkit-transform 250ms cubic-bezier(0, 0, 0.1, 1);
+}
+.toggle-list__section {
+  padding: 21px 21px;
+  background: #ffffff;
+  margin: 0 -21px;
+}
+@media (min-width: 45em) {
+  .toggle-list__section {
+    margin: 0;
+  }
+}
+.toggle-list__section--no-styles {
+  padding: 0;
+  background: none;
+}
+.toggle-list__section--contracted {
+  -webkit-animation: animations__fade-out-up 250ms cubic-bezier(0, 0, 0.1, 1);
+  animation: animations__fade-out-up 250ms cubic-bezier(0, 0, 0.1, 1);
+}
+.toggle-list__section--expanded {
+  z-index: 2;
+  position: relative;
+  -webkit-animation: animations__fade-in-down 400ms cubic-bezier(0, 0, 0.1, 1) both;
+  animation: animations__fade-in-down 400ms cubic-bezier(0, 0, 0.1, 1) both;
+}
+@media (min-width: 45em) {
+  .toggle-list__section--expanded {
+    width: 150%;
+  }
+}
+@media (min-width: 57em) {
+  .toggle-list__section--expanded {
+    width: 166.66666667%;
+  }
+}
+.toggle-list__section-header {
+  background: #f8f7f6;
+  margin: -21px;
+  margin-bottom: 21px;
+  padding: 0 21px;
+}
+@media (min-width: 45em) {
+  .toggle-list__section-header {
+    padding: 0;
+  }
+}
+.toggle-list--small {
+  margin: 7px 0;
+}
+.toggle-list--small .toggle-list__button {
+  padding: 7px 14px;
+  padding-right: 35px;
+}
+.toggle-list--small .toggle-list__button-icon {
+  margin-right: -21px;
+}
+.toggle-list--small .toggle-list__button-title {
+  font-family: "Siri", Tahoma, sans-serif;
+  font-size-adjust: 0.51;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 18px;
+  font-size: 1rem;
+  line-height: 1.55555556;
+  margin-bottom: 14px;
+  text-transform: none;
+  margin: 0;
+}
+@media (min-width: 45em) {
+  .toggle-list--small .toggle-list__button--expanded {
+    width: 100%;
+  }
+}
+@media (min-width: 45em) {
+  .toggle-list--small .toggle-list__section--expanded {
+    width: 100%;
+  }
+}
+
+/*------------------------------------*\
+    COLOR PALETTE
+\*------------------------------------*/
+/*------------------------------------*\
+    BREAKPOINTS
+\*------------------------------------*/
+/*------------------------------------*\
+    GRID
+\*------------------------------------*/
+/*------------------------------------*\
+    #TYPE
+\*------------------------------------*/
+/*------------------------------------*\
+    $LINE HEIGHTS
+\*------------------------------------*/
+/*------------------------------------*\
+    $MIXINS
+\*------------------------------------*/
+/*------------------------------------*\
+    $FONTS
+\*------------------------------------*/
+/*------------------------------------*\
+   GRID
+\*------------------------------------*/
+/* Based on the css from the Grid System in Bootstrap */
+/* http://getbootstrap.com/css/#grid */
+/*------------------------------------*\
+    ANIMATIONS
+\*------------------------------------*/
+/*------------------------------------*\
+    MEDIA QUERIES
+\*------------------------------------*/
+/*
+  In use:
+  .query-min(@screen--md; {
+        color: blue;
+    });
+    --
+    @fix-mqs
+
+*/
+.toggle {
+  margin-bottom: 40px;
+}
+.toggle__icon {
+  display: inline-block;
+  margin-left: 7px;
+  -webkit-transition: transform 250ms cubic-bezier(0, 0, 0.1, 1);
+  -webkit-transition: -webkit-transform 250ms cubic-bezier(0, 0, 0.1, 1);
+  transition: -webkit-transform 250ms cubic-bezier(0, 0, 0.1, 1);
+  transition: transform 250ms cubic-bezier(0, 0, 0.1, 1);
+  transition: transform 250ms cubic-bezier(0, 0, 0.1, 1), -webkit-transform 250ms cubic-bezier(0, 0, 0.1, 1);
+  margin-right: 0;
+  vertical-align: middle;
+}
+.toggle__button {
+  font-family: "Siri Medium", Tahoma, sans-serif;
+  font-family: "Siri", Tahoma, sans-serif;
+  font-size-adjust: 0.51;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 15px;
+  font-size: 0.8333333333333334rem;
+  line-height: 1.4;
+  margin-bottom: 0px;
+  text-transform: none;
+  min-width: 10px;
+  background: #f2efed;
+  padding: 5px 7px;
+  text-align: left;
+  border: 2px solid transparent;
+  display: inline-block;
+  color: #282828;
+  -webkit-transition: min-width 250ms cubic-bezier(0, 0, 0.1, 1);
+  transition: min-width 250ms cubic-bezier(0, 0, 0.1, 1);
+}
+.toggle__button:hover,
+.toggle__button:focus,
+.toggle__button:active {
+  background: #ddd5cf;
+  border: 2px solid #ddd5cf;
+  color: #282828;
+}
+.toggle__button--expanded {
+  min-width: 100%;
+  background: #d83a36;
+  color: #ffffff;
+}
+.toggle__button--expanded:hover,
+.toggle__button--expanded:focus {
+  background: #f15540;
+  border-color: #f15540;
+  border-bottom-color: #f15540;
+  color: #ffffff;
+}
+.toggle__button--expanded .toggle__icon {
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+.toggle__button--expanded .toggle__caption--expanded {
+  display: inline;
+}
+.toggle__button--expanded .toggle__caption--contracted {
+  display: none;
+}
+@media print {
+  .toggle__button {
+    display: none;
+  }
+}
+.toggle__link {
+  font-family: "Siri Medium", Tahoma, sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 15px;
+  font-size: 0.8333333333333334rem;
+  background: #f2efed;
+  padding: 10px 21px;
+  text-align: left;
+  border: 2px solid transparent;
+  display: inline-block;
+  color: #282828;
+  -webkit-transition: min-width 250ms cubic-bezier(0, 0, 0.1, 1);
+  transition: min-width 250ms cubic-bezier(0, 0, 0.1, 1);
+}
+.toggle__link:hover,
+.toggle__link:focus,
+.toggle__link:active {
+  background: #f2efed;
+  border: 2px solid #f2efed;
+}
+.toggle__link--expanded .toggle__icon {
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+.toggle__section {
+  padding: 21px 21px;
+  margin-bottom: 42px !important;
+}
+.toggle__section--contracted {
+  -webkit-animation: animations__fade-out-up 300ms linear;
+  animation: animations__fade-out-up 300ms linear;
+}
+.toggle__section--expanded {
+  -webkit-animation: animations__fade-in-down 400ms linear both;
+  animation: animations__fade-in-down 400ms linear both;
+}
+.toggle__caption--expanded {
+  display: none;
+}
+.toggle--light {
+  margin-bottom: 14px;
+}
+.toggle--light .toggle__button {
+  background: #ffffff;
+  padding: 5px 0;
+  border: none;
+  border-bottom: 2px solid #f2efed;
+}
+.toggle--light .toggle__button:hover,
+.toggle--light .toggle__button:focus,
+.toggle--light .toggle__button:active {
+  color: #d83a36;
+  outline: none;
+}
+.toggle--light .toggle__button:focus {
+  outline: 1px dotted #282828;
+  outline-offset: 0;
+}
+.toggle--light .toggle__button--expanded {
+  min-width: 0;
+  color: #282828;
+}
+.toggle--light .toggle__button--expanded:hover,
+.toggle--light .toggle__button--expanded:focus,
+.toggle--light .toggle__button--expanded:active {
+  color: #d83a36;
+}
+.toggle--light .toggle__section {
+  padding-left: 0;
+  padding-right: 0;
+  padding-bottom: 0;
+  border: none;
+}
+.toggle--light .toggle__section--expanded {
+  padding: 21px 21px;
+}
+@media (min-width: 45em) {
+  .toggle--only-mobile {
+    margin-bottom: 0;
+  }
+  .toggle--only-mobile .toggle__button {
+    display: none;
+  }
+  .toggle--only-mobile .toggle__section {
+    display: block !important;
+    border: none;
+    padding: 0;
+    margin: 0 !important;
+  }
+}
+@media (min-width: 57em) {
+  .toggle--only-tablet {
+    margin-bottom: 0;
+  }
+  .toggle--only-tablet .toggle__button {
+    display: none;
+  }
+  .toggle--only-tablet .toggle__section {
+    display: block !important;
+    border: none;
+    padding: 0;
+    margin: 0 !important;
+  }
+}
+
+/*------------------------------------*\
+    COLOR PALETTE
+\*------------------------------------*/
+/*------------------------------------*\
+    BREAKPOINTS
+\*------------------------------------*/
+/*------------------------------------*\
+    GRID
+\*------------------------------------*/
+/*------------------------------------*\
+    #TYPE
+\*------------------------------------*/
+/*------------------------------------*\
+    $LINE HEIGHTS
+\*------------------------------------*/
+/*------------------------------------*\
+    $MIXINS
+\*------------------------------------*/
+/*------------------------------------*\
+    $FONTS
+\*------------------------------------*/
+/*------------------------------------*\
+   GRID
+\*------------------------------------*/
+/* Based on the css from the Grid System in Bootstrap */
+/* http://getbootstrap.com/css/#grid */
+/*------------------------------------*\
+    ANIMATIONS
+\*------------------------------------*/
+/*------------------------------------*\
+    MEDIA QUERIES
+\*------------------------------------*/
+/*
+  In use:
+  .query-min(@screen--md; {
+        color: blue;
+    });
+    --
+    @fix-mqs
+
+*/
+.top-menu {
+  position: relative;
+  color: #ffffff;
+  z-index: 4;
+  background: #f15540;
+  min-height: 100vh;
+}
+@media (min-width: 57em) {
+  .top-menu {
+    background: #d83a36;
+    background-image: -webkit-gradient(linear, left top, right top, color-stop(50%, #f15540), color-stop(50%, #d83a36));
+    background-image: linear-gradient(to right, #f15540 50%, #d83a36 50%);
+  }
+}
+@media print {
+  .top-menu {
+    display: none;
+  }
+}
+.top-menu--hidden {
+  display: none;
+}
+.top-menu--visible {
+  z-index: 2;
+}
+.top-menu__search {
+  display: block;
+}
+@media (min-width: 57em) {
+  .top-menu__search {
+    display: none;
+  }
+}
+.top-menu a {
+  color: #ffffff;
+  border-color: transparent;
+}
+.top-menu a:hover,
+.top-menu a:focus {
+  color: #ffffff;
+}
+.top-menu__row {
+  padding-top: 64px;
+}
+@media (min-width: 57em) {
+  .top-menu__row {
+    display: table;
+    width: 100%;
+  }
+}
+.top-menu__main {
+  padding: 21px 0 42px 0;
+}
+@media (min-width: 57em) {
+  .top-menu__main {
+    padding: 42px 0 70px 0;
+    display: table-cell;
+    vertical-align: top;
+    width: 63.63636364%;
+    margin-bottom: 0;
+  }
+}
+.top-menu__global {
+  background: #d83a36;
+  margin: 0 -21px;
+  padding: 42px 21px 21px 21px;
+}
+@media (min-width: 45em) {
+  .top-menu__global {
+    margin-left: -15%;
+    padding-left: 15%;
+  }
+}
+@media (min-width: 57em) {
+  .top-menu__global {
+    background: none;
+    margin: 0;
+    padding: 84px 0 84px 0;
+    display: table-cell;
+    vertical-align: bottom;
+    padding-left: 42px;
+    width: 36.36363636%;
+  }
+}
+@media (min-width: 45em) {
+  .top-menu__global .navigation--top-menu {
+    position: relative;
+  }
+}
+@media (min-width: 45em) {
+  .top-menu__submenues::before,
+  .top-menu__submenues::after {
+    content: "";
+    display: table;
+  }
+  .top-menu__submenues::after {
+    clear: both;
+  }
+  .top-menu__submenues .row {
+    margin-left: -10.5px;
+    margin-right: -10.5px;
+  }
+}
+@media (min-width: 45em) and (min-width: 22em) {
+  .top-menu__submenues {
+    margin-left: -10.5px;
+    margin-right: -10.5px;
+  }
+}
+@media (min-width: 57em) {
+  .top-menu__submenues {
+    margin: 0;
+  }
+}
+.top-menu__submenu {
+  margin-bottom: 21px;
+}
+@media (min-width: 45em) {
+  .top-menu__submenu {
+    position: relative;
+    min-height: 1px;
+    word-wrap: break-word;
+  }
+}
+@media (min-width: 45em) and (min-width: 22em) {
+  .top-menu__submenu {
+    padding-left: 10.5px;
+    padding-right: 10.5px;
+    float: left;
+    width: 50%;
+  }
+}
+@media (min-width: 57em) {
+  .top-menu__submenu {
+    position: static;
+    padding: 0;
+    float: none;
+    width: auto;
+  }
+}
+.top-menu__submenu:last-child {
+  margin-bottom: 2px;
+}
+.top-menu__line {
+  border: none;
+  border-bottom: 3px solid #f15540;
+  margin: 42px 0;
+}
+.top-menu--overlay {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  margin: 0;
+}
+.top-menu--overlay .top-menu__row {
+  padding-top: 83px;
+}
+@media (min-width: 22em) {
+  .top-menu--overlay .top-menu__row {
+    padding-top: 99px;
+  }
+}
+.top-menu--overlay .top-menu__submenu li,
+.top-menu--overlay .navigation--top-menu li {
+  -webkit-animation: animations__fade-in-down 300ms cubic-bezier(0, 0, 0.1, 1) both;
+  animation: animations__fade-in-down 300ms cubic-bezier(0, 0, 0.1, 1) both;
+}
+.top-menu--overlay .top-menu__submenu li:nth-child(1),
+.top-menu--overlay .navigation--top-menu li:nth-child(1) {
+  -webkit-animation-delay: 0.05s;
+  animation-delay: 0.05s;
+}
+.top-menu--overlay .top-menu__submenu li:nth-child(2),
+.top-menu--overlay .navigation--top-menu li:nth-child(2) {
+  -webkit-animation-delay: 0.1s;
+  animation-delay: 0.1s;
+}
+.top-menu--overlay .top-menu__submenu li:nth-child(3),
+.top-menu--overlay .navigation--top-menu li:nth-child(3) {
+  -webkit-animation-delay: 0.15s;
+  animation-delay: 0.15s;
+}
+.top-menu--overlay .top-menu__submenu li:nth-child(4),
+.top-menu--overlay .navigation--top-menu li:nth-child(4) {
+  -webkit-animation-delay: 0.2s;
+  animation-delay: 0.2s;
+}
+.top-menu--overlay .top-menu__submenu li:nth-child(5),
+.top-menu--overlay .navigation--top-menu li:nth-child(5) {
+  -webkit-animation-delay: 0.25s;
+  animation-delay: 0.25s;
+}
+.top-menu--overlay .top-menu__submenu li:nth-child(6),
+.top-menu--overlay .navigation--top-menu li:nth-child(6) {
+  -webkit-animation-delay: 0.3s;
+  animation-delay: 0.3s;
+}
+.top-menu--overlay .top-menu__submenu li:nth-child(7),
+.top-menu--overlay .navigation--top-menu li:nth-child(7) {
+  -webkit-animation-delay: 0.35s;
+  animation-delay: 0.35s;
+}
+.top-menu--overlay .top-menu__submenu li:nth-child(8),
+.top-menu--overlay .navigation--top-menu li:nth-child(8) {
+  -webkit-animation-delay: 0.4s;
+  animation-delay: 0.4s;
+}
+.top-menu--overlay .search--top-menu {
+  -webkit-animation: animations__fade-in 300ms cubic-bezier(0, 0, 0.1, 1) both;
+  animation: animations__fade-in 300ms cubic-bezier(0, 0, 0.1, 1) both;
+}
+@media (min-width: 45em) {
+  .top-menu--overlay .top-menu__search {
+    display: none;
+  }
+}
+
+.row.video--wrapper {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 25px;
+  height: 0;
+  margin-bottom: 50px;
+}
+iframe.col--full {
+  border: 0;
+  margin: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 2px solid #4FA44F;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}

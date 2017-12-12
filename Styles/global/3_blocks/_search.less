@@ -5,6 +5,18 @@
 	max-width: 28em;
 	position: relative;	
 	padding-right: 105px;
+
+	input[type="search"] {
+    -webkit-appearance: textfield;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+	}
+
+	::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+		color: white;
+	}
+
 	&--full {
 		max-width: none;
 	}
@@ -14,6 +26,17 @@
 	}	
 	&__input {
 		width: 100%;
+		background: none;
+    border: none;
+    border-bottom: 2px solid #fff;
+    color: #fff;
+    margin-bottom: 21px;
+    padding-right: 70px;
+    padding: 11px 7px;
+    -webkit-transition: all .2s ease;
+    -moz-transition: all .2s ease;
+    -o-transition: all .2s ease;
+    transition: all .2s ease;
 	}
 	&__button {
 		position: absolute;
