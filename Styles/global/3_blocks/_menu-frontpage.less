@@ -17,10 +17,10 @@
      width: 100%;
      margin-bottom: @spacing;
 
-     @media(min-width: 45em) {
+     @media(min-width: 57em) {
        width: 50%;
      }
-     @media(min-width: 57em) {
+     @media(min-width: 1300px) {
        width: 33.333%;
      }
    }
@@ -91,6 +91,8 @@
 
    &__tags {
      display: block;
+     width: calc(~"100% + 58px");
+     transform: translateX(-58px);
       ul {
         margin: 0;
         padding: 0;
