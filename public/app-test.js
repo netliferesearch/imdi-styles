@@ -498,48 +498,46 @@ imdi.accordion = (function () {
             'use strict';
             
             var elements = document.querySelectorAll('.accordion li');
+
+            if (elements) {
         
-            var _loop = function _loop(i) {
-                var content = elements[i].querySelector('.accordion--content');
+                var _loop = function _loop(i) {
+                    var content = elements[i].querySelector('.accordion--content');
+                
+                    elements[i].addEventListener('click', function () {
+                
+                        //  toggle aria-expanded
+                        var ariaExpanded = content.getAttribute('aria-expanded');
+                        console.log(ariaExpanded);
+                        content.setAttribute('aria-expanded', ariaExpanded === 'true' ? false : true);
+                
+                        //  toggle aria-hidden
+                        var ariaHidden = content.getAttribute('aria-hidden');
+                        content.setAttribute('aria-hidden', ariaHidden === 'true' ? false : true);
+                
+                        //  toggle content visibility
+                        elements[i].querySelector('.accordion--title img').classList.toggle('open');
+                        content.classList.toggle('open');
+                    });
+                };
             
-                elements[i].addEventListener('click', function () {
-            
-                    //  toggle aria-expanded
-                    var ariaExpanded = content.getAttribute('aria-expanded');
-                    console.log(ariaExpanded);
-                    content.setAttribute('aria-expanded', ariaExpanded === 'true' ? false : true);
-            
-                    //  toggle aria-hidden
-                    var ariaHidden = content.getAttribute('aria-hidden');
-                    content.setAttribute('aria-hidden', ariaHidden === 'true' ? false : true);
-            
-                    //  toggle content visibility
-                    elements[i].querySelector('.accordion--title img').classList.toggle('open');
-                    content.classList.toggle('open');
-                });
-            };
-        
-            for (var i = 0; i < elements.length; i++) {
-                _loop(i);
-            }
-        
-            // prevent spacebar from scrolling
-            window.onkeydown = function (e) {
-                return !(e.keyCode == 32);
-            };
-        
-            document.body.onkeyup = function (e) {
-            
-                //spacebar or enter will click the focused element
-                if (e.keyCode == 32 || e.keyCode == 13) {
-            
-                    try {
-                        document.activeElement.click();
-                    } catch (e) {
-                        console.log(e);
-                    }
+                for (var i = 0; i < elements.length; i++) {
+                    _loop(i);
                 }
-            };
+            
+                document.body.onkeyup = function (e) {
+                
+                    //spacebar or enter will click the focused element
+                    if (e.keyCode == 32 || e.keyCode == 13) {
+                
+                        try {
+                            document.activeElement.click();
+                        } catch (e) {
+                            console.log(e);
+                        }
+                    }
+                };
+            }
         }
     };
 })();
