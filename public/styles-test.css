@@ -8855,6 +8855,43 @@ a.ident:active .ident__triangle {
   }
 }
 
+.lightbox-feedback-wrapper {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  z-index: 10;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: rgba(255, 255, 255, 0.8);
+}
+.lightbox-feedback {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border: 5px solid #F15641;
+  padding: 15px;
+  width: 100%;
+  max-width: 500px;
+  margin: 15px auto;
+}
+.lightbox-feedback__url,
+.lightbox-feedback__message,
+.lightbox-feedback__email {
+  background-color: white;
+  border: 2px solid #bbbbbb;
+}
+
 /*------------------------------------*\
     COLOR PALETTE
 \*------------------------------------*/

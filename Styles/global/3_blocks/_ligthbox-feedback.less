@@ -1,0 +1,27 @@
+.lightbox-feedback-wrapper {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255,255,255,0.8);
+}
+
+.lightbox-feedback {
+  display: flex;
+  flex-direction: column;
+  border: 5px solid #F15641;
+  padding: 15px;
+  width: 100%;
+  max-width: 500px;
+  margin: 15px auto;
+  
+  &__url, &__message, &__email {
+    background-color: white;
+    border: 2px solid #bbbbbb;
+    
+  }
+}
+

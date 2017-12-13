@@ -25,7 +25,24 @@ $(document).ready(function () {
     imdi.removeDoubleCTA.init()
     imdi.tocbot.init()
     imdi.tableOfContents.init()
+    imdi.lightboxFeedback.init()
 })
+
+// LIGHTBOX for feedback on sidefeil
+// Inputs the URL as default value in input field, for reference to feedback.
+imdi.lightboxFeedback = (function ($) {
+    return {
+        init: function () {
+            'use strict'
+
+            window.addEventListener('DOMContentLoaded', function () {
+
+                var element = document.querySelector('.lightbox__url')
+                element.value = this.location.href
+            })
+        }
+    }
+})(jQuery)
 
 // if page is low, don't show download PDF twice:
 // https://www.imdi.no/om-imdi/rapporter/2017/integrering-av-flyktninger-befolkningsundersokelse-mai-2017/
