@@ -6555,6 +6555,9 @@ blockquote small {
       -ms-flex-pack: center;
           justify-content: center;
 }
+.footer__column h3 {
+  padding-left: 26.25px;
+}
 .footer__column ul {
   width: 100%;
   max-width: 300px;
@@ -6688,9 +6691,9 @@ blockquote small {
   margin-bottom: 15px;
 }
 .graph__types.right {
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 .graph__types .tabs-mini {
   float: right;
@@ -12681,6 +12684,8 @@ a.tabs-mini__link.tabs-mini__link--current {
 }
 .top-menu__row {
   padding-top: 64px;
+  position: relative;
+  top: 20px;
 }
 @media (min-width: 57em) {
   .top-menu__row {
