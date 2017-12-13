@@ -572,236 +572,6 @@ img {
     @fix-mqs
 
 */
-ul#epi-quickNavigator li {
-  margin: 0;
-  padding: 0;
-}
-ul#epi-quickNavigator li a {
-  border-bottom: none;
-}
-
-/*------------------------------------*\
-    COLOR PALETTE
-\*------------------------------------*/
-/*------------------------------------*\
-    BREAKPOINTS
-\*------------------------------------*/
-/*------------------------------------*\
-    GRID
-\*------------------------------------*/
-/*------------------------------------*\
-    #TYPE
-\*------------------------------------*/
-/*------------------------------------*\
-    $LINE HEIGHTS
-\*------------------------------------*/
-/*------------------------------------*\
-    $MIXINS
-\*------------------------------------*/
-/*------------------------------------*\
-    $FONTS
-\*------------------------------------*/
-/*------------------------------------*\
-   GRID
-\*------------------------------------*/
-/* Based on the css from the Grid System in Bootstrap */
-/* http://getbootstrap.com/css/#grid */
-/*------------------------------------*\
-    ANIMATIONS
-\*------------------------------------*/
-/*------------------------------------*\
-    MEDIA QUERIES
-\*------------------------------------*/
-/*
-  In use:
-  .query-min(@screen--md; {
-        color: blue;
-    });
-    --
-    @fix-mqs
-
-*/
-@page {
-  margin: 1.5cm 0;
-}
-
-/*------------------------------------*\
-    COLOR PALETTE
-\*------------------------------------*/
-/*------------------------------------*\
-    BREAKPOINTS
-\*------------------------------------*/
-/*------------------------------------*\
-    GRID
-\*------------------------------------*/
-/*------------------------------------*\
-    #TYPE
-\*------------------------------------*/
-/*------------------------------------*\
-    $LINE HEIGHTS
-\*------------------------------------*/
-/*------------------------------------*\
-    $MIXINS
-\*------------------------------------*/
-/*------------------------------------*\
-    $FONTS
-\*------------------------------------*/
-/*------------------------------------*\
-   GRID
-\*------------------------------------*/
-/* Based on the css from the Grid System in Bootstrap */
-/* http://getbootstrap.com/css/#grid */
-/*------------------------------------*\
-    ANIMATIONS
-\*------------------------------------*/
-/*------------------------------------*\
-    MEDIA QUERIES
-\*------------------------------------*/
-/*
-  In use:
-  .query-min(@screen--md; {
-        color: blue;
-    });
-    --
-    @fix-mqs
-
-*/
-.t-only-screenreaders {
-  position: absolute;
-  overflow: hidden;
-  width: 1px;
-  height: 1px;
-}
-.t-no-list-styles,
-.t-no-list-styles > li {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-.t-position {
-  position: relative;
-}
-.t-position::before,
-.t-position::after {
-  content: "";
-  display: table;
-}
-.t-position::after {
-  clear: both;
-}
-.t-no-margin {
-  margin: 0;
-}
-.t-margin-bottom {
-  margin-bottom: 21px;
-}
-.t-margin-bottom--large {
-  margin-bottom: 42px;
-}
-.t-margin-bottom--xlarge {
-  margin-bottom: 84px;
-}
-.t-margin-top {
-  margin-top: 21px;
-}
-.t-margin-top--large {
-  margin-top: 42px;
-}
-.t-show-on-desktop {
-  display: none;
-}
-@media (min-width: 57em) {
-  .t-show-on-desktop {
-    display: block;
-  }
-}
-@media print {
-  .t-show-on-desktop {
-    display: block;
-  }
-}
-.t-show-on-tablet {
-  display: none;
-}
-@media (min-width: 45em) {
-  .t-show-on-tablet {
-    display: inherit;
-  }
-}
-@media print {
-  .t-show-on-tablet {
-    display: inherit;
-  }
-}
-@media (min-width: 45em) {
-  .t-hide-on-tablet {
-    display: none;
-  }
-}
-@media print {
-  .t-hide-on-tablet {
-    display: none;
-  }
-}
-.t-align-right {
-  text-align: right;
-}
-.t-float-left {
-  float: left;
-}
-.t-float-right {
-  float: right;
-}
-@media print {
-  .t-hide-on-print {
-    display: none;
-  }
-}
-.t-no-focus:focus {
-  outline: none;
-}
-
-/*------------------------------------*\
-    COLOR PALETTE
-\*------------------------------------*/
-/*------------------------------------*\
-    BREAKPOINTS
-\*------------------------------------*/
-/*------------------------------------*\
-    GRID
-\*------------------------------------*/
-/*------------------------------------*\
-    #TYPE
-\*------------------------------------*/
-/*------------------------------------*\
-    $LINE HEIGHTS
-\*------------------------------------*/
-/*------------------------------------*\
-    $MIXINS
-\*------------------------------------*/
-/*------------------------------------*\
-    $FONTS
-\*------------------------------------*/
-/*------------------------------------*\
-   GRID
-\*------------------------------------*/
-/* Based on the css from the Grid System in Bootstrap */
-/* http://getbootstrap.com/css/#grid */
-/*------------------------------------*\
-    ANIMATIONS
-\*------------------------------------*/
-/*------------------------------------*\
-    MEDIA QUERIES
-\*------------------------------------*/
-/*
-  In use:
-  .query-min(@screen--md; {
-        color: blue;
-    });
-    --
-    @fix-mqs
-
-*/
 /*!
 Animate.css - http://daneden.me/animate
 Licensed under the MIT license - http://opensource.org/licenses/MIT
@@ -4178,6 +3948,236 @@ div[data-imdikator="embed"] + h7 {
   text-transform: none;
 }
 
+/*------------------------------------*\
+    COLOR PALETTE
+\*------------------------------------*/
+/*------------------------------------*\
+    BREAKPOINTS
+\*------------------------------------*/
+/*------------------------------------*\
+    GRID
+\*------------------------------------*/
+/*------------------------------------*\
+    #TYPE
+\*------------------------------------*/
+/*------------------------------------*\
+    $LINE HEIGHTS
+\*------------------------------------*/
+/*------------------------------------*\
+    $MIXINS
+\*------------------------------------*/
+/*------------------------------------*\
+    $FONTS
+\*------------------------------------*/
+/*------------------------------------*\
+   GRID
+\*------------------------------------*/
+/* Based on the css from the Grid System in Bootstrap */
+/* http://getbootstrap.com/css/#grid */
+/*------------------------------------*\
+    ANIMATIONS
+\*------------------------------------*/
+/*------------------------------------*\
+    MEDIA QUERIES
+\*------------------------------------*/
+/*
+  In use:
+  .query-min(@screen--md; {
+        color: blue;
+    });
+    --
+    @fix-mqs
+
+*/
+ul#epi-quickNavigator li {
+  margin: 0;
+  padding: 0;
+}
+ul#epi-quickNavigator li a {
+  border-bottom: none;
+}
+
+/*------------------------------------*\
+    COLOR PALETTE
+\*------------------------------------*/
+/*------------------------------------*\
+    BREAKPOINTS
+\*------------------------------------*/
+/*------------------------------------*\
+    GRID
+\*------------------------------------*/
+/*------------------------------------*\
+    #TYPE
+\*------------------------------------*/
+/*------------------------------------*\
+    $LINE HEIGHTS
+\*------------------------------------*/
+/*------------------------------------*\
+    $MIXINS
+\*------------------------------------*/
+/*------------------------------------*\
+    $FONTS
+\*------------------------------------*/
+/*------------------------------------*\
+   GRID
+\*------------------------------------*/
+/* Based on the css from the Grid System in Bootstrap */
+/* http://getbootstrap.com/css/#grid */
+/*------------------------------------*\
+    ANIMATIONS
+\*------------------------------------*/
+/*------------------------------------*\
+    MEDIA QUERIES
+\*------------------------------------*/
+/*
+  In use:
+  .query-min(@screen--md; {
+        color: blue;
+    });
+    --
+    @fix-mqs
+
+*/
+@page {
+  margin: 1.5cm 0;
+}
+
+/*------------------------------------*\
+    COLOR PALETTE
+\*------------------------------------*/
+/*------------------------------------*\
+    BREAKPOINTS
+\*------------------------------------*/
+/*------------------------------------*\
+    GRID
+\*------------------------------------*/
+/*------------------------------------*\
+    #TYPE
+\*------------------------------------*/
+/*------------------------------------*\
+    $LINE HEIGHTS
+\*------------------------------------*/
+/*------------------------------------*\
+    $MIXINS
+\*------------------------------------*/
+/*------------------------------------*\
+    $FONTS
+\*------------------------------------*/
+/*------------------------------------*\
+   GRID
+\*------------------------------------*/
+/* Based on the css from the Grid System in Bootstrap */
+/* http://getbootstrap.com/css/#grid */
+/*------------------------------------*\
+    ANIMATIONS
+\*------------------------------------*/
+/*------------------------------------*\
+    MEDIA QUERIES
+\*------------------------------------*/
+/*
+  In use:
+  .query-min(@screen--md; {
+        color: blue;
+    });
+    --
+    @fix-mqs
+
+*/
+.t-only-screenreaders {
+  position: absolute;
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+}
+.t-no-list-styles,
+.t-no-list-styles > li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.t-position {
+  position: relative;
+}
+.t-position::before,
+.t-position::after {
+  content: "";
+  display: table;
+}
+.t-position::after {
+  clear: both;
+}
+.t-no-margin {
+  margin: 0;
+}
+.t-margin-bottom {
+  margin-bottom: 21px;
+}
+.t-margin-bottom--large {
+  margin-bottom: 42px;
+}
+.t-margin-bottom--xlarge {
+  margin-bottom: 84px;
+}
+.t-margin-top {
+  margin-top: 21px;
+}
+.t-margin-top--large {
+  margin-top: 42px;
+}
+.t-show-on-desktop {
+  display: none;
+}
+@media (min-width: 57em) {
+  .t-show-on-desktop {
+    display: block;
+  }
+}
+@media print {
+  .t-show-on-desktop {
+    display: block;
+  }
+}
+.t-show-on-tablet {
+  display: none;
+}
+@media (min-width: 45em) {
+  .t-show-on-tablet {
+    display: inherit;
+  }
+}
+@media print {
+  .t-show-on-tablet {
+    display: inherit;
+  }
+}
+@media (min-width: 45em) {
+  .t-hide-on-tablet {
+    display: none;
+  }
+}
+@media print {
+  .t-hide-on-tablet {
+    display: none;
+  }
+}
+.t-align-right {
+  text-align: right;
+}
+.t-float-left {
+  float: left;
+}
+.t-float-right {
+  float: right;
+}
+@media print {
+  .t-hide-on-print {
+    display: none;
+  }
+}
+.t-no-focus:focus {
+  outline: none;
+}
+
 .accordion li {
   cursor: pointer;
   display: -webkit-box;
@@ -6501,6 +6501,8 @@ blockquote small {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  z-index: 5;
+  position: relative;
 }
 .footer__column-pair-wrapper {
   display: -webkit-box;
@@ -6511,7 +6513,7 @@ blockquote small {
           justify-content: center;
   width: 100%;
 }
-@media (max-width: 920px) {
+@media (max-width: 1200px) {
   .footer__column-pair-wrapper {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -6546,7 +6548,6 @@ blockquote small {
   }
 }
 .footer__column {
-  padding: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -6555,10 +6556,24 @@ blockquote small {
       -ms-flex-pack: center;
           justify-content: center;
 }
+@media (max-width: 720px) {
+  .footer__column {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+}
+.footer__column--single {
+  width: 100%;
+  max-width: 550px;
+  min-width: 280px;
+}
 .footer__column h3 {
+  margin-top: 42px;
   padding-left: 26.25px;
 }
 .footer__column ul {
+  margin-top: 0px;
   width: 100%;
   max-width: 300px;
 }
@@ -6568,9 +6583,9 @@ blockquote small {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
   }
 }
 @media (min-width: 920px) {
@@ -12651,8 +12666,8 @@ a.tabs-mini__link.tabs-mini__link--current {
 @media (min-width: 57em) {
   .top-menu {
     background: #d83a36;
-    background-image: -webkit-gradient(linear, left top, right top, color-stop(50%, #f15540), color-stop(50%, #d83a36));
-    background-image: linear-gradient(to right, #f15540 50%, #d83a36 50%);
+    background-image: -webkit-gradient(linear, left top, right top, color-stop(65%, #f15540), color-stop(65%, #d83a36));
+    background-image: linear-gradient(to right, #f15540 65%, #d83a36 65%);
   }
 }
 @media print {
@@ -12708,7 +12723,7 @@ a.tabs-mini__link.tabs-mini__link--current {
 .top-menu__global {
   background: #d83a36;
   margin: 0 -21px;
-  padding: 87px 0px 0px 0px;
+  padding: 87px 21px 87px 21px;
 }
 @media (min-width: 45em) {
   .top-menu__global {

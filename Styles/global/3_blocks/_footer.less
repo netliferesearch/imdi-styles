@@ -4,13 +4,15 @@
   background-color: #3E3F3F !important;
   display: flex;
   flex-direction: column;
-  
+  z-index: 5;
+  position: relative;
+
   &__column-pair-wrapper {
     display: flex;
     justify-content: center;
     width: 100%;
-    
-    @media (max-width: 920px) {
+
+    @media (max-width: 1200px) {
       flex-direction: column;
       align-items: center;
     }
@@ -33,23 +35,34 @@
   }
   
   &__column {
-    padding: 10px;
     display: flex;
     width: 100%;
     justify-content: center;
 
+    @media (max-width: 720px) {
+      align-items: flex-start;
+    }
+
+    &--single {
+      width: 100%;
+      max-width: 550px;
+      min-width: 280px;
+    }
+
     h3 {
+      margin-top: 42px;
       padding-left: 26.25px;
     }
   
     ul {
+      margin-top: 0px;
       width: 100%;
       max-width: 300px;
     }
 
     @media (max-width: 720px) {
       flex-direction: column;
-      align-items: center;
+      align-items: flex-start;
     }
 
     @media (min-width: 920px) {
