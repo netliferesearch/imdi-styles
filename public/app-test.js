@@ -38,7 +38,9 @@ imdi.lightboxFeedback = (function ($) {
             window.addEventListener('DOMContentLoaded', function () {
 
                 var element = document.querySelector('.lightbox__url')
-                element.value = this.location.href
+                if (element) {
+                    element.value = this.location.href
+                }
             })
         }
     }
