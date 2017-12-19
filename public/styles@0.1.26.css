@@ -2940,10 +2940,6 @@ you can use the generic selector below, but it's slower:
 [class*="icon-"] {
 
 */
-.icon__clipboard-check,
-.icon__money,
-.icon__key,
-.icon__briefcase,
 .icon__add,
 .icon__apply,
 .icon__arrow-down,
@@ -2954,7 +2950,7 @@ you can use the generic selector below, but it's slower:
 .icon__call,
 .icon__chart-bars,
 .icon__chart-line,
-.icon__pie-chart,
+.icon__chart-pie,
 .icon__chart-set,
 .icon__chat,
 .icon__check,
@@ -3056,8 +3052,8 @@ you can use the generic selector below, but it's slower:
 .icon__chart-line {
   background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/icon-chart-line.svg');
 }
-.icon__pie-chart {
-  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/icon-pie-chart.svg');
+.icon__chart-pie {
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/icon-chart-pie.svg');
 }
 .icon__chart-set {
   background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/icon-chart-set.svg');
@@ -3233,18 +3229,6 @@ you can use the generic selector below, but it's slower:
 .icon__register {
   background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/icon-register.svg');
 }
-.icon__clipboard-check.icon--white {
-  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/white/icon-clipboard-check.svg');
-}
-.icon__money.icon--white {
-  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/white/icon-money.svg');
-}
-.icon__key.icon--white {
-  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/white/icon-key.svg');
-}
-.icon__briefcase.icon--white {
-  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/white/icon-briefcase.svg');
-}
 .icon__add.icon--white {
   background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/white/icon-add.svg');
 }
@@ -3275,8 +3259,8 @@ you can use the generic selector below, but it's slower:
 .icon__chart-line.icon--white {
   background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/white/icon-chart-line.svg');
 }
-.icon__pie-chart.icon--white {
-  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/white/icon-pie-chart.svg');
+.icon__chart-pie.icon--white {
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/white/icon-chart-pie.svg');
 }
 .icon__chat.icon--white {
   background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/white/icon-chat.svg');
@@ -3463,18 +3447,6 @@ you can use the generic selector below, but it's slower:
 }
 .icon__arrow-right.icon--red {
   background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/red/icon-arrow-right.svg');
-}
-.icon__clipboard-check.icon--green {
-  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/green/icon-clipboard-check.svg');
-}
-.icon__money.icon--green {
-  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/green/icon-money.svg');
-}
-.icon__key.icon--green {
-  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/green/icon-key.svg');
-}
-.icon__briefcase.icon--green {
-  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/green/icon-briefcase.svg');
 }
 .icon__apartment.icon--green {
   background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/green/icon-apartment.svg');
@@ -6643,7 +6615,6 @@ blockquote small {
   list-style: none;
   margin-bottom: 0;
 }
-
 
 /*------------------------------------*\
     COLOR PALETTE
