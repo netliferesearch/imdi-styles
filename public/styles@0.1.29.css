@@ -6540,7 +6540,6 @@ blockquote small {
       -ms-flex-pack: center;
           justify-content: center;
   width: 100%;
-  max-width: 1200px;
 }
 @media (max-width: 1200px) {
   .footer__column-pair-wrapper {
@@ -6601,20 +6600,10 @@ blockquote small {
   margin-top: 42px;
   padding-left: 26.25px;
 }
-@media (min-width: 1250px) {
-  .footer__column h3 {
-    padding-left: 0px;
-  }
-}
 .footer__column ul {
   margin-top: 0px;
   width: 100%;
   max-width: 300px;
-}
-@media (min-width: 1250px) {
-  .footer__column ul {
-    padding-left: 0px;
-  }
 }
 @media (max-width: 720px) {
   .footer__column {

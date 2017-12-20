@@ -10,6 +10,7 @@
     display: flex;
     justify-content: center;
     width: 100%;
+    max-width: 1200px;
 
     @media (max-width: 1200px) {
       flex-direction: column;
@@ -26,7 +27,7 @@
   &__body {
     display: flex;
     justify-content: space-around;
-    
+
     @media (max-width: 720px) {
       align-items: center;
       flex-direction: column;
@@ -51,12 +52,20 @@
     h3 {
       margin-top: 42px;
       padding-left: 26.25px;
+
+      @media (min-width: 1250px) {
+        padding-left: 0px;
+      }
     }
   
     ul {
       margin-top: 0px;
       width: 100%;
       max-width: 300px;
+
+      @media (min-width: 1250px) {
+        padding-left: 0px;
+      }
     }
 
     @media (max-width: 720px) {

@@ -28,38 +28,6 @@ $(document).ready(function () {
     imdi.lightboxFeedback.init()
 })
 
-imdi.doubleNavigationPage = (function ($) {
-    return {
-        init: function () {
-            'use strict'
-
-            // opens and closes list
-            var showLists = document.querySelectorAll('.nav-matrix__header')
-
-            // handle clicks on buttons saying 'vis liste'
-            for (var i = 0; i < showLists.length; i++) {
-            showLists[i].addEventListener('click', function(elem) {
-                
-                var list = this.parentNode.querySelector('ul')
-
-                // toggles list visiblity
-                list.classList.toggle('open')
-            
-                // source of truth: is list open or not?
-                // is used further down
-                var isOpen = list.classList.contains('open') // won't work on IE. so why use it? it's just for esthetics and IE users deserve a lesser experience
-                
-                // rotates arrow up or down
-                this.parentNode.querySelector('.icon__arrow-down').classList.toggle('open')
-                
-                // change text for show or hide
-                this.parentNode.querySelector('.nav-matrix__show-list p').innerHTML = isOpen ? 'Skjul liste' : '&nbsp;Vis liste'
-            })
-            }
-        }
-    }
-})
-
 // LIGHTBOX for feedback on sidefeil
 // Inputs the URL as default value in input field, for reference to feedback.
 imdi.lightboxFeedback = (function ($) {
