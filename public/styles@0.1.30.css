@@ -6532,20 +6532,6 @@ blockquote small {
   z-index: 5;
   position: relative;
 }
-.footer__campaign {
-  background-color: #F15540 !important;
-}
-.footer__campaign h1,
-.footer__campaign h2,
-.footer__campaign h3,
-.footer__campaign h4,
-.footer__campaign h5,
-.footer__campaign p,
-.footer__campaign span,
-.footer__campaign li,
-.footer__campaign a {
-  color: white;
-}
 .footer__column-pair-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -9426,11 +9412,6 @@ a.ident:active .ident__triangle {
 .menu-frontpage__text {
   margin-left: 42px;
 }
-@media (max-width: 912px) {
-  .menu-frontpage__text {
-    margin-bottom: -28px;
-  }
-}
 .menu-frontpage__title {
   display: inline-block;
   font-size: 1.3rem;
@@ -9448,11 +9429,6 @@ a.ident:active .ident__triangle {
 .menu-frontpage__tags ul {
   margin: 0;
   padding: 0;
-}
-@media (max-width: 912px) {
-  .menu-frontpage__tags {
-    display: none;
-  }
 }
 .menu-frontpage__tag,
 .menu-frontpage ul li {
