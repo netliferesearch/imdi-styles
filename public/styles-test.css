@@ -6719,6 +6719,10 @@ blockquote small {
   position: relative;
   margin-bottom: 15px;
 }
+.graph .chart__text.chart__pyramid {
+  -webkit-transform: translateY(-6px) translateX(6px);
+          transform: translateY(-6px) translateX(6px);
+}
 .graph__actions {
   display: -webkit-box;
   display: -ms-flexbox;
