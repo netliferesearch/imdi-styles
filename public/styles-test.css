@@ -5034,8 +5034,8 @@ blockquote small {
 }
 .chart__text {
   font-size: 12px;
-  -webkit-transform: translateY(-6px) translateX(-4px);
-          transform: translateY(-6px) translateX(-4px);
+  -webkit-transform: translateY(-7px) translateX(-4px);
+          transform: translateY(-7px) translateX(-4px);
 }
 .chart__text--benchmark {
   fill: #403935;
@@ -11518,6 +11518,33 @@ table caption,
   .table caption {
     text-align: left;
   }
+}
+.table--chart {
+  border: 1px solid #ddd;
+  border-collapse: collapse;
+  -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto;
+  border-bottom: 0;
+  padding: 0;
+  table-layout: fixed;
+  min-width: 500px;
+}
+.table--chart thead {
+  border-bottom: 0;
+}
+.table--chart th,
+.table--chart td {
+  padding: 15px;
+  text-align: left;
+}
+.table--chart th {
+  font-size: 14px;
+  background: #fafafa;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  padding: 15px;
+  border-bottom: 2px solid #ddd;
 }
 .table--collapsable {
   border: 1px solid #ddd;
