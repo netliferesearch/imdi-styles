@@ -374,11 +374,11 @@ imdi.main_menu_toggle = (function ($) {
                 }
 
                 // TOGGLE FOOTER
-                if (footer.style.display === 'none') {
-                    footer.style.display = 'block'
-                } else {
-                    footer.style.display = 'none'
-                }
+                // if (footer.style.display === 'none') {
+                //     footer.style.display = 'block'
+                // } else {
+                //     footer.style.display = 'none'
+                // }
 
           	});
         }
