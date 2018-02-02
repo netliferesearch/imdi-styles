@@ -5,26 +5,29 @@
 	color: @color__white;
 	z-index: 4;
 	background: @color__orange;
-	min-height: 100vh;
+	min-height: calc(100vh - 313px);
+
+	@media (min-width: 1500px) {
+		background: @color__orange--dark;
+		background-image: linear-gradient(
+				to right,
+			@color__orange 60%, @color__orange--dark 60%
+		);
+	}
 
 	@media (min-width: 912px) {
 		&__bg {
-			background: @color__orange--dark;
-			background-image: linear-gradient(
-					to right,
-				@color__orange 50%, @color__orange--dark 50%
-			);
-			height: 1343px;
+			min-height: calc(100vh - 313px);
 		}
 	}
 
-	.query-min(@screen--lg; {
+	@media (min-width: 57em) and (max-width: 1500px) {
   	background: @color__orange--dark;
 		background-image: linear-gradient(
 	    	to right,
 			@color__orange 65%, @color__orange--dark 65%
 		);
-	});
+	}
 
 	@media print {
 		display: none;
