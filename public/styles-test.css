@@ -9708,8 +9708,7 @@ a.ident:active .ident__triangle {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-bottom: -17px;
-  margin-top: -6px;
+  margin-bottom: -8px;
 }
 .nav-matrix__header p {
   color: #d83a36;
@@ -10186,7 +10185,7 @@ a.ident:active .ident__triangle {
 */
 #page-content,
 .page__master {
-  min-height: calc(-200vh);
+  min-height: calc(100vh - 300px);
 }
 .page {
   display: block;
@@ -10201,7 +10200,7 @@ a.ident:active .ident__triangle {
   max-width: 100em;
   margin: 0 auto;
   overflow: hidden;
-  min-height: calc(-722vh);
+  min-height: calc(100vh - 154px - 668px);
 }
 .page__content {
   margin-bottom: 42px;
