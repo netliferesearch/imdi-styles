@@ -59,7 +59,7 @@ imdi.doubleNavigationPage = (function ($) {
             }
         }
     }
-})
+})(jQuery)
 
 // LIGHTBOX for feedback on sidefeil
 // Inputs the URL as default value in input field, for reference to feedback.
