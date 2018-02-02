@@ -3007,7 +3007,7 @@ you can use the generic selector below, but it's slower:
   background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/white/icon-clipboard-check.svg');
 }
 .icon__money.icon--white {
-  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/white/icon-money.svg');
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/white/icon-money.png');
 }
 .icon__key.icon--white {
   background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/white/icon-key.svg');
@@ -3238,7 +3238,7 @@ you can use the generic selector below, but it's slower:
   background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/green/icon-clipboard-check.svg');
 }
 .icon__money.icon--green {
-  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/green/icon-money.svg');
+  background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/green/icon-money.png');
 }
 .icon__key.icon--green {
   background-image: url('https://imdi-styles.firebaseapp.com/UI/icons/green/icon-key.svg');
@@ -9397,8 +9397,8 @@ a.ident:active .ident__triangle {
 .menu-frontpage__content:hover {
   background: #50a450;
   color: #fff;
-  -webkit-transform: scale(1.02);
-          transform: scale(1.02);
+  -webkit-transform: scale(1);
+          transform: scale(1);
 }
 .menu-frontpage__content:hover .menu-frontpage__desc {
   color: #fff;
@@ -10185,7 +10185,7 @@ a.ident:active .ident__triangle {
 */
 #page-content,
 .page__master {
-  min-height: calc(100vh - 300px);
+  min-height: calc(100vh - 460px);
 }
 .page {
   display: block;
