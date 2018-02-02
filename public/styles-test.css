@@ -9489,8 +9489,8 @@ a.ident:active .ident__triangle {
 }
 .menu-frontpage__content:hover ul li:after {
   background: #fff;
-  -webkit-transform: translateY(-5px) rotate(45deg) scale(1.2);
-          transform: translateY(-5px) rotate(45deg) scale(1.2);
+  -webkit-transform: translateY(-5px) rotate(45deg) scale(1);
+          transform: translateY(-5px) rotate(45deg) scale(1);
 }
 
 /*------------------------------------*\
@@ -10184,6 +10184,10 @@ a.ident:active .ident__triangle {
     @fix-mqs
 
 */
+#page-content,
+.page__master {
+  min-height: calc(-200vh);
+}
 .page {
   display: block;
 }
@@ -12851,7 +12855,7 @@ a.tabs-mini__link.tabs-mini__link--current {
   color: #ffffff;
   z-index: 4;
   background: #f15540;
-  min-height: 100vh;
+  min-height: 750px;
 }
 @media (min-width: 912px) {
   .top-menu__bg {
