@@ -26,6 +26,7 @@ $(document).ready(function () {
     imdi.tocbot.init()
     imdi.tableOfContents.init()
     imdi.lightboxFeedback.init()
+    imdi.doubleNavigationPage.init()
 })
 
 imdi.doubleNavigationPage = (function ($) {
@@ -351,6 +352,7 @@ imdi.main_menu_toggle = (function ($) {
                 var header = document.querySelector('#header')
                 var skipToContent = document.querySelector('.skiptocontent')
                 var footer = document.querySelector('#footer')
+
                 // TOGGLE TOP MENU
                 topMenuVisible.classList.toggle('top-menu--visible')
                 topMenuVisible.classList.toggle('top-menu--hidden')
