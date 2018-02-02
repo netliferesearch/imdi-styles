@@ -12854,12 +12854,13 @@ a.tabs-mini__link.tabs-mini__link--current {
   color: #ffffff;
   z-index: 4;
   background: #f15540;
-  min-height: calc(100vh - 313px);
+  min-height: 750px;
 }
 @media (min-width: 912px) {
   .top-menu__bg {
     background-image: -webkit-gradient(linear, left top, right top, color-stop(63.63636364%, #f15540), color-stop(36.36363636%, #d83a36));
     background-image: linear-gradient(to right, #f15540 63.63636364%, #d83a36 36.36363636%);
+    height: 1343px;
   }
 }
 @media (min-width: 57em) {
