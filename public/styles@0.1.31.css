@@ -12854,7 +12854,7 @@ a.tabs-mini__link.tabs-mini__link--current {
   color: #ffffff;
   z-index: 4;
   background: #f15540;
-  min-height: calc(100vh - 313px);
+  min-height: calc(-213vh);
 }
 @media (min-width: 1500px) {
   .top-menu {
@@ -12865,11 +12865,7 @@ a.tabs-mini__link.tabs-mini__link--current {
 }
 @media (min-width: 912px) {
   .top-menu__bg {
-<<<<<<< HEAD
-    min-height: calc(100vh - 313px);
-=======
     min-height: calc(-213vh);
->>>>>>> 48c4dcceb9ca6b3be6a3736a64a21727cfe1bb93
   }
 }
 @media (min-width: 57em) and (max-width: 1500px) {
