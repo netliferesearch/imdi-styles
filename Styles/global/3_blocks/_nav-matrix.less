@@ -3,29 +3,33 @@
   border-bottom: 1px solid #d83a36;
   padding: 25px 0px;
   margin: 0;
-  
+
+  &:last-of-type {
+    margin-bottom: 48px;
+  }
+
   &__has-nav-matrix {
     border-bottom: none;
     padding-bottom: 0;
   }
-  
+
   &__has-list {
     cursor: pointer;
   }
-  
+
   &__header {
     display: flex;
     align-items: baseline;
     justify-content: space-between;
     margin-bottom: -8px;
-    
+
     p {
       color: #d83a36;
       font-weight: 300;
       font-size: 22px;
       width: 100%;
       max-width: 480px;
-      
+
       &:hover {
         color: black;
       }
@@ -41,7 +45,7 @@
     margin: 0;
     max-width: 105px;
     cursor: pointer;
-    
+
     &:hover {
       p {
         color: #333;
@@ -52,7 +56,7 @@
       font-size: 16px;
       margin: 0;
     }
-    
+
     i {
       transform: translateY(4px);
       font-size: 19px;
@@ -63,12 +67,12 @@
       }
     }
   }
-  
+
   a {
     text-decoration: none;
     border-bottom: 0;
   }
-  
+
   ul {
     display: none;
 
@@ -77,11 +81,11 @@
       transition: all 0.2s ease;
     }
   }
-  
+
   li {
     list-style: none;
     margin-left: 20px;
-    
+
     &:last-of-type {
       margin-bottom: 0px;
       padding-bottom: 0px;
