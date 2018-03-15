@@ -6574,7 +6574,7 @@ blockquote small {
   position: relative;
 }
 .footer__campaign {
-  padding-top: 14px;
+  padding-top: 42px;
   background-color: #F15540 !important;
 }
 .footer__campaign h1,
@@ -9732,6 +9732,9 @@ a.ident:active .ident__triangle {
   border-bottom: 1px solid #d83a36;
   padding: 25px 0px;
   margin: 0;
+}
+.nav-matrix:last-of-type {
+  margin-bottom: 48px;
 }
 .nav-matrix__has-nav-matrix {
   border-bottom: none;
@@ -12907,11 +12910,7 @@ a.tabs-mini__link.tabs-mini__link--current {
 }
 @media (min-width: 912px) {
   .top-menu__bg {
-<<<<<<< HEAD
     min-height: calc(100vh - 313px);
-=======
-    min-height: calc(-213vh);
->>>>>>> 48c4dcceb9ca6b3be6a3736a64a21727cfe1bb93
   }
 }
 @media (min-width: 57em) and (max-width: 1500px) {
