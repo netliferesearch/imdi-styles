@@ -40,19 +40,19 @@ imdi.doubleNavigationPage = (function ($) {
             // handle clicks on buttons saying 'vis liste'
             for (var i = 0; i < showLists.length; i++) {
             showLists[i].addEventListener('click', function(elem) {
-                
+
                 var list = this.parentNode.querySelector('ul')
 
                 // toggles list visiblity
                 list.classList.toggle('open')
-            
+
                 // source of truth: is list open or not?
                 // is used further down
                 var isOpen = list.classList.contains('open') // won't work on IE. so why use it? it's just for esthetics and IE users deserve a lesser experience
-                
+
                 // rotates arrow up or down
                 this.parentNode.querySelector('.icon__arrow-down').classList.toggle('open')
-                
+
                 // change text for show or hide
                 this.parentNode.querySelector('.nav-matrix__show-list p').innerHTML = isOpen ? 'Skjul liste' : '&nbsp;Vis liste'
             })
@@ -92,7 +92,7 @@ imdi.removeDoubleDownloadPDF = (function ($) {
             var downloadBox = document.querySelectorAll(selector);
             var body = document.body;
             var html = document.documentElement;
-        
+
             // get proper height
             var height = Math.max(
                 body.scrollHeight,
@@ -123,59 +123,59 @@ imdi.stickToTop = (function ($) {
 
             // converted to ES5 because IE 11
             'use strict';
-            
+
             // param 1: element being sticky
             // param 2: class that is added to the sticky element on scroll position
             var stickToTop = function stickToTop(triggerSelector, stickySelector, stickyClass) {
-            
+
                 var throttleTimeout = 200; // 5 scroll events pr second
                 var leftPadding = 90; // space between main column and toc
-            
+
                 // listens to scroll events and triggers adding / removing of classes
                 window.addEventListener('scroll', function () {
                     throttle(makeElementStickyIfConditionIsMet(), throttleTimeout);
                 });
-            
+
                 // listens to scroll events and triggers adding / removing of classes
                 window.addEventListener('resize', function () {
                     throttle(makeElementStickyIfConditionIsMet(), throttleTimeout);
                 });
-            
+
                 // makes element stick to top if user has scrolled to the element
                 var makeElementStickyIfConditionIsMet = function makeElementStickyIfConditionIsMet() {
-            
+
                     var stickyElement = document.querySelector(stickySelector);
                     var triggerElement = document.querySelector(triggerSelector);
-            
+
                     if (!triggerElement) return; // don't call getBoundingClientRect() if it doesn't exist
-            
+
                     //  get the height of the triggering element
                     var _triggerElement$getBo = triggerElement.getBoundingClientRect(),
                         top = _triggerElement$getBo.top,
-                        right = _triggerElement$getBo.right;               
+                        right = _triggerElement$getBo.right;
 
-                    //  add sticky class when scroll position is met            
+                    //  add sticky class when scroll position is met
                     if (top < 0) {
                         stickyElement.classList.add(stickyClass);
                         // stickyElement.style.marginLeft = `${right + leftPadding}px`
                     }
-            
+
                     //  remove sticky class when scroll position is met
                     else {
                             stickyElement.classList.remove(stickyClass);
                             // stickyElement.style.left = `${leftPadding}px`
                         }
                 };
-            
+
                 // reduces the amount of scroll events
                 var throttle = function throttle(callback, limit) {
                     var wait = false;
-            
+
                     return function () {
                         if (!wait) {
                             callback.call();
                             wait = true;
-            
+
                             setTimeout(function () {
                                 wait = false;
                             }, limit);
@@ -193,14 +193,14 @@ imdi.stickToTop = (function ($) {
 imdi.tocbot = (function () {
     return {
         init: function () {
-            // converted to ES5 because IE 11            
+            // converted to ES5 because IE 11
             'use strict';
-            
+
             function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-            
+
             // only create sidebar with toc if #toc-enabled exists
             var tocEnabled = document.querySelector('#toc-enabled');
-            
+
             if (tocEnabled) {
                 var _tocbot$init;
 
@@ -209,36 +209,36 @@ imdi.tocbot = (function () {
                 for (var i = 0; i < allHeaderTags.length; i++) {
                     allHeaderTags[i].id = 'title_' + i;
                 }
-               
+
                 tocbot.init((_tocbot$init = {
                     // Where to render the table of contents.
                     tocSelector: '.toc-sidebar',
-            
+
                     // Where to grab the headings to build the table of contents.
                     contentSelector: '.toc-mobile',
-            
+
                     // Which headings to grab inside of the contentSelector element.
                     // and which to not use
                     headingSelector: 'h2:not(.notoc), h3:not(.notoc)',
-            
+
                     // class given to the current link item
                     activeLinkClass: 'active-link',
-            
+
                     // Smooth scrolling enabled.
                     smoothScroll: true,
 
                     headingsOffset: -447,
-            
+
                     // Smooth scroll duration.
                     smoothScrollDuration: 0,
-            
+
                     // class to add to inactive link items
                     isCollapsedClass: 'is-collapsed',
-            
+
                     // Class that gets added when a list should be able
                     // to be collapsed but isn't necessarily collpased.
                     collapsibleClass: 'is-collapsible'
-            
+
                 }, _defineProperty(_tocbot$init, 'smoothScroll', true), _defineProperty(_tocbot$init, 'smoothScrollDuration', 200), _tocbot$init));
 
                 tocbot.refresh();
@@ -260,7 +260,7 @@ imdi.tocbot = (function () {
                     }
                 }
             }
-            
+
         }
     }
 })(jQuery);
@@ -352,6 +352,7 @@ imdi.main_menu_toggle = (function ($) {
                 var header = document.querySelector('#header')
                 var skipToContent = document.querySelector('.skiptocontent')
                 var footer = document.querySelector('#footer')
+                var footerCampaign = document.querySelector('#footer-campaign')
 
                 // TOGGLE TOP MENU
                 topMenuVisible.classList.toggle('top-menu--visible')
@@ -376,11 +377,11 @@ imdi.main_menu_toggle = (function ($) {
                 }
 
                 // TOGGLE FOOTER
-                // if (footer.style.display === 'none') {
-                //     footer.style.display = 'block'
-                // } else {
-                //     footer.style.display = 'none'
-                // }
+                if (footerCampaign.style.display === 'none') {
+                  footerCampaign.style.display = 'block'
+                } else {
+                  footerCampaign.style.display = 'none'
+                }
 
           	});
         }
@@ -530,42 +531,42 @@ imdi.toggle = (function ($) {
 imdi.accordion = (function () {
     return {
         init: function () {
-    
+
             'use strict';
-            
+
             var elements = document.querySelectorAll('.accordion li');
 
             if (elements) {
-        
+
                 var _loop = function _loop(i) {
                     var content = elements[i].querySelector('.accordion--content');
-                
+
                     elements[i].addEventListener('click', function () {
-                
+
                         //  toggle aria-expanded
                         var ariaExpanded = content.getAttribute('aria-expanded');
                         console.log(ariaExpanded);
                         content.setAttribute('aria-expanded', ariaExpanded === 'true' ? false : true);
-                
+
                         //  toggle aria-hidden
                         var ariaHidden = content.getAttribute('aria-hidden');
                         content.setAttribute('aria-hidden', ariaHidden === 'true' ? false : true);
-                
+
                         //  toggle content visibility
                         elements[i].querySelector('.accordion--title img').classList.toggle('open');
                         content.classList.toggle('open');
                     });
                 };
-            
+
                 for (var i = 0; i < elements.length; i++) {
                     _loop(i);
                 }
-            
+
                 document.body.onkeyup = function (e) {
-                
+
                     //spacebar or enter will click the focused element
                     if (e.keyCode == 32 || e.keyCode == 13) {
-                
+
                         try {
                             document.activeElement.click();
                         } catch (e) {
@@ -577,7 +578,7 @@ imdi.accordion = (function () {
         }
     };
 })();
-    
+
 
 /*------------------------------------*\
     TRIGGER
