@@ -45,7 +45,7 @@ imdi.doubleNavigationPage = (function ($) {
 
                 // toggles list visiblity
                 list.classList.toggle('open')
-            
+
                 // source of truth: is list open or not?
                 // is used further down
                 var isOpen = list.classList.contains('open') // won't work on IE. so why use it? it's just for esthetics and IE users deserve a lesser experience

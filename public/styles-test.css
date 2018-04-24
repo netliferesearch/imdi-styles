@@ -5840,6 +5840,18 @@ blockquote small {
   padding-bottom: 42px;
   padding-top: 42px;
 }
+@media (min-width: 45em) {
+  .feature-small {
+    border: 3px solid #f2efed;
+    overflow: hidden;
+    margin-left: -42px;
+    margin-right: -42px;
+    margin-bottom: 42px;
+    margin-top: 42px;
+    padding-left: 42px;
+    padding-right: 42px;
+  }
+}
 @media print {
   .feature-small {
     padding-top: 0;
@@ -9691,6 +9703,9 @@ a.ident:active .ident__triangle {
   padding: 25px 0px;
   margin: 0;
 }
+.nav-matrix:last-of-type {
+  margin-bottom: 48px;
+}
 .nav-matrix__has-nav-matrix {
   border-bottom: none;
   padding-bottom: 0;
@@ -9758,7 +9773,7 @@ a.ident:active .ident__triangle {
   text-decoration: none;
   border-bottom: 0;
 }
-.nav-matrix ul {
+.nav-matrix ul.closed {
   display: none;
 }
 .nav-matrix ul.open {
@@ -12865,11 +12880,7 @@ a.tabs-mini__link.tabs-mini__link--current {
 }
 @media (min-width: 912px) {
   .top-menu__bg {
-<<<<<<< HEAD
     min-height: calc(100vh - 313px);
-=======
-    min-height: calc(-213vh);
->>>>>>> 48c4dcceb9ca6b3be6a3736a64a21727cfe1bb93
   }
 }
 @media (min-width: 57em) and (max-width: 1500px) {
