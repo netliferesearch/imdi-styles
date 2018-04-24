@@ -1,23 +1,40 @@
-@import "../../_vars";
+@import '../../_vars';
 
 // Body type classes
 
 html {
-	height: 100%;
-
+  height: 100%;
 }
-html, body {
-	.font-siri--regular();
-	color: @color__text;
-	width: 100%;
-	min-width: 100%;
-	min-height: 100%;
-	font-size: 17px; 
-	-webkit-font-smoothing: antialiased;
-	.query-min(@screen--md; {
-  	font-size: 18px; 
-	});		
-	@media print {
-		font-size: 13px; 
-	}	
+html,
+body {
+  .font-siri--regular();
+  color: @color__text;
+  width: 100%;
+  min-width: 100%;
+  min-height: 100%;
+  font-size: 17px;
+  -webkit-font-smoothing: antialiased;
+  .query-min(@screen--md; {font-size: 18px;});
+  @media print {
+    font-size: 13px;
+  }
+}
+
+.space {
+  width: 1px;
+
+  &--sm {
+    height: @spacing--medium;
+    width: 1px;
+  }
+
+  &--md {
+    height: @spacing;
+    width: 1px;
+  }
+
+  &--lg {
+    height: @spacing--large;
+    width: 1px;
+  }
 }

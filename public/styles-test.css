@@ -9819,7 +9819,7 @@ a.ident:active .ident__triangle {
   display: none;
 }
 .nav-matrix ul.open {
-  display: initial;
+  display: inline;
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
