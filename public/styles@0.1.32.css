@@ -5840,18 +5840,6 @@ blockquote small {
   padding-bottom: 42px;
   padding-top: 42px;
 }
-@media (min-width: 45em) {
-  .feature-small {
-    border: 3px solid #f2efed;
-    overflow: hidden;
-    margin-left: -42px;
-    margin-right: -42px;
-    margin-bottom: 42px;
-    margin-top: 42px;
-    padding-left: 42px;
-    padding-right: 42px;
-  }
-}
 @media print {
   .feature-small {
     padding-top: 0;
@@ -6586,7 +6574,7 @@ blockquote small {
   position: relative;
 }
 .footer__campaign {
-  padding-top: 42px;
+  padding-top: 14px;
   background-color: #F15540 !important;
 }
 .footer__campaign h1,
@@ -9744,9 +9732,6 @@ a.ident:active .ident__triangle {
   border-bottom: 1px solid #d83a36;
   padding: 25px 0px;
   margin: 0;
-}
-.nav-matrix:last-of-type {
-  margin-bottom: 48px;
 }
 .nav-matrix__has-nav-matrix {
   border-bottom: none;
@@ -12911,7 +12896,7 @@ a.tabs-mini__link.tabs-mini__link--current {
   color: #ffffff;
   z-index: 4;
   background: #f15540;
-  min-height: calc(100vh - 313px);
+  min-height: calc(-213vh);
 }
 @media (min-width: 1500px) {
   .top-menu {
@@ -12922,7 +12907,7 @@ a.tabs-mini__link.tabs-mini__link--current {
 }
 @media (min-width: 912px) {
   .top-menu__bg {
-    min-height: calc(100vh - 313px);
+    min-height: calc(-213vh);
   }
 }
 @media (min-width: 57em) and (max-width: 1500px) {

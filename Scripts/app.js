@@ -731,6 +731,7 @@ imdi.main_menu_toggle = (function($) {
         var header = document.querySelector('#header');
         var skipToContent = document.querySelector('.skiptocontent');
         var footer = document.querySelector('#footer');
+        var footerCampaign = document.querySelector('#footer-campaign');
 
         // TOGGLE TOP MENU
         topMenuVisible.classList.toggle('top-menu--visible');
@@ -754,11 +755,11 @@ imdi.main_menu_toggle = (function($) {
         }
 
         // TOGGLE FOOTER
-        // if (footer.style.display === 'none') {
-        //     footer.style.display = 'block'
-        // } else {
-        //     footer.style.display = 'none'
-        // }
+        if (footerCampaign.style.display === 'none') {
+          footerCampaign.style.display = 'block';
+        } else {
+          footerCampaign.style.display = 'none';
+        }
       });
     }
   };
