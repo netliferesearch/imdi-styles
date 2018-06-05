@@ -1,48 +1,57 @@
-@import "../../_vars";
+@import '../../_vars';
 
 .feature-small {
-	position: relative;
-	padding-bottom: @spacing--large;
-	padding-top: @spacing--large;
+  position: relative;
+  padding-bottom: @spacing--large;
+  padding-top: @spacing--large;
 
-	@media print {
-		padding-top: 0;
-		padding-bottom: @spacing;
-		page-break-inside: avoid;
-	}
-	&__meta {
-		.text--small();
-		color: @color__grey;
-	}
-	&__title {
-		.h3();
-		margin-top: 0;
-		margin-bottom: 0;
+  @media (min-width: 45em) {
+    overflow: hidden;
+    margin-left: -42px;
+    margin-right: -42px;
+    margin-bottom: 42px;
+    margin-top: 42px;
+    padding-left: 42px;
+    padding-right: 42px;
+  }
 
-		&--archived:after {
-			content: 'Arkivert';
-			background-color: rgb(255, 214, 102);
-			font-size: 0.6em;
-			margin-right: 10px;
-			border-radius: 2px;
-			margin-left: 10px;
-			padding: 6px 10px;
-		}
-	}
-	&__link {
+  @media print {
+    padding-top: 0;
+    padding-bottom: @spacing;
+    page-break-inside: avoid;
+  }
+  &__meta {
+    .text--small();
+    color: @color__grey;
+  }
+  &__title {
+    .h3();
+    margin-top: 0;
+    margin-bottom: 0;
 
-	}
-	&__link-icon {
-		display: inline-block;
-		margin-left: @spacing--xsmall;
-		width: 1em;
-		height: 1em;
-	}
-	&__prefix {
-		.text--small();
-		color: @color__grey;
-		margin-bottom: 0;
-	}
+    &--archived:after {
+      content: 'Arkivert';
+      background-color: rgb(255, 214, 102);
+      font-size: 0.6em;
+      margin-right: 10px;
+      border-radius: 2px;
+      margin-left: 10px;
+      padding: 6px 10px;
+    }
+  }
+  &__link {
+  }
+  &__link-icon {
+    display: inline-block;
+    margin-left: @spacing--xsmall;
+    width: 1em;
+    height: 1em;
+  }
+  &__prefix {
+    .text--small();
+    color: @color__grey;
+    margin-bottom: 0;
+  }
   &__organizer {
     .fontSize(@font-size--small);
     color: @color__grey;
@@ -52,59 +61,47 @@
       .fontSize(@font-size--small);
     }
   }
-	&__description {
-		.text();
-		margin-bottom: @spacing--small;
-	}
+  &__description {
+    .text();
+    margin-bottom: @spacing--small;
+  }
 
-	&__image {
-		padding-right: @spacing;
-		.query-max(@screen--lg; {
-			width: 50%;
-			padding-bottom: @spacing;
-		});
-	}
-	&--case {
-		background: @color__canvas-grey;
-		padding-left: @gutter;
-		padding-right: @gutter;
-		padding-top: @spacing;
-		padding-bottom: @spacing;
-		margin-left: -@gutter;
-		margin-right: -@gutter;
-		margin-bottom: @spacing;
-		margin-top: @spacing;
-	}
-	&--publication, &--person, &--event {
-
-	}
+  &__image {
+    padding-right: @spacing;
+    .query-max(@screen--lg; {width: 50%; padding-bottom: @spacing;});
+  }
+  &--case {
+    background: @color__canvas-grey;
+    padding-left: @gutter;
+    padding-right: @gutter;
+    padding-top: @spacing;
+    padding-bottom: @spacing;
+    margin-left: -@gutter;
+    margin-right: -@gutter;
+    margin-bottom: @spacing;
+    margin-top: @spacing;
+  }
+  &--publication,
+  &--person,
+  &--event {
+  }
 }
 
 // Fix to make content draged into section pages in EPI more promoted
 .page__footer .col--main .feature-small {
-	.query-min(@screen--md; {
-		border: 3px solid @color__canvas-grey;
-		overflow: hidden;
-		margin-left: -(@gutter * 2);
-		margin-right: -(@gutter * 2);
-		margin-bottom: @spacing--large;
-		margin-top: @spacing--large;
-		padding-left: (@gutter * 2);
-		padding-right: (@gutter * 2);
-	});
-	.query-min(@screen--lg; {
-		margin-top: @spacing--large;
-		margin-bottom: @spacing--large;
-	});
-	@media print {
-		border: 1px solid @color__canvas-grey;
-		page-break-inside: avoid;
-	}
+  .query-min(
+    @screen--md; {border: 3px solid @color__canvas-grey; overflow: hidden; margin-left: - (@gutter * 2) ; margin-right: -
+      (@gutter * 2) ; margin-bottom: @spacing--large; margin-top: @spacing--large; padding-left: (@gutter * 2) ; padding-right:
+      (@gutter * 2) ;}
+  );
+  .query-min(@screen--lg; {margin-top: @spacing--large; margin-bottom: @spacing--large;});
+  @media print {
+    border: 1px solid @color__canvas-grey;
+    page-break-inside: avoid;
+  }
 }
 
 .page__footer .col--main .feature-small--publication,
 .page__footer .col--main .feature-small--event {
-	.query-min(@screen--md; {
-		padding-bottom: @spacing;
-	});
+  .query-min(@screen--md; {padding-bottom: @spacing;});
 }
