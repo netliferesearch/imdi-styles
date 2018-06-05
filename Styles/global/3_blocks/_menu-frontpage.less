@@ -118,7 +118,7 @@
      position: relative;
      line-height: 8px;
     }
-    
+
     &__tag:after, ul li:after {
      content: '';
      width: @spacing--xsmall;
@@ -140,3 +140,25 @@
      transform: translateY(-5px) rotate(45deg) scale(1);
    }
  }
+
+/*
+ * This controls the live preview of the editor in Episerver
+*/
+
+.imdi-epi-editor .menu-frontpage > div {
+  width: 100%;
+  margin-bottom: @spacing;
+
+  @media(min-width: 57em) {
+    width: 50%;
+  }
+  @media(min-width: 1300px) {
+    width: 33.333%;
+  }
+
+  // Reset menu-frontpage__item
+  & .menu-frontpage__item {
+    width: 100% !important;
+    margin-top: 0 !important;
+  }
+}
