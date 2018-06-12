@@ -1,29 +1,23 @@
 language: node_js
 node_js: 8
 
-script: npm run build
+script:
+  - if [ "$TRAVIS_BRANCH" = "master" ]; then npm run build:next
+  - if [ "$TRAVIS_BRANCH" = "prod" ]; then npm run build
 
 before_deploy:
   - cd dist
 
-stages:
-  - name: deploy
-    if: branch = prod
-    script: npm run build
-    deploy:
-    - provider: npm
-      tag: latest
-      all_branches: true
-      skip_cleanup: true
-      email: $NPM_EMAIL
-      api_key: $NPM_TOKEN
-  - name: deploy-next
-    if: branch = prod
-    script: npm run build:next
-    deploy:
-    - provider: npm
-      tag: next
-      all_branches: true
-      skip_cleanup: true
-      email: $NPM_EMAIL
-      api_key: $NPM_TOKEN
+deploy:
+  - provider: npm
+    tag: latest
+    all_branches: true
+    skip_cleanup: true
+    email: $NPM_EMAIL
+    api_key: $NPM_TOKEN
+  - provider: npm
+    tag: next
+    all_branches: true
+    skip_cleanup: true
+    email: $NPM_EMAIL
+    api_key: $NPM_TOKEN
