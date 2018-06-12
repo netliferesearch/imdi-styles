@@ -7,6 +7,10 @@ script:
   - cd dist
 
 deploy:
+  - provider: script
+  script: curl -T ./dist -u $FTP_USER:$FTP_PASSWORD ftps://waws-prod-db3-043.ftp.azurewebsites.windows.net
+  on:
+    branch: prod
   - provider: npm
     tag: latest
     all_branches: true
@@ -23,7 +27,3 @@ deploy:
     skip_cleanup: true
     email: $NPM_EMAIL
     api_key: $NPM_TOKEN
-  - provider: script
-    script: curl -T dist -u $FTP_USER:$FTP_PASSWORD ftps://waws-prod-db3-043.ftp.azurewebsites.windows.net
-    on:
-      branch: prod
