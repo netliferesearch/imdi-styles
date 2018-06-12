@@ -8,12 +8,12 @@ script:
 
 deploy:
   - provider: azure_web_app
-  username: $FTP_USER
-  password: $FTP_PASSWORD
-  site: testimdino
-  slot: style
-  on:
-    branch: prod
+    username: $FTP_USER
+    password: $FTP_PASSWORD
+    site: testimdino
+    slot: style
+    on:
+      branch: prod
   - provider: npm
     tag: latest
     all_branches: true
