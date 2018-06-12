@@ -2,7 +2,7 @@
   "name": "imdi-styles",
   "version": "1.0.0",
   "description": "Stilsett, javascript og grafikk for imdi.no og andre IMDi nettsider",
-  "main": "dist/app.js",
+  "main": "app.js",
   "private": false,
   "publishConfig": {
     "access": "public"
