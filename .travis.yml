@@ -11,10 +11,14 @@ deploy:
     tag: latest
     all_branches: true
     skip_cleanup: true
+    on:
+      branch: prod
     email: $NPM_EMAIL
     api_key: $NPM_TOKEN
   - provider: npm
     tag: next
+    on:
+      branch: master
     all_branches: true
     skip_cleanup: true
     email: $NPM_EMAIL
