@@ -7,7 +7,7 @@ script:
   - cd dist
 
 deploy:
-  - provider: azure_web_app
+  - provider: azure_web_apps
     username: $FTP_USER
     password: $FTP_PASSWORD
     site: testimdino
