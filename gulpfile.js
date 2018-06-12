@@ -6,8 +6,27 @@ var concat = require('gulp-concat')
 var uglify = require('gulp-uglify')
 var minifycss = require('gulp-minify-css')
 var less = require('gulp-less')
+var jsonModify = require('gulp-json-modify')
+var jeditor = require("gulp-json-editor");
 
 var package = require('./package.json');
+
+gulp.task('package', function() {
+  gulp.src(['README.md', 'package.json'])
+  .pipe(gulp.dest('dist/'));
+});
+
+gulp.task('package-next', function() {
+  gulp.src('README.md')
+  .pipe(gulp.dest('dist/'));
+
+  gulp.src('./package.json')
+  .pipe(jeditor(function(json) {
+    json.version = package.version + '-next';
+    return json;
+  }))
+  .pipe(gulp.dest("./dist"));
+});
 
 gulp.task('styles', function () {
   gulp.src(['Styles/global/**/*.less'])
@@ -25,13 +44,8 @@ gulp.task('styles', function () {
     .pipe(gulp.dest('dist/'));
 });
 
-gulp.task('package', function() {
-  gulp.src(['README.md', 'package.json'])
-  .pipe(gulp.dest('dist/'));
-});
-
 gulp.task('scripts', function () {
-  return gulp.src('Scripts/app.js')
+  gulp.src('Scripts/app.js')
     .pipe(plumber({
       errorHandler: function (error) {
         console.log(error.message)
@@ -49,5 +63,6 @@ gulp.task('UI', function(){
   .pipe(gulp.dest('dist/'));
 });
 
-gulp.task('build', ['styles', 'package', 'scripts', 'UI']);
+gulp.task('build', ['package', 'styles', 'scripts', 'UI']);
+gulp.task('build-next', ['package-next', 'styles', 'scripts', 'UI']);
 
