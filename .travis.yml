@@ -1,25 +1,31 @@
 language: node_js
 node_js: 8
 
-script: npm run build
-
 before_deploy:
   - cd dist
 
-deploy:
-  - provider: npm
-    tag: latest
+stages:
+  - name: deploy
+    # require the branch name to be master (note for PRs this is the base branch name)
+    if: branch = prod
     script: npm run build
-    on:
-      branch: prod
-    skip_cleanup: true
-    email: $NPM_EMAIL
-    api_key: $NPM_TOKEN
-  - provider: npm
-    tag: next
+    deploy:
+    - provider: npm
+      tag: latest
+      all_branches: true
+      skip_cleanup: true
+      email: $NPM_EMAIL
+      api_key: $NPM_TOKEN
+
+stages:
+  - name: deploy
+    # require the branch name to be master (note for PRs this is the base branch name)
+    if: branch = prod
     script: npm run build:next
-    on:
-      branch: master
-    skip_cleanup: true
-    email: $NPM_EMAIL
-    api_key: $NPM_TOKEN
+    deploy:
+    - provider: npm
+      tag: next
+      all_branches: true
+      skip_cleanup: true
+      email: $NPM_EMAIL
+      api_key: $NPM_TOKEN
