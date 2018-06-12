@@ -5,14 +5,14 @@ deploy:
     on:
       branch: production
     skip_cleanup: true
-    email: riksheim.leif@gmail.com
+    email: $NPM_EMAIL
     api_key:
-      secure: B4gBqvVu6sJtveHtHbFtr5fky/635q9Ods7kSTV5oaFYVG+lu/o051hQNfEFdQHejjL426XGVRnuxW9RR4kEVnNngCBOF/pK0TlyGjv/X8eGDkyrZsGYGbGWYk/CeQW7BN7OdK3MLJ4c94J9AZ2+BM2+Kd5JKRGZ4SIcpln2cO1HZh2gkgmUt0JkqLELdH0DGD4154HRD3uTzoj+GgtZlEWPmZ4XD35o8kFIlDhKRPJo4hXpIRzqGYbavIyfgIKm5C12RP2eONv4W0DrDu+RGRDz5f572yczIRShgAW2geBwFXCyMYcY0iX8MRV1EHdMk+9O+virhZKlbGsRiCutXbvOC0dDrBPBN62T3TMPAPsz8yMWXqTC5H9KMbsEo6wZFxT0bT7ByP3tdWtbdlKmeLmJA2SDFQmki8lw30mLZPyZPmD3L1zuf9jURLQ8pL5gAuXuZfBj8XivPpke3XrwSy9pQH5hIGA2uSRJXsUGrItmigZAeOyKfM/iYQVJ+yMoO/gVpg3FscFY9P3JAq6uL5eE0asnEmsWqe1o3UkWfFhHup3PgESTWbUPS/WgJ83RDN+NDcXTeiLCj1+eQBOFyGyB+IavPhxdIn72s/iHhqfKt/ONg+OMqBF3F/qJLkujlm7bQ3sU4OAeIO3c8NRoS9g0kU9VC77h+FYVUOTKP0o=
+      secure: $NPM_TOKEN
   - provider: npm
     on:
       branch: master
     skip_cleanup: true
-    email: riksheim.leif@gmail.com
+    email: $NPM_EMAIL
     tag: next
     api_key:
-      secure: B4gBqvVu6sJtveHtHbFtr5fky/635q9Ods7kSTV5oaFYVG+lu/o051hQNfEFdQHejjL426XGVRnuxW9RR4kEVnNngCBOF/pK0TlyGjv/X8eGDkyrZsGYGbGWYk/CeQW7BN7OdK3MLJ4c94J9AZ2+BM2+Kd5JKRGZ4SIcpln2cO1HZh2gkgmUt0JkqLELdH0DGD4154HRD3uTzoj+GgtZlEWPmZ4XD35o8kFIlDhKRPJo4hXpIRzqGYbavIyfgIKm5C12RP2eONv4W0DrDu+RGRDz5f572yczIRShgAW2geBwFXCyMYcY0iX8MRV1EHdMk+9O+virhZKlbGsRiCutXbvOC0dDrBPBN62T3TMPAPsz8yMWXqTC5H9KMbsEo6wZFxT0bT7ByP3tdWtbdlKmeLmJA2SDFQmki8lw30mLZPyZPmD3L1zuf9jURLQ8pL5gAuXuZfBj8XivPpke3XrwSy9pQH5hIGA2uSRJXsUGrItmigZAeOyKfM/iYQVJ+yMoO/gVpg3FscFY9P3JAq6uL5eE0asnEmsWqe1o3UkWfFhHup3PgESTWbUPS/WgJ83RDN+NDcXTeiLCj1+eQBOFyGyB+IavPhxdIn72s/iHhqfKt/ONg+OMqBF3F/qJLkujlm7bQ3sU4OAeIO3c8NRoS9g0kU9VC77h+FYVUOTKP0o=
+      secure: $NPM_TOKEN
