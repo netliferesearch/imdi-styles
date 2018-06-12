@@ -1,19 +1,19 @@
 {
   "name": "imdi-styles",
-  "version": "0.1.33",
+  "version": "1.0.0",
   "description": "Stilsett, javascript og grafikk for imdi.no og andre IMDi nettsider",
-  "main": "index.js",
+  "main": "dist/app.js",
   "private": true,
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "gulp default",
-    "build": "npm run build:patch",
-    "build:test": "gulp scripts-test styles-test UI && firebase deploy",
-    "build:test:js": "gulp scripts-test && firebase deploy",
-    "build:test:css": "gulp styles-test && firebase deploy",
-    "build:patch": "npm version patch && gulp scripts styles UI && firebase deploy",
-    "build:minor": "npm version minor && gulp scripts styles UI && firebase deploy",
-    "build:major": "npm version major && gulp scripts styles UI && firebase deploy"
+    "build": "gulp scripts styles UI",
+    "build:patch": "npm version patch && npm run build",
+    "build:minor": "npm version minor && npm run build",
+    "build:major": "npm version major && npm run build"
   },
   "repository": {
     "type": "git",
