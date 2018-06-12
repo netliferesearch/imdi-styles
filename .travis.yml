@@ -2,8 +2,8 @@ language: node_js
 node_js: 8
 
 script:
-  - branch = master && npm run build:next
-  - branch = prod && npm run build
+  - "$TRAVIS_BRANCH" = "master" && npm run build:next
+  - "$TRAVIS_BRANCH" = "prod" && npm run build
 
 before_deploy:
   - cd dist
