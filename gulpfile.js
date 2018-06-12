@@ -23,7 +23,9 @@ gulp.task('styles', function () {
     .pipe(rename({suffix: '.min'}))
     .pipe(minifycss())
     .pipe(gulp.dest('dist/'));
+});
 
+gulp.task('package', function() {
   gulp.src(['README.md', 'package.json'])
   .pipe(gulp.dest('dist/'));
 });
@@ -46,3 +48,6 @@ gulp.task('UI', function(){
   gulp.src('UI/**/*.*', { base: './' })
   .pipe(gulp.dest('dist/'));
 });
+
+gulp.task('build', ['styles', 'package', 'scripts', 'UI']);
+
