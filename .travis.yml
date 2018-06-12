@@ -5,15 +5,16 @@ before_deploy:
   - cd dist
 deploy:
   - provider: npm
+    tag: latest
     on:
       branch: prod
     skip_cleanup: true
     email: $NPM_EMAIL
     api_key: $NPM_TOKEN
   - provider: npm
+    tag: next
     on:
       branch: master
     skip_cleanup: true
     email: $NPM_EMAIL
-    tag: next
     api_key: $NPM_TOKEN
