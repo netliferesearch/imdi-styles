@@ -2,8 +2,8 @@ language: node_js
 node_js: 8
 
 script:
-  - if [ "$TRAVIS_BRANCH" = "master" ]; npm run build:next; fi
-  - if [ "$TRAVIS_BRANCH" = "prod" ]; npm run build; fi
+  - if [ "$TRAVIS_BRANCH" = "master" ]; then npm run build:next; fi
+  - if [ "$TRAVIS_BRANCH" = "prod" ]; then npm run build; fi
 
 before_deploy:
   - cd dist
