@@ -11,13 +11,11 @@ deploy:
       branch: production
     skip_cleanup: true
     email: $NPM_EMAIL
-    api_key:
-      secure: $NPM_TOKEN
+    api_key: $NPM_TOKEN
   - provider: npm
     on:
       branch: master
     skip_cleanup: true
     email: $NPM_EMAIL
     tag: next
-    api_key:
-      secure: $NPM_TOKEN
+    api_key: $NPM_TOKEN
