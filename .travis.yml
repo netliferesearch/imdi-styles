@@ -8,7 +8,7 @@ script:
 
 deploy:
   - provider: script
-  script: curl -T ./dist -u $FTP_USER:$FTP_PASSWORD ftps://waws-prod-db3-043.ftp.azurewebsites.windows.net
+  script: curl -T ./dist -u "$FTP_USER:$FTP_PASSWORD" ftps://waws-prod-db3-043.ftp.azurewebsites.windows.net
   on:
     branch: prod
   - provider: npm
