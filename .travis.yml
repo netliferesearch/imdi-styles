@@ -1,16 +1,13 @@
 language: node_js
 node_js: 8
 
-script:
-  - "$TRAVIS_BRANCH" = "master" && npm run build:next
-  - "$TRAVIS_BRANCH" = "prod" && npm run build
-
 before_deploy:
   - cd dist
 
 deploy:
   - provider: npm
     tag: latest
+    script: npm run build
     on:
       branch: prod
     skip_cleanup: true
@@ -18,6 +15,7 @@ deploy:
     api_key: $NPM_TOKEN
   - provider: npm
     tag: next
+    script: npm run build:next
     on:
       branch: master
     skip_cleanup: true
