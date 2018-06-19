@@ -1,6 +1,6 @@
 {
   "name": "imdi-styles",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Stilsett, javascript og grafikk for imdi.no og andre IMDi nettsider",
   "main": "app.js",
   "private": false,
