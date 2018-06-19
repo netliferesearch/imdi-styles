@@ -12,7 +12,12 @@ $(document).ready(function() {
     (t.m = e),
       (t.c = n),
       (t.d = function(e, n, o) {
-        t.o(e, n) || Object.defineProperty(e, n, { configurable: !1, enumerable: !0, get: o });
+        t.o(e, n) ||
+          Object.defineProperty(e, n, {
+            configurable: !1,
+            enumerable: !0,
+            get: o
+          });
       }),
       (t.n = function(e) {
         var n =
@@ -35,7 +40,10 @@ $(document).ready(function() {
       (function(o) {
         var l, i, r;
         !(function(n, o) {
-          (i = []), (l = o(n)), void 0 !== (r = 'function' == typeof l ? l.apply(t, i) : l) && (e.exports = r);
+          (i = []),
+            (l = o(n)),
+            void 0 !== (r = 'function' == typeof l ? l.apply(t, i) : l) &&
+              (e.exports = r);
         })(void 0 !== o ? o : this.window || this.global, function(e) {
           'use strict';
           function t() {
@@ -78,9 +86,22 @@ $(document).ready(function() {
                 } catch (e) {
                   console.warn('Element not found: ' + s.tocSelector);
                 }
-                document.removeEventListener('scroll', this._scrollListener, !1),
-                  document.removeEventListener('resize', this._scrollListener, !1),
-                  l && document.removeEventListener('click', this._clickListener, !1);
+                document.removeEventListener(
+                  'scroll',
+                  this._scrollListener,
+                  !1
+                ),
+                  document.removeEventListener(
+                    'resize',
+                    this._scrollListener,
+                    !1
+                  ),
+                  l &&
+                    document.removeEventListener(
+                      'click',
+                      this._clickListener,
+                      !1
+                    );
               }),
               (c.init = function(e) {
                 if (
@@ -88,13 +109,20 @@ $(document).ready(function() {
                   ((s = t(r, e || {})),
                   (this.options = s),
                   (this.state = {}),
-                  s.scrollSmooth && (c.scrollSmooth = n(5).initSmoothScrolling({ duration: s.scrollSmoothDuration })),
+                  s.scrollSmooth &&
+                    (c.scrollSmooth = n(5).initSmoothScrolling({
+                      duration: s.scrollSmoothDuration
+                    })),
                   (l = a(s)),
                   (i = u(s)),
                   (this._buildHtml = l),
                   (this._parseContent = i),
                   c.destroy(),
-                  null !== (d = i.selectHeadings(s.contentSelector, s.headingSelector)))
+                  null !==
+                    (d = i.selectHeadings(
+                      s.contentSelector,
+                      s.headingSelector
+                    )))
                 ) {
                   var m = i.nestHeadingsArray(d),
                     p = m.nest;
@@ -102,15 +130,32 @@ $(document).ready(function() {
                     l.render(s.tocSelector, p),
                     (this._scrollListener = o(function(e) {
                       l.updateToc(d);
-                      var t = e && e.target && e.target.scrollingElement && 0 === e.target.scrollingElement.scrollTop;
-                      ((e && (0 === e.eventPhase || null === e.currentTarget)) || t) &&
-                        (l.enableTocAnimation(), l.updateToc(d), s.scrollEndCallback && s.scrollEndCallback(e));
+                      var t =
+                        e &&
+                        e.target &&
+                        e.target.scrollingElement &&
+                        0 === e.target.scrollingElement.scrollTop;
+                      ((e &&
+                        (0 === e.eventPhase || null === e.currentTarget)) ||
+                        t) &&
+                        (l.enableTocAnimation(),
+                        l.updateToc(d),
+                        s.scrollEndCallback && s.scrollEndCallback(e));
                     }, s.throttleTimeout)),
                     this._scrollListener(),
-                    document.addEventListener('scroll', this._scrollListener, !1),
-                    document.addEventListener('resize', this._scrollListener, !1),
+                    document.addEventListener(
+                      'scroll',
+                      this._scrollListener,
+                      !1
+                    ),
+                    document.addEventListener(
+                      'resize',
+                      this._scrollListener,
+                      !1
+                    ),
                     (this._clickListener = o(function(e) {
-                      s.scrollSmooth && l.disableTocAnimation(e), l.updateToc(d);
+                      s.scrollSmooth && l.disableTocAnimation(e),
+                        l.updateToc(d);
                     }, s.throttleTimeout)),
                     document.addEventListener('click', this._clickListener, !1),
                     this
@@ -184,7 +229,10 @@ $(document).ready(function() {
             t(e, o);
           });
           var i = document.querySelector(e);
-          if (null !== i) return i.firstChild && i.removeChild(i.firstChild), i.appendChild(o);
+          if (null !== i)
+            return (
+              i.firstChild && i.removeChild(i.firstChild), i.appendChild(o)
+            );
         }
         function o(t) {
           var n = document.createElement('li'),
@@ -198,7 +246,15 @@ $(document).ready(function() {
                 })
               : (o.textContent = t.textContent),
             o.setAttribute('href', '#' + t.id),
-            o.setAttribute('class', e.linkClass + p + 'node-name--' + t.nodeName + p + e.extraLinkClasses),
+            o.setAttribute(
+              'class',
+              e.linkClass +
+                p +
+                'node-name--' +
+                t.nodeName +
+                p +
+                e.extraLinkClasses
+            ),
             n.appendChild(o),
             n
           );
@@ -206,56 +262,88 @@ $(document).ready(function() {
         function l(t) {
           var n = document.createElement('ul'),
             o = e.listClass + p + e.extraListClasses;
-          return t && ((o += p + e.collapsibleClass), (o += p + e.isCollapsedClass)), n.setAttribute('class', o), n;
+          return (
+            t && ((o += p + e.collapsibleClass), (o += p + e.isCollapsedClass)),
+            n.setAttribute('class', o),
+            n
+          );
         }
         function i() {
           var t = document.documentElement.scrollTop || f.scrollTop,
             n = document.querySelector(e.positionFixedSelector);
-          'auto' === e.fixedSidebarOffset && (e.fixedSidebarOffset = document.querySelector(e.tocSelector).offsetTop),
+          'auto' === e.fixedSidebarOffset &&
+            (e.fixedSidebarOffset = document.querySelector(
+              e.tocSelector
+            ).offsetTop),
             t > e.fixedSidebarOffset
-              ? -1 === n.className.indexOf(e.positionFixedClass) && (n.className += p + e.positionFixedClass)
-              : (n.className = n.className.split(p + e.positionFixedClass).join(''));
+              ? -1 === n.className.indexOf(e.positionFixedClass) &&
+                (n.className += p + e.positionFixedClass)
+              : (n.className = n.className
+                  .split(p + e.positionFixedClass)
+                  .join(''));
         }
         function r(t) {
           var n = document.documentElement.scrollTop || f.scrollTop;
           e.positionFixedSelector && i();
           var o,
             l = t;
-          if (m && null !== document.querySelector(e.tocSelector) && l.length > 0) {
+          if (
+            m &&
+            null !== document.querySelector(e.tocSelector) &&
+            l.length > 0
+          ) {
             d.call(l, function(t, i) {
               if (t.offsetTop > n + e.headingsOffset + 10) {
                 return (o = l[0 === i ? i : i - 1]), !0;
               }
               if (i === l.length - 1) return (o = l[l.length - 1]), !0;
             });
-            var r = document.querySelector(e.tocSelector).querySelectorAll('.' + e.linkClass);
+            var r = document
+              .querySelector(e.tocSelector)
+              .querySelectorAll('.' + e.linkClass);
             u.call(r, function(t) {
               t.className = t.className.split(p + e.activeLinkClass).join('');
             });
             var c = document
               .querySelector(e.tocSelector)
-              .querySelector('.' + e.linkClass + '.node-name--' + o.nodeName + '[href="#' + o.id + '"]');
+              .querySelector(
+                '.' +
+                  e.linkClass +
+                  '.node-name--' +
+                  o.nodeName +
+                  '[href="#' +
+                  o.id +
+                  '"]'
+              );
             c.className += p + e.activeLinkClass;
             var a = document
               .querySelector(e.tocSelector)
               .querySelectorAll('.' + e.listClass + '.' + e.collapsibleClass);
             u.call(a, function(t) {
               var n = p + e.isCollapsedClass;
-              -1 === t.className.indexOf(n) && (t.className += p + e.isCollapsedClass);
+              -1 === t.className.indexOf(n) &&
+                (t.className += p + e.isCollapsedClass);
             }),
               c.nextSibling &&
-                (c.nextSibling.className = c.nextSibling.className.split(p + e.isCollapsedClass).join('')),
+                (c.nextSibling.className = c.nextSibling.className
+                  .split(p + e.isCollapsedClass)
+                  .join('')),
               s(c.parentNode.parentNode);
           }
         }
         function s(t) {
           return -1 !== t.className.indexOf(e.collapsibleClass)
-            ? ((t.className = t.className.split(p + e.isCollapsedClass).join('')), s(t.parentNode.parentNode))
+            ? ((t.className = t.className
+                .split(p + e.isCollapsedClass)
+                .join('')),
+              s(t.parentNode.parentNode))
             : t;
         }
         function c(t) {
           var n = t.target || t.srcElement;
-          'string' == typeof n.className && -1 !== n.className.indexOf(e.linkClass) && (m = !1);
+          'string' == typeof n.className &&
+            -1 !== n.className.indexOf(e.linkClass) &&
+            (m = !1);
         }
         function a() {
           m = !0;
@@ -265,7 +353,12 @@ $(document).ready(function() {
           f = document.body,
           m = !0,
           p = ' ';
-        return { enableTocAnimation: a, disableTocAnimation: c, render: n, updateToc: r };
+        return {
+          enableTocAnimation: a,
+          disableTocAnimation: c,
+          render: n,
+          updateToc: r
+        };
       };
     },
     function(e, t) {
@@ -287,7 +380,16 @@ $(document).ready(function() {
           return e.includeHtml && (o.childNodes = t.childNodes), o;
         }
         function l(l, i) {
-          for (var r = o(l), s = n(l), c = i, a = t(c), u = a ? a.headingLevel : 0, d = s - u; d > 0; )
+          for (
+            var r = o(l),
+              s = n(l),
+              c = i,
+              a = t(c),
+              u = a ? a.headingLevel : 0,
+              d = s - u;
+            d > 0;
+
+          )
             (a = t(c)), a && void 0 !== a.children && (c = a.children), d--;
           return s >= e.collapseDepth && (r.isCollapsed = !0), c.push(r), c;
         }
@@ -330,7 +432,10 @@ $(document).ready(function() {
         }
         function l(e) {
           const t = document.getElementById(e.substring(1));
-          t && (/^(?:a|select|input|button|textarea)$/i.test(t.tagName) || (t.tabIndex = -1), t.focus());
+          t &&
+            (/^(?:a|select|input|button|textarea)$/i.test(t.tagName) ||
+              (t.tabIndex = -1),
+            t.focus());
         }
         !(function() {
           document.documentElement.style;
@@ -354,24 +459,39 @@ $(document).ready(function() {
       }
       function o(e, t) {
         function n(e) {
-          (r = e - i), window.scrollTo(0, c.easing(r, s, a, u)), r < u ? requestAnimationFrame(n) : o();
+          (r = e - i),
+            window.scrollTo(0, c.easing(r, s, a, u)),
+            r < u ? requestAnimationFrame(n) : o();
         }
         function o() {
-          window.scrollTo(0, s + a), 'function' == typeof c.callback && c.callback();
+          window.scrollTo(0, s + a),
+            'function' == typeof c.callback && c.callback();
         }
         function l(e, t, n, o) {
-          return (e /= o / 2) < 1 ? n / 2 * e * e + t : (e--, -n / 2 * (e * (e - 2) - 1) + t);
+          return (e /= o / 2) < 1
+            ? (n / 2) * e * e + t
+            : (e--, (-n / 2) * (e * (e - 2) - 1) + t);
         }
         var i,
           r,
           s = window.pageYOffset,
-          c = { duration: t.duration, offset: t.offset || 0, callback: t.callback, easing: t.easing || l },
+          c = {
+            duration: t.duration,
+            offset: t.offset || 0,
+            callback: t.callback,
+            easing: t.easing || l
+          },
           a =
             'string' == typeof e
               ? c.offset +
                 (e
-                  ? document.querySelector('[id="' + e.split('#').join('') + '"]').getBoundingClientRect().top
-                  : -(document.documentElement.scrollTop || document.body.scrollTop))
+                  ? document
+                      .querySelector('[id="' + e.split('#').join('') + '"]')
+                      .getBoundingClientRect().top
+                  : -(
+                      document.documentElement.scrollTop ||
+                      document.body.scrollTop
+                    ))
               : e,
           u = 'function' == typeof c.duration ? c.duration(a) : c.duration;
         requestAnimationFrame(function(e) {
@@ -427,12 +547,14 @@ imdi.doubleNavigationPage = (function($) {
           var isOpen = list.classList.contains('open'); // won't work on IE. so why use it? it's just for esthetics and IE users deserve a lesser experience
 
           // rotates arrow up or down
-          this.parentNode.querySelector('.icon__arrow-down').classList.toggle('open');
+          this.parentNode
+            .querySelector('.icon__arrow-down')
+            .classList.toggle('open');
 
           // change text for show or hide
-          this.parentNode.querySelector('.nav-matrix__show-list p').innerHTML = isOpen
-            ? 'Skjul liste'
-            : '&nbsp;Vis liste';
+          this.parentNode.querySelector(
+            '.nav-matrix__show-list p'
+          ).innerHTML = isOpen ? 'Skjul liste' : '&nbsp;Vis liste';
         });
       }
     }
@@ -481,10 +603,19 @@ imdi.removeDoubleDownloadPDF = (function($) {
 
       if (height > longPage && downloadBox.length && downloadBox.length > 1) {
         for (var i = 0; i < downloadBox.length; i++) {
-          var current = downloadBox[i].querySelector('p').textContent;
-          var next = downloadBox[i + 1].querySelector('p').textContent;
+          let currentText = '';
+          const currentTextContainer = downloadBox[i].querySelector('p');
+          if (currentTextContainer) {
+            currentText = currentTextContainer.textContent;
+          }
 
-          if (current === next) {
+          let nextText = '';
+          const nextTextContainer = downloadBox[i + 1].querySelector('p');
+          if (nextTextContainer) {
+            nextText = nextTextContainer.textContent;
+          }
+
+          if (currentText === nextText && currentText !== '') {
             next.style.display = 'none';
           }
         }
@@ -502,7 +633,11 @@ imdi.stickToTop = (function($) {
 
       // param 1: element being sticky
       // param 2: class that is added to the sticky element on scroll position
-      var stickToTop = function stickToTop(triggerSelector, stickySelector, stickyClass) {
+      var stickToTop = function stickToTop(
+        triggerSelector,
+        stickySelector,
+        stickyClass
+      ) {
         var throttleTimeout = 200; // 5 scroll events pr second
         var leftPadding = 90; // space between main column and toc
 
@@ -572,7 +707,12 @@ imdi.tocbot = (function() {
 
       function _defineProperty(obj, key, value) {
         if (key in obj) {
-          Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });
+          Object.defineProperty(obj, key, {
+            value: value,
+            enumerable: true,
+            configurable: true,
+            writable: true
+          });
         } else {
           obj[key] = value;
         }
@@ -638,7 +778,10 @@ imdi.tocbot = (function() {
             tocList[0].classList.add('descriptive-header');
 
             // insert new header as a <p> sibling to invisble <a>. not pretty.
-            tocList[0].insertAdjacentHTML('beforebegin', '<p>Innholdsfortegnelse</p>');
+            tocList[0].insertAdjacentHTML(
+              'beforebegin',
+              '<p>Innholdsfortegnelse</p>'
+            );
 
             tocList[0].previousSibling.classList.add('toc-list__header');
           }
@@ -664,7 +807,10 @@ imdi.scroll = (function($) {
       var anchorid = getUrlParameter('aid');
       if (anchorid) {
         var anchor = '#' + anchorid;
-        $('html,body').animate({ scrollTop: jQuery(anchor).offset().top - 110 }, 700);
+        $('html,body').animate(
+          { scrollTop: jQuery(anchor).offset().top - 110 },
+          700
+        );
         $(anchor).focus();
       }
     }
@@ -680,8 +826,10 @@ imdi.gtm_tracking = (function($) {
   return {
     customEvent: function(eventCategory, eventAction, eventLabel, eventValue) {
       // Default to undefined
-      eventCategory = typeof eventCategory !== 'undefined' ? eventCategory : undefined;
-      eventAction = typeof eventAction !== 'undefined' ? eventAction : undefined;
+      eventCategory =
+        typeof eventCategory !== 'undefined' ? eventCategory : undefined;
+      eventAction =
+        typeof eventAction !== 'undefined' ? eventAction : undefined;
       eventLabel = typeof eventLabel !== 'undefined' ? eventLabel : undefined;
       eventValue = typeof eventValue !== 'undefined' ? eventValue : undefined;
 
@@ -699,8 +847,10 @@ imdi.gtm_tracking = (function($) {
 
     customPageView: function(virtualPageUrl, virtualPageTitle) {
       // Default to undefined
-      virtualPageUrl = typeof virtualPageUrl !== 'undefined' ? virtualPageUrl : undefined;
-      virtualPageTitle = typeof virtualPageTitle !== 'undefined' ? virtualPageTitle : undefined;
+      virtualPageUrl =
+        typeof virtualPageUrl !== 'undefined' ? virtualPageUrl : undefined;
+      virtualPageTitle =
+        typeof virtualPageTitle !== 'undefined' ? virtualPageTitle : undefined;
 
       // Google Tag Manager call
       if (typeof dataLayer != 'undefined') {
@@ -916,14 +1066,22 @@ imdi.accordion = (function() {
             //  toggle aria-expanded
             var ariaExpanded = content.getAttribute('aria-expanded');
             console.log(ariaExpanded);
-            content.setAttribute('aria-expanded', ariaExpanded === 'true' ? false : true);
+            content.setAttribute(
+              'aria-expanded',
+              ariaExpanded === 'true' ? false : true
+            );
 
             //  toggle aria-hidden
             var ariaHidden = content.getAttribute('aria-hidden');
-            content.setAttribute('aria-hidden', ariaHidden === 'true' ? false : true);
+            content.setAttribute(
+              'aria-hidden',
+              ariaHidden === 'true' ? false : true
+            );
 
             //  toggle content visibility
-            elements[i].querySelector('.accordion--title img').classList.toggle('open');
+            elements[i]
+              .querySelector('.accordion--title img')
+              .classList.toggle('open');
             content.classList.toggle('open');
           });
         };
@@ -1025,11 +1183,14 @@ imdi.smooth_scrolling = (function($) {
         .on('click', function() {
           var $linkElem = $(this);
           if (
-            location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') &&
+            location.pathname.replace(/^\//, '') ==
+              this.pathname.replace(/^\//, '') &&
             location.hostname == this.hostname
           ) {
             var target = $(this.hash);
-            target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+            target = target.length
+              ? target
+              : $('[name=' + this.hash.slice(1) + ']');
             if (target.length) {
               $('html,body').animate(
                 {
@@ -1231,7 +1392,9 @@ imdi.wizard = (function($) {
           var startId = dataTree[0].Id;
           var wrapper = this;
 
-          var captionLeadtext = $(this).data('caption-leadtext') ? $(this).data('caption-leadtext') : '';
+          var captionLeadtext = $(this).data('caption-leadtext')
+            ? $(this).data('caption-leadtext')
+            : '';
           var captionStartWizard = $(this).data('caption-start-wizard')
             ? $(this).data('caption-start-wizard')
             : 'Start veiviser';
@@ -1279,13 +1442,16 @@ imdi.wizard = (function($) {
 
               // Construct markup
               $(wrapper)
-                .append(getQuestion(_question, _instruction, _alternatives, targetId))
+                .append(
+                  getQuestion(_question, _instruction, _alternatives, targetId)
+                )
                 .append(getHistory())
                 .find('legend')
                 .focus();
 
               // Google Tag Manager call
-              var virtualUrl = window.location.pathname + '?wizard/question/' + targetId;
+              var virtualUrl =
+                window.location.pathname + '?wizard/question/' + targetId;
               var virtualTitle = _question + ' | Veiviserspørsmål';
               imdi.gtm_tracking.customPageView(virtualUrl, virtualTitle);
 
@@ -1303,7 +1469,8 @@ imdi.wizard = (function($) {
                 .focus();
 
               // Google Tag Manager call
-              var virtualUrl = window.location.pathname + '?wizard/conclusion/' + targetId;
+              var virtualUrl =
+                window.location.pathname + '?wizard/conclusion/' + targetId;
               var virtualTitle = _title + ' | Veiviserkonklusjon';
               imdi.gtm_tracking.customPageView(virtualUrl, virtualTitle);
 
@@ -1357,7 +1524,12 @@ imdi.wizard = (function($) {
           // Function for constructing HTML for question
           //
 
-          var getQuestion = function(_question, _instruction, _alternatives, targetId) {
+          var getQuestion = function(
+            _question,
+            _instruction,
+            _alternatives,
+            targetId
+          ) {
             var html = $('<fieldset>', {
               class: 't-margin-bottom--large animations__fade-in-left'
             });
@@ -1382,7 +1554,13 @@ imdi.wizard = (function($) {
                 type: 'button',
                 class: 'button button--option',
                 html: this.Caption + ' <i class="icon__arrow-right"></i>',
-                click: $.proxy(updateWizard, null, targetId, this.Caption, this.Target)
+                click: $.proxy(
+                  updateWizard,
+                  null,
+                  targetId,
+                  this.Caption,
+                  this.Target
+                )
               }).appendTo($('<li>').appendTo($(htmllist)));
             });
 
@@ -1486,7 +1664,10 @@ imdi.tableOfContents = (function($) {
       if ($('.toc-mobile').length) {
         var toc_index = 1;
 
-        $('.toc-mobile h2:not([class]):not(.no-toc)').each(function(index, value) {
+        $('.toc-mobile h2:not([class]):not(.no-toc)').each(function(
+          index,
+          value
+        ) {
           var elements = $(this);
           var element = elements[0];
           var id = element.id;
