@@ -610,7 +610,9 @@ imdi.removeDoubleDownloadPDF = (function($) {
           }
 
           let nextText = '';
-          const nextTextContainer = downloadBox[i + 1].querySelector('p');
+          const nextTextContainer = downloadBox[i + 1]
+            ? downloadBox[i + 1].querySelector('p')
+            : null;
           if (nextTextContainer) {
             nextText = nextTextContainer.textContent;
           }
