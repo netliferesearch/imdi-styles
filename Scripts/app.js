@@ -601,7 +601,7 @@ imdi.removeDoubleDownloadPDF = (function($) {
         html.offsetHeight
       );
 
-      if (height > longPage && downloadBox.length && downloadBox.length > 1) {
+      if (height < longPage && downloadBox.length && downloadBox.length > 1) {
         for (var i = 0; i < downloadBox.length; i++) {
           let currentText = "";
           const currentTextContainer = downloadBox[i].querySelector("p");
@@ -618,7 +618,7 @@ imdi.removeDoubleDownloadPDF = (function($) {
           }
 
           if (currentText === nextText && currentText !== "") {
-            nextTextContainer.style.display = "none";
+            downloadBox[i].style.display = "none";
           }
         }
       }
