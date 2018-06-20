@@ -1,269 +1,247 @@
 /*------------------------------------*\
     COLOR PALETTE
 \*------------------------------------*/
-@color__black               : #282828; // RGB(40,40,40) CMYK(0%,0%,0%, 71%)
-@color__black--light        : #282828;
-@color__white               : #ffffff;
-@color__grey                : #585858;
-@color__grey--light         : #bbbbbb;
+@color__black : #282828; // RGB(40,40,40) CMYK(0%,0%,0%, 71%)
+@color__black--light : #282828;
+@color__white : #ffffff;
+@color__grey : #585858;
+@color__grey--light : #bbbbbb;
 
-@color__orange              : #f15540; // RGB(214,85,64) CMYCk(0%, 82%, 79%, 0%)
-@color__orange--dark        : #d83a36; // RGB(229,32,28) CMYCK(4%, 99%, 100%, 0%)
-@color__green               : #50a450; // RGB(80,164,80) CMYCK(72%, 12%, 93%, 1%)
-@color__green--dark         : #418541; // RGB(65,133,65) CMYCK(78%, 26%, 98%, 11%)
+@color__orange : #f15540; // RGB(214,85,64) CMYCk(0%, 82%, 79%, 0%)
+@color__orange--dark : #d83a36; // RGB(229,32,28) CMYCK(4%, 99%, 100%, 0%)
+@color__green : #50a450; // RGB(80,164,80) CMYCK(72%, 12%, 93%, 1%)
+@color__green--dark : #418541; // RGB(65,133,65) CMYCK(78%, 26%, 98%, 11%)
 
-@color__yellow              : #ffd300; // RGB(255,211,0) CMYK(0%,16%,92%,0%)
-@color__yellow--dark        : #f56d00; // RGB(245,109,0) CMYK(0%, 67%, 97%, 0%)
-@color__blue                : #15c2e8; // RGB(21,194,232) CMYk(68%, 0%, 8%, 0%)
-@color__blue--dark          : #1d70b7; // RGB(29,113,184) CMYK(85%, 50%, 0%, 0%)
-@color__purple              : #c792ca; // RGB(199,146,202) CMYK(21%, 48%, 0%, 0%)
-@color__purple--dark        : #ba4b7a; // RGB(186,75,123) CMYK(26%, 85%, 28%, 0%)
+@color__yellow : #ffd300; // RGB(255,211,0) CMYK(0%,16%,92%,0%)
+@color__yellow--dark : #f56d00; // RGB(245,109,0) CMYK(0%, 67%, 97%, 0%)
+@color__blue : #15c2e8; // RGB(21,194,232) CMYk(68%, 0%, 8%, 0%)
+@color__blue--dark : #1d70b7; // RGB(29,113,184) CMYK(85%, 50%, 0%, 0%)
+@color__purple : #c792ca; // RGB(199,146,202) CMYK(21%, 48%, 0%, 0%)
+@color__purple--dark : #ba4b7a; // RGB(186,75,123) CMYK(26%, 85%, 28%, 0%)
 
+@color__canvas-orange : #f2e7e7;
+@color__canvas-green : #e4efe4;
+@color__canvas-yellow : #fff8e6;
+@color__canvas-grey : #f2efed; // RGB(242,239,237) CMYCK(0%, 0%, 0%, 4%)
+@color__canvas-grey--dark : #bfbfbf;
 
-@color__canvas-orange	      : #f2e7e7;
-@color__canvas-green	      : #e4efe4;
-@color__canvas-yellow	      : #fff8e6;
-@color__canvas-grey	        : #f2efed; // RGB(242,239,237) CMYCK(0%, 0%, 0%, 4%)
-@color__canvas-grey--dark   : #bfbfbf;
-
-@color__text	              : @color__black;
-@color__links	              : @color__orange--dark;
+@color__text : @color__black;
+@color__links : @color__orange--dark;
 
 /*------------------------------------*\
     BREAKPOINTS
 \*------------------------------------*/
 
-@screen--sm                  : 22em; // em
-@screen--md                  : 45em;
-@screen--lg                  : 57em;
-@screen--xl                  : 71em;
-@screen--xxl                 : 92em;
-
+@screen--sm : 22em; // em
+@screen--md : 45em;
+@screen--lg : 57em;
+@screen--xl : 71em;
+@screen--xxl : 92em;
 
 /*------------------------------------*\
     GRID
 \*------------------------------------*/
 
-@grid-width                  : 70em;
-@gutter                      : 21px;
-@spacing--xlarge             : 84px;
-@spacing--large              : 42px;
-@spacing                     : 21px;
-@spacing--medium             : 14px;
-@spacing--small              : 7px;
-@spacing--xsmall             : 5px;
+@grid-width : 70em;
+@gutter : 21px;
+@spacing--xlarge : 84px;
+@spacing--large : 42px;
+@spacing : 21px;
+@spacing--medium : 14px;
+@spacing--small : 7px;
+@spacing--xsmall : 5px;
 
 /*------------------------------------*\
     #TYPE
 \*------------------------------------*/
 
-@font-size--regular          : 18;
-@font-size--small            : 15; // pixelfallback + rem
-@font-size--medium           : 24;
-@font-size--large            : 32;
-@font-size--xlarge           : 52;
-
-
+@font-size--regular : 18;
+@font-size--small : 15; // pixelfallback + rem
+@font-size--medium : 24;
+@font-size--large : 32;
+@font-size--xlarge : 52;
 
 /*------------------------------------*\
     $LINE HEIGHTS
 \*------------------------------------*/
 
-@line-height   		           : 1.695;
-@line-height--header         : 2.4;
-
+@line-height : 1.695;
+@line-height--header : 2.4;
 
 /*------------------------------------*\
     $MIXINS
 \*------------------------------------*/
 
 .borderRadius(@string: 50%) {
-	-webkit-border-radius: @string;
-	-moz-border-radius: @string;
-	border-radius: @string;
+  -webkit-border-radius: @string;
+  -moz-border-radius: @string;
+  border-radius: @string;
 }
 
-.boxShadow(@string: 0 0 3px rgba(0, 0, 0, .5)) {
-	-webkit-box-shadow: @string;
-	-moz-box-shadow: @string;
-	box-shadow: @string;
+.boxShadow(@string: 0 0 3px rgba(0, 0, 0, 0.5)) {
+  -webkit-box-shadow: @string;
+  -moz-box-shadow: @string;
+  box-shadow: @string;
 }
 
 .fontSize(@size: @fontSizeDefault, @rootSize: @font-size--regular) {
-	@remValue: (@size / @rootSize);
-	@pxValue: @size;
-	font-size: ~"@{pxValue}px";
-	font-size: ~"@{remValue}rem";
+  @remValue: (@size / @rootSize);
+  @pxValue: @size;
+  font-size: ~"@{pxValue}px";
+  font-size: ~"@{remValue}rem";
 }
 
 .clearfix() {
-    &::before,
-    &::after {
-        content: "";
-        display: table;
-    }
-    &::after {
-        clear: both;
-    }
+  &::before,
+  &::after {
+    content: "";
+    display: table;
+  }
+  &::after {
+    clear: both;
+  }
 }
 
 .transform(@string) {
-	-webkit-transform: @string;
-	-moz-transform: @string;
-	-ms-transform: @string;
-	-o-transform: @string;
-	transform: @string;
+  -webkit-transform: @string;
+  -moz-transform: @string;
+  -ms-transform: @string;
+  -o-transform: @string;
+  transform: @string;
 }
 
 .transition(@string) {
-	-webkit-transition: @string;
-	-moz-transition: @string;
-	-o-transition: @string;
-	transition: @string;
+  -webkit-transition: @string;
+  -moz-transition: @string;
+  -o-transition: @string;
+  transition: @string;
 }
 
 .animation(@string) {
-	-webkit-animation: @string;
-	-moz-animation: @string;
-	-o-animation: @string;
-	animation: @string;
+  -webkit-animation: @string;
+  -moz-animation: @string;
+  -o-animation: @string;
+  animation: @string;
 }
 
 .animation-delay(@string) {
-	-webkit-animation-delay: @string;
-	-moz-animation-delay: @string;
-	-o-animation-delay: @string;
-	animation-delay: @string;
+  -webkit-animation-delay: @string;
+  -moz-animation-delay: @string;
+  -o-animation-delay: @string;
+  animation-delay: @string;
 }
-
 
 /*------------------------------------*\
     $FONTS
 \*------------------------------------*/
 
 .font-siri--thin() {
-	font-family: "Siri Thin", Tahoma, sans-serif;
-	font-weight: normal;
-	font-style: normal;
+  font-family: "Siri Thin", Tahoma, sans-serif;
+  font-weight: normal;
+  font-style: normal;
 }
 
 .font-siri--light() {
-	font-family: "Siri Light", Tahoma, sans-serif;
+  font-family: "Siri Light", Tahoma, sans-serif;
 }
 
 .font-siri--regular() {
-	font-family: "Siri", Tahoma, sans-serif;
-	font-size-adjust: 0.51;
-	font-weight: normal;
-	font-style: normal;
+  font-family: "Siri", Tahoma, sans-serif;
+  font-size-adjust: 0.51;
+  font-weight: normal;
+  font-style: normal;
 }
 
 .font-siri--medium() {
-	font-family: "Siri Medium", Tahoma, sans-serif;
-	font-weight: normal;
-	font-style: normal;
+  font-family: "Siri Medium", Tahoma, sans-serif;
+  font-weight: normal;
+  font-style: normal;
 }
 
 .font-siri--semibold() {
-	font-family: "Siri SemiBold", Tahoma, sans-serif;
-	font-weight: normal;
-	font-style: normal;
+  font-family: "Siri SemiBold", Tahoma, sans-serif;
+  font-weight: normal;
+  font-style: normal;
 }
 
 .font-siri--bold() {
-	font-family: "Siri Bold", Tahoma, sans-serif;
-	font-size-adjust: 0.52;
-	font-weight: normal;
-	font-style: normal;
+  font-family: "Siri Bold", Tahoma, sans-serif;
+  font-size-adjust: 0.52;
+  font-weight: normal;
+  font-style: normal;
 }
 
-
-
 .h1() {
-	.font-siri--regular();
-	.fontSize(34);
-	line-height: (60 / @font-size--xlarge);
-	margin-bottom: 18px;
-	word-wrap: normal;
-	text-transform: none;
-	margin-top: @spacing--medium;
-	.query-min(@screen--sm; {
-		.fontSize(42);
-		margin-bottom: 22px;
-	});
-	.query-min(@screen--md; {
-		.fontSize(@font-size--xlarge);
-		margin-bottom: 28px;
-	});
-	@media print {
-		.fontSize(42);
-		margin-bottom: 22px;
-	}
+  .font-siri--regular();
+  .fontSize(34);
+  line-height: (60 / @font-size--xlarge);
+  margin-bottom: 18px;
+  word-wrap: break-word;
+  hyphens: auto;
+  text-transform: none;
+  margin-top: @spacing--medium;
+  .query-min(@screen--sm; {.fontSize(42) ; margin-bottom: 22px;});
+  .query-min(
+    @screen--md; {.fontSize(@font-size--xlarge) ; margin-bottom: 28px;}
+  );
+  @media print {
+    .fontSize(42);
+    margin-bottom: 22px;
+  }
 }
 
 .h2() {
-	.font-siri--medium();
-	.fontSize(24);
-	line-height: (42 / @font-size--large);
-	margin-bottom: 21px;
-	text-transform: none;
-	.query-min(@screen--sm; {
-		.fontSize(26);
-	});
-	.query-min(@screen--md; {
-		.fontSize(@font-size--large);
-	});
+  .font-siri--medium();
+  .fontSize(24);
+  line-height: (42 / @font-size--large);
+  margin-bottom: 21px;
+  text-transform: none;
+  .query-min(@screen--sm; {.fontSize(26) ;});
+  .query-min(@screen--md; {.fontSize(@font-size--large) ;});
 }
 
 .h3() {
-	.font-siri--medium();
-	.fontSize(20);
-	line-height: (35 / @font-size--medium);
-	margin-bottom: 14px;
-	text-transform: none;
-	.query-min(@screen--sm; {
-		.fontSize(22);
-	});
-	.query-min(@screen--md; {
-		.fontSize(@font-size--medium);
-	});
+  .font-siri--medium();
+  .fontSize(20);
+  line-height: (35 / @font-size--medium);
+  margin-bottom: 14px;
+  text-transform: none;
+  .query-min(@screen--sm; {.fontSize(22) ;});
+  .query-min(@screen--md; {.fontSize(@font-size--medium) ;});
 }
 
 .h4() {
-	.font-siri--medium();
-	.fontSize(16);
-	line-height: (28 / 16);
-	margin-bottom: 0px;
-	text-transform: uppercase;
-	letter-spacing: 0.05em;
+  .font-siri--medium();
+  .fontSize(16);
+  line-height: (28 / 16);
+  margin-bottom: 0px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
 
 .text() {
-	.font-siri--regular();
-	.fontSize(@font-size--regular);
-	line-height: (28 / @font-size--regular);
-	margin-bottom: 14px;
-	text-transform: none;
+  .font-siri--regular();
+  .fontSize(@font-size--regular);
+  line-height: (28 / @font-size--regular);
+  margin-bottom: 14px;
+  text-transform: none;
 }
 
 .text--large() {
-	.font-siri--regular();
-	.fontSize(20);
-	line-height: (35 / @font-size--medium);
-	margin-bottom: 28px;
-	text-transform: none;
-	.query-min(@screen--md; {
-		.fontSize(@font-size--medium);
-
-	});
+  .font-siri--regular();
+  .fontSize(20);
+  line-height: (35 / @font-size--medium);
+  margin-bottom: 28px;
+  text-transform: none;
+  .query-min(@screen--md; {.fontSize(@font-size--medium) ;});
 }
 
 .text--small() {
-	.font-siri--regular();
-	.fontSize(@font-size--small);
-	line-height: (21 / @font-size--small);
-	margin-bottom: 0px;
-	text-transform: none;
+  .font-siri--regular();
+  .fontSize(@font-size--small);
+  line-height: (21 / @font-size--small);
+  margin-bottom: 0px;
+  text-transform: none;
 }
 
 /*------------------------------------*\
@@ -278,14 +256,13 @@
   // Then clear the floated columns
   .clearfix();
 
-  .query-min(@screen--sm; {
-    margin-left:  (@_gutter / -2);
-    margin-right: (@_gutter / -2);
-  });
+  .query-min(
+    @screen--sm; {margin-left: (@_gutter / -2) ; margin-right: (@_gutter / -2) ;}
+  );
 
   // Negative margin nested rows out to align the content of columns
   .row {
-    margin-left:  (@_gutter / -2);
+    margin-left: (@_gutter / -2);
     margin-right: (@_gutter / -2);
   }
 }
@@ -298,43 +275,41 @@
   min-height: 1px;
   word-wrap: break-word;
   // Inner gutter via padding
-  .query-min(@screen--sm; {
-	  padding-left:  (@_gutter / 2);
-	  padding-right: (@_gutter / 2);
-    // Calculate width based on number of columns available
-    float: left;
-    width: percentage(@ratio);
-  });
+  .query-min(
+    @screen--sm; {padding-left: (@_gutter / 2) ; padding-right: (@_gutter / 2) ; / /
+      Calculate width based on number of columns available float: left; width: percentage(
+        @ratio
+      ) ;}
+  );
 }
 
 // Generate the small column offsets
 .col-offset(@ratio) {
-    margin-left: percentage(@ratio);
+  margin-left: percentage(@ratio);
 }
 .col-push(@ratio) {
-    left: percentage(@ratio);
+  left: percentage(@ratio);
 }
 .col-pull(@ratio) {
-    right: percentage(@ratio);
+  right: percentage(@ratio);
 }
 
 // Clears the setting of .row() and .col() for responsive use.
 .clear-row() {
-	margin: 0;
+  margin: 0;
 }
 .clear-col() {
-	position: static;
-	padding: 0;
-	float: none;
-	width: auto;
+  position: static;
+  padding: 0;
+  float: none;
+  width: auto;
 }
 
 /*------------------------------------*\
     ANIMATIONS
 \*------------------------------------*/
 
-@swift-out         : cubic-bezier(0, 0, .1, 1);
-
+@swift-out : cubic-bezier(0, 0, .1, 1);
 
 /*------------------------------------*\
     MEDIA QUERIES
@@ -357,26 +332,26 @@
 
 // Mixin that will create the fixed IE styles
 .query-min(@width; @rules) when (@old-ie = true) and (@fix-mqs >= @width) {
-    @rules();
+  @rules();
 }
 
 // Mixin that will wrap our content in a media query
 .query-min(@width; @rules) when (@old-ie = false) {
-    @media (min-width: @width) {
-        @rules();
-    }
+  @media (min-width: @width) {
+    @rules();
+  }
 }
 
 // Mixin that will create the fixed IE styles
 .query-max(@width; @rules) when (@old-ie = true) and (@fix-mqs <= @width) {
-    @rules();
+  @rules();
 }
 
 // Mixin that will wrap our content in a media query
 .query-max(@width; @rules) when (@old-ie = false) {
-    @media (max-width: @width) {
-        @rules();
-    }
+  @media (max-width: @width) {
+    @rules();
+  }
 }
 
 // Mixin that will hide the rules for IE8<
