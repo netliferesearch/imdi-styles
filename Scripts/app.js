@@ -28,12 +28,12 @@ $(document).ready(function() {
             : function() {
                 return e;
               };
-        return t.d(n, 'a', n), n;
+        return t.d(n, "a", n), n;
       }),
       (t.o = function(e, t) {
         return Object.prototype.hasOwnProperty.call(e, t);
       }),
-      (t.p = ''),
+      (t.p = ""),
       t((t.s = 0));
   })([
     function(e, t, n) {
@@ -42,10 +42,10 @@ $(document).ready(function() {
         !(function(n, o) {
           (i = []),
             (l = o(n)),
-            void 0 !== (r = 'function' == typeof l ? l.apply(t, i) : l) &&
+            void 0 !== (r = "function" == typeof l ? l.apply(t, i) : l) &&
               (e.exports = r);
         })(void 0 !== o ? o : this.window || this.global, function(e) {
-          'use strict';
+          "use strict";
           function t() {
             for (var e = {}, t = 0; t < arguments.length; t++) {
               var n = arguments[t];
@@ -75,30 +75,30 @@ $(document).ready(function() {
             c = {},
             a = n(3),
             u = n(4);
-          if ('undefined' != typeof window) {
+          if ("undefined" != typeof window) {
             var d,
               f = !!e.document.querySelector && !!e.addEventListener,
               m = Object.prototype.hasOwnProperty;
             return (
               (c.destroy = function() {
                 try {
-                  document.querySelector(s.tocSelector).innerHTML = '';
+                  document.querySelector(s.tocSelector).innerHTML = "";
                 } catch (e) {
-                  console.warn('Element not found: ' + s.tocSelector);
+                  console.warn("Element not found: " + s.tocSelector);
                 }
                 document.removeEventListener(
-                  'scroll',
+                  "scroll",
                   this._scrollListener,
                   !1
                 ),
                   document.removeEventListener(
-                    'resize',
+                    "resize",
                     this._scrollListener,
                     !1
                   ),
                   l &&
                     document.removeEventListener(
-                      'click',
+                      "click",
                       this._clickListener,
                       !1
                     );
@@ -144,12 +144,12 @@ $(document).ready(function() {
                     }, s.throttleTimeout)),
                     this._scrollListener(),
                     document.addEventListener(
-                      'scroll',
+                      "scroll",
                       this._scrollListener,
                       !1
                     ),
                     document.addEventListener(
-                      'resize',
+                      "resize",
                       this._scrollListener,
                       !1
                     ),
@@ -157,7 +157,7 @@ $(document).ready(function() {
                       s.scrollSmooth && l.disableTocAnimation(e),
                         l.updateToc(d);
                     }, s.throttleTimeout)),
-                    document.addEventListener('click', this._clickListener, !1),
+                    document.addEventListener("click", this._clickListener, !1),
                     this
                   );
                 }
@@ -178,26 +178,26 @@ $(document).ready(function() {
         return this;
       })();
       try {
-        n = n || Function('return this')() || (0, eval)('this');
+        n = n || Function("return this")() || (0, eval)("this");
       } catch (e) {
-        'object' == typeof window && (n = window);
+        "object" == typeof window && (n = window);
       }
       e.exports = n;
     },
     function(e, t) {
       e.exports = {
-        tocSelector: '.js-toc',
-        contentSelector: '.js-toc-content',
-        headingSelector: 'h1, h2, h3',
-        ignoreSelector: '.js-toc-ignore',
-        linkClass: 'toc-link',
-        extraLinkClasses: '',
-        activeLinkClass: 'is-active-link',
-        listClass: 'toc-list',
-        extraListClasses: '',
-        isCollapsedClass: 'is-collapsed',
-        collapsibleClass: 'is-collapsible',
-        listItemClass: 'toc-list-item',
+        tocSelector: ".js-toc",
+        contentSelector: ".js-toc-content",
+        headingSelector: "h1, h2, h3",
+        ignoreSelector: ".js-toc-ignore",
+        linkClass: "toc-link",
+        extraLinkClasses: "",
+        activeLinkClass: "is-active-link",
+        listClass: "toc-list",
+        extraListClasses: "",
+        isCollapsedClass: "is-collapsed",
+        collapsibleClass: "is-collapsible",
+        listItemClass: "toc-list-item",
         collapseDepth: 0,
         scrollSmooth: !0,
         scrollSmoothDuration: 420,
@@ -205,8 +205,8 @@ $(document).ready(function() {
         headingsOffset: 1,
         throttleTimeout: 50,
         positionFixedSelector: null,
-        positionFixedClass: 'is-position-fixed',
-        fixedSidebarOffset: 'auto',
+        positionFixedClass: "is-position-fixed",
+        fixedSidebarOffset: "auto",
         includeHtml: !1,
         onClick: !1
       };
@@ -235,22 +235,22 @@ $(document).ready(function() {
             );
         }
         function o(t) {
-          var n = document.createElement('li'),
-            o = document.createElement('a');
+          var n = document.createElement("li"),
+            o = document.createElement("a");
           return (
-            e.listItemClass && n.setAttribute('class', e.listItemClass),
+            e.listItemClass && n.setAttribute("class", e.listItemClass),
             e.onClick && (o.onclick = e.onClick),
             e.includeHtml && t.childNodes.length
               ? u.call(t.childNodes, function(e) {
                   o.appendChild(e.cloneNode(!0));
                 })
               : (o.textContent = t.textContent),
-            o.setAttribute('href', '#' + t.id),
+            o.setAttribute("href", "#" + t.id),
             o.setAttribute(
-              'class',
+              "class",
               e.linkClass +
                 p +
-                'node-name--' +
+                "node-name--" +
                 t.nodeName +
                 p +
                 e.extraLinkClasses
@@ -260,18 +260,18 @@ $(document).ready(function() {
           );
         }
         function l(t) {
-          var n = document.createElement('ul'),
+          var n = document.createElement("ul"),
             o = e.listClass + p + e.extraListClasses;
           return (
             t && ((o += p + e.collapsibleClass), (o += p + e.isCollapsedClass)),
-            n.setAttribute('class', o),
+            n.setAttribute("class", o),
             n
           );
         }
         function i() {
           var t = document.documentElement.scrollTop || f.scrollTop,
             n = document.querySelector(e.positionFixedSelector);
-          'auto' === e.fixedSidebarOffset &&
+          "auto" === e.fixedSidebarOffset &&
             (e.fixedSidebarOffset = document.querySelector(
               e.tocSelector
             ).offsetTop),
@@ -280,7 +280,7 @@ $(document).ready(function() {
                 (n.className += p + e.positionFixedClass)
               : (n.className = n.className
                   .split(p + e.positionFixedClass)
-                  .join(''));
+                  .join(""));
         }
         function r(t) {
           var n = document.documentElement.scrollTop || f.scrollTop;
@@ -300,16 +300,16 @@ $(document).ready(function() {
             });
             var r = document
               .querySelector(e.tocSelector)
-              .querySelectorAll('.' + e.linkClass);
+              .querySelectorAll("." + e.linkClass);
             u.call(r, function(t) {
-              t.className = t.className.split(p + e.activeLinkClass).join('');
+              t.className = t.className.split(p + e.activeLinkClass).join("");
             });
             var c = document
               .querySelector(e.tocSelector)
               .querySelector(
-                '.' +
+                "." +
                   e.linkClass +
-                  '.node-name--' +
+                  ".node-name--" +
                   o.nodeName +
                   '[href="#' +
                   o.id +
@@ -318,7 +318,7 @@ $(document).ready(function() {
             c.className += p + e.activeLinkClass;
             var a = document
               .querySelector(e.tocSelector)
-              .querySelectorAll('.' + e.listClass + '.' + e.collapsibleClass);
+              .querySelectorAll("." + e.listClass + "." + e.collapsibleClass);
             u.call(a, function(t) {
               var n = p + e.isCollapsedClass;
               -1 === t.className.indexOf(n) &&
@@ -327,7 +327,7 @@ $(document).ready(function() {
               c.nextSibling &&
                 (c.nextSibling.className = c.nextSibling.className
                   .split(p + e.isCollapsedClass)
-                  .join('')),
+                  .join("")),
               s(c.parentNode.parentNode);
           }
         }
@@ -335,13 +335,13 @@ $(document).ready(function() {
           return -1 !== t.className.indexOf(e.collapsibleClass)
             ? ((t.className = t.className
                 .split(p + e.isCollapsedClass)
-                .join('')),
+                .join("")),
               s(t.parentNode.parentNode))
             : t;
         }
         function c(t) {
           var n = t.target || t.srcElement;
-          'string' == typeof n.className &&
+          "string" == typeof n.className &&
             -1 !== n.className.indexOf(e.linkClass) &&
             (m = !1);
         }
@@ -352,7 +352,7 @@ $(document).ready(function() {
           d = [].some,
           f = document.body,
           m = !0,
-          p = ' ';
+          p = " ";
         return {
           enableTocAnimation: a,
           disableTocAnimation: c,
@@ -367,7 +367,7 @@ $(document).ready(function() {
           return e[e.length - 1];
         }
         function n(e) {
-          return +e.nodeName.split('H').join('');
+          return +e.nodeName.split("H").join("");
         }
         function o(t) {
           var o = {
@@ -396,13 +396,13 @@ $(document).ready(function() {
         function i(t, n) {
           var o = n;
           e.ignoreSelector &&
-            (o = n.split(',').map(function(t) {
-              return t.trim() + ':not(' + e.ignoreSelector + ')';
+            (o = n.split(",").map(function(t) {
+              return t.trim() + ":not(" + e.ignoreSelector + ")";
             }));
           try {
             return document.querySelector(t).querySelectorAll(o);
           } catch (e) {
-            return console.warn('Element not found: ' + t), null;
+            return console.warn("Element not found: " + t), null;
           }
         }
         function r(e) {
@@ -422,13 +422,13 @@ $(document).ready(function() {
       function n(e) {
         function t(e) {
           return (
-            'a' === e.tagName.toLowerCase() &&
-            (e.hash.length > 0 || '#' === e.href.charAt(e.href.length - 1)) &&
-            (n(e.href) === r || n(e.href) + '#' === r)
+            "a" === e.tagName.toLowerCase() &&
+            (e.hash.length > 0 || "#" === e.href.charAt(e.href.length - 1)) &&
+            (n(e.href) === r || n(e.href) + "#" === r)
           );
         }
         function n(e) {
-          return e.slice(0, e.lastIndexOf('#'));
+          return e.slice(0, e.lastIndexOf("#"));
         }
         function l(e) {
           const t = document.getElementById(e.substring(1));
@@ -445,7 +445,7 @@ $(document).ready(function() {
         !(function() {
           function e(e) {
             !t(e.target) ||
-              e.target.className.indexOf('no-smooth-scroll') > -1 ||
+              e.target.className.indexOf("no-smooth-scroll") > -1 ||
               (e.preventDefault(),
               o(e.target.hash, {
                 duration: i,
@@ -454,7 +454,7 @@ $(document).ready(function() {
                 }
               }));
           }
-          document.body.addEventListener('click', e, !1);
+          document.body.addEventListener("click", e, !1);
         })();
       }
       function o(e, t) {
@@ -465,7 +465,7 @@ $(document).ready(function() {
         }
         function o() {
           window.scrollTo(0, s + a),
-            'function' == typeof c.callback && c.callback();
+            "function" == typeof c.callback && c.callback();
         }
         function l(e, t, n, o) {
           return (e /= o / 2) < 1
@@ -482,18 +482,18 @@ $(document).ready(function() {
             easing: t.easing || l
           },
           a =
-            'string' == typeof e
+            "string" == typeof e
               ? c.offset +
                 (e
                   ? document
-                      .querySelector('[id="' + e.split('#').join('') + '"]')
+                      .querySelector('[id="' + e.split("#").join("") + '"]')
                       .getBoundingClientRect().top
                   : -(
                       document.documentElement.scrollTop ||
                       document.body.scrollTop
                     ))
               : e,
-          u = 'function' == typeof c.duration ? c.duration(a) : c.duration;
+          u = "function" == typeof c.duration ? c.duration(a) : c.duration;
         requestAnimationFrame(function(e) {
           (i = e), n(e);
         });
@@ -508,7 +508,7 @@ $(document).ready(function() {
   imdi.scroll.init();
   imdi.main_menu_toggle.init();
   imdi.main_search_toggle.init();
-  imdi.toggle.init(getUrlParameter('toggle'));
+  imdi.toggle.init(getUrlParameter("toggle"));
   imdi.accordion.init();
   imdi.trigger.init();
   imdi.selectall.init();
@@ -529,32 +529,32 @@ $(document).ready(function() {
 imdi.doubleNavigationPage = (function($) {
   return {
     init: function() {
-      'use strict';
+      "use strict";
 
       // opens and closes list
-      var showLists = document.querySelectorAll('.nav-matrix__header');
+      var showLists = document.querySelectorAll(".nav-matrix__header");
 
       // handle clicks on buttons saying 'vis liste'
       for (var i = 0; i < showLists.length; i++) {
-        showLists[i].addEventListener('click', function(elem) {
-          var list = this.parentNode.querySelector('ul');
+        showLists[i].addEventListener("click", function(elem) {
+          var list = this.parentNode.querySelector("ul");
 
           // toggles list visiblity
-          list.classList.toggle('open');
+          list.classList.toggle("open");
 
           // source of truth: is list open or not?
           // is used further down
-          var isOpen = list.classList.contains('open'); // won't work on IE. so why use it? it's just for esthetics and IE users deserve a lesser experience
+          var isOpen = list.classList.contains("open"); // won't work on IE. so why use it? it's just for esthetics and IE users deserve a lesser experience
 
           // rotates arrow up or down
           this.parentNode
-            .querySelector('.icon__arrow-down')
-            .classList.toggle('open');
+            .querySelector(".icon__arrow-down")
+            .classList.toggle("open");
 
           // change text for show or hide
           this.parentNode.querySelector(
-            '.nav-matrix__show-list p'
-          ).innerHTML = isOpen ? 'Skjul liste' : '&nbsp;Vis liste';
+            ".nav-matrix__show-list p"
+          ).innerHTML = isOpen ? "Skjul liste" : "&nbsp;Vis liste";
         });
       }
     }
@@ -566,10 +566,10 @@ imdi.doubleNavigationPage = (function($) {
 imdi.lightboxFeedback = (function($) {
   return {
     init: function() {
-      'use strict';
+      "use strict";
 
-      window.addEventListener('DOMContentLoaded', function() {
-        var element = document.querySelector('.lightbox__url');
+      window.addEventListener("DOMContentLoaded", function() {
+        var element = document.querySelector(".lightbox__url");
         if (element) {
           element.value = this.location.href;
         }
@@ -583,10 +583,10 @@ imdi.lightboxFeedback = (function($) {
 imdi.removeDoubleDownloadPDF = (function($) {
   return {
     init: function() {
-      'use strict';
+      "use strict";
 
       var longPage = 4000;
-      var selector = '.download-box';
+      var selector = ".download-box";
 
       var downloadBox = document.querySelectorAll(selector);
       var body = document.body;
@@ -603,22 +603,22 @@ imdi.removeDoubleDownloadPDF = (function($) {
 
       if (height > longPage && downloadBox.length && downloadBox.length > 1) {
         for (var i = 0; i < downloadBox.length; i++) {
-          let currentText = '';
-          const currentTextContainer = downloadBox[i].querySelector('p');
+          let currentText = "";
+          const currentTextContainer = downloadBox[i].querySelector("p");
           if (currentTextContainer) {
             currentText = currentTextContainer.textContent;
           }
 
-          let nextText = '';
+          let nextText = "";
           const nextTextContainer = downloadBox[i + 1]
-            ? downloadBox[i + 1].querySelector('p')
+            ? downloadBox[i + 1].querySelector("p")
             : null;
           if (nextTextContainer) {
             nextText = nextTextContainer.textContent;
           }
 
-          if (currentText === nextText && currentText !== '') {
-            next.style.display = 'none';
+          if (currentText === nextText && currentText !== "") {
+            nextTextContainer.style.display = "none";
           }
         }
       }
@@ -631,7 +631,7 @@ imdi.stickToTop = (function($) {
   return {
     init: function() {
       // converted to ES5 because IE 11
-      'use strict';
+      "use strict";
 
       // param 1: element being sticky
       // param 2: class that is added to the sticky element on scroll position
@@ -644,12 +644,12 @@ imdi.stickToTop = (function($) {
         var leftPadding = 90; // space between main column and toc
 
         // listens to scroll events and triggers adding / removing of classes
-        window.addEventListener('scroll', function() {
+        window.addEventListener("scroll", function() {
           throttle(makeElementStickyIfConditionIsMet(), throttleTimeout);
         });
 
         // listens to scroll events and triggers adding / removing of classes
-        window.addEventListener('resize', function() {
+        window.addEventListener("resize", function() {
           throttle(makeElementStickyIfConditionIsMet(), throttleTimeout);
         });
 
@@ -694,7 +694,7 @@ imdi.stickToTop = (function($) {
           };
         };
       };
-      stickToTop('#toc-enabled', '.toc-sidebar', 'stick-to-top');
+      stickToTop("#toc-enabled", ".toc-sidebar", "stick-to-top");
     }
   };
 })(jQuery);
@@ -705,7 +705,7 @@ imdi.tocbot = (function() {
   return {
     init: function() {
       // converted to ES5 because IE 11
-      'use strict';
+      "use strict";
 
       function _defineProperty(obj, key, value) {
         if (key in obj) {
@@ -722,31 +722,31 @@ imdi.tocbot = (function() {
       }
 
       // only create sidebar with toc if #toc-enabled exists
-      var tocEnabled = document.querySelector('#toc-enabled');
+      var tocEnabled = document.querySelector("#toc-enabled");
 
       if (tocEnabled) {
         var _tocbot$init;
 
         //  append an id to all h2 and h3. this will be used as anchor links for the table of contents
-        var allHeaderTags = document.querySelectorAll('h2, h3');
+        var allHeaderTags = document.querySelectorAll("h2, h3");
         for (var i = 0; i < allHeaderTags.length; i++) {
-          allHeaderTags[i].id = 'title_' + i;
+          allHeaderTags[i].id = "title_" + i;
         }
 
         tocbot.init(
           ((_tocbot$init = {
             // Where to render the table of contents.
-            tocSelector: '.toc-sidebar',
+            tocSelector: ".toc-sidebar",
 
             // Where to grab the headings to build the table of contents.
-            contentSelector: '.toc-mobile',
+            contentSelector: ".toc-mobile",
 
             // Which headings to grab inside of the contentSelector element.
             // and which to not use
-            headingSelector: 'h2:not(.notoc), h3:not(.notoc)',
+            headingSelector: "h2:not(.notoc), h3:not(.notoc)",
 
             // class given to the current link item
-            activeLinkClass: 'active-link',
+            activeLinkClass: "active-link",
 
             // Smooth scrolling enabled.
             smoothScroll: true,
@@ -757,14 +757,14 @@ imdi.tocbot = (function() {
             smoothScrollDuration: 0,
 
             // class to add to inactive link items
-            isCollapsedClass: 'is-collapsed',
+            isCollapsedClass: "is-collapsed",
 
             // Class that gets added when a list should be able
             // to be collapsed but isn't necessarily collpased.
-            collapsibleClass: 'is-collapsible'
+            collapsibleClass: "is-collapsible"
           }),
-          _defineProperty(_tocbot$init, 'smoothScroll', true),
-          _defineProperty(_tocbot$init, 'smoothScrollDuration', 200),
+          _defineProperty(_tocbot$init, "smoothScroll", true),
+          _defineProperty(_tocbot$init, "smoothScrollDuration", 200),
           _tocbot$init)
         );
 
@@ -772,20 +772,20 @@ imdi.tocbot = (function() {
 
         // if a innholdsfortegnelse already exists on the page, make it's
         // header look like a <p> in the toc sidebar
-        var tocList = document.querySelectorAll('.node-name--H2');
+        var tocList = document.querySelectorAll(".node-name--H2");
 
         for (var i = 0; i < tocList.length; i++) {
-          if (tocList[i].textContent.toLowerCase() === 'innholdsfortegnelse') {
+          if (tocList[i].textContent.toLowerCase() === "innholdsfortegnelse") {
             // add class to make existing <a> invisible (display none)
-            tocList[0].classList.add('descriptive-header');
+            tocList[0].classList.add("descriptive-header");
 
             // insert new header as a <p> sibling to invisble <a>. not pretty.
             tocList[0].insertAdjacentHTML(
-              'beforebegin',
-              '<p>Innholdsfortegnelse</p>'
+              "beforebegin",
+              "<p>Innholdsfortegnelse</p>"
             );
 
-            tocList[0].previousSibling.classList.add('toc-list__header');
+            tocList[0].previousSibling.classList.add("toc-list__header");
           }
         }
       }
@@ -796,8 +796,8 @@ imdi.tocbot = (function() {
 imdi.facet = (function($) {
   return {
     init: function() {
-      $('._jsExtendedFacet').on('change', 'input:checkbox', function() {
-        window.location = $(this).data('filterurl');
+      $("._jsExtendedFacet").on("change", "input:checkbox", function() {
+        window.location = $(this).data("filterurl");
       });
     }
   };
@@ -806,10 +806,10 @@ imdi.facet = (function($) {
 imdi.scroll = (function($) {
   return {
     init: function() {
-      var anchorid = getUrlParameter('aid');
+      var anchorid = getUrlParameter("aid");
       if (anchorid) {
-        var anchor = '#' + anchorid;
-        $('html,body').animate(
+        var anchor = "#" + anchorid;
+        $("html,body").animate(
           { scrollTop: jQuery(anchor).offset().top - 110 },
           700
         );
@@ -829,16 +829,16 @@ imdi.gtm_tracking = (function($) {
     customEvent: function(eventCategory, eventAction, eventLabel, eventValue) {
       // Default to undefined
       eventCategory =
-        typeof eventCategory !== 'undefined' ? eventCategory : undefined;
+        typeof eventCategory !== "undefined" ? eventCategory : undefined;
       eventAction =
-        typeof eventAction !== 'undefined' ? eventAction : undefined;
-      eventLabel = typeof eventLabel !== 'undefined' ? eventLabel : undefined;
-      eventValue = typeof eventValue !== 'undefined' ? eventValue : undefined;
+        typeof eventAction !== "undefined" ? eventAction : undefined;
+      eventLabel = typeof eventLabel !== "undefined" ? eventLabel : undefined;
+      eventValue = typeof eventValue !== "undefined" ? eventValue : undefined;
 
       // Google Tag Manager call
-      if (typeof dataLayer != 'undefined') {
+      if (typeof dataLayer != "undefined") {
         dataLayer.push({
-          event: 'customEvent',
+          event: "customEvent",
           eventCategory: eventCategory,
           eventAction: eventAction,
           eventLabel: eventLabel,
@@ -850,14 +850,14 @@ imdi.gtm_tracking = (function($) {
     customPageView: function(virtualPageUrl, virtualPageTitle) {
       // Default to undefined
       virtualPageUrl =
-        typeof virtualPageUrl !== 'undefined' ? virtualPageUrl : undefined;
+        typeof virtualPageUrl !== "undefined" ? virtualPageUrl : undefined;
       virtualPageTitle =
-        typeof virtualPageTitle !== 'undefined' ? virtualPageTitle : undefined;
+        typeof virtualPageTitle !== "undefined" ? virtualPageTitle : undefined;
 
       // Google Tag Manager call
-      if (typeof dataLayer != 'undefined') {
+      if (typeof dataLayer != "undefined") {
         dataLayer.push({
-          event: 'customPageView',
+          event: "customPageView",
           virtualPageUrl: virtualPageUrl,
           virtualPageTitle: virtualPageTitle
         });
@@ -874,43 +874,43 @@ imdi.gtm_tracking = (function($) {
 imdi.main_menu_toggle = (function($) {
   return {
     init: function() {
-      $('[data-behaviour="main-menu-toggle"]').on('click', function(event) {
+      $('[data-behaviour="main-menu-toggle"]').on("click", function(event) {
         // Prevent the fallback #anchor tag to move focus
         event.preventDefault();
 
-        var topMenuVisible = document.querySelector('.top-menu');
-        var pageContent = document.querySelector('.page__master');
-        var header = document.querySelector('#header');
-        var skipToContent = document.querySelector('.skiptocontent');
-        var footer = document.querySelector('#footer');
-        var footerCampaign = document.querySelector('#footer-campaign');
+        var topMenuVisible = document.querySelector(".top-menu");
+        var pageContent = document.querySelector(".page__master");
+        var header = document.querySelector("#header");
+        var skipToContent = document.querySelector(".skiptocontent");
+        var footer = document.querySelector("#footer");
+        var footerCampaign = document.querySelector("#footer-campaign");
 
         // TOGGLE TOP MENU
-        topMenuVisible.classList.toggle('top-menu--visible');
-        topMenuVisible.classList.toggle('top-menu--hidden');
+        topMenuVisible.classList.toggle("top-menu--visible");
+        topMenuVisible.classList.toggle("top-menu--hidden");
 
         // TOGGLE HEADER
-        header.classList.toggle('header--overlay');
+        header.classList.toggle("header--overlay");
 
         // TOGGLE BODY
-        if (pageContent.style.display === 'none') {
-          pageContent.style.display = 'block';
+        if (pageContent.style.display === "none") {
+          pageContent.style.display = "block";
         } else {
-          pageContent.style.display = 'none';
+          pageContent.style.display = "none";
         }
 
         // TOGGLE ACCESSABILITY BUTTON
-        if (skipToContent.style.display === 'none') {
-          skipToContent.style.display = 'block';
+        if (skipToContent.style.display === "none") {
+          skipToContent.style.display = "block";
         } else {
-          skipToContent.style.display = 'none';
+          skipToContent.style.display = "none";
         }
 
         // TOGGLE FOOTER
-        if (footerCampaign.style.display === 'none') {
-          footerCampaign.style.display = 'block';
+        if (footerCampaign.style.display === "none") {
+          footerCampaign.style.display = "block";
         } else {
-          footerCampaign.style.display = 'none';
+          footerCampaign.style.display = "none";
         }
       });
     }
@@ -926,32 +926,32 @@ imdi.main_menu_toggle = (function($) {
 imdi.main_search_toggle = (function($) {
   return {
     init: function() {
-      $('[data-behaviour="main-search-toggle"]').on('click', function(event) {
+      $('[data-behaviour="main-search-toggle"]').on("click", function(event) {
         // Prevent the fallback #anchor tag to move focus
         event.preventDefault();
 
         // Get targets
-        var _header = $('#header');
-        var _header_search = $('#header-search');
+        var _header = $("#header");
+        var _header_search = $("#header-search");
 
-        _header.toggleClass(_header.attr('data-toggle-search'));
+        _header.toggleClass(_header.attr("data-toggle-search"));
 
         // Set focus in
         _header_search.focus();
       });
 
-      $('body').on('blur', '#header-search', function() {
+      $("body").on("blur", "#header-search", function() {
         setTimeout(function() {
-          if (!$('#header-search-button').is(':focus')) {
-            $('#header').removeClass($('#header').attr('data-toggle-search'));
+          if (!$("#header-search-button").is(":focus")) {
+            $("#header").removeClass($("#header").attr("data-toggle-search"));
           }
         }, 500);
       });
 
-      $('body').on('blur', '#header-search-button', function() {
+      $("body").on("blur", "#header-search-button", function() {
         setTimeout(function() {
-          if (!$('#header-search').is(':focus')) {
-            $('#header').removeClass($('#header').attr('data-toggle-search'));
+          if (!$("#header-search").is(":focus")) {
+            $("#header").removeClass($("#header").attr("data-toggle-search"));
           }
         }, 500);
       });
@@ -966,7 +966,7 @@ imdi.main_search_toggle = (function($) {
 imdi.toggle = (function($) {
   return {
     init: function(openSectionOnLoad) {
-      $('[data-behaviour~="toggle"]').on('click', function(event) {
+      $('[data-behaviour~="toggle"]').on("click", function(event) {
         // Prevent the fallback #anchor tag to move focus
         event.preventDefault();
 
@@ -974,15 +974,15 @@ imdi.toggle = (function($) {
         var transition_duration = 200;
 
         // Get classes and relationships
-        var toggle_class_expanded = $(this).data('class-expanded');
-        var section = '#' + $(this).attr('aria-controls');
-        var section_class_expanded = $(section).data('class-expanded');
-        var section_class_contracted = $(section).data('class-contracted');
-        var section_caption_expanded = $(this).data('caption-expanded');
-        var section_caption_contracted = $(this).data('caption-contracted');
+        var toggle_class_expanded = $(this).data("class-expanded");
+        var section = "#" + $(this).attr("aria-controls");
+        var section_class_expanded = $(section).data("class-expanded");
+        var section_class_contracted = $(section).data("class-contracted");
+        var section_caption_expanded = $(this).data("caption-expanded");
+        var section_caption_contracted = $(this).data("caption-contracted");
 
         // Get current state
-        var state = $(this).attr('aria-expanded') === 'false' ? true : false;
+        var state = $(this).attr("aria-expanded") === "false" ? true : false;
 
         if (section_caption_contracted) {
           if ($(this).hasClass(toggle_class_expanded)) {
@@ -993,15 +993,15 @@ imdi.toggle = (function($) {
         }
 
         // Toggle attributes
-        $(this).attr('aria-expanded', state);
-        $(section).attr('aria-hidden', !state);
+        $(this).attr("aria-expanded", state);
+        $(section).attr("aria-hidden", !state);
         $(this).toggleClass(toggle_class_expanded);
 
         if (state) {
           // On opening
           $(section).show(0, function() {
             // Delay to be able to use css transitions and hide from screenreaders
-            $(section).css('display', 'block'); // Fix for allready visible sections by hover
+            $(section).css("display", "block"); // Fix for allready visible sections by hover
             $(section)
               .removeClass(section_class_contracted)
               .addClass(section_class_expanded);
@@ -1026,24 +1026,24 @@ imdi.toggle = (function($) {
 
       $('[data-behaviour~="toggle"]').each(function() {
         // Hide sections on load
-        var section = $(this).attr('data-controls');
+        var section = $(this).attr("data-controls");
 
         $(this)
-          .attr('aria-expanded', 'false')
-          .attr('aria-controls', section)
-          .attr('role', 'button');
-        $('#' + section)
-          .attr('aria-hidden', 'true')
+          .attr("aria-expanded", "false")
+          .attr("aria-controls", section)
+          .attr("role", "button");
+        $("#" + section)
+          .attr("aria-hidden", "true")
           .hide();
 
         // If the url has an open section parameter
         if (openSectionOnLoad && openSectionOnLoad === section) {
-          $(this).trigger('click');
+          $(this).trigger("click");
         }
 
         // If the section is marked to expand
-        if ($(this).attr('data-state') === 'expanded') {
-          $(this).trigger('click');
+        if ($(this).attr("data-state") === "expanded") {
+          $(this).trigger("click");
         }
       });
     }
@@ -1056,35 +1056,35 @@ imdi.toggle = (function($) {
 imdi.accordion = (function() {
   return {
     init: function() {
-      'use strict';
+      "use strict";
 
-      var elements = document.querySelectorAll('.accordion li');
+      var elements = document.querySelectorAll(".accordion li");
 
       if (elements) {
         var _loop = function _loop(i) {
-          var content = elements[i].querySelector('.accordion--content');
+          var content = elements[i].querySelector(".accordion--content");
 
-          elements[i].addEventListener('click', function() {
+          elements[i].addEventListener("click", function() {
             //  toggle aria-expanded
-            var ariaExpanded = content.getAttribute('aria-expanded');
+            var ariaExpanded = content.getAttribute("aria-expanded");
             console.log(ariaExpanded);
             content.setAttribute(
-              'aria-expanded',
-              ariaExpanded === 'true' ? false : true
+              "aria-expanded",
+              ariaExpanded === "true" ? false : true
             );
 
             //  toggle aria-hidden
-            var ariaHidden = content.getAttribute('aria-hidden');
+            var ariaHidden = content.getAttribute("aria-hidden");
             content.setAttribute(
-              'aria-hidden',
-              ariaHidden === 'true' ? false : true
+              "aria-hidden",
+              ariaHidden === "true" ? false : true
             );
 
             //  toggle content visibility
             elements[i]
-              .querySelector('.accordion--title img')
-              .classList.toggle('open');
-            content.classList.toggle('open');
+              .querySelector(".accordion--title img")
+              .classList.toggle("open");
+            content.classList.toggle("open");
           });
         };
 
@@ -1114,14 +1114,14 @@ imdi.accordion = (function() {
 imdi.trigger = (function($) {
   return {
     init: function() {
-      $('[data-behaviour="trigger"]').on('click', function(event) {
+      $('[data-behaviour="trigger"]').on("click", function(event) {
         // Prevent the fallback #anchor tag to move focus
         event.preventDefault();
 
-        var target = '#' + $(this).attr('data-controls');
+        var target = "#" + $(this).attr("data-controls");
 
         $(target).focus();
-        $(target).trigger('click');
+        $(target).trigger("click");
       });
     }
   };
@@ -1134,7 +1134,7 @@ imdi.trigger = (function($) {
 imdi.selectall = (function($) {
   return {
     init: function() {
-      $('[data-behaviour="selectall"]').on('click', function(event) {
+      $('[data-behaviour="selectall"]').on("click", function(event) {
         $(this).select();
       });
     }
@@ -1149,8 +1149,8 @@ imdi.hover_toggle = (function($) {
   return {
     init: function() {
       $('[data-behaviour~="hover-toggle"]').each(function() {
-        var toggle_class_expanded = $(this).data('class-expanded');
-        var children = $(this).data('hover-children');
+        var toggle_class_expanded = $(this).data("class-expanded");
+        var children = $(this).data("hover-children");
         var hover_parent = this;
 
         // Trigger the class on the parent element when children elements receive hover
@@ -1182,19 +1182,19 @@ imdi.smooth_scrolling = (function($) {
         .not('[data-behaviour="main-search-toggle"]')
         .not('[data-behaviour="main-menu-toggle"]')
         .not('[data-behaviour="toggle"]')
-        .on('click', function() {
+        .on("click", function() {
           var $linkElem = $(this);
           if (
-            location.pathname.replace(/^\//, '') ==
-              this.pathname.replace(/^\//, '') &&
+            location.pathname.replace(/^\//, "") ==
+              this.pathname.replace(/^\//, "") &&
             location.hostname == this.hostname
           ) {
             var target = $(this.hash);
             target = target.length
               ? target
-              : $('[name=' + this.hash.slice(1) + ']');
+              : $("[name=" + this.hash.slice(1) + "]");
             if (target.length) {
-              $('html,body').animate(
+              $("html,body").animate(
                 {
                   scrollTop: target.offset().top - 30
                 },
@@ -1204,7 +1204,7 @@ imdi.smooth_scrolling = (function($) {
                   target.focus();
                   /* end ADDED */
                   /* ADDED: update the URL */
-                  window.location.hash = $linkElem.attr('href').substring(1);
+                  window.location.hash = $linkElem.attr("href").substring(1);
                   // window.location.hash = $(this).attr('href').substring(1, $(this).attr('href').length);
                   /* end ADDED */
                 }
@@ -1242,7 +1242,7 @@ imdi.slick_carousel = (function($) {
           slickLoaded = true;
         } else {
           if (slickLoaded) {
-            target.slick('unslick');
+            target.slick("unslick");
             slickLoaded = false;
           }
         }
@@ -1267,26 +1267,26 @@ imdi.table_collapsable = (function($) {
   return {
     init: function() {
       var toggleAccordion = function(e) {
-        console.log('toggleAccordion');
+        console.log("toggleAccordion");
         var trigger = e.target;
         var parent = trigger.parentNode;
-        var isHidden = parent.getAttribute('aria-hidden') === 'true';
+        var isHidden = parent.getAttribute("aria-hidden") === "true";
         if (isHidden) {
-          $(trigger).removeClass('expanded');
-          parent.setAttribute('aria-hidden', false);
+          $(trigger).removeClass("expanded");
+          parent.setAttribute("aria-hidden", false);
         } else {
-          $(trigger).addClass('expanded');
-          parent.setAttribute('aria-hidden', true);
+          $(trigger).addClass("expanded");
+          parent.setAttribute("aria-hidden", true);
         }
       };
 
-      $('[data-table-collapsable]').each(function() {
-        var tableRows = $(this).find('tr');
-        console.log('living');
+      $("[data-table-collapsable]").each(function() {
+        var tableRows = $(this).find("tr");
+        console.log("living");
         $(tableRows).each(function() {
           var columns = $(this).children();
           var trigger = columns[0];
-          trigger.addEventListener('click', toggleAccordion);
+          trigger.addEventListener("click", toggleAccordion);
         });
       });
     }
@@ -1299,21 +1299,21 @@ imdi.table_collapsable = (function($) {
 imdi.responsive_table_setup = (function($) {
   return {
     init: function() {
-      $('table').each(function(tableIndex, table) {
+      $("table").each(function(tableIndex, table) {
         var $table = $(table);
-        $table.addClass('table table--collapsable table--fluid');
-        var bodyRows = $table.find('tbody tr');
-        $table.find('thead th').each(function(thIndex, th) {
+        $table.addClass("table table--collapsable table--fluid");
+        var bodyRows = $table.find("tbody tr");
+        $table.find("thead th").each(function(thIndex, th) {
           var $th = $(th);
-          $th.attr('scope', 'col');
+          $th.attr("scope", "col");
           bodyRows.each(function(trIndex, tr) {
             var td = $(tr)
               .children()
               .get(thIndex);
-            $(td).attr('data-label', $th.text());
+            $(td).attr("data-label", $th.text());
           });
         });
-        $table.find('tbody').attr('data-table-collapsable', '');
+        $table.find("tbody").attr("data-table-collapsable", "");
       });
     }
   };
@@ -1326,13 +1326,13 @@ imdi.responsive_table_setup = (function($) {
 imdi.removeDoubleCTA = (function($) {
   return {
     init: function() {
-      var toc = $('#toc-disabled')[0];
+      var toc = $("#toc-disabled")[0];
 
       if (!toc) {
         return;
       }
 
-      var secondCTA = $(toc).find('.cta')[1];
+      var secondCTA = $(toc).find(".cta")[1];
 
       var tocHeight = toc.offsetHeight;
       var windowHeight = window.innerHeight;
@@ -1351,11 +1351,11 @@ imdi.removeDoubleCTA = (function($) {
 imdi.to_top_button = (function($) {
   return {
     init: function() {
-      var toTopButton = $('[data-behaviour=to-top]');
+      var toTopButton = $("[data-behaviour=to-top]");
       var distanceBeforeButtonAppears = 300;
 
-      $(toTopButton).on('click', function() {
-        $('html, body').animate({ scrollTop: 0 }, 'fast');
+      $(toTopButton).on("click", function() {
+        $("html, body").animate({ scrollTop: 0 }, "fast");
       });
 
       var hideAndShowButton = function() {
@@ -1383,32 +1383,32 @@ imdi.wizard = (function($) {
     init: function() {
       $('[data-behaviour="wizard"]').each(function() {
         if (
-          window[$(this).data('source')] !== 'undefined' &&
-          window[$(this).data('source')].length &&
-          window[$(this).data('source')][0] != null
+          window[$(this).data("source")] !== "undefined" &&
+          window[$(this).data("source")].length &&
+          window[$(this).data("source")][0] != null
         ) {
           // Load question tree
-          var dataTree = window[$(this).data('source')];
+          var dataTree = window[$(this).data("source")];
 
           var dataHistory = [];
           var startId = dataTree[0].Id;
           var wrapper = this;
 
-          var captionLeadtext = $(this).data('caption-leadtext')
-            ? $(this).data('caption-leadtext')
-            : '';
-          var captionStartWizard = $(this).data('caption-start-wizard')
-            ? $(this).data('caption-start-wizard')
-            : 'Start veiviser';
-          var captionHistoryTitle = $(this).data('caption-history-title')
-            ? $(this).data('caption-history-title')
-            : 'Tidligere svar';
-          var captionStartOver = $(this).data('caption-start-over')
-            ? $(this).data('caption-start-over')
-            : 'Start på nytt';
-          var captionError = $(this).data('caption-error')
-            ? $(this).data('caption-error')
-            : 'Det skjedde en feil. Vennligst prøv å last siden på nytt.';
+          var captionLeadtext = $(this).data("caption-leadtext")
+            ? $(this).data("caption-leadtext")
+            : "";
+          var captionStartWizard = $(this).data("caption-start-wizard")
+            ? $(this).data("caption-start-wizard")
+            : "Start veiviser";
+          var captionHistoryTitle = $(this).data("caption-history-title")
+            ? $(this).data("caption-history-title")
+            : "Tidligere svar";
+          var captionStartOver = $(this).data("caption-start-over")
+            ? $(this).data("caption-start-over")
+            : "Start på nytt";
+          var captionError = $(this).data("caption-error")
+            ? $(this).data("caption-error")
+            : "Det skjedde en feil. Vennligst prøv å last siden på nytt.";
 
           //
           // Function redraws each step
@@ -1436,7 +1436,7 @@ imdi.wizard = (function($) {
 
             // QUESTION
 
-            if (dataRow(dataTree, targetId).Type == 'step') {
+            if (dataRow(dataTree, targetId).Type == "step") {
               // Get data
               var _question = dataRow(dataTree, targetId).Question;
               var _instruction = dataRow(dataTree, targetId).Instruction;
@@ -1448,37 +1448,37 @@ imdi.wizard = (function($) {
                   getQuestion(_question, _instruction, _alternatives, targetId)
                 )
                 .append(getHistory())
-                .find('legend')
+                .find("legend")
                 .focus();
 
               // Google Tag Manager call
               var virtualUrl =
-                window.location.pathname + '?wizard/question/' + targetId;
-              var virtualTitle = _question + ' | Veiviserspørsmål';
+                window.location.pathname + "?wizard/question/" + targetId;
+              var virtualTitle = _question + " | Veiviserspørsmål";
               imdi.gtm_tracking.customPageView(virtualUrl, virtualTitle);
 
               // CONCLUSION
-            } else if (dataRow(dataTree, targetId).Type == 'conclusion') {
+            } else if (dataRow(dataTree, targetId).Type == "conclusion") {
               // Get data
               var _title = dataRow(dataTree, targetId).Title;
               var _content = dataRow(dataTree, targetId).Content;
-              _content = decodeURIComponent(_content.replace(/\+/g, ' '));
+              _content = decodeURIComponent(_content.replace(/\+/g, " "));
               // Construct markup
               $(wrapper).append(getConclusion(_title, _content));
               $(wrapper).append(getHistory());
               $(wrapper)
-                .find('h3')
+                .find("h3")
                 .focus();
 
               // Google Tag Manager call
               var virtualUrl =
-                window.location.pathname + '?wizard/conclusion/' + targetId;
-              var virtualTitle = _title + ' | Veiviserkonklusjon';
+                window.location.pathname + "?wizard/conclusion/" + targetId;
+              var virtualTitle = _title + " | Veiviserkonklusjon";
               imdi.gtm_tracking.customPageView(virtualUrl, virtualTitle);
 
               // ERROR
             } else {
-              $(wrapper).append('<p><em>' + captionError + '</em></p>');
+              $(wrapper).append("<p><em>" + captionError + "</em></p>");
               $(wrapper).focus();
             }
           };
@@ -1490,16 +1490,16 @@ imdi.wizard = (function($) {
           var resetWizard = function() {
             // Reset history and markup
             dataHistory = [];
-            $(wrapper).html('');
+            $(wrapper).html("");
 
             // Construct markup
-            var htmlleadtext = $('<p>', {
+            var htmlleadtext = $("<p>", {
               html: captionLeadtext
             });
 
-            var htmlbutton = $('<button>', {
-              type: 'button',
-              class: 'button button--large',
+            var htmlbutton = $("<button>", {
+              type: "button",
+              class: "button button--large",
               html: captionStartWizard,
               click: $.proxy(updateWizard, null, -1, -1, startId)
             });
@@ -1532,29 +1532,29 @@ imdi.wizard = (function($) {
             _alternatives,
             targetId
           ) {
-            var html = $('<fieldset>', {
-              class: 't-margin-bottom--large animations__fade-in-left'
+            var html = $("<fieldset>", {
+              class: "t-margin-bottom--large animations__fade-in-left"
             });
-            $('<legend/>', {
-              class: 'h2  t-no-focus',
-              tabindex: '-1',
+            $("<legend/>", {
+              class: "h2  t-no-focus",
+              tabindex: "-1",
               html: _question
             }).appendTo($(html));
 
             if (_instruction.length > 0)
-              $('<p/>', {
-                class: 'text--small'
+              $("<p/>", {
+                class: "text--small"
               })
                 .append(_instruction)
                 .appendTo($(html));
 
-            var htmllist = $('<ul>', {
-              class: 't-no-list-styles'
+            var htmllist = $("<ul>", {
+              class: "t-no-list-styles"
             });
             $.each(_alternatives, function() {
-              $('<button/>', {
-                type: 'button',
-                class: 'button button--option',
+              $("<button/>", {
+                type: "button",
+                class: "button button--option",
                 html: this.Caption + ' <i class="icon__arrow-right"></i>',
                 click: $.proxy(
                   updateWizard,
@@ -1563,7 +1563,7 @@ imdi.wizard = (function($) {
                   this.Caption,
                   this.Target
                 )
-              }).appendTo($('<li>').appendTo($(htmllist)));
+              }).appendTo($("<li>").appendTo($(htmllist)));
             });
 
             $(html).append(htmllist);
@@ -1576,21 +1576,21 @@ imdi.wizard = (function($) {
           //
 
           var getConclusion = function(_title, _content) {
-            var html = $('<section/>', {
-              class: 't-margin-bottom--large animations__fade-in-left'
+            var html = $("<section/>", {
+              class: "t-margin-bottom--large animations__fade-in-left"
             });
 
-            $('<h3/>', {
-              class: 'h2 t-no-focus',
-              tabindex: '-1',
+            $("<h3/>", {
+              class: "h2 t-no-focus",
+              tabindex: "-1",
               html: _title
             }).appendTo($(html));
 
             $(html).append(_content);
 
-            $('<button/>', {
-              type: 'button',
-              class: 'button',
+            $("<button/>", {
+              type: "button",
+              class: "button",
               html: captionStartOver,
               click: $.proxy(resetWizard, null)
             }).appendTo($(html));
@@ -1605,27 +1605,27 @@ imdi.wizard = (function($) {
           var getHistory = function() {
             if (dataHistory.length < 1) return null;
             // Construct markup
-            var html = $('<section>');
-            $('<h3/>', {
-              class: 'h4',
+            var html = $("<section>");
+            $("<h3/>", {
+              class: "h4",
               html: captionHistoryTitle
             }).appendTo($(html));
-            var htmllist = $('<ol/>');
+            var htmllist = $("<ol/>");
             $.each(dataHistory, function(index, value) {
-              var htmlli = $('<li/>');
-              var htmldiv = $('<div/>', {
-                class: 'info t-margin-bottom'
+              var htmlli = $("<li/>");
+              var htmldiv = $("<div/>", {
+                class: "info t-margin-bottom"
               });
-              var htmlh4 = $('<h4/>', {
-                class: 'info__title'
+              var htmlh4 = $("<h4/>", {
+                class: "info__title"
               });
-              $('<a/>', {
-                href: '#',
+              $("<a/>", {
+                href: "#",
                 html: value.Question,
                 click: $.proxy(goBackInHistory, null, value.Id, index)
               }).appendTo($(htmlh4));
               $(htmlh4).appendTo($(htmldiv));
-              $('<p/>', {
+              $("<p/>", {
                 html: value.Answer
               }).appendTo($(htmldiv));
               $(htmllist).append($(htmlli).append($(htmldiv)));
@@ -1637,7 +1637,7 @@ imdi.wizard = (function($) {
           // Trigger on load
           resetWizard();
         } else {
-          $(this).innerHTML('<p><em>' + captionError + '</em></p>');
+          $(this).innerHTML("<p><em>" + captionError + "</em></p>");
         }
       });
     }
@@ -1646,12 +1646,12 @@ imdi.wizard = (function($) {
 
 function getUrlParameter(sParam) {
   var sPageURL = decodeURIComponent(window.location.search.substring(1)),
-    sURLVariables = sPageURL.split('&'),
+    sURLVariables = sPageURL.split("&"),
     sParameterName,
     i;
 
   for (i = 0; i < sURLVariables.length; i++) {
-    sParameterName = sURLVariables[i].split('=');
+    sParameterName = sURLVariables[i].split("=");
 
     if (sParameterName[0] === sParam) {
       return sParameterName[1] === undefined ? true : sParameterName[1];
@@ -1663,10 +1663,10 @@ function getUrlParameter(sParam) {
 imdi.tableOfContents = (function($) {
   return {
     init: function() {
-      if ($('.toc-mobile').length) {
+      if ($(".toc-mobile").length) {
         var toc_index = 1;
 
-        $('.toc-mobile h2:not([class]):not(.no-toc)').each(function(
+        $(".toc-mobile h2:not([class]):not(.no-toc)").each(function(
           index,
           value
         ) {
@@ -1674,22 +1674,22 @@ imdi.tableOfContents = (function($) {
           var element = elements[0];
           var id = element.id;
 
-          $(this).attr('tabindex', '-1');
-          $(this).addClass('toc__heading');
+          $(this).attr("tabindex", "-1");
+          $(this).addClass("toc__heading");
 
-          $('#toc').append(
+          $("#toc").append(
             '<li><a href="#' +
               id +
               '" class="navigation__link navigation__link--anchor">' +
               element.textContent +
-              '</a></li>'
+              "</a></li>"
           );
 
           toc_index++;
         });
 
         if (toc_index == 1) {
-          $('#toc-navigation').remove();
+          $("#toc-navigation").remove();
         }
       }
     }
