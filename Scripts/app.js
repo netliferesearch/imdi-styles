@@ -618,7 +618,7 @@ imdi.removeDoubleDownloadPDF = (function($) {
           }
 
           if (currentText === nextText && currentText !== "") {
-            downloadBox[i].style.display = "none";
+            downloadBox[i + 1].style.display = "none";
           }
         }
       }
