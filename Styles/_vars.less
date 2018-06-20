@@ -276,11 +276,11 @@
   word-wrap: break-word;
   // Inner gutter via padding
   .query-min(
-    @screen--sm; {padding-left: (@_gutter / 2) ; padding-right: (@_gutter / 2) ; / /
-      Calculate width based on number of columns available float: left; width: percentage(
-        @ratio
-      ) ;}
-  );
+      // Calculate width based on number of columns available
+        @screen--sm;{padding-left: (@_gutter / 2) ; padding-right:
+        (@_gutter / 2) ; float: left; width: percentage(@ratio) ;}
+    )
+    ;;
 }
 
 // Generate the small column offsets
