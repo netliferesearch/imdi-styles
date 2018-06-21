@@ -7,14 +7,12 @@
   "publishConfig": {
     "access": "public"
   },
+  "prePublishOnly": "npm run build",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "gulp default",
     "build": "gulp build",
-    "build:next": "gulp build-next",
-    "build:patch": "npm version patch && npm run build",
-    "build:minor": "npm version minor && npm run build",
-    "build:major": "npm version major && npm run build"
+    "release": "np"
   },
   "repository": {
     "type": "git",
