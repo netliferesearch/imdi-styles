@@ -38,7 +38,8 @@
     "gulp-uglify": "^3.0.0",
     "gulp-watch": "^4.3.11",
     "gulp-watch-less": "^1.0.1",
-    "gulp-watch-less2": "^2.0.4"
+    "gulp-watch-less2": "^2.0.4",
+    "np": "^3.0.4"
   },
   "dependencies": {
     "gulp-json-modify": "^1.0.2",
