@@ -575,7 +575,8 @@ imdi.lightboxFeedback = (function($) {
         var lightbox = document.querySelector(".lightbox-feedback-wrapper");
 
         // Toggle modal
-        lightbox.addEventListener("click", function() {
+        lightbox.addEventListener("click", function(e) {
+          e.preventDefault();
           if (lightbox.classList.contains("lightbox-feedback--show")) {
             lightbox.classList.remove("lightbox-feedback--show");
           } else {
