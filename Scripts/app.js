@@ -569,10 +569,21 @@ imdi.lightboxFeedback = (function($) {
       "use strict";
 
       window.addEventListener("DOMContentLoaded", function() {
-        var element = document.querySelector(".lightbox__url");
-        if (element) {
-          element.value = this.location.href;
-        }
+        // Selectors
+        var toggleLink = document.querySelector("#toggle-feedback");
+        var origin = document.querySelector(".lightbox__url");
+        var lightbox = document.querySelector(".lightbox-feedback-wrapper");
+
+        // Toggle modal
+        lightbox.addEventListener("click", function() {
+          if (lightbox.classList.contains("lightbox-feedback--show")) {
+            lightbox.classList.remove("lightbox-feedback--show");
+          } else {
+            lightbox.classList.add("lightbox-feedback--show");
+            // Set the value of lightbox__url to current url
+            origin.value = this.location.href;
+          }
+        });
       });
     }
   };

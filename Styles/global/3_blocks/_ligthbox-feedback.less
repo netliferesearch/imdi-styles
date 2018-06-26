@@ -1,27 +1,34 @@
 .lightbox-feedback-wrapper {
   height: 100vh;
   width: 100vw;
+  top: 0;
+  left: 0;
   position: fixed;
   z-index: 10;
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
-  background: rgba(255,255,255,0.8);
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.lightbox-feedback--show {
+  display: flex;
 }
 
 .lightbox-feedback {
   display: flex;
   flex-direction: column;
-  border: 5px solid #F15641;
+  background: #fff;
+  border: 5px solid #f15641;
   padding: 15px;
   width: 100%;
   max-width: 500px;
   margin: 15px auto;
-  
-  &__url, &__message, &__email {
+
+  &__url,
+  &__message,
+  &__email {
     background-color: white;
     border: 2px solid #bbbbbb;
-    
   }
 }
-
