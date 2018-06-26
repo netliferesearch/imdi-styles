@@ -9,7 +9,7 @@
   },
   "prePublishOnly": "npm run build",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "npm run build",
     "dev": "gulp default",
     "build": "gulp build",
     "release": "np"
