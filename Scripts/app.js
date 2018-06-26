@@ -568,22 +568,32 @@ imdi.lightboxFeedback = (function($) {
     init: function() {
       "use strict";
 
+      function toggleLightBox(lightbox) {
+        if (lightbox.classList.contains("lightbox-feedback--show")) {
+          lightbox.classList.remove("lightbox-feedback--show");
+        } else {
+          lightbox.classList.add("lightbox-feedback--show");
+          // Set the value of lightbox__url to current url
+          origin.value = this.location.href;
+        }
+      }
+
       window.addEventListener("DOMContentLoaded", function() {
         // Selectors
         var toggleLink = document.querySelector("#toggle-feedback");
         var origin = document.querySelector(".lightbox__url");
         var lightbox = document.querySelector(".lightbox-feedback-wrapper");
 
-        // Toggle modal
         lightbox.addEventListener("click", function(e) {
-          e.preventDefault();
-          if (lightbox.classList.contains("lightbox-feedback--show")) {
-            lightbox.classList.remove("lightbox-feedback--show");
-          } else {
-            lightbox.classList.add("lightbox-feedback--show");
-            // Set the value of lightbox__url to current url
-            origin.value = this.location.href;
+          if (e.target === lightbox) {
+            toggleLightBox(lightbox);
           }
+        });
+
+        // Toggle modal
+        toggleLink.addEventListener("click", function(e) {
+          e.preventDefault();
+          toggleLightBox(lightbox);
         });
       });
     }
