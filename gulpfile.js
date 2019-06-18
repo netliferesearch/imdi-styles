@@ -1,18 +1,29 @@
-var gulp = require("gulp"),
-  plumber = require("gulp-plumber"),
-  rename = require("gulp-rename");
-var autoprefixer = require("gulp-autoprefixer");
-var concat = require("gulp-concat");
-var uglify = require("gulp-uglify");
-var minifycss = require("gulp-minify-css");
-var less = require("gulp-less");
-var jsonModify = require("gulp-json-modify");
-var jeditor = require("gulp-json-editor");
+'use strict';
+const gulp = require('gulp');
+const plumber = require("gulp-plumber");
+const rename = require('gulp-rename');
+const autoprefixer = require("gulp-autoprefixer");
+const concat = require('gulp-concat');
+const uglify = require('gulp-uglify-es').default;
+const minifycss = require("gulp-minify-css");
+const less = require('gulp-less');
+const jeditor = require("gulp-json-editor");
+const packageJson = require('./package.json');
 
-var package = require("./package.json");
+function cloneAndMovePackage() {
+  return gulp.src('./package.json').pipe(jeditor(function(json) {
+    json.version = packageJson.version + '-next';
+    return json;
+  })).pipe(gulp.dest('dist/'));
+}
 
-gulp.task("styles", function() {
-  gulp
+function cloneAndMoveReadme() {
+  return gulp.src('./README.md').pipe(gulp.dest('dist/'))
+    .pipe(gulp.dest("./dist"));
+}
+
+function css() {
+  return gulp
     .src(["Styles/global/**/*.less"])
     .pipe(
       plumber({
@@ -29,10 +40,10 @@ gulp.task("styles", function() {
     .pipe(rename({ suffix: ".min" }))
     .pipe(minifycss())
     .pipe(gulp.dest("dist/"));
-});
+}
 
-gulp.task("scripts", function() {
-  gulp
+function js() {
+  return gulp
     .src("Scripts/app.js")
     .pipe(
       plumber({
@@ -47,10 +58,17 @@ gulp.task("scripts", function() {
     .pipe(rename({ suffix: ".min" }))
     .pipe(uglify())
     .pipe(gulp.dest("dist/"));
-});
+}
 
-gulp.task("UI", function() {
-  gulp.src("UI/**/*.*", { base: "./" }).pipe(gulp.dest("dist/"));
-});
+function ui() {
+  return gulp.src("UI/**/*.*", { base: "./" }).pipe(gulp.dest("dist/"));
+}
 
-gulp.task("build", ["styles", "scripts", "UI"]);
+const build = gulp.parallel(css, js, ui);
+const buildNext = gulp.parallel(css, js, ui, cloneAndMovePackage, cloneAndMoveReadme);
+
+exports.css = css;
+exports.js = js;
+exports.build = build;
+exports.default = build;
+exports.buildNext = buildNext;
