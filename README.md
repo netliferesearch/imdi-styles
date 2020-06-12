@@ -34,4 +34,4 @@ Integrerings- og mangfoldsdirektoratet (IMDi)
 
 ## Teknisk ansvarlig for kodebasen
 
-Joakim Bording, Netlife Research
+Torgeir Beyer, Netlife 
